@@ -27,12 +27,15 @@ Phiếu `[Tin tức] …` → `.github/workflows/news.yml` + `scripts/news/run.p
   1. ~~Đưa lên `main`~~: xong 12/11, chủ kênh đồng ý.
   2. ~~Secret `VN11_API_KEY`~~: chủ kênh đã thêm 12/11 (lần đầu ghi sai tên `vn11-api-key`, GitHub không nhận gạch ngang).
   3. ~~Giọng đọc tiếng Đức~~: 12/11 chọn `clone_611` ("voice de ww40k", giọng clone tiếng Đức có sẵn trong tài khoản 11labs của chủ kênh), ghi trong `prompts/news_voice.json`. Tài khoản chỉ có 3 giọng clone (611 Đức, 190 và 461 Nhật), không có giọng Đức thường nào.
-  4. Tác vụ Claude hằng giờ cho repo này + secrets `CLAUDE_TASK_URL`, `CLAUDE_TASK_TOKEN` (chưa tạo). Chưa có thì video vẫn làm được trong phiên chat.
+  4. Tác vụ Claude hằng giờ: **dùng chung** tác vụ "japan-video-factory" (phút :31) của repo Nhật. Từ 12/11 tác vụ đó kiểm tra cả phiếu `news-*` của repo này (xem `AGENT_NIGHTLY.md` của `japan-video-factory`), nên phiếu được làm trong vòng một giờ. Để GitHub gọi Claude **ngay** khi có việc, chủ kênh cần chép hai secret `CLAUDE_TASK_URL` và `CLAUDE_TASK_TOKEN` (cùng giá trị như ở `japan-video-factory`) vào repo này; chưa chép thì chờ lượt hằng giờ.
+  5. Video mẫu của chủ kênh (`00-video-mau/`) **vẫn chưa có**: bố cục hiện vẫn chép kênh văn học, sẽ làm lại theo mẫu khi có.
 - Sau video đầu tiên: đo lại tốc độ đọc (đang ước 14–15 ký tự/giây trong `AGENT_NEWS.md`), xem cỡ chữ phụ đề, và hỏi chủ kênh về kiểu hình (màu nền, nhạc) vì giao diện đang giống kênh văn học.
 
 ## Lưu ý kỹ thuật
 
 - ffmpeg trên máy GitHub lấy từ gói pip `imageio-ffmpeg`, xem `scripts/news/ff.py`. Ghim `faster-whisper==1.1.1` + `av==13.1.0`.
 - Lấy nhánh renders bằng `+refs/heads/renders:…`. Nhánh `renders` tự được tạo ở lần đăng kết quả đầu tiên.
-- Từ hay bị giọng đọc sai ghi vào `prompts/news_readings.json`.
+- Từ hay bị giọng đọc sai ghi vào `prompts/news_readings.json` (chỉ thay nguyên từ: `US` không đổi `USA`).
+- Kiểm tra giọng: số, `%`, `€`, `§` được viết thành chữ ở cả hai bên (`num2words`) nên đọc sai số sẽ bị liệt kê; từ ≤ 5 chữ cái phải khớp hẳn (ein/kein). Kiểm tra mã: `python3 tests/news_units.py`.
+- GitHub không nhận file trên 100 MB: video trên 95 MB tự được nén lại một lần cho còn ~90 MB, kịch bản không phải cắt. Giọng đọc được lưu lên `renders` ngay khi xong, trước khi tìm ảnh.
 - Tìm ảnh: `incategory:"<tên mục Commons>"` cho người/tòa nhà/địa danh; máy bỏ ảnh < 400 px và ảnh trùng.

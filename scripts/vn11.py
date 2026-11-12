@@ -11,9 +11,11 @@ Safety rules (from the provider docs):
   * the key is read from the VN11_API_KEY env var only, never printed;
   * a create request is sent at most once; after that we only poll;
   * 401/403 stop immediately (bad key / no quota); 500/503 on polling are retried;
+  * GET requests (balance, status, downloads) are retried on network errors and unreadable answers; the POST that
+    creates a job is never retried (after a timeout it may have been received and billed);
   * results are downloaded right away (MP3 kept only ~6 h on the provider side).
 """
-import argparse, json, os, sys, time, uuid, urllib.request, urllib.error
+import argparse, http.client, json, os, sys, time, uuid, urllib.request, urllib.error
 
 BASE = os.environ.get('VN11_API_BASE', 'https://11labs.id.vn/api/external/v1')
 KEY = os.environ.get('VN11_API_KEY', '')
@@ -25,21 +27,31 @@ def die(msg, code=1):
     sys.exit(code)
 
 
-def req(method, path, data=None, headers=None, raw=False, timeout=60):
+NET = (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException)   # HTTPError is caught first
+
+
+def req(method, path, data=None, headers=None, raw=False, timeout=60, tries=None):
+    tries = tries or (4 if method == 'GET' else 1)
     h = {'x-api-key': KEY, 'User-Agent': UA}
     h.update(headers or {})
-    r = urllib.request.Request(BASE.rstrip('/') + '/' + path.lstrip('/'), data=data, headers=h, method=method)
-    try:
-        with urllib.request.urlopen(r, timeout=timeout) as resp:
-            body = resp.read()
-            return resp.status, (body if raw else json.loads(body.decode('utf-8') or '{}'))
-    except urllib.error.HTTPError as e:
-        body = e.read().decode('utf-8', 'replace')
+    for i in range(tries):
+        r = urllib.request.Request(BASE.rstrip('/') + '/' + path.lstrip('/'), data=data, headers=h, method=method)
         try:
-            j = json.loads(body)
-        except Exception:
-            j = {'error': body[:300]}
-        return e.code, j
+            with urllib.request.urlopen(r, timeout=timeout) as resp:
+                body = resp.read()
+                return resp.status, (body if raw else json.loads(body.decode('utf-8') or '{}'))
+        except urllib.error.HTTPError as e:
+            body = e.read().decode('utf-8', 'replace')
+            try:
+                j = json.loads(body)
+            except Exception:
+                j = {'error': body[:300]}
+            return e.code, j
+        except (*NET, ValueError) as e:   # ValueError: JSONDecodeError, UnicodeDecodeError
+            if i == tries - 1:
+                raise
+            print(f'::warning::11labs {method} {path.split("?")[0]}: {type(e).__name__}, thử lại', flush=True)
+            time.sleep(5 * (i + 1))
 
 
 def multipart(fields):
@@ -58,10 +70,22 @@ def check_create(code, j):
     if not j.get('job_id'): die(f'11labs: không nhận được job_id: {j}')
 
 
-def download(url, dest):
-    r = urllib.request.Request(url, headers={'User-Agent': UA})
-    with urllib.request.urlopen(r, timeout=120) as resp, open(dest, 'wb') as f:
-        f.write(resp.read())
+def download(url, dest, tries=4):
+    for i in range(tries):
+        try:
+            r = urllib.request.Request(url, headers={'User-Agent': UA})
+            with urllib.request.urlopen(r, timeout=120) as resp:
+                body = resp.read()
+            break
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or i == tries - 1: raise
+            time.sleep(5 * (i + 1))
+        except NET:
+            if i == tries - 1: raise
+            print('::warning::11labs: tải file lỗi mạng, thử lại', flush=True)
+            time.sleep(5 * (i + 1))
+    with open(dest, 'wb') as f:
+        f.write(body)
     return os.path.getsize(dest)
 
 

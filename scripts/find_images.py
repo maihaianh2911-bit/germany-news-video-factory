@@ -6,17 +6,23 @@ For every query: up to 8 files (12 searched in the File namespace), keeping only
 monetised video (public domain, CC0, CC BY, CC BY-SA), dropping files under 400 px (250 px for incategory: searches) and duplicate scans of the same
 picture (also across earlier rounds listed in FIND_SEEN). Writes <out_dir>/<k>-<n>.jpg (up to 2000 px wide),
 <out_dir>/index.json (query, file page, licence, author, credit line, size) and <out_dir>/sheet_<k>.jpg
-(contact sheet with numbers) so a person or Claude can choose. Stdlib + Pillow.
+(contact sheet with numbers) so a person or Claude can choose. A query whose search fails (timeout, connection
+reset, an answer that is not JSON, an HTTP error) is logged and kept with no results and an "error" in index.json;
+only when every query fails does the script exit with an error. Stdlib + Pillow.
 """
-import io, json, os, re, sys, time, urllib.parse, urllib.request
+import http.client, io, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from PIL import Image, ImageDraw
 
 API = 'https://commons.wikimedia.org/w/api.php'
-UA = 'NewsVideoFactory/0.1 (licence-checked picture search)'
+UA = 'NewsVideoFactory/0.1 (https://github.com/maihaianh2911-bit/germany-news-video-factory; licence-checked picture search)'
 OK = re.compile(r'^(public domain|pd|cc0|cc[- ]by(-sa)?[- ]?\d|cc[- ]by(-sa)?$)', re.I)
 
 
+NET = (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException)
+
+
 def get(url, tries=4):
+    """GET with retries: 429/503 (Wikimedia rate limit) and network errors (timeout, reset)."""
     for i in range(tries):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': UA}), timeout=60) as r:
@@ -24,6 +30,10 @@ def get(url, tries=4):
         except urllib.error.HTTPError as e:
             if e.code in (429, 503) and i < tries - 1:
                 time.sleep(10 * (i + 1)); continue
+            raise
+        except NET:
+            if i < tries - 1:
+                time.sleep(5 * (i + 1)); continue
             raise
 
 
@@ -108,11 +118,18 @@ def seen_hashes():
 def main():
     out, queries = sys.argv[1], sys.argv[2:]
     os.makedirs(out, exist_ok=True)
-    index, kept_hashes, dropped = [], seen_hashes(), {'small': 0, 'duplicate': 0}
+    index, kept_hashes, dropped, failed = [], seen_hashes(), {'small': 0, 'duplicate': 0}, 0
     for k, q in enumerate(queries, 1):
         lim = MIN_SIDE_CAT if q.strip().lower().startswith('incategory:') else MIN_SIDE
-        found = [r for r in search(q, n=12) if min(r.get('width') or 0, r.get('height') or 0) >= lim]
-        dropped['small'] += 12 - len(found)
+        try:
+            res = search(q, n=12)
+        except Exception as e:   # one bad query must not lose the others: log it, keep it empty
+            err = f'{type(e).__name__}: {str(e)[:150]}'
+            print(f'{k}. {q}: search failed ({err}), no pictures for this query', flush=True)
+            index.append({'k': k, 'query': q, 'results': [], 'error': err}); failed += 1
+            continue
+        found = [r for r in res if min(r.get('width') or 0, r.get('height') or 0) >= lim]
+        dropped['small'] += len(res) - len(found)
         kept = []   # [(result, image, hash)] in search order; a duplicate inside this query keeps the bigger file
         for r in found:
             if len(kept) >= KEEP:
@@ -146,7 +163,9 @@ def main():
         print(f'{k}. {q}: {len(results)} kept')
         time.sleep(2)
     json.dump(index, open(f'{out}/index.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    print(f"dropped: {dropped['small']} too small, {dropped['duplicate']} duplicates")
+    print(f"dropped: {dropped['small']} too small, {dropped['duplicate']} duplicates; {failed} queries failed")
+    if queries and failed == len(queries):
+        sys.exit('every search failed (Wikimedia Commons unreachable?)')
 
 
 if __name__ == '__main__':

@@ -42,7 +42,7 @@ jobs:
           python3 -c "import json; json.load(open('prompts/news_readings.json', encoding='utf-8'))"
       - name: Cài bộ dựng
         run: |
-          pip install -q numpy scipy pillow imageio-ffmpeg==0.8.1
+          pip install -q numpy scipy pillow num2words==0.5.14 imageio-ffmpeg==0.8.1
           npm ci --no-audit --no-fund
           npx remotion browser ensure
           bash scripts/news/get_fonts.sh "$FONTSOURCE"
@@ -50,5 +50,6 @@ jobs:
         run: npm run check
       - name: Chạy thử dây chuyền tin tức (dữ liệu giả, dựng một khung hình)
         run: |
+          python3 tests/news_units.py
           python3 tests/news_smoke.py --still
           python3 tests/news_smoke.py --chapters

@@ -2,7 +2,7 @@
 """Smoke test of the news pipeline on made-up data (no 11labs, no picture search, no network):
 pictures → prep.py → build.py → fonts.py (when FONTSOURCE is set) → preview.py → sheet-independent checks, and with
 --still one Remotion frame of the NewsV composition. Run from the repo root: python3 tests/news_smoke.py [--still]"""
-import json, os, subprocess, sys, tempfile
+import json, os, re, subprocess, sys, tempfile
 import numpy as np
 from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -75,6 +75,8 @@ assert len(plan['subs']) == 6, [s['text'] for s in plan['subs']]                
 assert ' '.join(s['text'].replace('\n', ' ') for s in plan['subs']) == ' '.join(lines)
 assert all(a['e'] <= b['s'] + 1e-6 for a, b in zip(plan['subs'], plan['subs'][1:]))
 srt = open(os.path.join(out, 'subtitles.srt'), encoding='utf-8').read(); assert srt.count('-->') == 6
+cue_t = [[sum(float(x) * k for x, k in zip(re.split('[:,]', v), (3600, 60, 1, .001))) for v in m] for m in re.findall(r'(\S+) --> (\S+)', srt)]
+assert all(a[0] < a[1] <= b[0] + 1e-6 for a, b in zip(cue_t, cue_t[1:])), cue_t      # .srt cues never overlap
 cred = open(os.path.join(out, 'credits.txt'), encoding='utf-8').read()
 assert 'Wide.jpg' in cred and 'CC BY 4.0' in cred and 'commons.wikimedia.org' in cred
 assert os.path.getsize(os.path.join(pub, 'news', N, 'bed.wav')) > 100000

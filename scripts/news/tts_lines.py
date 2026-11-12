@@ -3,11 +3,11 @@
 spoken. Usage: tts_lines.py <news/N/script.json> <out_dir> [--prev <dir of an earlier run>]
 
 The text sent to 11labs is script.json "tts"[line] when given, else the line with prompts/news_readings.json applied
-(respellings for words the German voice misreads, e.g. names and abbreviations). Lines whose spoken text did not change are copied
+(respellings for words the German voice misreads, e.g. names and abbreviations; whole words only). Lines whose spoken text did not change are copied
 from --prev instead of being read again (saves credits when only a few lines are fixed).
 Writes <out_dir>/line_XX.mp3 (silence trimmed at both ends) and lines.json [{i, text, tts, file, duration}].
 """
-import argparse, json, os, shutil, sys
+import argparse, json, os, re, shutil, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE); sys.path.insert(0, os.path.dirname(HERE))
 import ff
@@ -18,15 +18,17 @@ READINGS = os.path.join(PROMPTS, 'news_readings.json')
 DEFAULT_VOICE = json.load(open(os.path.join(PROMPTS, 'news_voice.json'), encoding='utf-8')).get('default') or ''
 
 
-def spoken(script):
-    rd = {k: v for k, v in json.load(open(READINGS, encoding='utf-8')).items() if not k.startswith('_')}
+def spoken(script, rd=None):
+    """Text sent to the voice per line: script "tts" when given, else the line with the readings applied to whole
+    words only ("US" → "U S" leaves "USA" alone), longest key first, in one pass (a replacement is not replaced again)."""
+    if rd is None:
+        rd = {k: v for k, v in json.load(open(READINGS, encoding='utf-8')).items() if not k.startswith('_')}
+    pat = re.compile(r'(?<!\w)(' + '|'.join(map(re.escape, sorted(rd, key=len, reverse=True))) + r')(?!\w)') if rd else None
     out = []
     for i, line in enumerate(script['lines'], 1):
         t = (script.get('tts') or {}).get(str(i))
         if not t:
-            t = line
-            for k in sorted(rd, key=len, reverse=True):
-                t = t.replace(k, rd[k])
+            t = pat.sub(lambda m: rd[m.group(1)], line) if pat else line
         out.append(t)
     return out
 

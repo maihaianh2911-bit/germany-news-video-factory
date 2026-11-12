@@ -1,5 +1,6 @@
 """ffmpeg for the news-video scripts: the system binary, else the static one from the imageio-ffmpeg wheel
-(the apt mirror sometimes hangs on the runners). duration() decodes instead of using ffprobe, which that wheel lacks."""
+(the apt mirror sometimes hangs on the runners). duration() decodes instead of using ffprobe, which that wheel lacks.
+Always -nostdin: ffmpeg otherwise reads the caller's stdin (in the workflow, the list of issues still to do)."""
 import shutil, subprocess
 
 
@@ -12,12 +13,12 @@ def ffmpeg():
 
 
 def run(*args):
-    subprocess.run([ffmpeg(), '-v', 'error', '-y', *args], check=True)
+    subprocess.run([ffmpeg(), '-nostdin', '-v', 'error', '-y', *args], check=True)
 
 
 def duration(path):
     """Length in seconds of an audio file (decoded to 16 kHz mono 16-bit, so it works with any ffmpeg build)."""
-    raw = subprocess.run([ffmpeg(), '-v', 'error', '-i', path, '-f', 's16le', '-ac', '1', '-ar', '16000', '-'],
+    raw = subprocess.run([ffmpeg(), '-nostdin', '-v', 'error', '-i', path, '-f', 's16le', '-ac', '1', '-ar', '16000', '-'],
                          check=True, capture_output=True).stdout
     return len(raw) / 32000.0
 

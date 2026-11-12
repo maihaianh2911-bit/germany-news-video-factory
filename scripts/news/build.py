@@ -27,9 +27,11 @@ os.makedirs(out, exist_ok=True)
 # Rows break between words, best after a comma, colon or dash, never leaving a short word alone.
 ROW = 28   # characters per row at full size (52 px, Source Sans 3 bold)
 END = ('.', '!', '?', '…', '“', '"', '«', '»')
+MIN_PIECE = 8   # no break that leaves a piece this short ("Die" alone before a long compound)
 def breaks(t):
     """Possible break points (index of the space, penalty): 0 after punctuation, 3 between plain words."""
-    return [(k, 0 if t[k - 1] in ',;:–—' else 3) for k in range(1, len(t) - 1) if t[k] == ' ']
+    return [(k, 0 if t[k - 1] in ',;:–—' else 3) for k in range(1, len(t) - 1)
+            if t[k] == ' ' and k >= MIN_PIECE and len(t) - k - 1 >= MIN_PIECE]
 def two_rows(t):
     bs = breaks(t)
     if not bs: return [t]
@@ -116,8 +118,12 @@ json.dump(plan, open(f'{out}/plan.json', 'w', encoding='utf-8'), ensure_ascii=Fa
 def ts(v):
     ms = int(round(v * 1000)); h, ms = divmod(ms, 3600000); m, ms = divmod(ms, 60000); s_, ms = divmod(ms, 1000)
     return f'{h:02d}:{m:02d}:{s_:02d},{ms:03d}'
+def srt_end(k):
+    """End of cue k (0-based): held 0.2 s longer for reading, but never past the start of the next cue."""
+    e = subs[k]['e'] + 0.2
+    return min(e, subs[k + 1]['s']) if k + 1 < len(subs) else e
 with open(f'{out}/subtitles.srt', 'w', encoding='utf-8') as f:
-    for k, sb in enumerate(subs, 1): f.write(f"{k}\n{ts(sb['s'])} --> {ts(sb['e'] + 0.2)}\n{sb['text']}\n\n")
+    for k, sb in enumerate(subs): f.write(f"{k + 1}\n{ts(sb['s'])} --> {ts(srt_end(k))}\n{sb['text']}\n\n")
 
 # ---- credits for the video description (every picture: title, author, date, licence, page)
 idx = {}

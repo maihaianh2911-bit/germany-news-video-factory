@@ -62,16 +62,21 @@ Read the issue form (Chủ đề, Kịch bản, Giọng đọc, Ghi chú) and th
     English or German words both work; phrases of 4+ words often return nothing.
   Only 8 files come back per query: split a rich subject into several queries. Commons rarely has pictures of
   an event of the last days: search the people, places and things the news is about.
-Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice ~10–15 min; you are woken at `news-pick`.)
+  Once round 1 exists (`img/1/` on renders), never change `queries` again: a new search renumbers round 1 and the
+  picks would point at other pictures (the machine then stops at `news-pick`). Add searches with `search-<r>.json`.
+Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice ~20–30 min for 40–60 lines; you are woken at
+`news-pick`.)
 
 ## 2. `news-pick` → `news/<N>/picks.json`
 1. `voice/check.md` lists lines where Whisper heard different words. Decide for each: a real misreading (a wrong
    number, an abbreviation read as a word, a mangled name) or a Whisper mishearing (names, foreign words,
-   compounds written apart). Real ones: the spoken form in `script.json` `tts` (only changed lines are read again)
+   compounds written apart). Numbers, `%`, `€` and `§` are written out on both sides before comparing, so
+   `3,5`→`drei fünf` is listed (a real misreading) while `3,5` heard as `drei Komma fünf` is not. Real ones: the spoken form in `script.json` `tts` (only changed lines are read again)
    and the word in `prompts/news_readings.json` for later videos.
 2. Open every `img/<r>/sheet_<k>.jpg` (tiles: `#n 1280x1897 CC BY-SA 4.0` = number, size, licence;
    `img/<r>/index.json` has titles, authors, dates, descriptions). Files under 400 px (250 px for `incategory:`
-   searches) and duplicates are already removed. A line without a fitting picture → write
+   searches) and duplicates are already removed. A query whose search failed has an `"error"` in `index.json` and
+   no sheet: repeat it in the next round. A line without a fitting picture → write
    `news/<N>/search-<r>.json` `{"queries": […]}` (r = 2, 3…), push, poll the renders branch for
    `news/<N>/img/<r>/index.json` (every 30 s, ≤ 10 min), view it.
 3. Open the full picture (`img/<r>/<k>-<n>.jpg`) before cropping it or zooming into a detail.
@@ -116,8 +121,10 @@ Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice ~10–15 min
 6. **Preview before pushing** (a wrong crop found after the render costs a 25-minute render):
    `pip install -q numpy pillow` if missing, then
    `python3 scripts/news/preview.py news/<N>/picks.json news/<N>/script.json /tmp/r/news/<N>/img /tmp/preview.jpg`
-   and open the sheet: every shot at the start and the end of its camera move, exactly as the video frames it.
-   Fix any shot that cuts a face, chin or hand, misses its subject or shows a border, and run it again.
+   (pictures of `own/` are read from `<img_root>/own/`, so first copy them:
+   `mkdir -p /tmp/r/news/<N>/img/own && cp news/<N>/own/* /tmp/r/news/<N>/img/own/`) and open the sheet: every shot
+   at the start and the end of its camera move, exactly as the video frames it. Fix any shot that cuts a face, chin
+   or hand, misses its subject or shows a border, and run it again.
 7. Commit `picks.json` together with any `script.json`/readings fixes in **one** push as `[news #<N>] chọn ảnh`
    (a push of `script.json` alone runs the voice step again), remove `news-busy`. (The render takes ~20–25 min for
    a 3-minute video; you are woken at `news-check`.)
@@ -134,8 +141,11 @@ pictures used, "bình luận nếu muốn sửa".
 - `news-fix`: the request = owner comments after your last `🤖` comment. Text → `script.json` (changed lines are
   read again, the rest reused); pictures → `picks.json` (+ `search-<r>.json`). Push, one-line 🤖 comment, remove
   `news-fix`.
-- `news-failed`: read the failed run's log (link in the issue), fix the cause (your JSON, or `scripts/news/*`
-  tested locally with `python3 tests/news_smoke.py`), run the workflow **Video tin tức (ảnh thật)** again for
-  that issue (`workflow_dispatch` of `news.yml` on `main`, inputs `issue=<N>`, `steps=render` or `prepare`),
-  remove `news-failed`. A missing German voice (`prompts/news_voice.json` empty) or a missing secret is the
+- `news-failed`: read the failed run's log (link in the issue; `gh api repos/…/actions/runs/<id>/jobs`, then
+  `gh api repos/…/actions/jobs/<job>/logs`), fix the cause (your JSON, or `scripts/news/*` tested locally with
+  `python3 tests/news_smoke.py`), re-run
+  `gh api -X POST repos/maihaianh2911-bit/germany-news-video-factory/actions/workflows/news.yml/dispatches -f ref=main -f 'inputs[issue]=<N>' -f 'inputs[steps]=render'`
+  (`steps`: `prepare`, `search` or `render`, several separated by spaces), remove `news-failed`. When the fix is a
+  push under `news/<N>/` (script.json, picks.json, search-<r>.json, own/), that push already starts the run: do not
+  dispatch it by hand as well. A missing German voice (`prompts/news_voice.json` empty) or a missing secret is the
   owner's to fix: say so in one plain 🤖 comment and leave the label.
