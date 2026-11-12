@@ -1,0 +1,4 @@
+{
+ "_note": "voice_id of the German voice used when script.json has no \"voice\" (11labs.id.vn: an id from the voice list, or clone_<n> for a cloned voice). Empty = not chosen yet: the voice step stops with a clear message. List and try voices with the workflow \"Thử voice 11labs\".",
+ "default": ""
+}

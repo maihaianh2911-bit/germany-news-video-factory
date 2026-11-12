@@ -1,0 +1,143 @@
+#!/usr/bin/env python3
+"""Plan of a news video for the NewsV composition, plus music bed, subtitles and picture credits.
+
+Usage: build.py <job_dir news/N> <public_dir> <N> <img_src_dir> <out_dir>
+Reads <job_dir>/script.json (lines, chapters, keywords, ambience, music), <job_dir>/picks.json (pictures per
+chapter), <public_dir>/news/<N>/voice/lines.json (measured line lengths) and the prepared pictures in
+<public_dir>/news/<N>/img/. Writes <out_dir>/plan.json, subtitles.srt, credits.txt and <public_dir>/news/<N>/bed.wav.
+Timing: every line starts after the previous one plus a pause (0.45 s after a sentence end, 0.25 s otherwise);
+each chapter opens with a short breath; a picture that starts on a line ("at") cuts in just before it is spoken.
+"""
+import json, os, re, sys
+import numpy as np
+from PIL import Image
+HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
+import music_gen as mg
+
+job, pub, N, imgsrc, out = sys.argv[1:6]
+base = f'news/{N}'
+spec = json.load(open(f'{job}/script.json', encoding='utf-8'))
+picks = json.load(open(f'{job}/picks.json', encoding='utf-8'))
+lines = json.load(open(f'{pub}/{base}/voice/lines.json', encoding='utf-8'))
+dur = {r['i']: r['duration'] for r in lines}
+text = {r['i']: r['text'] for r in lines}
+os.makedirs(out, exist_ok=True)
+
+# ---- subtitles: a spoken line becomes one cue of up to two rows, or several cues when it is too long.
+# Rows break between words, best after a comma, colon or dash, never leaving a short word alone.
+ROW = 28   # characters per row at full size (52 px, Source Sans 3 bold)
+END = ('.', '!', '?', '…', '“', '"', '«', '»')
+def breaks(t):
+    """Possible break points (index of the space, penalty): 0 after punctuation, 3 between plain words."""
+    return [(k, 0 if t[k - 1] in ',;:–—' else 3) for k in range(1, len(t) - 1) if t[k] == ' ']
+def two_rows(t):
+    bs = breaks(t)
+    if not bs: return [t]
+    k = min(bs, key=lambda b: max(b[0], len(t) - b[0] - 1) + b[1])[0]
+    return [t[:k], t[k + 1:]]
+def cues(t):
+    t = t.strip()
+    if len(t) <= ROW: return [[t]]
+    r = two_rows(t)
+    if max(map(len, r)) <= ROW + 4 or len(r) == 1: return [r]   # up to 4 over: the font shrinks a little
+    bs = breaks(t); cand = [b for b in bs if b[1] == 0 and 12 <= b[0] <= len(t) - 12] or bs
+    k = min(cand, key=lambda b: abs(b[0] - len(t) / 2))[0]
+    return cues(t[:k]) + cues(t[k + 1:])
+
+# ---- timeline
+t = 0.0; chapters = []; subs = []; voice = []
+img = lambda name: f'{base}/img/{name}.jpg'
+for ci, c in enumerate(spec['chapters']):
+    a, b = c['lines']; s = t; x = s + (1.0 if ci == 0 else 0.8); starts = []
+    for i in range(a, b + 1):
+        voice.append({'s': round(x, 3), 'src': f'{base}/voice/{lines[i - 1]["file"]}'})
+        parts = cues(text[i]); n_all = len(text[i].strip()) + 1
+        if len(parts) > 1 and min(len(' '.join(cu)) for cu in parts) / n_all * dur[i] < 1.0 and max(map(len, two_rows(text[i].strip()))) <= ROW + 8: parts = [two_rows(text[i].strip())]
+        done = 0
+        for cu in parts:   # cues share the line's time in proportion to their length
+            cs = x + dur[i] * done / n_all; done += len(' '.join(cu)) + 1; ce = x + dur[i] * done / n_all
+            subs.append({'s': round(cs, 3), 'e': round(ce - (0.12 if done < n_all else 0), 3), 'text': '\n'.join(cu), 'hl': spec.get('hl', {}).get(str(i), [])})
+        starts.append(x)
+        x += dur[i] + (0.45 if text[i].rstrip().endswith(END) else 0.25)
+    e = x + (2.6 if ci == len(spec['chapters']) - 1 else 0.7)
+    ch = {'s': round(s, 3), 'e': round(e, 3), **{q: c[q] for q in ('num', 'label', 'title', 'desc')}, 'pics': []}
+    pics = picks['chapters'][ci]['pics']; n = len(pics)
+    bounds = [s]
+    for j in range(1, n):
+        li = pics[j].get('at') or a + round(j * (b - a + 1) / n)
+        k = min(len(starts) - 1, max(0, int(li) - a))
+        bounds.append(starts[k] + (li - int(li)) * dur[a + k] - 0.15)
+    bounds.append(e)
+    for j, p in enumerate(pics):
+        q = {k: v for k, v in p.items() if k not in ('at', 'img')}
+        if 'pair' in p:   # portrait + document as framed prints
+            for side in ('left', 'right'):
+                sd = dict(p['pair'][side]); sd['src'] = img(sd.pop('img'))
+                sd['w'], sd['h'] = Image.open(f"{pub}/{sd['src']}").size; q['pair'] = {**q.get('pair', {}), side: sd}
+            q.update({'src': '', 'w': 1, 'h': 1, 'from': {'z': 1, 'x': .5, 'y': .5}, 'to': {'z': 1, 'x': .5, 'y': .5}})
+        else:
+            q['src'] = img(p['img']); q['w'], q['h'] = Image.open(f"{pub}/{q['src']}").size
+        ch['pics'].append({**q, 's': round(bounds[j], 3), 'e': round(bounds[j + 1], 3)})
+    chapters.append(ch); t = e
+total = round(t, 3)
+
+# ---- music bed: a quiet score made for this length, plus nature sounds under the chapters that ask for them
+mu = {'style': 'documentary', 'key': 'A', 'mode': 'minor', 'bpm': 62, 'energy': 0.3, **spec.get('music', {})}
+SR = mg.SR
+music = mg.render([{'from': 0, 'to': total, **mu}], lambda v: v, total)
+n = len(music); rng = np.random.RandomState(9); tt = np.arange(n) / SR
+def env(a, b, fade=1.0):
+    e = np.zeros(n); i0, i1 = int(a * SR), min(n, int(b * SR)); k = int(fade * SR)
+    e[i0:i1] = 1; e[i0:i0 + k] = np.linspace(0, 1, k); e[i1 - k:i1] = np.linspace(1, 0, k); return e
+nz = lambda v: v / (np.abs(v).max() or 1)
+amb = np.zeros(n)
+for ci, kind in enumerate(spec.get('ambience', [])):
+    if ci >= len(chapters) or not kind: continue
+    c = chapters[ci]; w = env(c['s'], c['e'])
+    if kind == 'water': amb += 0.6 * nz(mg.hp(mg.lp(rng.normal(0, 1, n), 2500), 300)) * w
+    elif kind == 'wind': amb += 0.7 * nz(mg.lp(rng.normal(0, 1, n), 300) * (0.6 + 0.4 * np.sin(tt * 0.6))) * w
+    elif kind == 'rain': amb += 0.55 * nz(mg.hp(mg.lp(rng.normal(0, 1, n), 7000), 900)) * w
+    elif kind == 'sea': amb += 0.9 * nz(mg.lp(rng.normal(0, 1, n), 600) * (0.45 + 0.55 * np.clip(np.sin(tt * 2 * np.pi / 6.5), 0, 1) ** 2)) * w
+bed = 0.75 * music + 0.3 * amb; bed = bed / (np.abs(bed).max() or 1) * 0.8
+mg.write_wav(f'{pub}/{base}/bed.wav', bed)
+
+# ---- film grain frames (shared by all videos)
+for k in range(4):
+    gp = f'{pub}/news/grain_{k}.jpg'
+    if not os.path.exists(gp):
+        g = np.random.RandomState(k).normal(128, 40, (960, 540)).clip(0, 255).astype(np.uint8)
+        Image.fromarray(g).resize((1080, 1920), Image.BILINEAR).save(gp, quality=80)
+
+plan = {'duration': total, 'showChapters': spec.get('show_chapters', False),
+        'chapters': chapters, 'subs': subs, 'voice': voice, 'music': f'{base}/bed.wav', 'musicVolume': 0.3,
+        'fonts': [], 'grain': [f'news/grain_{k}.jpg' for k in range(4)]}
+json.dump(plan, open(f'{out}/plan.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+def ts(v):
+    ms = int(round(v * 1000)); h, ms = divmod(ms, 3600000); m, ms = divmod(ms, 60000); s_, ms = divmod(ms, 1000)
+    return f'{h:02d}:{m:02d}:{s_:02d},{ms:03d}'
+with open(f'{out}/subtitles.srt', 'w', encoding='utf-8') as f:
+    for k, sb in enumerate(subs, 1): f.write(f"{k}\n{ts(sb['s'])} --> {ts(sb['e'] + 0.2)}\n{sb['text']}\n\n")
+
+# ---- credits for the video description (every picture: title, author, date, licence, page)
+idx = {}
+for rnd in sorted(os.listdir(imgsrc)) if os.path.isdir(imgsrc) else []:
+    ip = os.path.join(imgsrc, rnd, 'index.json')
+    if os.path.exists(ip):
+        for q in json.load(open(ip, encoding='utf-8')):
+            for r in q['results']:
+                if r.get('file'): idx[f"{rnd}/{r['file']}"] = r
+seen, rows = set(), []
+for name, it in picks['images'].items():
+    r = idx.get(it['src'])
+    if not r:
+        rows.append(f"- {it['src']} (ảnh chủ kênh gửi)" if it['src'].startswith('own/') else f"- {it['src']}"); continue
+    if r['page'] in seen: continue
+    seen.add(r['page'])
+    date = re.sub(r'date QS.*', '', r.get('date') or '').strip()
+    artist = re.sub(r'\s+', ' ', r.get('artist') or '').strip()
+    rows.append(f"- {r['title'][5:]} — {artist}{f' ({date})' if date else ''} — {r['license']}\n  {r['page']}")
+open(f'{out}/credits.txt', 'w', encoding='utf-8').write(
+    'Nguồn ảnh (Wikimedia Commons; phạm vi công cộng / CC0 / CC BY / CC BY-SA — ảnh CC BY và CC BY-SA phải ghi tên tác giả và giấy phép trong mô tả video):\n\n'
+    + '\n'.join(rows) + '\n')
+print(f'total {total} s; ' + ', '.join(f"{c['num']}:{c['s']}–{c['e']} ({len(c['pics'])} ảnh)" for c in chapters))

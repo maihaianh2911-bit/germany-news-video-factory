@@ -1,0 +1,33 @@
+name: 📰 Video tin tức (ảnh thật)
+description: Dán kịch bản → máy làm video dọc có giọng Đức, ảnh thật (không AI) và phụ đề chạy theo giọng
+title: "[Tin tức] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Cách dùng:** dán kịch bản rồi bấm **Create**. Không cần làm gì thêm: Claude chia câu và tìm ảnh, máy tạo giọng đọc tiếng Đức, Claude chọn ảnh hợp từng câu, máy dựng video, Claude kiểm tra lại từng cảnh. Link video sẽ hiện ở bình luận cuối.
+        Muốn sửa gì thì viết bình luận (ví dụ "cảnh 3 đổi ảnh khác").
+  - type: input
+    id: topic
+    attributes:
+      label: Chủ đề (không bắt buộc)
+      description: Tin nói về ai, việc gì, ở đâu, để tìm ảnh đúng hơn
+      placeholder: Bundestag — Mindestlohn
+  - type: textarea
+    id: script
+    attributes:
+      label: Kịch bản (bắt buộc)
+      description: Tiếng Việt hoặc tiếng Đức. Kịch bản được giữ nguyên ý; nếu là tiếng Việt, Claude dịch sát sang tiếng Đức để đọc.
+    validations:
+      required: true
+  - type: input
+    id: voice
+    attributes:
+      label: Giọng đọc (không bắt buộc)
+      description: Để trống = giọng mặc định của kênh
+  - type: textarea
+    id: notes
+    attributes:
+      label: Ghi chú (không bắt buộc)
+      description: Ảnh nên có hoặc nên tránh, "có chia phần" nếu muốn thẻ chia phần… Có thể kéo thả ảnh riêng vào đây.

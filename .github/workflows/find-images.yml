@@ -1,0 +1,40 @@
+name: Tìm ảnh (Wikimedia Commons)
+
+# Free-to-use pictures for a video, licence checked (public domain, CC0, CC BY, CC BY-SA).
+# Queries are separated by " || ". Results (pictures, index.json with licences, contact sheets) go to the
+# renders branch, folder image-search/<name>/.
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Tên thư mục kết quả (vd bundestag)
+        required: true
+      queries:
+        description: Các từ khóa tìm ảnh, ngăn cách bằng " || "
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  find:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      NAME: ${{ inputs.name }}
+      QUERIES: ${{ inputs.queries }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tìm và tải ảnh
+        run: |
+          case "$NAME" in *[!A-Za-z0-9_-]*|'') echo "::error::tên thư mục không hợp lệ"; exit 1;; esac
+          pip install -q pillow
+          python3 - <<'PY'
+          import os, subprocess
+          qs = [q.strip() for q in os.environ['QUERIES'].split('||') if q.strip()]
+          subprocess.run(['python3', 'scripts/find_images.py', f"out/{os.environ['NAME']}", *qs], check=True)
+          PY
+      - name: Đưa lên nhánh renders
+        run: |
+          bash scripts/publish_renders.sh "image-search/$NAME" out/$NAME/*

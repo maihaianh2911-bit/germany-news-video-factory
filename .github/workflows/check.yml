@@ -1,0 +1,54 @@
+name: Kiểm tra mã
+
+# Runs only when code changes (not when Claude pushes a video's news/<N>/ files): syntax, types, and a smoke test
+# of the news pipeline on made-up data with one rendered frame. No 11labs, no picture search.
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'src/**'
+      - 'tests/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - 'remotion.config.ts'
+      - '.github/workflows/check.yml'
+      - '.github/workflows/news.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      FONTSOURCE: /tmp/fontsource
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - name: Cú pháp
+        run: |
+          python3 -m compileall -q scripts tests
+          for f in scripts/*.sh scripts/news/*.sh; do bash -n "$f"; done
+          node --check scripts/news/stills.mjs
+          python3 -c "import json; json.load(open('prompts/news_readings.json', encoding='utf-8'))"
+      - name: Cài bộ dựng
+        run: |
+          pip install -q numpy scipy pillow imageio-ffmpeg==0.8.1
+          npm ci --no-audit --no-fund
+          npx remotion browser ensure
+          bash scripts/news/get_fonts.sh "$FONTSOURCE"
+      - name: Kiểm tra kiểu
+        run: npm run check
+      - name: Chạy thử dây chuyền tin tức (dữ liệu giả, dựng một khung hình)
+        run: |
+          python3 tests/news_smoke.py --still
+          python3 tests/news_smoke.py --chapters
