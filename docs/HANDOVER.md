@@ -9,6 +9,8 @@ Repo này làm **video tin tức tiếng Đức từ ảnh thật** (Shorts dọ
 
 ## Quyết định của chủ kênh
 
+- 12/11: **cách dựng video khác repo Nhật**: chủ kênh sẽ gửi video mẫu (thư mục `00-video-mau/` hoặc link). Khi có mẫu, làm lại `src/news/NewsV.tsx` (và `build.py` nếu cần) theo mẫu; phần giọng, tìm ảnh, phụ đề khớp giọng, các bước máy giữ nguyên.
+
 - 12/11: *"Kịch bản sẽ do tao làm và gửi vào chat cho m, m chỉ nhận phần sau thôi"* → chủ kênh tự viết kịch bản và gửi vào chat; Claude không viết, không tìm tin, không sửa ý. Claude mở phiếu, dịch sát sang tiếng Đức nếu kịch bản là tiếng Việt, rồi làm video.
 - Chưa hỏi lại, đang làm theo cách của repo Nhật: ảnh **thật** (không ảnh AI), Claude tự xem và chọn từng ảnh, xem trước khung hình trước khi dựng, kể liền mạch (không thẻ chia phần).
 
@@ -22,9 +24,9 @@ Phiếu `[Tin tức] …` → `.github/workflows/news.yml` + `scripts/news/run.p
 
 - Mã đã chạy thử bằng dữ liệu giả (`tests/news_smoke.py --still` và `--chapters`, kiểm tra kiểu) trên máy của phiên chat. **Chưa có video thật nào**: giọng đọc tiếng Đức, tìm ảnh và dựng trên GitHub chưa chạy lần nào ở repo này.
 - Còn thiếu, theo thứ tự:
-  1. Mã phải nằm trên nhánh `main` thì máy GitHub mới chạy (phiên 12/11 chỉ được đẩy lên nhánh `ccr-41fd68e7-ie4xtj`, chờ chủ kênh đồng ý).
-  2. Secret `VN11_API_KEY` (chủ kênh tự thêm; cùng khóa với repo Nhật).
-  3. **Giọng đọc tiếng Đức**: `prompts/news_voice.json` còn trống, bước giọng sẽ dừng và báo rõ. Chạy workflow **Thử voice 11labs** để lấy danh sách giọng Đức (ra `voices.md` trên nhánh `renders`) và đọc thử; chủ kênh nghe rồi chọn. Có thể thử cả `clone_190` (giọng của kênh Nhật) với câu tiếng Đức.
+  1. ~~Đưa lên `main`~~: xong 12/11, chủ kênh đồng ý.
+  2. ~~Secret `VN11_API_KEY`~~: chủ kênh đã thêm 12/11 (lần đầu ghi sai tên `vn11-api-key`, GitHub không nhận gạch ngang).
+  3. ~~Giọng đọc tiếng Đức~~: 12/11 chọn `clone_611` ("voice de ww40k", giọng clone tiếng Đức có sẵn trong tài khoản 11labs của chủ kênh), ghi trong `prompts/news_voice.json`. Tài khoản chỉ có 3 giọng clone (611 Đức, 190 và 461 Nhật), không có giọng Đức thường nào.
   4. Tác vụ Claude hằng giờ cho repo này + secrets `CLAUDE_TASK_URL`, `CLAUDE_TASK_TOKEN` (chưa tạo). Chưa có thì video vẫn làm được trong phiên chat.
 - Sau video đầu tiên: đo lại tốc độ đọc (đang ước 14–15 ký tự/giây trong `AGENT_NEWS.md`), xem cỡ chữ phụ đề, và hỏi chủ kênh về kiểu hình (màu nền, nhạc) vì giao diện đang giống kênh văn học.
 
