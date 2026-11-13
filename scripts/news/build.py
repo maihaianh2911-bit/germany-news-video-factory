@@ -7,6 +7,8 @@ chapter), <public_dir>/news/<N>/voice/lines.json (measured line lengths) and the
 <public_dir>/news/<N>/img/. Writes <out_dir>/plan.json, subtitles.srt, credits.txt and <public_dir>/news/<N>/bed.wav.
 Timing: every line starts after the previous one plus a pause (0.45 s after a sentence end, 0.25 s otherwise);
 each chapter opens with a short breath; a picture that starts on a line ("at") cuts in just before it is spoken.
+Credits: a search result is listed from its round's index.json (title, author, date, licence, File: page); any other
+picture (own/…) by its on-screen credit, plus the optional picks.json image key "page" (source URL) on the next line.
 """
 import json, os, re, sys
 import numpy as np

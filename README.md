@@ -30,9 +30,12 @@ Nhánh **`renders`**, thư mục `news/<số phiếu>/`: `video.mp4`, `subtitles
 
 ## Cấu hình
 
-- **Secrets** (Settings → Secrets and variables → Actions): `VN11_API_KEY` (giọng đọc 11labs, bắt buộc), `CLAUDE_TASK_URL` + `CLAUDE_TASK_TOKEN` (để GitHub gọi Claude ngay khi có việc; chép cùng giá trị như ở repo `japan-video-factory`, vì hai repo dùng chung một tác vụ Claude; thiếu thì phiếu chỉ được làm trong phiên chat hoặc khi bấm Gọi Claude ngay; không có lượt chạy mỗi giờ).
+- **Secrets** (Settings → Secrets and variables → Actions): `VN11_API_KEY` (giọng đọc 11labs, bắt buộc), `CLAUDE_TASK_URL` + `CLAUDE_TASK_TOKEN` (để GitHub gọi Claude ngay khi có việc; không có lượt chạy mỗi giờ, thiếu hai secret này thì phiếu chỉ được làm trong phiên chat). Hai cách:
+  - Dùng chung tác vụ Claude của repo `japan-video-factory`: chép **cùng giá trị** như ở repo đó. Lời nhắn của tác vụ đó phải là "Làm theo AGENT_NIGHTLY.md …" (kiểm tra mọi kênh), **không** phải "Làm việc đang chờ trong repo này" (lời đó chỉ làm kênh văn học, bỏ qua tin tức Đức).
+  - Hoặc một tác vụ riêng cho repo này (lời nhắn "Làm theo AGENT_NIGHTLY.md của repo maihaianh2911-bit/germany-news-video-factory."): chép URL và token của tác vụ riêng đó.
+  Sau khi thêm, bấm **Gọi Claude ngay** một lần: nhật ký cho biết hai secret có chạy không.
 - **Giọng đọc tiếng Đức:** ghi mã giọng vào `prompts/news_voice.json`. Xem danh sách và nghe thử bằng workflow **Thử voice 11labs**.
-- Mỗi video tốn khoảng 40–60 phút máy GitHub.
+- Mỗi video tốn khoảng 20–45 phút máy GitHub (video 1,5 phút ~20 phút, video 3 phút ~40 phút).
 
 ## Chạy tay (tab **Actions**)
 

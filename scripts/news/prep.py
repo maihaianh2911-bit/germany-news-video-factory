@@ -2,7 +2,8 @@
 """Crop, grade and size the pictures chosen in picks.json. Usage: prep.py <picks.json> <img_root> <out_dir>
 
 picks.json "images": {"<name>": {"src": "<round>/<file>" (from the image search) or "own/<file>" (news/<N>/own/),
-"crop": [x0, y0, x1, y1] (0..1, optional), "mode": "sepia" | "color" | "keep", "sat": 0.92, "vignette": 0.0}}
+"crop": [x0, y0, x1, y1] (0..1, optional), "mode": "sepia" | "color" | "keep", "sat": 0.92, "vignette": 0.0,
+"page": "<source URL>" (optional, only used by build.py for credits.txt)}}
 → <out_dir>/<name>.jpg. sepia: black-and-white sources toned to the video's warm palette; color: slight
 desaturation, warmth and contrast so paintings from different centuries sit together.
 """

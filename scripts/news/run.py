@@ -6,8 +6,8 @@
   search   every news/<N>/search-<r>.json whose round is not on renders yet → renders/news/<N>/img/<r>/
   render   pictures from picks.json, plan, fonts, Remotion render, loudness, shot sheet
            → renders/news/<N>/video.mp4, subtitles.srt, credits.txt, sheet.jpg
-After prepare/search the issue waits for Claude (news-pick) unless picks.json exists, then render runs too; not when
-prepare searched round 1 again with changed queries (the picks would point at other pictures).
+After prepare/search the issue waits for Claude (news-pick, Claude is called) unless picks.json exists, then render
+runs too; not when prepare searched round 1 again with changed queries (the picks would point at other pictures).
 A video over 95 MB is encoded again at a bitrate that lands ~90 MB (GitHub refuses files over 100 MB).
 Needs GH_TOKEN, GITHUB_REPOSITORY; prepare needs VN11_API_KEY.
 """
@@ -151,6 +151,7 @@ def search():
             json.dump(q, open(os.path.join(d, 'queries.json'), 'w', encoding='utf-8'), ensure_ascii=False)
             did.append(f'img/{r}')
     if did: publish(did, 'tìm thêm ảnh')
+    return [d[len('img/'):] for d in did]
 
 
 MAX_MB, TARGET_MB = 95, 90   # GitHub refuses files over 100 MB
@@ -199,6 +200,7 @@ def wake(why):
 
 if __name__ == '__main__':
     fetch_renders()
+    woke = False   # Claude was already called for the news-pick wait (no second call for the same wait)
     if 'prepare' in steps:
         rows, requeried = prepare()
         flagged = sum(1 for r in rows if r.get('diff'))
@@ -213,14 +215,19 @@ if __name__ == '__main__':
                     f'{f" ({flagged} câu cần Claude nghe lại cách đọc)" if flagged else ""}. '
                     + ('Từ khóa tìm ảnh đã đổi nên ảnh đợt 1 là ảnh mới: Claude phải chọn lại ảnh trước khi dựng video.'
                        if requeried else 'Ảnh đã tìm xong. Claude sẽ chọn ảnh cho từng ý.'))
-            wake(f'Phiếu tin tức số {N}: ' + ('từ khóa ảnh đợt 1 đã đổi, phải chọn lại ảnh.' if requeried
-                                              else 'giọng và ảnh đã sẵn sàng, chờ chọn ảnh.'))
+            wake(f'Phiếu tin tức (Đức) số {N}: ' + ('từ khóa ảnh đợt 1 đã đổi, phải chọn lại ảnh.' if requeried
+                                                     else 'giọng và ảnh đã sẵn sàng, chờ chọn ảnh.'))
+            woke = True
         elif 'render' not in steps:
             steps.append('render')
     if 'search' in steps:
-        search()
+        rounds = search()
         if 'render' not in steps:
             labels(add=['news-pick'], remove=['news-voice'])
+            if rounds and not woke:
+                # Claude may have stopped polling for the new round: call it so the issue does not wait at news-pick
+                comment(f'🤖 Đã tìm thêm ảnh (đợt {", ".join(rounds)}). Claude sẽ chọn ảnh cho từng ý.')
+                wake(f'Phiếu tin tức (Đức) số {N}: đã tìm thêm ảnh (đợt {", ".join(rounds)}), chờ chọn ảnh.')
     if 'render' in steps:
         if not os.path.exists(os.path.join(WORK, 'voice', 'lines.json')):
             raise SystemExit('chưa có giọng đọc cho phiếu này (cần script.json)')
@@ -229,4 +236,4 @@ if __name__ == '__main__':
         m, s = divmod(round(length), 60)
         comment(f'🤖 Đã dựng xong bản video ({m} phút {s:02d} giây). Claude đang kiểm tra lại từng cảnh trước khi giao.\n\n'
                 f'- Video: {link("video.mp4")}\n- Ảnh các cảnh: {link("sheet.jpg")}')
-        wake(f'Phiếu tin tức số {N}: video đã dựng, chờ kiểm tra.')
+        wake(f'Phiếu tin tức (Đức) số {N}: video đã dựng, chờ kiểm tra.')

@@ -46,7 +46,7 @@ jobs:
           gh issue comment "$N" --body "🤖 Đã nhận kịch bản. Claude sẽ chia câu và chọn từ khóa tìm ảnh (dịch sang tiếng Đức nếu cần), máy tạo giọng đọc và tìm ảnh, Claude chọn ảnh, máy dựng video, Claude kiểm tra lại từng cảnh. Mỗi bước xong sẽ báo ở đây."
       - name: Gọi Claude
         env: { CLAUDE_TASK_URL: '${{ secrets.CLAUDE_TASK_URL }}', CLAUDE_TASK_TOKEN: '${{ secrets.CLAUDE_TASK_TOKEN }}' }
-        run: bash scripts/wake_claude.sh "Phiếu tin tức mới số ${{ github.event.issue.number }}."
+        run: bash scripts/wake_claude.sh "Phiếu tin tức (Đức) mới số ${{ github.event.issue.number }}."
 
   # 2) The owner comments on a news issue → Claude reads it and fixes
   fix:
@@ -67,7 +67,7 @@ jobs:
           gh issue comment "$N" --body "🤖 Đã nhận yêu cầu. Claude sẽ sửa và máy dựng lại."
       - name: Gọi Claude
         env: { CLAUDE_TASK_URL: '${{ secrets.CLAUDE_TASK_URL }}', CLAUDE_TASK_TOKEN: '${{ secrets.CLAUDE_TASK_TOKEN }}' }
-        run: bash scripts/wake_claude.sh "Chủ kênh yêu cầu sửa phiếu tin tức số ${{ github.event.issue.number }}."
+        run: bash scripts/wake_claude.sh "Chủ kênh yêu cầu sửa phiếu tin tức (Đức) số ${{ github.event.issue.number }}."
 
   # 3) Claude pushed news/<N>/… (or a manual run) → voice + pictures, or the video
   work:
@@ -133,7 +133,7 @@ jobs:
               FAIL=1
               gh issue edit "$N" --add-label news-failed --remove-label news-voice --remove-label news-render < /dev/null || true
               gh issue comment "$N" --body "🤖 Máy gặp lỗi ở bước \`$STEPS\` — xem nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID . Claude sẽ xem và sửa." < /dev/null || true
-              bash scripts/wake_claude.sh "Phiếu tin tức số $N bị lỗi ở bước $STEPS." < /dev/null || true
+              bash scripts/wake_claude.sh "Phiếu tin tức (Đức) số $N bị lỗi ở bước $STEPS." < /dev/null || true
             fi
             echo "$N" >> /tmp/handled.txt
             echo "::endgroup::"
@@ -151,6 +151,6 @@ jobs:
             gh issue edit "$N" --add-label news-failed < /dev/null || true
             gh issue edit "$N" --remove-label news-voice --remove-label news-render < /dev/null || true
             gh issue comment "$N" --body "🤖 Máy dừng giữa chừng trước khi làm xong bước \`$STEPS\` (lỗi cài đặt, quá giờ hoặc bị hủy) — xem nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID . Claude sẽ xem và chạy lại." < /dev/null || true
-            bash scripts/wake_claude.sh "Phiếu tin tức số $N: máy dừng giữa chừng ở bước $STEPS." < /dev/null || true
+            bash scripts/wake_claude.sh "Phiếu tin tức (Đức) số $N: máy dừng giữa chừng ở bước $STEPS." < /dev/null || true
           done < /tmp/todo.txt
           true

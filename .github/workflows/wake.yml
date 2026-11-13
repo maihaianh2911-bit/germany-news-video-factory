@@ -17,4 +17,4 @@ jobs:
       - name: Gọi Claude
         env: { CLAUDE_TASK_URL: '${{ secrets.CLAUDE_TASK_URL }}', CLAUDE_TASK_TOKEN: '${{ secrets.CLAUDE_TASK_TOKEN }}' }
         run: |
-          bash scripts/wake_claude.sh "Chủ kênh bấm gọi Claude, xem các phiếu tin tức đang chờ."
+          bash scripts/wake_claude.sh "Chủ kênh bấm gọi Claude, xem các phiếu tin tức (Đức, repo germany-news-video-factory) đang chờ."
