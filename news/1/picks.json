@@ -1,0 +1,619 @@
+{
+ "images": {
+  "akte": {
+   "src": "own/angeklagte-akte.jpg",
+   "mode": "keep"
+  },
+  "fessel": {
+   "src": "own/fussfessel.jpg",
+   "mode": "keep"
+  },
+  "ohm": {
+   "src": "own/ohm-angeklagte.jpg",
+   "mode": "keep"
+  },
+  "lg1": {
+   "src": "1/4-1.jpg",
+   "mode": "keep"
+  },
+  "guestrow": {
+   "src": "1/1-2.jpg",
+   "mode": "keep"
+  },
+  "mutter": {
+   "src": "own/mutter-anwaeltin.jpg",
+   "mode": "keep"
+  },
+  "teich": {
+   "src": "own/teich-klein-upahl.jpg",
+   "mode": "keep"
+  },
+  "justiz": {
+   "src": "own/angeklagte-justiz.jpg",
+   "mode": "keep"
+  },
+  "pteich": {
+   "src": "own/polizei-teich.jpg",
+   "mode": "keep"
+  },
+  "gericht": {
+   "src": "own/polizei-gericht.jpg",
+   "mode": "keep"
+  },
+  "wald": {
+   "src": "own/suche-wald.jpg",
+   "mode": "keep"
+  },
+  "kammer": {
+   "src": "own/kammer-urteil.jpg",
+   "mode": "keep"
+  },
+  "lg2": {
+   "src": "1/4-2.jpg",
+   "mode": "keep"
+  },
+  "schuh": {
+   "src": "2/2-1.jpg",
+   "mode": "keep"
+  },
+  "handy": {
+   "src": "2/4-1.jpg",
+   "mode": "keep"
+  },
+  "wolken": {
+   "src": "1/1-7.jpg",
+   "mode": "keep"
+  },
+  "justitia": {
+   "src": "1/15-2.jpg",
+   "mode": "keep"
+  },
+  "akte2": {
+   "src": "own/angeklagte-akte2.jpg",
+   "mode": "keep"
+  },
+  "vert": {
+   "src": "own/angeklagte-verteidiger.jpg",
+   "mode": "keep"
+  },
+  "staatsanw": {
+   "src": "own/staatsanwaelte.jpg",
+   "mode": "keep"
+  },
+  "saal": {
+   "src": "1/14-1.jpg",
+   "mode": "keep"
+  },
+  "bghsign": {
+   "src": "1/6-1.jpg",
+   "mode": "keep"
+  },
+  "bgh": {
+   "src": "1/7-4.jpg",
+   "mode": "keep"
+  },
+  "bgh2": {
+   "src": "1/7-3.jpg",
+   "mode": "keep"
+  },
+  "justitia2": {
+   "src": "1/15-1.jpg",
+   "mode": "keep"
+  }
+ },
+ "chapters": [
+  {
+   "pics": [
+    {
+     "img": "akte",
+     "from": {
+      "z": 1.0,
+      "x": 0.42,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.4,
+      "y": 0.4
+     },
+     "credit": "Die Angeklagte im Landgericht Rostock · Foto: Bernd Wüstneck/dpa",
+     "tag": "Rostock"
+    },
+    {
+     "img": "fessel",
+     "from": {
+      "z": 1.05,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.25,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "credit": "Die Angeklagte mit Fußfessel im Gerichtssaal · Foto: Bernd Wüstneck/dpa",
+     "at": 2
+    },
+    {
+     "img": "ohm",
+     "from": {
+      "z": 1.05,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.3,
+      "y": 0.35
+     },
+     "credit": "Verteidiger Andreas Ohm und die Angeklagte · Foto: Bernd Wüstneck/dpa",
+     "at": 3
+    },
+    {
+     "img": "lg1",
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.18,
+      "x": 0.45,
+      "y": 0.4
+     },
+     "credit": "Landgericht Rostock · Foto: MyRobotron / Wikimedia Commons, CC BY-SA 4.0",
+     "at": 4,
+     "tag": "Rostock"
+    },
+    {
+     "img": "guestrow",
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.68,
+      "y": 0.45
+     },
+     "credit": "Güstrow (Archivbild) · Foto: Bullix / Wikimedia Commons, CC BY-SA 4.0",
+     "at": 5,
+     "tag": "Güstrow"
+    },
+    {
+     "img": "mutter",
+     "from": {
+      "z": 1.05,
+      "x": 0.6,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.68,
+      "y": 0.38
+     },
+     "credit": "Fabians Mutter (r.) mit Anwältin Christine Habetha · Foto: Bernd Wüstneck/dpa",
+     "at": 7
+    },
+    {
+     "img": "teich",
+     "from": {
+      "z": 1.0,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.5,
+      "y": 0.55
+     },
+     "credit": "Fundort bei Klein Upahl, Oktober 2025 · Foto: Bernd Wüstneck/dpa",
+     "at": 8,
+     "tag": "Klein Upahl"
+    },
+    {
+     "img": "justiz",
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.36,
+      "y": 0.45
+     },
+     "credit": "Die Angeklagte vor Gericht · Foto: Bernd Wüstneck/dpa",
+     "at": 10
+    },
+    {
+     "img": "pteich",
+     "from": {
+      "z": 1.0,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.18,
+      "x": 0.32,
+      "y": 0.4
+     },
+     "credit": "Polizei am Fundort, Dezember 2025 · Foto: Bernd Wüstneck/dpa",
+     "at": 11,
+     "tag": "Klein Upahl"
+    },
+    {
+     "img": "gericht",
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.6
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.62,
+      "y": 0.62
+     },
+     "credit": "Prozesstag in Rostock · Foto: Bernd Wüstneck/dpa",
+     "at": 12,
+     "tag": "Rostock"
+    },
+    {
+     "img": "wald",
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.55
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.48,
+      "y": 0.45
+     },
+     "credit": "Suche nach Fabian bei Güstrow, Oktober 2025 · Foto: Stefan Tretropp",
+     "at": 13
+    },
+    {
+     "img": "kammer",
+     "from": {
+      "z": 1.05,
+      "x": 0.35,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.6,
+      "y": 0.38
+     },
+     "credit": "Die Schwurgerichtskammer verkündet das Urteil · Foto: Bernd Wüstneck/dpa",
+     "at": 14
+    },
+    {
+     "img": "justitia",
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.32
+     },
+     "credit": "Justitia (Symbolbild) · Foto: Dirrival / Wikimedia Commons, CC BY-SA 4.0",
+     "at": 15
+    },
+    {
+     "img": "lg2",
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "credit": "Landgericht Rostock · Foto: M.Meißer / Wikimedia Commons, CC BY-SA 3.0",
+     "at": 17,
+     "tag": "Rostock"
+    },
+    {
+     "img": "schuh",
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "credit": "Schuhspuren-Vergleich (Symbolbild) · Foto: Zalman992 / Wikimedia Commons, CC BY-SA 4.0",
+     "at": 19
+    },
+    {
+     "img": "handy",
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.52
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.48,
+      "y": 0.55
+     },
+     "credit": "Ausgeschaltetes Handy (Symbolbild) · Foto: Sertion / Wikimedia Commons, CC BY-SA 3.0",
+     "at": 20
+    },
+    {
+     "img": "wolken",
+     "from": {
+      "z": 1.0,
+      "x": 0.35,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.6,
+      "y": 0.45
+     },
+     "credit": "Mecklenburg (Symbolbild) · Foto: Marlis Börger / Wikimedia Commons, CC BY 2.0",
+     "at": 22
+    },
+    {
+     "img": "justitia2",
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.3
+     },
+     "credit": "Justitia (Symbolbild) · Foto: Rigorius / Wikimedia Commons, CC BY-SA 4.0",
+     "at": 23
+    },
+    {
+     "img": "akte2",
+     "from": {
+      "z": 1.0,
+      "x": 0.35,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.32,
+      "y": 0.38
+     },
+     "credit": "Die Angeklagte im Gerichtssaal · Foto: Bernd Wüstneck/dpa",
+     "at": 25
+    },
+    {
+     "img": "vert",
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.6,
+      "y": 0.4
+     },
+     "credit": "Die Angeklagte mit ihrer Verteidigung · Foto: Bernd Wüstneck/dpa",
+     "at": 26
+    },
+    {
+     "img": "kammer",
+     "from": {
+      "z": 1.1,
+      "x": 0.7,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.86,
+      "y": 0.33
+     },
+     "credit": "Die Schwurgerichtskammer verkündet das Urteil · Foto: Bernd Wüstneck/dpa",
+     "at": 27,
+     "tag": "Rostock"
+    },
+    {
+     "img": "ohm",
+     "from": {
+      "z": 1.1,
+      "x": 0.3,
+      "y": 0.35
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.22,
+      "y": 0.25
+     },
+     "credit": "Verteidiger Andreas Ohm (l.) und die Angeklagte · Foto: Bernd Wüstneck/dpa",
+     "at": 29
+    },
+    {
+     "img": "staatsanw",
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "credit": "Staatsanwälte Oliver Schley und Harald Nowack · Foto: Bernd Wüstneck/dpa",
+     "at": 31
+    },
+    {
+     "img": "lg1",
+     "from": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.42,
+      "y": 0.4
+     },
+     "credit": "Landgericht Rostock · Foto: MyRobotron / Wikimedia Commons, CC BY-SA 4.0",
+     "at": 32,
+     "tag": "Rostock"
+    },
+    {
+     "img": "saal",
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.18,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "credit": "Gerichtssaal (Symbolbild) · Foto: Olaf Malzahn / Wikimedia Commons, CC BY 4.0",
+     "at": 33
+    },
+    {
+     "img": "bghsign",
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.43,
+      "y": 0.47
+     },
+     "credit": "Bundesgerichtshof, Karlsruhe · Foto: Gerd Eichmann / Wikimedia Commons, CC BY-SA 4.0",
+     "at": 35,
+     "tag": "Karlsruhe"
+    },
+    {
+     "img": "bgh",
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "credit": "Bundesgerichtshof, Karlsruhe · Foto: Sitacuisses / Wikimedia Commons, CC BY-SA 3.0 de",
+     "at": 36,
+     "tag": "Karlsruhe"
+    },
+    {
+     "img": "bgh2",
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "credit": "Bundesgerichtshof, Karlsruhe · Foto: Kucharek / Wikimedia Commons, CC BY-SA 3.0",
+     "at": 38,
+     "tag": "Karlsruhe"
+    },
+    {
+     "img": "justitia2",
+     "from": {
+      "z": 1.25,
+      "x": 0.5,
+      "y": 0.32
+     },
+     "to": {
+      "z": 1.05,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "credit": "Justitia (Symbolbild) · Foto: Rigorius / Wikimedia Commons, CC BY-SA 4.0",
+     "at": 39
+    },
+    {
+     "img": "fessel",
+     "from": {
+      "z": 1.2,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.4,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "credit": "Die Angeklagte mit Fußfessel im Gerichtssaal · Foto: Bernd Wüstneck/dpa",
+     "at": 41
+    },
+    {
+     "img": "gericht",
+     "from": {
+      "z": 1.1,
+      "x": 0.62,
+      "y": 0.62
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.7,
+      "y": 0.6
+     },
+     "credit": "Prozesstag in Rostock · Foto: Bernd Wüstneck/dpa",
+     "at": 42,
+     "tag": "Rostock"
+    },
+    {
+     "img": "bgh",
+     "from": {
+      "z": 1.15,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.55,
+      "y": 0.38
+     },
+     "credit": "Bundesgerichtshof, Karlsruhe · Foto: Sitacuisses / Wikimedia Commons, CC BY-SA 3.0 de",
+     "at": 44,
+     "tag": "Karlsruhe"
+    },
+    {
+     "img": "guestrow",
+     "from": {
+      "z": 1.25,
+      "x": 0.68,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "credit": "Güstrow (Archivbild) · Foto: Bullix / Wikimedia Commons, CC BY-SA 4.0",
+     "at": 45,
+     "tag": "Güstrow"
+    }
+   ]
+  }
+ ]
+}
