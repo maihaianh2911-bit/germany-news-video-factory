@@ -27,7 +27,7 @@ Phiếu `[Tin tức] …` → `.github/workflows/news.yml` + `scripts/news/run.p
   1. ~~Đưa lên `main`~~: xong 12/11, chủ kênh đồng ý.
   2. ~~Secret `VN11_API_KEY`~~: chủ kênh đã thêm 12/11 (lần đầu ghi sai tên `vn11-api-key`, GitHub không nhận gạch ngang).
   3. ~~Giọng đọc tiếng Đức~~: 12/11 chọn `clone_611` ("voice de ww40k", giọng clone tiếng Đức có sẵn trong tài khoản 11labs của chủ kênh), ghi trong `prompts/news_voice.json`. Tài khoản chỉ có 3 giọng clone (611 Đức, 190 và 461 Nhật), không có giọng Đức thường nào.
-  4. Tác vụ Claude hằng giờ: **dùng chung** tác vụ "japan-video-factory" (phút :31) của repo Nhật. Từ 12/11 tác vụ đó kiểm tra cả phiếu `news-*` của repo này (xem `AGENT_NIGHTLY.md` của `japan-video-factory`), nên phiếu được làm trong vòng một giờ. Để GitHub gọi Claude **ngay** khi có việc, chủ kênh cần chép hai secret `CLAUDE_TASK_URL` và `CLAUDE_TASK_TOKEN` (cùng giá trị như ở `japan-video-factory`) vào repo này; chưa chép thì chờ lượt hằng giờ.
+  4. Tác vụ Claude: **dùng chung** tác vụ "japan-video-factory" của repo Nhật, tác vụ đó kiểm tra cả phiếu `news-*` của repo này (xem `AGENT_NIGHTLY.md` của `japan-video-factory`). Không có lượt chạy mỗi giờ (chủ kênh, 13/11): Claude chỉ bắt đầu khi GitHub gọi, nên chủ kênh **phải** chép hai secret `CLAUDE_TASK_URL` và `CLAUDE_TASK_TOKEN` (cùng giá trị như ở `japan-video-factory`) vào repo này; chưa chép thì chỉ làm được trong chat.
   5. Video mẫu của chủ kênh (`00-video-mau/`) **vẫn chưa có**: bố cục hiện vẫn chép kênh văn học, sẽ làm lại theo mẫu khi có.
 - Sau video đầu tiên: đo lại tốc độ đọc (đang ước 14–15 ký tự/giây trong `AGENT_NEWS.md`), xem cỡ chữ phụ đề, và hỏi chủ kênh về kiểu hình (màu nền, nhạc) vì giao diện đang giống kênh văn học.
 

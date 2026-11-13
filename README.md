@@ -30,7 +30,7 @@ Nhánh **`renders`**, thư mục `news/<số phiếu>/`: `video.mp4`, `subtitles
 
 ## Cấu hình
 
-- **Secrets** (Settings → Secrets and variables → Actions): `VN11_API_KEY` (giọng đọc 11labs, bắt buộc), `CLAUDE_TASK_URL` + `CLAUDE_TASK_TOKEN` (để GitHub gọi Claude ngay khi có việc; chép cùng giá trị như ở repo `japan-video-factory`, vì hai repo dùng chung một tác vụ Claude hằng giờ, phút :31; thiếu thì phiếu chờ lượt chạy mỗi giờ hoặc làm trong phiên chat).
+- **Secrets** (Settings → Secrets and variables → Actions): `VN11_API_KEY` (giọng đọc 11labs, bắt buộc), `CLAUDE_TASK_URL` + `CLAUDE_TASK_TOKEN` (để GitHub gọi Claude ngay khi có việc; chép cùng giá trị như ở repo `japan-video-factory`, vì hai repo dùng chung một tác vụ Claude; thiếu thì phiếu chỉ được làm trong phiên chat hoặc khi bấm Gọi Claude ngay; không có lượt chạy mỗi giờ).
 - **Giọng đọc tiếng Đức:** ghi mã giọng vào `prompts/news_voice.json`. Xem danh sách và nghe thử bằng workflow **Thử voice 11labs**.
 - Mỗi video tốn khoảng 40–60 phút máy GitHub.
 
@@ -39,9 +39,9 @@ Nhánh **`renders`**, thư mục `news/<số phiếu>/`: `video.mp4`, `subtitles
 | Workflow | Làm gì |
 |---|---|
 | **Video tin tức (ảnh thật)** | Chạy lại một bước cho một phiếu: `prepare` (giọng + ảnh), `search` (tìm thêm ảnh), `render` (dựng) |
-| **Gọi Claude ngay** | Cho Claude bắt đầu ngay, không chờ lượt chạy mỗi giờ |
+| **Gọi Claude ngay** | Cho Claude bắt đầu ngay (dùng khi một bước đang chờ Claude, ví dụ sau khi hết hạn mức) |
 | **Tìm ảnh (Wikimedia Commons)** | Tìm ảnh dùng tự do theo từ khóa |
 | **Thử voice 11labs** | Số dư, danh sách giọng Đức, đọc thử một câu |
 | **Dọn video cũ (nhánh renders)** | Dọn file của phiếu cũ (tự chạy mỗi tuần) |
 
-Hướng dẫn cho Claude: [`CLAUDE.md`](CLAUDE.md), [`AGENT_NEWS.md`](AGENT_NEWS.md) (các bước làm video), [`AGENT_NIGHTLY.md`](AGENT_NIGHTLY.md) (lượt chạy mỗi giờ). Bàn giao: [`docs/HANDOVER.md`](docs/HANDOVER.md).
+Hướng dẫn cho Claude: [`CLAUDE.md`](CLAUDE.md), [`AGENT_NEWS.md`](AGENT_NEWS.md) (các bước làm video), [`AGENT_NIGHTLY.md`](AGENT_NIGHTLY.md) (điểm vào khi GitHub gọi Claude). Bàn giao: [`docs/HANDOVER.md`](docs/HANDOVER.md).

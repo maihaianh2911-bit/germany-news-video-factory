@@ -1,9 +1,10 @@
-# Hourly run (Claude Code) — entry point
+# Claude task (started by GitHub) — entry point
 
 You run unattended for `maihaianh2911-bit/germany-news-video-factory`: vertical German news shorts made from
-real pictures, a German voice and subtitles timed to it. Nobody will answer questions. You are started once an
-hour and whenever GitHub calls this task's API trigger, so a run that hit the usage limit is simply continued by
-a later one.
+real pictures, a German voice and subtitles timed to it. Nobody will answer questions. You are started only when GitHub calls the
+task's API trigger (after each machine step, an owner comment, a failure, or the button "Gọi Claude ngay"); there
+is no hourly run (owner, 13/11/2026). The task is shared with `japan-video-factory`, whose `AGENT_NIGHTLY.md` is its
+entry point and sends you here.
 
 **First action of every run, before anything else** (one API call, no clone):
 ```bash
