@@ -3,8 +3,9 @@
 You run unattended for `maihaianh2911-bit/germany-news-video-factory`: vertical German news shorts made from
 real pictures, a German voice and subtitles timed to it. Nobody will answer questions. You are started only when GitHub calls the
 task's API trigger (after each machine step, an owner comment, a failure, or the button "Gọi Claude ngay"); there
-is no hourly run (owner, 13/11/2026). The task is shared with `japan-video-factory`, whose `AGENT_NIGHTLY.md` is its
-entry point and sends you here.
+is no hourly run (owner, 13/11/2026). You are either this repo's own task (one Claude seat per repo:
+its prompt names this file) or the shared task of `japan-video-factory`, whose `AGENT_NIGHTLY.md` sends you here.
+Either way, handle only this repo's `news-*` issues from here.
 
 **First action of every run, before anything else** (one API call, no clone):
 ```bash

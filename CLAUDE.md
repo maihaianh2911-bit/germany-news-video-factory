@@ -18,8 +18,8 @@ One issue `[Tin tức] …` = one video; the machine steps run on GitHub Actions
    `script.json` → wait for the voice and pictures (~20–30 min for 40–60 lines) → `picks.json`, with the framing
    preview → wait for the render (~20–25 min) → check the shot sheet → closing comment. Use the GitHub tools of the
    session. While a machine step runs, say so in one line and wait; if the owner does not want to wait, stop after
-   any step: the Claude task "japan-video-factory" (shared with the Japanese repo, see HANDOVER) continues from the
-   labels when GitHub calls it (no hourly run; needs the two secrets).
+   any step: the Claude task "japan-video-factory" (shared with the Japanese repo, see HANDOVER, or this repo's own
+   task when each repo has its own seat) continues from the labels when GitHub calls it (no hourly run; needs the two secrets).
 3. Give the owner the links to the video, the subtitles and the picture credits.
 
 The script is the owner's: translate and split it, never edit its content. Look at the pictures yourself,
