@@ -1,0 +1,165 @@
+{
+ "title": "Mordfall Fabian: 44 Indizien, lebenslange Haft und Revision",
+ "voice": "",
+ "show_chapters": false,
+ "lines": [
+  "44 Indizien.",
+  "Eine lebenslange Freiheitsstrafe.",
+  "Und nur einen Tag später beantragte die Verteidigung, das Urteil überprüfen zu lassen.",
+  "Warum hat das Landgericht Rostock Gina H. im Fall Fabian verurteilt?",
+  "Am 10. Oktober 2025 verschwand der achtjährige Fabian in Güstrow,",
+  "einer Kleinstadt im Norden Deutschlands.",
+  "Seine Mutter verständigte die Polizei.",
+  "Vier Tage später wurde Fabians Leiche an einem kleinen Teich bei Klein Upahl gefunden,",
+  "etwa 15 Kilometer von seinem Zuhause entfernt.",
+  "Gemeldet hatte den Fundort Gina H., die frühere Freundin seines Vaters.",
+  "Sie sagte der Polizei, sie habe die Leiche zufällig entdeckt.",
+  "Doch vor Gericht schilderte ein Zeuge ein anderes Detail.",
+  "Er sagte, Gina H. selbst habe ihn direkt zu dem Teich geführt.",
+  "Die Kammer glaubte dem Zeugen.",
+  "Für das Gericht war die Art, wie Gina H. direkt dorthin ging,",
+  "ein Hinweis darauf, dass sie den Ort schon vorher kannte.",
+  "Diese Aussage war nur ein Teil der Indizienkette,",
+  "die der Vorsitz der Kammer bei der Urteilsverkündung nannte.",
+  "Das Gericht berücksichtigte außerdem Schuhabdrücke, Faserspuren",
+  "und dass das Handy von Gina H. ausgeschaltet war,",
+  "etwa zu der Zeit, in der Fabian nach Feststellung des Gerichts getötet wurde.",
+  "Einen direkten Augenzeugen der Tat gibt es nicht.",
+  "Die Kammer kam zu ihrem Urteil, nachdem sie die Spuren",
+  "mit den Aussagen und dem Ablauf der Ereignisse abgeglichen hatte.",
+  "Gina H. hat mehrfach ihre Unschuld beteuert.",
+  "Ihre Verteidigung plädierte auf Freispruch.",
+  "Am 10. November 2026 verurteilte das Landgericht Rostock sie wegen Mordes",
+  "und stellte die besondere Schwere der Schuld fest.",
+  "Nach der Urteilsverkündung sagte Verteidiger Andreas Ohm, er sei überrascht,",
+  "weil das Gericht den Tatablauf in einigen Punkten anders rekonstruiert habe",
+  "als die Staatsanwaltschaft in ihrer Anklage.",
+  "Am 13. November bestätigte das Gericht den Eingang des Antrags.",
+  "Auf welche Rechtsfehler sich die Verteidigung stützen will,",
+  "hat sie noch nicht bekannt gegeben.",
+  "In Deutschland heißt dieses Verfahren Revision.",
+  "Der Bundesgerichtshof prüft, wie das Landgericht Rostock den Prozess geführt",
+  "und das Recht angewendet hat.",
+  "Weist er den Antrag zurück, bleibt das Urteil bestehen.",
+  "Findet er Rechtsfehler, die ausreichen, um das Urteil ganz oder teilweise aufzuheben,",
+  "kann der Fall neu verhandelt werden.",
+  "Noch ist das Urteil nicht rechtskräftig.",
+  "Nach Zustellung des schriftlichen Urteils",
+  "hat die Verteidigung einen Monat Zeit für ihre Begründung.",
+  "Dann wird sich zeigen, welche Punkte genau sie vom Bundesgerichtshof prüfen lassen will.",
+  "Danke fürs Zuschauen.",
+  "Bis zum nächsten Update im Fall Fabian."
+ ],
+ "tts": {
+  "1": "Vierundvierzig Indizien.",
+  "5": "Am zehnten Oktober zweitausendfünfundzwanzig verschwand der achtjährige Fabian in Güstrow,",
+  "9": "etwa fünfzehn Kilometer von seinem Zuhause entfernt.",
+  "10": "Gemeldet hatte den Fundort Gina H, die frühere Freundin seines Vaters.",
+  "13": "Er sagte, Gina H selbst habe ihn direkt zu dem Teich geführt.",
+  "15": "Für das Gericht war die Art, wie Gina H direkt dorthin ging,",
+  "20": "und dass das Handy von Gina H ausgeschaltet war,",
+  "25": "Gina H hat mehrfach ihre Unschuld beteuert.",
+  "27": "Am zehnten November zweitausendsechsundzwanzig verurteilte das Landgericht Rostock sie wegen Mordes",
+  "32": "Am dreizehnten November bestätigte das Gericht den Eingang des Antrags.",
+  "4": "Warum hat das Landgericht Rostock Gina H im Fall Fabian verurteilt?"
+ },
+ "chapters": [
+  {
+   "num": "01",
+   "label": "Rostock",
+   "title": "Mordfall Fabian",
+   "desc": [
+    "Landgericht Rostock",
+    "Urteil und Revision"
+   ],
+   "lines": [
+    1,
+    46
+   ]
+  }
+ ],
+ "hl": {
+  "1": [
+   "44 Indizien"
+  ],
+  "2": [
+   "lebenslange"
+  ],
+  "3": [
+   "einen Tag"
+  ],
+  "4": [
+   "Landgericht Rostock"
+  ],
+  "5": [
+   "Güstrow"
+  ],
+  "8": [
+   "Klein Upahl"
+  ],
+  "13": [
+   "direkt"
+  ],
+  "19": [
+   "Schuhabdrücke"
+  ],
+  "20": [
+   "Handy"
+  ],
+  "22": [
+   "Augenzeugen"
+  ],
+  "26": [
+   "Freispruch"
+  ],
+  "27": [
+   "Mordes"
+  ],
+  "28": [
+   "besondere Schwere"
+  ],
+  "29": [
+   "Andreas Ohm"
+  ],
+  "35": [
+   "Revision"
+  ],
+  "36": [
+   "Bundesgerichtshof"
+  ],
+  "41": [
+   "nicht rechtskräftig"
+  ],
+  "43": [
+   "einen Monat"
+  ]
+ },
+ "ambience": [
+  ""
+ ],
+ "music": {
+  "key": "D",
+  "mode": "minor",
+  "bpm": 76,
+  "energy": 0.25
+ },
+ "queries": [
+  "incategory:\"Güstrow\"",
+  "Güstrow Markt",
+  "incategory:\"Landgericht Rostock\"",
+  "Rostock Landgericht",
+  "Rostock Altstadt",
+  "incategory:\"Bundesgerichtshof\"",
+  "Bundesgerichtshof Karlsruhe",
+  "Polizei Mecklenburg-Vorpommern",
+  "Teich Wald Mecklenburg",
+  "Klein Upahl",
+  "Schuhabdruck Spurensicherung",
+  "Textilfasern Mikroskop",
+  "Smartphone ausgeschaltet",
+  "Gerichtssaal Deutschland",
+  "Justitia Statue",
+  "Richterrobe Deutschland",
+  "Spurensicherung Polizei Deutschland"
+ ]
+}
