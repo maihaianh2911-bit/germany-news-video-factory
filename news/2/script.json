@@ -1,0 +1,117 @@
+{
+ "title": "Fall Fabian: 44 Indizien – wird das Urteil gekippt?",
+ "voice": "",
+ "show_chapters": false,
+ "lines": [
+  "Das Gericht legte ganze 44 Beweise vor,",
+  "doch Gina H. beteuert weiter entschlossen ihre Unschuld –",
+  "im Mordfall des achtjährigen Fabian!",
+  "Im Oktober 2025 verschwand Fabian.",
+  "Vier Tage später wurde der Junge tot an einem kleinen Teich gefunden,",
+  "15 Kilometer von seinem Zuhause entfernt.",
+  "Und ausgerechnet Gina meldete den Fund – die Ex-Freundin seines Vaters.",
+  "Der Polizei sagte sie, sie sei nur „zufällig“ vorbeigekommen und habe die Leiche entdeckt.",
+  "Doch vor Gericht flog diese Lüge auf!",
+  "Ein Zeuge, der damals dabei war, versicherte,",
+  "Gina sei ohne Umweg direkt mit ihm zum Teich gegangen,",
+  "als hätte sie schon vorher genau gewusst, wo er liegt.",
+  "Zwar gibt es keinen Augenzeugen der Tat,",
+  "doch 44 Indizien bilden eine Kette, die sich nicht leugnen lässt:",
+  "von Schuhabdrücken über Faserspuren",
+  "bis hin zu Ginas Handy,",
+  "das genau zu der Zeit ausgeschaltet war, als der Junge getötet wurde.",
+  "Im November 2026 verurteilte das Gericht Gina wegen Mordes zu lebenslanger Haft",
+  "und stellte die besondere Schwere der Schuld fest.",
+  "Doch abgeschlossen ist der Fall noch nicht:",
+  "Ihre Verteidigung hat soeben Revision beim Bundesgerichtshof eingelegt.",
+  "Was meint ihr: Wird dieses Urteil gekippt?"
+ ],
+ "tts": {
+  "1": "Das Gericht legte ganze vierundvierzig Beweise vor,",
+  "2": "doch Gina Ha beteuert weiter entschlossen ihre Unschuld,",
+  "4": "Im Oktober zweitausendfünfundzwanzig verschwand Fabian.",
+  "6": "fünfzehn Kilometer von seinem Zuhause entfernt.",
+  "8": "Der Polizei sagte sie, sie sei nur zufällig vorbeigekommen und habe die Leiche entdeckt.",
+  "14": "doch vierundvierzig Indizien bilden eine Kette, die sich nicht leugnen lässt:",
+  "18": "Im November zweitausendsechsundzwanzig verurteilte das Gericht Gina wegen Mordes zu lebenslanger Haft"
+ },
+ "chapters": [
+  {
+   "num": "01",
+   "label": "Rostock",
+   "title": "Fall Fabian",
+   "desc": [
+    "Landgericht Rostock",
+    "Urteil und Revision"
+   ],
+   "lines": [
+    1,
+    22
+   ]
+  }
+ ],
+ "hl": {
+  "1": [
+   "44 Beweise"
+  ],
+  "2": [
+   "Unschuld"
+  ],
+  "4": [
+   "Oktober 2025"
+  ],
+  "5": [
+   "Teich"
+  ],
+  "7": [
+   "Gina"
+  ],
+  "8": [
+   "„zufällig“"
+  ],
+  "9": [
+   "Lüge"
+  ],
+  "11": [
+   "direkt"
+  ],
+  "14": [
+   "44 Indizien"
+  ],
+  "15": [
+   "Schuhabdrücken",
+   "Faserspuren"
+  ],
+  "18": [
+   "lebenslanger Haft"
+  ],
+  "19": [
+   "besondere Schwere"
+  ],
+  "21": [
+   "Revision"
+  ],
+  "22": [
+   "gekippt"
+  ],
+  "16": [
+   "Handy"
+  ]
+ },
+ "ambience": [
+  ""
+ ],
+ "music": {
+  "key": "D",
+  "mode": "minor",
+  "bpm": 78,
+  "energy": 0.3
+ },
+ "queries": [
+  "incategory:\"Güstrow\"",
+  "Rostock Landgericht",
+  "incategory:\"Bundesgerichtshof\"",
+  "Bundesgerichtshof Karlsruhe",
+  "Klein Upahl"
+ ]
+}
