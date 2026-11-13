@@ -1,0 +1,689 @@
+{
+ "duration": 85.635,
+ "showChapters": false,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 85.635,
+   "num": "01",
+   "label": "Rostock",
+   "title": "Fall Fabian",
+   "desc": [
+    "Landgericht Rostock",
+    "Urteil und Revision"
+   ],
+   "pics": [
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.6,
+      "y": 0.4
+     },
+     "credit": "Die Schwurgerichtskammer verkündet das Urteil · Foto: Bernd Wüstneck/dpa",
+     "tag": "Rostock",
+     "src": "news/2/img/kammer.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 0.0,
+     "e": 4.12
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.18,
+      "x": 0.38,
+      "y": 0.4
+     },
+     "credit": "Die Angeklagte im Landgericht Rostock · Foto: Bernd Wüstneck/dpa",
+     "src": "news/2/img/akte.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 4.12,
+     "e": 7.757
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "credit": "Trauer um Fabian · Foto: Stefan Sauer/dpa",
+     "src": "news/2/img/trauer.jpg",
+     "w": 2190,
+     "h": 1150,
+     "s": 7.757,
+     "e": 10.466
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.55,
+      "y": 0.48
+     },
+     "credit": "Suche nach Fabian, Oktober 2025 · Foto: Bernd Wüstneck/dpa",
+     "tag": "Güstrow",
+     "src": "news/2/img/suche.jpg",
+     "w": 2048,
+     "h": 1181,
+     "s": 10.466,
+     "e": 14.324
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.5,
+      "y": 0.55
+     },
+     "credit": "Fundort bei Klein Upahl, Oktober 2025 · Foto: Bernd Wüstneck/dpa",
+     "tag": "Klein Upahl",
+     "src": "news/2/img/teich.jpg",
+     "w": 2048,
+     "h": 1175,
+     "s": 14.324,
+     "e": 22.091
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.36,
+      "y": 0.45
+     },
+     "credit": "Die Angeklagte vor Gericht · Foto: Bernd Wüstneck/dpa",
+     "src": "news/2/img/justiz.jpg",
+     "w": 2190,
+     "h": 1150,
+     "s": 22.091,
+     "e": 26.855
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "credit": "Ermittler am Fundort bei Klein Upahl · Foto: Bernd Wüstneck/dpa",
+     "tag": "Klein Upahl",
+     "src": "news/2/img/feldweg.jpg",
+     "w": 2190,
+     "h": 1150,
+     "s": 26.855,
+     "e": 32.524
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.6
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.62,
+      "y": 0.62
+     },
+     "credit": "Prozesstag in Rostock · Foto: Bernd Wüstneck/dpa",
+     "tag": "Rostock",
+     "src": "news/2/img/gericht.jpg",
+     "w": 1725,
+     "h": 1150,
+     "s": 32.524,
+     "e": 35.053
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.35,
+      "y": 0.4
+     },
+     "credit": "Polizei am Fundort, Dezember 2025 · Foto: Bernd Wüstneck/dpa",
+     "tag": "Klein Upahl",
+     "src": "news/2/img/pteich.jpg",
+     "w": 1920,
+     "h": 1168,
+     "s": 35.053,
+     "e": 41.59
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.55
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.48,
+      "y": 0.45
+     },
+     "credit": "Suche nach Fabian bei Güstrow, Oktober 2025 · Foto: Stefan Tretropp",
+     "src": "news/2/img/wald.jpg",
+     "w": 2048,
+     "h": 1152,
+     "s": 41.59,
+     "e": 45.275
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.35,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.32,
+      "y": 0.38
+     },
+     "credit": "Die Angeklagte im Gerichtssaal · Foto: Bernd Wüstneck/dpa",
+     "src": "news/2/img/akte2.jpg",
+     "w": 2046,
+     "h": 1150,
+     "s": 45.275,
+     "e": 52.874
+    },
+    {
+     "from": {
+      "z": 1.2,
+      "x": 0.6,
+      "y": 0.55
+     },
+     "to": {
+      "z": 1.35,
+      "x": 0.75,
+      "y": 0.55
+     },
+     "credit": "Spurensuche am Fundort bei Klein Upahl · Foto: Bernd Wüstneck/dpa",
+     "tag": "Klein Upahl",
+     "src": "news/2/img/teich.jpg",
+     "w": 2048,
+     "h": 1175,
+     "s": 52.874,
+     "e": 55.425
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.52
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.48,
+      "y": 0.55
+     },
+     "credit": "Ausgeschaltetes Handy (Symbolbild) · Foto: Sertion / Wikimedia Commons, CC BY-SA 3.0",
+     "src": "news/2/img/handy.jpg",
+     "w": 2378,
+     "h": 2600,
+     "s": 55.425,
+     "e": 61.72
+    },
+    {
+     "from": {
+      "z": 1.1,
+      "x": 0.7,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.86,
+      "y": 0.33
+     },
+     "credit": "Richter Holger Schütt (r.) verkündet das Urteil · Foto: Bernd Wüstneck/dpa",
+     "tag": "Rostock",
+     "src": "news/2/img/kammer.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 61.72,
+     "e": 68.599
+    },
+    {
+     "from": {
+      "z": 1.05,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.25,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "credit": "Die Angeklagte mit Fußfessel im Gerichtssaal · Foto: Bernd Wüstneck/dpa",
+     "src": "news/2/img/fessel.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 68.599,
+     "e": 71.968
+    },
+    {
+     "from": {
+      "z": 1.05,
+      "x": 0.45,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.25,
+      "y": 0.3
+     },
+     "credit": "Verteidiger Andreas Ohm und die Angeklagte · Foto: Bernd Wüstneck/dpa",
+     "src": "news/2/img/ohm.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 71.968,
+     "e": 74.802
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "credit": "Bundesgerichtshof, Karlsruhe · Foto: Sitacuisses / Wikimedia Commons, CC BY-SA 3.0 de",
+     "tag": "Karlsruhe",
+     "src": "news/2/img/bgh.jpg",
+     "w": 2600,
+     "h": 1384,
+     "s": 74.802,
+     "e": 79.903
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.6,
+      "y": 0.4
+     },
+     "credit": "Die Angeklagte mit ihrer Verteidigung · Foto: Bernd Wüstneck/dpa",
+     "src": "news/2/img/vert.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 79.903,
+     "e": 85.635
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 1.0,
+   "e": 4.02,
+   "text": "Das Gericht legte\nganze 44 Beweise vor,",
+   "hl": [
+    "44 Beweise"
+   ]
+  },
+  {
+   "s": 4.27,
+   "e": 7.657,
+   "text": "doch Gina H. beteuert weiter\nentschlossen ihre Unschuld –",
+   "hl": [
+    "Unschuld"
+   ]
+  },
+  {
+   "s": 7.907,
+   "e": 10.166,
+   "text": "im Mordfall des\nachtjährigen Fabian!",
+   "hl": []
+  },
+  {
+   "s": 10.616,
+   "e": 14.024,
+   "text": "Im Oktober 2025\nverschwand Fabian.",
+   "hl": [
+    "Oktober 2025"
+   ]
+  },
+  {
+   "s": 14.474,
+   "e": 16.631,
+   "text": "Vier Tage später\nwurde der Junge tot",
+   "hl": [
+    "Teich"
+   ]
+  },
+  {
+   "s": 16.751,
+   "e": 18.782,
+   "text": "an einem kleinen\nTeich gefunden,",
+   "hl": [
+    "Teich"
+   ]
+  },
+  {
+   "s": 19.032,
+   "e": 21.791,
+   "text": "15 Kilometer von seinem\nZuhause entfernt.",
+   "hl": []
+  },
+  {
+   "s": 22.241,
+   "e": 24.578,
+   "text": "Und ausgerechnet Gina\nmeldete den Fund –",
+   "hl": [
+    "Gina"
+   ]
+  },
+  {
+   "s": 24.698,
+   "e": 26.555,
+   "text": "die Ex-Freundin\nseines Vaters.",
+   "hl": [
+    "Gina"
+   ]
+  },
+  {
+   "s": 27.005,
+   "e": 28.204,
+   "text": "Der Polizei sagte sie,",
+   "hl": [
+    "„zufällig“"
+   ]
+  },
+  {
+   "s": 28.324,
+   "e": 30.383,
+   "text": "sie sei nur „zufällig“\nvorbeigekommen",
+   "hl": [
+    "„zufällig“"
+   ]
+  },
+  {
+   "s": 30.503,
+   "e": 32.224,
+   "text": "und habe die\nLeiche entdeckt.",
+   "hl": [
+    "„zufällig“"
+   ]
+  },
+  {
+   "s": 32.674,
+   "e": 34.753,
+   "text": "Doch vor Gericht\nflog diese Lüge auf!",
+   "hl": [
+    "Lüge"
+   ]
+  },
+  {
+   "s": 35.203,
+   "e": 37.971,
+   "text": "Ein Zeuge, der damals\ndabei war, versicherte,",
+   "hl": []
+  },
+  {
+   "s": 38.221,
+   "e": 41.49,
+   "text": "Gina sei ohne Umweg direkt\nmit ihm zum Teich gegangen,",
+   "hl": [
+    "direkt"
+   ]
+  },
+  {
+   "s": 41.74,
+   "e": 44.975,
+   "text": "als hätte sie schon vorher\ngenau gewusst, wo er liegt.",
+   "hl": []
+  },
+  {
+   "s": 45.425,
+   "e": 47.941,
+   "text": "Zwar gibt es keinen\nAugenzeugen der Tat,",
+   "hl": []
+  },
+  {
+   "s": 48.191,
+   "e": 50.571,
+   "text": "doch 44 Indizien\nbilden eine Kette,",
+   "hl": [
+    "44 Indizien"
+   ]
+  },
+  {
+   "s": 50.691,
+   "e": 52.774,
+   "text": "die sich nicht\nleugnen lässt:",
+   "hl": [
+    "44 Indizien"
+   ]
+  },
+  {
+   "s": 53.024,
+   "e": 55.325,
+   "text": "von Schuhabdrücken\nüber Faserspuren",
+   "hl": [
+    "Schuhabdrücken",
+    "Faserspuren"
+   ]
+  },
+  {
+   "s": 55.575,
+   "e": 57.07,
+   "text": "bis hin zu Ginas Handy,",
+   "hl": [
+    "Handy"
+   ]
+  },
+  {
+   "s": 57.32,
+   "e": 59.601,
+   "text": "das genau zu der Zeit\nausgeschaltet war,",
+   "hl": []
+  },
+  {
+   "s": 59.721,
+   "e": 61.42,
+   "text": "als der Junge getötet wurde.",
+   "hl": []
+  },
+  {
+   "s": 61.87,
+   "e": 65.147,
+   "text": "Im November 2026\nverurteilte das Gericht",
+   "hl": [
+    "lebenslanger Haft"
+   ]
+  },
+  {
+   "s": 65.267,
+   "e": 68.499,
+   "text": "Gina wegen Mordes\nzu lebenslanger Haft",
+   "hl": [
+    "lebenslanger Haft"
+   ]
+  },
+  {
+   "s": 68.749,
+   "e": 71.668,
+   "text": "und stellte die besondere\nSchwere der Schuld fest.",
+   "hl": [
+    "besondere Schwere"
+   ]
+  },
+  {
+   "s": 72.118,
+   "e": 74.702,
+   "text": "Doch abgeschlossen ist\nder Fall noch nicht:",
+   "hl": []
+  },
+  {
+   "s": 74.952,
+   "e": 77.287,
+   "text": "Ihre Verteidigung\nhat soeben Revision",
+   "hl": [
+    "Revision"
+   ]
+  },
+  {
+   "s": 77.407,
+   "e": 79.603,
+   "text": "beim Bundesgerichtshof\neingelegt.",
+   "hl": [
+    "Revision"
+   ]
+  },
+  {
+   "s": 80.053,
+   "e": 82.585,
+   "text": "Was meint ihr: Wird\ndieses Urteil gekippt?",
+   "hl": [
+    "gekippt"
+   ]
+  }
+ ],
+ "voice": [
+  {
+   "s": 1.0,
+   "src": "news/2/voice/line_01.mp3"
+  },
+  {
+   "s": 4.27,
+   "src": "news/2/voice/line_02.mp3"
+  },
+  {
+   "s": 7.907,
+   "src": "news/2/voice/line_03.mp3"
+  },
+  {
+   "s": 10.616,
+   "src": "news/2/voice/line_04.mp3"
+  },
+  {
+   "s": 14.474,
+   "src": "news/2/voice/line_05.mp3"
+  },
+  {
+   "s": 19.032,
+   "src": "news/2/voice/line_06.mp3"
+  },
+  {
+   "s": 22.241,
+   "src": "news/2/voice/line_07.mp3"
+  },
+  {
+   "s": 27.005,
+   "src": "news/2/voice/line_08.mp3"
+  },
+  {
+   "s": 32.674,
+   "src": "news/2/voice/line_09.mp3"
+  },
+  {
+   "s": 35.203,
+   "src": "news/2/voice/line_10.mp3"
+  },
+  {
+   "s": 38.221,
+   "src": "news/2/voice/line_11.mp3"
+  },
+  {
+   "s": 41.74,
+   "src": "news/2/voice/line_12.mp3"
+  },
+  {
+   "s": 45.425,
+   "src": "news/2/voice/line_13.mp3"
+  },
+  {
+   "s": 48.191,
+   "src": "news/2/voice/line_14.mp3"
+  },
+  {
+   "s": 53.024,
+   "src": "news/2/voice/line_15.mp3"
+  },
+  {
+   "s": 55.575,
+   "src": "news/2/voice/line_16.mp3"
+  },
+  {
+   "s": 57.32,
+   "src": "news/2/voice/line_17.mp3"
+  },
+  {
+   "s": 61.87,
+   "src": "news/2/voice/line_18.mp3"
+  },
+  {
+   "s": 68.749,
+   "src": "news/2/voice/line_19.mp3"
+  },
+  {
+   "s": 72.118,
+   "src": "news/2/voice/line_20.mp3"
+  },
+  {
+   "s": 74.952,
+   "src": "news/2/voice/line_21.mp3"
+  },
+  {
+   "s": 80.053,
+   "src": "news/2/voice/line_22.mp3"
+  }
+ ],
+ "music": "news/2/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Source Serif 4",
+   "file": "news/fonts/source-serif-4-latin-wght-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  },
+  {
+   "family": "Source Sans 3",
+   "file": "news/fonts/source-sans-3-latin-wght-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ],
+ "grain": [
+  "news/grain_0.jpg",
+  "news/grain_1.jpg",
+  "news/grain_2.jpg",
+  "news/grain_3.jpg"
+ ]
+}
