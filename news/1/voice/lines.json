@@ -19,7 +19,7 @@
   "voice": "clone_611",
   "file": "line_02.mp3",
   "duration": 2.172,
-  "heard": "Eine lebenslange Freiheitsstrafe.",
+  "heard": "eine lebenslange Freiheitsstrafe.",
   "score": 1.0,
   "diff": []
  },
@@ -37,14 +37,14 @@
  {
   "i": 4,
   "text": "Warum hat das Landgericht Rostock Gina H. im Fall Fabian verurteilt?",
-  "tts": "Warum hat das Landgericht Rostock Gina H im Fall Fabian verurteilt?",
+  "tts": "Warum hat das Landgericht Rostock Gina Ha im Fall Fabian verurteilt?",
   "voice": "clone_611",
   "file": "line_04.mp3",
-  "duration": 3.692,
-  "heard": "Warum hat das Landgericht Rostokina im Fall Fabian verurteilt?",
-  "score": 0.8,
+  "duration": 4.285,
+  "heard": "Warum hat das Landgericht Rostock-Gina H.M.Falfabian verurteilt?",
+  "score": 0.67,
   "diff": [
-   "rostockginah→rostokina"
+   "haimfallfabian→hmfalfabian"
   ]
  },
  {
@@ -170,10 +170,10 @@
   "voice": "clone_611",
   "file": "line_15.mp3",
   "duration": 3.319,
-  "heard": "Für das Gericht war die Art, wie Ginah direkt dort hingehen.",
-  "score": 0.7,
+  "heard": "Für das Gericht war die Art, wie Gina Hart direkt dort hinging.",
+  "score": 0.75,
   "diff": [
-   "dorthinging→dorthingehen"
+   "h→hart"
   ]
  },
  {
@@ -251,7 +251,7 @@
   "voice": "clone_611",
   "file": "line_22.mp3",
   "duration": 2.971,
-  "heard": "Einen direkten Augenzeugen, der Tat gibt es nicht.",
+  "heard": "einen direkten Augenzeugen, der Tat gibt es nicht.",
   "score": 1.0,
   "diff": []
  },
@@ -333,7 +333,7 @@
   "voice": "clone_611",
   "file": "line_29.mp3",
   "duration": 4.688,
-  "heard": "Nach der Urteilsverkündung, sagte Verteidiger Andreas Ohm, er sei überrascht.",
+  "heard": "Nach der Urteilsverkündung sagte Verteidiger Andreas Ohm, er sei überrascht.",
   "score": 1.0,
   "diff": []
  },
@@ -399,8 +399,8 @@
   "voice": "clone_611",
   "file": "line_35.mp3",
   "duration": 2.783,
-  "heard": "In Deutschland heißt dieses Verfahren Revision.",
-  "score": 1.0,
+  "heard": "in Deutschland heißt dieses Verfahrenrevision.",
+  "score": 0.73,
   "diff": []
  },
  {
@@ -432,9 +432,11 @@
   "voice": "clone_611",
   "file": "line_38.mp3",
   "duration": 3.383,
-  "heard": "weist er den Antrag zurück, bleibt das Urteil bestehen.",
-  "score": 1.0,
-  "diff": []
+  "heard": "Weißt er den Antrag zurück, bleibt das Urteil bestehen.",
+  "score": 0.89,
+  "diff": [
+   "weist→weisst"
+  ]
  },
  {
   "i": 39,
@@ -443,11 +445,9 @@
   "voice": "clone_611",
   "file": "line_39.mp3",
   "duration": 5.278,
-  "heard": "findet der Rechtsfehler, die ausreichen, um das Urteil ganz oder teilweise aufzuheben.",
-  "score": 0.92,
-  "diff": [
-   "er→der"
-  ]
+  "heard": "findet er Rechtsfehler, die ausreichen, um das Urteil ganz oder teilweise aufzuheben.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 40,
@@ -511,7 +511,7 @@
   "voice": "clone_611",
   "file": "line_45.mp3",
   "duration": 1.42,
-  "heard": "Danke fürs Zuschauen!",
+  "heard": "Danke fürs Zuschauen.",
   "score": 1.0,
   "diff": []
  },
