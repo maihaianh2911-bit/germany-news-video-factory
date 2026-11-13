@@ -90,6 +90,10 @@ Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice ~20–30 min
      same people or place, credited `Archivbild`.
    - **Things, figures, abstract topics** (prices, energy, health, law) → a clear picture of the matter (bank
      notes, a pump, wind turbines, a courtroom), credited `Symbolbild`.
+   - **Press photos of the event itself** (owner, 13/11): allowed next to Commons pictures. Find them in news
+     articles (web search; the article's main photo and its gallery), save them in `news/<N>/own/`, credit the
+     photographer and agency (`Foto: Bernd Wüstneck/dpa`). Blur the face of an accused person and of every child
+     (soft blur, also what shows around a folder held in front of the face); never use a picture of a child victim.
    Real pictures only (photographs, also maps and charts from Commons; never AI images). Licence PD/CC0, CC BY or
    CC BY-SA (the on-screen credit names author and licence). Sharp, well lit, short side ≥ ~500 px. No watermarks,
    no burnt-in captions, no gore, nothing that ridicules a person (mid-blink, grimace). A new picture every 1–2
