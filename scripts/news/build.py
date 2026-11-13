@@ -133,17 +133,27 @@ for rnd in sorted(os.listdir(imgsrc)) if os.path.isdir(imgsrc) else []:
         for q in json.load(open(ip, encoding='utf-8')):
             for r in q['results']:
                 if r.get('file'): idx[f"{rnd}/{r['file']}"] = r
+said = {}   # the on-screen credit of each picture (photographer and agency for press photos in own/)
+for ch in picks['chapters']:
+    for pic in ch['pics']:
+        for part in [pic] + [pic['pair'][side] for side in ('left', 'right') if 'pair' in pic]:
+            if part.get('img') and part.get('credit'): said.setdefault(part['img'], part['credit'])
+        if 'pair' in pic and pic.get('credit'):
+            for side in ('left', 'right'): said.setdefault(pic['pair'][side].get('img'), pic['credit'])
 seen, rows = set(), []
 for name, it in picks['images'].items():
     r = idx.get(it['src'])
     if not r:
-        rows.append(f"- {it['src']} (ảnh chủ kênh gửi)" if it['src'].startswith('own/') else f"- {it['src']}"); continue
+        text = said.get(name) or (f"{it['src']} (ảnh chủ kênh gửi)" if it['src'].startswith('own/') else it['src'])
+        if text in seen: continue
+        seen.add(text)
+        rows.append(f"- {text}" + (f"\n  {it['page']}" if it.get('page') else '')); continue
     if r['page'] in seen: continue
     seen.add(r['page'])
     date = re.sub(r'date QS.*', '', r.get('date') or '').strip()
     artist = re.sub(r'\s+', ' ', r.get('artist') or '').strip()
     rows.append(f"- {r['title'][5:]} — {artist}{f' ({date})' if date else ''} — {r['license']}\n  {r['page']}")
 open(f'{out}/credits.txt', 'w', encoding='utf-8').write(
-    'Nguồn ảnh (Wikimedia Commons; phạm vi công cộng / CC0 / CC BY / CC BY-SA — ảnh CC BY và CC BY-SA phải ghi tên tác giả và giấy phép trong mô tả video):\n\n'
+    'Nguồn ảnh (ảnh báo chí ghi tên tác giả và hãng; ảnh Wikimedia Commons phạm vi công cộng / CC0 / CC BY / CC BY-SA — ảnh CC BY và CC BY-SA phải ghi tên tác giả và giấy phép trong mô tả video):\n\n'
     + '\n'.join(rows) + '\n')
 print(f'total {total} s; ' + ', '.join(f"{c['num']}:{c['s']}–{c['e']} ({len(c['pics'])} ảnh)" for c in chapters))
