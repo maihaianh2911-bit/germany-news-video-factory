@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """One contact sheet of the finished video for the final check: the picture panel of every shot (middle of its
-time on screen), labelled chapter-shot and picture name, plus two full frames. Usage: sheet.py <video.mp4> <plan.json> <picks.json> <out.jpg>"""
+time on screen), labelled chapter-shot, picture name, [move] and start time, plus two full frames. Usage: sheet.py <video.mp4> <plan.json> <picks.json> <out.jpg>"""
 import json, os, subprocess, sys, tempfile
 from PIL import Image, ImageDraw
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import ff
+import ff, moves
 
 video, plan, picks, out = sys.argv[1:5]
 plan = json.load(open(plan, encoding='utf-8')); picks = json.load(open(picks, encoding='utf-8'))
@@ -20,7 +20,7 @@ for ci, c in enumerate(plan['chapters']):
         src = picks['chapters'][ci]['pics'][j]
         name = src.get('img') or 'pair'
         ImageDraw.Draw(im).rectangle((0, 0, 324, 22), fill=(0, 0, 0))
-        ImageDraw.Draw(im).text((6, 5), f"{c['num']}-{j + 1} {name}  {p['s']:.0f}s", fill=(255, 210, 90))
+        ImageDraw.Draw(im).text((6, 5), f"{c['num']}-{j + 1} {name} [{moves.label(src)}] {p['s']:.0f}s"[:52], fill=(255, 210, 90))
         tiles.append(im)
 cols = 6; rows = (len(tiles) + cols - 1) // cols
 full = [frame(plan['duration'] * f, f'{tmp}/g.png').resize((324, 576)) for f in (0.3, 0.75)]

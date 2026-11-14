@@ -4,7 +4,11 @@
 Usage: build.py <job_dir news/N> <public_dir> <N> <img_src_dir> <out_dir>
 Reads <job_dir>/script.json (lines, chapters, keywords, ambience, music), <job_dir>/picks.json (pictures per
 chapter), <public_dir>/news/<N>/voice/lines.json (measured line lengths) and the prepared pictures in
-<public_dir>/news/<N>/img/. Writes <out_dir>/plan.json, subtitles.srt, credits.txt and <public_dir>/news/<N>/bed.wav.
+<public_dir>/news/<N>/img/. Writes <out_dir>/plan.json, subtitles.srt, credits.txt, edits.md (the edit of every shot,
+for the owner) and <public_dir>/news/<N>/bed.wav.
+A shot with "move" (a name of the catalogue in moves.py) gets its camera start and end worked out here for the
+picture's size and the shot's length; an explicit "from"/"to" wins; "fade" (seconds, 0 = hard cut) sets how the shot
+comes in instead of the usual 0.7 s dissolve; "why" and "focus" are notes for the planner and are not in the plan.
 Timing: every line starts after the previous one plus a pause (0.45 s after a sentence end, 0.25 s otherwise);
 each chapter opens with a short breath; a picture that starts on a line ("at") cuts in just before it is spoken.
 Credits: a search result is listed from its round's index.json (title, author, date, licence, File: page); any other
@@ -15,6 +19,7 @@ import numpy as np
 from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import music_gen as mg
+import moves
 
 job, pub, N, imgsrc, out = sys.argv[1:6]
 base = f'news/{N}'
@@ -24,6 +29,8 @@ lines = json.load(open(f'{pub}/{base}/voice/lines.json', encoding='utf-8'))
 dur = {r['i']: r['duration'] for r in lines}
 text = {r['i']: r['text'] for r in lines}
 os.makedirs(out, exist_ok=True)
+bad = moves.check_all(picks)
+if bad: sys.exit('picks.json: ' + '; '.join(bad))
 
 # ---- subtitles: a spoken line becomes one cue of up to two rows, or several cues when it is too long.
 # Rows break between words, best after a comma, colon or dash, never leaving a short word alone.
@@ -73,7 +80,7 @@ for ci, c in enumerate(spec['chapters']):
         bounds.append(starts[k] + (li - int(li)) * dur[a + k] - 0.15)
     bounds.append(e)
     for j, p in enumerate(pics):
-        q = {k: v for k, v in p.items() if k not in ('at', 'img')}
+        q = {k: v for k, v in p.items() if k not in ('at', 'img', 'why', 'focus')}
         if 'pair' in p:   # portrait + document as framed prints
             for side in ('left', 'right'):
                 sd = dict(p['pair'][side]); sd['src'] = img(sd.pop('img'))
@@ -81,6 +88,8 @@ for ci, c in enumerate(spec['chapters']):
             q.update({'src': '', 'w': 1, 'h': 1, 'from': {'z': 1, 'x': .5, 'y': .5}, 'to': {'z': 1, 'x': .5, 'y': .5}})
         else:
             q['src'] = img(p['img']); q['w'], q['h'] = Image.open(f"{pub}/{q['src']}").size
+            if p.get('move'):   # a named move: the camera for this picture and this length
+                q['from'], q['to'] = moves.camera(p, q['w'], q['h'], bounds[j + 1] - bounds[j])
         ch['pics'].append({**q, 's': round(bounds[j], 3), 'e': round(bounds[j + 1], 3)})
     chapters.append(ch); t = e
 total = round(t, 3)
@@ -126,6 +135,10 @@ def srt_end(k):
     return min(e, subs[k + 1]['s']) if k + 1 < len(subs) else e
 with open(f'{out}/subtitles.srt', 'w', encoding='utf-8') as f:
     for k, sb in enumerate(subs): f.write(f"{k + 1}\n{ts(sb['s'])} --> {ts(srt_end(k))}\n{sb['text']}\n\n")
+
+# ---- the edit of every shot, for the owner (pasted into the closing comment)
+open(f'{out}/edits.md', 'w', encoding='utf-8').write(
+    moves.edits_md(spec['chapters'], picks, moves.shot_times(spec['chapters'], picks['chapters'], dur, text), text))
 
 # ---- credits for the video description (every picture: title, author, date, licence, page)
 idx = {}

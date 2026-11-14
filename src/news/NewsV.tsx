@@ -6,7 +6,9 @@ import { AbsoluteFill, Audio, Img, Sequence, cancelRender, continueRender, delay
 // The plan (props) is written by scripts/news/build.py; see AGENT_NEWS.md.
 type Cam = { z: number; x: number; y: number };
 type Print = { src: string; w: number; h: number };
-export type Pic = { src: string; w: number; h: number; s: number; e: number; from: Cam; to: Cam; tag?: string; credit?: string;
+// move: the name of the catalogue move the camera numbers came from (information only; build.py already worked out
+// from/to). fade: seconds this picture takes to dissolve in over the one before (default X = 0.7; 0 = hard cut).
+export type Pic = { src: string; w: number; h: number; s: number; e: number; from: Cam; to: Cam; tag?: string; credit?: string; move?: string; fade?: number;
   pair?: { left: Print & { caption: string[] }; right: Print } }; // pair: two framed prints instead of a full-panel picture
 export type Pair = { s: number; e: number; left: { src: string; w: number; h: number; caption: string[] }; right: { src: string; w: number; h: number }; credit?: string };
 export type ChapterV = { s: number; e: number; num: string; label: string; title: string; desc: string[]; pics: Pic[] };
@@ -93,9 +95,10 @@ export const NewsV: React.FC<PlanV> = (plan) => {
   // pictures: current chapter (+ the previous one underneath while it fades)
   const picsOf = (c: ChapterV) => c.pics;
   const visible = (c: ChapterV) => picsOf(c).filter((p) => t >= p.s - X && t < p.e + X);
+  const fadeIn = (p: Pic) => { const f = Math.min(p.fade ?? X, 1.5); return f > 0 ? clamp01((t - (p.s - f)) / f) : t >= p.s ? 1 : 0; };
   const picLayer = (c: ChapterV, key: string) => (
     <AbsoluteFill key={key}>
-      {visible(c).map((p, i) => <AbsoluteFill key={i} style={{ opacity: clamp01((t - (p.s - X)) / X) }}><PicView p={p} t={t} /></AbsoluteFill>)}
+      {visible(c).map((p, i) => <AbsoluteFill key={i} style={{ opacity: fadeIn(p) }}><PicView p={p} t={t} /></AbsoluteFill>)}
     </AbsoluteFill>
   );
   const curPic = picsOf(ch).find((p) => t >= p.s && t < p.e) || picsOf(ch)[picsOf(ch).length - 1];

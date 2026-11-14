@@ -46,9 +46,9 @@ json.dump({'title': 'Test', 'voice': 'test', 'lines': lines, 'show_chapters': '-
           open(os.path.join(job, 'script.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 json.dump({'images': {'wide': {'src': '1/1-1.jpg', 'mode': 'color'}, 'tall': {'src': '1/1-2.jpg', 'mode': 'sepia'},
                       'small': {'src': '1/1-3.jpg', 'crop': [0.1, 0.1, 0.9, 0.9], 'mode': 'keep'}},
-           'chapters': [{'pics': [{'img': 'wide', **cam(1.0, 1.2), 'credit': 'Foto: A / Wikimedia Commons, CC BY-SA 4.0', 'tag': 'Berlin'},
+           'chapters': [{'pics': [{'img': 'wide', 'move': 'luot-phai', 'focus': [0.6, 0.5], 'why': 'toàn cảnh nơi xảy ra', 'credit': 'Foto: A / Wikimedia Commons, CC BY-SA 4.0', 'tag': 'Berlin'},
                                   {'at': 2, 'pair': {'left': {'img': 'tall', 'caption': ['Vorname Name', 'Bundeskanzler']}, 'right': {'img': 'small'}}, 'credit': 'Links: Porträt · Rechts: Dokument'}]},
-                        {'pics': [{'img': 'small', **cam(1.1, 1.0), 'credit': 'Archivbild'}, {'at': 3.5, 'img': 'tall', **cam(1.0, 1.4), 'credit': 'Symbolbild'}]}]},
+                        {'pics': [{'img': 'small', **cam(1.1, 1.0), 'credit': 'Archivbild'}, {'at': 3.5, 'img': 'tall', 'move': 'nang-len', 'fade': 0, 'to': {'z': 1.2, 'x': .5, 'y': .3}, 'credit': 'Symbolbild'}]}]},
           open(os.path.join(job, 'picks.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 
 S = os.path.join(ROOT, 'scripts', 'news')
@@ -77,6 +77,19 @@ assert all(a['e'] <= b['s'] + 1e-6 for a, b in zip(plan['subs'], plan['subs'][1:
 srt = open(os.path.join(out, 'subtitles.srt'), encoding='utf-8').read(); assert srt.count('-->') == 6
 cue_t = [[sum(float(x) * k for x, k in zip(re.split('[:,]', v), (3600, 60, 1, .001))) for v in m] for m in re.findall(r'(\S+) --> (\S+)', srt)]
 assert all(a[0] < a[1] <= b[0] + 1e-6 for a, b in zip(cue_t, cue_t[1:])), cue_t      # .srt cues never overlap
+# named moves: worked out for the picture and the shot's length; notes stay out of the plan; hand-written numbers kept
+import moves
+p0, p3, p2 = plan['chapters'][0]['pics'][0], plan['chapters'][1]['pics'][1], plan['chapters'][1]['pics'][0]
+assert p0['move'] == 'luot-phai' and p0['from']['x'] < p0['to']['x'] and p0['from']['z'] == p0['to']['z'] and 'why' not in p0 and 'focus' not in p0, p0
+assert p3['fade'] == 0 and p3['to'] == {'z': 1.2, 'x': .5, 'y': .3} and p3['from']['y'] > 0.5, p3     # explicit "to" wins, "from" from the move
+assert p2['from'] == {'z': 1.1, 'x': .5, 'y': .5} and 'move' not in p2, p2
+spec = json.load(open(os.path.join(job, 'script.json'), encoding='utf-8')); pk = json.load(open(os.path.join(job, 'picks.json'), encoding='utf-8'))
+times = moves.shot_times(spec['chapters'], pk['chapters'], {r['i']: r['duration'] for r in rows}, {r['i']: r['text'] for r in rows})
+assert [[(s, e) for s, e, _ in c] for c in times] == [[(p['s'], p['e']) for p in c['pics']] for c in plan['chapters']], times   # preview timing = plan timing
+ed = open(os.path.join(out, 'edits.md'), encoding='utf-8').read()
+assert ed.count('\n| ') == 5 and 'lướt sang phải (`luot-phai`)' in ed and 'toàn cảnh nơi xảy ra' in ed and 'tự chỉnh' in ed and 'cắt thẳng' in ed and 'hai ảnh đóng khung' in ed, ed
+pm = open(os.path.join(out, 'preview.md'), encoding='utf-8').read()   # the preview's list (estimated times: no voice next to the pictures here)
+assert pm.count('\n| ') == 5 and 'lướt sang phải (`luot-phai`)' in pm and 'toàn cảnh nơi xảy ra' in pm, pm
 cred = open(os.path.join(out, 'credits.txt'), encoding='utf-8').read()
 assert 'Wide.jpg' in cred and 'CC BY 4.0' in cred and 'commons.wikimedia.org' in cred
 assert os.path.getsize(os.path.join(pub, 'news', N, 'bed.wav')) > 100000

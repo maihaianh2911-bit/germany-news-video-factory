@@ -138,4 +138,35 @@ for f in ('1/2-1.jpg', 'own/foto.jpg'): open(os.path.join(tmp, f), 'w').close()
 assert prep.missing_sources(picks, tmp) == ['3/1-1.jpg', '10/1-1.jpg']
 assert '2 ảnh' in run.GONE.format(n=2, files='3/1-1.jpg, 10/1-1.jpg') and 'CHỌN LẠI' in run.GONE
 shutil.rmtree(tmp, ignore_errors=True)
+# --- the catalogue of moves (scripts/news/moves.py) ---
+import moves
+assert 8 <= len(moves.MOVES) <= 12
+for (w, h) in ((1600, 1100), (800, 1200), (1150, 1150), (2600, 900)):          # landscape, portrait, square, panorama
+    for name in moves.MOVES:
+        for d in (1.5, 4, 9):
+            for f in (None, (0.1, 0.2), (0.9, 0.85)):
+                a, b = moves.expand(name, w, h, d, f)
+                for c in (a, b):   # the panel never looks past an edge of the picture
+                    hx, hy = moves.half(w, h, c['z'])
+                    assert 1.0 <= c['z'] <= 1.46 and hx - 1e-3 <= c['x'] <= 1 - hx + 1e-3 and hy - 1e-3 <= c['y'] <= 1 - hy + 1e-3, (name, w, h, d, f, c)
+                assert a != b, (name, w, h, d, f)                               # every move moves
+E = lambda n, d=5, f=None: moves.expand(n, 1600, 1100, d, f)
+assert E('tien-gan')[0]['z'] == 1.0 and 1.08 <= E('tien-gan')[1]['z'] <= 1.2 and E('tien-gan', 9)[1]['z'] > E('tien-gan', 3)[1]['z']
+assert E('chi-tiet')[1]['z'] >= 1.25 > E('tien-gan')[1]['z'] and E('lui-ra')[0]['z'] > E('lui-ra')[1]['z'] == 1.0
+assert E('luot-phai')[0]['x'] < E('luot-phai')[1]['x'] and E('luot-trai')[0]['x'] > E('luot-trai')[1]['x'] and E('luot-phai')[0]['z'] == E('luot-phai')[1]['z']
+assert E('nang-len')[0]['y'] > E('nang-len')[1]['y'] and E('ha-xuong')[0]['y'] < E('ha-xuong')[1]['y']
+assert E('dung-yen')[1]['z'] <= 1.03 and abs(E('troi-nhe')[1]['x'] - E('troi-nhe')[0]['x']) < 0.12
+assert abs(E('tien-gan', f=(0.3, 0.4))[1]['x'] - 0.3) < 0.08                    # ends on the subject
+pan = E('luot-phai', 4); hx = moves.half(1600, 1100, pan[0]['z'])[0]           # calm: at most PAN panels per second
+assert (pan[1]['x'] - pan[0]['x']) / (2 * hx) <= moves.PAN * 4 + 1e-3
+try: moves.expand('zoom-nhanh', 1600, 1100, 5); raise AssertionError('unknown move accepted')
+except ValueError as e: assert all(n in str(e) for n in moves.MOVES)
+ok_shot = {'img': 'a', 'move': 'lui-ra', 'why': 'x', 'focus': [0.5, 0.4], 'fade': 0}
+assert moves.check(ok_shot, 'cảnh 1-1') == [] and moves.check({'img': 'a', 'from': {}, 'to': {}}, 'c') == []
+assert moves.check({'pair': {}}, 'c') == [] and len(moves.check({'pair': {}, 'move': 'lui-ra'}, 'c')) == 1
+bad = moves.check({'img': 'a', 'move': 'zoom', 'focus': [2, 0], 'fade': 9}, 'cảnh 1-2')
+assert len(bad) == 3 and 'tien-gan, chi-tiet' in bad[0] and bad[0].startswith('cảnh 1-2'), bad
+assert 'cần "move"' in moves.check({'img': 'a', 'from': {}}, 'c')[0]
+assert moves.camera({'move': 'tien-gan', 'to': {'z': 1.5, 'x': .5, 'y': .5}}, 1600, 1100, 5)[1]['z'] == 1.5       # explicit numbers win
+assert moves.camera({'from': 1, 'to': 2}, 1600, 1100, 5) == (1, 2) and moves.label({'from': 1, 'to': 2}) == '-' and moves.label(ok_shot) == 'lui-ra'
 print('news unit checks OK')
