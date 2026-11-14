@@ -1,0 +1,34 @@
+{"title": "Johann Wolfgang von Goethe", "voice": "",
+ "lines": [
+  "Johann Wolfgang von Goethe wurde mit 25 über Nacht berühmt –",
+  "mit einem Roman über einen jungen Mann, der an der Liebe zerbricht.",
+  "Danach arbeitete er fast 60 Jahre lang",
+  "an einem einzigen Werk: Faust.",
+  "Den zweiten Teil versiegelte er kurz vor seinem Tod.",
+  "Er sollte erst erscheinen, wenn Goethe nicht mehr lebte.",
+  "Im März 1832 starb er in Weimar,",
+  "mit 82 Jahren."
+ ],
+ "tts": {
+  "1": "Johann Wolfgang von Goethe wurde mit fünfundzwanzig über Nacht berühmt –",
+  "3": "Danach arbeitete er fast sechzig Jahre lang",
+  "7": "Im März achtzehnhundertzweiunddreißig starb er in Weimar,",
+  "8": "mit zweiundachtzig Jahren."
+ },
+ "chapters": [{"lines": [1, 8]}],
+ "ambience": [""],
+ "music": {"key": "D", "mode": "minor", "bpm": 70, "energy": 0.3},
+ "queries": [
+  "incategory:\"Portraits of Johann Wolfgang von Goethe\"",
+  "Goethe Stieler 1828",
+  "Goethe 1775 Kraus",
+  "Goethe Bager 1773",
+  "Goethe Tischbein Campagna",
+  "Die Leiden des jungen Werthers 1774",
+  "Faust Tragödie zweiter Teil 1832",
+  "Goethe Faust Handschrift",
+  "Goethe Totenbett Preller",
+  "Goethes Wohnhaus Weimar",
+  "Goethe Arbeitszimmer Weimar",
+  "Goethe 1832 Schwerdgeburth"
+ ]}
