@@ -4,7 +4,7 @@ The owner (Vietnamese, not technical) writes the script and sends it in a chat (
 The result is a vertical short (1080×1920) in German: real, free-to-use pictures with slow camera moves on top,
 subtitles timed to a German voice below (`src/news/NewsV.tsx`). **You** choose and check every picture by looking
 at it. Machine steps run in `.github/workflows/news.yml` → `scripts/news/run.py`; files land on the `renders`
-branch in `news/<N>/` (`voice/`, `img/<round>/`, `video.mp4`, `sheet.jpg`, `subtitles.srt`, `credits.txt`;
+branch in `news/<N>/` (`voice/`, `img/<round>/`, `video.mp4`, `sheet.jpg`, `subtitles.srt`, `credits.txt`, `edits.md`;
 `voice-partial/` = the finished lines of a voice step that failed halfway, reused by the next run).
 
 Steps (labels): `news-plan` → you write `news/<N>/script.json` → `news-voice` (machine: voice, voice check,
@@ -118,9 +118,9 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
 {"images": {"merz": {"src": "1/2-1.jpg", "crop": [0.1, 0.0, 0.9, 0.8], "mode": "keep"},
             "reichstag": {"src": "1/1-3.jpg", "mode": "keep"}},
  "chapters": [{"pics": [
-   {"img": "reichstag", "from": {"z": 1.05, "x": 0.5, "y": 0.45}, "to": {"z": 1.25, "x": 0.5, "y": 0.4},
+   {"img": "reichstag", "move": "nang-len", "focus": [0.5, 0.4], "why": "câu nhắc Quốc hội: nâng lên dọc tòa nhà",
     "tag": "Berlin", "credit": "Reichstagsgebäude · Foto: Jürgen Matern / Wikimedia Commons, CC BY-SA 3.0"},
-   {"at": 3, "img": "merz", "from": {"z": 1.0, "x": 0.5, "y": 0.35}, "to": {"z": 1.15, "x": 0.5, "y": 0.3},
+   {"at": 3, "img": "merz", "move": "tien-gan", "focus": [0.5, 0.32], "why": "câu nhắc tên Merz: tiến gần gương mặt",
     "credit": "Friedrich Merz (Archivbild, 2025) · Foto: Sandro Halank / Wikimedia Commons, CC BY-SA 4.0"}]}]}
 ```
    - `images`: `src` = `<round>/<file>` from the search, or `own/<file>` for any picture that is not a search
@@ -133,9 +133,50 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
      (slightly warmer and softer, optional `sat`, `vignette`), `sepia` (old black-and-white pictures).
    - `chapters[i].pics` in order, one list per chapter of `script.json`. The first picture starts with the
      chapter; `at` = line number where the next picture cuts in (fractional allowed: 13.5 = mid-line 13).
-   - Camera: `from` → `to`; `z` 1.0–1.6; `x`, `y` = point of the picture held at the panel centre. The panel is
-     1080×1000 (almost square), so a landscape picture shows a square window: put `x` on the subject. Push in
-     slowly on faces, pan across wide scenes.
+   - **The edit of each shot** (owner, 14/11): `move` = one name of the table below, chosen by what the line
+     says; `focus` `[x, y]` (0–1) = where the subject is in the (cropped) picture, default `[0.5, 0.45]`; `why` = one
+     short Vietnamese reason (shown to the owner in the list of edits, never in the video). The machine works out
+     the camera for the picture's shape and the shot's length, so the speed is always calm and no edge shows.
+     `fade` (optional, seconds 0–1.5): how the shot comes in; left out = the usual soft 0.7 s dissolve, `0` = a hard
+     cut, `1.0` = a slow dissolve. An unknown name stops the preview and the render with the list of valid names.
+     Hand-written numbers still work and win over the move when both are given (`from`/`to`: `z` 1.0–1.6, `x`,
+     `y` = point of the picture held at the panel centre): only for a framing no move gives, with a `why`.
+     The panel is 1080×1000 (almost square), so a landscape picture shows a square window: `focus` decides which.
+
+   **Bảng cách edit** (`scripts/news/moves.py`). The channel has no sample video yet (`00-video-mau/` is empty):
+   the table follows the two finished videos (#1, #2) and sober German TV news — calm, factual, no effects. The
+   owner's remarks refine it: when the owner corrects a shot ("cảnh 5 đổi sang kiểu lùi ra"), change that shot,
+   and when the remark is a general taste, change this table too.
+
+   | `move` | tên cho chủ kênh | what it looks like | use it when the line … |
+   |---|---|---|---|
+   | `tien-gan` | tiến gần | slow push-in to the subject (+8–20 %) | **names a person** or quotes someone; the accused, a judge, a politician; a single object |
+   | `chi-tiet` | soi chi tiết | from the whole picture strongly into one detail (+25–45 %) | names **evidence or one telling detail** (a shackle, a shoe print, a signature, one figure on a chart); a short, hard statement |
+   | `lui-ra` | lùi ra | starts close on the subject, pulls back to the whole picture | describes an **action or event** in its setting (search, arrest, session); gives context; the **open question or last line** of the video |
+   | `luot-phai` / `luot-trai` | lướt sang phải / trái | steady pan across, no zoom change | shows a **wide place or a group** (courtroom, street, square, plenary hall, a row of people); a **comparison** of two things in one picture (pan from the first to the second) |
+   | `nang-len` | nâng lên | tilt up from the foot to the top | names an **institution by its building** (court, ministry, tower, statue); something rising (prices, a decision of a higher court) |
+   | `ha-xuong` | hạ xuống | tilt down from the top to the foot | goes from a place to what happened on its ground (the site of a find, a crowd in front of a building); a fall, a defeat |
+   | `dung-yen` | đứng yên | held almost still, everything readable | carries a **number, statistic, document, verdict text, map or chart**; a grave moment (memorial, victim) where movement would be loud |
+   | `troi-nhe` | trôi nhẹ | a little closer, a small slow sideways drift | is abstract or general and the picture is a **Symbolbild** (law, money, energy); a bridge line between two facts |
+
+   How to choose:
+   1. **Read the line first**, then ask what the viewer should look at while hearing it; that is the `focus`, and
+      the row whose "when" fits the line is the `move`. Never choose a move to "make it move".
+   2. **Move along the picture**: pan the way people look, walk or point and the way a street or a table runs; tilt
+      along a tower or a façade; a pan across a portrait or a tilt across a low wide picture has little room and
+      looks like a mistake (the preview shows it: start and end almost the same).
+   3. **Vary neighbours**: no move twice in a row, and not two pans in the same direction one after the other;
+      after a strong move (`chi-tiet`, a pan) a quiet one (`dung-yen`, `tien-gan`). Over a whole video `tien-gan`
+      may be the most frequent, but under half of the shots.
+   4. **Short shots** (under ~3 s): `dung-yen`, `tien-gan` or `chi-tiet`; pans and tilts need 4 s and more.
+   5. **A returning picture** gets another `focus` and another move than the first time (first `luot-phai` across
+      the bench, later `tien-gan` on the presiding judge).
+   6. **Cuts**: the soft dissolve is the rule. `"fade": 0` (hard cut) for a contradiction or a sudden turn ("Doch
+      vor Gericht …"), for the verdict; `"fade": 1.0` for a **jump in time** or place ("Im Oktober 2025 …",
+      "Drei Jahre später"). At most a few of each per video.
+   7. The first shot is the strongest picture with a clear move (`tien-gan` or a pan); the last shot `lui-ra` or
+      `dung-yen`. `Archivbild`/`Symbolbild` in the credit as before (§2.4): the move never replaces that label.
+   8. Two people or a person and a document side by side → `pair` (no `move`).
    - `credit` (always, German, one line ≤ ~90 characters): what it is, then `Foto: <author> / Wikimedia Commons,
      <licence>` (press photo: `Foto: <photographer>/<agency>`); for a picture in `own/`, `credits.txt` repeats
      this credit; add `Archivbild` or `Symbolbild` when it is not a picture of the event itself. `tag` (optional,
@@ -147,8 +188,11 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    `python3 scripts/news/preview.py news/<N>/picks.json news/<N>/script.json /tmp/r/news/<N>/img /tmp/preview.jpg`
    (pictures of `own/` are read from `<img_root>/own/`, so first copy them:
    `mkdir -p /tmp/r/news/<N>/img/own && cp news/<N>/own/* /tmp/r/news/<N>/img/own/`) and open the sheet: every shot
-   at the start and the end of its camera move, exactly as the video frames it. Fix any shot that cuts a face, chin
-   or hand, misses its subject or shows a border, and run it again.
+   at the start and the end of its camera move, exactly as the video frames it, labelled with its `[move]`. Fix any
+   shot that cuts a face, chin or hand, misses its subject, shows a border, or whose start and end look the same
+   although the move should travel (wrong move for that picture's shape: see rule 2), and run it again. The
+   preview also writes `/tmp/preview.md` (and prints it): the list of edits — shot, line, picture, move, why. Read
+   it top to bottom once as a viewer: does every move follow from its line, do neighbours differ?
 7. Commit `picks.json` together with any `script.json`/readings fixes in **one** push as `[news #<N>] chọn ảnh`
    (a push of `script.json` alone runs the voice step again), remove `news-busy`. (The render takes ~5–20 min:
    ~6.5 min for a 1.5-minute video, ~19 min for 3 minutes; you are woken at `news-check`.)
@@ -159,13 +203,15 @@ Open `sheet.jpg` (one tile per shot: chapter-shot, picture name, time; plus two 
 watermark), all fixes in one push. Otherwise remove `news-check`, add `news-done` and comment (🤖, short,
 Vietnamese): video link `https://github.com/maihaianh2911-bit/germany-news-video-factory/blob/renders/news/<N>/video.mp4`,
 its length, links to `subtitles.srt` and `credits.txt` (to paste into the video description), one line on the
-pictures used, the date until which the links work — `Tải video về máy trước ngày <dd/mm/yyyy>: sau ngày đó máy tự
+pictures used, the list of edits (paste `news/<N>/edits.md` from `renders` as it is: the table "Cách edit từng cảnh"
+with its last line, so the owner can answer "cảnh 5 đổi sang kiểu lùi ra"), the date until which the links work — `Tải video về máy trước ngày <dd/mm/yyyy>: sau ngày đó máy tự
 dọn video cũ và các link trên hết dùng được.` with the date = today + 14 days (`renders-cleanup.yml` removes
 `news/<N>/` from `renders` once the issue had no activity for 14 days; every comment on the issue restarts the
 count) — and "bình luận nếu muốn sửa".
 
 ## 4. `news-fix` and `news-failed`
-- `news-fix`: the request = owner comments after your last `🤖` comment. Text → `script.json` (changed lines are
+- `news-fix`: the request = owner comments after your last `🤖` comment. "Cảnh 5 đổi sang kiểu X" → the `move` of
+  shot 5 in the list of edits (X = the Vietnamese name or the `move` name of the table), with a new `why`. Text → `script.json` (changed lines are
   read again, the rest reused); pictures → `picks.json` (+ `search-<r>.json`; after a search round the issue is
   `news-pick` and you go on in §2). Push, one-line 🤖 comment, remove
   `news-fix`.

@@ -26,7 +26,7 @@ Chỉ phiếu do chủ repo hoặc cộng tác viên mở mới chạy.
 
 ## File kết quả
 
-Nhánh **`renders`**, thư mục `news/<số phiếu>/`: `video.mp4`, `subtitles.srt`, `credits.txt` (nguồn ảnh), `sheet.jpg` (ảnh các cảnh). Video của phiếu không hoạt động quá 14 ngày sẽ được dọn tự động, nên hãy tải về sớm (bình luận giao video ghi ngày hết hạn).
+Nhánh **`renders`**, thư mục `news/<số phiếu>/`: `video.mp4`, `subtitles.srt`, `credits.txt` (nguồn ảnh), `sheet.jpg` (ảnh các cảnh), `edits.md` (cách edit từng cảnh: muốn đổi thì bình luận "cảnh 5 đổi sang kiểu lùi ra"). Video của phiếu không hoạt động quá 14 ngày sẽ được dọn tự động, nên hãy tải về sớm (bình luận giao video ghi ngày hết hạn).
 
 ## Cấu hình
 
