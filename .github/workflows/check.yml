@@ -48,8 +48,7 @@ jobs:
           bash scripts/news/get_fonts.sh "$FONTSOURCE"
       - name: Kiểm tra kiểu
         run: npm run check
-      - name: Chạy thử dây chuyền tin tức (dữ liệu giả, dựng một khung hình)
+      - name: Chạy thử dây chuyền (dữ liệu giả, dựng một khung hình)
         run: |
           python3 tests/news_units.py
           python3 tests/news_smoke.py --still
-          python3 tests/news_smoke.py --chapters

@@ -19,8 +19,8 @@ def prepare(it, root):
         x0, y0, x1, y1 = it['crop']; W, H = im.size
         im = im.crop((round(x0 * W), round(y0 * H), round(x1 * W), round(y1 * H)))
     W, H = im.size
-    short = it.get('min_short', 1150)
-    if min(W, H) < short:  # soft sources are enlarged here so the panel never shows browser scaling
+    short = it.get('min_short', 1300)
+    if min(W, H) < short:  # soft sources are enlarged here so the full frame never shows browser scaling
         k = short / min(W, H); im = im.resize((round(W * k), round(H * k)), Image.LANCZOS)
         im = im.filter(ImageFilter.UnsharpMask(radius=2.0, percent=60, threshold=2))
     if max(im.size) > 2600:

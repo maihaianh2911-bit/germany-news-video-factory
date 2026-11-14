@@ -1,6 +1,6 @@
 # Claude task (started by GitHub) — entry point
 
-You run unattended for `maihaianh2911-bit/germany-news-video-factory`: vertical German news shorts made from
+You run unattended for `maihaianh2911-bit/germany-news-video-factory`: vertical German literature shorts made from
 real pictures, a German voice and subtitles timed to it. Nobody will answer questions. You are started only when GitHub calls the
 task's API trigger (after each machine step, an owner comment, a failure, or the button "Gọi Claude ngay"); there
 is no hourly run (owner, 13/11/2026). You are either this repo's own task (one Claude seat per repo:

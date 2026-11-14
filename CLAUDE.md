@@ -3,22 +3,25 @@
 Read `docs/HANDOVER.md` first (the owner, their standing decisions, the current state), then `AGENT_NEWS.md` (how a
 video is made). The owner is Vietnamese and not technical: answer in short, simple Vietnamese, no jargon.
 
-This repo makes one thing: vertical German news shorts from real pictures, a German voice and subtitles timed to
-it. The owner writes the scripts and sends them in a chat; everything after that is Claude's and the machine's.
-One issue `[Tin tức] …` = one video; the machine steps run on GitHub Actions (`news.yml`), Claude's steps are in
-`AGENT_NEWS.md`.
+This repo makes one thing: vertical **German literature** shorts in German (the life of a writer, a work) from
+real pictures, a German voice and yellow subtitles timed to it, written and edited like the owner's sample
+(`00-video-mau/van-hoc-tolstoy.md`; owner's decision 14/11/2026, it replaced the news channel). The owner names a
+writer or a work (or sends a script) in a chat; everything after that is Claude's and the machine's. One issue
+`[Văn học] …` = one video; the machine steps run on GitHub Actions (`news.yml`; the machine still says "news"),
+Claude's steps are in `AGENT_NEWS.md`.
 
 ## When you were started by GitHub (a Claude task, nobody in the chat)
 The prompt may be as short as "Làm việc đang chờ trong repo này" ("do the work waiting in this repo"), and GitHub
-adds a line such as "Phiếu tin tức (Đức) số 3: giọng và ảnh đã sẵn sàng". Then: follow `AGENT_NIGHTLY.md` of this repo (its first check lists the `news-*` issues waiting for you), then `AGENT_NEWS.md`. Nobody answers questions, so do not ask; comments go on the issues
+adds a line such as "Phiếu văn học Đức số 3: giọng và ảnh đã sẵn sàng". Then: follow `AGENT_NIGHTLY.md` of this repo (its first check lists the `news-*` issues waiting for you), then `AGENT_NEWS.md`. Nobody answers questions, so do not ask; comments go on the issues
 (🤖, Vietnamese).
 
-## When the owner pastes a script in a chat
-1. Create one issue in `maihaianh2911-bit/germany-news-video-factory`: title `[Tin tức] <German headline> —
+## When the owner names a writer or a work (or pastes a script) in a chat
+1. Create one issue in `maihaianh2911-bit/germany-news-video-factory`: title `[Văn học] <writer or work> —
    <main idea in Vietnamese>`, body with these sections (same names as the issue form):
-   `### Chủ đề (không bắt buộc)` / `### Kịch bản (bắt buộc)` = the script exactly as pasted /
-   `### Giọng đọc (không bắt buộc)` = `_No response_` unless the owner names a voice /
-   `### Ghi chú (không bắt buộc)` = wishes from the chat. No labels: the workflow adds them (`news`, `news-plan`).
+   `### Nhà văn / tác phẩm (bắt buộc)` / `### Kịch bản (không bắt buộc)` = the owner's script exactly as pasted,
+   or `_No response_` (then you write it, `AGENT_NEWS.md` §1.1) / `### Giọng đọc (không bắt buộc)` =
+   `_No response_` unless the owner names a voice / `### Ghi chú (không bắt buộc)` = wishes from the chat. No
+   labels: the workflow adds them (`news`, `news-plan`).
 2. **Right after creating the issue, add `news-busy`** (before anything else): opening the issue also wakes the
    Claude task, and the label tells it the issue is taken, so the two do not write `script.json` at the same time.
    Then do Claude's steps of `AGENT_NEWS.md` for that issue right away (keep `news-busy` while you work on a step,
@@ -30,8 +33,9 @@ adds a line such as "Phiếu tin tức (Đức) số 3: giọng và ảnh đã s
    task when each repo has its own seat) continues from the labels when GitHub calls it (no hourly run; needs the two secrets).
 3. Give the owner the links to the video, the subtitles and the picture credits.
 
-The script is the owner's: translate and split it, never edit its content. Look at the pictures yourself,
-preview before rendering.
+A script the owner sends is theirs: translate and split it, never edit its content. A script you write follows
+the sample (`AGENT_NEWS.md` §1.1) and only states facts you are sure of. Look at the pictures yourself, preview
+before rendering.
 
 ## Changing the pipeline
 Before pushing to `main`: `python3 tests/news_units.py`, `python3 tests/news_smoke.py --still`,

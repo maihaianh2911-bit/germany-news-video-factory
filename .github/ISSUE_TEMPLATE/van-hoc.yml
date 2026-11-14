@@ -1,0 +1,34 @@
+name: 📚 Video văn học Đức
+description: Tên nhà văn hoặc tác phẩm (hoặc kịch bản của bạn) → video dọc tiếng Đức có giọng đọc, ảnh thật và phụ đề vàng chạy theo giọng
+title: "[Văn học] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Cách dùng:** ghi tên nhà văn hoặc tác phẩm rồi bấm **Create**. Claude viết kịch bản tiếng Đức theo kiểu video mẫu (Tolstoy), máy tạo giọng đọc, Claude chọn ảnh, máy dựng video, Claude kiểm tra lại từng cảnh. Link video sẽ hiện ở bình luận cuối.
+        Đã có kịch bản riêng thì dán vào ô Kịch bản: Claude giữ nguyên ý, chỉ dịch sang tiếng Đức nếu cần.
+        Muốn sửa gì thì viết bình luận (ví dụ "cảnh 3 đổi ảnh khác").
+  - type: input
+    id: topic
+    attributes:
+      label: Nhà văn / tác phẩm (bắt buộc)
+      description: Ai, tác phẩm nào, phần nào của cuộc đời (nếu muốn chia nhiều phần)
+      placeholder: Johann Wolfgang von Goethe — phần 1 (đến năm 1775)
+    validations:
+      required: true
+  - type: textarea
+    id: script
+    attributes:
+      label: Kịch bản (không bắt buộc)
+      description: Để trống thì Claude viết theo kiểu video mẫu. Có kịch bản thì dán vào (tiếng Việt hoặc tiếng Đức).
+  - type: input
+    id: voice
+    attributes:
+      label: Giọng đọc (không bắt buộc)
+      description: Để trống = giọng mặc định của kênh
+  - type: textarea
+    id: notes
+    attributes:
+      label: Ghi chú (không bắt buộc)
+      description: Ảnh nên có hoặc nên tránh, độ dài mong muốn… Có thể kéo thả ảnh riêng vào đây.

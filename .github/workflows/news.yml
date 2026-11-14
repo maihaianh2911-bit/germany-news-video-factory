@@ -1,7 +1,8 @@
-name: Video tin tức (ảnh thật)
+name: Video văn học Đức (ảnh thật)
 
-# One issue "[Tin tức] …" = one vertical news short made from real free-to-use pictures, a German
-# voice and subtitles timed to it. Owner opens the issue → Claude writes news/<N>/script.json → this workflow
+# One issue "[Văn học] …" (earlier "[Tin tức] …") = one vertical German literature short made from real
+# free-to-use pictures, a German voice and subtitles timed to it (the machine still says "news": labels news-*,
+# folder news/<N>/). Owner opens the issue → Claude writes news/<N>/script.json → this workflow
 # reads the voice (11labs, one job per line), checks it with Whisper and searches pictures → Claude chooses the
 # pictures (news/<N>/picks.json) → this workflow renders → Claude checks every shot → done. An owner comment
 # → Claude fixes. Claude's side: AGENT_NEWS.md. Files: renders branch, folder news/<N>/.
@@ -30,10 +31,11 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  # 1) The owner (or a collaborator) opens a [Tin tức] issue → wait for Claude's plan, wake Claude now
+  # 1) The owner (or a collaborator) opens a [Văn học] (or older [Tin tức]) issue → wait for Claude's plan, wake Claude now
   start:
     if: >-
-      github.event_name == 'issues' && startsWith(github.event.issue.title, '[Tin tức]')
+      github.event_name == 'issues'
+      && (startsWith(github.event.issue.title, '[Văn học]') || startsWith(github.event.issue.title, '[Tin tức]'))
       && contains(fromJson('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
     runs-on: ubuntu-24.04
     steps:
@@ -43,12 +45,12 @@ jobs:
         env: { GH_TOKEN: '${{ github.token }}', GH_REPO: '${{ github.repository }}', N: '${{ github.event.issue.number }}' }
         run: |
           gh issue edit "$N" --add-label news,news-plan
-          gh issue comment "$N" --body "🤖 Đã nhận kịch bản. Claude sẽ chia câu và chọn từ khóa tìm ảnh (dịch sang tiếng Đức nếu cần), máy tạo giọng đọc và tìm ảnh, Claude chọn ảnh, máy dựng video, Claude kiểm tra lại từng cảnh. Mỗi bước xong sẽ báo ở đây."
+          gh issue comment "$N" --body "🤖 Đã nhận phiếu. Claude viết kịch bản tiếng Đức theo kiểu video mẫu (hoặc chia câu kịch bản của bạn, dịch nếu cần) và chọn từ khóa tìm ảnh, máy tạo giọng đọc và tìm ảnh, Claude chọn ảnh, máy dựng video, Claude kiểm tra lại từng cảnh. Mỗi bước xong sẽ báo ở đây."
       - name: Gọi Claude
         env: { CLAUDE_TASK_URL: '${{ secrets.CLAUDE_TASK_URL }}', CLAUDE_TASK_TOKEN: '${{ secrets.CLAUDE_TASK_TOKEN }}' }
-        run: bash scripts/wake_claude.sh "Phiếu tin tức (Đức) mới số ${{ github.event.issue.number }}."
+        run: bash scripts/wake_claude.sh "Phiếu văn học Đức mới số ${{ github.event.issue.number }}."
 
-  # 2) The owner comments on a news issue → Claude reads it and fixes
+  # 2) The owner comments on an issue of this channel → Claude reads it and fixes
   fix:
     if: >-
       github.event_name == 'issue_comment' && github.event.issue.state == 'open'
@@ -67,7 +69,7 @@ jobs:
           gh issue comment "$N" --body "🤖 Đã nhận yêu cầu. Claude sẽ sửa và máy dựng lại."
       - name: Gọi Claude
         env: { CLAUDE_TASK_URL: '${{ secrets.CLAUDE_TASK_URL }}', CLAUDE_TASK_TOKEN: '${{ secrets.CLAUDE_TASK_TOKEN }}' }
-        run: bash scripts/wake_claude.sh "Chủ kênh yêu cầu sửa phiếu tin tức (Đức) số ${{ github.event.issue.number }}."
+        run: bash scripts/wake_claude.sh "Chủ kênh yêu cầu sửa phiếu văn học Đức số ${{ github.event.issue.number }}."
 
   # 3) Claude pushed news/<N>/… (or a manual run) → voice + pictures, or the video
   work:

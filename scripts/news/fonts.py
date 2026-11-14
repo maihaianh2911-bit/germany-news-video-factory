@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Add the fonts a plan needs. Usage: fonts.py <plan.json> <fontsource_dir> <public_dir>
 
-<fontsource_dir> holds the unpacked npm packages @fontsource-variable/source-serif-4 and source-sans-3 (folders
-source-serif-4/ and source-sans-3/). Only the unicode-range chunks that contain characters of this video are
+<fontsource_dir> holds the unpacked npm package @fontsource/philosopher (folder philosopher/), the subtitle
+font of the owner's sample. Only the unicode-range chunks that contain characters of this video are
 copied to <public_dir>/news/fonts/ and listed in plan["fonts"] (NewsV registers them with FontFace).
 """
 import json, os, re, shutil, sys
@@ -11,7 +11,7 @@ plan_path, src, pub = sys.argv[1], sys.argv[2], sys.argv[3]
 plan = json.load(open(plan_path, encoding='utf-8'))
 chars = set(json.dumps(plan, ensure_ascii=False)) | set('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ÄÖÜäöüß—–„“‚‘«».,:;!?()/ ')
 os.makedirs(f'{pub}/news/fonts', exist_ok=True); out = []
-for fam, pkg in [('Source Serif 4', 'source-serif-4'), ('Source Sans 3', 'source-sans-3')]:
+for fam, pkg in [('Philosopher', 'philosopher')]:
     base = os.path.join(src, pkg)
     for blk in re.findall(r'@font-face\s*{(.*?)}', open(f'{base}/index.css').read(), re.S):
         f = re.search(r"url\(\./files/([^)]+\.woff2)\)", blk).group(1)

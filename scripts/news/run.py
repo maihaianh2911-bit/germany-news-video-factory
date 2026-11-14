@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Machine steps of a news video (GitHub Actions). Usage: run.py <N> <step> [<step> ...]
+"""Machine steps of a video of this channel (German literature; the machine still says "news") (GitHub Actions). Usage: run.py <N> <step> [<step> ...]
 
   prepare  voice (one 11labs job per line, unchanged lines reused), voice check, image search round 1
            (only when the queries changed) → renders/news/<N>/voice/, img/1/
@@ -215,7 +215,7 @@ if __name__ == '__main__':
                     f'{f" ({flagged} câu cần Claude nghe lại cách đọc)" if flagged else ""}. '
                     + ('Từ khóa tìm ảnh đã đổi nên ảnh đợt 1 là ảnh mới: Claude phải chọn lại ảnh trước khi dựng video.'
                        if requeried else 'Ảnh đã tìm xong. Claude sẽ chọn ảnh cho từng ý.'))
-            wake(f'Phiếu tin tức (Đức) số {N}: ' + ('từ khóa ảnh đợt 1 đã đổi, phải chọn lại ảnh.' if requeried
+            wake(f'Phiếu văn học Đức số {N}: ' + ('từ khóa ảnh đợt 1 đã đổi, phải chọn lại ảnh.' if requeried
                                                      else 'giọng và ảnh đã sẵn sàng, chờ chọn ảnh.'))
             woke = True
         elif 'render' not in steps:
@@ -227,7 +227,7 @@ if __name__ == '__main__':
             if rounds and not woke:
                 # Claude may have stopped polling for the new round: call it so the issue does not wait at news-pick
                 comment(f'🤖 Đã tìm thêm ảnh (đợt {", ".join(rounds)}). Claude sẽ chọn ảnh cho từng ý.')
-                wake(f'Phiếu tin tức (Đức) số {N}: đã tìm thêm ảnh (đợt {", ".join(rounds)}), chờ chọn ảnh.')
+                wake(f'Phiếu văn học Đức số {N}: đã tìm thêm ảnh (đợt {", ".join(rounds)}), chờ chọn ảnh.')
     if 'render' in steps:
         if not os.path.exists(os.path.join(WORK, 'voice', 'lines.json')):
             raise SystemExit('chưa có giọng đọc cho phiếu này (cần script.json)')
@@ -236,4 +236,4 @@ if __name__ == '__main__':
         m, s = divmod(round(length), 60)
         comment(f'🤖 Đã dựng xong bản video ({m} phút {s:02d} giây). Claude đang kiểm tra lại từng cảnh trước khi giao.\n\n'
                 f'- Video: {link("video.mp4")}\n- Ảnh các cảnh: {link("sheet.jpg")}')
-        wake(f'Phiếu tin tức (Đức) số {N}: video đã dựng, chờ kiểm tra.')
+        wake(f'Phiếu văn học Đức số {N}: video đã dựng, chờ kiểm tra.')
