@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Preview every shot of picks.json before rendering: the picture panel (1080×1000) at the start and at the end of
+"""Preview every shot of picks.json before rendering: the picture panel (1000×750) at the start and at the end of
 its camera move, exactly as NewsV frames it, in one contact sheet. Catches cut-off faces and wrong framing before
 a 25-minute render. Usage: preview.py <news/N/picks.json> <news/N/script.json> <img_root> <out.jpg>
 (<img_root> = the renders folder news/<N>/img with rounds 1/, 2/…, plus own/ when used)."""
@@ -10,7 +10,7 @@ from prep import prepare
 
 picks_p, script_p, root, out = sys.argv[1:5]
 picks = json.load(open(picks_p, encoding='utf-8')); script = json.load(open(script_p, encoding='utf-8'))
-W, PH, TW, TH = 1080, 1000, 216, 200
+W, PH, TW, TH = 1000, 750, 240, 180   # NewsV's PW, PH
 cache = {}
 def img(name):
     if name not in cache: cache[name] = prepare(picks['images'][name], root)
@@ -25,7 +25,8 @@ def window(im, cam):
 
 def pair_tile(p):
     t = Image.new('RGB', (TW, TH), (24, 20, 14)); k = TW / W
-    for side, bw, x, y in (('left', 400, 70, 150), ('right', 440, 560, 110)):
+    left = img(p['pair']['left']['img']); top = min(80, PH - 250 - 280 * left.height / left.width)   # NewsV's PAIR
+    for side, bw, x, y in (('left', 280, 95, top), ('right', 320, 530, top - 40)):
         im = img(p['pair'][side]['img']); bh = bw * im.height / im.width
         th = im.resize((max(1, round(bw * k)), max(1, round(bh * k))))
         t.paste(th, (round(x * k), round(y * k)))

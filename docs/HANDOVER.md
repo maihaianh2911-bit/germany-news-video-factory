@@ -10,6 +10,7 @@ Repo này làm **video tin tức tiếng Đức từ ảnh thật** (Shorts dọ
 ## Quyết định của chủ kênh
 
 - 12/11: **cách dựng video khác repo Nhật**: chủ kênh sẽ gửi video mẫu (thư mục `00-video-mau/` hoặc link). Khi có mẫu, làm lại `src/news/NewsV.tsx` (và `build.py` nếu cần) theo mẫu; phần giọng, tìm ảnh, phụ đề khớp giọng, các bước máy giữ nguyên.
+- 14/11: chủ kênh gửi **video mẫu** trong chat (*"Mẫu đây, có làm theo đc ko"*): một video TikTok tóm tắt sách kiểu "Tủ sách hay" (3 phút 38 giây, khung hình mẫu ở `00-video-mau/mau-*.jpg`). Đã làm `NewsV.tsx` theo mẫu: nền đen có sao lấp lánh; góc trên trái là ảnh bìa + tên tin chữ in hoa + dòng nghiêng + tên kênh kiểu máy chữ; một khung ảnh ngang 4:3 bo góc; phụ đề chữ có chân màu trắng dưới khung (không tô màu chữ); lời trích trong hộp trắng chữ đen; mở đầu: gõ tên kênh, dải ảnh trượt vào, ảnh bìa được chọn rồi bay lên góc. Nhạc nền nhẹ giữ như cũ (mẫu cũng có nhạc nhỏ dưới giọng). Ảnh trong mẫu là tranh động vẽ tay; tin tức vẫn dùng ảnh thật chuyển động chậm.
 
 - 12/11: *"Kịch bản sẽ do tao làm và gửi vào chat cho m, m chỉ nhận phần sau thôi"* → chủ kênh tự viết kịch bản và gửi vào chat; Claude không viết, không tìm tin, không sửa ý. Claude mở phiếu, dịch sát sang tiếng Đức nếu kịch bản là tiếng Việt, rồi làm video.
 - 13/11 (phiếu #1, vụ án Fabian): *"Dùng cách 2, che mặt bị cáo và em bé, dùng thêm cả cách 1"* → với tin có thật, được dùng **ảnh báo chí** của chính sự việc (dpa, báo Đức…) bên cạnh ảnh Commons tự do: lưu vào `news/<N>/own/`, **làm mờ mặt bị cáo và trẻ em** (không dùng ảnh nạn nhân là trẻ em), ghi nguồn đầy đủ (`Foto: <tác giả>/dpa`). Chủ kênh biết và chấp nhận rủi ro bản quyền trên YouTube.
@@ -21,7 +22,7 @@ Phiếu `[Tin tức] …` → `.github/workflows/news.yml` + `scripts/news/run.p
 
 `news-plan` Claude viết `news/<N>/script.json` → `news-voice` máy tạo giọng (11labs.id.vn, một job mỗi câu), kiểm tra phát âm, tìm ảnh (Wikimedia Commons) → `news-pick` Claude chọn ảnh, xem trước khung hình, viết `news/<N>/picks.json` → `news-render` máy dựng (`src/news/`, Remotion) → `news-check` Claude xem bảng cảnh → `news-done`. Bình luận của chủ kênh → `news-fix`. Kết quả: nhánh `renders`, thư mục `news/<N>/`.
 
-## Trạng thái (13/11/2026)
+## Trạng thái (14/11/2026)
 
 - **Đã có 2 video thật** (vụ án Fabian, làm trong chat): phiếu #1 (46 câu, 2 phút 57 giây) và phiếu #2 (22 câu, 1 phút 26 giây), kết quả ở nhánh `renders`, thư mục `news/1/` và `news/2/`. Giọng đọc tiếng Đức, tìm ảnh và dựng trên GitHub đều đã chạy được.
 - Thời gian máy thật: giọng + tìm ảnh ~12 phút (22 câu) đến ~22 phút (46 câu); dựng ~6,5 phút (video 1,5 phút) đến ~19 phút (video 3 phút); tìm thêm ảnh ~2 phút.
@@ -30,8 +31,8 @@ Phiếu `[Tin tức] …` → `.github/workflows/news.yml` + `scripts/news/run.p
   1. **Tác vụ Claude chưa được gọi tự động**: lúc 13/11 10:35 UTC repo này vẫn **chưa có** hai secret `CLAUDE_TASK_URL` và `CLAUDE_TASK_TOKEN` (nhật ký máy báo "Chưa cài CLAUDE_TASK_URL/CLAUDE_TASK_TOKEN"). Không có lượt chạy mỗi giờ (chủ kênh, 13/11): Claude chỉ bắt đầu khi GitHub gọi, nên khi chưa có hai secret này phiếu chỉ được làm trong chat (hoặc bấm **Gọi Claude ngay** sau khi thêm secret). Chọn **một** trong hai cách:
      - **Dùng chung** tác vụ "japan-video-factory" của repo Nhật: chép hai secret với **cùng giá trị** như ở `japan-video-factory`. Khi đó lời nhắn (prompt) của tác vụ đó phải là lời **không giới hạn repo**, kiểu "Làm theo AGENT_NIGHTLY.md …" (tác vụ kiểm tra mọi kênh, trong đó có phiếu `news-*` của repo này). **Không** dùng lời "Làm việc đang chờ trong repo này" / "chỉ kênh văn học": với lời đó tác vụ chỉ làm kênh văn học và bỏ qua phiếu tin tức Đức.
      - **Tác vụ riêng** cho repo này (mỗi repo một chỗ Claude): tạo tác vụ mới có lời nhắn "Làm theo AGENT_NIGHTLY.md của repo maihaianh2911-bit/germany-news-video-factory." (hoặc "Làm việc đang chờ trong repo này" nếu tác vụ chỉ gắn repo này), rồi chép URL và token **của tác vụ mới** vào hai secret của repo này.
-  2. Video mẫu của chủ kênh (`00-video-mau/`) **vẫn chưa có**: bố cục hiện vẫn chép kênh văn học, sẽ làm lại theo mẫu khi có.
-  3. Hỏi chủ kênh về kiểu hình (màu nền, nhạc) vì giao diện đang giống kênh văn học; đo lại tốc độ đọc (đang ước 14–15 ký tự/giây trong `AGENT_NEWS.md`) và xem cỡ chữ phụ đề trên hai video đã có.
+  2. **Tên kênh** (gõ ở đầu video và dòng cuối của phần đầu trang) chưa có: hỏi chủ kênh rồi ghi vào `prompts/news_style.json` `channel`. Để trống thì không hiện.
+  3. Đo lại tốc độ đọc (đang ước 14–15 ký tự/giây trong `AGENT_NEWS.md`).
 
 ## Lưu ý kỹ thuật
 

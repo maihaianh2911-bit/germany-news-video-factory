@@ -40,6 +40,7 @@ json.dump(rows, open(os.path.join(voice, 'lines.json'), 'w', encoding='utf-8'), 
 
 cam = lambda z0, z1: {'from': {'z': z0, 'x': .5, 'y': .5}, 'to': {'z': z1, 'x': .45, 'y': .4}}
 json.dump({'title': 'Test', 'voice': 'test', 'lines': lines, 'show_chapters': '--chapters' in sys.argv,
+           'head': {'title': 'Mindestlohn steigt auf vierzehn Euro', 'sub': 'Berlin, Bundestag'}, 'quotes': [4],
            'chapters': [{'num': '01', 'label': 'Berlin', 'title': 'Neues Gesetz', 'desc': ['Erste Zeile', 'Zweite Zeile'], 'lines': [1, 2]},
                         {'num': '02', 'label': 'Folgen', 'title': 'Mehr Geld', 'desc': ['Erste Zeile', 'Zweite Zeile'], 'lines': [3, 4]}],
            'hl': {'1': ['Gesetz'], '3': ['Mindestlohn']}, 'ambience': ['', 'wind'], 'queries': ['test']},
@@ -70,11 +71,14 @@ mid = plan['chapters'][1]['pics'][1]['s']; v3 = plan['voice'][2]['s']
 assert v3 + 1.5 < mid < v3 + rows[2]['duration'], (mid, v3)                     # at 3.5 = halfway through line 3
 assert len(plan['voice']) == 4 and all(a['s'] < b['s'] for a, b in zip(plan['voice'], plan['voice'][1:]))
 for sb in plan['subs']:                                                          # at most two rows, readable size
-    r = sb['text'].split('\n'); assert len(r) <= 2 and max(map(len, r)) <= 32, sb['text']
-assert len(plan['subs']) == 6, [s['text'] for s in plan['subs']]                 # the long line 3 becomes three cues
+    r = sb['text'].split('\n'); assert len(r) <= 2 and max(map(len, r)) <= 38, sb['text']
+assert len(plan['subs']) == 5, [s['text'] for s in plan['subs']]                 # the long line 3 becomes two cues
+assert [bool(s.get('box')) for s in plan['subs']] == [False] * 4 + [True]        # line 4 is a quote
+assert plan['head']['title'] == 'Mindestlohn steigt\nauf vierzehn Euro', plan['head']
+assert plan['head']['cover']['src'].endswith('/wide.jpg') and len(plan['intro']) == 2   # cover = first picture, strip = the others
 assert ' '.join(s['text'].replace('\n', ' ') for s in plan['subs']) == ' '.join(lines)
 assert all(a['e'] <= b['s'] + 1e-6 for a, b in zip(plan['subs'], plan['subs'][1:]))
-srt = open(os.path.join(out, 'subtitles.srt'), encoding='utf-8').read(); assert srt.count('-->') == 6
+srt = open(os.path.join(out, 'subtitles.srt'), encoding='utf-8').read(); assert srt.count('-->') == 5
 cue_t = [[sum(float(x) * k for x, k in zip(re.split('[:,]', v), (3600, 60, 1, .001))) for v in m] for m in re.findall(r'(\S+) --> (\S+)', srt)]
 assert all(a[0] < a[1] <= b[0] + 1e-6 for a, b in zip(cue_t, cue_t[1:])), cue_t      # .srt cues never overlap
 cred = open(os.path.join(out, 'credits.txt'), encoding='utf-8').read()
@@ -84,10 +88,13 @@ assert Image.open(os.path.join(out, 'preview.jpg')).size[0] > 400
 if os.environ.get('FONTSOURCE'):
     plan = json.load(open(plan_p, encoding='utf-8')); assert len(plan['fonts']) >= 2 and all(os.path.exists(os.path.join(pub, f['file'])) for f in plan['fonts'])
 
-if '--still' in sys.argv:
-    run('node', os.path.join(S, 'stills.mjs'), plan_p, pub, os.path.join(out, 'still'), '1.5')
+if '--still' in sys.argv:   # half-size frames: during the opening (1.5 s) and after it (5 s)
+    run('node', os.path.join(S, 'stills.mjs'), plan_p, pub, os.path.join(out, 'still'), '1.5', '5')
     a = np.asarray(Image.open(os.path.join(out, 'still_1.5.png')).convert('RGB')).astype(int)
-    assert a.shape[:2] == (960, 540), a.shape
-    assert a[:400].std() > 20, 'picture panel is flat'                         # the picture is there
-    assert (a[620:760] > 200).mean() > 0.005, 'no subtitle text'                 # white subtitle text below it
+    b = np.asarray(Image.open(os.path.join(out, 'still_5.png')).convert('RGB')).astype(int)
+    assert a.shape[:2] == b.shape[:2] == (960, 540), (a.shape, b.shape)
+    assert a[360:510].std() > 20, 'no strip of pictures in the opening'
+    assert b[270:625, 30:510].std() > 20, 'picture panel is flat'               # the picture is there
+    assert (b[95:230, 160:520] > 200).mean() > 0.01, 'no headline'               # white headline beside the cover
+    assert (b[655:760] > 200).mean() > 0.005, 'no subtitle text'                 # white subtitle text below the panel
 print('news smoke test OK:', round(plan['duration'], 1), 's,', len(plan['subs']), 'cues,', tmp)

@@ -1,8 +1,12 @@
 # News videos (real pictures) — runbook for Claude
 
 The owner (Vietnamese, not technical) writes the script and sends it in a chat (or opens an issue `[Tin tức] …`).
-The result is a vertical short (1080×1920) in German: real, free-to-use pictures with slow camera moves on top,
-subtitles timed to a German voice below (`src/news/NewsV.tsx`). **You** choose and check every picture by looking
+The result is a vertical short (1080×1920) in German, built like the owner's sample (14/11/2026, a "Tủ sách hay"
+book short): a dark starry night; top left a header (the **cover** picture, the headline in capitals, an italic
+line, the channel name in typewriter type); below it one landscape picture panel (4:3, rounded corners) with real,
+free-to-use pictures and slow camera moves; serif subtitles under the panel, timed to a German voice; quotes in a
+white box. The first ~3.4 s: the channel name is typed, a strip of the video's pictures slides in, the cover is
+singled out and flies into the header (`src/news/NewsV.tsx`). **You** choose and check every picture by looking
 at it. Machine steps run in `.github/workflows/news.yml` → `scripts/news/run.py`; files land on the `renders`
 branch in `news/<N>/` (`voice/`, `img/<round>/`, `video.mp4`, `sheet.jpg`, `subtitles.srt`, `credits.txt`).
 
@@ -26,12 +30,13 @@ check the shot sheet → `news-done`. `news-fix`: the owner commented. `news-fai
 Read the issue form (Chủ đề, Kịch bản, Giọng đọc, Ghi chú) and the owner's comments.
 ```json
 {"title": "Mindestlohn steigt auf 14 Euro", "voice": "",
+ "head": {"title": "Mindestlohn", "sub": "Bundestag, Berlin"},
+ "quotes": [7],
  "show_chapters": false,
  "lines": ["Der Bundestag hat heute ein neues Gesetz beschlossen.", "…"],
  "tts": {"3": "Die E Z B senkt den Leitzins."},
  "chapters": [{"num": "01", "label": "Berlin", "title": "Neues Gesetz",
                "desc": ["Bundestag, 12. November 2026", "Der Mindestlohn steigt."], "lines": [1, 12]}],
- "hl": {"1": ["Gesetz"], "2": ["14 Euro"]},
  "ambience": [""],
  "music": {"key": "D", "mode": "minor", "bpm": 84, "energy": 0.35},
  "queries": ["incategory:\"Reichstag building\"", "Bundestag plenary hall", "Olaf Scholz 2024"]}
@@ -41,13 +46,22 @@ Read the issue form (Chủ đề, Kịch bản, Giọng đọc, Ghi chú) and th
   spoken news German, nothing added, nothing left out; proper names in their German spelling.
 - Length: the German voice reads roughly 14–15 characters/s; the video ≈ characters/14.5 + 0.35 s per line.
   Shorts allow 3 min ≈ 2400 characters. A longer script is still made as sent; say the length in your comment.
+- `head`: the header next to the cover. `title` = the story in 1–3 words, like a book title (`Mordfall Fabian`,
+  `Mindestlohn`, `Bahnstreik`), shown in capitals, ≤ ~22 characters per row (two rows: put `\n`); `sub` = one
+  short italic line ≤ ~26 characters, like the author line of the sample (place, court, institution: `Prozess in
+  Rostock`, `Bundestag, Berlin`). Left out: the headline `title` is used, broken into two rows.
+- `quotes`: numbers of the lines that are someone's own words (a witness, the court, a politician); they are shown
+  dark on a white box. A line written entirely in quotation marks („…“) is boxed anyway.
+- `intro`: leave it out (the opening plays); `false` only when the owner asks for no opening.
+- The channel name (typed in the opening, last row of the header) is in `prompts/news_style.json` `channel`, the
+  same for every video; empty = not shown.
 - `voice`: leave `""` (or leave it out) to use the channel voice of `prompts/news_voice.json`; set it only when
   the issue names another voice.
-- `show_chapters`: `false` (default) = told in one flow, no chapter cards; one chapter covering all lines is
+- `show_chapters`: `false` (default) = told in one flow, as in the sample; one chapter covering all lines is
   enough (its `num`/`label`/`title`/`desc` are required by the format but not shown). `true` only when the owner
-  asks for sections ("có chia phần"): then 3–6 chapters, `label` ≤ 16 characters, `title` ≤ 22 characters, `desc`
-  two lines ≤ 40 characters, `lines` = first and last line (1-based), covering all lines in order.
-- `hl`: 1–2 key words or figures per line (exact substrings, best a single word), shown in gold.
+  asks for sections ("có chia phần"): then 3–6 chapters, `title` ≤ 18 characters (shown as `01 · Title` at the top
+  of the picture for the chapter's first 3 s), `label`/`desc` short (kept for the format, not shown), `lines` =
+  first and last line (1-based), covering all lines in order.
 - `tts`: the line as it should be spoken, when the voice may misread something (abbreviations spelled out:
   `EZB` → `E Z B`; foreign names respelled; `§` → `Paragraf`). `prompts/news_readings.json` is applied to every
   line anyway. Subtitles always show `lines`.
@@ -100,12 +114,14 @@ Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice and pictures
    Real pictures only (photographs, also maps and charts from Commons; never AI images). Licence PD/CC0, CC BY or
    CC BY-SA (the on-screen credit names author and licence). Sharp, well lit, short side ≥ ~500 px. No watermarks,
    no burnt-in captions, no gore, nothing that ridicules a person (mid-blink, grimace). A new picture every 1–2
-   lines (3–6 s), never longer than ~10 s; a strong picture may return once with another crop. The first 2 s must
-   be the strongest picture of the story.
+   lines (3–6 s), never longer than ~10 s; a strong picture may return once with another crop. The **cover** (the
+   header picture, also singled out in the opening) is the strongest picture of the story; the panel appears at
+   ~3 s.
 5. Format:
 ```json
 {"images": {"merz": {"src": "1/2-1.jpg", "crop": [0.1, 0.0, 0.9, 0.8], "mode": "keep"},
             "reichstag": {"src": "1/1-3.jpg", "mode": "keep"}},
+ "cover": {"img": "reichstag", "x": 0.5, "y": 0.4},
  "chapters": [{"pics": [
    {"img": "reichstag", "from": {"z": 1.05, "x": 0.5, "y": 0.45}, "to": {"z": 1.25, "x": 0.5, "y": 0.4},
     "tag": "Berlin", "credit": "Reichstagsgebäude · Foto: Jürgen Matern / Wikimedia Commons, CC BY-SA 3.0"},
@@ -120,15 +136,21 @@ Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice and pictures
      the video description. Search results get their page from `index.json` automatically, no `page` needed.
      `crop` [x0, y0, x1, y1] in 0..1. `mode`: `keep` (normal for news photographs), `color`
      (slightly warmer and softer, optional `sat`, `vignette`), `sepia` (old black-and-white pictures).
+   - `cover` (optional; default the first picture): the picture of the header and of the opening, cut to a tall
+     2:3 card; `x`, `y` (0..1) = the point kept in view (default: the camera point of its first shot). Choose the
+     picture that says the story at a glance at thumbnail size: one person, one building, one object. Never the
+     blurred face of an accused person or a child.
    - `chapters[i].pics` in order, one list per chapter of `script.json`. The first picture starts with the
      chapter; `at` = line number where the next picture cuts in (fractional allowed: 13.5 = mid-line 13).
    - Camera: `from` → `to`; `z` 1.0–1.6; `x`, `y` = point of the picture held at the panel centre. The panel is
-     1080×1000 (almost square), so a landscape picture shows a square window: put `x` on the subject. Push in
+     1000×750 (4:3 landscape): a wide picture shows a 4:3 window (put `x` on the subject), a portrait shows a band
+     across it (put `y` on the face). Push in
      slowly on faces, pan across wide scenes.
    - `credit` (always, German, one line ≤ ~90 characters): what it is, then `Foto: <author> / Wikimedia Commons,
      <licence>` (press photo: `Foto: <photographer>/<agency>`); for a picture in `own/`, `credits.txt` repeats
      this credit; add `Archivbild` or `Symbolbild` when it is not a picture of the event itself. `tag` (optional,
-     ≤ 20 characters): place, date or name, top right.
+     ≤ 20 characters): place, date or name, shown large and pale at the top centre of the picture (like `1930` in the
+     sample); leave it out when the top of the picture is busy (a face, text).
    - `pair` (optional, instead of `img`): two framed prints side by side, `{"left": {"img": "…", "caption":
      ["Name", "Funktion"]}, "right": {"img": "…"}}` — a person next to a document or building.
 6. **Preview before pushing** (a wrong crop found after the render costs another render of up to ~20 min):

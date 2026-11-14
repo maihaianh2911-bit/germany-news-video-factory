@@ -2,9 +2,10 @@
 """Plan of a news video for the NewsV composition, plus music bed, subtitles and picture credits.
 
 Usage: build.py <job_dir news/N> <public_dir> <N> <img_src_dir> <out_dir>
-Reads <job_dir>/script.json (lines, chapters, keywords, ambience, music), <job_dir>/picks.json (pictures per
-chapter), <public_dir>/news/<N>/voice/lines.json (measured line lengths) and the prepared pictures in
-<public_dir>/news/<N>/img/. Writes <out_dir>/plan.json, subtitles.srt, credits.txt and <public_dir>/news/<N>/bed.wav.
+Reads <job_dir>/script.json (lines, chapters, head, quotes, ambience, music), <job_dir>/picks.json (pictures per
+chapter, cover), <public_dir>/news/<N>/voice/lines.json (measured line lengths), the prepared pictures in
+<public_dir>/news/<N>/img/ and the channel name in prompts/news_style.json. Writes <out_dir>/plan.json,
+subtitles.srt, credits.txt and <public_dir>/news/<N>/bed.wav.
 Timing: every line starts after the previous one plus a pause (0.45 s after a sentence end, 0.25 s otherwise);
 each chapter opens with a short breath; a picture that starts on a line ("at") cuts in just before it is spoken.
 Credits: a search result is listed from its round's index.json (title, author, date, licence, File: page); any other
@@ -21,13 +22,15 @@ base = f'news/{N}'
 spec = json.load(open(f'{job}/script.json', encoding='utf-8'))
 picks = json.load(open(f'{job}/picks.json', encoding='utf-8'))
 lines = json.load(open(f'{pub}/{base}/voice/lines.json', encoding='utf-8'))
+style_p = os.path.join(HERE, '..', '..', 'prompts', 'news_style.json')
+style = json.load(open(style_p, encoding='utf-8')) if os.path.exists(style_p) else {}
 dur = {r['i']: r['duration'] for r in lines}
 text = {r['i']: r['text'] for r in lines}
 os.makedirs(out, exist_ok=True)
 
 # ---- subtitles: a spoken line becomes one cue of up to two rows, or several cues when it is too long.
 # Rows break between words, best after a comma, colon or dash, never leaving a short word alone.
-ROW = 28   # characters per row at full size (52 px, Source Sans 3 bold)
+ROW = 34   # characters per row at full size (47 px, Source Serif 4)
 END = ('.', '!', '?', '…', '“', '"', '«', '»')
 MIN_PIECE = 8   # no break that leaves a piece this short ("Die" alone before a long compound)
 def breaks(t):
@@ -48,6 +51,11 @@ def cues(t):
     k = min(cand, key=lambda b: abs(b[0] - len(t) / 2))[0]
     return cues(t[:k]) + cues(t[k + 1:])
 
+# a quote (a whole line in quotation marks, or listed in script.json "quotes") is shown in a white box
+OPEN, CLOSE = '„"«»‚\'', '“"»«‘\''
+quotes = {int(q) for q in spec.get('quotes', [])}
+is_quote = lambda i: i in quotes or (len(text[i].strip()) > 2 and text[i].strip()[0] in OPEN and text[i].strip()[-1] in CLOSE)
+
 # ---- timeline
 t = 0.0; chapters = []; subs = []; voice = []
 img = lambda name: f'{base}/img/{name}.jpg'
@@ -60,7 +68,7 @@ for ci, c in enumerate(spec['chapters']):
         done = 0
         for cu in parts:   # cues share the line's time in proportion to their length
             cs = x + dur[i] * done / n_all; done += len(' '.join(cu)) + 1; ce = x + dur[i] * done / n_all
-            subs.append({'s': round(cs, 3), 'e': round(ce - (0.12 if done < n_all else 0), 3), 'text': '\n'.join(cu), 'hl': spec.get('hl', {}).get(str(i), [])})
+            subs.append({'s': round(cs, 3), 'e': round(ce - (0.12 if done < n_all else 0), 3), 'text': '\n'.join(cu), **({'box': True} if is_quote(i) else {})})
         starts.append(x)
         x += dur[i] + (0.45 if text[i].rstrip().endswith(END) else 0.25)
     e = x + (2.6 if ci == len(spec['chapters']) - 1 else 0.7)
@@ -105,16 +113,35 @@ for ci, kind in enumerate(spec.get('ambience', [])):
 bed = 0.75 * music + 0.3 * amb; bed = bed / (np.abs(bed).max() or 1) * 0.8
 mg.write_wav(f'{pub}/{base}/bed.wav', bed)
 
-# ---- film grain frames (shared by all videos)
-for k in range(4):
-    gp = f'{pub}/news/grain_{k}.jpg'
-    if not os.path.exists(gp):
-        g = np.random.RandomState(k).normal(128, 40, (960, 540)).clip(0, 255).astype(np.uint8)
-        Image.fromarray(g).resize((1080, 1920), Image.BILINEAR).save(gp, quality=80)
-
-plan = {'duration': total, 'showChapters': spec.get('show_chapters', False),
+# ---- header (cover picture, headline, italic line, channel) and the opening strip of pictures
+def head_rows(title):
+    """The headline as written when it has its own row break, else in one row, or two rows broken at the space
+    that keeps the longer row shortest."""
+    if '\n' in title: return title.strip()
+    title = ' '.join(title.split())
+    if len(title) <= 20: return title
+    ks = [k for k, ch_ in enumerate(title) if ch_ == ' ']
+    if not ks: return title
+    k = min(ks, key=lambda k: max(k, len(title) - k - 1) - (2 if title[k - 1] in ':,–—' else 0))
+    return title[:k] + '\n' + title[k + 1:]
+order = []   # picture names in order of appearance, with the camera point of their first use
+for pc in picks['chapters']:
+    for p in pc['pics']:
+        if 'img' in p and p['img'] not in dict(order): order.append((p['img'], p['from']))
+def thumb(name, x=None, y=None):
+    cam = dict(order).get(name, {'x': .5, 'y': .4})
+    src = img(name); w, h = Image.open(f'{pub}/{src}').size
+    return {'src': src, 'w': w, 'h': h, 'x': x if x is not None else cam['x'], 'y': y if y is not None else cam['y']}
+cv = picks.get('cover') or ({'img': order[0][0]} if order else None)
+cover = thumb(cv['img'], cv.get('x'), cv.get('y')) if cv else None
+hd = spec.get('head', {})
+head = {'title': head_rows(hd.get('title') or spec.get('title', '')), 'sub': hd.get('sub', ''),
+        'channel': style.get('channel', ''), 'cover': cover}
+strip = [thumb(n) for n, _ in order if not cv or n != cv['img']][:10] or ([cover] if cover else [])
+plan = {'duration': total, 'showChapters': spec.get('show_chapters', False), 'head': head,
+        'intro': strip if spec.get('intro', True) and cover else [],
         'chapters': chapters, 'subs': subs, 'voice': voice, 'music': f'{base}/bed.wav', 'musicVolume': 0.3,
-        'fonts': [], 'grain': [f'news/grain_{k}.jpg' for k in range(4)]}
+        'fonts': []}
 json.dump(plan, open(f'{out}/plan.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 def ts(v):

@@ -5,6 +5,7 @@ import json, os, subprocess, sys, tempfile
 from PIL import Image, ImageDraw
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import ff
+PX, PY, PW, PH = 40, 520, 1000, 750   # NewsV's picture panel
 
 video, plan, picks, out = sys.argv[1:5]
 plan = json.load(open(plan, encoding='utf-8')); picks = json.load(open(picks, encoding='utf-8'))
@@ -15,8 +16,8 @@ def frame(t, path):
 tiles = []
 for ci, c in enumerate(plan['chapters']):
     for j, p in enumerate(c['pics']):
-        t = min(p['e'] - 0.3, max(p['s'] + 0.9, (p['s'] + p['e']) / 2))
-        im = frame(t, f'{tmp}/f.png').crop((0, 0, 1080, 1000)).resize((324, 300))
+        t = min(p['e'] - 0.3, max(p['s'] + 0.9, (p['s'] + p['e']) / 2, 3.8 if plan.get('intro') else 0))   # after the opening
+        im = frame(t, f'{tmp}/f.png').crop((PX, PY, PX + PW, PY + PH)).resize((324, 243))
         src = picks['chapters'][ci]['pics'][j]
         name = src.get('img') or 'pair'
         ImageDraw.Draw(im).rectangle((0, 0, 324, 22), fill=(0, 0, 0))
@@ -24,9 +25,9 @@ for ci, c in enumerate(plan['chapters']):
         tiles.append(im)
 cols = 6; rows = (len(tiles) + cols - 1) // cols
 full = [frame(plan['duration'] * f, f'{tmp}/g.png').resize((324, 576)) for f in (0.3, 0.75)]
-W = cols * 330; H = rows * 306 + 582
+W = cols * 330; H = rows * 249 + 582
 s = Image.new('RGB', (W, H), (12, 12, 14))
-for i, t in enumerate(tiles): s.paste(t, ((i % cols) * 330, (i // cols) * 306))
-for i, f in enumerate(full): s.paste(f, (i * 330, rows * 306))
+for i, t in enumerate(tiles): s.paste(t, ((i % cols) * 330, (i // cols) * 249))
+for i, f in enumerate(full): s.paste(f, (i * 330, rows * 249))
 s.save(out, quality=85)
 print(out, len(tiles), 'shots')
