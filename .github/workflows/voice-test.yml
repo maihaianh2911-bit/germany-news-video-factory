@@ -8,7 +8,7 @@ on:
         default: "Guten Abend. Der Bundestag hat heute ein neues Gesetz beschlossen. Was ändert sich jetzt für Sie?"
         required: true
       voice:
-        description: voice_id (để trống = dùng secret VN11_VOICE_ID)
+        description: voice_id (để trống = giọng mặc định của kênh, ghi trong prompts/news_voice.json)
         default: ""
         required: false
 
@@ -31,9 +31,15 @@ jobs:
           python3 scripts/vn11.py voices --language German --out voices.md
           cat voices.md | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Tạo giọng thử
+        env:   # through the environment, never pasted into the script: quotes, $ or ` in the text stay text
+          TEXT: ${{ inputs.text }}
+          VOICE: ${{ inputs.voice }}
         run: |
-          printf '%s' "${{ inputs.text }}" > /tmp/text.txt
-          python3 scripts/vn11.py tts --text-file /tmp/text.txt --out out --voice "${{ inputs.voice }}"
+          printf '%s' "$TEXT" > /tmp/text.txt
+          # empty = the channel voice (prompts/news_voice.json "default"), the one the videos use
+          [ -n "$VOICE" ] || VOICE=$(python3 -c "import json; print(json.load(open('prompts/news_voice.json', encoding='utf-8')).get('default') or '')")
+          echo "voice: ${VOICE:-(11labs default)}"
+          python3 scripts/vn11.py tts --text-file /tmp/text.txt --out out --voice "$VOICE"
           U=$(cat out/usage.json | tr -d '\n')
           echo "::notice title=voice usage::$U"
           echo "### Kết quả" >> "$GITHUB_STEP_SUMMARY"; echo '```' >> "$GITHUB_STEP_SUMMARY"; cat out/usage.json >> "$GITHUB_STEP_SUMMARY"; echo '```' >> "$GITHUB_STEP_SUMMARY"

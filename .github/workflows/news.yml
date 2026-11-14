@@ -23,9 +23,8 @@ on:
         description: 'Bước: prepare (giọng + ảnh), search (tìm thêm ảnh), render (dựng) — cách nhau bằng dấu cách'
         default: render
 
-permissions:
-  contents: write
-  issues: write
+# each job asks for what it needs: only the work job writes to the repo (renders branch)
+permissions: {}
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -38,17 +37,26 @@ jobs:
       && (startsWith(github.event.issue.title, '[Văn học]') || startsWith(github.event.issue.title, '[Tin tức]'))
       && contains(fromJson('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: read, issues: write }
     steps:
       - uses: actions/checkout@v4
         with: { persist-credentials: false, sparse-checkout: scripts }
       - name: Nhận phiếu
         env: { GH_TOKEN: '${{ github.token }}', GH_REPO: '${{ github.repository }}', N: '${{ github.event.issue.number }}' }
+        run: gh issue edit "$N" --add-label news,news-plan
+      # the comment is written by the wake script: it says what Claude does next only when Claude was really called
+      - name: Gọi Claude và báo lên phiếu
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          N: ${{ github.event.issue.number }}
+          CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
+          CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
         run: |
-          gh issue edit "$N" --add-label news,news-plan
-          gh issue comment "$N" --body "🤖 Đã nhận phiếu. Claude viết kịch bản tiếng Đức theo kiểu video mẫu (hoặc chia câu kịch bản của bạn, dịch nếu cần) và chọn từ khóa tìm ảnh, máy tạo giọng đọc và tìm ảnh, Claude chọn ảnh, máy dựng video, Claude kiểm tra lại từng cảnh. Mỗi bước xong sẽ báo ở đây."
-      - name: Gọi Claude
-        env: { CLAUDE_TASK_URL: '${{ secrets.CLAUDE_TASK_URL }}', CLAUDE_TASK_TOKEN: '${{ secrets.CLAUDE_TASK_TOKEN }}' }
-        run: bash scripts/wake_claude.sh "Phiếu văn học Đức mới số ${{ github.event.issue.number }}."
+          bash scripts/wake_claude.sh "Phiếu văn học Đức mới số $N." --issue "$N" \
+            --say "🤖 Đã nhận phiếu." \
+            --then "Claude viết kịch bản tiếng Đức theo kiểu video mẫu (hoặc chia câu kịch bản của bạn, dịch nếu cần) và chọn từ khóa tìm ảnh, máy tạo giọng đọc và tìm ảnh, Claude chọn ảnh, máy dựng video, Claude kiểm tra lại từng cảnh. Mỗi bước xong sẽ báo ở đây."
 
   # 2) The owner comments on an issue of this channel → Claude reads it and fixes
   fix:
@@ -59,29 +67,37 @@ jobs:
       && contains(fromJson('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
       && !startsWith(github.event.comment.body, '🤖')
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: read, issues: write }
     steps:
       - uses: actions/checkout@v4
         with: { persist-credentials: false, sparse-checkout: scripts }
       - name: Nhận yêu cầu sửa
         env: { GH_TOKEN: '${{ github.token }}', GH_REPO: '${{ github.repository }}', N: '${{ github.event.issue.number }}' }
+        run: gh issue edit "$N" --add-label news-fix --remove-label news-done || true
+      - name: Gọi Claude và báo lên phiếu
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          N: ${{ github.event.issue.number }}
+          CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
+          CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
         run: |
-          gh issue edit "$N" --add-label news-fix --remove-label news-done || true
-          gh issue comment "$N" --body "🤖 Đã nhận yêu cầu. Claude sẽ sửa và máy dựng lại."
-      - name: Gọi Claude
-        env: { CLAUDE_TASK_URL: '${{ secrets.CLAUDE_TASK_URL }}', CLAUDE_TASK_TOKEN: '${{ secrets.CLAUDE_TASK_TOKEN }}' }
-        run: bash scripts/wake_claude.sh "Chủ kênh yêu cầu sửa phiếu văn học Đức số ${{ github.event.issue.number }}."
+          bash scripts/wake_claude.sh "Chủ kênh yêu cầu sửa phiếu văn học Đức số $N." --issue "$N" \
+            --say "🤖 Đã nhận yêu cầu." --then "Claude sẽ sửa và máy dựng lại."
 
   # 3) Claude pushed news/<N>/… (or a manual run) → voice + pictures, or the video
   work:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
-    timeout-minutes: 150   # no concurrency group: a pending run would be dropped when a third push arrives
+    # No concurrency group, on purpose: GitHub keeps only ONE waiting run per group, so a third push while one run
+    # works would silently drop the second (its issue would wait forever). A group per issue is not possible
+    # either: which issues a push touches is only known inside the job.
+    timeout-minutes: 150
+    permissions: { contents: write, issues: write }
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
-      VN11_API_KEY: ${{ secrets.VN11_API_KEY }}
-      CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
-      CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
       FONTSOURCE: /tmp/fontsource
       PYTHONUNBUFFERED: '1'
       BEFORE: ${{ github.event.before }}
@@ -96,10 +112,11 @@ jobs:
             S=""; for s in $IN_STEPS; do case "$s" in prepare|search|render) S="$S $s";; esac; done
             echo "$IN_ISSUE$S" > /tmp/todo.txt
           else
-            # files changed by this push (only the last commit's when the old head cannot be fetched); NUL-separated
-            # and unquoted, so names with spaces or accents survive
-            { git fetch -q --depth 1 origin "$BEFORE" 2>/dev/null && git -c core.quotePath=false diff -z --name-only "$BEFORE" HEAD -- news/ > /tmp/files.txt; } \
-              || git -c core.quotePath=false show -z --name-only --format= HEAD -- news/ > /tmp/files.txt
+            # files added or changed by this push (only the last commit's when the old head cannot be fetched);
+            # NUL-separated and unquoted, so names with spaces or accents survive. Deleted files are left out
+            # (--diff-filter=d): tidying old news/<N>/ folders must not start a render that can only fail.
+            { git fetch -q --depth 1 origin "$BEFORE" 2>/dev/null && git -c core.quotePath=false diff -z --name-only --diff-filter=d "$BEFORE" HEAD -- news/ > /tmp/files.txt; } \
+              || git -c core.quotePath=false show -z --name-only --diff-filter=d --format= HEAD -- news/ > /tmp/files.txt
             python3 -c '
           import re, sys, collections
           todo = collections.OrderedDict()
@@ -125,17 +142,25 @@ jobs:
           bash scripts/news/get_fonts.sh "$FONTSOURCE"
       - name: Chạy
         if: env.TODO == '1'
+        env:   # the secrets are given to the steps that use them, not to the install step
+          VN11_API_KEY: ${{ secrets.VN11_API_KEY }}
+          CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
+          CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
         run: |
           FAIL=0
           : > /tmp/handled.txt
           while read -r N STEPS; do
             echo "::group::phiếu #$N: $STEPS"
+            rm -f "/tmp/news-fail-$N.txt"
             # < /dev/null: nothing inside run.py may read the rest of the to-do list from the loop's stdin
             if ! python3 scripts/news/run.py "$N" $STEPS < /dev/null; then
               FAIL=1
               gh issue edit "$N" --add-label news-failed --remove-label news-voice --remove-label news-render < /dev/null || true
-              gh issue comment "$N" --body "🤖 Máy gặp lỗi ở bước \`$STEPS\` — xem nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID . Claude sẽ xem và sửa." < /dev/null || true
-              bash scripts/wake_claude.sh "Phiếu tin tức (Đức) số $N bị lỗi ở bước $STEPS." < /dev/null || true
+              # run.py leaves the reason here when it stopped on purpose (pictures or voice gone, renders unreachable)
+              WHY=$(cat "/tmp/news-fail-$N.txt" 2>/dev/null || true)
+              bash scripts/wake_claude.sh "Phiếu văn học Đức số $N bị lỗi ở bước $STEPS." --issue "$N" \
+                --say "🤖 Máy gặp lỗi ở bước \`$STEPS\`.${WHY:+ Lý do: $WHY} Nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID ." \
+                --then "Claude sẽ xem và sửa." < /dev/null || true
             fi
             echo "$N" >> /tmp/handled.txt
             echo "::endgroup::"
@@ -145,6 +170,9 @@ jobs:
       # would keep news-voice/news-render forever, so they are marked failed here.
       - name: Báo lỗi cho phiếu chưa chạy
         if: (failure() || cancelled()) && env.TODO == '1'
+        env:
+          CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
+          CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
         run: |
           touch /tmp/handled.txt
           while read -r N STEPS; do
@@ -152,7 +180,8 @@ jobs:
             grep -qx "$N" /tmp/handled.txt && continue
             gh issue edit "$N" --add-label news-failed < /dev/null || true
             gh issue edit "$N" --remove-label news-voice --remove-label news-render < /dev/null || true
-            gh issue comment "$N" --body "🤖 Máy dừng giữa chừng trước khi làm xong bước \`$STEPS\` (lỗi cài đặt, quá giờ hoặc bị hủy) — xem nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID . Claude sẽ xem và chạy lại." < /dev/null || true
-            bash scripts/wake_claude.sh "Phiếu tin tức (Đức) số $N: máy dừng giữa chừng ở bước $STEPS." < /dev/null || true
+            bash scripts/wake_claude.sh "Phiếu văn học Đức số $N: máy dừng giữa chừng ở bước $STEPS." --issue "$N" \
+              --say "🤖 Máy dừng giữa chừng trước khi làm xong bước \`$STEPS\` (lỗi cài đặt, quá giờ hoặc bị hủy) — xem nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID ." \
+              --then "Claude sẽ xem và chạy lại." < /dev/null || true
           done < /tmp/todo.txt
           true
