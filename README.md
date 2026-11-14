@@ -26,7 +26,7 @@ Chỉ phiếu do chủ repo hoặc cộng tác viên mở mới chạy.
 
 ## File kết quả
 
-Nhánh **`renders`**, thư mục `news/<số phiếu>/`: `video.mp4`, `subtitles.srt`, `credits.txt` (nguồn ảnh), `sheet.jpg` (ảnh các cảnh). Video của phiếu không hoạt động quá 14 ngày sẽ được dọn tự động, nên hãy tải về sớm.
+Nhánh **`renders`**, thư mục `news/<số phiếu>/`: `video.mp4`, `subtitles.srt`, `credits.txt` (nguồn ảnh), `sheet.jpg` (ảnh các cảnh). Video của phiếu không hoạt động quá 14 ngày sẽ được dọn tự động, nên hãy tải về sớm (bình luận giao video ghi ngày hết hạn).
 
 ## Cấu hình
 
@@ -34,6 +34,7 @@ Nhánh **`renders`**, thư mục `news/<số phiếu>/`: `video.mp4`, `subtitles
   - Dùng chung tác vụ Claude của repo `japan-video-factory`: chép **cùng giá trị** như ở repo đó. Lời nhắn của tác vụ đó phải là "Làm theo AGENT_NIGHTLY.md …" (kiểm tra mọi kênh), **không** phải "Làm việc đang chờ trong repo này" (lời đó chỉ làm kênh văn học, bỏ qua tin tức Đức).
   - Hoặc một tác vụ riêng cho repo này (lời nhắn "Làm theo AGENT_NIGHTLY.md của repo maihaianh2911-bit/germany-news-video-factory."): chép URL và token của tác vụ riêng đó.
   Sau khi thêm, bấm **Gọi Claude ngay** một lần: nhật ký cho biết hai secret có chạy không.
+  Khi máy không gọi được Claude (thiếu secret, Claude hết hạn mức), bình luận trên phiếu ghi **⚠️ Chưa gọi được Claude** kèm link nút này: bấm **Run workflow** là Claude làm tiếp.
 - **Giọng đọc tiếng Đức:** ghi mã giọng vào `prompts/news_voice.json`. Xem danh sách và nghe thử bằng workflow **Thử voice 11labs**.
 - Mỗi video tốn khoảng 20–45 phút máy GitHub (video 1,5 phút ~20 phút, video 3 phút ~40 phút).
 

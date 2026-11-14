@@ -28,6 +28,9 @@ adds a line such as "Phiếu tin tức (Đức) số 3: giọng và ảnh đã s
    session. While a machine step runs, say so in one line and wait; if the owner does not want to wait, stop after
    any step: the Claude task "japan-video-factory" (shared with the Japanese repo, see HANDOVER, or this repo's own
    task when each repo has its own seat) continues from the labels when GitHub calls it (no hourly run; needs the two secrets).
+   Remove `news-busy` whenever you stop: while it is fresh (< 2 hours) the machine does not call the task for that
+   issue. A machine comment ending with `⚠️ Chưa gọi được Claude …` means nobody was called: go on in the chat, or
+   the owner presses "Gọi Claude ngay".
 3. Give the owner the links to the video, the subtitles and the picture credits.
 
 The script is the owner's: translate and split it, never edit its content. Look at the pictures yourself,
@@ -35,5 +38,9 @@ preview before rendering.
 
 ## Changing the pipeline
 Before pushing to `main`: `python3 tests/news_units.py`, `python3 tests/news_smoke.py --still`,
-`python3 -m compileall -q scripts tests`, `npm run check`. Never touch secrets. Comments posted on GitHub start with 🤖 (they come from the owner's account).
+`python3 -m compileall -q scripts tests`, `npm run check`. They need
+`pip install numpy scipy pillow num2words==0.5.14` (when `num2words` cannot build its `docopt` dependency:
+`pip install docopt-ng && pip install --no-deps num2words==0.5.14`), `ffmpeg` (or `pip install imageio-ffmpeg==0.8.1`)
+and `npm ci`; the first `--still` downloads Chrome Headless Shell (~110 MB). `check.yml` runs the same on GitHub,
+plus `news_smoke.py --chapters`. Never touch secrets. Comments posted on GitHub start with 🤖 (they come from the owner's account).
 No pull requests unless asked.

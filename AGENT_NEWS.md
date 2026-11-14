@@ -4,7 +4,8 @@ The owner (Vietnamese, not technical) writes the script and sends it in a chat (
 The result is a vertical short (1080×1920) in German: real, free-to-use pictures with slow camera moves on top,
 subtitles timed to a German voice below (`src/news/NewsV.tsx`). **You** choose and check every picture by looking
 at it. Machine steps run in `.github/workflows/news.yml` → `scripts/news/run.py`; files land on the `renders`
-branch in `news/<N>/` (`voice/`, `img/<round>/`, `video.mp4`, `sheet.jpg`, `subtitles.srt`, `credits.txt`).
+branch in `news/<N>/` (`voice/`, `img/<round>/`, `video.mp4`, `sheet.jpg`, `subtitles.srt`, `credits.txt`;
+`voice-partial/` = the finished lines of a voice step that failed halfway, reused by the next run).
 
 Steps (labels): `news-plan` → you write `news/<N>/script.json` → `news-voice` (machine: voice, voice check,
 picture search) → `news-pick` → you write `news/<N>/picks.json` → `news-render` (machine) → `news-check` → you
@@ -16,6 +17,12 @@ check the shot sheet → `news-done`. `news-fix`: the owner commented. `news-fai
 - **Claim** one issue at a time: skip it when `news-busy` was added less than 2 hours ago (issue events); else add
   `news-busy`, do **one step**, remove `news-busy`. In a chat, add `news-busy` right after you create the issue:
   opening it also wakes the Claude task, which must find the issue taken. Do not push `picks.json` while the issue is `news-voice`.
+  **Always remove `news-busy` when you stop** (also in a chat that ends early): while the label is fresh (< 2 hours)
+  the machine does not call the Claude task for that issue, so an issue left busy waits until someone presses
+  "Gọi Claude ngay" or opens a chat.
+- Machine comments end with what Claude does next. When the call to the Claude task failed (missing secrets, usage
+  limit) they end with `⚠️ Chưa gọi được Claude …` and the link to "Gọi Claude ngay" instead: the owner then knows
+  the issue is waiting. In a chat, tell the owner in one line when you see that note.
 - Files of an issue: `mkdir -p /tmp/r && git fetch -q --depth 1 origin +refs/heads/renders:refs/remotes/origin/renders
   && git archive origin/renders news/<N> | tar -x -C /tmp/r` (the `+refs/…` form also updates a copy fetched earlier).
 - Usage: open only the pictures you need; check framing with the preview (§2.6), not with local renders.
@@ -69,11 +76,15 @@ Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice and pictures
 ~22 min for 46 lines; you are woken at `news-pick`.)
 
 ## 2. `news-pick` → `news/<N>/picks.json`
+Read the owner's comments written after your last `🤖` comment first: an extra search pushed during a fix also ends
+here (the machine then leaves `news-pick` as the only step label), and the request still applies.
 1. `voice/check.md` lists lines where Whisper heard different words. Decide for each: a real misreading (a wrong
    number, an abbreviation read as a word, a mangled name) or a Whisper mishearing (names, foreign words,
    compounds written apart). Numbers, `%`, `€` and `§` are written out on both sides before comparing, so
    `3,5`→`drei fünf` is listed (a real misreading) while `3,5` heard as `drei Komma fünf` is not. Real ones: the spoken form in `script.json` `tts` (only changed lines are read again)
-   and the word in `prompts/news_readings.json` for later videos.
+   and the word in `prompts/news_readings.json` for later videos. When `check.md` says `CHƯA KIỂM TRA ĐƯỢC` (the
+   Whisper step failed; the voice is kept), run the `prepare` step once more (§4; finished lines are reused, no
+   characters are spent) or, when it fails again, say in your closing comment that the reading was not checked.
 2. Open every `img/<r>/sheet_<k>.jpg` (tiles: `#n 1280x1897 CC BY-SA 4.0` = number, size, licence;
    `img/<r>/index.json` has titles, authors, dates, descriptions). Files under 400 px (250 px for `incategory:`
    searches) and duplicates are already removed. A query whose search failed has an `"error"` in `index.json` and
@@ -155,7 +166,8 @@ count) — and "bình luận nếu muốn sửa".
 
 ## 4. `news-fix` and `news-failed`
 - `news-fix`: the request = owner comments after your last `🤖` comment. Text → `script.json` (changed lines are
-  read again, the rest reused); pictures → `picks.json` (+ `search-<r>.json`). Push, one-line 🤖 comment, remove
+  read again, the rest reused); pictures → `picks.json` (+ `search-<r>.json`; after a search round the issue is
+  `news-pick` and you go on in §2). Push, one-line 🤖 comment, remove
   `news-fix`.
 - **A fix after the cleanup** (the issue was quiet for more than 14 days, `news/<N>/` is gone from `renders`): the
   voice and every search round must be made again, and the new search may number the pictures differently. The
@@ -170,4 +182,7 @@ count) — and "bình luận nếu muốn sửa".
   (`steps`: `prepare`, `search` or `render`, several separated by spaces), remove `news-failed`. When the fix is a
   push under `news/<N>/` (script.json, picks.json, search-<r>.json, own/), that push already starts the run: do not
   dispatch it by hand as well. A missing German voice (`prompts/news_voice.json` empty) or a missing secret is the
-  owner's to fix: say so in one plain 🤖 comment and leave the label.
+  owner's to fix: say so in one plain 🤖 comment and leave the label. When the machine stopped on purpose, the
+  issue comment gives the reason (`Lý do: …`). A voice step that failed on one line keeps the finished lines
+  (`voice-partial/`): running `prepare` again reads only the missing ones. The comment after the voice step shows
+  the 11labs balance; under 20,000 characters it warns the owner to top up.
