@@ -44,10 +44,6 @@ def labels(add=(), remove=()):
         if l not in add: gh('issue', 'edit', N, '--remove-label', l, tries=2)
 
 
-def comment(body):
-    gh('issue', 'comment', N, '--body', body)
-
-
 def fetch_renders():
     """Current renders/news/<N>/ → WORK (empty when nothing was published yet)."""
     os.makedirs(WORK, exist_ok=True)
@@ -194,8 +190,11 @@ def render():
     return plan['duration']
 
 
-def wake(why):
-    subprocess.run(['bash', os.path.join(ROOT, 'scripts', 'wake_claude.sh'), why])
+def wake(why, say='', then='', tail=''):
+    """Call the Claude task and post the step's comment on the issue: `say` (what the machine did) + `then` (what
+    Claude does next), or, when Claude could not be called, `say` + which button to press (scripts/news/wake.py)."""
+    subprocess.run(['bash', os.path.join(ROOT, 'scripts', 'wake_claude.sh'), why, '--issue', N,
+                    '--say', say, '--then', then, '--tail', tail])
 
 
 if __name__ == '__main__':
@@ -211,12 +210,13 @@ if __name__ == '__main__':
             # changed round-1 queries renumber the pictures: existing picks would now point at other pictures
             if 'render' in steps: steps.remove('render')
             labels(add=['news-pick'], remove=['news-voice'])
-            comment(f'🤖 Giọng đọc xong: {len(rows)} câu, {speech:.0f} giây lời đọc'
-                    f'{f" ({flagged} câu cần Claude nghe lại cách đọc)" if flagged else ""}. '
-                    + ('Từ khóa tìm ảnh đã đổi nên ảnh đợt 1 là ảnh mới: Claude phải chọn lại ảnh trước khi dựng video.'
-                       if requeried else 'Ảnh đã tìm xong. Claude sẽ chọn ảnh cho từng ý.'))
             wake(f'Phiếu tin tức (Đức) số {N}: ' + ('từ khóa ảnh đợt 1 đã đổi, phải chọn lại ảnh.' if requeried
-                                                     else 'giọng và ảnh đã sẵn sàng, chờ chọn ảnh.'))
+                                                     else 'giọng và ảnh đã sẵn sàng, chờ chọn ảnh.'),
+                 say=f'🤖 Giọng đọc xong: {len(rows)} câu, {speech:.0f} giây lời đọc'
+                     f'{f" ({flagged} câu cần nghe lại cách đọc)" if flagged else ""}. '
+                     + ('Từ khóa tìm ảnh đã đổi nên ảnh đợt 1 là ảnh mới: phải chọn lại ảnh trước khi dựng video.'
+                        if requeried else 'Ảnh đã tìm xong.'),
+                 then='Claude sẽ chọn lại ảnh.' if requeried else 'Claude sẽ chọn ảnh cho từng ý.')
             woke = True
         elif 'render' not in steps:
             steps.append('render')
@@ -226,14 +226,15 @@ if __name__ == '__main__':
             labels(add=['news-pick'], remove=['news-voice'])
             if rounds and not woke:
                 # Claude may have stopped polling for the new round: call it so the issue does not wait at news-pick
-                comment(f'🤖 Đã tìm thêm ảnh (đợt {", ".join(rounds)}). Claude sẽ chọn ảnh cho từng ý.')
-                wake(f'Phiếu tin tức (Đức) số {N}: đã tìm thêm ảnh (đợt {", ".join(rounds)}), chờ chọn ảnh.')
+                wake(f'Phiếu tin tức (Đức) số {N}: đã tìm thêm ảnh (đợt {", ".join(rounds)}), chờ chọn ảnh.',
+                     say=f'🤖 Đã tìm thêm ảnh (đợt {", ".join(rounds)}).', then='Claude sẽ chọn ảnh cho từng ý.')
     if 'render' in steps:
         if not os.path.exists(os.path.join(WORK, 'voice', 'lines.json')):
             raise SystemExit('chưa có giọng đọc cho phiếu này (cần script.json)')
         length = render()
         labels(add=['news-check'], remove=['news-render', 'news-voice'])
         m, s = divmod(round(length), 60)
-        comment(f'🤖 Đã dựng xong bản video ({m} phút {s:02d} giây). Claude đang kiểm tra lại từng cảnh trước khi giao.\n\n'
-                f'- Video: {link("video.mp4")}\n- Ảnh các cảnh: {link("sheet.jpg")}')
-        wake(f'Phiếu tin tức (Đức) số {N}: video đã dựng, chờ kiểm tra.')
+        wake(f'Phiếu tin tức (Đức) số {N}: video đã dựng, chờ kiểm tra.',
+             say=f'🤖 Đã dựng xong bản video ({m} phút {s:02d} giây).',
+             then='Claude sẽ kiểm tra lại từng cảnh trước khi giao.',
+             tail=f'- Video: {link("video.mp4")}\n- Ảnh các cảnh: {link("sheet.jpg")}')
