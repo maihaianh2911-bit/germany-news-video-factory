@@ -61,4 +61,70 @@ seen, post = fake([429, 502, 504]); assert wake.call('x', post=post, sleep=lambd
 seen, post = fake([401, 200]); assert wake.call('x', post=post, sleep=lambda s: None) == wake.NO_ANSWER and len(seen) == 1
 quiet.__exit__(None, None, None)
 os.environ.clear(); os.environ.update(env)
+
+# --- paid voice is never lost (scripts/vn11.py, scripts/news/tts_lines.py) ---
+import argparse, json, shutil, tempfile, urllib.error
+import tts_lines, vn11
+tmp = tempfile.mkdtemp(prefix='news-units-')
+quiet = contextlib.redirect_stdout(io.StringIO()); quiet.__enter__()
+real = (vn11.req, vn11.download, vn11.time.sleep, tts_lines.ff.run, tts_lines.ff.duration, vn11.cmd_tts)
+try:
+    # one job: balance unreadable (before: network error, after: 500), 429 on create, 502 and a timeout while polling
+    calls = []
+    answers = {'POST': [(429, {}), (200, {'job_id': 'j1'})],
+               'status': [(502, {}), TimeoutError(), (200, {'status': 'processing'}), (200, {'status': 'completed', 'download_url': 'u'})],
+               'user': [urllib.error.URLError('down'), (500, {'error': 'x'})]}
+    def req(method, path, **k):
+        key = 'POST' if method == 'POST' else 'status' if path.startswith('status') else 'user'
+        calls.append(key); r = answers[key].pop(0)
+        if isinstance(r, Exception): raise r
+        return r
+    vn11.req = req; vn11.time.sleep = lambda s: None
+    vn11.download = lambda url, dest, tries=4: open(dest, 'wb').write(b'mp3') or 3
+    open(os.path.join(tmp, 't.txt'), 'w', encoding='utf-8').write('Guten Abend.')
+    u = vn11.cmd_tts(argparse.Namespace(text_file=os.path.join(tmp, 't.txt'), out=os.path.join(tmp, 'job'), voice='clone_1', speed=1.0, timeout=60))
+    assert u['job_id'] == 'j1' and u['remaining_quota'] is None and u['quota_used_this_job'] is None, u
+    assert calls.count('POST') == 2 and calls.count('status') == 4 and not any(answers.values()), calls
+    # a 502 on create is not sent again (the job may exist and be billed): the line fails
+    answers['POST'] = [(502, {'error': 'bad gateway'}), (200, {'job_id': 'j2'})]; answers['user'] = [(200, {'remaining_quota': 9})]
+    try: vn11.cmd_tts(argparse.Namespace(text_file=os.path.join(tmp, 't.txt'), out=os.path.join(tmp, 'job'), voice='clone_1', speed=1.0, timeout=60)); raise AssertionError('502 on create accepted')
+    except SystemExit: pass
+    assert len(answers['POST']) == 1
+
+    # a line that fails keeps the finished lines; the next run reads only what is missing
+    script = os.path.join(tmp, 'script.json')
+    json.dump({'voice': 'clone_1', 'lines': ['Eins.', 'Zwei.', 'Drei.', 'Vier.']}, open(script, 'w'))
+    read, fail_at = [], {'Drei.'}
+    def cmd_tts(a):
+        t = open(a.text_file, encoding='utf-8').read()
+        if t in fail_at: vn11.die('11labs job failed')
+        read.append(t); open(os.path.join(a.out, 'voice.mp3'), 'wb').write(t.encode())
+        return {'remaining_quota': 1000 - len(read)}
+    vn11.cmd_tts = cmd_tts
+    tts_lines.ff.run = lambda *a: shutil.copy(a[1], a[-1]); tts_lines.ff.duration = lambda p: 1.0
+    d1, d2, d3 = (os.path.join(tmp, x) for x in ('run1', 'run2', 'run3'))
+    try: tts_lines.main([script, d1, '--prev', os.path.join(tmp, 'none')]); raise AssertionError('failed line not reported')
+    except SystemExit: pass
+    rows = json.load(open(os.path.join(d1, 'lines.json'), encoding='utf-8'))
+    assert [r['text'] for r in rows] == ['Eins.', 'Zwei.'] and sorted(os.listdir(d1)) == ['line_01.mp3', 'line_02.mp3', 'lines.json', 'quota.json'], os.listdir(d1)
+    read.clear(); fail_at.clear()
+    tts_lines.main([script, d2, '--prev', os.path.join(tmp, 'none'), '--prev', d1])        # voice/ missing, voice-partial/ = d1
+    rows = json.load(open(os.path.join(d2, 'lines.json'), encoding='utf-8'))
+    assert read == ['Drei.', 'Vier.'] and [r['file'] for r in rows] == [f'line_0{i}.mp3' for i in (1, 2, 3, 4)], read
+    assert open(os.path.join(d2, 'line_02.mp3'), 'rb').read() == b'Zwei.' and json.load(open(os.path.join(d2, 'quota.json'))) == {'remaining_quota': 998}
+    read.clear()
+    json.dump({'voice': 'clone_1', 'lines': ['Null.', 'Zwei.', 'Eins.']}, open(script, 'w'))   # reordered and changed: reuse by text
+    tts_lines.main([script, d3, '--prev', d2])
+    assert read == ['Null.'] and open(os.path.join(d3, 'line_03.mp3'), 'rb').read() == b'Eins.' and os.path.exists(os.path.join(d3, 'quota.json'))
+finally:
+    vn11.req, vn11.download, vn11.time.sleep, tts_lines.ff.run, tts_lines.ff.duration, vn11.cmd_tts = real
+    quiet.__exit__(None, None, None); shutil.rmtree(tmp, ignore_errors=True)
+
+# --- run.py helpers (imported with a made-up issue number; nothing runs at import) ---
+os.environ.setdefault('GITHUB_REPOSITORY', 'owner/repo'); os.environ.setdefault('GH_TOKEN', 'x')
+argv, sys.argv = sys.argv, ['run.py', '0']
+import run
+sys.argv = argv
+assert run.quota_text(139448) == 'Hạn mức giọng đọc còn khoảng 139.448 ký tự. '
+assert 'sắp hết' in run.quota_text(19999) and 'sắp hết' not in run.quota_text(20000)
 print('news unit checks OK')
