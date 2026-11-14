@@ -286,9 +286,11 @@ if __name__ == '__main__':
             steps.append('render')
     if 'search' in steps:
         rounds = search()
-        if 'render' not in steps:
-            labels(add=['news-pick'], remove=['news-voice'])
-            if rounds and not woke:
+        if 'render' not in steps and rounds:
+            # one step label only: new pictures wait for Claude's choice, whatever the issue was before (a search
+            # pushed during a fix or after the video was done used to leave news-pick next to news-done/news-fix)
+            labels(add=['news-pick'], remove=['news-voice', 'news-check', 'news-done', 'news-fix', 'news-failed'])
+            if not woke:
                 # Claude may have stopped polling for the new round: call it so the issue does not wait at news-pick
                 wake(f'Phiếu tin tức (Đức) số {N}: đã tìm thêm ảnh (đợt {", ".join(rounds)}), chờ chọn ảnh.',
                      say=f'🤖 Đã tìm thêm ảnh (đợt {", ".join(rounds)}).', then='Claude sẽ chọn ảnh cho từng ý.')

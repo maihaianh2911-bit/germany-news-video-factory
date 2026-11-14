@@ -22,9 +22,8 @@ on:
         description: 'Bước: prepare (giọng + ảnh), search (tìm thêm ảnh), render (dựng) — cách nhau bằng dấu cách'
         default: render
 
-permissions:
-  contents: write
-  issues: write
+# each job asks for what it needs: only the work job writes to the repo (renders branch)
+permissions: {}
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -36,6 +35,8 @@ jobs:
       github.event_name == 'issues' && startsWith(github.event.issue.title, '[Tin tức]')
       && contains(fromJson('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: read, issues: write }
     steps:
       - uses: actions/checkout@v4
         with: { persist-credentials: false, sparse-checkout: scripts }
@@ -64,6 +65,8 @@ jobs:
       && contains(fromJson('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
       && !startsWith(github.event.comment.body, '🤖')
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: read, issues: write }
     steps:
       - uses: actions/checkout@v4
         with: { persist-credentials: false, sparse-checkout: scripts }
@@ -85,13 +88,14 @@ jobs:
   work:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
-    timeout-minutes: 150   # no concurrency group: a pending run would be dropped when a third push arrives
+    # No concurrency group, on purpose: GitHub keeps only ONE waiting run per group, so a third push while one run
+    # works would silently drop the second (its issue would wait forever). A group per issue is not possible
+    # either: which issues a push touches is only known inside the job.
+    timeout-minutes: 150
+    permissions: { contents: write, issues: write }
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
-      VN11_API_KEY: ${{ secrets.VN11_API_KEY }}
-      CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
-      CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
       FONTSOURCE: /tmp/fontsource
       PYTHONUNBUFFERED: '1'
       BEFORE: ${{ github.event.before }}
@@ -136,6 +140,10 @@ jobs:
           bash scripts/news/get_fonts.sh "$FONTSOURCE"
       - name: Chạy
         if: env.TODO == '1'
+        env:   # the secrets are given to the steps that use them, not to the install step
+          VN11_API_KEY: ${{ secrets.VN11_API_KEY }}
+          CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
+          CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
         run: |
           FAIL=0
           : > /tmp/handled.txt
@@ -157,6 +165,9 @@ jobs:
       # would keep news-voice/news-render forever, so they are marked failed here.
       - name: Báo lỗi cho phiếu chưa chạy
         if: (failure() || cancelled()) && env.TODO == '1'
+        env:
+          CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
+          CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
         run: |
           touch /tmp/handled.txt
           while read -r N STEPS; do
