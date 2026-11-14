@@ -148,12 +148,21 @@ Open `sheet.jpg` (one tile per shot: chapter-shot, picture name, time; plus two 
 watermark), all fixes in one push. Otherwise remove `news-check`, add `news-done` and comment (🤖, short,
 Vietnamese): video link `https://github.com/maihaianh2911-bit/germany-news-video-factory/blob/renders/news/<N>/video.mp4`,
 its length, links to `subtitles.srt` and `credits.txt` (to paste into the video description), one line on the
-pictures used, "bình luận nếu muốn sửa".
+pictures used, the date until which the links work — `Tải video về máy trước ngày <dd/mm/yyyy>: sau ngày đó máy tự
+dọn video cũ và các link trên hết dùng được.` with the date = today + 14 days (`renders-cleanup.yml` removes
+`news/<N>/` from `renders` once the issue had no activity for 14 days; every comment on the issue restarts the
+count) — and "bình luận nếu muốn sửa".
 
 ## 4. `news-fix` and `news-failed`
 - `news-fix`: the request = owner comments after your last `🤖` comment. Text → `script.json` (changed lines are
   read again, the rest reused); pictures → `picks.json` (+ `search-<r>.json`). Push, one-line 🤖 comment, remove
   `news-fix`.
+- **A fix after the cleanup** (the issue was quiet for more than 14 days, `news/<N>/` is gone from `renders`): the
+  voice and every search round must be made again, and the new search may number the pictures differently. The
+  machine therefore never renders old picks against pictures it has just searched again: after such a `prepare`
+  or `search` it stops at `news-pick` and says so, and a render whose pictures or voice are missing fails with the
+  reason in the issue comment. Then: push `script.json` (or dispatch `prepare`) for the voice and round 1, dispatch
+  `search` for the rounds of the `search-<r>.json` files, look at the new sheets and write `picks.json` again.
 - `news-failed`: read the failed run's log (link in the issue; `gh api repos/…/actions/runs/<id>/jobs`, then
   `gh api repos/…/actions/jobs/<job>/logs`), fix the cause (your JSON, or `scripts/news/*` tested locally with
   `python3 tests/news_smoke.py`), re-run

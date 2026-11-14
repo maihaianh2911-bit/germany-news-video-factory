@@ -9,14 +9,16 @@
   render   pictures from picks.json, plan, fonts, Remotion render, loudness, shot sheet
            → renders/news/<N>/video.mp4, subtitles.srt, credits.txt, sheet.jpg
 After prepare/search the issue waits for Claude (news-pick, Claude is called) unless picks.json exists, then render
-runs too; not when prepare searched round 1 again with changed queries (the picks would point at other pictures).
+runs too; not when a search round the picks use was searched (again) in this run: with changed queries, or because
+the old results are gone from renders (cleaned after 14 days), the numbers may now name other pictures, so Claude
+must choose again. render refuses picks whose pictures are not on renders.
 A video over 95 MB is encoded again at a bitrate that lands ~90 MB (GitHub refuses files over 100 MB).
 Needs GH_TOKEN, GITHUB_REPOSITORY; prepare needs VN11_API_KEY.
 """
 import json, os, shutil, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
-import ff
+import ff, prep
 
 N, steps = sys.argv[1], sys.argv[2:]
 JOB = os.path.join(ROOT, 'news', N)
@@ -121,8 +123,8 @@ def link(p):
 
 
 def prepare():
-    """Voice, then picture search round 1. Returns (lines.json rows, True when round 1 was searched again with
-    changed queries, i.e. the pictures behind existing picks changed)."""
+    """Voice, then picture search round 1. Returns (lines.json rows, True when round 1 was searched in this run,
+    True when round 1 was on renders before)."""
     script = json.load(open(os.path.join(JOB, 'script.json'), encoding='utf-8'))
     labels(add=['news-voice'], remove=['news-plan', 'news-failed'])
     prev = os.path.join(WORK, 'voice')
@@ -151,15 +153,15 @@ def prepare():
     q = script.get('queries') or []
     old = os.path.join(WORK, 'img', '1', 'queries.json')
     had = os.path.exists(old)
-    requeried = False
+    searched = False
     if q and (not had or json.load(open(old, encoding='utf-8')) != q):
-        requeried = had
+        searched = True
         d = os.path.join(WORK, 'img', '1'); shutil.rmtree(d, ignore_errors=True)
         sh(sys.executable, os.path.join(ROOT, 'scripts', 'find_images.py'), d, *q)
         json.dump(q, open(os.path.join(d, 'queries.json'), 'w', encoding='utf-8'), ensure_ascii=False)
         publish(['img/1'], 'ảnh')
     rows = json.load(open(os.path.join(prev, 'lines.json'), encoding='utf-8'))
-    return rows, requeried
+    return rows, searched, had
 
 
 def keep_partial_voice(new, part):
@@ -194,6 +196,11 @@ def search():
     return [d[len('img/'):] for d in did]
 
 
+GONE = ('picks.json dùng {n} ảnh không có trên nhánh renders ({files}). Ảnh tìm trước đây đã được dọn (video cũ quá 14 '
+        'ngày) hoặc đợt tìm đó chưa chạy. Không dựng bằng ảnh đoán: chạy lại bước tìm ảnh (prepare cho đợt 1, search cho '
+        'các đợt sau) rồi CHỌN LẠI ảnh, vì số ảnh của lần tìm mới có thể khác lần trước.')
+NO_VOICE = ('chưa có giọng đọc của phiếu này trên nhánh renders (chưa tạo, hoặc đã được dọn vì video cũ quá 14 ngày). '
+            'Chạy bước prepare trước (đẩy lại script.json hoặc Run workflow với steps = prepare).')
 MAX_MB, TARGET_MB = 95, 90   # GitHub refuses files over 100 MB
 
 
@@ -211,6 +218,9 @@ def render():
     if os.path.isdir(os.path.join(JOB, 'own')):
         shutil.copytree(os.path.join(JOB, 'own'), os.path.join(imgsrc, 'own'), dirs_exist_ok=True)
     picks = os.path.join(JOB, 'picks.json')
+    gone = prep.missing_sources(json.load(open(picks, encoding='utf-8')), imgsrc)
+    if gone:
+        raise SystemExit(GONE.format(n=len(gone), files=', '.join(gone[:6]) + (' …' if len(gone) > 6 else '')))
     sh(sys.executable, os.path.join(HERE, 'prep.py'), picks, imgsrc, os.path.join(pub, 'img'))
     out = os.path.join(ROOT, 'out', f'render-{N}')
     sh(sys.executable, os.path.join(HERE, 'build.py'), JOB, PUB, N, imgsrc, out)
@@ -254,31 +264,39 @@ LOW_QUOTA = 20000   # characters; a 3-minute video uses about 3,000
 def wake(why, say='', then='', tail=''):
     """Call the Claude task and post the step's comment on the issue: `say` (what the machine did) + `then` (what
     Claude does next), or, when Claude could not be called, `say` + which button to press (scripts/news/wake.py)."""
-    subprocess.run(['bash', os.path.join(ROOT, 'scripts', 'wake_claude.sh'), why, '--issue', N,
-                    '--say', say, '--then', then, '--tail', tail])
+    subprocess.run(['bash', os.path.join(ROOT, 'scripts', 'wake_claude.sh'), why, f'--issue={N}',
+                    f'--say={say}', f'--then={then}', f'--tail={tail}'])
 
 
-if __name__ == '__main__':
+def stale_rounds(searched, used):
+    """Rounds searched in this run that the picks use, sorted: their numbers may now name other pictures."""
+    return sorted(set(searched) & set(used), key=lambda r: (len(r), r))
+
+
+def main():
     fetch_renders()
     woke = False   # Claude was already called for the news-pick wait (no second call for the same wait)
+    has_picks = os.path.exists(os.path.join(JOB, 'picks.json'))
+    used = prep.rounds_used(json.load(open(os.path.join(JOB, 'picks.json'), encoding='utf-8'))) if has_picks else set()
     if 'prepare' in steps:
-        rows, requeried = prepare()
+        rows, searched, had = prepare()
         flagged = sum(1 for r in rows if r.get('diff'))
         unchecked = not all('score' in r for r in rows)   # the Whisper check did not run (see check.md)
         quota = voice_quota()
         speech = sum(r['duration'] for r in rows)
-        has_picks = os.path.exists(os.path.join(JOB, 'picks.json'))
-        requeried = requeried and has_picks
+        # round 1 searched in this run: with changed queries, or because the old results were cleaned from renders.
+        # Either way existing picks of round 1 may now point at other pictures.
+        requeried = searched and has_picks and (had or '1' in used)
         if not has_picks or requeried:
-            # changed round-1 queries renumber the pictures: existing picks would now point at other pictures
             if 'render' in steps: steps.remove('render')
             labels(add=['news-pick'], remove=['news-voice'])
-            wake(f'Phiếu tin tức (Đức) số {N}: ' + ('từ khóa ảnh đợt 1 đã đổi, phải chọn lại ảnh.' if requeried
+            why = ('Từ khóa tìm ảnh đã đổi' if had else 'Ảnh tìm trước đây không còn (video cũ đã được dọn) nên máy đã tìm lại')
+            wake(f'Phiếu tin tức (Đức) số {N}: ' + ('ảnh đợt 1 đã được tìm lại, phải chọn lại ảnh.' if requeried
                                                      else 'giọng và ảnh đã sẵn sàng, chờ chọn ảnh.'),
                  say=f'🤖 Giọng đọc xong: {len(rows)} câu, {speech:.0f} giây lời đọc'
                      f'{f" ({flagged} câu cần nghe lại cách đọc)" if flagged else ""}'
                      f'{" (máy chưa nghe lại được để kiểm tra cách đọc)" if unchecked else ""}. {quota}'
-                     + ('Từ khóa tìm ảnh đã đổi nên ảnh đợt 1 là ảnh mới: phải chọn lại ảnh trước khi dựng video.'
+                     + (f'{why}: ảnh đợt 1 là ảnh mới, phải chọn lại ảnh trước khi dựng video.'
                         if requeried else 'Ảnh đã tìm xong.'),
                  then='Claude sẽ chọn lại ảnh.' if requeried else 'Claude sẽ chọn ảnh cho từng ý.')
             woke = True
@@ -286,6 +304,9 @@ if __name__ == '__main__':
             steps.append('render')
     if 'search' in steps:
         rounds = search()
+        stale = stale_rounds(rounds, used)
+        if stale and 'render' in steps:
+            steps.remove('render')   # never render old picks against pictures that were just searched again
         if 'render' not in steps and rounds:
             # one step label only: new pictures wait for Claude's choice, whatever the issue was before (a search
             # pushed during a fix or after the video was done used to leave news-pick next to news-done/news-fix)
@@ -293,10 +314,12 @@ if __name__ == '__main__':
             if not woke:
                 # Claude may have stopped polling for the new round: call it so the issue does not wait at news-pick
                 wake(f'Phiếu tin tức (Đức) số {N}: đã tìm thêm ảnh (đợt {", ".join(rounds)}), chờ chọn ảnh.',
-                     say=f'🤖 Đã tìm thêm ảnh (đợt {", ".join(rounds)}).', then='Claude sẽ chọn ảnh cho từng ý.')
+                     say=f'🤖 Đã tìm thêm ảnh (đợt {", ".join(rounds)}).'
+                         + (f' Ảnh đã chọn trước đây lấy từ đợt {", ".join(stale)} vừa được tìm lại, nên phải chọn lại ảnh trước khi dựng video.' if stale else ''),
+                     then='Claude sẽ chọn lại ảnh.' if stale else 'Claude sẽ chọn ảnh cho từng ý.')
     if 'render' in steps:
         if not os.path.exists(os.path.join(WORK, 'voice', 'lines.json')):
-            raise SystemExit('chưa có giọng đọc cho phiếu này (cần script.json)')
+            raise SystemExit(NO_VOICE)
         length = render()
         labels(add=['news-check'], remove=['news-render', 'news-voice'])
         m, s = divmod(round(length), 60)
@@ -304,3 +327,12 @@ if __name__ == '__main__':
              say=f'🤖 Đã dựng xong bản video ({m} phút {s:02d} giây).',
              then='Claude sẽ kiểm tra lại từng cảnh trước khi giao.',
              tail=f'- Video: {link("video.mp4")}\n- Ảnh các cảnh: {link("sheet.jpg")}')
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except SystemExit as e:   # a reason written for people: the workflow puts it in the issue comment
+        if isinstance(e.code, str):
+            open(f'/tmp/news-fail-{N}.txt', 'w', encoding='utf-8').write(e.code)
+        raise

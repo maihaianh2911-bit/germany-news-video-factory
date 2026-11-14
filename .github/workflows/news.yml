@@ -149,12 +149,15 @@ jobs:
           : > /tmp/handled.txt
           while read -r N STEPS; do
             echo "::group::phiếu #$N: $STEPS"
+            rm -f "/tmp/news-fail-$N.txt"
             # < /dev/null: nothing inside run.py may read the rest of the to-do list from the loop's stdin
             if ! python3 scripts/news/run.py "$N" $STEPS < /dev/null; then
               FAIL=1
               gh issue edit "$N" --add-label news-failed --remove-label news-voice --remove-label news-render < /dev/null || true
+              # run.py leaves the reason here when it stopped on purpose (pictures or voice gone, renders unreachable)
+              WHY=$(cat "/tmp/news-fail-$N.txt" 2>/dev/null || true)
               bash scripts/wake_claude.sh "Phiếu tin tức (Đức) số $N bị lỗi ở bước $STEPS." --issue "$N" \
-                --say "🤖 Máy gặp lỗi ở bước \`$STEPS\` — xem nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID ." \
+                --say "🤖 Máy gặp lỗi ở bước \`$STEPS\`.${WHY:+ Lý do: $WHY} Nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID ." \
                 --then "Claude sẽ xem và sửa." < /dev/null || true
             fi
             echo "$N" >> /tmp/handled.txt

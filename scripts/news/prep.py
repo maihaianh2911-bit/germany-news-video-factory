@@ -12,6 +12,16 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 
+def rounds_used(picks):
+    """Search rounds the chosen pictures come from: {"1", "2"} for "1/2-1.jpg" and "2/1-3.jpg" (not "own")."""
+    return {it['src'].split('/')[0] for it in picks.get('images', {}).values() if '/' in it.get('src', '')} - {'own'}
+
+
+def missing_sources(picks, root):
+    """Chosen pictures ("src") that are not under <root>, in picks order."""
+    return [it.get('src', '?') for it in picks.get('images', {}).values() if not os.path.isfile(os.path.join(root, it.get('src', '?')))]
+
+
 def prepare(it, root):
     """One picture of picks.json "images", cropped and graded (PIL image)."""
     im = Image.open(os.path.join(root, it['src'])).convert('RGB')

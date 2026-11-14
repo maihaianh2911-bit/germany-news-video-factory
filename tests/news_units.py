@@ -127,4 +127,15 @@ import run
 sys.argv = argv
 assert run.quota_text(139448) == 'Hạn mức giọng đọc còn khoảng 139.448 ký tự. '
 assert 'sắp hết' in run.quota_text(19999) and 'sắp hết' not in run.quota_text(20000)
+# picks whose pictures were searched again (changed queries, or old results cleaned from renders) are not rendered
+import prep
+picks = {'images': {'a': {'src': '1/2-1.jpg'}, 'b': {'src': '3/1-1.jpg'}, 'c': {'src': 'own/foto.jpg'}, 'd': {'src': '10/1-1.jpg'}}}
+assert prep.rounds_used(picks) == {'1', '3', '10'} and prep.rounds_used({'images': {'c': {'src': 'own/x.jpg'}}}) == set()
+assert run.stale_rounds(['10', '2', '3'], prep.rounds_used(picks)) == ['3', '10'] and run.stale_rounds(['2'], prep.rounds_used(picks)) == []
+tmp = tempfile.mkdtemp(prefix='news-units-')
+os.makedirs(os.path.join(tmp, '1')); os.makedirs(os.path.join(tmp, 'own'))
+for f in ('1/2-1.jpg', 'own/foto.jpg'): open(os.path.join(tmp, f), 'w').close()
+assert prep.missing_sources(picks, tmp) == ['3/1-1.jpg', '10/1-1.jpg']
+assert '2 ảnh' in run.GONE.format(n=2, files='3/1-1.jpg, 10/1-1.jpg') and 'CHỌN LẠI' in run.GONE
+shutil.rmtree(tmp, ignore_errors=True)
 print('news unit checks OK')
