@@ -4,7 +4,7 @@ import { NewsV, PlanV } from './NewsV';
 
 const FPS = 30;
 // The whole plan comes in as props (scripts/news/build.py), its length included.
-const EMPTY: PlanV = { duration: 1, chapters: [], subs: [], voice: [], music: null, musicVolume: 0.3, fonts: [] };
+const EMPTY: PlanV = { duration: 1, chapters: [], subs: [], voice: [], music: null, musicVolume: 0.3, fonts: [], grain: [] };
 
 export const NewsRoot: React.FC = () => (
   <Composition
