@@ -21,7 +21,7 @@ for ci, c in enumerate(plan['chapters']):
         ImageDraw.Draw(im).rectangle((0, 0, 216, 22), fill=(0, 0, 0))
         ImageDraw.Draw(im).text((6, 5), f"{ci + 1}-{j + 1} {name}  {p['s']:.0f}s", fill=(255, 210, 90))
         tiles.append(im)
-cols = 8; rows = (len(tiles) + cols - 1) // cols
+cols = min(8, len(tiles)); rows = (len(tiles) + cols - 1) // cols
 W = cols * 222; H = rows * 390
 s = Image.new('RGB', (W, H), (12, 12, 14))
 for i, t in enumerate(tiles): s.paste(t, ((i % cols) * 222, (i // cols) * 390))
