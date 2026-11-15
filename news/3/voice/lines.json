@@ -1,0 +1,92 @@
+[
+ {
+  "i": 1,
+  "text": "Johann Wolfgang von Goethe wurde mit 25 über Nacht berühmt –",
+  "tts": "Johann Wolfgang von Goethe wurde mit fünfundzwanzig über Nacht berühmt –",
+  "voice": "clone_611",
+  "file": "line_01.mp3",
+  "duration": 4.399,
+  "heard": "Johann Wolfgang von Goethe wurde mit 25 über Nacht berühmt.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 2,
+  "text": "mit einem Roman über einen jungen Mann, der an der Liebe zerbricht.",
+  "tts": "mit einem Roman über einen jungen Mann, der an der Liebe zerbricht.",
+  "voice": "clone_611",
+  "file": "line_02.mp3",
+  "duration": 4.07,
+  "heard": "mit einem Roman über einen jungen Mann, der an der Liebe zerbricht.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 3,
+  "text": "Danach arbeitete er fast 60 Jahre lang",
+  "tts": "Danach arbeitete er fast sechzig Jahre lang",
+  "voice": "clone_611",
+  "file": "line_03.mp3",
+  "duration": 2.791,
+  "heard": "Danach arbeitete er fast 60 Jahre lang.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 4,
+  "text": "an einem einzigen Werk: Faust.",
+  "tts": "an einem einzigen Werk: Faust.",
+  "voice": "clone_611",
+  "file": "line_04.mp3",
+  "duration": 1.811,
+  "heard": "an einem einzigen Werk, Faust.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 5,
+  "text": "Den zweiten Teil versiegelte er kurz vor seinem Tod.",
+  "tts": "Den zweiten Teil versiegelte er kurz vor seinem Tod.",
+  "voice": "clone_611",
+  "file": "line_05.mp3",
+  "duration": 3.115,
+  "heard": "Den zweiten Teil versiegelte er kurz vor seinem Tod.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 6,
+  "text": "Er sollte erst erscheinen, wenn Goethe nicht mehr lebte.",
+  "tts": "Er sollte erst erscheinen, wenn Goethe nicht mehr lebte.",
+  "voice": "clone_611",
+  "file": "line_06.mp3",
+  "duration": 2.888,
+  "heard": "Er sollte erst erscheinen, wenn Goethe nicht mehr lebte.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 7,
+  "text": "Im März 1832 starb er in Weimar,",
+  "tts": "Im März achtzehnhundertzweiunddreißig starb er in Weimar,",
+  "voice": "clone_611",
+  "file": "line_07.mp3",
+  "duration": 3.522,
+  "heard": "Im März 1832 starrt er in Weimar.",
+  "score": 0.86,
+  "diff": [
+   "starb→starrt"
+  ]
+ },
+ {
+  "i": 8,
+  "text": "mit 82 Jahren.",
+  "tts": "mit zweiundachtzig Jahren.",
+  "voice": "clone_611",
+  "file": "line_08.mp3",
+  "duration": 1.588,
+  "heard": "Mit 82 Jahren.",
+  "score": 1.0,
+  "diff": []
+ }
+]

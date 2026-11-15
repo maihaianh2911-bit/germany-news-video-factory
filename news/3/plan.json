@@ -1,0 +1,164 @@
+{
+ "duration": 29.084,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 29.084,
+   "pics": [
+    {
+     "src": "news/3/img/goethe_kraus.jpg",
+     "from": {
+      "z": 1.0,
+      "x": 0.62,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.64,
+      "y": 0.36
+     },
+     "w": 1489,
+     "h": 1942,
+     "s": 0.0,
+     "e": 4.799
+    },
+    {
+     "src": "news/3/img/werther_1774.jpg",
+     "from": {
+      "z": 1.0,
+      "x": 0.745,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.75,
+      "y": 0.47
+     },
+     "w": 2600,
+     "h": 1912,
+     "s": 4.799,
+     "e": 9.319
+    },
+    {
+     "src": "news/3/img/goethe_stieler.jpg",
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.56,
+      "y": 0.35
+     },
+     "w": 1972,
+     "h": 2432,
+     "s": 9.319,
+     "e": 21.524
+    },
+    {
+     "src": "news/3/img/goethe_1832.jpg",
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.44,
+      "y": 0.36
+     },
+     "w": 2096,
+     "h": 2263,
+     "s": 21.524,
+     "e": 29.084
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 0.3,
+   "e": 4.949,
+   "text": "Johann Wolfgang von Goethe wurde\nmit 25 über Nacht berühmt –"
+  },
+  {
+   "s": 4.949,
+   "e": 9.469,
+   "text": "mit einem Roman über einen jungen\nMann, der an der Liebe zerbricht."
+  },
+  {
+   "s": 9.469,
+   "e": 12.51,
+   "text": "Danach arbeitete er\nfast 60 Jahre lang"
+  },
+  {
+   "s": 12.51,
+   "e": 14.771,
+   "text": "an einem einzigen Werk: Faust."
+  },
+  {
+   "s": 14.771,
+   "e": 18.336,
+   "text": "Den zweiten Teil versiegelte\ner kurz vor seinem Tod."
+  },
+  {
+   "s": 18.336,
+   "e": 21.674,
+   "text": "Er sollte erst erscheinen,\nwenn Goethe nicht mehr lebte."
+  },
+  {
+   "s": 21.674,
+   "e": 25.446,
+   "text": "Im März 1832 starb er in Weimar,"
+  },
+  {
+   "s": 25.446,
+   "e": 27.434,
+   "text": "mit 82 Jahren."
+  }
+ ],
+ "voice": [
+  {
+   "s": 0.3,
+   "src": "news/3/voice/line_01.mp3"
+  },
+  {
+   "s": 4.949,
+   "src": "news/3/voice/line_02.mp3"
+  },
+  {
+   "s": 9.469,
+   "src": "news/3/voice/line_03.mp3"
+  },
+  {
+   "s": 12.51,
+   "src": "news/3/voice/line_04.mp3"
+  },
+  {
+   "s": 14.771,
+   "src": "news/3/voice/line_05.mp3"
+  },
+  {
+   "s": 18.336,
+   "src": "news/3/voice/line_06.mp3"
+  },
+  {
+   "s": 21.674,
+   "src": "news/3/voice/line_07.mp3"
+  },
+  {
+   "s": 25.446,
+   "src": "news/3/voice/line_08.mp3"
+  }
+ ],
+ "music": "news/3/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Philosopher",
+   "file": "news/fonts/philosopher-latin-400-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ]
+}
