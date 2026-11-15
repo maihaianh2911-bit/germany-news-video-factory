@@ -6,7 +6,8 @@ a 25-minute render. Usage: preview.py <news/N/picks.json> <news/N/script.json> <
 Each tile is labelled with the shot's move (moves.py; "-" = hand-written numbers). Next to the sheet it writes
 <out>.md, the list of edits for the owner (shot, line, picture, move, why), and prints it. Shot lengths come from
 the measured voice (<img_root>/../voice/lines.json) when it is there, else from an estimate of the reading speed.
-An unknown move or a shot without a move stops here with the list of valid names."""
+An unknown move or a shot without a move stops here with the list of valid names. A shot too short for its move
+or a "wide" point that would lose the subject is printed as WARNING and its tile is marked "!"."""
 import json, os, sys
 from PIL import Image, ImageDraw
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
@@ -45,7 +46,7 @@ def pair_tile(p):
         t.paste(th, (round(x * k), round(y * k)))
     return t
 
-tiles = []
+tiles = []; warn = []
 for ci, (c, pc) in enumerate(zip(script['chapters'], picks['chapters'])):
     a, b = c['lines']; n = len(pc['pics'])
     for j, p in enumerate(pc['pics']):
@@ -55,10 +56,11 @@ for ci, (c, pc) in enumerate(zip(script['chapters'], picks['chapters'])):
         else:
             name = p['img']; s, e, _ = times[ci][j]
             c0, c1 = moves.camera(p, *img(name).size, e - s)
+            for wmsg in moves.warnings(p, *img(name).size, e - s): warn.append(f'shot {ci + 1}-{j + 1} ({name}): {wmsg}')
             t0, t1 = window(img(name), c0), window(img(name), c1)
         tile = Image.new('RGB', (TW * 2 + 6, TH + 22), (12, 12, 14))
         tile.paste(t0, (0, 22)); tile.paste(t1, (TW + 6, 22))
-        ImageDraw.Draw(tile).text((4, 5), f'{ci + 1}-{j + 1} line {line}  {name}  [{moves.label(p)}]  start | end'[:72], fill=(255, 210, 90))
+        ImageDraw.Draw(tile).text((4, 5), f'{ci + 1}-{j + 1} line {line}  {name}  [{moves.label(p)}]{" !" if warn and warn[-1].startswith(f"shot {ci + 1}-{j + 1} ") else ""}  start | end'[:72], fill=(255, 210, 90))
         tiles.append(tile)
 cols = 3; rows = (len(tiles) + cols - 1) // cols; tw, th = tiles[0].size
 sheet = Image.new('RGB', (cols * (tw + 10), rows * (th + 8)), (0, 0, 0))
@@ -67,4 +69,5 @@ sheet.save(out, quality=82)
 md = os.path.splitext(out)[0] + '.md'
 open(md, 'w', encoding='utf-8').write(moves.edits_md(script['chapters'], picks, times, text))
 print(open(md, encoding='utf-8').read())
-print(out, len(tiles), 'shots', sheet.size, '| edits:', md)
+for wmsg in warn: print('WARNING:', wmsg)
+print(out, len(tiles), 'shots', sheet.size, '| edits:', md, f'| {len(warn)} warning(s): fix them, their tiles are marked "!"' if warn else '')

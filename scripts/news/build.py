@@ -8,7 +8,7 @@ chapter), <public_dir>/news/<N>/voice/lines.json (measured line lengths) and the
 for the owner) and <public_dir>/news/<N>/bed.wav.
 A shot with "move" (a name of the catalogue in moves.py) gets its camera start and end worked out here for the
 picture's size and the shot's length; an explicit "from"/"to" wins; "fade" (seconds, 0 = hard cut) sets how the shot
-comes in instead of the usual 0.7 s dissolve; "why" and "focus" are notes for the planner and are not in the plan.
+comes in instead of the usual 0.7 s dissolve; "why", "focus" and "wide" are notes for the planner and are not in the plan.
 Timing: every line starts after the previous one plus a pause (0.45 s after a sentence end, 0.25 s otherwise);
 each chapter opens with a short breath; a picture that starts on a line ("at") cuts in just before it is spoken.
 Credits: a search result is listed from its round's index.json (title, author, date, licence, File: page); any other
@@ -80,7 +80,7 @@ for ci, c in enumerate(spec['chapters']):
         bounds.append(starts[k] + (li - int(li)) * dur[a + k] - 0.15)
     bounds.append(e)
     for j, p in enumerate(pics):
-        q = {k: v for k, v in p.items() if k not in ('at', 'img', 'why', 'focus')}
+        q = {k: v for k, v in p.items() if k not in ('at', 'img', 'why', 'focus', 'wide')}
         if 'pair' in p:   # portrait + document as framed prints
             for side in ('left', 'right'):
                 sd = dict(p['pair'][side]); sd['src'] = img(sd.pop('img'))
@@ -90,6 +90,7 @@ for ci, c in enumerate(spec['chapters']):
             q['src'] = img(p['img']); q['w'], q['h'] = Image.open(f"{pub}/{q['src']}").size
             if p.get('move'):   # a named move: the camera for this picture and this length
                 q['from'], q['to'] = moves.camera(p, q['w'], q['h'], bounds[j + 1] - bounds[j])
+                for wmsg in moves.warnings(p, q['w'], q['h'], bounds[j + 1] - bounds[j]): print(f'warning: shot {ci + 1}-{j + 1}: {wmsg}')
         ch['pics'].append({**q, 's': round(bounds[j], 3), 'e': round(bounds[j + 1], 3)})
     chapters.append(ch); t = e
 total = round(t, 3)

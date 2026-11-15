@@ -136,7 +136,13 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    - **The edit of each shot** (owner, 14/11): `move` = one name of the table below, chosen by what the line
      says; `focus` `[x, y]` (0–1) = where the subject is in the (cropped) picture, default `[0.5, 0.45]`; `why` = one
      short Vietnamese reason (shown to the owner in the list of edits, never in the video). The machine works out
-     the camera for the picture's shape and the shot's length, so the speed is always calm and no edge shows.
+     the camera for the picture's shape and the shot's length, so the speed is always calm and no edge shows:
+     every move travels at least a visible distance (on a short shot it goes a little faster, up to a sober
+     limit); a pan or tilt zooms in as far as it needs for room (a tilt on a landscape picture up to 1.45×, so
+     check that the sides it loses do not matter, or crop the picture upright); `chi-tiet` and `lui-ra` keep the
+     `focus` inside the frame from start to end. `wide` `[x, y]` (optional, only for `chi-tiet`/`lui-ra`): where
+     the whole-picture end looks, to take in a second subject (the lawyer next to the accused); when that point
+     would lose the `focus`, the frame is moved back and the preview says so.
      `fade` (optional, seconds 0–1.5): how the shot comes in; left out = the usual soft 0.7 s dissolve, `0` = a hard
      cut, `1.0` = a slow dissolve. An unknown name stops the preview and the render with the list of valid names.
      Hand-written numbers still work and win over the move when both are given (`from`/`to`: `z` 1.0–1.6, `x`,
@@ -150,14 +156,14 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
 
    | `move` | tên cho chủ kênh | what it looks like | use it when the line … |
    |---|---|---|---|
-   | `tien-gan` | tiến gần | slow push-in to the subject (+8–20 %) | **names a person** or quotes someone; the accused, a judge, a politician; a single object |
+   | `tien-gan` | tiến gần | slow push-in to the subject (+10–20 %) | **names a person** or quotes someone; the accused, a judge, a politician; a single object |
    | `chi-tiet` | soi chi tiết | from the whole picture strongly into one detail (+25–45 %) | names **evidence or one telling detail** (a shackle, a shoe print, a signature, one figure on a chart); a short, hard statement |
    | `lui-ra` | lùi ra | starts close on the subject, pulls back to the whole picture | describes an **action or event** in its setting (search, arrest, session); gives context; the **open question or last line** of the video |
    | `luot-phai` / `luot-trai` | lướt sang phải / trái | steady pan across, no zoom change | shows a **wide place or a group** (courtroom, street, square, plenary hall, a row of people); a **comparison** of two things in one picture (pan from the first to the second) |
    | `nang-len` | nâng lên | tilt up from the foot to the top | names an **institution by its building** (court, ministry, tower, statue); something rising (prices, a decision of a higher court) |
    | `ha-xuong` | hạ xuống | tilt down from the top to the foot | goes from a place to what happened on its ground (the site of a find, a crowd in front of a building); a fall, a defeat |
    | `dung-yen` | đứng yên | held almost still, everything readable | carries a **number, statistic, document, verdict text, map or chart**; a grave moment (memorial, victim) where movement would be loud |
-   | `troi-nhe` | trôi nhẹ | a little closer, a small slow sideways drift | is abstract or general and the picture is a **Symbolbild** (law, money, energy); a bridge line between two facts |
+   | `troi-nhe` | trôi nhẹ | a little closer, a small slow sideways drift with a light push | is abstract or general and the picture is a **Symbolbild** (law, money, energy); a bridge line between two facts |
 
    How to choose:
    1. **Read the line first**, then ask what the viewer should look at while hearing it; that is the `focus`, and
@@ -168,7 +174,9 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    3. **Vary neighbours**: no move twice in a row, and not two pans in the same direction one after the other;
       after a strong move (`chi-tiet`, a pan) a quiet one (`dung-yen`, `tien-gan`). Over a whole video `tien-gan`
       may be the most frequent, but under half of the shots.
-   4. **Short shots** (under ~3 s): `dung-yen`, `tien-gan` or `chi-tiet`; pans and tilts need 4 s and more.
+   4. **Short shots**: every move needs about 2 s to show (`troi-nhe` 1.7 s); under that the preview prints
+      `WARNING: … too short for <move>` and marks the tile `!`: use `dung-yen`, or let the picture cover one more
+      line. Between 2 and 3 s prefer `tien-gan`, `chi-tiet`, `dung-yen`; pans and tilts read best from 4 s.
    5. **A returning picture** gets another `focus` and another move than the first time (first `luot-phai` across
       the bench, later `tien-gan` on the presiding judge).
    6. **Cuts**: the soft dissolve is the rule. `"fade": 0` (hard cut) for a contradiction or a sudden turn ("Doch
@@ -190,7 +198,10 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    `mkdir -p /tmp/r/news/<N>/img/own && cp news/<N>/own/* /tmp/r/news/<N>/img/own/`) and open the sheet: every shot
    at the start and the end of its camera move, exactly as the video frames it, labelled with its `[move]`. Fix any
    shot that cuts a face, chin or hand, misses its subject, shows a border, or whose start and end look the same
-   although the move should travel (wrong move for that picture's shape: see rule 2), and run it again. The
+   although the move should travel (wrong move for that picture's shape: see rule 2), and run it again. Clear
+   every `WARNING:` line the preview prints (shot too short for its move, a `wide` point that loses the subject);
+   for `chi-tiet` look at the end tile: a foreground object (a barrier tape, a microphone) must not be cut in half
+   — move the `focus` or take `tien-gan`. The
    preview also writes `/tmp/preview.md` (and prints it): the list of edits — shot, line, picture, move, why. Read
    it top to bottom once as a viewer: does every move follow from its line, do neighbours differ?
 7. Commit `picks.json` together with any `script.json`/readings fixes in **one** push as `[news #<N>] chọn ảnh`

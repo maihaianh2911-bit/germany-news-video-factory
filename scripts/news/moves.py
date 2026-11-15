@@ -9,20 +9,19 @@ An explicit "from"/"to" in the shot still wins. No dependencies: used by build.p
 """
 W, PH = 1080, 1000          # the picture panel of NewsV
 FOCUS = (0.5, 0.45)         # default subject point: a little above the centre (faces)
-PAN = 0.085                 # a pan crosses at most this share of the panel per second
 MAX_FADE = 1.5
 
 # name → (Vietnamese label for the owner, what it looks like). Order = order of the table in AGENT_NEWS.md.
 MOVES = {
-    'tien-gan':   ('tiến gần', 'slow push-in towards the subject (about +3 % per second, +8…20 %)'),
+    'tien-gan':   ('tiến gần', 'slow push-in towards the subject (about +3 % per second, +10…20 %)'),
     'chi-tiet':   ('soi chi tiết', 'from the whole picture strongly into one detail (+25…45 %)'),
-    'lui-ra':     ('lùi ra', 'starts close on the subject and pulls back to the whole picture'),
+    'lui-ra':     ('lùi ra', 'starts close on the subject and pulls back to the whole picture, the subject kept in frame'),
     'luot-phai':  ('lướt sang phải', 'steady pan from left to right, no zoom change'),
     'luot-trai':  ('lướt sang trái', 'steady pan from right to left, no zoom change'),
     'nang-len':   ('nâng lên', 'tilt up: from the foot of the picture to its top'),
     'ha-xuong':   ('hạ xuống', 'tilt down: from the top of the picture to its foot'),
     'dung-yen':   ('đứng yên', 'held almost still (+3 %), the whole picture readable'),
-    'troi-nhe':   ('trôi nhẹ', 'slightly closer, a small slow sideways drift that ends on the subject'),
+    'troi-nhe':   ('trôi nhẹ', 'slightly closer, a small slow sideways drift with a light push that ends on the subject'),
 }
 CUSTOM = 'tự chỉnh'         # label of a shot with hand-written from/to and no move
 
@@ -47,44 +46,107 @@ def clamp(v, lo, hi):
     return lo if v < lo else hi if v > hi else v
 
 
-def slide(w, h, dur, fx, fy, axis, sign):
-    """A pan along one axis through the focus: zoomed in just enough to have room, at most PAN panel sizes per second."""
-    z = 1.06
-    while 1 - 2 * half(w, h, z)[axis] < 0.14 and z < 1.3:
-        z += 0.02
+# How far each move travels: usually RATE per second, never less than LEAST (so a short shot still visibly moves:
+# the speed goes up), never more than MOST, and never faster than CAP per second (the sober limit). A shot so short
+# that CAP does not reach LEAST is "too short for its move": the preview warns and suggests dung-yen.
+# Zoom moves count in zoom (0.10 = +10 %), pans, tilts and the drift in panel widths/heights.
+SPEED = {            # LEAST, RATE, MOST, CAP
+    'tien-gan':  (0.10, 0.028, 0.20, 0.05),
+    'chi-tiet':  (0.25, 0.070, 0.45, 0.12),
+    'lui-ra':    (0.18, 0.050, 0.32, 0.09),
+    'luot-phai': (0.25, 0.085, 9.0, 0.125), 'luot-trai': (0.25, 0.085, 9.0, 0.125),
+    'nang-len':  (0.25, 0.085, 9.0, 0.125), 'ha-xuong':  (0.25, 0.085, 9.0, 0.125),
+    'troi-nhe':  (0.12, 0.040, 0.30, 0.07),
+}
+MAX_SLIDE_Z = 1.45   # a pan or tilt zooms in at most this far to make room to travel
+KEEP = 0.75          # the subject stays inside this share of the frame during chi-tiet and lui-ra
+
+
+def amount(name, d):
+    least, rate, most, cap = SPEED[name]
+    return min(max(least, min(rate * d, most)), cap * d)
+
+
+def too_short(name, dur):
+    """True when the shot is too short for the move to travel its least visible distance at a sober speed."""
+    return name in SPEED and SPEED[name][3] * max(float(dur), 1.0) < SPEED[name][0] - 1e-9
+
+
+def slide(name, w, h, d, fx, fy, axis, sign):
+    """A pan (axis 0) or tilt (axis 1) through the focus. The picture is zoomed in as far as needed (up to
+    MAX_SLIDE_Z) to have room for the travel this shot's length asks for: a tilt on a landscape picture, which has
+    no room at all at normal size, still travels."""
+    want = amount(name, d)                                   # in panel sizes
+    base = 2 * half(w, h, 1.0)[axis]                         # share of the picture the panel shows at z = 1
+    z = clamp(base * (1 + want), 1.06, MAX_SLIDE_Z)          # room 1 - base/z must hold want·base/z
     hv = half(w, h, z)[axis]; room = 1 - 2 * hv
-    travel = min(room, PAN * max(dur, 1.0) * 2 * hv)      # share of the picture the centre moves
+    travel = min(room, want * 2 * hv)                        # share of the picture the centre moves
     f = (fx, fy)[axis]
     a = clamp(f - travel / 2, hv, 1 - hv - travel); b = a + travel
     if sign < 0: a, b = b, a
     return (cam(w, h, z, a, fy), cam(w, h, z, b, fy)) if axis == 0 else (cam(w, h, z, fx, a), cam(w, h, z, fx, b))
 
 
-def expand(name, w, h, dur, focus=None):
-    """(from, to) of move `name` for a prepared picture of w×h pixels shown for dur seconds, subject at focus (x, y)."""
+def wide_cam(w, h, fx, fy, wide):
+    """The whole-picture end of chi-tiet / lui-ra (z = 1): centred on `wide` when given, else halfway between the
+    picture's centre and the subject, and always moved so the subject is inside the middle KEEP of the frame.
+    With both ends holding the subject, it stays in the frame for the whole move."""
+    cx, cy = wide or (0.5 + (fx - 0.5) * 0.5, 0.5 + (fy - 0.5) * 0.5)
+    hx, hy = half(w, h, 1.0)
+    cx = clamp(cx, fx - KEEP * hx, fx + KEEP * hx); cy = clamp(cy, fy - KEEP * hy, fy + KEEP * hy)
+    return cam(w, h, 1.0, cx, cy)
+
+
+def expand(name, w, h, dur, focus=None, wide=None):
+    """(from, to) of move `name` for a prepared picture of w×h pixels shown for dur seconds, subject at focus (x, y).
+    wide (x, y), optional: where the whole-picture end of chi-tiet / lui-ra looks (to take in a second subject)."""
     if name not in MOVES:
         raise ValueError(f'unknown move "{name}" — valid moves: {names()}')
     fx, fy = focus or FOCUS
     d = max(float(dur), 1.0)
-    mid = lambda k: (0.5 + (fx - 0.5) * k, 0.5 + (fy - 0.5) * k)   # between the picture's centre (k=0) and the subject (k=1)
     if name == 'tien-gan':
-        return cam(w, h, 1.0, fx, fy), cam(w, h, 1 + clamp(0.028 * d, 0.08, 0.20), fx, fy)
+        return cam(w, h, 1.0, fx, fy), cam(w, h, 1 + amount(name, d), fx, fy)
     if name == 'chi-tiet':
-        return cam(w, h, 1.0, *mid(0.5)), cam(w, h, 1 + clamp(0.07 * d, 0.25, 0.45), fx, fy)
+        return wide_cam(w, h, fx, fy, wide), cam(w, h, 1 + amount(name, d), fx, fy)
     if name == 'lui-ra':
-        return cam(w, h, 1 + clamp(0.05 * d, 0.18, 0.32), fx, fy), cam(w, h, 1.0, *mid(0.5))
-    if name == 'luot-phai': return slide(w, h, d, fx, fy, 0, 1)
-    if name == 'luot-trai': return slide(w, h, d, fx, fy, 0, -1)
-    if name == 'ha-xuong': return slide(w, h, d, fx, fy, 1, 1)
-    if name == 'nang-len': return slide(w, h, d, fx, fy, 1, -1)
+        return cam(w, h, 1 + amount(name, d), fx, fy), wide_cam(w, h, fx, fy, wide)
+    if name == 'luot-phai': return slide(name, w, h, d, fx, fy, 0, 1)
+    if name == 'luot-trai': return slide(name, w, h, d, fx, fy, 0, -1)
+    if name == 'ha-xuong': return slide(name, w, h, d, fx, fy, 1, 1)
+    if name == 'nang-len': return slide(name, w, h, d, fx, fy, 1, -1)
     if name == 'dung-yen':
         return cam(w, h, 1.0, fx, fy), cam(w, h, 1.03, fx, fy)
-    # troi-nhe: a small drift that arrives on the subject, from the side with more room
-    z = 1.1; hx = half(w, h, z)[0]
-    step = min(1 - 2 * hx, 0.03 * d * 2 * hx)
+    # troi-nhe: a small drift with a slight push that arrives on the subject, from the side with more room
+    z0, z1 = 1.08, 1.12
+    hx = half(w, h, z0)[0]
+    step = min(1 - 2 * hx, amount(name, d) * 2 * hx)
     end = clamp(fx, hx, 1 - hx)
     start = end - step if end - step >= hx else min(1 - hx, end + step)
-    return cam(w, h, z, start, fy), cam(w, h, z, end, fy)
+    return cam(w, h, z0, start, fy), cam(w, h, z1, end, fy)
+
+
+def travel(a, b, w, h):
+    """How far the centre moves between two cameras, in panel sizes (x, y)."""
+    hx, hy = half(w, h, (a['z'] + b['z']) / 2)
+    return abs(b['x'] - a['x']) / (2 * hx), abs(b['y'] - a['y']) / (2 * hy)
+
+
+def warnings(shot, w, h, dur):
+    """What the preview should tell about a shot's move (English, for Claude; [] = fine)."""
+    m = shot.get('move')
+    if m not in MOVES or 'pair' in shot or ('from' in shot and 'to' in shot):
+        return []
+    out = []
+    if too_short(m, dur):
+        least = SPEED[m][0] / SPEED[m][3]
+        out.append(f'{dur:.1f} s is too short for {m} (needs {least:.1f} s to show): use dung-yen, or give the picture more lines')
+    if m in ('chi-tiet', 'lui-ra'):
+        fx, fy = shot.get('focus') or FOCUS
+        wc = wide_cam(w, h, fx, fy, shot.get('wide'))
+        if shot.get('wide') and (abs(wc['x'] - shot['wide'][0]) > 0.02 or abs(wc['y'] - shot['wide'][1]) > 0.02):
+            out.append(f'{m}: "wide" {shot["wide"]} would lose the subject at {[fx, fy]}; the frame was moved to '
+                       f'[{wc["x"]:.2f}, {wc["y"]:.2f}] (a square panel cannot hold both: choose the wide point nearer the subject)')
+    return out
 
 
 def check(shot, where):
@@ -97,9 +159,10 @@ def check(shot, where):
         if m is not None: bad.append(f'{where}: cảnh "pair" (hai ảnh đóng khung) không dùng "move"')
     elif m is None and not ('from' in shot and 'to' in shot):
         bad.append(f'{where}: cần "move" (một trong: {names()}) hoặc đủ cả "from" và "to"')
-    f = shot.get('focus')
-    if f is not None and not (isinstance(f, (list, tuple)) and len(f) == 2 and all(isinstance(v, (int, float)) and 0 <= v <= 1 for v in f)):
-        bad.append(f'{where}: "focus" phải là [x, y] trong khoảng 0–1')
+    for key in ('focus', 'wide'):
+        f = shot.get(key)
+        if f is not None and not (isinstance(f, (list, tuple)) and len(f) == 2 and all(isinstance(v, (int, float)) and 0 <= v <= 1 for v in f)):
+            bad.append(f'{where}: "{key}" phải là [x, y] trong khoảng 0–1')
     fd = shot.get('fade')
     if fd is not None and not (isinstance(fd, (int, float)) and not isinstance(fd, bool) and 0 <= fd <= MAX_FADE):
         bad.append(f'{where}: "fade" phải là số giây từ 0 (cắt thẳng) đến {MAX_FADE}')
@@ -115,7 +178,7 @@ def check_all(picks):
 def camera(shot, w, h, dur):
     """(from, to) of a shot: the move's preset, with an explicit "from"/"to" of the shot winning."""
     if shot.get('move'):
-        a, b = expand(shot['move'], w, h, dur, shot.get('focus'))
+        a, b = expand(shot['move'], w, h, dur, shot.get('focus'), shot.get('wide'))
         return shot.get('from', a), shot.get('to', b)
     return shot['from'], shot['to']
 
