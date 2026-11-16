@@ -213,4 +213,12 @@ assert any('tiếng Đức' in b for b in caption.check(good.replace('Jetzt prü
 assert any('mô tả' in b for b in caption.check(good.split('\n')[0] + '\n\n#a #b #c #d #e\n\nBildquellen: x'))
 assert any('2000' in b for b in caption.check(good.replace('Jetzt prüft', 'Satz. ' * 400 + 'Jetzt prüft')))
 assert caption.check('') == ['caption.txt trống'] and len(caption.check('Nur ein Titel')) == 1
+# a caption-only run installs no tools: run.py must load without numpy and Pillow
+import subprocess
+blk = tempfile.mkdtemp(prefix='news-units-'); os.makedirs(os.path.join(blk, 'PIL'))
+for f in ('numpy.py', os.path.join('PIL', '__init__.py')): open(os.path.join(blk, f), 'w').write('raise ImportError("not installed")\n')
+r = subprocess.run([sys.executable, '-c', 'import sys; sys.argv = ["run.py", "0", "caption"]; import run'], capture_output=True, text=True,
+                   env={**os.environ, 'PYTHONPATH': blk + os.pathsep + os.path.join(ROOT, 'scripts', 'news'), 'GITHUB_REPOSITORY': 'o/r', 'GH_TOKEN': 'x'})
+assert r.returncode == 0, r.stderr[-500:]
+shutil.rmtree(blk, ignore_errors=True)
 print('news unit checks OK')

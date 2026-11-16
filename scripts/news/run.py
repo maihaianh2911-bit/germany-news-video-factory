@@ -20,7 +20,7 @@ Needs GH_TOKEN, GITHUB_REPOSITORY; prepare needs VN11_API_KEY.
 import json, os, shutil, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
-import caption, ff, moves, prep
+import caption, ff, moves   # prep (numpy, Pillow) is imported where it is needed: a caption-only run installs no tools
 
 N, steps = sys.argv[1], sys.argv[2:]
 JOB = os.path.join(ROOT, 'news', N)
@@ -219,6 +219,7 @@ def render():
     imgsrc = os.path.join(WORK, 'img')
     if os.path.isdir(os.path.join(JOB, 'own')):
         shutil.copytree(os.path.join(JOB, 'own'), os.path.join(imgsrc, 'own'), dirs_exist_ok=True)
+    import prep
     picks = os.path.join(JOB, 'picks.json')
     bad = moves.check_all(json.load(open(picks, encoding='utf-8')))
     if bad:   # an unknown move name etc.: say it in the issue comment, with the valid names
@@ -306,6 +307,7 @@ def caption_only():
 def main():
     if 'caption' in steps and len(steps) == 1:   # nothing else to do: the renders branch is not needed here
         return caption_only()
+    import prep
     fetch_renders()
     woke = False   # Claude was already called for the news-pick wait (no second call for the same wait)
     has_picks = os.path.exists(os.path.join(JOB, 'picks.json'))
