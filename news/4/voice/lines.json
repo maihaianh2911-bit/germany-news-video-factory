@@ -5,7 +5,10 @@
   "tts": "Wir alle kennen ihre Geschichten:",
   "voice": "clone_611",
   "file": "line_01.mp3",
-  "duration": 1.695
+  "duration": 1.695,
+  "heard": "Wir alle kennen ihre Geschichten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 2,
@@ -13,7 +16,10 @@
   "tts": "Hänsel und Gretel, Rotkäppchen, Schneewittchen.",
   "voice": "clone_611",
   "file": "line_02.mp3",
-  "duration": 3.04
+  "duration": 3.04,
+  "heard": "Hänsel und Gretel, Rotkäppchen, Schneewittchen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 3,
@@ -21,7 +27,10 @@
   "tts": "Doch Jacob und Wilhelm Grimm wollten gar keine Kinderbücher schreiben.",
   "voice": "clone_611",
   "file": "line_03.mp3",
-  "duration": 4.25
+  "duration": 4.25,
+  "heard": "Doch Jacob und Wilhelm Grimm wollten gar keine Kinderbücher schreiben.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 4,
@@ -29,7 +38,10 @@
   "tts": "Sie wollten retten, was die Leute sich erzählten,",
   "voice": "clone_611",
   "file": "line_04.mp3",
-  "duration": 2.897
+  "duration": 2.897,
+  "heard": "Sie wollten retten, was die Leute sich erzählten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 5,
@@ -37,7 +49,10 @@
   "tts": "bevor es verloren ging.",
   "voice": "clone_611",
   "file": "line_05.mp3",
-  "duration": 1.386
+  "duration": 1.386,
+  "heard": "bevor es verloren ging.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 6,
@@ -45,7 +60,10 @@
   "tts": "Und ihr größtes Werk war gar nicht das Märchenbuch,",
   "voice": "clone_611",
   "file": "line_06.mp3",
-  "duration": 2.744
+  "duration": 2.744,
+  "heard": "und ihr größtes Werk war gar nicht das Märchenbuch.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 7,
@@ -53,7 +71,10 @@
   "tts": "sondern ein Wörterbuch.",
   "voice": "clone_611",
   "file": "line_07.mp3",
-  "duration": 1.55
+  "duration": 1.55,
+  "heard": "sondern ein Wörterbuch.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 8,
@@ -61,7 +82,10 @@
   "tts": "Fertig wurde es erst neunzehnhunderteinundsechzig – fast hundert Jahre nach ihrem Tod.",
   "voice": "clone_611",
   "file": "line_08.mp3",
-  "duration": 5.203
+  "duration": 5.203,
+  "heard": "Fertig wurde es erst 1961, fast 100 Jahre nach ihrem Tod.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 9,
@@ -69,7 +93,12 @@
   "tts": "Jacob wurde siebzehnhundertfünfundachtzig geboren, Wilhelm ein Jahr später, beide in Hanau.",
   "voice": "clone_611",
   "file": "line_09.mp3",
-  "duration": 5.804
+  "duration": 5.804,
+  "heard": "Jakob wurde 1785 geboren, Wilhelm ein Jahr später beide in Hanau.",
+  "score": 0.91,
+  "diff": [
+   "jacob→jakob"
+  ]
  },
  {
   "i": 10,
@@ -77,7 +106,10 @@
   "tts": "Der Vater war Amtmann im hessischen Steinau.",
   "voice": "clone_611",
   "file": "line_10.mp3",
-  "duration": 2.535
+  "duration": 2.535,
+  "heard": "Der Vater war Amtmann im hessischen Steinau.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 11,
@@ -85,7 +117,12 @@
   "tts": "Als er starb, war Jacob elf.",
   "voice": "clone_611",
   "file": "line_11.mp3",
-  "duration": 1.707
+  "duration": 1.707,
+  "heard": "Als er starb, war Jakob 11.",
+  "score": 0.83,
+  "diff": [
+   "jacob→jakob"
+  ]
  },
  {
   "i": 12,
@@ -93,7 +130,12 @@
   "tts": "Die Familie geriet in Not.",
   "voice": "clone_611",
   "file": "line_12.mp3",
-  "duration": 1.543
+  "duration": 1.543,
+  "heard": "Die Familie hier riecht in Not.",
+  "score": 0.73,
+  "diff": [
+   "geriet→hierriecht"
+  ]
  },
  {
   "i": 13,
@@ -101,7 +143,10 @@
   "tts": "Die Brüder hielten zusammen – ein ganzes Leben lang.",
   "voice": "clone_611",
   "file": "line_13.mp3",
-  "duration": 2.887
+  "duration": 2.887,
+  "heard": "die Brüder hielten zusammen ein ganzes Leben lang.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 14,
@@ -109,7 +154,10 @@
   "tts": "Sie lernten zusammen, arbeiteten zusammen",
   "voice": "clone_611",
   "file": "line_14.mp3",
-  "duration": 2.478
+  "duration": 2.478,
+  "heard": "Sie lernten zusammen, arbeiteten zusammen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 15,
@@ -117,7 +165,10 @@
   "tts": "und lebten fast immer unter einem Dach.",
   "voice": "clone_611",
   "file": "line_15.mp3",
-  "duration": 2.093
+  "duration": 2.093,
+  "heard": "und lebten fast immer unter einem Dach.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 16,
@@ -125,7 +176,10 @@
   "tts": "In Marburg studierten beide Jura.",
   "voice": "clone_611",
   "file": "line_16.mp3",
-  "duration": 1.965
+  "duration": 1.965,
+  "heard": "In Marburg studierten beide Jura.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 17,
@@ -133,7 +187,13 @@
   "tts": "Ihr Professor Friedrich Carl von Sawinji zeigte ihnen alte Handschriften.",
   "voice": "clone_611",
   "file": "line_17.mp3",
-  "duration": 4.653
+  "duration": 4.653,
+  "heard": "Ihr Professor Friedrich Karl von Savinci zeigte Ihnen alte Handschriften.",
+  "score": 0.8,
+  "diff": [
+   "carl→karl",
+   "sawinji→savinci"
+  ]
  },
  {
   "i": 18,
@@ -141,7 +201,10 @@
   "tts": "Ab achtzehnhundertsechs schrieben sie auf, was man sich in Hessen erzählte.",
   "voice": "clone_611",
   "file": "line_18.mp3",
-  "duration": 4.449
+  "duration": 4.449,
+  "heard": "Ab 1806 schrieben Sie auf, was man sich in Hessen erzählte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 19,
@@ -149,7 +212,10 @@
   "tts": "Viele Märchen kamen von jungen Frauen aus Kassel.",
   "voice": "clone_611",
   "file": "line_19.mp3",
-  "duration": 2.883
+  "duration": 2.883,
+  "heard": "Viele Märchen kamen von jungen Frauen aus Kassel.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 20,
@@ -157,7 +223,10 @@
   "tts": "Einige erzählte ihnen Dortchen Wild, die Wilhelm später heiratete.",
   "voice": "clone_611",
   "file": "line_20.mp3",
-  "duration": 4.053
+  "duration": 4.053,
+  "heard": "Einige erzählte ihnen dortchen Wild, die Wilhelm später heiratete.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 21,
@@ -165,7 +234,12 @@
   "tts": "Und rund vierzig die Frau eines Schneiders: Dorothea Viehmann.",
   "voice": "clone_611",
   "file": "line_21.mp3",
-  "duration": 3.674
+  "duration": 3.674,
+  "heard": "und rund 40 die Frau eines Schneiders, Dorothea Fiemann.",
+  "score": 0.89,
+  "diff": [
+   "viehmann→fiemann"
+  ]
  },
  {
   "i": 22,
@@ -173,7 +247,10 @@
   "tts": "Zu Weihnachten achtzehnhundertzwölf erschien der erste Band: sechsundachtzig Märchen.",
   "voice": "clone_611",
   "file": "line_22.mp3",
-  "duration": 5.135
+  "duration": 5.135,
+  "heard": "Zu Weihnachten 1812 erschien der erste Band, 86 Märchen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 23,
@@ -181,7 +258,10 @@
   "tts": "Ein Kinderbuch war das nicht.",
   "voice": "clone_611",
   "file": "line_23.mp3",
-  "duration": 1.595
+  "duration": 1.595,
+  "heard": "Ein Kinderbuch war das nicht.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 24,
@@ -189,7 +269,10 @@
   "tts": "Es hatte Anmerkungen für Gelehrte – und viel Grausamkeit.",
   "voice": "clone_611",
   "file": "line_24.mp3",
-  "duration": 3.379
+  "duration": 3.379,
+  "heard": "Es hatte Anmerkungen für Gelehrte und viel Grausamkeit.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 25,
@@ -197,7 +280,10 @@
   "tts": "Bei Schneewittchen war es noch die eigene Mutter,",
   "voice": "clone_611",
   "file": "line_25.mp3",
-  "duration": 2.679
+  "duration": 2.679,
+  "heard": "Bei Schneewittchen war es noch die eigene Mutter.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 26,
@@ -205,7 +291,10 @@
   "tts": "die das Kind töten wollte.",
   "voice": "clone_611",
   "file": "line_26.mp3",
-  "duration": 1.554
+  "duration": 1.554,
+  "heard": "die das Kind töten wollte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 27,
@@ -213,7 +302,10 @@
   "tts": "Wilhelm überarbeitete die Märchen immer wieder,",
   "voice": "clone_611",
   "file": "line_27.mp3",
-  "duration": 2.751
+  "duration": 2.751,
+  "heard": "Wilhelm überarbeitete die Märchen immer wieder.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 28,
@@ -221,7 +313,10 @@
   "tts": "machte sie sanfter, frommer, kindgerechter.",
   "voice": "clone_611",
   "file": "line_28.mp3",
-  "duration": 2.718
+  "duration": 2.718,
+  "heard": "machte sie sanfter, frommer, kindgerechter.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 29,
@@ -229,7 +324,12 @@
   "tts": "Aus der Mutter wurde die böse Stiefmutter.",
   "voice": "clone_611",
   "file": "line_29.mp3",
-  "duration": 2.42
+  "duration": 2.42,
+  "heard": "Als der Mutter wurde die böse Stiefmutter.",
+  "score": 0.86,
+  "diff": [
+   "aus→als"
+  ]
  },
  {
   "i": 30,
@@ -237,7 +337,10 @@
   "tts": "Die letzte Ausgabe, achtzehnhundertsiebenundfünfzig, hatte zweihundert Märchen.",
   "voice": "clone_611",
   "file": "line_30.mp3",
-  "duration": 5.031
+  "duration": 5.031,
+  "heard": "Die letzte Ausgabe 1857 hatte 200 Märchen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 31,
@@ -245,7 +348,10 @@
   "tts": "Achtzehnhundertsiebenunddreißig kam der Bruch.",
   "voice": "clone_611",
   "file": "line_31.mp3",
-  "duration": 2.64
+  "duration": 2.64,
+  "heard": "1837 kam der Bruch.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 32,
@@ -253,7 +359,10 @@
   "tts": "Der König von Hannover hob die Verfassung auf.",
   "voice": "clone_611",
   "file": "line_32.mp3",
-  "duration": 2.868
+  "duration": 2.868,
+  "heard": "Der König von Hannover hob die Verfassung auf.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 33,
@@ -261,7 +370,10 @@
   "tts": "Sieben Professoren in Göttingen protestierten,",
   "voice": "clone_611",
   "file": "line_33.mp3",
-  "duration": 2.878
+  "duration": 2.878,
+  "heard": "sieben Professoren in Göttingen protestierten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 34,
@@ -269,7 +381,12 @@
   "tts": "darunter Jacob und Wilhelm Grimm.",
   "voice": "clone_611",
   "file": "line_34.mp3",
-  "duration": 1.992
+  "duration": 1.992,
+  "heard": "darunter Jakob und Wilhelm Grimm.",
+  "score": 0.8,
+  "diff": [
+   "jacob→jakob"
+  ]
  },
  {
   "i": 35,
@@ -277,7 +394,10 @@
   "tts": "Alle sieben wurden entlassen.",
   "voice": "clone_611",
   "file": "line_35.mp3",
-  "duration": 1.78
+  "duration": 1.78,
+  "heard": "Alle sieben wurden entlassen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 36,
@@ -285,7 +405,12 @@
   "tts": "Jacob musste das Land binnen drei Tagen verlassen.",
   "voice": "clone_611",
   "file": "line_36.mp3",
-  "duration": 2.77
+  "duration": 2.77,
+  "heard": "Jakob musste das Land binnen drei Tagen verlassen.",
+  "score": 0.88,
+  "diff": [
+   "jacob→jakob"
+  ]
  },
  {
   "i": 37,
@@ -293,7 +418,10 @@
   "tts": "Ganz Deutschland feierte die „Göttinger Sieben“.",
   "voice": "clone_611",
   "file": "line_37.mp3",
-  "duration": 2.76
+  "duration": 2.76,
+  "heard": "Ganz Deutschland feierte die Göttinger 7.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 38,
@@ -301,7 +429,10 @@
   "tts": "Achtzehnhundertachtunddreißig begannen sie das Werk, das sie überleben sollte:",
   "voice": "clone_611",
   "file": "line_38.mp3",
-  "duration": 4.615
+  "duration": 4.615,
+  "heard": "1838 begannen sie das Werk, das sie überleben sollte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 39,
@@ -309,7 +440,10 @@
   "tts": "das Deutsche Wörterbuch.",
   "voice": "clone_611",
   "file": "line_39.mp3",
-  "duration": 1.634
+  "duration": 1.634,
+  "heard": "das Deutsche Wörterbuch.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 40,
@@ -317,7 +451,10 @@
   "tts": "Es sollte die Geschichte der deutschen Wörter erzählen,",
   "voice": "clone_611",
   "file": "line_40.mp3",
-  "duration": 2.837
+  "duration": 2.837,
+  "heard": "Es sollte die Geschichte der deutschen Wörter erzählen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 41,
@@ -325,7 +462,10 @@
   "tts": "von Luther bis Goethe.",
   "voice": "clone_611",
   "file": "line_41.mp3",
-  "duration": 1.393
+  "duration": 1.393,
+  "heard": "von Luther bis Goethe",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 42,
@@ -333,7 +473,10 @@
   "tts": "Wilhelm starb achtzehnhundertneunundfünfzig – er war beim Buchstaben De.",
   "voice": "clone_611",
   "file": "line_42.mp3",
-  "duration": 4.563
+  "duration": 4.563,
+  "heard": "Wilhelm starb 1859, er war beim Buch starbende.",
+  "score": 0.75,
+  "diff": []
  },
  {
   "i": 43,
@@ -341,7 +484,12 @@
   "tts": "Jacob arbeitete weiter, bis zu seinem Tod achtzehnhundertdreiundsechzig.",
   "voice": "clone_611",
   "file": "line_43.mp3",
-  "duration": 4.515
+  "duration": 4.515,
+  "heard": "Jakob arbeitete weiter bis zu seinem Tod 1863.",
+  "score": 0.88,
+  "diff": [
+   "jacob→jakob"
+  ]
  },
  {
   "i": 44,
@@ -349,7 +497,10 @@
   "tts": "Sein letztes Wort im Wörterbuch war „Frucht“.",
   "voice": "clone_611",
   "file": "line_44.mp3",
-  "duration": 2.804
+  "duration": 2.804,
+  "heard": "Sein letztes Wort im Wörterbuch war Frucht.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 45,
@@ -357,7 +508,10 @@
   "tts": "Andere führten es fort, über ein Jahrhundert lang.",
   "voice": "clone_611",
   "file": "line_45.mp3",
-  "duration": 2.825
+  "duration": 2.825,
+  "heard": "andere führten es fort über ein Jahrhundert lang.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 46,
@@ -365,7 +519,12 @@
   "tts": "Ihre Märchen gehören heute zum Weltdokumentenerbe der Unesko.",
   "voice": "clone_611",
   "file": "line_46.mp3",
-  "duration": 3.734
+  "duration": 3.734,
+  "heard": "Ihre Märchen gehören heute zum Weltdokumenten derwe der UNESCO.",
+  "score": 0.71,
+  "diff": [
+   "unesko→unesco"
+  ]
  },
  {
   "i": 47,
@@ -373,7 +532,10 @@
   "tts": "Und fast jedes beginnt mit denselben Worten:",
   "voice": "clone_611",
   "file": "line_47.mp3",
-  "duration": 2.697
+  "duration": 2.697,
+  "heard": "und fast jedes beginnt mit denselben Worten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 48,
@@ -381,6 +543,9 @@
   "tts": "„Es war einmal …“",
   "voice": "clone_611",
   "file": "line_48.mp3",
-  "duration": 1.105
+  "duration": 1.105,
+  "heard": "Es war einmal.",
+  "score": 1.0,
+  "diff": []
  }
 ]
