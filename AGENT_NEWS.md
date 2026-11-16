@@ -95,6 +95,12 @@ Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice and pictures
    Helden / und den Menschen vor den Gewehrläufen."): repetition in threes, contrast with "aber/doch".
 6. **Tone**: calm, factual, warm; few adjectives, no superlatives piled up, no clickbait, no address to the
    viewer, no call to like or subscribe. Plain words a listener understands at once.
+   **Speak as a German to Germans** (owner, 16/11: *"hãy tỏ ra là 1 ng đức chứ k phải ng nc ngoài viết về đức"*):
+   never look at Germany from outside. Not "Fast jeder in Deutschland kennt …", "die Deutschen sagen …", "Jedes
+   Kind in Deutschland …" but "Diese Zeilen kennt sicher jeder.", "Wir alle kennen …", "Viele seiner Verse sagen
+   wir noch heute", "das viele von uns in der Schule auswendig lernen mussten". Do not explain what every German
+   knows (what Max und Moritz or the Brothers Grimm are, where Weimar is); a historical "ganz Deutschland feierte
+   …" is fine.
 7. **End**: on a line that stays open or turns back to the hook ("Die Ehe hielt 48 Jahre. / Doch als sich seine
    Ansichten über Glauben und Gesellschaft änderten, / geriet auch sie in schwere Stürme.").
 Write it in German directly (not translated from Vietnamese), in this order and this voice.

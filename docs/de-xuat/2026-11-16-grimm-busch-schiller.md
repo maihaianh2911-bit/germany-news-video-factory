@@ -24,7 +24,7 @@ Duyệt cả ba thì nhắn "ok"; muốn bỏ hay sửa video nào thì nói s�
 
 | # | Lời đọc (tiếng Đức) | Nghĩa |
 |---|---|---|
-| 1 | Jedes Kind in Deutschland kennt ihre Geschichten: | Mọi đứa trẻ ở Đức đều biết những câu chuyện của họ: |
+| 1 | Wir alle kennen ihre Geschichten: | Ai trong chúng ta cũng biết những câu chuyện của họ: |
 | 2 | Hänsel und Gretel, Rotkäppchen, Schneewittchen. | Hänsel và Gretel, Cô bé quàng khăn đỏ, Bạch Tuyết. |
 | 3 | Doch Jacob und Wilhelm Grimm wollten gar keine Kinderbücher schreiben. | Nhưng Jacob và Wilhelm Grimm vốn không hề muốn viết sách thiếu nhi. |
 | 4 | Sie wollten retten, was die Leute sich erzählten, | Họ muốn cứu lấy những gì người ta kể cho nhau nghe, |
@@ -93,7 +93,7 @@ Duyệt cả ba thì nhắn "ok"; muốn bỏ hay sửa video nào thì nói s�
 | # | Lời đọc (tiếng Đức) | Nghĩa |
 |---|---|---|
 | 1 | „Dieses war der erste Streich, doch der zweite folgt sogleich.“ | „Đây là trò nghịch thứ nhất, trò thứ hai tới ngay sau.“ |
-| 2 | Fast jeder in Deutschland kennt diese Zeilen. | Gần như ai ở Đức cũng biết câu thơ này. |
+| 2 | Diese Zeilen kennt sicher jeder. | Chắc hẳn ai cũng biết câu thơ này. |
 | 3 | Ihr Erfinder, Wilhelm Busch, bekam für Max und Moritz ein einziges Honorar: | Người viết ra nó, Wilhelm Busch, chỉ nhận một lần tiền cho Max và Moritz: |
 | 4 | 1000 Gulden. | 1000 đồng Gulden. |
 | 5 | Für den Verleger wurde das Buch ein Vermögen. | Còn nhà xuất bản thì giàu lên nhờ cuốn sách. |
@@ -119,7 +119,7 @@ Duyệt cả ba thì nhắn "ok"; muốn bỏ hay sửa video nào thì nói s�
 | 25 | Dann wurde es ein Klassiker, übersetzt in viele Sprachen. | Rồi nó thành kinh điển, được dịch ra nhiều thứ tiếng. |
 | 26 | In Amerika entstanden daraus die Katzenjammer Kids, | Ở Mỹ, từ đó ra đời bộ truyện Katzenjammer Kids, |
 | 27 | einer der ersten Comics der Welt. | một trong những truyện tranh đầu tiên của thế giới. |
-| 28 | Viele seiner Verse sagen die Deutschen bis heute: | Nhiều câu thơ của ông người Đức vẫn nói tới hôm nay: |
+| 28 | Viele seiner Verse sagen wir noch heute: | Nhiều câu thơ của ông chúng ta vẫn nói tới hôm nay: |
 | 29 | „Vater werden ist nicht schwer, Vater sein dagegen sehr.“ | „Làm cha thì chẳng khó gì, làm một người cha thì khó lắm.“ |
 | 30 | Oder: „Wer Sorgen hat, hat auch Likör.“ | Hay: „Ai có buồn lo, thì cũng có rượu mùi.“ |
 | 31 | Hinter dem Spott steckte ein ernster Mensch. | Đằng sau những câu chế giễu là một con người nghiêm nghị. |
@@ -190,7 +190,7 @@ Duyệt cả ba thì nhắn "ok"; muốn bỏ hay sửa video nào thì nói s�
 | 34 | In seinen letzten Jahren schrieb Schiller Stück um Stück: | Những năm cuối đời, Schiller viết hết vở này đến vở khác: |
 | 35 | Wallenstein, Maria Stuart, Die Jungfrau von Orleans, Wilhelm Tell. | Wallenstein, Maria Stuart, Trinh nữ thành Orléans, Wilhelm Tell. |
 | 36 | Und „Das Lied von der Glocke“, | Và „Bài ca quả chuông“, |
-| 37 | das Generationen von Schülern auswendig lernten. | mà bao thế hệ học trò phải học thuộc lòng. |
+| 37 | das viele von uns in der Schule auswendig lernen mussten. | mà nhiều người trong chúng ta từng phải học thuộc ở trường. |
 | 38 | Am 9. Mai 1805 starb Friedrich Schiller in Weimar, mit 45 Jahren. | Ngày 9 tháng 5 năm 1805, Friedrich Schiller mất ở Weimar, mới 45 tuổi. |
 | 39 | Er wurde nachts in einer Gemeinschaftsgruft beigesetzt. | Ông được chôn trong đêm, ở một hầm mộ chung. |
 | 40 | 21 Jahre später suchte man dort nach seinem Schädel | 21 năm sau, người ta tìm hộp sọ của ông ở đó |
