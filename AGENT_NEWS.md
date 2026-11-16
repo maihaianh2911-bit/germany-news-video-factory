@@ -1,5 +1,12 @@
 # News videos (real pictures) — runbook for Claude
 
+> **Iron rules (owner, 16/11/2026; full text at the top of `CLAUDE.md`).** (1) Voice, script lines, subtitles and
+> on-screen text are in **German**, never another language; check before the voice step and on the finished video.
+> (2) **No video under 60 seconds**: estimate before the voice step and read the real speech length after it; if it
+> would be under 60 seconds, write the script longer (true facts on the same subject, nothing invented), say on the
+> issue what was added, then go on. Never render or deliver under 60 seconds, except a trial or sample video (the
+> owner says so, or the title or notes say `thử`, `mẫu`, `test`, `demo`).
+
 The owner (Vietnamese, not technical) writes the script and sends it in a chat (or opens an issue `[Tin tức] …`).
 The result is a vertical short (1080×1920) in German: real, free-to-use pictures with slow camera moves on top,
 subtitles timed to a German voice below (`src/news/NewsV.tsx`). **You** choose and check every picture by looking
