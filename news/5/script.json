@@ -1,0 +1,125 @@
+{
+ "title": "Wilhelm Busch",
+ "voice": "",
+ "lines": [
+  "„Dieses war der erste Streich, doch der zweite folgt sogleich.“",
+  "Diese Zeilen kennt sicher jeder.",
+  "Ihr Erfinder, Wilhelm Busch, bekam für Max und Moritz ein einziges Honorar:",
+  "1000 Gulden.",
+  "Für den Verleger wurde das Buch ein Vermögen.",
+  "Und Busch selbst hielt sich nicht für einen Dichter,",
+  "sondern für einen gescheiterten Maler.",
+  "Rund 1000 Ölbilder malte er – und zeigte sie fast niemandem.",
+  "Geboren wurde er 1832 in Wiedensahl, einem Dorf in Niedersachsen.",
+  "Er war das älteste von sieben Kindern eines Krämers.",
+  "Mit neun schickten ihn die Eltern zu seinem Onkel, einem Pfarrer.",
+  "Dort, in Ebergötzen, fand er seinen besten Freund:",
+  "Erich Bachmann, den Sohn des Müllers.",
+  "Der Vater wollte einen Ingenieur aus ihm machen.",
+  "Busch begann ein Studium des Maschinenbaus in Hannover – und brach ab.",
+  "Er ging an die Kunstakademien in Düsseldorf und Antwerpen.",
+  "In Antwerpen sah er die Bilder der alten niederländischen Meister",
+  "und verlor den Mut: So gut würde er nie malen.",
+  "In München begann er, Bildergeschichten für Zeitschriften zu zeichnen.",
+  "1865 erschien Max und Moritz.",
+  "Zwei Jungen spielen einem ganzen Dorf böse Streiche:",
+  "der Witwe Bolte, dem Schneider Böck, dem Lehrer Lämpel.",
+  "Am Ende landen sie in der Mühle – und die Enten fressen sie auf.",
+  "Zuerst verkaufte sich das Buch nur langsam.",
+  "Dann wurde es ein Klassiker, übersetzt in viele Sprachen.",
+  "In Amerika entstanden daraus die Katzenjammer Kids,",
+  "einer der ersten Comics der Welt.",
+  "Viele seiner Verse sagen wir noch heute:",
+  "„Vater werden ist nicht schwer, Vater sein dagegen sehr.“",
+  "Oder: „Wer Sorgen hat, hat auch Likör.“",
+  "Hinter dem Spott steckte ein ernster Mensch.",
+  "Er las Schopenhauer und Darwin",
+  "und mied die Gesellschaft der großen Städte.",
+  "Er heiratete nie.",
+  "Er lebte bei seiner Schwester Fanny und ihren Söhnen auf dem Land.",
+  "Dort malte er, Jahr für Jahr, kleine Bilder in Öl:",
+  "Landschaften, Bauern, Wirtshausszenen.",
+  "Ausgestellt hat er sie nie.",
+  "Am 9. Januar 1908 starb Wilhelm Busch, mit 75 Jahren.",
+  "Heute hängen seine Bilder im Museum.",
+  "Doch berühmt bleibt er für zwei Jungen, die nie brav sein wollten.",
+  "„Gott sei Dank! Nun ist’s vorbei mit der Übeltäterei!“"
+ ],
+ "tts": {
+  "4": "Tausend Gulden.",
+  "8": "Rund tausend Ölbilder malte er – und zeigte sie fast niemandem.",
+  "9": "Geboren wurde er achtzehnhundertzweiunddreißig in Wiedensahl, einem Dorf in Niedersachsen.",
+  "20": "Achtzehnhundertfünfundsechzig erschien Max und Moritz.",
+  "39": "Am neunten Januar neunzehnhundertacht starb Wilhelm Busch, mit fünfundsiebzig Jahren."
+ },
+ "chapters": [
+  {
+   "lines": [
+    1,
+    8
+   ]
+  },
+  {
+   "lines": [
+    9,
+    13
+   ]
+  },
+  {
+   "lines": [
+    14,
+    19
+   ]
+  },
+  {
+   "lines": [
+    20,
+    27
+   ]
+  },
+  {
+   "lines": [
+    28,
+    33
+   ]
+  },
+  {
+   "lines": [
+    34,
+    42
+   ]
+  }
+ ],
+ "ambience": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "music": {
+  "key": "G",
+  "mode": "major",
+  "bpm": 80,
+  "energy": 0.32
+ },
+ "queries": [
+  "incategory:\"Wilhelm Busch\"",
+  "Wilhelm Busch Selbstbildnis",
+  "Wilhelm Busch photograph",
+  "Max und Moritz Busch 1865",
+  "Max und Moritz Witwe Bolte",
+  "Max und Moritz Lehrer Lämpel",
+  "Max und Moritz Mühle",
+  "Wilhelm Busch Geburtshaus Wiedensahl",
+  "Wilhelm-Busch-Mühle Ebergötzen",
+  "Wilhelm Busch Gemälde",
+  "Wilhelm Busch Fromme Helene",
+  "Katzenjammer Kids 1897",
+  "Wilhelm Busch Mechtshausen",
+  "Fliegende Blätter Busch",
+  "Adriaen Brouwer Gemälde",
+  "Arthur Schopenhauer"
+ ]
+}

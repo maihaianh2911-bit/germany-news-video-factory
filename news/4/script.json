@@ -1,0 +1,138 @@
+{
+ "title": "Die Brüder Grimm",
+ "voice": "",
+ "lines": [
+  "Wir alle kennen ihre Geschichten:",
+  "Hänsel und Gretel, Rotkäppchen, Schneewittchen.",
+  "Doch Jacob und Wilhelm Grimm wollten gar keine Kinderbücher schreiben.",
+  "Sie wollten retten, was die Leute sich erzählten,",
+  "bevor es verloren ging.",
+  "Und ihr größtes Werk war gar nicht das Märchenbuch,",
+  "sondern ein Wörterbuch.",
+  "Fertig wurde es erst 1961 – fast 100 Jahre nach ihrem Tod.",
+  "Jacob wurde 1785 geboren, Wilhelm ein Jahr später, beide in Hanau.",
+  "Der Vater war Amtmann im hessischen Steinau.",
+  "Als er starb, war Jacob elf.",
+  "Die Familie geriet in Not.",
+  "Die Brüder hielten zusammen – ein ganzes Leben lang.",
+  "Sie lernten zusammen, arbeiteten zusammen",
+  "und lebten fast immer unter einem Dach.",
+  "In Marburg studierten beide Jura.",
+  "Ihr Professor Friedrich Carl von Savigny zeigte ihnen alte Handschriften.",
+  "Ab 1806 schrieben sie auf, was man sich in Hessen erzählte.",
+  "Viele Märchen kamen von jungen Frauen aus Kassel.",
+  "Einige erzählte ihnen Dortchen Wild, die Wilhelm später heiratete.",
+  "Und rund 40 die Frau eines Schneiders: Dorothea Viehmann.",
+  "Zu Weihnachten 1812 erschien der erste Band: 86 Märchen.",
+  "Ein Kinderbuch war das nicht.",
+  "Es hatte Anmerkungen für Gelehrte – und viel Grausamkeit.",
+  "Bei Schneewittchen war es noch die eigene Mutter,",
+  "die das Kind töten wollte.",
+  "Wilhelm überarbeitete die Märchen immer wieder,",
+  "machte sie sanfter, frommer, kindgerechter.",
+  "Aus der Mutter wurde die böse Stiefmutter.",
+  "Die letzte Ausgabe, 1857, hatte 200 Märchen.",
+  "1837 kam der Bruch.",
+  "Der König von Hannover hob die Verfassung auf.",
+  "Sieben Professoren in Göttingen protestierten,",
+  "darunter Jacob und Wilhelm Grimm.",
+  "Alle sieben wurden entlassen.",
+  "Jacob musste das Land binnen drei Tagen verlassen.",
+  "Ganz Deutschland feierte die „Göttinger Sieben“.",
+  "1838 begannen sie das Werk, das sie überleben sollte:",
+  "das Deutsche Wörterbuch.",
+  "Es sollte die Geschichte der deutschen Wörter erzählen,",
+  "von Luther bis Goethe.",
+  "Wilhelm starb 1859 – er war beim Buchstaben D.",
+  "Jacob arbeitete weiter, bis zu seinem Tod 1863.",
+  "Sein letztes Wort im Wörterbuch war „Frucht“.",
+  "Andere führten es fort, über ein Jahrhundert lang.",
+  "Ihre Märchen gehören heute zum Weltdokumentenerbe der UNESCO.",
+  "Und fast jedes beginnt mit denselben Worten:",
+  "„Es war einmal …“"
+ ],
+ "tts": {
+  "8": "Fertig wurde es erst neunzehnhunderteinundsechzig – fast hundert Jahre nach ihrem Tod.",
+  "9": "Jacob wurde siebzehnhundertfünfundachtzig geboren, Wilhelm ein Jahr später, beide in Hanau.",
+  "17": "Ihr Professor Friedrich Carl von Sawinji zeigte ihnen alte Handschriften.",
+  "18": "Ab achtzehnhundertsechs schrieben sie auf, was man sich in Hessen erzählte.",
+  "21": "Und rund vierzig die Frau eines Schneiders: Dorothea Viehmann.",
+  "22": "Zu Weihnachten achtzehnhundertzwölf erschien der erste Band: sechsundachtzig Märchen.",
+  "30": "Die letzte Ausgabe, achtzehnhundertsiebenundfünfzig, hatte zweihundert Märchen.",
+  "31": "Achtzehnhundertsiebenunddreißig kam der Bruch.",
+  "38": "Achtzehnhundertachtunddreißig begannen sie das Werk, das sie überleben sollte:",
+  "42": "Wilhelm starb achtzehnhundertneunundfünfzig – er war beim Buchstaben De.",
+  "43": "Jacob arbeitete weiter, bis zu seinem Tod achtzehnhundertdreiundsechzig.",
+  "46": "Ihre Märchen gehören heute zum Weltdokumentenerbe der Unesko."
+ },
+ "chapters": [
+  {
+   "lines": [
+    1,
+    8
+   ]
+  },
+  {
+   "lines": [
+    9,
+    15
+   ]
+  },
+  {
+   "lines": [
+    16,
+    21
+   ]
+  },
+  {
+   "lines": [
+    22,
+    30
+   ]
+  },
+  {
+   "lines": [
+    31,
+    37
+   ]
+  },
+  {
+   "lines": [
+    38,
+    48
+   ]
+  }
+ ],
+ "ambience": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "music": {
+  "key": "D",
+  "mode": "minor",
+  "bpm": 72,
+  "energy": 0.3
+ },
+ "queries": [
+  "incategory:\"Brothers Grimm\"",
+  "Jacob Grimm portrait",
+  "Wilhelm Grimm portrait",
+  "Brüder Grimm Jerichau-Baumann 1855",
+  "Brüder Grimm Haus Steinau",
+  "Dorothea Viehmann",
+  "Kinder- und Hausmärchen 1812",
+  "Göttinger Sieben",
+  "Deutsches Wörterbuch Grimm",
+  "Otto Ubbelohde Märchen",
+  "Ludwig Richter Hänsel und Gretel",
+  "Rotkäppchen Illustration",
+  "Dortchen Wild",
+  "Friedrich Carl von Savigny",
+  "Ernst August König Hannover",
+  "Brüder Grimm Nationaldenkmal Hanau"
+ ]
+}

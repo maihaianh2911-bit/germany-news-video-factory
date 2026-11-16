@@ -1,0 +1,147 @@
+{
+ "title": "Friedrich Schiller",
+ "voice": "",
+ "lines": [
+  "Friedrich Schiller schrieb die „Ode an die Freude“.",
+  "Beethoven machte sie unsterblich, Europa ihre Melodie zu seiner Hymne.",
+  "Doch Schillers eigenes Leben war selten voller Freude.",
+  "Er floh vor einem Herzog, lebte in Armut, war fast immer krank.",
+  "Mit 45 Jahren war er tot.",
+  "Und sein Schädel?",
+  "Lag über 180 Jahre in einer Fürstengruft –",
+  "bis ein Gentest zeigte: Er war gar nicht von Schiller.",
+  "Geboren wurde er am 10. November 1759 in Marbach am Neckar.",
+  "Er wollte Pfarrer werden.",
+  "Doch der Herzog von Württemberg",
+  "holte den 13-Jährigen in seine Militärschule.",
+  "Uniform, Drill und strenge Regeln – sieben Jahre lang.",
+  "Heimlich schrieb er ein Theaterstück: Die Räuber.",
+  "1782 wurde es in Mannheim uraufgeführt.",
+  "Ein Zuschauer schrieb: „Das Theater glich einem Irrenhause.“",
+  "Schiller war ohne Erlaubnis hingefahren.",
+  "Der Herzog ließ ihn 14 Tage einsperren",
+  "und verbot ihm, etwas anderes als medizinische Schriften zu verfassen.",
+  "Im September 1782 floh Schiller nachts aus Stuttgart,",
+  "während der Hof ein großes Fest feierte.",
+  "Verschuldet und arm, fand er in Leipzig und Dresden Freunde.",
+  "Dort schrieb er 1785 ein Gedicht über die Freude und die Freundschaft:",
+  "„Freude, schöner Götterfunken“.",
+  "Fast 40 Jahre später vertonte es Beethoven.",
+  "1789 wurde Schiller Professor für Geschichte in Jena.",
+  "Zu seiner ersten Vorlesung kamen so viele Studenten,",
+  "dass alle in den größten Hörsaal der Stadt umziehen mussten.",
+  "Er heiratete Charlotte von Lengefeld.",
+  "Doch 1791 erkrankte er schwer an der Lunge.",
+  "Gesund wurde er nie wieder.",
+  "1794 begann die Freundschaft mit Goethe,",
+  "eine Freundschaft, die die deutsche Literatur prägte.",
+  "In seinen letzten Jahren schrieb Schiller Stück um Stück:",
+  "Wallenstein, Maria Stuart, Die Jungfrau von Orleans, Wilhelm Tell.",
+  "Und „Das Lied von der Glocke“,",
+  "das viele von uns in der Schule auswendig lernen mussten.",
+  "Am 9. Mai 1805 starb Friedrich Schiller in Weimar, mit 45 Jahren.",
+  "Er wurde nachts in einer Gemeinschaftsgruft beigesetzt.",
+  "21 Jahre später suchte man dort nach seinem Schädel",
+  "und brachte ihn in die Fürstengruft,",
+  "wo später auch Goethe beigesetzt wurde.",
+  "2008 zeigte ein Gentest: Der Schädel stammte nicht von Schiller.",
+  "Sein Sarg in der Fürstengruft ist seitdem leer.",
+  "Doch seine Ode erklingt bis heute in ganz Europa:",
+  "„Alle Menschen werden Brüder.“"
+ ],
+ "tts": {
+  "5": "Mit fünfundvierzig Jahren war er tot.",
+  "7": "Lag über hundertachtzig Jahre in einer Fürstengruft –",
+  "9": "Geboren wurde er am zehnten November siebzehnhundertneunundfünfzig in Marbach am Neckar.",
+  "12": "holte den Dreizehnjährigen in seine Militärschule.",
+  "15": "Siebzehnhundertzweiundachtzig wurde es in Mannheim uraufgeführt.",
+  "18": "Der Herzog ließ ihn vierzehn Tage einsperren",
+  "20": "Im September siebzehnhundertzweiundachtzig floh Schiller nachts aus Stuttgart,",
+  "23": "Dort schrieb er siebzehnhundertfünfundachtzig ein Gedicht über die Freude und die Freundschaft:",
+  "25": "Fast vierzig Jahre später vertonte es Beethoven.",
+  "26": "Siebzehnhundertneunundachtzig wurde Schiller Professor für Geschichte in Jena.",
+  "30": "Doch siebzehnhunderteinundneunzig erkrankte er schwer an der Lunge.",
+  "32": "Siebzehnhundertvierundneunzig begann die Freundschaft mit Goethe,",
+  "38": "Am neunten Mai achtzehnhundertfünf starb Friedrich Schiller in Weimar, mit fünfundvierzig Jahren.",
+  "40": "Einundzwanzig Jahre später suchte man dort nach seinem Schädel",
+  "43": "Zweitausendacht zeigte ein Gentest: Der Schädel stammte nicht von Schiller."
+ },
+ "chapters": [
+  {
+   "lines": [
+    1,
+    8
+   ]
+  },
+  {
+   "lines": [
+    9,
+    14
+   ]
+  },
+  {
+   "lines": [
+    15,
+    21
+   ]
+  },
+  {
+   "lines": [
+    22,
+    25
+   ]
+  },
+  {
+   "lines": [
+    26,
+    31
+   ]
+  },
+  {
+   "lines": [
+    32,
+    37
+   ]
+  },
+  {
+   "lines": [
+    38,
+    46
+   ]
+  }
+ ],
+ "ambience": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "music": {
+  "key": "E",
+  "mode": "minor",
+  "bpm": 70,
+  "energy": 0.3
+ },
+ "queries": [
+  "incategory:\"Portraits of Friedrich Schiller\"",
+  "Schiller Geburtshaus Marbach",
+  "Karlsschule Stuttgart",
+  "Herzog Carl Eugen Württemberg",
+  "Die Räuber Schiller 1781",
+  "Nationaltheater Mannheim 1782",
+  "Schillers Flucht aus Stuttgart",
+  "Christian Gottfried Körner",
+  "Schillerhaus Leipzig Gohlis",
+  "Beethoven Stieler 1820",
+  "Charlotte von Lengefeld",
+  "Schillerhaus Weimar",
+  "Schiller Totenmaske",
+  "Fürstengruft Weimar",
+  "Das Lied von der Glocke Illustration",
+  "Schiller Kügelgen",
+  "Schiller Jena"
+ ]
+}
