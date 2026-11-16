@@ -1,0 +1,318 @@
+{
+ "images": {
+  "mm_huehner": {
+   "src": "1/4-7.jpg",
+   "mode": "keep"
+  },
+  "busch_1878": {
+   "src": "1/1-5.jpg",
+   "mode": "keep"
+  },
+  "busch_bettler": {
+   "src": "1/2-3.jpg",
+   "mode": "keep"
+  },
+  "buschhaus": {
+   "src": "1/1-4.jpg",
+   "mode": "keep"
+  },
+  "muehle_ebergoetzen": {
+   "src": "1/9-6.jpg",
+   "mode": "keep"
+  },
+  "busch_palette": {
+   "src": "1/2-2.jpg",
+   "mode": "keep"
+  },
+  "brouwer_raucher": {
+   "src": "1/15-1.jpg",
+   "mode": "keep"
+  },
+  "fliegende_blaetter": {
+   "src": "1/14-5.jpg",
+   "mode": "keep"
+  },
+  "mm_schornstein": {
+   "src": "1/4-6.jpg",
+   "mode": "keep"
+  },
+  "mm_bruecke": {
+   "src": "1/4-2.jpg",
+   "mode": "keep"
+  },
+  "katzenjammer": {
+   "src": "1/12-4.jpg",
+   "mode": "keep"
+  },
+  "busch_weinglas": {
+   "src": "1/2-1.jpg",
+   "mode": "keep"
+  },
+  "busch_alt": {
+   "src": "1/3-3.jpg",
+   "mode": "keep"
+  },
+  "schopenhauer": {
+   "src": "1/16-8.jpg",
+   "mode": "keep"
+  },
+  "bild_scheune": {
+   "src": "1/10-6.jpg",
+   "mode": "keep"
+  },
+  "bild_knabe": {
+   "src": "1/10-7.jpg",
+   "mode": "keep"
+  },
+  "busch_1905": {
+   "src": "1/1-7.jpg",
+   "mode": "keep"
+  },
+  "bild_trinker": {
+   "src": "1/13-7.jpg",
+   "mode": "keep"
+  },
+  "mm_jubel": {
+   "src": "1/5-1.jpg",
+   "mode": "keep"
+  },
+  "mm_laempel": {
+   "src": "1/6-1.jpg",
+   "mode": "keep"
+  },
+  "mm_bauer": {
+   "src": "1/4-1.jpg",
+   "mode": "keep"
+  }
+ },
+ "chapters": [
+  {
+   "pics": [
+    {
+     "img": "mm_huehner",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu thơ sau trò nghịch thứ nhất: lướt qua bầy gà của bà góa Bolte treo trên cành"
+    },
+    {
+     "at": 3,
+     "img": "busch_1878",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu nhắc tên Wilhelm Busch và tiền nhuận bút: ảnh chụp ông năm 1878"
+    },
+    {
+     "at": 6,
+     "img": "busch_bettler",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.2
+     ],
+     "why": "câu ông tự coi là họa sĩ thất bại: tranh tự họa của chính ông"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "buschhaus",
+     "move": "luot-phai",
+     "focus": [
+      0.45,
+      0.6
+     ],
+     "why": "câu ông sinh ở Wiedensahl: lướt dọc ngôi nhà ở làng"
+    },
+    {
+     "at": 11,
+     "img": "muehle_ebergoetzen",
+     "move": "nang-len",
+     "focus": [
+      0.55,
+      0.5
+     ],
+     "why": "câu ở Ebergötzen, bạn là con ông chủ cối xay: nâng lên dọc ngôi nhà cối xay"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "busch_palette",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.25
+     ],
+     "why": "câu bỏ học kỹ sư, đi học vẽ: tự họa cầm bảng màu"
+    },
+    {
+     "at": 17,
+     "img": "brouwer_raucher",
+     "move": "chi-tiet",
+     "focus": [
+      0.42,
+      0.3
+     ],
+     "why": "câu thấy tranh các bậc thầy Hà Lan: soi vào gương mặt trong tranh Brouwer"
+    },
+    {
+     "at": 19,
+     "img": "fliegende_blaetter",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.45
+     ],
+     "why": "câu vẽ truyện tranh cho báo ở München: trang báo Fliegende Blätter năm 1863"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "mm_schornstein",
+     "move": "ha-xuong",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu hai cậu bé bày trò với cả làng: từ mái nhà hạ xuống bếp bà góa Bolte"
+    },
+    {
+     "at": 22,
+     "img": "mm_laempel",
+     "move": "chi-tiet",
+     "focus": [
+      0.45,
+      0.35
+     ],
+     "why": "câu kể tên những người bị chơi khăm: soi vào gương mặt đen sì của thầy Lämpel sau vụ nổ tẩu"
+    },
+    {
+     "at": 23,
+     "img": "mm_bauer",
+     "move": "tien-gan",
+     "focus": [
+      0.8,
+      0.45
+     ],
+     "why": "câu hai cậu bị đưa vào cối xay: tiến gần bác nông dân xách bao có hai cậu bên trong"
+    },
+    {
+     "at": 24,
+     "img": "mm_bruecke",
+     "move": "troi-nhe",
+     "focus": [
+      0.52,
+      0.45
+     ],
+     "why": "câu nối 'lúc đầu bán chậm, rồi thành kinh điển': trôi nhẹ về hai cậu bé đang cưa cầu"
+    },
+    {
+     "at": 26,
+     "img": "katzenjammer",
+     "move": "ha-xuong",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu Katzenjammer Kids ở Mỹ: hạ dọc trang truyện tranh năm 1901"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "busch_weinglas",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "hai câu thơ thành câu nói hằng ngày: tự họa với ly rượu"
+    },
+    {
+     "at": 31,
+     "img": "busch_alt",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.3
+     ],
+     "why": "câu 'một con người nghiêm nghị': ảnh Busch lúc về già"
+    },
+    {
+     "at": 32,
+     "img": "schopenhauer",
+     "move": "troi-nhe",
+     "focus": [
+      0.42,
+      0.33
+     ],
+     "why": "câu ông đọc Schopenhauer: ảnh nhà triết học"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "bild_scheune",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu sống ở nông thôn với chị gái: lướt qua bức tranh nhìn từ nhà kho ra đồng do ông vẽ"
+    },
+    {
+     "at": 36,
+     "img": "bild_knabe",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu ông vẽ tranh sơn dầu nhỏ, không đem triển lãm: chân dung cậu bé do ông vẽ"
+    },
+    {
+     "at": 39,
+     "img": "busch_1905",
+     "move": "lui-ra",
+     "focus": [
+      0.55,
+      0.3
+     ],
+     "why": "câu ông mất năm 1908: lùi ra từ ảnh chụp ông năm 1905"
+    },
+    {
+     "at": 40,
+     "img": "bild_trinker",
+     "move": "dung-yen",
+     "focus": [
+      0.55,
+      0.35
+     ],
+     "why": "câu tranh ông nay treo trong bảo tàng: bức Người say ngủ, giữ yên như ngắm tranh"
+    },
+    {
+     "at": 41,
+     "img": "mm_jubel",
+     "move": "tien-gan",
+     "focus": [
+      0.78,
+      0.4
+     ],
+     "why": "câu cuối về hai cậu bé chẳng chịu ngoan: tiến gần hai cậu đang reo mừng"
+    }
+   ]
+  }
+ ]
+}
