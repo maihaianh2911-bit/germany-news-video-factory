@@ -1,5 +1,12 @@
 # German literature videos (real pictures) — runbook for Claude
 
+> **Iron rules (owner, 16/11/2026; full text at the top of `CLAUDE.md`).** (1) Voice, script lines, subtitles and
+> on-screen text are in **German**, never another language; check before the voice step and on the finished video.
+> (2) **No video under 60 seconds**: estimate before the voice step and read the real speech length after it; if it
+> would be under 60 seconds, write the script longer (true facts on the same subject, nothing invented), say on the
+> issue what was added, then go on. Never render or deliver under 60 seconds, except a trial or sample video (the
+> owner says so, or the title or notes say `thử`, `mẫu`, `test`, `demo`).
+
 The channel makes vertical shorts (1080×1920) **in German about German-language literature**: the life of a
 writer, a work and how it came to be. Owner's decision 14/11/2026 (it replaced the news channel). The model is
 the owner's sample, a Vietnamese video on Lev Tolstoy (`00-video-mau/van-hoc-tolstoy.md`: its full text with
