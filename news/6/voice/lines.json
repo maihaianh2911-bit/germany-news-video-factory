@@ -5,7 +5,10 @@
   "tts": "Friedrich Schiller schrieb die „Ode an die Freude“.",
   "voice": "clone_611",
   "file": "line_01.mp3",
-  "duration": 3.016
+  "duration": 3.016,
+  "heard": "Friedrich Schiller schrieb die Ode an die Freude.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 2,
@@ -13,7 +16,10 @@
   "tts": "Beethoven machte sie unsterblich, Europa ihre Melodie zu seiner Hymne.",
   "voice": "clone_611",
   "file": "line_02.mp3",
-  "duration": 4.46
+  "duration": 4.46,
+  "heard": "Beethoven machte sie unsterblich Europa ihre Melodie zu seiner Hymne.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 3,
@@ -21,7 +27,10 @@
   "tts": "Doch Schillers eigenes Leben war selten voller Freude.",
   "voice": "clone_611",
   "file": "line_03.mp3",
-  "duration": 3.185
+  "duration": 3.185,
+  "heard": "Doch Schillers eigenes Leben war selten voller Freude.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 4,
@@ -29,7 +38,10 @@
   "tts": "Er floh vor einem Herzog, lebte in Armut, war fast immer krank.",
   "voice": "clone_611",
   "file": "line_04.mp3",
-  "duration": 3.819
+  "duration": 3.819,
+  "heard": "Er floh vor einem Herzog, lebte in Armut, war fast immer krank.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 5,
@@ -37,7 +49,10 @@
   "tts": "Mit fünfundvierzig Jahren war er tot.",
   "voice": "clone_611",
   "file": "line_05.mp3",
-  "duration": 2.274
+  "duration": 2.274,
+  "heard": "Mit 45 Jahren war er tot.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 6,
@@ -45,7 +60,10 @@
   "tts": "Und sein Schädel?",
   "voice": "clone_611",
   "file": "line_06.mp3",
-  "duration": 1.068
+  "duration": 1.068,
+  "heard": "und sein Schädel.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 7,
@@ -53,7 +71,10 @@
   "tts": "Lag über hundertachtzig Jahre in einer Fürstengruft –",
   "voice": "clone_611",
   "file": "line_07.mp3",
-  "duration": 3.252
+  "duration": 3.252,
+  "heard": "lag über 180 Jahre in einer Fürstengeruft.",
+  "score": 0.86,
+  "diff": []
  },
  {
   "i": 8,
@@ -61,7 +82,10 @@
   "tts": "bis ein Gentest zeigte: Er war gar nicht von Schiller.",
   "voice": "clone_611",
   "file": "line_08.mp3",
-  "duration": 3.207
+  "duration": 3.207,
+  "heard": "bis ein Gentes zeigte, er war gar nicht von Schiller.",
+  "score": 0.9,
+  "diff": []
  },
  {
   "i": 9,
@@ -69,7 +93,10 @@
   "tts": "Geboren wurde er am zehnten November siebzehnhundertneunundfünfzig in Marbach am Neckar.",
   "voice": "clone_611",
   "file": "line_09.mp3",
-  "duration": 5.458
+  "duration": 5.458,
+  "heard": "Geboren wurde er am 10. November 1759 in Marbach am Neckar.",
+  "score": 0.91,
+  "diff": []
  },
  {
   "i": 10,
@@ -77,7 +104,10 @@
   "tts": "Er wollte Pfarrer werden.",
   "voice": "clone_611",
   "file": "line_10.mp3",
-  "duration": 1.439
+  "duration": 1.439,
+  "heard": "Er wollte Pfarrer werden.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 11,
@@ -85,7 +115,10 @@
   "tts": "Doch der Herzog von Württemberg",
   "voice": "clone_611",
   "file": "line_11.mp3",
-  "duration": 1.989
+  "duration": 1.989,
+  "heard": "doch der Herzog von Württemberg.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 12,
@@ -93,7 +126,10 @@
   "tts": "holte den Dreizehnjährigen in seine Militärschule.",
   "voice": "clone_611",
   "file": "line_12.mp3",
-  "duration": 3.031
+  "duration": 3.031,
+  "heard": "holte den 13-Jährigen in seine Militärschule.",
+  "score": 0.77,
+  "diff": []
  },
  {
   "i": 13,
@@ -101,7 +137,10 @@
   "tts": "Uniform, Drill und strenge Regeln – sieben Jahre lang.",
   "voice": "clone_611",
   "file": "line_13.mp3",
-  "duration": 3.24
+  "duration": 3.24,
+  "heard": "Uniform, Drill und strenge Regeln sieben Jahre lang.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 14,
@@ -109,7 +148,10 @@
   "tts": "Heimlich schrieb er ein Theaterstück: Die Räuber.",
   "voice": "clone_611",
   "file": "line_14.mp3",
-  "duration": 2.947
+  "duration": 2.947,
+  "heard": "Heimlich schrieb er ein Theaterstück, die Räuber.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 15,
@@ -117,7 +159,10 @@
   "tts": "Siebzehnhundertzweiundachtzig wurde es in Mannheim uraufgeführt.",
   "voice": "clone_611",
   "file": "line_15.mp3",
-  "duration": 3.942
+  "duration": 3.942,
+  "heard": "1782 wurde es in Mannheim-Uhr aufgeführt.",
+  "score": 0.77,
+  "diff": []
  },
  {
   "i": 16,
@@ -125,7 +170,12 @@
   "tts": "Ein Zuschauer schrieb: „Das Theater glich einem Irrenhause.“",
   "voice": "clone_611",
   "file": "line_16.mp3",
-  "duration": 3.631
+  "duration": 3.631,
+  "heard": "Ein Zuschauer schrieb das Theater-Klich einem Irrenhause.",
+  "score": 0.88,
+  "diff": [
+   "glich→klich"
+  ]
  },
  {
   "i": 17,
@@ -133,7 +183,10 @@
   "tts": "Schiller war ohne Erlaubnis hingefahren.",
   "voice": "clone_611",
   "file": "line_17.mp3",
-  "duration": 2.653
+  "duration": 2.653,
+  "heard": "Schiller war ohne Erlaubnis hingefahren.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 18,
@@ -141,7 +194,10 @@
   "tts": "Der Herzog ließ ihn vierzehn Tage einsperren",
   "voice": "clone_611",
   "file": "line_18.mp3",
-  "duration": 2.62
+  "duration": 2.62,
+  "heard": "Der Herzog ließ ihn 14 Tage einsperren.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 19,
@@ -149,7 +205,10 @@
   "tts": "und verbot ihm, etwas anderes als medizinische Schriften zu verfassen.",
   "voice": "clone_611",
   "file": "line_19.mp3",
-  "duration": 4.107
+  "duration": 4.107,
+  "heard": "und verbot ihm etwas anderes als medizinische Schriften zu verfassen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 20,
@@ -157,7 +216,10 @@
   "tts": "Im September siebzehnhundertzweiundachtzig floh Schiller nachts aus Stuttgart,",
   "voice": "clone_611",
   "file": "line_20.mp3",
-  "duration": 4.857
+  "duration": 4.857,
+  "heard": "Im September 1782 floh Schiller Nachts aus Stuttgart.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 21,
@@ -165,7 +227,10 @@
   "tts": "während der Hof ein großes Fest feierte.",
   "voice": "clone_611",
   "file": "line_21.mp3",
-  "duration": 2.471
+  "duration": 2.471,
+  "heard": "während der Hof ein großes Fest feierte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 22,
@@ -173,7 +238,10 @@
   "tts": "Verschuldet und arm, fand er in Leipzig und Dresden Freunde.",
   "voice": "clone_611",
   "file": "line_22.mp3",
-  "duration": 3.587
+  "duration": 3.587,
+  "heard": "Verschuldet und arm fand er in Leipzig und Dresden Freunde.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 23,
@@ -181,7 +249,10 @@
   "tts": "Dort schrieb er siebzehnhundertfünfundachtzig ein Gedicht über die Freude und die Freundschaft:",
   "voice": "clone_611",
   "file": "line_23.mp3",
-  "duration": 6.201
+  "duration": 6.201,
+  "heard": "Dort schrieb er 1785 ein Gedicht über die Freude und die Freundschaft.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 24,
@@ -189,7 +260,10 @@
   "tts": "„Freude, schöner Götterfunken“.",
   "voice": "clone_611",
   "file": "line_24.mp3",
-  "duration": 1.849
+  "duration": 1.849,
+  "heard": "Freude, schöner Götter Funken!",
+  "score": 0.57,
+  "diff": []
  },
  {
   "i": 25,
@@ -197,7 +271,12 @@
   "tts": "Fast vierzig Jahre später vertonte es Beethoven.",
   "voice": "clone_611",
   "file": "line_25.mp3",
-  "duration": 3.07
+  "duration": 3.07,
+  "heard": "Fast 40 Jahre später vertunte SBthofen.",
+  "score": 0.62,
+  "diff": [
+   "vertonteesbeethoven→vertuntesbthofen"
+  ]
  },
  {
   "i": 26,
@@ -205,7 +284,10 @@
   "tts": "Siebzehnhundertneunundachtzig wurde Schiller Professor für Geschichte in Jena.",
   "voice": "clone_611",
   "file": "line_26.mp3",
-  "duration": 4.333
+  "duration": 4.333,
+  "heard": "1789 wurde Schillerprofessor für Geschichte in Jena.",
+  "score": 0.8,
+  "diff": []
  },
  {
   "i": 27,
@@ -213,7 +295,10 @@
   "tts": "Zu seiner ersten Vorlesung kamen so viele Studenten,",
   "voice": "clone_611",
   "file": "line_27.mp3",
-  "duration": 3.11
+  "duration": 3.11,
+  "heard": "Zu seiner ersten Vorlesung kamen so viele Studenten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 28,
@@ -221,7 +306,10 @@
   "tts": "dass alle in den größten Hörsaal der Stadt umziehen mussten.",
   "voice": "clone_611",
   "file": "line_28.mp3",
-  "duration": 3.595
+  "duration": 3.595,
+  "heard": "dass alle in den größten Hörsaal der Stadt umziehen mussten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 29,
@@ -229,7 +317,10 @@
   "tts": "Er heiratete Charlotte von Lengefeld.",
   "voice": "clone_611",
   "file": "line_29.mp3",
-  "duration": 2.176
+  "duration": 2.176,
+  "heard": "Er heiratete Charlotte von Längefeld.",
+  "score": 0.8,
+  "diff": []
  },
  {
   "i": 30,
@@ -237,7 +328,10 @@
   "tts": "Doch siebzehnhunderteinundneunzig erkrankte er schwer an der Lunge.",
   "voice": "clone_611",
   "file": "line_30.mp3",
-  "duration": 3.615
+  "duration": 3.615,
+  "heard": "Doch 1791 erkrankte er schwer an der Lunge.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 31,
@@ -245,7 +339,10 @@
   "tts": "Gesund wurde er nie wieder.",
   "voice": "clone_611",
   "file": "line_31.mp3",
-  "duration": 1.574
+  "duration": 1.574,
+  "heard": "Gesund wurde er nie wieder.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 32,
@@ -253,7 +350,10 @@
   "tts": "Siebzehnhundertvierundneunzig begann die Freundschaft mit Goethe,",
   "voice": "clone_611",
   "file": "line_32.mp3",
-  "duration": 3.741
+  "duration": 3.741,
+  "heard": "1794 begann die Freundschaft mit Goethe.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 33,
@@ -261,7 +361,10 @@
   "tts": "eine Freundschaft, die die deutsche Literatur prägte.",
   "voice": "clone_611",
   "file": "line_33.mp3",
-  "duration": 3.06
+  "duration": 3.06,
+  "heard": "eine Freundschaft, die die deutsche Literatur prägte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 34,
@@ -269,7 +372,10 @@
   "tts": "In seinen letzten Jahren schrieb Schiller Stück um Stück:",
   "voice": "clone_611",
   "file": "line_34.mp3",
-  "duration": 3.511
+  "duration": 3.511,
+  "heard": "In seinen letzten Jahren schrieb Schiller Stück um Stück.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 35,
@@ -277,7 +383,12 @@
   "tts": "Wallenstein, Maria Stuart, Die Jungfrau von Orleans, Wilhelm Tell.",
   "voice": "clone_611",
   "file": "line_35.mp3",
-  "duration": 4.177
+  "duration": 4.177,
+  "heard": "Wallenstein, Maria Sturt, die Jungfrau von Orleans, Wilhelm Tell.",
+  "score": 0.89,
+  "diff": [
+   "stuart→sturt"
+  ]
  },
  {
   "i": 36,
@@ -285,7 +396,10 @@
   "tts": "Und „Das Lied von der Glocke“,",
   "voice": "clone_611",
   "file": "line_36.mp3",
-  "duration": 1.668
+  "duration": 1.668,
+  "heard": "und das Lied von der Glocke.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 37,
@@ -293,7 +407,12 @@
   "tts": "das viele von uns in der Schule auswendig lernen mussten.",
   "voice": "clone_611",
   "file": "line_37.mp3",
-  "duration": 3.081
+  "duration": 3.081,
+  "heard": "dass viele von uns in der Schule auswendig lernen mussten.",
+  "score": 0.9,
+  "diff": [
+   "das→dass"
+  ]
  },
  {
   "i": 38,
@@ -301,7 +420,12 @@
   "tts": "Am neunten Mai achtzehnhundertfünf starb Friedrich Schiller in Weimar, mit fünfundvierzig Jahren.",
   "voice": "clone_611",
   "file": "line_38.mp3",
-  "duration": 5.778
+  "duration": 5.778,
+  "heard": "Am 9. Mai 1805 starrt Friedrich Schiller in Weimar mit 45 Jahren.",
+  "score": 0.83,
+  "diff": [
+   "starb→starrt"
+  ]
  },
  {
   "i": 39,
@@ -309,7 +433,10 @@
   "tts": "Er wurde nachts in einer Gemeinschaftsgruft beigesetzt.",
   "voice": "clone_611",
   "file": "line_39.mp3",
-  "duration": 3.164
+  "duration": 3.164,
+  "heard": "Er wurde nachts in einer Gemeinschaftskruft beigesetzt.",
+  "score": 0.86,
+  "diff": []
  },
  {
   "i": 40,
@@ -317,7 +444,10 @@
   "tts": "Einundzwanzig Jahre später suchte man dort nach seinem Schädel",
   "voice": "clone_611",
   "file": "line_40.mp3",
-  "duration": 3.843
+  "duration": 3.843,
+  "heard": "21 Jahre später suchte man dort nach seinem Schädel.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 41,
@@ -325,7 +455,10 @@
   "tts": "und brachte ihn in die Fürstengruft,",
   "voice": "clone_611",
   "file": "line_41.mp3",
-  "duration": 1.98
+  "duration": 1.98,
+  "heard": "und brachte ihn in die Fürstengeruft.",
+  "score": 0.83,
+  "diff": []
  },
  {
   "i": 42,
@@ -333,7 +466,12 @@
   "tts": "wo später auch Goethe beigesetzt wurde.",
   "voice": "clone_611",
   "file": "line_42.mp3",
-  "duration": 2.301
+  "duration": 2.301,
+  "heard": "wo später auch Güte beigesetzt wurde.",
+  "score": 0.83,
+  "diff": [
+   "goethe→guete"
+  ]
  },
  {
   "i": 43,
@@ -341,7 +479,10 @@
   "tts": "Zweitausendacht zeigte ein Gentest: Der Schädel stammte nicht von Schiller.",
   "voice": "clone_611",
   "file": "line_43.mp3",
-  "duration": 4.705
+  "duration": 4.705,
+  "heard": "2008 zeigte ein Gentest. Der Schädel stammte nicht von Schiller.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 44,
@@ -349,7 +490,12 @@
   "tts": "Sein Sarg in der Fürstengruft ist seitdem leer.",
   "voice": "clone_611",
   "file": "line_44.mp3",
-  "duration": 2.616
+  "duration": 2.616,
+  "heard": "Sein Sag in der Fürstengruf ist seitdem leer.",
+  "score": 0.75,
+  "diff": [
+   "sarg→sag"
+  ]
  },
  {
   "i": 45,
@@ -357,7 +503,10 @@
   "tts": "Doch seine Ode erklingt bis heute in ganz Europa:",
   "voice": "clone_611",
   "file": "line_45.mp3",
-  "duration": 3.083
+  "duration": 3.083,
+  "heard": "Doch seine Ode erklingt bis heute in ganz Europa.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 46,
@@ -365,6 +514,9 @@
   "tts": "„Alle Menschen werden Brüder.“",
   "voice": "clone_611",
   "file": "line_46.mp3",
-  "duration": 1.675
+  "duration": 1.675,
+  "heard": "Alle Menschen werden Brüder.",
+  "score": 1.0,
+  "diff": []
  }
 ]
