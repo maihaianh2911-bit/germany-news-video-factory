@@ -1,0 +1,825 @@
+{
+ "duration": 152.307,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 27.205,
+   "pics": [
+    {
+     "src": "news/5/img/mm_huehner.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1179,
+     "from": {
+      "z": 1.06,
+      "x": 0.4327,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5673,
+      "y": 0.5
+     },
+     "s": 0.0,
+     "e": 6.576
+    },
+    {
+     "src": "news/5/img/busch_1878.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1757,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 6.576,
+     "e": 16.479
+    },
+    {
+     "src": "news/5/img/busch_bettler.jpg",
+     "move": "tien-gan",
+     "w": 1433,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.4899
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4083
+     },
+     "s": 16.479,
+     "e": 27.205
+    }
+   ]
+  },
+  {
+   "s": 27.205,
+   "e": 48.415,
+   "pics": [
+    {
+     "src": "news/5/img/buschhaus.jpg",
+     "move": "luot-phai",
+     "w": 2592,
+     "h": 1728,
+     "from": {
+      "z": 1.06,
+      "x": 0.298,
+      "y": 0.5283
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.602,
+      "y": 0.5283
+     },
+     "s": 27.205,
+     "e": 37.315
+    },
+    {
+     "src": "news/5/img/muehle_ebergoetzen.jpg",
+     "move": "nang-len",
+     "w": 1689,
+     "h": 2600,
+     "from": {
+      "z": 1.45,
+      "x": 0.55,
+      "y": 0.6552
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.55,
+      "y": 0.3448
+     },
+     "s": 37.315,
+     "e": 48.415
+    }
+   ]
+  },
+  {
+   "s": 48.415,
+   "e": 72.903,
+   "pics": [
+    {
+     "src": "news/5/img/busch_palette.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1557,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 48.415,
+     "e": 60.539
+    },
+    {
+     "src": "news/5/img/brouwer_raucher.jpg",
+     "move": "chi-tiet",
+     "w": 2091,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.46,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.42,
+      "y": 0.3448
+     },
+     "s": 60.539,
+     "e": 67.89
+    },
+    {
+     "src": "news/5/img/fliegende_blaetter.jpg",
+     "move": "dung-yen",
+     "w": 1300,
+     "h": 1719,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 67.89,
+     "e": 72.903
+    }
+   ]
+  },
+  {
+   "s": 72.903,
+   "e": 101.727,
+   "pics": [
+    {
+     "src": "news/5/img/mm_schornstein.jpg",
+     "move": "ha-xuong",
+     "w": 1479,
+     "h": 2600,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "s": 72.903,
+     "e": 80.779
+    },
+    {
+     "src": "news/5/img/mm_laempel.jpg",
+     "move": "chi-tiet",
+     "w": 1764,
+     "h": 1300,
+     "from": {
+      "z": 1.0,
+      "x": 0.475,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.268,
+      "x": 0.45,
+      "y": 0.3944
+     },
+     "s": 80.779,
+     "e": 84.605
+    },
+    {
+     "src": "news/5/img/mm_bauer.jpg",
+     "move": "tien-gan",
+     "w": 2520,
+     "h": 1533,
+     "from": {
+      "z": 1.0,
+      "x": 0.8,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.115,
+      "x": 0.8,
+      "y": 0.45
+     },
+     "s": 84.605,
+     "e": 88.724
+    },
+    {
+     "src": "news/5/img/mm_bruecke.jpg",
+     "move": "troi-nhe",
+     "w": 2527,
+     "h": 1347,
+     "from": {
+      "z": 1.08,
+      "x": 0.4461,
+      "y": 0.463
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.52,
+      "y": 0.45
+     },
+     "s": 88.724,
+     "e": 95.377
+    },
+    {
+     "src": "news/5/img/katzenjammer.jpg",
+     "move": "ha-xuong",
+     "w": 1300,
+     "h": 1695,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "s": 95.377,
+     "e": 101.727
+    }
+   ]
+  },
+  {
+   "s": 101.727,
+   "e": 119.778,
+   "pics": [
+    {
+     "src": "news/5/img/busch_weinglas.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1558,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 101.727,
+     "e": 111.158
+    },
+    {
+     "src": "news/5/img/busch_alt.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1663,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.45,
+      "y": 0.4545
+     },
+     "s": 111.158,
+     "e": 114.294
+    },
+    {
+     "src": "news/5/img/schopenhauer.jpg",
+     "move": "troi-nhe",
+     "w": 1987,
+     "h": 2600,
+     "from": {
+      "z": 1.08,
+      "x": 0.5695,
+      "y": 0.463
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.42,
+      "y": 0.4464
+     },
+     "s": 114.294,
+     "e": 119.778
+    }
+   ]
+  },
+  {
+   "s": 119.778,
+   "e": 152.307,
+   "pics": [
+    {
+     "src": "news/5/img/bild_scheune.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 2014,
+     "from": {
+      "z": 1.06,
+      "x": 0.3904,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.6096,
+      "y": 0.5
+     },
+     "s": 119.778,
+     "e": 126.053
+    },
+    {
+     "src": "news/5/img/bild_knabe.jpg",
+     "move": "tien-gan",
+     "w": 1370,
+     "h": 2000,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 126.053,
+     "e": 134.124
+    },
+    {
+     "src": "news/5/img/busch_1905.jpg",
+     "move": "lui-ra",
+     "w": 1300,
+     "h": 1856,
+     "from": {
+      "z": 1.293,
+      "x": 0.55,
+      "y": 0.3866
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.525,
+      "y": 0.5
+     },
+     "s": 134.124,
+     "e": 139.99
+    },
+    {
+     "src": "news/5/img/bild_trinker.jpg",
+     "move": "dung-yen",
+     "w": 1524,
+     "h": 2150,
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.55,
+      "y": 0.4854
+     },
+     "s": 139.99,
+     "e": 142.648
+    },
+    {
+     "src": "news/5/img/mm_jubel.jpg",
+     "move": "tien-gan",
+     "w": 2453,
+     "h": 1433,
+     "from": {
+      "z": 1.0,
+      "x": 0.78,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.78,
+      "y": 0.4167
+     },
+     "s": 142.648,
+     "e": 152.307
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 0.3,
+   "e": 4.387,
+   "text": "„Dieses war der erste Streich,\ndoch der zweite folgt sogleich.“"
+  },
+  {
+   "s": 4.387,
+   "e": 6.726,
+   "text": "Diese Zeilen kennt sicher jeder."
+  },
+  {
+   "s": 6.726,
+   "e": 8.526,
+   "text": "Ihr Erfinder, Wilhelm Busch,"
+  },
+  {
+   "s": 8.526,
+   "e": 11.692,
+   "text": "bekam für Max und Moritz\nein einziges Honorar:"
+  },
+  {
+   "s": 11.692,
+   "e": 13.46,
+   "text": "1000 Gulden."
+  },
+  {
+   "s": 13.46,
+   "e": 16.629,
+   "text": "Für den Verleger wurde\ndas Buch ein Vermögen."
+  },
+  {
+   "s": 16.629,
+   "e": 19.776,
+   "text": "Und Busch selbst hielt sich\nnicht für einen Dichter,"
+  },
+  {
+   "s": 19.776,
+   "e": 22.446,
+   "text": "sondern für einen\ngescheiterten Maler."
+  },
+  {
+   "s": 22.446,
+   "e": 27.805,
+   "text": "Rund 1000 Ölbilder malte er –\nund zeigte sie fast niemandem."
+  },
+  {
+   "s": 27.805,
+   "e": 34.021,
+   "text": "Geboren wurde er 1832 in Wiedensahl,\neinem Dorf in Niedersachsen."
+  },
+  {
+   "s": 34.021,
+   "e": 37.465,
+   "text": "Er war das älteste von\nsieben Kindern eines Krämers."
+  },
+  {
+   "s": 37.465,
+   "e": 41.727,
+   "text": "Mit neun schickten ihn die Eltern\nzu seinem Onkel, einem Pfarrer."
+  },
+  {
+   "s": 41.727,
+   "e": 45.146,
+   "text": "Dort, in Ebergötzen, fand\ner seinen besten Freund:"
+  },
+  {
+   "s": 45.146,
+   "e": 49.015,
+   "text": "Erich Bachmann,\nden Sohn des Müllers."
+  },
+  {
+   "s": 49.015,
+   "e": 52.202,
+   "text": "Der Vater wollte einen\nIngenieur aus ihm machen."
+  },
+  {
+   "s": 52.202,
+   "e": 55.498,
+   "text": "Busch begann ein Studium des\nMaschinenbaus in Hannover –"
+  },
+  {
+   "s": 55.498,
+   "e": 56.758,
+   "text": "und brach ab."
+  },
+  {
+   "s": 56.758,
+   "e": 60.689,
+   "text": "Er ging an die Kunstakademien\nin Düsseldorf und Antwerpen."
+  },
+  {
+   "s": 60.689,
+   "e": 64.938,
+   "text": "In Antwerpen sah er die Bilder\nder alten niederländischen Meister"
+  },
+  {
+   "s": 64.938,
+   "e": 68.04,
+   "text": "und verlor den Mut:\nSo gut würde er nie malen."
+  },
+  {
+   "s": 68.04,
+   "e": 69.252,
+   "text": "In München begann er,"
+  },
+  {
+   "s": 69.252,
+   "e": 73.503,
+   "text": "Bildergeschichten für\nZeitschriften zu zeichnen."
+  },
+  {
+   "s": 73.503,
+   "e": 77.401,
+   "text": "1865 erschien Max und Moritz."
+  },
+  {
+   "s": 77.401,
+   "e": 80.929,
+   "text": "Zwei Jungen spielen einem\nganzen Dorf böse Streiche:"
+  },
+  {
+   "s": 80.929,
+   "e": 84.755,
+   "text": "der Witwe Bolte, dem Schneider\nBöck, dem Lehrer Lämpel."
+  },
+  {
+   "s": 84.755,
+   "e": 88.874,
+   "text": "Am Ende landen sie in der Mühle –\nund die Enten fressen sie auf."
+  },
+  {
+   "s": 88.874,
+   "e": 91.867,
+   "text": "Zuerst verkaufte sich\ndas Buch nur langsam."
+  },
+  {
+   "s": 91.867,
+   "e": 95.527,
+   "text": "Dann wurde es ein Klassiker,\nübersetzt in viele Sprachen."
+  },
+  {
+   "s": 95.527,
+   "e": 98.846,
+   "text": "In Amerika entstanden daraus\ndie Katzenjammer Kids,"
+  },
+  {
+   "s": 98.846,
+   "e": 102.327,
+   "text": "einer der ersten\nComics der Welt."
+  },
+  {
+   "s": 102.327,
+   "e": 104.88,
+   "text": "Viele seiner Verse\nsagen wir noch heute:"
+  },
+  {
+   "s": 104.88,
+   "e": 108.58,
+   "text": "„Vater werden ist nicht schwer,\nVater sein dagegen sehr.“"
+  },
+  {
+   "s": 108.58,
+   "e": 111.308,
+   "text": "Oder: „Wer Sorgen hat,\nhat auch Likör.“"
+  },
+  {
+   "s": 111.308,
+   "e": 114.444,
+   "text": "Hinter dem Spott steckte\nein ernster Mensch."
+  },
+  {
+   "s": 114.444,
+   "e": 116.62,
+   "text": "Er las Schopenhauer und Darwin"
+  },
+  {
+   "s": 116.62,
+   "e": 120.378,
+   "text": "und mied die Gesellschaft\nder großen Städte."
+  },
+  {
+   "s": 120.378,
+   "e": 122.105,
+   "text": "Er heiratete nie."
+  },
+  {
+   "s": 122.105,
+   "e": 126.203,
+   "text": "Er lebte bei seiner Schwester Fanny\nund ihren Söhnen auf dem Land."
+  },
+  {
+   "s": 126.203,
+   "e": 129.415,
+   "text": "Dort malte er, Jahr für\nJahr, kleine Bilder in Öl:"
+  },
+  {
+   "s": 129.415,
+   "e": 132.324,
+   "text": "Landschaften, Bauern,\nWirtshausszenen."
+  },
+  {
+   "s": 132.324,
+   "e": 134.274,
+   "text": "Ausgestellt hat er sie nie."
+  },
+  {
+   "s": 134.274,
+   "e": 140.14,
+   "text": "Am 9. Januar 1908 starb\nWilhelm Busch, mit 75 Jahren."
+  },
+  {
+   "s": 140.14,
+   "e": 142.798,
+   "text": "Heute hängen seine\nBilder im Museum."
+  },
+  {
+   "s": 142.798,
+   "e": 147.136,
+   "text": "Doch berühmt bleibt er für zwei\nJungen, die nie brav sein wollten."
+  },
+  {
+   "s": 147.136,
+   "e": 150.657,
+   "text": "„Gott sei Dank! Nun ist’s\nvorbei mit der Übeltäterei!“"
+  }
+ ],
+ "voice": [
+  {
+   "s": 0.3,
+   "src": "news/5/voice/line_01.mp3"
+  },
+  {
+   "s": 4.387,
+   "src": "news/5/voice/line_02.mp3"
+  },
+  {
+   "s": 6.726,
+   "src": "news/5/voice/line_03.mp3"
+  },
+  {
+   "s": 11.692,
+   "src": "news/5/voice/line_04.mp3"
+  },
+  {
+   "s": 13.46,
+   "src": "news/5/voice/line_05.mp3"
+  },
+  {
+   "s": 16.629,
+   "src": "news/5/voice/line_06.mp3"
+  },
+  {
+   "s": 19.776,
+   "src": "news/5/voice/line_07.mp3"
+  },
+  {
+   "s": 22.446,
+   "src": "news/5/voice/line_08.mp3"
+  },
+  {
+   "s": 27.805,
+   "src": "news/5/voice/line_09.mp3"
+  },
+  {
+   "s": 34.021,
+   "src": "news/5/voice/line_10.mp3"
+  },
+  {
+   "s": 37.465,
+   "src": "news/5/voice/line_11.mp3"
+  },
+  {
+   "s": 41.727,
+   "src": "news/5/voice/line_12.mp3"
+  },
+  {
+   "s": 45.146,
+   "src": "news/5/voice/line_13.mp3"
+  },
+  {
+   "s": 49.015,
+   "src": "news/5/voice/line_14.mp3"
+  },
+  {
+   "s": 52.202,
+   "src": "news/5/voice/line_15.mp3"
+  },
+  {
+   "s": 56.758,
+   "src": "news/5/voice/line_16.mp3"
+  },
+  {
+   "s": 60.689,
+   "src": "news/5/voice/line_17.mp3"
+  },
+  {
+   "s": 64.938,
+   "src": "news/5/voice/line_18.mp3"
+  },
+  {
+   "s": 68.04,
+   "src": "news/5/voice/line_19.mp3"
+  },
+  {
+   "s": 73.503,
+   "src": "news/5/voice/line_20.mp3"
+  },
+  {
+   "s": 77.401,
+   "src": "news/5/voice/line_21.mp3"
+  },
+  {
+   "s": 80.929,
+   "src": "news/5/voice/line_22.mp3"
+  },
+  {
+   "s": 84.755,
+   "src": "news/5/voice/line_23.mp3"
+  },
+  {
+   "s": 88.874,
+   "src": "news/5/voice/line_24.mp3"
+  },
+  {
+   "s": 91.867,
+   "src": "news/5/voice/line_25.mp3"
+  },
+  {
+   "s": 95.527,
+   "src": "news/5/voice/line_26.mp3"
+  },
+  {
+   "s": 98.846,
+   "src": "news/5/voice/line_27.mp3"
+  },
+  {
+   "s": 102.327,
+   "src": "news/5/voice/line_28.mp3"
+  },
+  {
+   "s": 104.88,
+   "src": "news/5/voice/line_29.mp3"
+  },
+  {
+   "s": 108.58,
+   "src": "news/5/voice/line_30.mp3"
+  },
+  {
+   "s": 111.308,
+   "src": "news/5/voice/line_31.mp3"
+  },
+  {
+   "s": 114.444,
+   "src": "news/5/voice/line_32.mp3"
+  },
+  {
+   "s": 116.62,
+   "src": "news/5/voice/line_33.mp3"
+  },
+  {
+   "s": 120.378,
+   "src": "news/5/voice/line_34.mp3"
+  },
+  {
+   "s": 122.105,
+   "src": "news/5/voice/line_35.mp3"
+  },
+  {
+   "s": 126.203,
+   "src": "news/5/voice/line_36.mp3"
+  },
+  {
+   "s": 129.415,
+   "src": "news/5/voice/line_37.mp3"
+  },
+  {
+   "s": 132.324,
+   "src": "news/5/voice/line_38.mp3"
+  },
+  {
+   "s": 134.274,
+   "src": "news/5/voice/line_39.mp3"
+  },
+  {
+   "s": 140.14,
+   "src": "news/5/voice/line_40.mp3"
+  },
+  {
+   "s": 142.798,
+   "src": "news/5/voice/line_41.mp3"
+  },
+  {
+   "s": 147.136,
+   "src": "news/5/voice/line_42.mp3"
+  }
+ ],
+ "music": "news/5/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Philosopher",
+   "file": "news/fonts/philosopher-latin-400-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ]
+}
