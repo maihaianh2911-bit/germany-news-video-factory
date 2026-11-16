@@ -11,7 +11,7 @@ The owner (Vietnamese, not technical) writes the script and sends it in a chat (
 The result is a vertical short (1080×1920) in German: real, free-to-use pictures with slow camera moves on top,
 subtitles timed to a German voice below (`src/news/NewsV.tsx`). **You** choose and check every picture by looking
 at it. Machine steps run in `.github/workflows/news.yml` → `scripts/news/run.py`; files land on the `renders`
-branch in `news/<N>/` (`voice/`, `img/<round>/`, `video.mp4`, `sheet.jpg`, `subtitles.srt`, `credits.txt`, `edits.md`;
+branch in `news/<N>/` (`voice/`, `img/<round>/`, `video.mp4`, `caption.txt`, `sheet.jpg`, `subtitles.srt`, `credits.txt`, `edits.md`;
 `voice-partial/` = the finished lines of a voice step that failed halfway, reused by the next run).
 
 Steps (labels): `news-plan` → you write `news/<N>/script.json` → `news-voice` (machine: voice, voice check,
@@ -211,7 +211,21 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    — move the `focus` or take `tien-gan`. The
    preview also writes `/tmp/preview.md` (and prints it): the list of edits — shot, line, picture, move, why. Read
    it top to bottom once as a viewer: does every move follow from its line, do neighbours differ?
-7. Commit `picks.json` together with any `script.json`/readings fixes in **one** push as `[news #<N>] chọn ảnh`
+7. **The posting caption** (owner, 16/11/2026: every video comes with it, so it lies next to the video when the
+   owner downloads it): write `news/<N>/caption.txt`, UTF-8, **in German** (iron rule 1: the channel's language,
+   also when the script came in Vietnamese), at most 2000 characters, blocks separated by one blank line:
+   ```
+   <hook title, ≤ 80 characters: factual, no promise the video does not keep>
+   <2–4 short sentences on what the video tells, true to the script; nothing that is not in it.
+    News: sober. When pictures are Symbolbilder, say so ("Einige Bilder sind Symbolbilder.")>
+
+   <5–8 German hashtags on one line, e.g. #Nachrichten #TrueCrime #Rostock #Bundesgerichtshof #shorts>
+
+   Bildquellen: <photographers/agencies and "Wikimedia Commons", or "Bildquellen: siehe credits" when too long>
+   ```
+   Check it: `python3 scripts/news/caption.py news/<N>/caption.txt` (length, title, hashtags, `Bildquellen:`, no
+   Vietnamese or Japanese letters) and read it once more against the script: every fact must be in the script.
+8. Commit `picks.json` and `caption.txt` together with any `script.json`/readings fixes in **one** push as `[news #<N>] chọn ảnh`
    (a push of `script.json` alone runs the voice step again), remove `news-busy`. (The render takes ~5–20 min:
    ~6.5 min for a 1.5-minute video, ~19 min for 3 minutes; you are woken at `news-check`.)
 
@@ -220,7 +234,8 @@ Open `sheet.jpg` (one tile per shot: chapter-shot, picture name, time; plus two 
 `picks.json` only for a real fault (a cut face, the wrong person or subject, a blurred picture, too many repeats, a
 watermark), all fixes in one push. Otherwise remove `news-check`, add `news-done` and comment (🤖, short,
 Vietnamese): video link `https://github.com/maihaianh2911-bit/germany-news-video-factory/blob/renders/news/<N>/video.mp4`,
-its length, links to `subtitles.srt` and `credits.txt` (to paste into the video description), one line on the
+its length, links to `subtitles.srt`, `caption.txt` (the posting caption: title, text, hashtags) and `credits.txt` (the
+full picture credits for the video description), one line on the
 pictures used, the list of edits (paste `news/<N>/edits.md` from `renders` as it is: the table "Cách edit từng cảnh"
 with its last line, so the owner can answer "cảnh 5 đổi sang kiểu lùi ra"), the date until which the links work — `Tải video về máy trước ngày <dd/mm/yyyy>: sau ngày đó máy tự
 dọn video cũ và các link trên hết dùng được.` with the date = today + 14 days (`renders-cleanup.yml` removes
@@ -228,6 +243,9 @@ dọn video cũ và các link trên hết dùng được.` with the date = today
 count) — and "bình luận nếu muốn sửa".
 
 ## 4. `news-fix` and `news-failed`
+- A wrong or missing caption (also the owner's "sửa caption"): push only `news/<N>/caption.txt`. That push does not
+  read the voice, search or render: the machine only puts the caption beside the video and comments its link. A
+  render also publishes it; a caption that fails `caption.py` is not published and the machine says why on the issue.
 - `news-fix`: the request = owner comments after your last `🤖` comment. "Cảnh 5 đổi sang kiểu X" → the `move` of
   shot 5 in the list of edits (X = the Vietnamese name or the `move` name of the table), with a new `why`. Text → `script.json` (changed lines are
   read again, the rest reused); pictures → `picks.json` (+ `search-<r>.json`; after a search round the issue is

@@ -44,7 +44,7 @@ adds a line such as "Phiếu tin tức (Đức) số 3: giọng và ảnh đã s
    Remove `news-busy` whenever you stop: while it is fresh (< 2 hours) the machine does not call the task for that
    issue. A machine comment ending with `⚠️ Chưa gọi được Claude …` means nobody was called: go on in the chat, or
    the owner presses "Gọi Claude ngay".
-3. Give the owner the links to the video, the subtitles and the picture credits.
+3. Give the owner the links to the video, the subtitles, the posting caption (`caption.txt`, written at the picks step, `AGENT_NEWS.md` §2.7) and the picture credits.
 
 The script is the owner's: translate and split it, never edit its content (only exception: iron rule 2, a script too short for 60 seconds). Look at the pictures yourself,
 preview before rendering.

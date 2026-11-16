@@ -197,4 +197,20 @@ assert len(bad) == 3 and 'tien-gan, chi-tiet' in bad[0] and bad[0].startswith('c
 assert 'cần "move"' in moves.check({'img': 'a', 'from': {}}, 'c')[0]
 assert moves.camera({'move': 'tien-gan', 'to': {'z': 1.5, 'x': .5, 'y': .5}}, 1600, 1100, 5)[1]['z'] == 1.5       # explicit numbers win
 assert moves.camera({'from': 1, 'to': 2}, 1600, 1100, 5) == (1, 2) and moves.label({'from': 1, 'to': 2}) == '-' and moves.label(ok_shot) == 'lui-ra'
+# --- the posting caption (scripts/news/caption.py) ---
+import caption
+good = ("Fall Fabian: 44 Indizien – wird das Urteil gekippt?\n"
+        "Das Landgericht Rostock verurteilte Gina H. zu lebenslanger Haft. Sie beteuert ihre Unschuld.\n"
+        "Jetzt prüft der Bundesgerichtshof die Revision.\n\n"
+        "#Nachrichten #FallFabian #TrueCrime #Rostock #Bundesgerichtshof #shorts\n\n"
+        "Bildquellen: Bernd Wüstneck/dpa; Wikimedia Commons (siehe credits)\n")
+assert caption.check(good) == [], caption.check(good)
+assert caption.check(good.replace('Fall Fabian: 44', 'Fall Fabian: ' + 'x' * 80))[0].startswith('tiêu đề dài')
+assert any('hashtag' in b for b in caption.check(good.replace(' #Rostock #Bundesgerichtshof #shorts', '')))   # 3 tags
+assert any('Bildquellen' in b for b in caption.check(good.replace('Bildquellen:', 'Fotos:')))
+assert any('tiếng Đức' in b for b in caption.check(good.replace('Jetzt prüft', 'Tòa án Tối cao sẽ xét lại')))      # Vietnamese
+assert any('tiếng Đức' in b for b in caption.check(good.replace('Jetzt prüft', '連邦裁判所が')))                # Japanese
+assert any('mô tả' in b for b in caption.check(good.split('\n')[0] + '\n\n#a #b #c #d #e\n\nBildquellen: x'))
+assert any('2000' in b for b in caption.check(good.replace('Jetzt prüft', 'Satz. ' * 400 + 'Jetzt prüft')))
+assert caption.check('') == ['caption.txt trống'] and len(caption.check('Nur ein Titel')) == 1
 print('news unit checks OK')
