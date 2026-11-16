@@ -1,0 +1,410 @@
+{
+ "images": {
+  "goethe_kraus": {
+   "src": "1/3-1.jpg",
+   "mode": "keep"
+  },
+  "werther_1774": {
+   "src": "1/6-1.jpg",
+   "crop": [
+    0.0,
+    0.035,
+    1.0,
+    0.965
+   ],
+   "mode": "keep"
+  },
+  "goethe_stieler": {
+   "src": "1/2-3.jpg",
+   "mode": "keep"
+  },
+  "goethe_1832": {
+   "src": "1/12-1.jpg",
+   "mode": "keep"
+  },
+  "familie_seekatz": {
+   "src": "2/2-6.jpg",
+   "mode": "keep",
+   "crop": [
+    0.0,
+    0.3,
+    1.0,
+    1.0
+   ]
+  },
+  "mutter_may": {
+   "src": "2/3-1.jpg",
+   "crop": [
+    0.2,
+    0.15,
+    0.8,
+    0.86
+   ],
+   "mode": "keep"
+  },
+  "goethe_sepia": {
+   "src": "1/1-2.jpg",
+   "mode": "keep"
+  },
+  "schoenkopf": {
+   "src": "2/4-8.jpg",
+   "mode": "keep"
+  },
+  "brion": {
+   "src": "2/5-1.jpg",
+   "mode": "keep"
+  },
+  "sesenheim_laube": {
+   "src": "2/5-5.jpg",
+   "mode": "keep"
+  },
+  "reichskammergericht": {
+   "src": "2/7-2.jpg",
+   "mode": "keep"
+  },
+  "lotte_buff": {
+   "src": "2/6-7.jpg",
+   "mode": "keep"
+  },
+  "werther_tod": {
+   "src": "1/6-3.jpg",
+   "mode": "keep"
+  },
+  "werther_stich": {
+   "src": "2/8-1.jpg",
+   "mode": "keep"
+  },
+  "carl_august": {
+   "src": "2/9-8.jpg",
+   "mode": "keep"
+  },
+  "gartenhaus": {
+   "src": "2/15-6.jpg",
+   "mode": "keep"
+  },
+  "campagna": {
+   "src": "1/5-1.jpg",
+   "mode": "keep"
+  },
+  "christiane": {
+   "src": "2/10-1.jpg",
+   "mode": "keep"
+  },
+  "schiller_graff": {
+   "src": "2/11-3.jpg",
+   "mode": "keep"
+  },
+  "denkmal": {
+   "src": "2/12-8.jpg",
+   "mode": "keep"
+  },
+  "faust_1808": {
+   "src": "2/13-2.jpg",
+   "crop": [
+    0.04,
+    0.03,
+    0.96,
+    0.97
+   ],
+   "mode": "keep"
+  },
+  "faust2_inhalt": {
+   "src": "1/7-1.jpg",
+   "mode": "keep"
+  },
+  "vater_relief": {
+   "src": "2/2-7.jpg",
+   "crop": [
+    0.02,
+    0.04,
+    0.47,
+    0.96
+   ],
+   "mode": "keep"
+  },
+  "werther_buch": {
+   "src": "1/6-2.jpg",
+   "mode": "keep",
+   "crop": [
+    0.05,
+    0.07,
+    0.96,
+    0.92
+   ]
+  }
+ },
+ "chapters": [
+  {
+   "pics": [
+    {
+     "img": "goethe_kraus",
+     "move": "tien-gan",
+     "focus": [
+      0.64,
+      0.36
+     ],
+     "why": "mở đầu: Goethe thời trẻ, câu nói ông nổi tiếng năm 25 tuổi"
+    },
+    {
+     "at": 2,
+     "img": "werther_1774",
+     "move": "dung-yen",
+     "focus": [
+      0.75,
+      0.45
+     ],
+     "why": "câu nhắc cuốn tiểu thuyết: trang đầu bản in 1774, để đọc được tên sách"
+    },
+    {
+     "at": 3,
+     "img": "goethe_stieler",
+     "move": "tien-gan",
+     "focus": [
+      0.56,
+      0.3
+     ],
+     "why": "câu về Faust và 60 năm làm việc: chân dung tuổi già, tay cầm bản thảo"
+    },
+    {
+     "at": 7,
+     "img": "goethe_1832",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.32
+     ],
+     "why": "câu ông mất năm 1832: chân dung vẽ năm đó"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "familie_seekatz",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.46
+     ],
+     "why": "câu ông ra đời: tranh cả gia đình Goethe năm 1762"
+    },
+    {
+     "at": 10,
+     "img": "vater_relief",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu nhắc người cha: phù điêu Johann Caspar Goethe"
+    },
+    {
+     "at": 11,
+     "img": "mutter_may",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu về người mẹ và lời Goethe về cha mẹ, kết ở 'Mütterchen': tiến gần gương mặt bà"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "goethe_sepia",
+     "move": "tien-gan",
+     "focus": [
+      0.55,
+      0.4
+     ],
+     "why": "câu đi học luật ở Leipzig: chân dung Goethe thời trẻ"
+    },
+    {
+     "at": 16,
+     "img": "schoenkopf",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu 'verliebte sich': Käthchen Schönkopf, người yêu thời Leipzig"
+    },
+    {
+     "at": 18,
+     "img": "brion",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.3
+     ],
+     "why": "câu nhắc tên Friederike Brion"
+    },
+    {
+     "at": 20,
+     "img": "sesenheim_laube",
+     "move": "lui-ra",
+     "focus": [
+      0.62,
+      0.45
+     ],
+     "why": "câu ông bỏ đi và lời tự trách: từ gương mặt Friederike lùi ra thấy cả hai người"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "at": 22,
+     "img": "reichskammergericht",
+     "move": "nang-len",
+     "focus": [
+      0.45,
+      0.4
+     ],
+     "why": "câu nhắc Tòa án Hoàng gia ở Wetzlar: nâng lên từ thành phố tới phòng xử"
+    },
+    {
+     "at": 23,
+     "img": "lotte_buff",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu nhắc tên Charlotte Buff"
+    },
+    {
+     "at": 25,
+     "img": "werther_tod",
+     "move": "ha-xuong",
+     "focus": [
+      0.55,
+      0.5
+     ],
+     "why": "câu về người bạn tự sát: hạ xuống, tranh cảnh Werther chết"
+    },
+    {
+     "at": 26,
+     "img": "werther_buch",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu viết xong tiểu thuyết: lướt qua trang đầu bản in năm 1774"
+    },
+    {
+     "at": 28,
+     "img": "werther_stich",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.25
+     ],
+     "why": "câu thanh niên ăn mặc như Werther: tiến gần chân dung Werther"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "carl_august",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu nhắc Herzog Carl August"
+    },
+    {
+     "at": 31,
+     "img": "gartenhaus",
+     "move": "lui-ra",
+     "focus": [
+      0.42,
+      0.42
+     ],
+     "why": "câu ở lại Weimar suốt đời: từ ngôi nhà vườn của ông lùi ra"
+    },
+    {
+     "at": 33,
+     "img": "campagna",
+     "move": "tien-gan",
+     "focus": [
+      0.25,
+      0.2
+     ],
+     "why": "câu trốn sang Italia: tranh Goethe ở vùng quê Roma"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "christiane",
+     "move": "tien-gan",
+     "focus": [
+      0.36,
+      0.36
+     ],
+     "why": "câu nhắc Christiane Vulpius: tranh Goethe tự vẽ bà"
+    },
+    {
+     "at": 38,
+     "img": "schiller_graff",
+     "move": "tien-gan",
+     "focus": [
+      0.42,
+      0.3
+     ],
+     "why": "câu tình bạn với Schiller"
+    },
+    {
+     "at": 41,
+     "img": "denkmal",
+     "move": "lui-ra",
+     "focus": [
+      0.6,
+      0.2
+     ],
+     "why": "câu Schiller mất, 'nửa đời tôi': từ Schiller lùi ra thấy tượng đài hai người"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "faust_1808",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu Faust phần một ra đời: trang đầu bản in 1808, để đọc được"
+    },
+    {
+     "at": 45,
+     "img": "faust2_inhalt",
+     "move": "chi-tiet",
+     "focus": [
+      0.27,
+      0.335
+     ],
+     "why": "câu hoàn thành phần hai mùa hè 1831: soi vào dòng 'Vollendet im Sommer 1831'"
+    },
+    {
+     "at": 47,
+     "img": "goethe_1832",
+     "move": "lui-ra",
+     "focus": [
+      0.45,
+      0.32
+     ],
+     "why": "câu ông mất và lời cuối 'Mehr Licht!': lùi ra từ gương mặt"
+    }
+   ]
+  }
+ ]
+}
