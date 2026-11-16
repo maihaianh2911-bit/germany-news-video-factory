@@ -1,77 +1,495 @@
 {
- "duration": 29.084,
+ "duration": 175.922,
  "chapters": [
   {
    "s": 0.0,
-   "e": 29.084,
+   "e": 27.984,
    "pics": [
     {
      "src": "news/3/img/goethe_kraus.jpg",
-     "from": {
-      "z": 1.0,
-      "x": 0.62,
-      "y": 0.4
-     },
-     "to": {
-      "z": 1.1,
-      "x": 0.64,
-      "y": 0.36
-     },
+     "move": "tien-gan",
      "w": 1489,
      "h": 1942,
+     "from": {
+      "z": 1.0,
+      "x": 0.6332,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.134,
+      "x": 0.64,
+      "y": 0.4408
+     },
      "s": 0.0,
      "e": 4.799
     },
     {
      "src": "news/3/img/werther_1774.jpg",
+     "move": "dung-yen",
+     "w": 2600,
+     "h": 1912,
      "from": {
       "z": 1.0,
-      "x": 0.745,
+      "x": 0.75,
       "y": 0.5
      },
      "to": {
-      "z": 1.1,
+      "z": 1.03,
       "x": 0.75,
-      "y": 0.47
+      "y": 0.4854
      },
-     "w": 2600,
-     "h": 1912,
      "s": 4.799,
      "e": 9.319
     },
     {
      "src": "news/3/img/goethe_stieler.jpg",
-     "from": {
-      "z": 1.0,
-      "x": 0.55,
-      "y": 0.4
-     },
-     "to": {
-      "z": 1.12,
-      "x": 0.56,
-      "y": 0.35
-     },
+     "move": "tien-gan",
      "w": 1972,
      "h": 2432,
+     "from": {
+      "z": 1.0,
+      "x": 0.56,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.56,
+      "y": 0.4167
+     },
      "s": 9.319,
      "e": 21.524
     },
     {
      "src": "news/3/img/goethe_1832.jpg",
+     "move": "tien-gan",
+     "w": 2096,
+     "h": 2263,
      "from": {
       "z": 1.0,
       "x": 0.45,
-      "y": 0.4
+      "y": 0.5
      },
      "to": {
-      "z": 1.1,
-      "x": 0.44,
-      "y": 0.36
+      "z": 1.181,
+      "x": 0.45,
+      "y": 0.4234
      },
+     "s": 21.524,
+     "e": 27.984
+    }
+   ]
+  },
+  {
+   "s": 27.984,
+   "e": 52.939,
+   "pics": [
+    {
+     "src": "news/3/img/familie_seekatz.jpg",
+     "move": "tien-gan",
+     "w": 2444,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.198,
+      "x": 0.45,
+      "y": 0.46
+     },
+     "s": 27.984,
+     "e": 35.06
+    },
+    {
+     "src": "news/3/img/vater_relief.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1814,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.106,
+      "x": 0.5,
+      "y": 0.4522
+     },
+     "s": 35.06,
+     "e": 38.836
+    },
+    {
+     "src": "news/3/img/mutter_may.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1691,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 38.836,
+     "e": 52.939
+    }
+   ]
+  },
+  {
+   "s": 52.939,
+   "e": 76.667,
+   "pics": [
+    {
+     "src": "news/3/img/goethe_sepia.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1906,
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.139,
+      "x": 0.55,
+      "y": 0.4392
+     },
+     "s": 52.939,
+     "e": 57.887
+    },
+    {
+     "src": "news/3/img/schoenkopf.jpg",
+     "move": "tien-gan",
+     "w": 1881,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.152,
+      "x": 0.5,
+      "y": 0.4338
+     },
+     "s": 57.887,
+     "e": 63.333
+    },
+    {
+     "src": "news/3/img/brion.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1899,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.187,
+      "x": 0.45,
+      "y": 0.4213
+     },
+     "s": 63.333,
+     "e": 70.006
+    },
+    {
+     "src": "news/3/img/sesenheim_laube.jpg",
+     "move": "lui-ra",
+     "w": 1842,
+     "h": 2600,
+     "from": {
+      "z": 1.32,
+      "x": 0.62,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.56,
+      "y": 0.5
+     },
+     "s": 70.006,
+     "e": 76.667
+    }
+   ]
+  },
+  {
+   "s": 76.667,
+   "e": 101.861,
+   "pics": [
+    {
+     "src": "news/3/img/reichskammergericht.jpg",
+     "move": "nang-len",
+     "w": 2102,
+     "h": 2600,
+     "from": {
+      "z": 1.419,
+      "x": 0.45,
+      "y": 0.6476
+     },
+     "to": {
+      "z": 1.419,
+      "x": 0.45,
+      "y": 0.3524
+     },
+     "s": 76.667,
+     "e": 81.596
+    },
+    {
+     "src": "news/3/img/lotte_buff.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1606,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.132,
+      "x": 0.5,
+      "y": 0.4418
+     },
+     "s": 81.596,
+     "e": 86.297
+    },
+    {
+     "src": "news/3/img/werther_tod.jpg",
+     "move": "ha-xuong",
+     "w": 1499,
+     "h": 1752,
+     "from": {
+      "z": 1.336,
+      "x": 0.55,
+      "y": 0.3743
+     },
+     "to": {
+      "z": 1.336,
+      "x": 0.55,
+      "y": 0.6257
+     },
+     "s": 86.297,
+     "e": 90.246
+    },
+    {
+     "src": "news/3/img/werther_buch.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1614,
+     "from": {
+      "z": 1.06,
+      "x": 0.4166,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5834,
+      "y": 0.5
+     },
+     "s": 90.246,
+     "e": 96.204
+    },
+    {
+     "src": "news/3/img/werther_stich.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 2233,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.158,
+      "x": 0.5,
+      "y": 0.4316
+     },
+     "s": 96.204,
+     "e": 101.861
+    }
+   ]
+  },
+  {
+   "s": 101.861,
+   "e": 121.592,
+   "pics": [
+    {
+     "src": "news/3/img/carl_august.jpg",
+     "move": "tien-gan",
+     "w": 2061,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.159,
+      "x": 0.5,
+      "y": 0.4315
+     },
+     "s": 101.861,
+     "e": 107.532
+    },
+    {
+     "src": "news/3/img/gartenhaus.jpg",
+     "move": "lui-ra",
+     "w": 1300,
+     "h": 2017,
+     "from": {
+      "z": 1.32,
+      "x": 0.42,
+      "y": 0.42
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.46,
+      "y": 0.5
+     },
+     "s": 107.532,
+     "e": 114.027
+    },
+    {
+     "src": "news/3/img/campagna.jpg",
+     "move": "tien-gan",
+     "w": 2600,
+     "h": 2064,
+     "from": {
+      "z": 1.0,
+      "x": 0.25,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.25,
+      "y": 0.4167
+     },
+     "s": 114.027,
+     "e": 121.592
+    }
+   ]
+  },
+  {
+   "s": 121.592,
+   "e": 153.615,
+   "pics": [
+    {
+     "src": "news/3/img/christiane.jpg",
+     "move": "tien-gan",
+     "w": 1958,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.3735,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.36,
+      "y": 0.4167
+     },
+     "s": 121.592,
+     "e": 132.39
+    },
+    {
+     "src": "news/3/img/schiller_graff.jpg",
+     "move": "tien-gan",
+     "w": 2136,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.42,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.42,
+      "y": 0.4167
+     },
+     "s": 132.39,
+     "e": 143.806
+    },
+    {
+     "src": "news/3/img/denkmal.jpg",
+     "move": "lui-ra",
+     "w": 1300,
+     "h": 1733,
+     "from": {
+      "z": 1.32,
+      "x": 0.6,
+      "y": 0.3788
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "s": 143.806,
+     "e": 153.615
+    }
+   ]
+  },
+  {
+   "s": 153.615,
+   "e": 175.922,
+   "pics": [
+    {
+     "src": "news/3/img/faust_1808.jpg",
+     "move": "dung-yen",
+     "w": 1300,
+     "h": 1645,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 153.615,
+     "e": 157.557
+    },
+    {
+     "src": "news/3/img/faust2_inhalt.jpg",
+     "move": "chi-tiet",
+     "w": 1300,
+     "h": 1936,
+     "from": {
+      "z": 1.0,
+      "x": 0.4188,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.2889,
+      "y": 0.3448
+     },
+     "s": 157.557,
+     "e": 166.143
+    },
+    {
+     "src": "news/3/img/goethe_1832.jpg",
+     "move": "lui-ra",
      "w": 2096,
      "h": 2263,
-     "s": 21.524,
-     "e": 29.084
+     "from": {
+      "z": 1.32,
+      "x": 0.45,
+      "y": 0.3788
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.475,
+      "y": 0.5
+     },
+     "s": 166.143,
+     "e": 175.922
     }
    ]
   }
@@ -114,8 +532,208 @@
   },
   {
    "s": 25.446,
-   "e": 27.434,
+   "e": 28.584,
    "text": "mit 82 Jahren."
+  },
+  {
+   "s": 28.584,
+   "e": 35.21,
+   "text": "Geboren wurde er am 28. August\n1749 in Frankfurt am Main."
+  },
+  {
+   "s": 35.21,
+   "e": 38.986,
+   "text": "Der Vater, Johann Caspar,\nwar ein wohlhabender Jurist."
+  },
+  {
+   "s": 38.986,
+   "e": 43.398,
+   "text": "Die Mutter, Catharina Elisabeth,\nwar bei der Hochzeit 17."
+  },
+  {
+   "s": 43.398,
+   "e": 45.057,
+   "text": "Später schrieb Goethe:"
+  },
+  {
+   "s": 45.057,
+   "e": 48.689,
+   "text": "„Vom Vater hab ich die Statur,\ndes Lebens ernstes Führen,"
+  },
+  {
+   "s": 48.689,
+   "e": 53.539,
+   "text": "vom Mütterchen die Frohnatur\nund Lust zu fabulieren.“"
+  },
+  {
+   "s": 53.539,
+   "e": 58.037,
+   "text": "Mit 16 schickte ihn der Vater\nzum Jurastudium nach Leipzig."
+  },
+  {
+   "s": 58.037,
+   "e": 61.649,
+   "text": "Dort zeichnete er, schrieb\nGedichte, verliebte sich –"
+  },
+  {
+   "s": 61.649,
+   "e": 63.483,
+   "text": "und studierte wenig."
+  },
+  {
+   "s": 63.483,
+   "e": 66.007,
+   "text": "In Straßburg beendete\ner das Studium"
+  },
+  {
+   "s": 66.007,
+   "e": 70.156,
+   "text": "und verliebte sich in Friederike\nBrion, eine Pfarrerstochter."
+  },
+  {
+   "s": 70.156,
+   "e": 72.539,
+   "text": "Er verließ sie.\nSpäter schrieb er:"
+  },
+  {
+   "s": 72.539,
+   "e": 77.267,
+   "text": "„Ich hatte das schönste Herz\nin seinem Tiefsten verwundet.“"
+  },
+  {
+   "s": 77.267,
+   "e": 81.746,
+   "text": "1772 ging er ans\nReichskammergericht nach Wetzlar."
+  },
+  {
+   "s": 81.746,
+   "e": 84.613,
+   "text": "Dort verliebte er sich\nin Charlotte Buff –"
+  },
+  {
+   "s": 84.613,
+   "e": 86.447,
+   "text": "doch sie war schon verlobt."
+  },
+  {
+   "s": 86.447,
+   "e": 90.396,
+   "text": "Kurz darauf erschoss sich ein\nBekannter aus unglücklicher Liebe."
+  },
+  {
+   "s": 90.396,
+   "e": 93.965,
+   "text": "Aus beidem schrieb Goethe in\nwenigen Wochen einen Roman:"
+  },
+  {
+   "s": 93.965,
+   "e": 96.354,
+   "text": "Die Leiden des jungen Werthers."
+  },
+  {
+   "s": 96.354,
+   "e": 99.022,
+   "text": "Junge Männer kleideten\nsich wie Werther,"
+  },
+  {
+   "s": 99.022,
+   "e": 102.461,
+   "text": "in blauem Frack\nund gelber Weste."
+  },
+  {
+   "s": 102.461,
+   "e": 107.682,
+   "text": "1775 holte ihn der junge\nHerzog Carl August nach Weimar."
+  },
+  {
+   "s": 107.682,
+   "e": 110.746,
+   "text": "Goethe blieb dort für\nden Rest seines Lebens."
+  },
+  {
+   "s": 110.746,
+   "e": 114.177,
+   "text": "Er wurde Minister – zum\nSchreiben kam er kaum noch."
+  },
+  {
+   "s": 114.177,
+   "e": 119.237,
+   "text": "1786 floh er heimlich nach\nItalien, unter falschem Namen,"
+  },
+  {
+   "s": 119.237,
+   "e": 122.192,
+   "text": "für fast zwei Jahre."
+  },
+  {
+   "s": 122.192,
+   "e": 125.813,
+   "text": "Zurück in Weimar lernte er\nChristiane Vulpius kennen,"
+  },
+  {
+   "s": 125.813,
+   "e": 129.076,
+   "text": "die in einer Werkstatt\nkünstliche Blumen machte."
+  },
+  {
+   "s": 129.076,
+   "e": 132.54,
+   "text": "Sie lebten ohne Trauschein\nzusammen – ein Skandal."
+  },
+  {
+   "s": 132.54,
+   "e": 137.034,
+   "text": "1794 begann die Freundschaft\nmit Friedrich Schiller."
+  },
+  {
+   "s": 137.034,
+   "e": 140.328,
+   "text": "Elf Jahre lang trieben\nsie sich gegenseitig an."
+  },
+  {
+   "s": 140.328,
+   "e": 143.956,
+   "text": "Schiller drängte ihn,\nden Faust weiterzuschreiben."
+  },
+  {
+   "s": 143.956,
+   "e": 147.51,
+   "text": "Als Schiller 1805 starb,\nschrieb Goethe,"
+  },
+  {
+   "s": 147.51,
+   "e": 150.325,
+   "text": "er verliere „die\nHälfte meines Daseins“."
+  },
+  {
+   "s": 150.325,
+   "e": 154.215,
+   "text": "Ein Jahr später\nheiratete er Christiane."
+  },
+  {
+   "s": 154.215,
+   "e": 157.707,
+   "text": "1808 erschien Faust,\nder erste Teil."
+  },
+  {
+   "s": 157.707,
+   "e": 163.733,
+   "text": "Den zweiten Teil vollendete\ner im Sommer 1831, mit 81."
+  },
+  {
+   "s": 163.733,
+   "e": 166.293,
+   "text": "Dann versiegelte\ner das Manuskript."
+  },
+  {
+   "s": 166.293,
+   "e": 170.72,
+   "text": "Am 22. März 1832 starb er."
+  },
+  {
+   "s": 170.72,
+   "e": 174.272,
+   "text": "Seine letzten Worte sollen\n„Mehr Licht!“ gewesen sein."
   }
  ],
  "voice": [
@@ -150,6 +768,166 @@
   {
    "s": 25.446,
    "src": "news/3/voice/line_08.mp3"
+  },
+  {
+   "s": 28.584,
+   "src": "news/3/voice/line_09.mp3"
+  },
+  {
+   "s": 35.21,
+   "src": "news/3/voice/line_10.mp3"
+  },
+  {
+   "s": 38.986,
+   "src": "news/3/voice/line_11.mp3"
+  },
+  {
+   "s": 43.398,
+   "src": "news/3/voice/line_12.mp3"
+  },
+  {
+   "s": 45.057,
+   "src": "news/3/voice/line_13.mp3"
+  },
+  {
+   "s": 48.689,
+   "src": "news/3/voice/line_14.mp3"
+  },
+  {
+   "s": 53.539,
+   "src": "news/3/voice/line_15.mp3"
+  },
+  {
+   "s": 58.037,
+   "src": "news/3/voice/line_16.mp3"
+  },
+  {
+   "s": 61.649,
+   "src": "news/3/voice/line_17.mp3"
+  },
+  {
+   "s": 63.483,
+   "src": "news/3/voice/line_18.mp3"
+  },
+  {
+   "s": 66.007,
+   "src": "news/3/voice/line_19.mp3"
+  },
+  {
+   "s": 70.156,
+   "src": "news/3/voice/line_20.mp3"
+  },
+  {
+   "s": 72.539,
+   "src": "news/3/voice/line_21.mp3"
+  },
+  {
+   "s": 77.267,
+   "src": "news/3/voice/line_22.mp3"
+  },
+  {
+   "s": 81.746,
+   "src": "news/3/voice/line_23.mp3"
+  },
+  {
+   "s": 84.613,
+   "src": "news/3/voice/line_24.mp3"
+  },
+  {
+   "s": 86.447,
+   "src": "news/3/voice/line_25.mp3"
+  },
+  {
+   "s": 90.396,
+   "src": "news/3/voice/line_26.mp3"
+  },
+  {
+   "s": 93.965,
+   "src": "news/3/voice/line_27.mp3"
+  },
+  {
+   "s": 96.354,
+   "src": "news/3/voice/line_28.mp3"
+  },
+  {
+   "s": 99.022,
+   "src": "news/3/voice/line_29.mp3"
+  },
+  {
+   "s": 102.461,
+   "src": "news/3/voice/line_30.mp3"
+  },
+  {
+   "s": 107.682,
+   "src": "news/3/voice/line_31.mp3"
+  },
+  {
+   "s": 110.746,
+   "src": "news/3/voice/line_32.mp3"
+  },
+  {
+   "s": 114.177,
+   "src": "news/3/voice/line_33.mp3"
+  },
+  {
+   "s": 119.237,
+   "src": "news/3/voice/line_34.mp3"
+  },
+  {
+   "s": 122.192,
+   "src": "news/3/voice/line_35.mp3"
+  },
+  {
+   "s": 125.813,
+   "src": "news/3/voice/line_36.mp3"
+  },
+  {
+   "s": 129.076,
+   "src": "news/3/voice/line_37.mp3"
+  },
+  {
+   "s": 132.54,
+   "src": "news/3/voice/line_38.mp3"
+  },
+  {
+   "s": 137.034,
+   "src": "news/3/voice/line_39.mp3"
+  },
+  {
+   "s": 140.328,
+   "src": "news/3/voice/line_40.mp3"
+  },
+  {
+   "s": 143.956,
+   "src": "news/3/voice/line_41.mp3"
+  },
+  {
+   "s": 147.51,
+   "src": "news/3/voice/line_42.mp3"
+  },
+  {
+   "s": 150.325,
+   "src": "news/3/voice/line_43.mp3"
+  },
+  {
+   "s": 154.215,
+   "src": "news/3/voice/line_44.mp3"
+  },
+  {
+   "s": 157.707,
+   "src": "news/3/voice/line_45.mp3"
+  },
+  {
+   "s": 163.733,
+   "src": "news/3/voice/line_46.mp3"
+  },
+  {
+   "s": 166.293,
+   "src": "news/3/voice/line_47.mp3"
+  },
+  {
+   "s": 170.72,
+   "src": "news/3/voice/line_48.mp3"
   }
  ],
  "music": "news/3/bed.wav",
