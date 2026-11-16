@@ -44,8 +44,10 @@ json.dump({'title': 'Test', 'voice': 'test', 'lines': lines,
           open(os.path.join(job, 'script.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 json.dump({'images': {'wide': {'src': '1/1-1.jpg', 'mode': 'color'}, 'tall': {'src': '1/1-2.jpg', 'mode': 'sepia'},
                       'small': {'src': '1/1-3.jpg', 'crop': [0.1, 0.1, 0.9, 0.9], 'mode': 'keep'}},
-           'chapters': [{'pics': [{'img': 'tall', **cam(1.0, 1.08)}, {'at': 2, 'img': 'wide', **cam(1.0, 1.1)}]},
-                        {'pics': [{'img': 'small', **cam(1.1, 1.0)}, {'at': 3.5, 'img': 'tall', **cam(1.0, 1.15)}]}]},
+           'chapters': [{'pics': [{'img': 'tall', 'move': 'tien-gan', 'focus': [0.5, 0.3], 'why': 'chân dung khi câu nhắc tên'},
+                                  {'at': 2, 'img': 'wide', 'move': 'luot-phai', 'focus': [0.6, 0.5], 'why': 'toàn cảnh nơi ở'}]},
+                        {'pics': [{'img': 'small', **cam(1.1, 1.0)},
+                                  {'at': 3.5, 'img': 'tall', 'move': 'nang-len', 'fade': 0.5, 'to': {'z': 1.2, 'x': .5, 'y': .3}}]}]},
           open(os.path.join(job, 'picks.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 
 S = os.path.join(ROOT, 'scripts', 'news')
@@ -74,6 +76,21 @@ assert all(abs(a['e'] - b['s']) < 1e-6 for a, b in zip(plan['subs'], plan['subs'
 srt = open(os.path.join(out, 'subtitles.srt'), encoding='utf-8').read(); assert srt.count('-->') == 6
 cue_t = [[sum(float(x) * k for x, k in zip(re.split('[:,]', v), (3600, 60, 1, .001))) for v in m] for m in re.findall(r'(\S+) --> (\S+)', srt)]
 assert all(a[0] < a[1] <= b[0] + 1e-6 for a, b in zip(cue_t, cue_t[1:])), cue_t      # .srt cues never overlap
+# named moves: worked out for the picture and the shot's length; notes stay out of the plan; hand-written numbers kept
+import moves
+p0, p1, p2, p3 = plan['chapters'][0]['pics'] + plan['chapters'][1]['pics']
+assert p0['move'] == 'tien-gan' and p0['to']['z'] > p0['from']['z'] and 'why' not in p0 and 'focus' not in p0 and 'fade' not in p0, p0
+assert p1['move'] == 'luot-phai' and p1['from']['x'] < p1['to']['x'] and p1['from']['z'] == p1['to']['z'], p1
+assert p2['from'] == {'z': 1.1, 'x': .5, 'y': .5} and 'move' not in p2, p2
+assert p3['fade'] == 0.5 and p3['to'] == {'z': 1.2, 'x': .5, 'y': .3} and p3['from']['y'] > p3['to']['y'], p3   # explicit "to" wins
+spec = json.load(open(os.path.join(job, 'script.json'), encoding='utf-8')); pk = json.load(open(os.path.join(job, 'picks.json'), encoding='utf-8'))
+times = moves.shot_times(spec['chapters'], pk['chapters'], {r['i']: r['duration'] for r in rows}, {r['i']: r['text'] for r in rows})
+assert [[(s, e) for s, e, _ in c] for c in times] == [[(p['s'], p['e']) for p in c['pics']] for c in plan['chapters']], times   # preview timing = plan timing
+ed = open(os.path.join(out, 'edits.md'), encoding='utf-8').read()
+assert ed.count('\n| ') == 5 and 'tiến gần (`tien-gan`)' in ed and 'toàn cảnh nơi ở' in ed and 'tự chỉnh' in ed and 'chuyển mờ 0.5 giây' in ed, ed
+pm = open(os.path.join(out, 'preview.md'), encoding='utf-8').read()   # the preview's list (estimated times: no voice next to the pictures here)
+assert pm.count('\n| ') == 5 and 'lướt sang phải (`luot-phai`)' in pm, pm
+assert moves.check({'pair': {}}, 'x') and moves.check({'img': 'a', 'move': 'zoom'}, 'x')   # no pairs, no unknown moves
 cred = open(os.path.join(out, 'credits.txt'), encoding='utf-8').read()
 assert 'Wide.jpg' in cred and 'CC BY 4.0' in cred and 'commons.wikimedia.org' in cred
 assert os.path.getsize(os.path.join(pub, 'news', N, 'bed.wav')) > 100000

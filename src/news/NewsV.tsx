@@ -7,7 +7,10 @@ import { AbsoluteFill, Audio, Img, Sequence, cancelRender, continueRender, delay
 // text on yellow boxes (one box per row) a little below the middle. No titles, no cards, no on-screen credits
 // (they go in the video description). The plan (props) is written by scripts/news/build.py; see AGENT_NEWS.md.
 type Cam = { z: number; x: number; y: number };
-export type Pic = { src: string; w: number; h: number; s: number; e: number; from: Cam; to: Cam };
+// move: the name of the catalogue move ("bảng cách edit", scripts/news/moves.py) the camera numbers came from
+// (information only; build.py already worked out from/to). fade: seconds this picture takes to dissolve in over the
+// one before; leave it out for a hard cut, as in the sample.
+export type Pic = { src: string; w: number; h: number; s: number; e: number; from: Cam; to: Cam; move?: string; fade?: number };
 export type ChapterV = { s: number; e: number; pics: Pic[] };
 export type SubV = { s: number; e: number; text: string };
 type FontChunk = { family: string; file: string; range: string };
@@ -62,13 +65,17 @@ export const NewsV: React.FC<PlanV> = (plan) => {
   const t = frame / fps;
   const pics = plan.chapters.flatMap((c) => c.pics);
   if (!pics.length) return <AbsoluteFill style={{ backgroundColor: '#000' }} />;
-  const pic = pics.find((p) => t >= p.s && t < p.e) || pics[pics.length - 1];   // hard cuts
+  const k = pics.findIndex((p) => t >= p.s && t < p.e);
+  const i = k >= 0 ? k : t >= pics[pics.length - 1].s ? pics.length - 1 : 0;
+  const pic = pics[i];                                                          // hard cuts, unless the shot asks for a dissolve
+  const fade = Math.min(pic.fade ?? 0, 1.5), inA = fade > 0 && i > 0 ? clamp01((t - pic.s) / fade) : 1;
   const sub = plan.subs.find((s) => t >= s.s && t < s.e);
   const endFade = clamp01((t - (plan.duration - 1.2)) / 1.2);
   const speaking = (tt: number) => plan.subs.some((s) => tt >= s.s - 0.2 && tt < s.e + 0.3);
   return (
     <AbsoluteFill style={{ backgroundColor: '#000', overflow: 'hidden' }}>
-      <PicView p={pic} t={t} />
+      {inA < 1 ? <PicView p={pics[i - 1]} t={t} /> : null}
+      <AbsoluteFill style={{ opacity: inA }}><PicView p={pic} t={t} /></AbsoluteFill>
       {sub ? <Subtitle text={sub.text} /> : null}
       <AbsoluteFill style={{ backgroundColor: '#000', opacity: endFade }} />
       {plan.voice.map((v, i) => <Sequence key={i} from={Math.round(v.s * fps)}><Audio src={staticFile(v.src)} /></Sequence>)}

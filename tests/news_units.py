@@ -138,4 +138,63 @@ for f in ('1/2-1.jpg', 'own/foto.jpg'): open(os.path.join(tmp, f), 'w').close()
 assert prep.missing_sources(picks, tmp) == ['3/1-1.jpg', '10/1-1.jpg']
 assert '2 ảnh' in run.GONE.format(n=2, files='3/1-1.jpg, 10/1-1.jpg') and 'CHỌN LẠI' in run.GONE
 shutil.rmtree(tmp, ignore_errors=True)
+# --- the catalogue of moves (scripts/news/moves.py) ---
+import moves
+assert 8 <= len(moves.MOVES) <= 12
+for (w, h) in ((1600, 1100), (800, 1200), (1150, 1150), (2600, 900)):          # landscape, portrait, square, panorama
+    for name in moves.MOVES:
+        for d in (1.5, 4, 9):
+            for f in (None, (0.1, 0.2), (0.9, 0.85)):
+                a, b = moves.expand(name, w, h, d, f)
+                for c in (a, b):   # the panel never looks past an edge of the picture
+                    hx, hy = moves.half(w, h, c['z'])
+                    assert 1.0 <= c['z'] <= 1.46 and hx - 1e-3 <= c['x'] <= 1 - hx + 1e-3 and hy - 1e-3 <= c['y'] <= 1 - hy + 1e-3, (name, w, h, d, f, c)
+                assert a != b, (name, w, h, d, f)                               # every move moves
+E = lambda n, d=5, f=None: moves.expand(n, 1600, 1100, d, f)
+assert E('tien-gan')[0]['z'] == 1.0 and 1.08 <= E('tien-gan')[1]['z'] <= 1.2 and E('tien-gan', 9)[1]['z'] > E('tien-gan', 3)[1]['z']
+assert E('chi-tiet')[1]['z'] >= 1.25 > E('tien-gan')[1]['z'] and E('lui-ra')[0]['z'] > E('lui-ra')[1]['z'] == 1.0
+assert E('luot-phai')[0]['x'] < E('luot-phai')[1]['x'] and E('luot-trai')[0]['x'] > E('luot-trai')[1]['x'] and E('luot-phai')[0]['z'] == E('luot-phai')[1]['z']
+assert E('nang-len')[0]['y'] > E('nang-len')[1]['y'] and E('ha-xuong')[0]['y'] < E('ha-xuong')[1]['y']
+assert E('dung-yen')[1]['z'] <= 1.03 and abs(E('troi-nhe')[1]['x'] - E('troi-nhe')[0]['x']) < 0.15 and E('troi-nhe')[1]['z'] > E('troi-nhe')[0]['z']
+assert abs(E('tien-gan', f=(0.3, 0.4))[1]['x'] - 0.3) < 0.08                    # ends on the subject
+T = lambda n, d, w=1600, h=1100, f=None: moves.travel(*moves.expand(n, w, h, d, f), w, h)
+for d in (2.2, 4, 9):                                                           # calm: never faster than the move's cap
+    assert T('luot-phai', d)[0] <= moves.SPEED['luot-phai'][3] * d + 1e-3 and T('nang-len', d, 800, 1200)[1] <= moves.SPEED['nang-len'][3] * d + 1e-3
+# short shots still visibly move: the least travel is kept (speed goes up), until the shot is too short for the move
+assert T('luot-phai', 2.2)[0] >= 0.24 and T('nang-len', 2.2, 800, 1200)[1] >= 0.24 and T('troi-nhe', 2.2)[0] >= 0.11
+assert E('tien-gan', 2.2)[1]['z'] >= 1.10 and E('lui-ra', 2.2)[0]['z'] >= 1.18 and E('chi-tiet', 2.2)[1]['z'] >= 1.25
+assert not any(moves.too_short(n, 2.2) for n in moves.MOVES) and all(moves.too_short(n, 1.5) for n in moves.SPEED) and not moves.too_short('dung-yen', 1.0)
+assert E('tien-gan', 1.2)[1]['z'] < 1.07                                        # too short: slower rather than a jerk
+w15 = moves.warnings({'img': 'a', 'move': 'luot-phai'}, 1600, 1100, 1.5)
+assert len(w15) == 1 and 'too short' in w15[0] and 'dung-yen' in w15[0] and moves.warnings({'img': 'a', 'move': 'luot-phai'}, 1600, 1100, 2.2) == []
+assert moves.warnings({'img': 'a', 'move': 'luot-phai', 'from': {}, 'to': {}}, 1600, 1100, 1.0) == [] and moves.warnings({'img': 'a', 'from': {}, 'to': {}}, 1600, 1100, 1.0) == []
+# a tilt on a landscape picture (no room at normal size) zooms in as far as needed and really travels
+for d in (2.2, 5):
+    a, b = moves.expand('nang-len', 1920, 1080, d)
+    assert 1.2 <= a['z'] <= moves.MAX_SLIDE_Z and T('nang-len', d, 1920, 1080)[1] >= 0.24, (d, a, b)
+assert T('ha-xuong', 5, 1920, 1080)[1] > T('ha-xuong', 2.2, 1920, 1080)[1] and moves.warnings({'img': 'a', 'move': 'nang-len'}, 1920, 1080, 4) == []
+# chi-tiet / lui-ra: the subject is inside the frame at both ends (so during the whole move), also with "wide"
+def inside(c, f, w, h, k=moves.KEEP + 0.01):
+    hx, hy = moves.half(w, h, c['z']); return abs(f[0] - c['x']) <= k * hx + 1e-3 and abs(f[1] - c['y']) <= k * hy + 1e-3
+for (w, h) in ((1920, 1080), (800, 1200), (2600, 900)):
+    for f in ((0.05, 0.1), (0.6, 0.38), (0.95, 0.9)):
+        for wide in (None, (0.2, 0.5), (0.9, 0.2)):
+            for n in ('chi-tiet', 'lui-ra'):
+                a, b = moves.expand(n, w, h, 4, f, wide)
+                fc = moves.cam(w, h, max(a['z'], b['z']), *f)                   # the subject as the close end can show it
+                assert inside(a if a['z'] == 1.0 else b, (fc['x'], fc['y']), w, h, 1.0), (n, w, h, f, wide, a, b)
+lr = moves.expand('lui-ra', 1920, 1080, 6, (0.6, 0.38), (0.4, 0.45))[1]         # pulls back towards a second subject
+assert lr['z'] == 1.0 and lr['x'] < moves.expand('lui-ra', 1920, 1080, 6, (0.6, 0.38))[1]['x'] and inside(lr, (0.6, 0.38), 1920, 1080)
+far = moves.warnings({'img': 'a', 'move': 'lui-ra', 'focus': [0.6, 0.38], 'wide': [0.1, 0.4]}, 1920, 1080, 6)
+assert len(far) == 1 and 'would lose the subject' in far[0] and moves.check({'img': 'a', 'move': 'lui-ra', 'wide': [3, 1]}, 'c') != []
+try: moves.expand('zoom-nhanh', 1600, 1100, 5); raise AssertionError('unknown move accepted')
+except ValueError as e: assert all(n in str(e) for n in moves.MOVES)
+ok_shot = {'img': 'a', 'move': 'lui-ra', 'why': 'x', 'focus': [0.5, 0.4], 'fade': 0}
+assert moves.check(ok_shot, 'cảnh 1-1') == [] and moves.check({'img': 'a', 'from': {}, 'to': {}}, 'c') == []
+assert len(moves.check({'pair': {}}, 'c')) == 1 and 'pair' in moves.check({'pair': {}}, 'c')[0]   # one picture per shot (sample)
+bad = moves.check({'img': 'a', 'move': 'zoom', 'focus': [2, 0], 'fade': 9}, 'cảnh 1-2')
+assert len(bad) == 3 and 'tien-gan, chi-tiet' in bad[0] and bad[0].startswith('cảnh 1-2'), bad
+assert 'cần "move"' in moves.check({'img': 'a', 'from': {}}, 'c')[0]
+assert moves.camera({'move': 'tien-gan', 'to': {'z': 1.5, 'x': .5, 'y': .5}}, 1600, 1100, 5)[1]['z'] == 1.5       # explicit numbers win
+assert moves.camera({'from': 1, 'to': 2}, 1600, 1100, 5) == (1, 2) and moves.label({'from': 1, 'to': 2}) == '-' and moves.label(ok_shot) == 'lui-ra'
 print('news unit checks OK')

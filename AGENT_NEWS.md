@@ -7,7 +7,7 @@ timings and frames). Learn both from it: **how the script is written** (§1.1) a
 one picture at a time filling the whole frame, a slow push-in, hard cuts, subtitles as dark text on yellow boxes
 (`src/news/NewsV.tsx`). The machine steps and file names still say `news` (labels `news-*`, folder `news/<N>/`,
 `.github/workflows/news.yml` → `scripts/news/run.py`); files land on the `renders` branch in `news/<N>/`
-(`voice/`, `img/<round>/`, `video.mp4`, `sheet.jpg`, `subtitles.srt`, `credits.txt`; `voice-partial/` = the
+(`voice/`, `img/<round>/`, `video.mp4`, `sheet.jpg`, `subtitles.srt`, `credits.txt`, `edits.md`; `voice-partial/` = the
 finished lines of a voice step that failed halfway, reused by the next run).
 
 Steps (labels): `news-plan` → you write `news/<N>/script.json` → `news-voice` (machine: voice, voice check,
@@ -131,27 +131,63 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
 {"images": {"goethe_stieler": {"src": "1/1-2.jpg", "crop": [0.05, 0.0, 0.95, 0.9], "mode": "keep"},
             "goethehaus": {"src": "1/4-1.jpg", "mode": "keep"}},
  "chapters": [{"pics": [
-   {"img": "goethe_stieler", "from": {"z": 1.0, "x": 0.5, "y": 0.4}, "to": {"z": 1.1, "x": 0.5, "y": 0.36}},
-   {"at": 4, "img": "goethehaus", "from": {"z": 1.0, "x": 0.45, "y": 0.5}, "to": {"z": 1.08, "x": 0.45, "y": 0.48}}]}]}
+   {"img": "goethe_stieler", "move": "tien-gan", "focus": [0.55, 0.3], "why": "câu mở đầu nhắc tên Goethe: tiến gần gương mặt"},
+   {"at": 4, "img": "goethehaus", "move": "nang-len", "focus": [0.45, 0.5], "why": "câu nhắc ngôi nhà nơi ông sinh ra"}]}]}
 ```
    - `images`: `src` = `<round>/<file>` from the search, or `own/<file>` for a picture that is not a search result;
      `page` (a picture in `own/` from the web: the page it comes from) and `credit` (`<what> · <author> /
      <licence>`) are printed in `credits.txt` for the video description. Nothing is written on the picture.
      `crop` [x0, y0, x1, y1] in 0..1. `mode`: `keep` (normal), `color` (slightly warmer and softer), `sepia`.
    - `chapters[i].pics` in order, one list per chapter of `script.json`. The first picture starts with the
-     chapter; `at` = line number where the next picture cuts in (fractional allowed: 13.5 = mid-line 13). Cuts
-     are hard, as in the sample.
-   - **Camera, as in the sample: one slow, steady push-in per picture**: `from.z` 1.0 → `to.z` 1.08–1.15, the
-     point held a little higher at the end (`y` −0.02…−0.05), nothing else. `x`, `y` = point of the picture held
-     at the frame centre. The frame is tall (9:16): a portrait fills it, a landscape picture shows only a tall
-     strip of itself — put `x` on the subject. **Keep faces out of the subtitle band** (74–82 % of the height):
-     eyes in the upper half of the frame.
+     chapter; `at` = line number where the next picture cuts in (fractional allowed: 13.5 = mid-line 13).
+   - **The edit of each shot** (owner, 14/11: chosen by reading the line, from the named table below, never free
+     numbers): `move` = one name of the table; `focus` `[x, y]` (0–1) = where the subject is in the (cropped)
+     picture, default `[0.5, 0.4]`; `why` = one short Vietnamese reason (shown to the owner in the list of edits,
+     never in the video). The machine works out the camera for the picture's shape and the shot's length, so the
+     speed is always calm and no edge shows; `chi-tiet` and `lui-ra` keep the `focus` in the frame from start to
+     end; `wide` `[x, y]` (optional, `chi-tiet`/`lui-ra` only) = where the whole-picture end looks. `fade`
+     (optional, seconds 0–1.5): left out = a **hard cut, as in the sample**; `0.8–1.0` = a dissolve, only for a
+     big jump in time (a gap of decades, the step from the life to the death). An unknown name stops the preview
+     and the render with the list of valid names. Hand-written `from`/`to` (`z` 1.0–1.6, `x`, `y` = point held at
+     the frame centre) still work and win, only for a framing no move gives, with a `why`.
+     The frame is tall (9:16): a portrait fills it, a landscape picture shows only a tall strip of itself — the
+     `focus` decides which. **Keep faces out of the subtitle band** (74–82 % of the height): eyes in the upper half.
+
+   **Bảng cách edit** (`scripts/news/moves.py`, the same table for every video of the repo). The literature
+   sample pushes in on almost every picture: by +5–20 % per shot, about 1–3 % per second (measured), once +35 %
+   into a detail, sometimes drifting up or down a little. So here `tien-gan` is the normal move and may be most
+   of the shots; choose another only when the line asks for it. The owner's remarks refine the table: a remark on
+   one shot ("cảnh 5 đổi sang kiểu lùi ra") changes that shot; a remark on taste changes this table.
+
+   | `move` | tên cho chủ kênh | what it looks like | use it when the line … |
+   |---|---|---|---|
+   | `tien-gan` | tiến gần | slow push-in to the subject (+10–20 %) | **names the writer** or a person of their life; tells a fact of the life over a portrait (the sample's normal shot) |
+   | `chi-tiet` | soi chi tiết | from the whole picture strongly into one detail (+25–45 %) | names **one telling detail**: a title on a first edition, a line of a manuscript, a hand holding a pen, the eyes in a late portrait; a short, hard sentence ("Er war jähzornig.") |
+   | `lui-ra` | lùi ra | starts close on the subject, pulls back to the whole picture | puts the person into a **place or a group** (the family, the court of Weimar, the study); the **last line** or an open question |
+   | `luot-phai` / `luot-trai` | lướt sang phải / trái | steady pan across, no zoom change | shows a **wide place or several people** (a town view, a room, a group portrait, a page spread); pan the way the eye reads or people look |
+   | `nang-len` | nâng lên | tilt up from the foot to the top | names a **building or a monument** (birth house, theatre, statue); a rise (fame, an office) |
+   | `ha-xuong` | hạ xuống | tilt down from the top to the foot | goes from a place down to what happened there; an illness, a fall, a death |
+   | `dung-yen` | đứng yên | held almost still, everything readable | shows **text to be read** (a title page, a letter, a manuscript) or a grave moment (deathbed, grave) |
+   | `troi-nhe` | trôi nhẹ | a little closer, a small slow sideways drift with a light push | a bridge line between two stages; a thought or a question more than a fact |
+
+   How to choose: (1) **read the line first**, then ask what the viewer should look at while hearing it: that is
+   the `focus`, and the row whose "when" fits is the `move`; (2) move along the picture (pan the way people look
+   or a street runs, tilt along a façade; a pan across a portrait has no room and looks like a mistake);
+   (3) neighbours differ a little: after a `chi-tiet` or a pan a quiet `tien-gan`/`dung-yen`, and two `tien-gan`
+   in a row get clearly different `focus` points (face, then hands or book); (4) every move needs about 2 s to
+   show — under that the preview prints `WARNING: … too short` and marks the tile `!`: give the picture one more
+   line (here a picture stays ~9 s anyway); (5) a returning picture gets another `focus` and another move;
+   (6) the first shot: the strongest portrait with `tien-gan`; the last shot: `lui-ra`, `dung-yen` or `tien-gan`
+   on the face.
 6. **Preview before pushing**: `pip install -q numpy pillow` if missing, then
    `python3 scripts/news/preview.py news/<N>/picks.json news/<N>/script.json /tmp/r/news/<N>/img /tmp/preview.jpg`
    (pictures of `own/` are read from `<img_root>/own/`, so first copy them:
    `mkdir -p /tmp/r/news/<N>/img/own && cp news/<N>/own/* /tmp/r/news/<N>/img/own/`) and open the sheet: every shot
-   at the start and the end of its push-in, exactly as the video frames it, with the subtitle band outlined in
-   yellow. Fix any shot where the subtitles cover a face, a face is cut, or a frame or label shows, and run it again.
+   at the start and the end of its move, exactly as the video frames it, labelled with its `[move]`, with the
+   subtitle band outlined in yellow. Fix any shot where the subtitles cover a face, a face is cut, a frame or label
+   shows, or start and end look the same although the move should travel, and run it again. Clear every
+   `WARNING:` line. The preview also writes `/tmp/preview.md` (and prints it): the list of edits — shot, line,
+   picture, move, why. Read it once as a viewer: does every move follow from its line?
 7. Commit `picks.json` together with any `script.json`/readings fixes in **one** push as `[news #<N>] chọn ảnh`
    (a push of `script.json` alone runs the voice step again), remove `news-busy`. (The render takes ~5–20 min:
    ~6.5 min for a 1.5-minute video, ~19 min for 3 minutes; you are woken at `news-check`.)
@@ -162,13 +198,15 @@ Open `sheet.jpg` (one tile per shot with its subtitle: chapter-shot, picture nam
 too many repeats, a watermark), all fixes in one push. Otherwise remove `news-check`, add `news-done` and comment
 (🤖, short, Vietnamese): video link `https://github.com/maihaianh2911-bit/germany-news-video-factory/blob/renders/news/<N>/video.mp4`,
 its length, links to `subtitles.srt` and `credits.txt` (to paste into the video description), one line on the
-pictures used, the date until which the links work — `Tải video về máy trước ngày <dd/mm/yyyy>: sau ngày đó máy tự
+pictures used, the list of edits (paste `news/<N>/edits.md` from `renders` as it is: the table "Cách edit từng
+cảnh" with its last line, so the owner can answer "cảnh 5 đổi sang kiểu lùi ra"), the date until which the links work — `Tải video về máy trước ngày <dd/mm/yyyy>: sau ngày đó máy tự
 dọn video cũ và các link trên hết dùng được.` with the date = today + 14 days (`renders-cleanup.yml` removes
 `news/<N>/` from `renders` once the issue had no activity for 14 days; every comment on the issue restarts the
 count) — and "bình luận nếu muốn sửa".
 
 ## 4. `news-fix` and `news-failed`
-- `news-fix`: the request = owner comments after your last `🤖` comment. Text → `script.json` (changed lines are
+- `news-fix`: the request = owner comments after your last `🤖` comment. "Cảnh 5 đổi sang kiểu X" → the `move` of
+  shot 5 in the list of edits (X = the Vietnamese name or the `move` name of the table), with a new `why`. Text → `script.json` (changed lines are
   read again, the rest reused); pictures → `picks.json` (+ `search-<r>.json`; after a search round the issue is
   `news-pick` and you go on in §2). Push, one-line 🤖 comment, remove `news-fix`.
 - **A fix after the cleanup** (the issue was quiet for more than 14 days, `news/<N>/` is gone from `renders`): the

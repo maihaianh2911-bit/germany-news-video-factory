@@ -7,7 +7,7 @@
            as voice-partial/ and reused by the next run: audio that was paid for is never read twice.
   search   every news/<N>/search-<r>.json whose round is not on renders yet → renders/news/<N>/img/<r>/
   render   pictures from picks.json, plan, fonts, Remotion render, loudness, shot sheet
-           → renders/news/<N>/video.mp4, subtitles.srt, credits.txt, sheet.jpg
+           → renders/news/<N>/video.mp4, subtitles.srt, credits.txt, sheet.jpg, edits.md (the edit of each shot)
 After prepare/search the issue waits for Claude (news-pick, Claude is called) unless picks.json exists, then render
 runs too; not when a search round the picks use was searched (again) in this run: with changed queries, or because
 the old results are gone from renders (cleaned after 14 days), the numbers may now name other pictures, so Claude
@@ -18,7 +18,7 @@ Needs GH_TOKEN, GITHUB_REPOSITORY; prepare needs VN11_API_KEY.
 import json, os, shutil, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
-import ff, prep
+import ff, moves, prep
 
 N, steps = sys.argv[1], sys.argv[2:]
 JOB = os.path.join(ROOT, 'news', N)
@@ -218,6 +218,9 @@ def render():
     if os.path.isdir(os.path.join(JOB, 'own')):
         shutil.copytree(os.path.join(JOB, 'own'), os.path.join(imgsrc, 'own'), dirs_exist_ok=True)
     picks = os.path.join(JOB, 'picks.json')
+    bad = moves.check_all(json.load(open(picks, encoding='utf-8')))
+    if bad:   # an unknown move name etc.: say it in the issue comment, with the valid names
+        raise SystemExit('picks.json: ' + '; '.join(bad[:5]))
     gone = prep.missing_sources(json.load(open(picks, encoding='utf-8')), imgsrc)
     if gone:
         raise SystemExit(GONE.format(n=len(gone), files=', '.join(gone[:6]) + (' …' if len(gone) > 6 else '')))
@@ -239,8 +242,8 @@ def render():
         print(f'video now {mb:.1f} MB', flush=True)
         if mb > 100: raise SystemExit(f'video {mb:.1f} MB, vẫn quá 100 MB')
     sh(sys.executable, os.path.join(HERE, 'sheet.py'), video, os.path.join(out, 'plan.json'), picks, os.path.join(WORK, 'sheet.jpg'))
-    for f in ('subtitles.srt', 'credits.txt', 'plan.json'): shutil.copy(os.path.join(out, f), os.path.join(WORK, f))
-    publish(['video.mp4', 'sheet.jpg', 'subtitles.srt', 'credits.txt', 'plan.json'], 'video')
+    for f in ('subtitles.srt', 'credits.txt', 'plan.json', 'edits.md'): shutil.copy(os.path.join(out, f), os.path.join(WORK, f))
+    publish(['video.mp4', 'sheet.jpg', 'subtitles.srt', 'credits.txt', 'plan.json', 'edits.md'], 'video')
     return plan['duration']
 
 
