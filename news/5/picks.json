@@ -1,9 +1,5 @@
 {
  "images": {
-  "mm_huehner": {
-   "src": "1/4-7.jpg",
-   "mode": "keep"
-  },
   "busch_1878": {
    "src": "1/1-5.jpg",
    "mode": "keep"
@@ -72,10 +68,6 @@
    "src": "1/13-7.jpg",
    "mode": "keep"
   },
-  "mm_jubel": {
-   "src": "1/5-1.jpg",
-   "mode": "keep"
-  },
   "mm_laempel": {
    "src": "1/6-1.jpg",
    "mode": "keep"
@@ -83,19 +75,33 @@
   "mm_bauer": {
    "src": "1/4-1.jpg",
    "mode": "keep"
+  },
+  "mm_titel_1865": {
+   "src": "2/4-1.jpg",
+   "mode": "keep"
+  },
+  "mm_jubel_nah": {
+   "src": "1/5-1.jpg",
+   "crop": [
+    0.55,
+    0.0,
+    0.99,
+    0.72
+   ],
+   "mode": "keep"
   }
  },
  "chapters": [
   {
    "pics": [
     {
-     "img": "mm_huehner",
-     "move": "luot-phai",
+     "img": "mm_jubel_nah",
+     "move": "tien-gan",
      "focus": [
       0.5,
-      0.5
+      0.35
      ],
-     "why": "câu thơ sau trò nghịch thứ nhất: lướt qua bầy gà của bà góa Bolte treo trên cành"
+     "why": "mở đầu bằng câu thơ nổi tiếng: hai cậu Max và Moritz nhảy cẫng reo mừng, hình lớn, nhìn là nhận ra ngay"
     },
     {
      "at": 3,
@@ -208,13 +214,13 @@
     },
     {
      "at": 24,
-     "img": "mm_bruecke",
-     "move": "troi-nhe",
+     "img": "mm_titel_1865",
+     "move": "dung-yen",
      "focus": [
-      0.52,
-      0.45
+      0.5,
+      0.4
      ],
-     "why": "câu nối 'lúc đầu bán chậm, rồi thành kinh điển': trôi nhẹ về hai cậu bé đang cưa cầu"
+     "why": "câu sách lúc đầu bán chậm rồi thành kinh điển: trang bìa bản in đầu năm 1865"
     },
     {
      "at": 26,
@@ -304,13 +310,13 @@
     },
     {
      "at": 41,
-     "img": "mm_jubel",
-     "move": "tien-gan",
+     "img": "mm_bruecke",
+     "move": "troi-nhe",
      "focus": [
-      0.78,
-      0.4
+      0.52,
+      0.45
      ],
-     "why": "câu cuối về hai cậu bé chẳng chịu ngoan: tiến gần hai cậu đang reo mừng"
+     "why": "câu cuối về hai cậu bé chẳng chịu ngoan: trôi nhẹ về gương mặt cười của Max đang cưa cầu"
     }
    ]
   }
