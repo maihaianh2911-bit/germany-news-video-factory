@@ -1,0 +1,356 @@
+{
+ "images": {
+  "rotkaeppchen_bett": {
+   "src": "1/12-6.jpg",
+   "mode": "keep"
+  },
+  "brueder_1855": {
+   "src": "1/2-8.jpg",
+   "mode": "keep",
+   "crop": [
+    0.12,
+    0.17,
+    0.88,
+    0.84
+   ]
+  },
+  "woerterbuch_baende": {
+   "src": "1/9-6.jpg",
+   "mode": "keep"
+  },
+  "denkmal_hanau": {
+   "src": "1/16-4.jpg",
+   "mode": "keep"
+  },
+  "steinau": {
+   "src": "1/5-2.jpg",
+   "mode": "keep"
+  },
+  "brueder_1847": {
+   "src": "1/1-7.jpg",
+   "mode": "keep"
+  },
+  "savigny": {
+   "src": "1/14-4.jpg",
+   "mode": "keep"
+  },
+  "kassel_1842": {
+   "src": "2/8-7.jpg",
+   "mode": "keep"
+  },
+  "dortchen_tafel": {
+   "src": "1/13-1.jpg",
+   "mode": "keep"
+  },
+  "viehmann": {
+   "src": "1/6-1.jpg",
+   "mode": "keep"
+  },
+  "khm_1812": {
+   "src": "2/2-2.jpg",
+   "mode": "keep"
+  },
+  "schneewittchen": {
+   "src": "2/4-2.jpg",
+   "mode": "keep"
+  },
+  "wilhelm": {
+   "src": "1/3-1.jpg",
+   "mode": "keep"
+  },
+  "haensel": {
+   "src": "2/5-1.jpg",
+   "mode": "keep"
+  },
+  "goettingen_1837": {
+   "src": "2/9-3.jpg",
+   "mode": "keep"
+  },
+  "goettinger_sieben": {
+   "src": "1/8-1.jpg",
+   "mode": "keep"
+  },
+  "jacob": {
+   "src": "1/2-2.jpg",
+   "mode": "keep",
+   "crop": [
+    0.22,
+    0.12,
+    0.84,
+    0.85
+   ]
+  },
+  "dwb_titel": {
+   "src": "1/9-1.jpg",
+   "mode": "keep"
+  },
+  "brueder_profil": {
+   "src": "2/8-3.jpg",
+   "mode": "keep"
+  },
+  "dwb_zettel": {
+   "src": "1/9-2.jpg",
+   "mode": "keep",
+   "crop": [
+    0.18,
+    0.34,
+    0.84,
+    0.82
+   ]
+  },
+  "denkmal_alt": {
+   "src": "1/16-1.jpg",
+   "mode": "keep"
+  },
+  "rotkaeppchen_wald": {
+   "src": "1/12-8.jpg",
+   "mode": "keep",
+   "crop": [
+    0.0,
+    0.2,
+    1.0,
+    1.0
+   ]
+  }
+ },
+ "chapters": [
+  {
+   "pics": [
+    {
+     "img": "rotkaeppchen_bett",
+     "move": "tien-gan",
+     "focus": [
+      0.35,
+      0.4
+     ],
+     "why": "mở đầu: những truyện ai cũng biết — Cô bé quàng khăn đỏ bên giường con sói"
+    },
+    {
+     "at": 3,
+     "img": "brueder_1855",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu nhắc tên Jacob và Wilhelm Grimm: tranh hai anh em năm 1855"
+    },
+    {
+     "at": 6,
+     "img": "woerterbuch_baende",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu công trình lớn nhất là cuốn từ điển: lướt qua gáy các tập từ điển"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "denkmal_hanau",
+     "move": "nang-len",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu cả hai sinh ở Hanau: nâng lên tượng hai anh em ở Hanau"
+    },
+    {
+     "at": 10,
+     "img": "steinau",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.5
+     ],
+     "why": "câu cha làm quan huyện ở Steinau và mất sớm: ngôi nhà ở Steinau"
+    },
+    {
+     "at": 13,
+     "img": "brueder_1847",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.25
+     ],
+     "why": "câu hai anh em gắn bó suốt đời: ảnh chụp hai người năm 1847"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "savigny",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.4
+     ],
+     "why": "câu giáo sư Savigny ở Marburg: bức vẽ Savigny bên bàn viết"
+    },
+    {
+     "at": 18,
+     "img": "kassel_1842",
+     "move": "ha-xuong",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu ghi lại chuyện kể ở Hessen và Kassel: hạ dọc phố cổ Kassel"
+    },
+    {
+     "at": 20,
+     "img": "dortchen_tafel",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu nhắc Dortchen Wild: tấm bia của bà, giữ yên để đọc tên"
+    },
+    {
+     "at": 21,
+     "img": "viehmann",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.35
+     ],
+     "why": "câu nhắc Dorothea Viehmann: bức vẽ bà"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "khm_1812",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu tập đầu ra đời năm 1812: trang sách bản in đầu"
+    },
+    {
+     "at": 25,
+     "img": "schneewittchen",
+     "move": "chi-tiet",
+     "focus": [
+      0.3,
+      0.45
+     ],
+     "why": "câu trong Bạch Tuyết chính mẹ ruột muốn giết con: soi vào bà già bán táo bên cửa sổ"
+    },
+    {
+     "at": 27,
+     "img": "wilhelm",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu Wilhelm sửa đi sửa lại các truyện: chân dung Wilhelm Grimm"
+    },
+    {
+     "at": 30,
+     "img": "haensel",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.35
+     ],
+     "why": "câu lần in cuối có 200 truyện: tranh Hänsel trong rừng"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "goettingen_1837",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.55
+     ],
+     "why": "câu biến cố năm 1837: lướt qua đoàn diễu hành ở Göttingen năm ấy"
+    },
+    {
+     "at": 33,
+     "img": "goettinger_sieben",
+     "move": "lui-ra",
+     "focus": [
+      0.5,
+      0.45
+     ],
+     "why": "câu bảy giáo sư phản đối và bị đuổi: lùi ra thấy cả bảy người"
+    },
+    {
+     "at": 36,
+     "img": "jacob",
+     "move": "tien-gan",
+     "focus": [
+      0.53,
+      0.32
+     ],
+     "why": "câu Jacob bị trục xuất trong ba ngày: chân dung Jacob Grimm"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "dwb_titel",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu bắt đầu cuốn Từ điển tiếng Đức: trang tên tập đầu, giữ yên để đọc"
+    },
+    {
+     "at": 42,
+     "img": "brueder_profil",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.45
+     ],
+     "why": "câu Wilhelm mất khi làm tới chữ D: chân dung nghiêng hai anh em"
+    },
+    {
+     "at": 43,
+     "img": "dwb_zettel",
+     "move": "chi-tiet",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu Jacob làm tới khi mất, từ cuối là 'Frucht': soi vào tờ bản thảo của ông"
+    },
+    {
+     "at": 45,
+     "img": "denkmal_alt",
+     "move": "lui-ra",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu người khác làm tiếp và di sản UNESCO: từ tượng hai anh em lùi ra cả quảng trường"
+    },
+    {
+     "at": 47,
+     "img": "rotkaeppchen_wald",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.62
+     ],
+     "why": "câu kết 'Ngày xửa ngày xưa': Cô bé quàng khăn đỏ gặp sói trong rừng"
+    }
+   ]
+  }
+ ]
+}
