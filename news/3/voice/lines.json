@@ -5,7 +5,10 @@
   "tts": "Johann Wolfgang von Goethe wurde mit fünfundzwanzig über Nacht berühmt –",
   "voice": "clone_611",
   "file": "line_01.mp3",
-  "duration": 4.399
+  "duration": 4.399,
+  "heard": "Johann Wolfgang von Goethe wurde mit 25 über Nacht berühmt.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 2,
@@ -13,7 +16,10 @@
   "tts": "mit einem Roman über einen jungen Mann, der an der Liebe zerbricht.",
   "voice": "clone_611",
   "file": "line_02.mp3",
-  "duration": 4.07
+  "duration": 4.07,
+  "heard": "mit einem Roman über einen jungen Mann, der an der Liebe zerbricht.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 3,
@@ -21,7 +27,10 @@
   "tts": "Danach arbeitete er fast sechzig Jahre lang",
   "voice": "clone_611",
   "file": "line_03.mp3",
-  "duration": 2.791
+  "duration": 2.791,
+  "heard": "Danach arbeitete er fast 60 Jahre lang.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 4,
@@ -29,7 +38,10 @@
   "tts": "an einem einzigen Werk: Faust.",
   "voice": "clone_611",
   "file": "line_04.mp3",
-  "duration": 1.811
+  "duration": 1.811,
+  "heard": "an einem einzigen Werk, Faust.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 5,
@@ -37,7 +49,10 @@
   "tts": "Den zweiten Teil versiegelte er kurz vor seinem Tod.",
   "voice": "clone_611",
   "file": "line_05.mp3",
-  "duration": 3.115
+  "duration": 3.115,
+  "heard": "Den zweiten Teil versiegelte er kurz vor seinem Tod.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 6,
@@ -45,7 +60,10 @@
   "tts": "Er sollte erst erscheinen, wenn Goethe nicht mehr lebte.",
   "voice": "clone_611",
   "file": "line_06.mp3",
-  "duration": 2.888
+  "duration": 2.888,
+  "heard": "Er sollte erst erscheinen, wenn Goethe nicht mehr lebte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 7,
@@ -53,7 +71,12 @@
   "tts": "Im März achtzehnhundertzweiunddreißig starb er in Weimar,",
   "voice": "clone_611",
   "file": "line_07.mp3",
-  "duration": 3.522
+  "duration": 3.522,
+  "heard": "Im März 1832 starrt er in Weimar.",
+  "score": 0.86,
+  "diff": [
+   "starb→starrt"
+  ]
  },
  {
   "i": 8,
@@ -61,7 +84,10 @@
   "tts": "mit zweiundachtzig Jahren.",
   "voice": "clone_611",
   "file": "line_08.mp3",
-  "duration": 1.588
+  "duration": 1.588,
+  "heard": "Mit 82 Jahren.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 9,
@@ -69,7 +95,10 @@
   "tts": "Geboren wurde er am achtundzwanzigsten August siebzehnhundertneunundvierzig in Frankfurt am Main.",
   "voice": "clone_611",
   "file": "line_09.mp3",
-  "duration": 6.176
+  "duration": 6.176,
+  "heard": "Geboren wurde er am 28. August 1749 in Frankfurt am Main.",
+  "score": 0.91,
+  "diff": []
  },
  {
   "i": 10,
@@ -77,7 +106,12 @@
   "tts": "Der Vater, Johann Caspar, war ein wohlhabender Jurist.",
   "voice": "clone_611",
   "file": "line_10.mp3",
-  "duration": 3.326
+  "duration": 3.326,
+  "heard": "Der Vater Johann Kasper war ein wohlhabender Jurist.",
+  "score": 0.88,
+  "diff": [
+   "caspar→kasper"
+  ]
  },
  {
   "i": 11,
@@ -85,7 +119,12 @@
   "tts": "Die Mutter, Catharina Elisabeth, war bei der Hochzeit siebzehn.",
   "voice": "clone_611",
   "file": "line_11.mp3",
-  "duration": 3.962
+  "duration": 3.962,
+  "heard": "Die Mutter Katharina Elisabeth war bei der Hochzeit 17.",
+  "score": 0.89,
+  "diff": [
+   "catharina→katharina"
+  ]
  },
  {
   "i": 12,
@@ -93,7 +132,10 @@
   "tts": "Später schrieb Goethe:",
   "voice": "clone_611",
   "file": "line_12.mp3",
-  "duration": 1.409
+  "duration": 1.409,
+  "heard": "Später schrieb Goethe.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 13,
@@ -101,7 +143,13 @@
   "tts": "„Vom Vater hab ich die Statur, des Lebens ernstes Führen,",
   "voice": "clone_611",
   "file": "line_13.mp3",
-  "duration": 3.382
+  "duration": 3.382,
+  "heard": "Vom Vater habe ich die Statue des Lebens Ernstes führen.",
+  "score": 0.8,
+  "diff": [
+   "hab→habe",
+   "statur→statue"
+  ]
  },
  {
   "i": 14,
@@ -109,7 +157,12 @@
   "tts": "vom Mütterchen die Frohnatur und Lust zu fabulieren.“",
   "voice": "clone_611",
   "file": "line_14.mp3",
-  "duration": 3.3
+  "duration": 3.3,
+  "heard": "von Mütterchen die Frohnatur und Lust zu fabulieren.",
+  "score": 0.88,
+  "diff": [
+   "vom→von"
+  ]
  },
  {
   "i": 15,
@@ -117,7 +170,10 @@
   "tts": "Mit sechzehn schickte ihn der Vater zum Jurastudium nach Leipzig.",
   "voice": "clone_611",
   "file": "line_15.mp3",
-  "duration": 4.048
+  "duration": 4.048,
+  "heard": "Mit 16 schickte ihn der Vater zum Jurastudium nach Leipzig.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 16,
@@ -125,7 +181,10 @@
   "tts": "Dort zeichnete er, schrieb Gedichte, verliebte sich –",
   "voice": "clone_611",
   "file": "line_16.mp3",
-  "duration": 3.362
+  "duration": 3.362,
+  "heard": "Dort zeichnete er Schriebgedichte, verliebte sich.",
+  "score": 0.77,
+  "diff": []
  },
  {
   "i": 17,
@@ -133,7 +192,10 @@
   "tts": "und studierte wenig.",
   "voice": "clone_611",
   "file": "line_17.mp3",
-  "duration": 1.384
+  "duration": 1.384,
+  "heard": "und studierte wenig.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 18,
@@ -141,7 +203,10 @@
   "tts": "In Straßburg beendete er das Studium",
   "voice": "clone_611",
   "file": "line_18.mp3",
-  "duration": 2.274
+  "duration": 2.274,
+  "heard": "In Straßburg beendete er das Studium.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 19,
@@ -149,7 +214,12 @@
   "tts": "und verliebte sich in Friederike Brion, eine Pfarrerstochter.",
   "voice": "clone_611",
   "file": "line_19.mp3",
-  "duration": 3.699
+  "duration": 3.699,
+  "heard": "und verliebte sich in Friederike Prion, eine Pfarrerstochter.",
+  "score": 0.88,
+  "diff": [
+   "brion→prion"
+  ]
  },
  {
   "i": 20,
@@ -157,7 +227,10 @@
   "tts": "Er verließ sie. Später schrieb er:",
   "voice": "clone_611",
   "file": "line_20.mp3",
-  "duration": 2.133
+  "duration": 2.133,
+  "heard": "Er verließ sie, später schrieb.",
+  "score": 0.91,
+  "diff": []
  },
  {
   "i": 21,
@@ -165,7 +238,10 @@
   "tts": "„Ich hatte das schönste Herz in seinem Tiefsten verwundet.“",
   "voice": "clone_611",
   "file": "line_21.mp3",
-  "duration": 3.178
+  "duration": 3.178,
+  "heard": "Ich hatte das schönste Herz in seinem tiefsten verwundet.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 22,
@@ -173,7 +249,10 @@
   "tts": "Siebzehnhundertzweiundsiebzig ging er ans Reichskammergericht nach Wetzlar.",
   "voice": "clone_611",
   "file": "line_22.mp3",
-  "duration": 4.029
+  "duration": 4.029,
+  "heard": "1772 ging er ans Reichskammergericht nach Wetzlar.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 23,
@@ -181,7 +260,12 @@
   "tts": "Dort verliebte er sich in Charlotte Buff –",
   "voice": "clone_611",
   "file": "line_23.mp3",
-  "duration": 2.617
+  "duration": 2.617,
+  "heard": "Dort verliebt er sich im Charlotte-Buff.",
+  "score": 0.71,
+  "diff": [
+   "in→im"
+  ]
  },
  {
   "i": 24,
@@ -189,7 +273,10 @@
   "tts": "doch sie war schon verlobt.",
   "voice": "clone_611",
   "file": "line_24.mp3",
-  "duration": 1.384
+  "duration": 1.384,
+  "heard": "Doch sie war schon verlobt.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 25,
@@ -197,7 +284,10 @@
   "tts": "Kurz darauf erschoss sich ein Bekannter aus unglücklicher Liebe.",
   "voice": "clone_611",
   "file": "line_25.mp3",
-  "duration": 3.499
+  "duration": 3.499,
+  "heard": "Kurz darauf erschoss sich ein Bekannter aus unglücklicher Liebe.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 26,
@@ -205,7 +295,10 @@
   "tts": "Aus beidem schrieb Goethe in wenigen Wochen einen Roman:",
   "voice": "clone_611",
   "file": "line_26.mp3",
-  "duration": 3.319
+  "duration": 3.319,
+  "heard": "Aus beidem schrieb Goethe in wenigen Wochen einen Roman.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 27,
@@ -213,7 +306,10 @@
   "tts": "Die Leiden des jungen Werthers.",
   "voice": "clone_611",
   "file": "line_27.mp3",
-  "duration": 1.939
+  "duration": 1.939,
+  "heard": "die Leiden des jungen Werters.",
+  "score": 0.8,
+  "diff": []
  },
  {
   "i": 28,
@@ -221,7 +317,12 @@
   "tts": "Junge Männer kleideten sich wie Werther,",
   "voice": "clone_611",
   "file": "line_28.mp3",
-  "duration": 2.418
+  "duration": 2.418,
+  "heard": "Junge Männer kleideten sich wie Wärter.",
+  "score": 0.83,
+  "diff": [
+   "werther→waerter"
+  ]
  },
  {
   "i": 29,
@@ -229,7 +330,12 @@
   "tts": "in blauem Frack und gelber Weste.",
   "voice": "clone_611",
   "file": "line_29.mp3",
-  "duration": 1.889
+  "duration": 1.889,
+  "heard": "im blauen Frack und gelber Weste.",
+  "score": 0.67,
+  "diff": [
+   "inblauem→imblauen"
+  ]
  },
  {
   "i": 30,
@@ -237,7 +343,12 @@
   "tts": "Siebzehnhundertfünfundsiebzig holte ihn der junge Herzog Carl August nach Weimar.",
   "voice": "clone_611",
   "file": "line_30.mp3",
-  "duration": 4.771
+  "duration": 4.771,
+  "heard": "1775 holte ihn der junge Herzog Karl-August nach Weimar.",
+  "score": 0.9,
+  "diff": [
+   "carl→karl"
+  ]
  },
  {
   "i": 31,
@@ -245,7 +356,10 @@
   "tts": "Goethe blieb dort für den Rest seines Lebens.",
   "voice": "clone_611",
   "file": "line_31.mp3",
-  "duration": 2.614
+  "duration": 2.614,
+  "heard": "Goethe blieb dort für den Rest seines Lebens.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 32,
@@ -253,7 +367,10 @@
   "tts": "Er wurde Minister – zum Schreiben kam er kaum noch.",
   "voice": "clone_611",
   "file": "line_32.mp3",
-  "duration": 2.981
+  "duration": 2.981,
+  "heard": "Er wurde Minister. Zum Schreiben kam er kaum noch.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 33,
@@ -261,7 +378,12 @@
   "tts": "Siebzehnhundertsechsundachtzig floh er heimlich nach Italien, unter falschem Namen,",
   "voice": "clone_611",
   "file": "line_33.mp3",
-  "duration": 4.81
+  "duration": 4.81,
+  "heard": "1786 flow er heimlich nach Italien unter falschem Namen.",
+  "score": 0.89,
+  "diff": [
+   "floh→flow"
+  ]
  },
  {
   "i": 34,
@@ -269,7 +391,10 @@
   "tts": "für fast zwei Jahre.",
   "voice": "clone_611",
   "file": "line_34.mp3",
-  "duration": 1.405
+  "duration": 1.405,
+  "heard": "für fast zwei Jahre.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 35,
@@ -277,7 +402,12 @@
   "tts": "Zurück in Weimar lernte er Christiane Vulpius kennen,",
   "voice": "clone_611",
   "file": "line_35.mp3",
-  "duration": 3.371
+  "duration": 3.371,
+  "heard": "Zurück in Weimar lernte er Christiane Wolpius kennen.",
+  "score": 0.88,
+  "diff": [
+   "vulpius→wolpius"
+  ]
  },
  {
   "i": 36,
@@ -285,7 +415,10 @@
   "tts": "die in einer Werkstatt künstliche Blumen machte.",
   "voice": "clone_611",
   "file": "line_36.mp3",
-  "duration": 2.813
+  "duration": 2.813,
+  "heard": "die in einer Werkstatt künstliche Blumen machte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 37,
@@ -293,7 +426,10 @@
   "tts": "Sie lebten ohne Trauschein zusammen – ein Skandal.",
   "voice": "clone_611",
   "file": "line_37.mp3",
-  "duration": 3.014
+  "duration": 3.014,
+  "heard": "Sie lebten ohne Trauschein zusammen, ein Skandal.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 38,
@@ -301,7 +437,10 @@
   "tts": "Siebzehnhundertvierundneunzig begann die Freundschaft mit Friedrich Schiller.",
   "voice": "clone_611",
   "file": "line_38.mp3",
-  "duration": 4.044
+  "duration": 4.044,
+  "heard": "1794 begann die Freundschaft mit Friedrich Schiller.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 39,
@@ -309,7 +448,10 @@
   "tts": "Elf Jahre lang trieben sie sich gegenseitig an.",
   "voice": "clone_611",
   "file": "line_39.mp3",
-  "duration": 2.844
+  "duration": 2.844,
+  "heard": "11 Jahre lang trieben sie sich gegenseitig an.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 40,
@@ -317,7 +459,10 @@
   "tts": "Schiller drängte ihn, den Faust weiterzuschreiben.",
   "voice": "clone_611",
   "file": "line_40.mp3",
-  "duration": 3.178
+  "duration": 3.178,
+  "heard": "Schiller drängte ihn, den Faust weiterzuschreiben.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 41,
@@ -325,7 +470,12 @@
   "tts": "Als Schiller achtzehnhundertfünf starb, schrieb Goethe,",
   "voice": "clone_611",
   "file": "line_41.mp3",
-  "duration": 3.304
+  "duration": 3.304,
+  "heard": "Als Schiller 1805 Stab schrieb Goethe.",
+  "score": 0.83,
+  "diff": [
+   "starb→stab"
+  ]
  },
  {
   "i": 42,
@@ -333,7 +483,12 @@
   "tts": "er verliere „die Hälfte meines Daseins“.",
   "voice": "clone_611",
   "file": "line_42.mp3",
-  "duration": 2.365
+  "duration": 2.365,
+  "heard": "Er verliere die Hälfte meines der Seins.",
+  "score": 0.77,
+  "diff": [
+   "daseins→derseins"
+  ]
  },
  {
   "i": 43,
@@ -341,7 +496,10 @@
   "tts": "Ein Jahr später heiratete er Christiane.",
   "voice": "clone_611",
   "file": "line_43.mp3",
-  "duration": 2.34
+  "duration": 2.34,
+  "heard": "Ein Jahr später heiratete er Christiane.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 44,
@@ -349,7 +507,10 @@
   "tts": "Achtzehnhundertacht erschien Faust, der erste Teil.",
   "voice": "clone_611",
   "file": "line_44.mp3",
-  "duration": 3.042
+  "duration": 3.042,
+  "heard": "1808 erschien Faust, der erste Teil.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 45,
@@ -357,7 +518,10 @@
   "tts": "Den zweiten Teil vollendete er im Sommer achtzehnhunderteinunddreißig, mit einundachtzig.",
   "voice": "clone_611",
   "file": "line_45.mp3",
-  "duration": 5.576
+  "duration": 5.576,
+  "heard": "Den zweiten Teil vollendete er im Sommer 1831 mit 81.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 46,
@@ -365,7 +529,10 @@
   "tts": "Dann versiegelte er das Manuskript.",
   "voice": "clone_611",
   "file": "line_46.mp3",
-  "duration": 2.11
+  "duration": 2.11,
+  "heard": "dann versiegelte er das Manuskript.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 47,
@@ -373,7 +540,12 @@
   "tts": "Am zweiundzwanzigsten März achtzehnhundertzweiunddreißig starb er.",
   "voice": "clone_611",
   "file": "line_47.mp3",
-  "duration": 3.977
+  "duration": 3.977,
+  "heard": "Am 22. März 1832 starrt er.",
+  "score": 0.67,
+  "diff": [
+   "starb→starrt"
+  ]
  },
  {
   "i": 48,
@@ -381,6 +553,9 @@
   "tts": "Seine letzten Worte sollen „Mehr Licht!“ gewesen sein.",
   "voice": "clone_611",
   "file": "line_48.mp3",
-  "duration": 3.152
+  "duration": 3.152,
+  "heard": "Seine letzten Worte sollen mehr Licht gewesen sein.",
+  "score": 1.0,
+  "diff": []
  }
 ]
