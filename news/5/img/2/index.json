@@ -1,0 +1,185 @@
+[
+ {
+  "k": 1,
+  "query": "Max und Moritz Titelbild",
+  "results": []
+ },
+ {
+  "k": 2,
+  "query": "Max und Moritz farbig",
+  "results": []
+ },
+ {
+  "k": 3,
+  "query": "Max und Moritz Vorwort Busch",
+  "results": []
+ },
+ {
+  "k": 4,
+  "query": "Max und Moritz 1865 Erstausgabe",
+  "results": [
+   {
+    "title": "File:Busch max 1865 0007 800px.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Busch_max_1865_0007_800px.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Busch_max_1865_0007_800px.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 678,
+    "height": 1097,
+    "license": "Public domain",
+    "artist": "Wilhelm Busch",
+    "credit": "http://www.deutschestextarchiv.de/book/view/busch_max_1865?p=7",
+    "date": "1865",
+    "description": "Erste Seite der Erstausgabe von Max und Moritz; einer Bildergeschichte von Wilhelm Busch; leicht beschnitten.",
+    "attribution_required": false,
+    "file": "4-1.jpg"
+   }
+  ]
+ },
+ {
+  "k": 5,
+  "query": "Max und Moritz Bilderbogen",
+  "results": []
+ },
+ {
+  "k": 6,
+  "query": "incategory:\"Max und Moritz\"",
+  "results": [
+   {
+    "title": "File:Max und Moritz (Busch) 025.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Max_und_Moritz_(Busch)_025.png",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Max_und_Moritz_%28Busch%29_025.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 2400,
+    "height": 1140,
+    "license": "Public domain",
+    "artist": "Wilhelm Busch",
+    "credit": "extract from original an book",
+    "date": "before 1864date QS:P,+1864-00-00T00:00:00Z/7,P1326,+1864-00-",
+    "description": "",
+    "attribution_required": false,
+    "file": "6-1.jpg"
+   },
+   {
+    "title": "File:Max und Moritz tinted 5.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Max_und_Moritz_tinted_5.png",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Max_und_Moritz_tinted_5.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 752,
+    "height": 353,
+    "license": "Public domain",
+    "artist": "Wilhelm Busch",
+    "credit": "Digitised book, Gutenberg Project",
+    "date": "1865",
+    "description": "Tinted illustration from Wilhelm Busch's Max und Moritz",
+    "attribution_required": false,
+    "file": "6-2.jpg"
+   },
+   {
+    "title": "File:Max und Moritz tinted 8.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Max_und_Moritz_tinted_8.png",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Max_und_Moritz_tinted_8.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 754,
+    "height": 321,
+    "license": "Public domain",
+    "artist": "Wilhelm Busch",
+    "credit": "Digitised book, Gutenberg Project",
+    "date": "1865",
+    "description": "Tinted illustration from Wilhelm Busch's Max und Moritz",
+    "attribution_required": false,
+    "file": "6-3.jpg"
+   },
+   {
+    "title": "File:Max und Moritz (Busch) 017.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Max_und_Moritz_(Busch)_017.png",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/38/Max_und_Moritz_%28Busch%29_017.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 2485,
+    "height": 1546,
+    "license": "Public domain",
+    "artist": "Wilhelm Busch",
+    "credit": "extract from original an book",
+    "date": "before 1864date QS:P,+1864-00-00T00:00:00Z/7,P1326,+1864-00-",
+    "description": "",
+    "attribution_required": false,
+    "file": "6-4.jpg"
+   },
+   {
+    "title": "File:Nürnberg Veit-Stoß-Platz-Park Kindergarten 001.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:N%C3%BCrnberg_Veit-Sto%C3%9F-Platz-Park_Kindergarten_001.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/N%C3%BCrnberg_Veit-Sto%C3%9F-Platz-Park_Kindergarten_001.jpg/3840px-N%C3%BCrnberg_Veit-Sto%C3%9F-Platz-Park_Kindergarten_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 4000,
+    "height": 6000,
+    "license": "CC BY-SA 4.0",
+    "artist": "DALIBRI",
+    "credit": "Own work",
+    "date": "2018-11-16 15:54:40",
+    "description": "Kindergarten am Veit-Stoß-Platz-Park in Nürnberg",
+    "attribution_required": true,
+    "file": "6-5.jpg"
+   },
+   {
+    "title": "File:Max und Moritz tinted 18.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Max_und_Moritz_tinted_18.png",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Max_und_Moritz_tinted_18.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 696,
+    "height": 357,
+    "license": "Public domain",
+    "artist": "Wilhelm Busch",
+    "credit": "Digitised book, Gutenberg Project",
+    "date": "1865",
+    "description": "Tinted illustration from Wilhelm Busch's Max und Moritz",
+    "attribution_required": false,
+    "file": "6-6.jpg"
+   },
+   {
+    "title": "File:Max und Moritz tinted 24.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Max_und_Moritz_tinted_24.png",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/53/Max_und_Moritz_tinted_24.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 740,
+    "height": 332,
+    "license": "Public domain",
+    "artist": "Wilhelm Busch",
+    "credit": "Digitised book, Gutenberg Project",
+    "date": "1865",
+    "description": "Tinted illustration from Wilhelm Busch's Max und Moritz",
+    "attribution_required": false,
+    "file": "6-7.jpg"
+   },
+   {
+    "title": "File:2016 - Germany (28259253846).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2016_-_Germany_(28259253846).jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/ec/2016_-_Germany_%2828259253846%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 3648,
+    "height": 2432,
+    "license": "CC BY-SA 2.0",
+    "artist": "marsupium photography",
+    "credit": "https://www.flickr.com/photos/hagdorned/28259253846/",
+    "date": "2016-07-13 14:23:01",
+    "description": "2016 - Germany",
+    "attribution_required": true,
+    "file": "6-8.jpg"
+   }
+  ]
+ },
+ {
+  "k": 7,
+  "query": "Max und Moritz Denkmal",
+  "results": [
+   {
+    "title": "File:Norderstedt-Garstedt Max-und-Moritz-Denkmal.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Norderstedt-Garstedt_Max-und-Moritz-Denkmal.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/25/Norderstedt-Garstedt_Max-und-Moritz-Denkmal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 3648,
+    "height": 2736,
+    "license": "CC BY-SA 4.0",
+    "artist": "Christian der Vierte",
+    "credit": "Own work",
+    "date": "2015-03-13 16:22:31",
+    "description": "Norderstedt-Garstedt Max-und-Moritz-Denkmal",
+    "attribution_required": true,
+    "file": "7-1.jpg"
+   }
+  ]
+ },
+ {
+  "k": 8,
+  "query": "Wilhelm Busch Max Moritz colored",
+  "results": []
+ }
+]
