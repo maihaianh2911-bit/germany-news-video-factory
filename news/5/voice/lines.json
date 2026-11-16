@@ -5,7 +5,12 @@
   "tts": "„Dieses war der erste Streich, doch der zweite folgt sogleich.“",
   "voice": "clone_611",
   "file": "line_01.mp3",
-  "duration": 3.637
+  "duration": 3.637,
+  "heard": "Dieses war der erste Streich, doch der zweite folgt zugleich.",
+  "score": 0.9,
+  "diff": [
+   "sogleich→zugleich"
+  ]
  },
  {
   "i": 2,
@@ -13,7 +18,10 @@
   "tts": "Diese Zeilen kennt sicher jeder.",
   "voice": "clone_611",
   "file": "line_02.mp3",
-  "duration": 1.889
+  "duration": 1.889,
+  "heard": "Diese Zeilen kennt sicher jeder.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 3,
@@ -21,7 +29,10 @@
   "tts": "Ihr Erfinder, Wilhelm Busch, bekam für Max und Moritz ein einziges Honorar:",
   "voice": "clone_611",
   "file": "line_03.mp3",
-  "duration": 4.716
+  "duration": 4.716,
+  "heard": "Ihr Erfinder Wilhelm Busch bekam für Max und Moritz ein einziges Honorar.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 4,
@@ -29,7 +40,12 @@
   "tts": "Tausend Gulden.",
   "voice": "clone_611",
   "file": "line_04.mp3",
-  "duration": 1.318
+  "duration": 1.318,
+  "heard": "Tausend Golden.",
+  "score": 0.5,
+  "diff": [
+   "gulden→golden"
+  ]
  },
  {
   "i": 5,
@@ -37,7 +53,10 @@
   "tts": "Für den Verleger wurde das Buch ein Vermögen.",
   "voice": "clone_611",
   "file": "line_05.mp3",
-  "duration": 2.719
+  "duration": 2.719,
+  "heard": "Für den Verleger wurde das Buch einvermögen.",
+  "score": 0.8,
+  "diff": []
  },
  {
   "i": 6,
@@ -45,7 +64,10 @@
   "tts": "Und Busch selbst hielt sich nicht für einen Dichter,",
   "voice": "clone_611",
   "file": "line_06.mp3",
-  "duration": 2.897
+  "duration": 2.897,
+  "heard": "und Busch selbst hielt sich nicht für einen Dichter.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 7,
@@ -53,7 +75,10 @@
   "tts": "sondern für einen gescheiterten Maler.",
   "voice": "clone_611",
   "file": "line_07.mp3",
-  "duration": 2.22
+  "duration": 2.22,
+  "heard": "sondern für einen gescheiterten Maler.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 8,
@@ -61,7 +86,10 @@
   "tts": "Rund tausend Ölbilder malte er – und zeigte sie fast niemandem.",
   "voice": "clone_611",
   "file": "line_08.mp3",
-  "duration": 3.809
+  "duration": 3.809,
+  "heard": "Rund 1000 Ölbilder malte er und zeigte sie fast niemandem.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 9,
@@ -69,7 +97,10 @@
   "tts": "Geboren wurde er achtzehnhundertzweiunddreißig in Wiedensahl, einem Dorf in Niedersachsen.",
   "voice": "clone_611",
   "file": "line_09.mp3",
-  "duration": 5.766
+  "duration": 5.766,
+  "heard": "Geboren wurde er 1832 in Wiedensaal, einem Dorf in Niedersachsen.",
+  "score": 0.9,
+  "diff": []
  },
  {
   "i": 10,
@@ -77,7 +108,10 @@
   "tts": "Er war das älteste von sieben Kindern eines Krämers.",
   "voice": "clone_611",
   "file": "line_10.mp3",
-  "duration": 2.994
+  "duration": 2.994,
+  "heard": "Er war das Älteste von sieben Kindern eines Kremers.",
+  "score": 0.89,
+  "diff": []
  },
  {
   "i": 11,
@@ -85,7 +119,10 @@
   "tts": "Mit neun schickten ihn die Eltern zu seinem Onkel, einem Pfarrer.",
   "voice": "clone_611",
   "file": "line_11.mp3",
-  "duration": 3.812
+  "duration": 3.812,
+  "heard": "Mit neun schickten ihn die Eltern zu seinem Onkel einem Pfarrer.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 12,
@@ -93,7 +130,10 @@
   "tts": "Dort, in Ebergötzen, fand er seinen besten Freund:",
   "voice": "clone_611",
   "file": "line_12.mp3",
-  "duration": 3.169
+  "duration": 3.169,
+  "heard": "Dort in Ebergützen fand er seinen besten Freund.",
+  "score": 0.88,
+  "diff": []
  },
  {
   "i": 13,
@@ -101,7 +141,12 @@
   "tts": "Erich Bachmann, den Sohn des Müllers.",
   "voice": "clone_611",
   "file": "line_13.mp3",
-  "duration": 2.319
+  "duration": 2.319,
+  "heard": "Erdich Bachmann, den Sohn des Müllers.",
+  "score": 0.83,
+  "diff": [
+   "erich→erdich"
+  ]
  },
  {
   "i": 14,
@@ -109,7 +154,10 @@
   "tts": "Der Vater wollte einen Ingenieur aus ihm machen.",
   "voice": "clone_611",
   "file": "line_14.mp3",
-  "duration": 2.737
+  "duration": 2.737,
+  "heard": "Der Vater wollte einen Ingenieur aus ihm machen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 15,
@@ -117,7 +165,10 @@
   "tts": "Busch begann ein Studium des Maschinenbaus in Hannover – und brach ab.",
   "voice": "clone_611",
   "file": "line_15.mp3",
-  "duration": 4.106
+  "duration": 4.106,
+  "heard": "Busch begann ein Studium des Maschinenbaus in Hannover und brach ab.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 16,
@@ -125,7 +176,10 @@
   "tts": "Er ging an die Kunstakademien in Düsseldorf und Antwerpen.",
   "voice": "clone_611",
   "file": "line_16.mp3",
-  "duration": 3.481
+  "duration": 3.481,
+  "heard": "Er ging an die Kunstakademie in Düsseldorf und antwerpen.",
+  "score": 0.89,
+  "diff": []
  },
  {
   "i": 17,
@@ -133,7 +187,10 @@
   "tts": "In Antwerpen sah er die Bilder der alten niederländischen Meister",
   "voice": "clone_611",
   "file": "line_17.mp3",
-  "duration": 3.999
+  "duration": 3.999,
+  "heard": "In Antwerpen sah er die Bilder der alten niederländischen Meister.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 18,
@@ -141,7 +198,10 @@
   "tts": "und verlor den Mut: So gut würde er nie malen.",
   "voice": "clone_611",
   "file": "line_18.mp3",
-  "duration": 2.652
+  "duration": 2.652,
+  "heard": "und verlor den Mut, so gut würde er nie malen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 19,
@@ -149,7 +209,10 @@
   "tts": "In München begann er, Bildergeschichten für Zeitschriften zu zeichnen.",
   "voice": "clone_611",
   "file": "line_19.mp3",
-  "duration": 3.913
+  "duration": 3.913,
+  "heard": "In München begann er, Bildergeschichten für Zeitschriften zu zeichnen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 20,
@@ -157,7 +220,10 @@
   "tts": "Achtzehnhundertfünfundsechzig erschien Max und Moritz.",
   "voice": "clone_611",
   "file": "line_20.mp3",
-  "duration": 3.448
+  "duration": 3.448,
+  "heard": "1865 erschien Max und Moritz.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 21,
@@ -165,7 +231,10 @@
   "tts": "Zwei Jungen spielen einem ganzen Dorf böse Streiche:",
   "voice": "clone_611",
   "file": "line_21.mp3",
-  "duration": 3.278
+  "duration": 3.278,
+  "heard": "Zwei Jungen spielen einem ganzen Dorf böse Streiche.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 22,
@@ -173,7 +242,10 @@
   "tts": "der Witwe Bolte, dem Schneider Böck, dem Lehrer Lämpel.",
   "voice": "clone_611",
   "file": "line_22.mp3",
-  "duration": 3.376
+  "duration": 3.376,
+  "heard": "der Witwe-Bolte, dem Schneiderböck, dem Lehrer-Lämpel.",
+  "score": 0.82,
+  "diff": []
  },
  {
   "i": 23,
@@ -181,7 +253,12 @@
   "tts": "Am Ende landen sie in der Mühle – und die Enten fressen sie auf.",
   "voice": "clone_611",
   "file": "line_23.mp3",
-  "duration": 3.669
+  "duration": 3.669,
+  "heard": "Am Ende landen sie in der Mühle und die Enden fressen sie auf.",
+  "score": 0.92,
+  "diff": [
+   "enten→enden"
+  ]
  },
  {
   "i": 24,
@@ -189,7 +266,10 @@
   "tts": "Zuerst verkaufte sich das Buch nur langsam.",
   "voice": "clone_611",
   "file": "line_24.mp3",
-  "duration": 2.543
+  "duration": 2.543,
+  "heard": "Zuerst verkaufte sich das Buch nur langsam.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 25,
@@ -197,7 +277,10 @@
   "tts": "Dann wurde es ein Klassiker, übersetzt in viele Sprachen.",
   "voice": "clone_611",
   "file": "line_25.mp3",
-  "duration": 3.21
+  "duration": 3.21,
+  "heard": "Dann wurde es ein Klassiker, übersetzt in viele Sprachen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 26,
@@ -205,7 +288,12 @@
   "tts": "In Amerika entstanden daraus die Katzenjammer Kids,",
   "voice": "clone_611",
   "file": "line_26.mp3",
-  "duration": 3.069
+  "duration": 3.069,
+  "heard": "In Amerika entstanden daraus die Katzenjammerkitz.",
+  "score": 0.77,
+  "diff": [
+   "katzenjammerkids→katzenjammerkitz"
+  ]
  },
  {
   "i": 27,
@@ -213,7 +301,10 @@
   "tts": "einer der ersten Comics der Welt.",
   "voice": "clone_611",
   "file": "line_27.mp3",
-  "duration": 1.931
+  "duration": 1.931,
+  "heard": "einer der ersten Comics der Welt.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 28,
@@ -221,7 +312,12 @@
   "tts": "Viele seiner Verse sagen wir noch heute:",
   "voice": "clone_611",
   "file": "line_28.mp3",
-  "duration": 2.303
+  "duration": 2.303,
+  "heard": "Viele seiner Werse sagen wir noch heute.",
+  "score": 0.86,
+  "diff": [
+   "verse→werse"
+  ]
  },
  {
   "i": 29,
@@ -229,7 +325,10 @@
   "tts": "„Vater werden ist nicht schwer, Vater sein dagegen sehr.“",
   "voice": "clone_611",
   "file": "line_29.mp3",
-  "duration": 3.25
+  "duration": 3.25,
+  "heard": "Vater werden ist nicht schwer, Vater sein dagegen sehr.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 30,
@@ -237,7 +336,12 @@
   "tts": "Oder: „Wer Sorgen hat, hat auch Likör.“",
   "voice": "clone_611",
   "file": "line_30.mp3",
-  "duration": 2.278
+  "duration": 2.278,
+  "heard": "Oder wer Sorgen hat, hat auch die Köhe.",
+  "score": 0.8,
+  "diff": [
+   "likoer→diekoehe"
+  ]
  },
  {
   "i": 31,
@@ -245,7 +349,12 @@
   "tts": "Hinter dem Spott steckte ein ernster Mensch.",
   "voice": "clone_611",
   "file": "line_31.mp3",
-  "duration": 2.686
+  "duration": 2.686,
+  "heard": "Hinter dem Sport steckte ein ernster Mensch.",
+  "score": 0.86,
+  "diff": [
+   "spott→sport"
+  ]
  },
  {
   "i": 32,
@@ -253,7 +362,12 @@
   "tts": "Er las Schopenhauer und Darwin",
   "voice": "clone_611",
   "file": "line_32.mp3",
-  "duration": 1.926
+  "duration": 1.926,
+  "heard": "Er lasst Schopenhauer und Darwin.",
+  "score": 0.8,
+  "diff": [
+   "las→lasst"
+  ]
  },
  {
   "i": 33,
@@ -261,7 +375,12 @@
   "tts": "und mied die Gesellschaft der großen Städte.",
   "voice": "clone_611",
   "file": "line_33.mp3",
-  "duration": 2.208
+  "duration": 2.208,
+  "heard": "und miet die Gesellschaft der großen Städte.",
+  "score": 0.86,
+  "diff": [
+   "mied→miet"
+  ]
  },
  {
   "i": 34,
@@ -269,7 +388,12 @@
   "tts": "Er heiratete nie.",
   "voice": "clone_611",
   "file": "line_34.mp3",
-  "duration": 1.277
+  "duration": 1.277,
+  "heard": "Er heiratet ihn nie.",
+  "score": 0.57,
+  "diff": [
+   "heiratete→heiratetihn"
+  ]
  },
  {
   "i": 35,
@@ -277,7 +401,10 @@
   "tts": "Er lebte bei seiner Schwester Fanny und ihren Söhnen auf dem Land.",
   "voice": "clone_611",
   "file": "line_35.mp3",
-  "duration": 3.648
+  "duration": 3.648,
+  "heard": "Er lebte bei seiner Schwester Fanny und ihren Söhnen auf dem Land.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 36,
@@ -285,7 +412,10 @@
   "tts": "Dort malte er, Jahr für Jahr, kleine Bilder in Öl:",
   "voice": "clone_611",
   "file": "line_36.mp3",
-  "duration": 2.962
+  "duration": 2.962,
+  "heard": "Dort malte er Jahr für Jahr kleine Bilder in Öl.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 37,
@@ -293,7 +423,10 @@
   "tts": "Landschaften, Bauern, Wirtshausszenen.",
   "voice": "clone_611",
   "file": "line_37.mp3",
-  "duration": 2.459
+  "duration": 2.459,
+  "heard": "Landschaften, Bauern, Wirtshaus-Zähnen.",
+  "score": 0.57,
+  "diff": []
  },
  {
   "i": 38,
@@ -301,7 +434,10 @@
   "tts": "Ausgestellt hat er sie nie.",
   "voice": "clone_611",
   "file": "line_38.mp3",
-  "duration": 1.5
+  "duration": 1.5,
+  "heard": "ausgestellt hat er sie nie.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 39,
@@ -309,7 +445,10 @@
   "tts": "Am neunten Januar neunzehnhundertacht starb Wilhelm Busch, mit fünfundsiebzig Jahren.",
   "voice": "clone_611",
   "file": "line_39.mp3",
-  "duration": 5.416
+  "duration": 5.416,
+  "heard": "Am 9. Januar 1908 starb Wilhelm Busch mit 75 Jahren.",
+  "score": 0.9,
+  "diff": []
  },
  {
   "i": 40,
@@ -317,7 +456,10 @@
   "tts": "Heute hängen seine Bilder im Museum.",
   "voice": "clone_611",
   "file": "line_40.mp3",
-  "duration": 2.208
+  "duration": 2.208,
+  "heard": "Heute hängen seine Bilder im Museum.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 41,
@@ -325,7 +467,10 @@
   "tts": "Doch berühmt bleibt er für zwei Jungen, die nie brav sein wollten.",
   "voice": "clone_611",
   "file": "line_41.mp3",
-  "duration": 3.888
+  "duration": 3.888,
+  "heard": "Doch berühmt bleibt er für zwei Jungen, die nie brav sein wollten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 42,
@@ -333,6 +478,11 @@
   "tts": "„Gott sei Dank! Nun ist’s vorbei mit der Übeltäterei!“",
   "voice": "clone_611",
   "file": "line_42.mp3",
-  "duration": 3.121
+  "duration": 3.121,
+  "heard": "Gott sei Dank. Nun ist es vorbei mit der Übeltäterei.",
+  "score": 0.9,
+  "diff": [
+   "s→es"
+  ]
  }
 ]
