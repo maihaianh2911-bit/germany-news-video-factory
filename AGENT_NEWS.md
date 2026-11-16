@@ -137,6 +137,12 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    fills the whole 1080×1920 frame), no watermarks, no frames or museum labels (crop them away).
    **One picture for every 2–4 subtitle phrases: 6–14 s on screen, ~9 s on average** (the sample: 14 pictures in
    125 s). A strong portrait may come back once later with another crop. The first picture is the strongest.
+   **The opening shot keeps or loses the viewer** (owner, 16/11, on video #5: its first shot, a strip cut out of a busy
+   black-and-white line drawing, was *"cực kì ko ổn… rất khó giữ chân người xem"*). The first picture must be
+   readable on a phone at a glance: one big, clear subject — a face looking out, or the picture everyone knows of
+   this writer or work — best in colour, filling the frame. Never a wide picture cut down to a strip, a busy line
+   drawing, a text page, a building, a dark or empty picture. Look at the first tile of the preview at thumbnail
+   size: if you cannot tell in one second what it shows, take another picture.
    Pictures of your own choice from outside Commons (or sent by the owner) go in `news/<N>/own/` with `page` and
    `credit` (§2.5).
 5. Format:
@@ -190,7 +196,7 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    in a row get clearly different `focus` points (face, then hands or book); (4) every move needs about 2 s to
    show — under that the preview prints `WARNING: … too short` and marks the tile `!`: give the picture one more
    line (here a picture stays ~9 s anyway); (5) a returning picture gets another `focus` and another move;
-   (6) the first shot: the strongest portrait with `tien-gan`; the last shot: `lui-ra`, `dung-yen` or `tien-gan`
+   (6) the first shot: the strongest, clearest picture (see above: readable at a glance) with `tien-gan`; the last shot: `lui-ra`, `dung-yen` or `tien-gan`
    on the face.
 6. **Preview before pushing**: `pip install -q numpy pillow` if missing, then
    `python3 scripts/news/preview.py news/<N>/picks.json news/<N>/script.json /tmp/r/news/<N>/img /tmp/preview.jpg`
