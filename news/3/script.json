@@ -1,4 +1,6 @@
-{"title": "Johann Wolfgang von Goethe", "voice": "",
+{
+ "title": "Johann Wolfgang von Goethe",
+ "voice": "",
  "lines": [
   "Johann Wolfgang von Goethe wurde mit 25 über Nacht berühmt –",
   "mit einem Roman über einen jungen Mann, der an der Liebe zerbricht.",
@@ -7,17 +9,124 @@
   "Den zweiten Teil versiegelte er kurz vor seinem Tod.",
   "Er sollte erst erscheinen, wenn Goethe nicht mehr lebte.",
   "Im März 1832 starb er in Weimar,",
-  "mit 82 Jahren."
+  "mit 82 Jahren.",
+  "Geboren wurde er am 28. August 1749 in Frankfurt am Main.",
+  "Der Vater, Johann Caspar, war ein wohlhabender Jurist.",
+  "Die Mutter, Catharina Elisabeth, war bei der Hochzeit 17.",
+  "Später schrieb Goethe:",
+  "„Vom Vater hab ich die Statur, des Lebens ernstes Führen,",
+  "vom Mütterchen die Frohnatur und Lust zu fabulieren.“",
+  "Mit 16 schickte ihn der Vater zum Jurastudium nach Leipzig.",
+  "Dort zeichnete er, schrieb Gedichte, verliebte sich –",
+  "und studierte wenig.",
+  "In Straßburg beendete er das Studium",
+  "und verliebte sich in Friederike Brion, eine Pfarrerstochter.",
+  "Er verließ sie. Später schrieb er:",
+  "„Ich hatte das schönste Herz in seinem Tiefsten verwundet.“",
+  "1772 ging er ans Reichskammergericht nach Wetzlar.",
+  "Dort verliebte er sich in Charlotte Buff –",
+  "doch sie war schon verlobt.",
+  "Kurz darauf erschoss sich ein Bekannter aus unglücklicher Liebe.",
+  "Aus beidem schrieb Goethe in wenigen Wochen einen Roman:",
+  "Die Leiden des jungen Werthers.",
+  "Junge Männer kleideten sich wie Werther,",
+  "in blauem Frack und gelber Weste.",
+  "1775 holte ihn der junge Herzog Carl August nach Weimar.",
+  "Goethe blieb dort für den Rest seines Lebens.",
+  "Er wurde Minister – zum Schreiben kam er kaum noch.",
+  "1786 floh er heimlich nach Italien, unter falschem Namen,",
+  "für fast zwei Jahre.",
+  "Zurück in Weimar lernte er Christiane Vulpius kennen,",
+  "die in einer Werkstatt künstliche Blumen machte.",
+  "Sie lebten ohne Trauschein zusammen – ein Skandal.",
+  "1794 begann die Freundschaft mit Friedrich Schiller.",
+  "Elf Jahre lang trieben sie sich gegenseitig an.",
+  "Schiller drängte ihn, den Faust weiterzuschreiben.",
+  "Als Schiller 1805 starb, schrieb Goethe,",
+  "er verliere „die Hälfte meines Daseins“.",
+  "Ein Jahr später heiratete er Christiane.",
+  "1808 erschien Faust, der erste Teil.",
+  "Den zweiten Teil vollendete er im Sommer 1831, mit 81.",
+  "Dann versiegelte er das Manuskript.",
+  "Am 22. März 1832 starb er.",
+  "Seine letzten Worte sollen „Mehr Licht!“ gewesen sein."
  ],
  "tts": {
   "1": "Johann Wolfgang von Goethe wurde mit fünfundzwanzig über Nacht berühmt –",
   "3": "Danach arbeitete er fast sechzig Jahre lang",
   "7": "Im März achtzehnhundertzweiunddreißig starb er in Weimar,",
-  "8": "mit zweiundachtzig Jahren."
+  "8": "mit zweiundachtzig Jahren.",
+  "9": "Geboren wurde er am achtundzwanzigsten August siebzehnhundertneunundvierzig in Frankfurt am Main.",
+  "11": "Die Mutter, Catharina Elisabeth, war bei der Hochzeit siebzehn.",
+  "15": "Mit sechzehn schickte ihn der Vater zum Jurastudium nach Leipzig.",
+  "22": "Siebzehnhundertzweiundsiebzig ging er ans Reichskammergericht nach Wetzlar.",
+  "30": "Siebzehnhundertfünfundsiebzig holte ihn der junge Herzog Carl August nach Weimar.",
+  "33": "Siebzehnhundertsechsundachtzig floh er heimlich nach Italien, unter falschem Namen,",
+  "38": "Siebzehnhundertvierundneunzig begann die Freundschaft mit Friedrich Schiller.",
+  "41": "Als Schiller achtzehnhundertfünf starb, schrieb Goethe,",
+  "44": "Achtzehnhundertacht erschien Faust, der erste Teil.",
+  "45": "Den zweiten Teil vollendete er im Sommer achtzehnhunderteinunddreißig, mit einundachtzig.",
+  "47": "Am zweiundzwanzigsten März achtzehnhundertzweiunddreißig starb er."
  },
- "chapters": [{"lines": [1, 8]}],
- "ambience": [""],
- "music": {"key": "D", "mode": "minor", "bpm": 70, "energy": 0.3},
+ "chapters": [
+  {
+   "lines": [
+    1,
+    8
+   ]
+  },
+  {
+   "lines": [
+    9,
+    14
+   ]
+  },
+  {
+   "lines": [
+    15,
+    21
+   ]
+  },
+  {
+   "lines": [
+    22,
+    29
+   ]
+  },
+  {
+   "lines": [
+    30,
+    34
+   ]
+  },
+  {
+   "lines": [
+    35,
+    43
+   ]
+  },
+  {
+   "lines": [
+    44,
+    48
+   ]
+  }
+ ],
+ "ambience": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "music": {
+  "key": "D",
+  "mode": "minor",
+  "bpm": 70,
+  "energy": 0.3
+ },
  "queries": [
   "incategory:\"Portraits of Johann Wolfgang von Goethe\"",
   "Goethe Stieler 1828",
@@ -31,4 +140,5 @@
   "Goethes Wohnhaus Weimar",
   "Goethe Arbeitszimmer Weimar",
   "Goethe 1832 Schwerdgeburth"
- ]}
+ ]
+}
