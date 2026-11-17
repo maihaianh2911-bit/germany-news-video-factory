@@ -66,6 +66,10 @@ Read the issue form (Nhà văn / tác phẩm, Kịch bản, Giọng đọc, Ghi 
 - `chapters`: groups of lines, in order, covering all lines (`lines` = first and last, 1-based); a short breath
   between groups and a separate list of pictures for each. One group per part of the life (hook, childhood,
   first work…) is a good size.
+- `pace`: **always `1.2`** (owner, 17/11/2026: *"cho nhịp nhanh lên 20% nữa nhé"*): at the render the voice is sped up
+  by 20 % with its pitch kept and every pause shortened by the same factor, so subtitles and cuts follow; the paid
+  voice is not read again. Estimate lengths with it: video ≈ (characters/14.4 + 0.35 s per line) / 1.2. Leaving it
+  out (= 1.0) only for the older videos #1–#6.
 - `voice`: leave `""` (or leave it out) to use the channel voice of `prompts/news_voice.json`.
 - `ambience` per chapter: `""` (normal), `water`, `wind`, `rain`, `sea`. `music`: a quiet bed under the whole
   video, as in the sample: `mode` `minor`, `bpm` 64–80, `energy` 0.25–0.35.

@@ -91,6 +91,17 @@ assert ed.count('\n| ') == 5 and 'tiến gần (`tien-gan`)' in ed and 'toàn c�
 pm = open(os.path.join(out, 'preview.md'), encoding='utf-8').read()   # the preview's list (estimated times: no voice next to the pictures here)
 assert pm.count('\n| ') == 5 and 'lướt sang phải (`luot-phai`)' in pm, pm
 assert moves.check({'pair': {}}, 'x') and moves.check({'img': 'a', 'move': 'zoom'}, 'x')   # no pairs, no unknown moves
+# pace 1.2 (owner, 17/11): the voice sped up with its pitch kept, the pauses shortened by the same factor
+sp = dict(spec, pace=1.2); job2, out2 = os.path.join(tmp, 'job2'), os.path.join(tmp, 'out2'); os.makedirs(job2)
+json.dump(sp, open(os.path.join(job2, 'script.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+json.dump(pk, open(os.path.join(job2, 'picks.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+run(sys.executable, os.path.join(S, 'build.py'), job2, pub, N, imgsrc, out2)
+fast = json.load(open(os.path.join(out2, 'plan.json'), encoding='utf-8'))
+assert fast['duration'] < plan['duration'] * 0.9 and all(v['src'].startswith(f'news/{N}/voice_pace/') and v['src'].endswith('.wav') for v in fast['voice']), fast['voice']
+fd = {i + 1: ff.duration(os.path.join(pub, v['src'])) for i, v in enumerate(fast['voice'])}
+assert all(abs(fd[r['i']] - r['duration'] / 1.2) < 0.15 for r in rows), (fd, rows)
+ft = moves.shot_times(sp['chapters'], pk['chapters'], fd, {r['i']: r['text'] for r in rows}, 1.2)
+assert [[(round(s, 1), round(e, 1)) for s, e, _ in c] for c in ft] == [[(round(p['s'], 1), round(p['e'], 1)) for p in c['pics']] for c in fast['chapters']], ft
 cred = open(os.path.join(out, 'credits.txt'), encoding='utf-8').read()
 assert 'Wide.jpg' in cred and 'CC BY 4.0' in cred and 'commons.wikimedia.org' in cred
 assert os.path.getsize(os.path.join(pub, 'news', N, 'bed.wav')) > 100000

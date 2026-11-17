@@ -25,7 +25,9 @@ if os.path.exists(vl):
     if len(dur) != len(script['lines']): dur = None   # the script changed since that voice: estimate instead
 if dur is None:
     dur = moves.estimate(script['lines']); text = dict(enumerate(script['lines'], 1))
-times = moves.shot_times(script['chapters'], picks['chapters'], dur, text)
+pace = float(script.get('pace', 1.0))   # the voice is sped up by this factor at the render (build.py)
+dur = {i: d / pace for i, d in dur.items()}
+times = moves.shot_times(script['chapters'], picks['chapters'], dur, text, pace)
 W, PH, TW, TH = 1080, 1920, 162, 288
 cache = {}
 def img(name):

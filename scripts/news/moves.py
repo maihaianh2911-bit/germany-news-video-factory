@@ -193,16 +193,17 @@ def label(shot):
 END = ('.', '!', '?', '…', '“', '"', '«', '»')
 
 
-def shot_times(chapters, picks_chapters, dur, text):
+def shot_times(chapters, picks_chapters, dur, text, pace=1.0):
     """[[(start, end, line), …] per chapter]: when each shot is on screen and the line it starts on.
-    dur/text: {line number: seconds / words} (measured voice, or estimate())."""
+    dur/text: {line number: seconds / words} (measured voice already sped up by `pace`, or estimate()).
+    pace: script.json "pace" (1.2 = voice and pauses 20 % faster); the same rules as build.py."""
     t, out = 0.0, []
     for ci, (c, pc) in enumerate(zip(chapters, picks_chapters)):
-        a, b = c['lines']; s = t; x = s + (0.3 if ci == 0 else 0.6); starts = []
+        a, b = c['lines']; s = t; x = s + (0.3 if ci == 0 else 0.6 / pace); starts = []
         for i in range(a, b + 1):
             starts.append(x)
-            x += dur[i] + (0.45 if text[i].rstrip().endswith(END) else 0.25)
-        e = x + (1.6 if ci == len(chapters) - 1 else 0.5)
+            x += dur[i] + (0.45 if text[i].rstrip().endswith(END) else 0.25) / pace
+        e = x + (1.6 if ci == len(chapters) - 1 else 0.5 / pace)
         pics = pc['pics']; n = len(pics); bounds, at = [s], [a]
         for j in range(1, n):
             li = pics[j].get('at') or a + round(j * (b - a + 1) / n)

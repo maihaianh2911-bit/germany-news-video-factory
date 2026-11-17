@@ -9,6 +9,9 @@ for the owner) and <public_dir>/news/<N>/bed.wav.
 A shot with "move" (a name of the catalogue in moves.py) gets its camera start and end worked out here for the
 picture's size and the shot's length; an explicit "from"/"to" wins; "fade" (seconds) makes the shot dissolve in
 instead of the sample's hard cut; "why", "focus" and "wide" are notes for the planner and are not in the plan.
+Pace: script.json "pace" (default 1.0; 1.2 = the owner's faster rhythm of 17/11/2026) speeds the voice up with
+ffmpeg's atempo (pitch kept, files in <public_dir>/news/<N>/voice_pace/) and shortens every pause by the same factor,
+so subtitles and picture cuts follow; the paid voice files themselves are never changed.
 Timing: the voice starts at once; every line follows the previous one after a pause (0.45 s after a sentence end,
 0.25 s otherwise), a new chapter after a short breath; a picture that starts on a line ("at") cuts in just before
 it is spoken; a subtitle stays up until the next one (short pauses never leave the frame without one).
@@ -20,7 +23,7 @@ import numpy as np
 from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import music_gen as mg
-import moves
+import moves, ff
 
 job, pub, N, imgsrc, out = sys.argv[1:6]
 base = f'news/{N}'
@@ -28,6 +31,16 @@ spec = json.load(open(f'{job}/script.json', encoding='utf-8'))
 picks = json.load(open(f'{job}/picks.json', encoding='utf-8'))
 lines = json.load(open(f'{pub}/{base}/voice/lines.json', encoding='utf-8'))
 dur = {r['i']: r['duration'] for r in lines}
+pace = float(spec.get('pace', 1.0))
+if not 0.8 <= pace <= 1.5: sys.exit(f'script.json: "pace" {pace} must be between 0.8 and 1.5')
+vdir = 'voice'
+if pace != 1.0:   # the voice sped up, pitch kept; the measured length of each new file is the line's length
+    vdir = 'voice_pace'; os.makedirs(f'{pub}/{base}/{vdir}', exist_ok=True)
+    for r in lines:
+        dst = f"{pub}/{base}/{vdir}/{os.path.splitext(r['file'])[0]}.wav"
+        ff.run('-i', f"{pub}/{base}/voice/{r['file']}", '-filter:a', f'atempo={pace}', '-ar', '44100', dst)
+        dur[r['i']] = ff.duration(dst)
+vfile = lambda r: r['file'] if pace == 1.0 else os.path.splitext(r['file'])[0] + '.wav'
 text = {r['i']: r['text'] for r in lines}
 os.makedirs(out, exist_ok=True)
 bad = moves.check_all(picks)
@@ -60,9 +73,9 @@ def cues(t):
 t = 0.0; chapters = []; subs = []; voice = []
 img = lambda name: f'{base}/img/{name}.jpg'
 for ci, c in enumerate(spec['chapters']):
-    a, b = c['lines']; s = t; x = s + (0.3 if ci == 0 else 0.6); starts = []
+    a, b = c['lines']; s = t; x = s + (0.3 if ci == 0 else 0.6 / pace); starts = []
     for i in range(a, b + 1):
-        voice.append({'s': round(x, 3), 'src': f'{base}/voice/{lines[i - 1]["file"]}'})
+        voice.append({'s': round(x, 3), 'src': f'{base}/{vdir}/{vfile(lines[i - 1])}'})
         parts = cues(text[i]); n_all = len(text[i].strip()) + 1
         if len(parts) > 1 and min(len(' '.join(cu)) for cu in parts) / n_all * dur[i] < 1.0 and max(map(len, two_rows(text[i].strip()))) <= ROW + 8: parts = [two_rows(text[i].strip())]
         done = 0
@@ -70,8 +83,8 @@ for ci, c in enumerate(spec['chapters']):
             cs = x + dur[i] * done / n_all; done += len(' '.join(cu)) + 1; ce = x + dur[i] * done / n_all
             subs.append({'s': round(cs, 3), 'e': round(ce, 3), 'text': '\n'.join(cu)})
         starts.append(x)
-        x += dur[i] + (0.45 if text[i].rstrip().endswith(END) else 0.25)
-    e = x + (1.6 if ci == len(spec['chapters']) - 1 else 0.5)
+        x += dur[i] + (0.45 if text[i].rstrip().endswith(END) else 0.25) / pace
+    e = x + (1.6 if ci == len(spec['chapters']) - 1 else 0.5 / pace)
     ch = {'s': round(s, 3), 'e': round(e, 3), 'pics': []}
     pics = picks['chapters'][ci]['pics']; n = len(pics)
     bounds = [s]
@@ -128,7 +141,7 @@ with open(f'{out}/subtitles.srt', 'w', encoding='utf-8') as f:
 
 # ---- the edit of every shot, for the owner (pasted into the closing comment)
 open(f'{out}/edits.md', 'w', encoding='utf-8').write(
-    moves.edits_md(spec['chapters'], picks, moves.shot_times(spec['chapters'], picks['chapters'], dur, text), text))
+    moves.edits_md(spec['chapters'], picks, moves.shot_times(spec['chapters'], picks['chapters'], dur, text, pace), text))
 
 # ---- credits for the video description (every picture: title, author, date, licence, page)
 idx = {}
