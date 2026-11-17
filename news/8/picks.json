@@ -1,0 +1,376 @@
+{
+ "images": {
+  "peter_gesicht": {
+   "src": "2/3-1.jpg",
+   "mode": "keep"
+  },
+  "schneider": {
+   "src": "1/7-2.jpg",
+   "crop": [
+    0.12,
+    0.02,
+    0.86,
+    0.34
+   ],
+   "mode": "keep"
+  },
+  "peter_druck": {
+   "src": "2/1-4.jpg",
+   "mode": "keep"
+  },
+  "hoffmann_jung": {
+   "src": "1/9-1.jpg",
+   "crop": [
+    0.03,
+    0.03,
+    0.95,
+    0.97
+   ],
+   "mode": "keep"
+  },
+  "roemerberg": {
+   "src": "1/15-5.jpg",
+   "mode": "keep"
+  },
+  "peter_1844": {
+   "src": "1/12-2.jpg",
+   "mode": "keep"
+  },
+  "zeil": {
+   "src": "1/15-2.jpg",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.8
+   ],
+   "mode": "keep"
+  },
+  "peter_skizze": {
+   "src": "2/3-2.jpg",
+   "mode": "keep"
+  },
+  "christkind": {
+   "src": "1/12-1.jpg",
+   "mode": "keep"
+  },
+  "peter_sockel": {
+   "src": "2/3-3.jpg",
+   "mode": "keep"
+  },
+  "suppenkaspar": {
+   "src": "1/4-1.jpg",
+   "crop": [
+    0.43,
+    0.09,
+    0.97,
+    0.92
+   ],
+   "mode": "keep"
+  },
+  "paulinchen": {
+   "src": "1/3-3.jpg",
+   "mode": "keep"
+  },
+  "zappelphilipp": {
+   "src": "1/5-1.jpg",
+   "crop": [
+    0.08,
+    0.08,
+    0.43,
+    0.88
+   ],
+   "mode": "keep"
+  },
+  "hans_guck": {
+   "src": "1/6-1.jpg",
+   "mode": "keep"
+  },
+  "nikolas": {
+   "src": "1/8-5.jpg",
+   "crop": [
+    0.15,
+    0.34,
+    0.9,
+    0.95
+   ],
+   "mode": "keep"
+  },
+  "museum_regal": {
+   "src": "1/10-2.jpg",
+   "mode": "keep"
+  },
+  "museum_figur": {
+   "src": "1/10-1.jpg",
+   "mode": "keep"
+  },
+  "hoffmann_alt": {
+   "src": "1/9-2.jpg",
+   "crop": [
+    0.04,
+    0.03,
+    0.96,
+    0.97
+   ],
+   "mode": "keep"
+  },
+  "irrenanstalt_karte": {
+   "src": "1/11-1.jpg",
+   "mode": "keep"
+  },
+  "grab": {
+   "src": "2/8-4.jpg",
+   "mode": "keep"
+  },
+  "museum_haus": {
+   "src": "1/10-4.jpg",
+   "mode": "keep",
+   "crop": [
+    0.05,
+    0.32,
+    0.95,
+    1.0
+   ]
+  }
+ },
+ "chapters": [
+  {
+   "pics": [
+    {
+     "img": "peter_gesicht",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "mở đầu: gương mặt Struwwelpeter tóc dựng tua tủa, người Đức nhìn là nhận ra ngay"
+    },
+    {
+     "at": 3,
+     "img": "schneider",
+     "move": "luot-trai",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu bác thợ may cắt ngón tay cái: lướt theo bác thợ may bay tới với cây kéo lớn"
+    },
+    {
+     "at": 4,
+     "img": "peter_druck",
+     "move": "nang-len",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu một trong những sách thiếu nhi nổi tiếng nhất: nâng lên từ bệ đá tới mái tóc Struwwelpeter"
+    },
+    {
+     "at": 7,
+     "img": "hoffmann_jung",
+     "move": "tien-gan",
+     "focus": [
+      0.55,
+      0.35
+     ],
+     "why": "câu một bác sĩ ở Frankfurt viết sách cho con trai: chân dung Heinrich Hoffmann thời trẻ"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "roemerberg",
+     "move": "ha-xuong",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu ông sinh ở Frankfurt năm 1809: quảng trường Römerberg khoảng năm 1845"
+    },
+    {
+     "at": 11,
+     "img": "peter_1844",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu ông hay vẽ cho bệnh nhân nhỏ: hình Struwwelpeter ông vẽ năm 1844"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "zeil",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu ông đi tìm sách tranh trước Giáng sinh 1844: phố mua sắm Zeil ở Frankfurt thời đó"
+    },
+    {
+     "at": 15,
+     "img": "peter_skizze",
+     "move": "chi-tiet",
+     "focus": [
+      0.5,
+      0.45
+     ],
+     "why": "câu ông tự vẽ, tự làm thơ: soi vào nét bút vẽ mái tóc"
+    },
+    {
+     "at": 17,
+     "img": "christkind",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu sách in năm 1845: tranh thiên thần Giáng sinh trong bản in đầu"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "peter_sockel",
+     "move": "ha-xuong",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu Struwwelpeter không chịu cắt tóc, cắt móng: hạ từ mái tóc xuống những móng tay dài"
+    },
+    {
+     "at": 21,
+     "img": "suppenkaspar",
+     "move": "ha-xuong",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu Suppen-Kaspar gầy dần: hạ xuống qua bốn hình cậu bé gầy đi từng ngày"
+    },
+    {
+     "at": 22,
+     "img": "paulinchen",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu Paulinchen nghịch lửa, hai con mèo khóc: tượng gỗ ở công viên Struwwelpeter, lướt từ cô bé sang hai con mèo"
+    },
+    {
+     "at": 24,
+     "img": "zappelphilipp",
+     "move": "ha-xuong",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu Zappel-Philipp không ngồi yên: hạ từ bữa ăn xuống cảnh cậu kéo đổ cả bàn"
+    },
+    {
+     "at": 25,
+     "img": "hans_guck",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu Hans mải nhìn trời rơi xuống sông: tượng Hans ngửa mặt bên dòng nước"
+    },
+    {
+     "at": 26,
+     "img": "nikolas",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu ông Nikolas nhúng ba cậu bé vào lọ mực: tranh trong sách"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "museum_regal",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu sách thành công lớn, dịch ra nhiều thứ tiếng: lướt qua kệ các ấn bản trong bảo tàng"
+    },
+    {
+     "at": 32,
+     "img": "museum_figur",
+     "move": "tien-gan",
+     "focus": [
+      0.4,
+      0.45
+     ],
+     "why": "câu những chữ ta vẫn nói đến hôm nay: nhân vật lớn giữa bảo tàng"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "hoffmann_alt",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu Hoffmann vẫn làm bác sĩ, lo cho người bệnh tâm thần: chân dung ông lúc về già"
+    },
+    {
+     "at": 38,
+     "img": "irrenanstalt_karte",
+     "move": "chi-tiet",
+     "focus": [
+      0.4,
+      0.42
+     ],
+     "why": "câu ngôi nhà sáng sủa mới cho người bệnh: soi vào dòng chữ „Städt. Irren Anstalt“ trên bản đồ năm 1887"
+    },
+    {
+     "at": 40,
+     "img": "grab",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu ông mất năm 1894 ở Frankfurt: mộ ông, giữ yên cho trang nghiêm"
+    },
+    {
+     "at": 41,
+     "img": "museum_haus",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu nay có bảo tàng nhớ ông: tòa nhà bảo tàng Struwwelpeter ở Frankfurt, giữ yên để đọc biển tên"
+    },
+    {
+     "at": 42,
+     "img": "peter_gesicht",
+     "move": "lui-ra",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu kết, câu thơ mở đầu cuốn sách: lùi ra từ gương mặt Struwwelpeter như cảnh mở đầu"
+    }
+   ]
+  }
+ ]
+}
