@@ -1,0 +1,792 @@
+{
+ "duration": 115.167,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 18.464,
+   "pics": [
+    {
+     "src": "news/11/img/birnbaum_bluete.jpg",
+     "move": "tien-gan",
+     "w": 1950,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.131,
+      "x": 0.45,
+      "y": 0.4422
+     },
+     "s": 0.0,
+     "e": 4.669
+    },
+    {
+     "src": "news/11/img/fontane_feder.jpg",
+     "move": "tien-gan",
+     "w": 1576,
+     "h": 1980,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.119,
+      "x": 0.5,
+      "y": 0.4467
+     },
+     "s": 4.669,
+     "e": 8.933
+    },
+    {
+     "src": "news/11/img/fontane_liebermann.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1723,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.168,
+      "x": 0.45,
+      "y": 0.4282
+     },
+     "s": 8.933,
+     "e": 14.921
+    },
+    {
+     "src": "news/11/img/effi_einband.jpg",
+     "move": "tien-gan",
+     "w": 1536,
+     "h": 2158,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.4545
+     },
+     "s": 14.921,
+     "e": 18.464
+    }
+   ]
+  },
+  {
+   "s": 18.464,
+   "e": 33.821,
+   "pics": [
+    {
+     "src": "news/11/img/denkmal_park.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.06,
+      "x": 0.3857,
+      "y": 0.5283
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.6143,
+      "y": 0.5283
+     },
+     "s": 18.464,
+     "e": 25.223
+    },
+    {
+     "src": "news/11/img/denkmal_nah.jpg",
+     "move": "tien-gan",
+     "w": 1816,
+     "h": 1665,
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.172,
+      "x": 0.55,
+      "y": 0.4267
+     },
+     "s": 25.223,
+     "e": 31.361
+    },
+    {
+     "src": "news/11/img/apotheke.jpg",
+     "move": "tien-gan",
+     "w": 2000,
+     "h": 1500,
+     "from": {
+      "z": 1.0,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.3,
+      "y": 0.4545
+     },
+     "s": 31.361,
+     "e": 33.821
+    }
+   ]
+  },
+  {
+   "s": 33.821,
+   "e": 51.535,
+   "pics": [
+    {
+     "src": "news/11/img/fontane_gesicht.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1685,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 33.821,
+     "e": 41.818
+    },
+    {
+     "src": "news/11/img/london_haus.jpg",
+     "move": "nang-len",
+     "w": 1500,
+     "h": 2000,
+     "from": {
+      "z": 1.25,
+      "x": 0.5,
+      "y": 0.6
+     },
+     "to": {
+      "z": 1.25,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "s": 41.818,
+     "e": 44.516
+    },
+    {
+     "src": "news/11/img/havelland.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.06,
+      "x": 0.4495,
+      "y": 0.5283
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5505,
+      "y": 0.5283
+     },
+     "s": 44.516,
+     "e": 47.499
+    },
+    {
+     "src": "news/11/img/wanderungen.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 2009,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.113,
+      "x": 0.5,
+      "y": 0.4492
+     },
+     "s": 47.499,
+     "e": 51.535
+    }
+   ]
+  },
+  {
+   "s": 51.535,
+   "e": 69.253,
+   "pics": [
+    {
+     "src": "news/11/img/fontane_foto.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1705,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 51.535,
+     "e": 61.377
+    },
+    {
+     "src": "news/11/img/buch_leder.jpg",
+     "move": "lui-ra",
+     "w": 2085,
+     "h": 2295,
+     "from": {
+      "z": 1.32,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "s": 61.377,
+     "e": 69.253
+    }
+   ]
+  },
+  {
+   "s": 69.253,
+   "e": 94.248,
+   "pics": [
+    {
+     "src": "news/11/img/effi_titel.jpg",
+     "move": "tien-gan",
+     "w": 1428,
+     "h": 2148,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 69.253,
+     "e": 78.1
+    },
+    {
+     "src": "news/11/img/effi_bild.jpg",
+     "move": "tien-gan",
+     "w": 1265,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.4325
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.3604
+     },
+     "s": 78.1,
+     "e": 88.732
+    },
+    {
+     "src": "news/11/img/weites_feld.jpg",
+     "move": "luot-phai",
+     "w": 2311,
+     "h": 1300,
+     "from": {
+      "z": 1.06,
+      "x": 0.43,
+      "y": 0.5283
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.57,
+      "y": 0.5283
+     },
+     "s": 88.732,
+     "e": 94.248
+    }
+   ]
+  },
+  {
+   "s": 94.248,
+   "e": 115.167,
+   "pics": [
+    {
+     "src": "news/11/img/grab_fontane.jpg",
+     "move": "tien-gan",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.115,
+      "x": 0.45,
+      "y": 0.4484
+     },
+     "s": 94.248,
+     "e": 98.359
+    },
+    {
+     "src": "news/11/img/ribbeck_relief.jpg",
+     "move": "chi-tiet",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.0,
+      "x": 0.475,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.25,
+      "x": 0.45,
+      "y": 0.4
+     },
+     "s": 98.359,
+     "e": 101.432
+    },
+    {
+     "src": "news/11/img/baumstumpf.jpg",
+     "move": "dung-yen",
+     "w": 1300,
+     "h": 1902,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 101.432,
+     "e": 106.089
+    },
+    {
+     "src": "news/11/img/birnbaum_jung.jpg",
+     "move": "nang-len",
+     "w": 1460,
+     "h": 2600,
+     "from": {
+      "z": 1.248,
+      "x": 0.5,
+      "y": 0.6
+     },
+     "to": {
+      "z": 1.248,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "s": 106.089,
+     "e": 108.921
+    },
+    {
+     "src": "news/11/img/birnbaum_kirche.jpg",
+     "move": "lui-ra",
+     "w": 1950,
+     "h": 2600,
+     "from": {
+      "z": 1.312,
+      "x": 0.45,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.475,
+      "y": 0.5
+     },
+     "s": 108.921,
+     "e": 115.167
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 0.3,
+   "e": 2.672,
+   "text": "„Herr von Ribbeck auf\nRibbeck im Havelland,"
+  },
+  {
+   "s": 2.672,
+   "e": 4.819,
+   "text": "ein Birnbaum in\nseinem Garten stand.“"
+  },
+  {
+   "s": 4.819,
+   "e": 6.969,
+   "text": "Diese Zeilen kennen\nwir aus der Schule."
+  },
+  {
+   "s": 6.969,
+   "e": 9.083,
+   "text": "Geschrieben hat sie\nTheodor Fontane."
+  },
+  {
+   "s": 9.083,
+   "e": 11.456,
+   "text": "Bevor er Dichter wurde,\nwar er Apotheker."
+  },
+  {
+   "s": 11.456,
+   "e": 15.071,
+   "text": "Seinen ersten Roman\nveröffentlichte er erst mit 58."
+  },
+  {
+   "s": 15.071,
+   "e": 18.964,
+   "text": "Und sein berühmtestes Buch\nschrieb er mit über 70."
+  },
+  {
+   "s": 18.964,
+   "e": 22.569,
+   "text": "Fontane wurde 1819\nin Neuruppin geboren."
+  },
+  {
+   "s": 22.569,
+   "e": 25.373,
+   "text": "Seine Vorfahren waren\nHugenotten aus Frankreich."
+  },
+  {
+   "s": 25.373,
+   "e": 27.153,
+   "text": "Der Vater führte eine Apotheke –"
+  },
+  {
+   "s": 27.153,
+   "e": 29.486,
+   "text": "und verspielte viel\nGeld beim Kartenspiel."
+  },
+  {
+   "s": 29.486,
+   "e": 31.511,
+   "text": "Er musste die\nApotheke verkaufen."
+  },
+  {
+   "s": 31.511,
+   "e": 34.321,
+   "text": "Auch Theodor lernte Apotheker."
+  },
+  {
+   "s": 34.321,
+   "e": 37.961,
+   "text": "Doch lieber schrieb er Gedichte,\nBalladen und Zeitungsartikel."
+  },
+  {
+   "s": 37.961,
+   "e": 41.968,
+   "text": "1849 gab er den Beruf\nauf und wurde Journalist."
+  },
+  {
+   "s": 41.968,
+   "e": 44.666,
+   "text": "Jahrelang lebte er als\nKorrespondent in London."
+  },
+  {
+   "s": 44.666,
+   "e": 47.649,
+   "text": "Zurück in Preußen wanderte\ner durch die Mark Brandenburg"
+  },
+  {
+   "s": 47.649,
+   "e": 52.035,
+   "text": "und schrieb seine „Wanderungen\ndurch die Mark Brandenburg“."
+  },
+  {
+   "s": 52.035,
+   "e": 56.116,
+   "text": "1870 reiste er als Reporter\nin den Krieg nach Frankreich."
+  },
+  {
+   "s": 56.116,
+   "e": 59.32,
+   "text": "Dort hielt man ihn für einen\nSpion und nahm ihn gefangen."
+  },
+  {
+   "s": 59.32,
+   "e": 61.527,
+   "text": "Erst Bismarck setzte\nsich für ihn ein."
+  },
+  {
+   "s": 61.527,
+   "e": 66.856,
+   "text": "1878, mit 58 Jahren, erschien\nendlich sein erster Roman."
+  },
+  {
+   "s": 66.856,
+   "e": 69.753,
+   "text": "Dann folgte einer\nnach dem anderen."
+  },
+  {
+   "s": 69.753,
+   "e": 72.141,
+   "text": "Mit über 70 schrieb\ner „Effi Briest“."
+  },
+  {
+   "s": 72.141,
+   "e": 76.156,
+   "text": "Ein Mädchen wird mit 17 an einen\nviel älteren Baron verheiratet."
+  },
+  {
+   "s": 76.156,
+   "e": 78.25,
+   "text": "Sie langweilt sich,\nhat eine Affäre –"
+  },
+  {
+   "s": 78.25,
+   "e": 80.62,
+   "text": "und Jahre später findet\nihr Mann die Briefe."
+  },
+  {
+   "s": 80.62,
+   "e": 83.451,
+   "text": "Er tötet den Liebhaber im\nDuell und verstößt Effi."
+  },
+  {
+   "s": 83.451,
+   "e": 85.547,
+   "text": "Die Geschichte hatte\nein wahres Vorbild:"
+  },
+  {
+   "s": 85.547,
+   "e": 88.882,
+   "text": "Elisabeth von Ardenne.\nSie wurde 98 Jahre alt."
+  },
+  {
+   "s": 88.882,
+   "e": 92.307,
+   "text": "Effis Vater sagt im Buch einen\nSatz, den wir bis heute benutzen:"
+  },
+  {
+   "s": 92.307,
+   "e": 94.748,
+   "text": "„Das ist ein weites Feld.“"
+  },
+  {
+   "s": 94.748,
+   "e": 98.509,
+   "text": "Theodor Fontane\nstarb 1898 in Berlin."
+  },
+  {
+   "s": 98.509,
+   "e": 99.956,
+   "text": "Und Herr von Ribbeck?"
+  },
+  {
+   "s": 99.956,
+   "e": 101.582,
+   "text": "Den gab es wirklich."
+  },
+  {
+   "s": 101.582,
+   "e": 103.799,
+   "text": "Und auch den Birnbaum\nauf seinem Grab."
+  },
+  {
+   "s": 103.799,
+   "e": 106.239,
+   "text": "1911 warf ihn ein Sturm um."
+  },
+  {
+   "s": 106.239,
+   "e": 109.071,
+   "text": "Heute steht in Ribbeck\nwieder ein junger Birnbaum."
+  },
+  {
+   "s": 109.071,
+   "e": 111.083,
+   "text": "„So spendet Segen\nnoch immer die Hand"
+  },
+  {
+   "s": 111.083,
+   "e": 113.592,
+   "text": "des von Ribbeck auf\nRibbeck im Havelland.“"
+  }
+ ],
+ "voice": [
+  {
+   "s": 0.3,
+   "src": "news/11/voice_pace/line_01.wav"
+  },
+  {
+   "s": 2.672,
+   "src": "news/11/voice_pace/line_02.wav"
+  },
+  {
+   "s": 4.819,
+   "src": "news/11/voice_pace/line_03.wav"
+  },
+  {
+   "s": 6.969,
+   "src": "news/11/voice_pace/line_04.wav"
+  },
+  {
+   "s": 9.083,
+   "src": "news/11/voice_pace/line_05.wav"
+  },
+  {
+   "s": 11.456,
+   "src": "news/11/voice_pace/line_06.wav"
+  },
+  {
+   "s": 15.071,
+   "src": "news/11/voice_pace/line_07.wav"
+  },
+  {
+   "s": 18.964,
+   "src": "news/11/voice_pace/line_08.wav"
+  },
+  {
+   "s": 22.569,
+   "src": "news/11/voice_pace/line_09.wav"
+  },
+  {
+   "s": 25.373,
+   "src": "news/11/voice_pace/line_10.wav"
+  },
+  {
+   "s": 27.153,
+   "src": "news/11/voice_pace/line_11.wav"
+  },
+  {
+   "s": 29.486,
+   "src": "news/11/voice_pace/line_12.wav"
+  },
+  {
+   "s": 31.511,
+   "src": "news/11/voice_pace/line_13.wav"
+  },
+  {
+   "s": 34.321,
+   "src": "news/11/voice_pace/line_14.wav"
+  },
+  {
+   "s": 37.961,
+   "src": "news/11/voice_pace/line_15.wav"
+  },
+  {
+   "s": 41.968,
+   "src": "news/11/voice_pace/line_16.wav"
+  },
+  {
+   "s": 44.666,
+   "src": "news/11/voice_pace/line_17.wav"
+  },
+  {
+   "s": 47.649,
+   "src": "news/11/voice_pace/line_18.wav"
+  },
+  {
+   "s": 52.035,
+   "src": "news/11/voice_pace/line_19.wav"
+  },
+  {
+   "s": 56.116,
+   "src": "news/11/voice_pace/line_20.wav"
+  },
+  {
+   "s": 59.32,
+   "src": "news/11/voice_pace/line_21.wav"
+  },
+  {
+   "s": 61.527,
+   "src": "news/11/voice_pace/line_22.wav"
+  },
+  {
+   "s": 66.856,
+   "src": "news/11/voice_pace/line_23.wav"
+  },
+  {
+   "s": 69.753,
+   "src": "news/11/voice_pace/line_24.wav"
+  },
+  {
+   "s": 72.141,
+   "src": "news/11/voice_pace/line_25.wav"
+  },
+  {
+   "s": 76.156,
+   "src": "news/11/voice_pace/line_26.wav"
+  },
+  {
+   "s": 78.25,
+   "src": "news/11/voice_pace/line_27.wav"
+  },
+  {
+   "s": 80.62,
+   "src": "news/11/voice_pace/line_28.wav"
+  },
+  {
+   "s": 83.451,
+   "src": "news/11/voice_pace/line_29.wav"
+  },
+  {
+   "s": 85.547,
+   "src": "news/11/voice_pace/line_30.wav"
+  },
+  {
+   "s": 88.882,
+   "src": "news/11/voice_pace/line_31.wav"
+  },
+  {
+   "s": 92.307,
+   "src": "news/11/voice_pace/line_32.wav"
+  },
+  {
+   "s": 94.748,
+   "src": "news/11/voice_pace/line_33.wav"
+  },
+  {
+   "s": 98.509,
+   "src": "news/11/voice_pace/line_34.wav"
+  },
+  {
+   "s": 99.956,
+   "src": "news/11/voice_pace/line_35.wav"
+  },
+  {
+   "s": 101.582,
+   "src": "news/11/voice_pace/line_36.wav"
+  },
+  {
+   "s": 103.799,
+   "src": "news/11/voice_pace/line_37.wav"
+  },
+  {
+   "s": 106.239,
+   "src": "news/11/voice_pace/line_38.wav"
+  },
+  {
+   "s": 109.071,
+   "src": "news/11/voice_pace/line_39.wav"
+  },
+  {
+   "s": 111.083,
+   "src": "news/11/voice_pace/line_40.wav"
+  }
+ ],
+ "music": "news/11/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Philosopher",
+   "file": "news/fonts/philosopher-latin-400-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ]
+}
