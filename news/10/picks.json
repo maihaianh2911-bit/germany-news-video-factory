@@ -1,0 +1,254 @@
+{
+ "images": {
+  "kafka_hund": {
+   "src": "1/3-3.jpg",
+   "mode": "keep"
+  },
+  "denkmal_rona": {
+   "src": "1/13-1.jpg",
+   "mode": "keep"
+  },
+  "geburtshaus_tafel": {
+   "src": "1/4-2.jpg",
+   "mode": "keep"
+  },
+  "hermann": {
+   "src": "1/4-4.jpg",
+   "mode": "keep"
+  },
+  "brief_vater": {
+   "src": "1/6-1.jpg",
+   "mode": "keep"
+  },
+  "kafka_student": {
+   "src": "1/3-8.jpg",
+   "mode": "keep"
+  },
+  "manuskript": {
+   "src": "1/10-1.jpg",
+   "mode": "keep"
+  },
+  "verwandlung_s1": {
+   "src": "1/7-2.jpg",
+   "mode": "keep"
+  },
+  "verwandlung_cover": {
+   "src": "1/7-1.jpg",
+   "mode": "keep"
+  },
+  "kafka_felice": {
+   "src": "1/8-2.jpg",
+   "mode": "keep"
+  },
+  "kafka_1906": {
+   "src": "1/3-1.jpg",
+   "mode": "keep"
+  },
+  "brod": {
+   "src": "1/9-1.jpg",
+   "mode": "keep"
+  },
+  "brief_seite": {
+   "src": "1/6-3.jpg",
+   "mode": "keep"
+  },
+  "schwestern": {
+   "src": "1/16-7.jpg",
+   "mode": "keep"
+  },
+  "grab": {
+   "src": "1/12-2.jpg",
+   "mode": "keep"
+  }
+ },
+ "chapters": [
+  {
+   "pics": [
+    {
+     "img": "kafka_hund",
+     "move": "tien-gan",
+     "focus": [
+      0.55,
+      0.25
+     ],
+     "why": "mở đầu: Kafka trẻ đội mũ quả dưa, gương mặt rõ, nhận ra ngay"
+    },
+    {
+     "at": 4,
+     "img": "denkmal_rona",
+     "move": "nang-len",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu nay ai cũng biết, tên ông vào cả từ điển: tượng Kafka ở Praha"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "geburtshaus_tafel",
+     "move": "lui-ra",
+     "focus": [
+      0.48,
+      0.35
+     ],
+     "why": "câu ông sinh ở Praha: từ phù điêu ở nơi ông sinh lùi ra góc phố mang tên ông"
+    },
+    {
+     "at": 9,
+     "img": "hermann",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu về người cha Hermann Kafka: chân dung ông"
+    },
+    {
+     "at": 13,
+     "img": "brief_vater",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu lá thư hơn trăm trang gửi cha: trang đầu viết tay, giữ yên để thấy nét chữ"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "kafka_student",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.2
+     ],
+     "why": "câu học luật, làm viên chức bảo hiểm: Kafka thời sinh viên"
+    },
+    {
+     "at": 17,
+     "img": "manuskript",
+     "move": "chi-tiet",
+     "focus": [
+      0.45,
+      0.35
+     ],
+     "why": "câu ban đêm ông viết: soi vào nét chữ trên bản thảo"
+    },
+    {
+     "at": 19,
+     "img": "verwandlung_s1",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu Gregor Samsa thức dậy: trang đầu của truyện Hóa thân"
+    },
+    {
+     "at": 22,
+     "img": "verwandlung_cover",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu không được vẽ con côn trùng: bìa bản in đầu, quả thật không có con bọ nào"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "kafka_felice",
+     "move": "tien-gan",
+     "focus": [
+      0.62,
+      0.22
+     ],
+     "why": "câu hai lần đính hôn với Felice Bauer: ảnh hai người năm 1917"
+    },
+    {
+     "at": 27,
+     "img": "kafka_1906",
+     "move": "troi-nhe",
+     "focus": [
+      0.45,
+      0.2
+     ],
+     "why": "câu bệnh lao, gần như không ăn nói được: chân dung Kafka"
+    },
+    {
+     "at": 30,
+     "img": "grab",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu ông mất năm 1924: mộ Kafka ở Praha, giữ yên cho trang nghiêm"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "brod",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu nhắc Max Brod và hai mảnh giấy: ảnh Brod"
+    },
+    {
+     "at": 35,
+     "img": "brief_seite",
+     "move": "chi-tiet",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu Brod chạy trốn với va li đầy bản thảo: soi vào trang viết tay của Kafka"
+    },
+    {
+     "at": 37,
+     "img": "schwestern",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "why": "câu ba em gái bị sát hại: ảnh các em gái, giữ yên cho trang nghiêm"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "verwandlung_s1",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu nay ta đọc Kafka ở trường: trang đầu Hóa thân, giữ yên để đọc"
+    },
+    {
+     "at": 41,
+     "img": "kafka_hund",
+     "move": "lui-ra",
+     "focus": [
+      0.55,
+      0.25
+     ],
+     "why": "câu kết về người bạn không chịu vâng lời: lùi ra từ gương mặt Kafka"
+    }
+   ]
+  }
+ ]
+}
