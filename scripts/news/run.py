@@ -7,7 +7,9 @@
            as voice-partial/ and reused by the next run: audio that was paid for is never read twice.
   search   every news/<N>/search-<r>.json whose round is not on renders yet → renders/news/<N>/img/<r>/
   render   pictures from picks.json, plan, fonts, Remotion render, loudness, shot sheet
-           → renders/news/<N>/video.mp4, subtitles.srt, credits.txt, sheet.jpg, edits.md (the edit of each shot)
+           → renders/news/<N>/video.mp4, subtitles.srt, credits.txt, sheet.jpg, edits.md (the edit of each shot),
+           caption.txt (the posting caption, when news/<N>/caption.txt passes caption.py's check)
+  caption  only news/<N>/caption.txt changed: publish it beside the video (no voice, search or render)
 After prepare/search the issue waits for Claude (news-pick, Claude is called) unless picks.json exists, then render
 runs too; not when a search round the picks use was searched (again) in this run: with changed queries, or because
 the old results are gone from renders (cleaned after 14 days), the numbers may now name other pictures, so Claude
@@ -18,7 +20,7 @@ Needs GH_TOKEN, GITHUB_REPOSITORY; prepare needs VN11_API_KEY.
 import json, os, shutil, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
-import ff, moves, prep
+import caption, ff, moves   # prep (numpy, Pillow) is imported where it is needed: a caption-only run installs no tools
 
 N, steps = sys.argv[1], sys.argv[2:]
 JOB = os.path.join(ROOT, 'news', N)
@@ -217,6 +219,7 @@ def render():
     imgsrc = os.path.join(WORK, 'img')
     if os.path.isdir(os.path.join(JOB, 'own')):
         shutil.copytree(os.path.join(JOB, 'own'), os.path.join(imgsrc, 'own'), dirs_exist_ok=True)
+    import prep
     picks = os.path.join(JOB, 'picks.json')
     bad = moves.check_all(json.load(open(picks, encoding='utf-8')))
     if bad:   # an unknown move name etc.: say it in the issue comment, with the valid names
@@ -243,7 +246,8 @@ def render():
         if mb > 100: raise SystemExit(f'video {mb:.1f} MB, vẫn quá 100 MB')
     sh(sys.executable, os.path.join(HERE, 'sheet.py'), video, os.path.join(out, 'plan.json'), picks, os.path.join(WORK, 'sheet.jpg'))
     for f in ('subtitles.srt', 'credits.txt', 'plan.json', 'edits.md'): shutil.copy(os.path.join(out, f), os.path.join(WORK, f))
-    publish(['video.mp4', 'sheet.jpg', 'subtitles.srt', 'credits.txt', 'plan.json', 'edits.md'], 'video')
+    extra = ['caption.txt'] if take_caption() else []
+    publish(['video.mp4', 'sheet.jpg', 'subtitles.srt', 'credits.txt', 'plan.json', 'edits.md', *extra], 'video')
     return plan['duration']
 
 
@@ -276,7 +280,34 @@ def stale_rounds(searched, used):
     return sorted(set(searched) & set(used), key=lambda r: (len(r), r))
 
 
+def take_caption():
+    """news/<N>/caption.txt → WORK when it passes caption.check(); True when it is ready to publish. A caption with
+    problems is not published and the problems are said in the issue (the video is not held back for it)."""
+    src = os.path.join(JOB, 'caption.txt')
+    if not os.path.exists(src):
+        return False
+    bad = caption.check(open(src, encoding='utf-8').read())
+    if bad:
+        print(f'::warning::caption.txt: {"; ".join(bad)}', flush=True)
+        gh('issue', 'comment', N, '--body', f'🤖 Lời đăng video (caption.txt) chưa đúng mẫu nên chưa được đưa lên: {"; ".join(bad)}. '
+           'Claude sẽ sửa (chỉ cần đẩy lại caption.txt, máy không dựng lại video).')
+        return False
+    os.makedirs(WORK, exist_ok=True); shutil.copy(src, os.path.join(WORK, 'caption.txt'))
+    return True
+
+
+def caption_only():
+    """A push that changed caption.txt but nothing that needs a render: publish the caption beside the video and say
+    where it is. No voice, no search, no render, no label change."""
+    if take_caption():
+        publish(['caption.txt'], 'lời đăng video')
+        gh('issue', 'comment', N, '--body', f'🤖 Đã có lời đăng video (tiêu đề, mô tả, hashtag, nguồn ảnh) bên cạnh video: {link("caption.txt")}')
+
+
 def main():
+    if 'caption' in steps and len(steps) == 1:   # nothing else to do: the renders branch is not needed here
+        return caption_only()
+    import prep
     fetch_renders()
     woke = False   # Claude was already called for the news-pick wait (no second call for the same wait)
     has_picks = os.path.exists(os.path.join(JOB, 'picks.json'))
@@ -329,7 +360,10 @@ def main():
         wake(f'Phiếu văn học Đức số {N}: video đã dựng, chờ kiểm tra.',
              say=f'🤖 Đã dựng xong bản video ({m} phút {s:02d} giây).',
              then='Claude sẽ kiểm tra lại từng cảnh trước khi giao.',
-             tail=f'- Video: {link("video.mp4")}\n- Ảnh các cảnh: {link("sheet.jpg")}')
+             tail=f'- Video: {link("video.mp4")}\n- Ảnh các cảnh: {link("sheet.jpg")}'
+                  + (f'\n- Lời đăng video: {link("caption.txt")}' if os.path.exists(os.path.join(WORK, 'caption.txt')) else ''))
+    elif 'caption' in steps:
+        caption_only()
 
 
 if __name__ == '__main__':
