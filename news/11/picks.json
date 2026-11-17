@@ -1,0 +1,336 @@
+{
+ "images": {
+  "birnbaum_bluete": {
+   "src": "1/8-1.jpg",
+   "mode": "keep"
+  },
+  "fontane_feder": {
+   "src": "1/3-4.jpg",
+   "mode": "keep"
+  },
+  "fontane_liebermann": {
+   "src": "1/2-3.jpg",
+   "crop": [
+    0.02,
+    0.0,
+    0.98,
+    0.92
+   ],
+   "mode": "keep"
+  },
+  "effi_einband": {
+   "src": "1/6-1.jpg",
+   "mode": "keep"
+  },
+  "denkmal_park": {
+   "src": "1/4-6.jpg",
+   "mode": "keep"
+  },
+  "denkmal_nah": {
+   "src": "1/4-3.jpg",
+   "mode": "keep"
+  },
+  "fontane_gesicht": {
+   "src": "1/3-5.jpg",
+   "mode": "keep"
+  },
+  "london_haus": {
+   "src": "1/12-1.jpg",
+   "mode": "keep"
+  },
+  "havelland": {
+   "src": "1/15-1.jpg",
+   "mode": "keep"
+  },
+  "wanderungen": {
+   "src": "1/11-1.jpg",
+   "mode": "keep"
+  },
+  "fontane_foto": {
+   "src": "1/3-3.jpg",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.9
+   ],
+   "mode": "keep"
+  },
+  "buch_leder": {
+   "src": "1/11-3.jpg",
+   "mode": "keep"
+  },
+  "effi_titel": {
+   "src": "1/6-5.jpg",
+   "mode": "keep"
+  },
+  "effi_bild": {
+   "src": "1/6-2.jpg",
+   "crop": [
+    0.12,
+    0.0,
+    0.52,
+    1.0
+   ],
+   "mode": "keep"
+  },
+  "grabstein_ardenne": {
+   "src": "1/7-4.jpg",
+   "mode": "keep"
+  },
+  "weites_feld": {
+   "src": "1/7-1.jpg",
+   "mode": "keep"
+  },
+  "grab_fontane": {
+   "src": "1/14-3.jpg",
+   "mode": "keep"
+  },
+  "ribbeck_relief": {
+   "src": "1/16-2.jpg",
+   "mode": "keep"
+  },
+  "baumstumpf": {
+   "src": "1/16-7.jpg",
+   "mode": "keep"
+  },
+  "birnbaum_jung": {
+   "src": "1/8-3.jpg",
+   "mode": "keep"
+  },
+  "birnbaum_kirche": {
+   "src": "1/8-2.jpg",
+   "mode": "keep"
+  }
+ },
+ "chapters": [
+  {
+   "pics": [
+    {
+     "img": "birnbaum_bluete",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.35
+     ],
+     "why": "mở đầu: cây lê đang trổ hoa bên nhà thờ làng Ribbeck, đúng cây lê trong bài thơ ai cũng thuộc"
+    },
+    {
+     "at": 3,
+     "img": "fontane_feder",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu bài thơ do Theodor Fontane viết: chân dung ông cầm bút lông ngỗng (1883)"
+    },
+    {
+     "at": 5,
+     "img": "fontane_liebermann",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.35
+     ],
+     "why": "câu ông từng là dược sĩ, 58 tuổi mới ra tiểu thuyết đầu: Fontane lúc già, Liebermann vẽ năm 1896"
+    },
+    {
+     "at": 7,
+     "img": "effi_einband",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu cuốn sách nổi tiếng nhất viết khi ngoài 70: bìa „Effi Briest“"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "denkmal_park",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.55
+     ],
+     "why": "câu ông sinh năm 1819 ở Neuruppin: tượng đài Fontane trong công viên ở Neuruppin"
+    },
+    {
+     "at": 10,
+     "img": "denkmal_nah",
+     "move": "tien-gan",
+     "focus": [
+      0.55,
+      0.3
+     ],
+     "why": "câu người cha mở hiệu thuốc rồi thua bạc: tượng Fontane nhìn gần"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "fontane_gesicht",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "why": "câu ông thích làm thơ, viết báo hơn: gương mặt Fontane"
+    },
+    {
+     "at": 16,
+     "img": "london_haus",
+     "move": "nang-len",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu nhiều năm làm phóng viên ở London: ngôi nhà ông ở tại London"
+    },
+    {
+     "at": 17,
+     "img": "havelland",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.55
+     ],
+     "why": "câu ông đi bộ khắp vùng Mark Brandenburg: lướt qua cảnh đồng nước vùng Havelland"
+    },
+    {
+     "at": 18,
+     "img": "wanderungen",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu bộ sách „Wanderungen durch die Mark Brandenburg“: trang tên sách năm 1862"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "fontane_foto",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu đi đưa tin chiến tranh, bị bắt vì nghi là gián điệp: ảnh chụp Fontane"
+    },
+    {
+     "at": 22,
+     "img": "buch_leder",
+     "move": "lui-ra",
+     "focus": [
+      0.3,
+      0.5
+     ],
+     "why": "câu tiểu thuyết đầu năm 1878, rồi cuốn này nối cuốn kia: sách của Fontane bìa da in tên ông"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "effi_titel",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu ngoài 70 tuổi ông viết „Effi Briest“, cô gái 17 tuổi bị gả cho nam tước: trang tên sách bản in đầu"
+    },
+    {
+     "at": 27,
+     "img": "effi_bild",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "câu Effi có tình nhân, chồng tìm thấy thư: tranh Effi vẽ trên tủ điện ở làng Zerben"
+    },
+    {
+     "at": 29,
+     "img": "grabstein_ardenne",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu nguyên mẫu là Elisabeth von Ardenne, sống tới 98 tuổi: bia mộ của bà, giữ yên cho trang nghiêm"
+    },
+    {
+     "at": 31,
+     "img": "weites_feld",
+     "move": "luot-phai",
+     "focus": [
+      0.5,
+      0.55
+     ],
+     "why": "câu „Das ist ein weites Feld“: lướt qua một cánh đồng rộng"
+    }
+   ]
+  },
+  {
+   "pics": [
+    {
+     "img": "grab_fontane",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.3
+     ],
+     "why": "câu ông mất năm 1898 ở Berlin: mộ ông và vợ Emilie"
+    },
+    {
+     "at": 34,
+     "img": "ribbeck_relief",
+     "move": "chi-tiet",
+     "focus": [
+      0.45,
+      0.4
+     ],
+     "why": "câu ông von Ribbeck có thật: soi vào bia khắc huy hiệu dòng họ ông"
+    },
+    {
+     "at": 36,
+     "img": "baumstumpf",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu cây lê trên mộ ông bị bão quật đổ năm 1911: gốc cây lê cũ còn giữ trong nhà thờ, giữ yên"
+    },
+    {
+     "at": 38,
+     "img": "birnbaum_jung",
+     "move": "nang-len",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "câu nay ở Ribbeck lại có một cây lê non: nâng từ gốc lên tán cây"
+    },
+    {
+     "at": 39,
+     "img": "birnbaum_kirche",
+     "move": "lui-ra",
+     "focus": [
+      0.45,
+      0.4
+     ],
+     "why": "câu cuối của bài thơ: lùi ra thấy cây lê trổ hoa bên nhà thờ Ribbeck"
+    }
+   ]
+  }
+ ]
+}
