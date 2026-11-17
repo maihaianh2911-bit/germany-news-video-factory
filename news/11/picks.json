@@ -74,10 +74,6 @@
    ],
    "mode": "keep"
   },
-  "grabstein_ardenne": {
-   "src": "1/7-4.jpg",
-   "mode": "keep"
-  },
   "weites_feld": {
    "src": "1/7-1.jpg",
    "mode": "keep"
@@ -100,6 +96,10 @@
   },
   "birnbaum_kirche": {
    "src": "1/8-2.jpg",
+   "mode": "keep"
+  },
+  "apotheke": {
+   "src": "2/4-3.jpg",
    "mode": "keep"
   }
  },
@@ -166,7 +166,17 @@
       0.55,
       0.3
      ],
-     "why": "câu người cha mở hiệu thuốc rồi thua bạc: tượng Fontane nhìn gần"
+     "why": "câu người cha mở hiệu thuốc rồi thua bạc phải bán: tượng Fontane nhìn gần"
+    },
+    {
+     "at": 13,
+     "img": "apotheke",
+     "move": "tien-gan",
+     "focus": [
+      0.3,
+      0.4
+     ],
+     "why": "câu Theodor cũng học nghề dược: hiệu thuốc Adler-Apotheke ở Leipzig, nơi ông làm năm 1841–1842"
     }
    ]
   },
@@ -255,17 +265,7 @@
       0.5,
       0.3
      ],
-     "why": "câu Effi có tình nhân, chồng tìm thấy thư: tranh Effi vẽ trên tủ điện ở làng Zerben"
-    },
-    {
-     "at": 29,
-     "img": "grabstein_ardenne",
-     "move": "dung-yen",
-     "focus": [
-      0.5,
-      0.5
-     ],
-     "why": "câu nguyên mẫu là Elisabeth von Ardenne, sống tới 98 tuổi: bia mộ của bà, giữ yên cho trang nghiêm"
+     "why": "câu Effi có tình nhân, chồng tìm thấy thư, nguyên mẫu là Elisabeth von Ardenne: tranh Effi vẽ ở Zerben, làng quê của bà"
     },
     {
      "at": 31,
