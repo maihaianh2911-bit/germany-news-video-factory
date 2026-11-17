@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Unit checks without network, Whisper or 11labs: the voice check's word comparison (numbers written out on both
-sides), the whole-word readings sent to the voice, and the call to the Claude task (fresh news-busy label, comment
-wording, retries). Run from the repo root:
+sides), the whole-word readings sent to the voice, the call to the Claude task (fresh news-busy label, comment
+wording, retries), and the picture search (query kinds, picture sizes, ranking, rate limit; made-up answers, no CLIP
+model). Run from the repo root:
 python3 tests/news_units.py   (needs num2words: pip install num2words==0.5.14)"""
 import contextlib, datetime, io, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -221,4 +222,182 @@ r = subprocess.run([sys.executable, '-c', 'import sys; sys.argv = ["run.py", "0"
                    env={**os.environ, 'PYTHONPATH': blk + os.pathsep + os.path.join(ROOT, 'scripts', 'news'), 'GITHUB_REPOSITORY': 'o/r', 'GH_TOKEN': 'x'})
 assert r.returncode == 0, r.stderr[-500:]
 shutil.rmtree(blk, ignore_errors=True)
+# --- the picture search (scripts/find_images.py): made-up answers of Commons, Wikipedia and Wikidata, no CLIP model ---
+import random, re, urllib.parse
+from PIL import Image
+sys.path.insert(0, os.path.join(ROOT, 'scripts'))
+import find_images as F
+# a query kind: wiki: and geo: are their own; everything else is a Commons search and stays whole
+assert F.source_of('wiki: Friedrich Merz') == ('wiki', 'Friedrich Merz') and F.source_of(' Wiki:Bundestag ') == ('wiki', 'Bundestag')
+assert F.source_of('geo: 52.5186,13.3762 300') == ('geo', '52.5186,13.3762 300')
+for q in ('incategory:"Reichstag building" 2025', 'Dr. Müller: Akte', 'Frankfurt skyline'): assert F.source_of(q) == (None, q), q
+assert F.KEYWORD.search('incategory:"Friedrich Merz" 2025') and not F.KEYWORD.search('Olaf Scholz 2024')
+assert F.parts('Bundestag') == ('Bundestag', None, None) and F.parts({'q': 'attic', 'want': ' a dark attic ', 'keep': 12}) == ('attic', 'a dark attic', 12)
+for bad in ({'want': 'x'}, {'q': 7}, {'q': 'x', 'keep': 0}, {'q': 'x', 'keep': '8'}, 7):
+    try: F.parts(bad); raise AssertionError(f'query accepted: {bad}')
+    except ValueError: pass
+# Commons pictures are taken in the standard sizes: the largest up to 1920 px, a file under 960 px whole; the 330 px
+# version is the preview; a licence that does not allow the video and a file that is no picture are left out; the
+# title keeps its "File:" (build.py cuts it off for credits.txt)
+def _pg(title, w, h, lic='CC BY-SA 4.0', mime='image/jpeg', i=0, thumb=None):
+    name = title[5:].replace(' ', '_')
+    return {'title': title, 'index': i, 'imageinfo': [{'mime': mime, 'width': w, 'height': h, 'descriptionurl': 'https://commons.wikimedia.org/wiki/File:' + name,
+            'url': f'https://upload.wikimedia.org/wikipedia/commons/a/ab/{name}?utm=1',
+            'thumburl': thumb or (f'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/{name}/330px-{name}' if w > 330 else f'https://upload.wikimedia.org/wikipedia/commons/a/ab/{name}'),
+            'extmetadata': {'LicenseShortName': {'value': lic}, 'Artist': {'value': '<a href="x">Foto  Graf</a>'}, 'DateTimeOriginal': {'value': '2025-02-23'}}}]}
+res = F.results([_pg('File:Mid.jpg', 1400, 900, i=2), _pg('File:Big.jpg', 5100, 3000, i=1), _pg('File:Small.jpg', 640, 480, i=3), _pg('File:Tiny.jpg', 300, 300, i=4),
+                 _pg('File:Press.jpg', 3000, 2000, lic='All rights reserved', i=5), _pg('File:Akte.pdf', 3000, 2000, mime='application/pdf', i=6),
+                 _pg('File:Karte.tif', 4000, 3000, mime='image/tiff', i=7, thumb='https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Karte.tif/lossy-page1-330px-Karte.tif.jpg')])
+assert [r['title'] for r in res] == ['File:Big.jpg', 'File:Mid.jpg', 'File:Small.jpg', 'File:Tiny.jpg', 'File:Karte.tif'], res
+assert res[0]['thumb'].endswith('/1920px-Big.jpg') and res[0]['preview'].endswith('/330px-Big.jpg') and (res[0]['width'], res[0]['height']) == (5100, 3000), res[0]
+assert res[1]['thumb'].endswith('/1280px-Mid.jpg') and res[2]['thumb'].endswith('/ab/Small.jpg') and res[2]['preview'].endswith('/330px-Small.jpg'), res[1:3]
+assert res[3]['thumb'] == res[3]['preview'] and '?' not in res[3]['thumb'] and res[4]['thumb'].endswith('/lossy-page1-1920px-Karte.tif.jpg'), res[3:]
+assert {'page', 'license', 'artist', 'credit', 'date', 'description', 'attribution_required', 'source'} <= set(res[0]) and res[0]['artist'] == 'Foto Graf' and res[0]['source'] == 'commons'
+# a list of titles comes back in the order asked, not in the API's; long lists are asked in several requests
+assert [r['title'] for r in F.results([_pg('File:B.jpg', 2000, 2000), _pg('File:A.jpg', 2000, 2000)], order=['File:A.jpg', 'File:B.jpg'])] == ['File:A.jpg', 'File:B.jpg']
+assert [len(g) for g in F.batches([f'File:{i}.jpg' for i in range(120)])] == [50, 50, 20] and all(len(g) < 50 for g in F.batches(['File:' + 'ü' * 60 + f'{i}.jpg' for i in range(50)]))
+assert F.ICON.search('File:Commons-logo.svg') and F.ICON.search('File:Flag of Germany.png') and not F.ICON.search('File:Friedrich Merz 2025.jpg')
+try: F.geo('Reichstag', 5); raise AssertionError('geo: without coordinates must be refused')
+except ValueError: pass
+# a host that answers 429 is given the time it asks for (Retry-After), but 90 s in a whole run at most: after that a
+# request to it is tried once; another host has its own count
+real_net = (F.urllib.request.urlopen, F.time.sleep)
+asked, waits = [], []
+def refuse(req, timeout=None): asked.append(req.full_url); raise urllib.error.HTTPError(req.full_url, 429, 'Too Many Requests', {'Retry-After': '16'}, None)
+try:
+    F.urllib.request.urlopen = refuse; F.time.sleep = lambda s: waits.append(s); F.WAITED.clear()
+    for n_asked, url in ((4, 'https://commons.wikimedia.org/w/api.php?a=1'), (3, 'https://commons.wikimedia.org/w/api.php?a=2'),
+                         (1, 'https://commons.wikimedia.org/w/api.php?a=3'), (2, 'https://upload.wikimedia.org/x.jpg')):
+        asked.clear(); waits.clear()
+        try: F.get(url, tries=4 if 'api' in url else 2); raise AssertionError('429 accepted')
+        except urllib.error.HTTPError: pass
+        assert len(asked) == n_asked and [w for w in waits if w >= 1] == [16] * (n_asked - 1), (url, asked, waits)
+    assert F.WAITED == {'commons.wikimedia.org': 80, 'upload.wikimedia.org': 16} and max(F.WAITED.values()) <= F.PATIENCE
+    assert F.pause(urllib.error.HTTPError('u', 429, '', {}, None)) == 10 and F.pause(urllib.error.HTTPError('u', 429, '', {'Retry-After': '600'}, None)) == 30
+finally:
+    F.urllib.request.urlopen, F.time.sleep = real_net; F.WAITED.clear()
+
+# a whole search with made-up answers: every request goes through fake_get (API answers as JSON, pictures as JPEG)
+def _jpg(name, px):
+    """A picture of its own for every name (same name = same picture in any size): 9×8 random grey blocks."""
+    rnd = random.Random(name); im = Image.frombytes('L', (9, 8), bytes(rnd.sample(range(0, 256, 3), 72))).resize((px, px * 2 // 3), Image.NEAREST)
+    b = io.BytesIO(); im.convert('RGB').save(b, 'JPEG', quality=85); return b.getvalue()
+LIB = {}       # search words -> pages; file title -> page (for titles=… requests)
+WIKI = {}      # (host, a parameter that tells the request apart) -> answer
+urls = []
+def fake_get(url, tries=4, timeout=60):
+    urls.append(url); u = urllib.parse.urlsplit(url); p = dict(urllib.parse.parse_qsl(u.query))
+    if not u.path.endswith('api.php'):                                   # a picture: …/<width>px-<name> or the file itself
+        name = urllib.parse.unquote(u.path.rsplit('/', 1)[-1]); m = re.match(r'(?:lossy-page1-)?(\d+)px-(.+)$', name)
+        if 'kaputt' in name: raise urllib.error.URLError('connection reset')
+        return _jpg(m.group(2) if m else name, int(m.group(1)) if m else 600)
+    if p.get('generator') == 'search':
+        if p['gsrsearch'] not in LIB: raise urllib.error.URLError('timed out')
+        return json.dumps({'query': {'pages': {str(i): pg for i, pg in enumerate(LIB[p['gsrsearch']])}}}).encode()
+    if p.get('generator') == 'geosearch':
+        return json.dumps({'query': {'pages': {str(i): pg for i, pg in enumerate(LIB['geo ' + p['ggscoord']])}}}).encode()
+    if p.get('prop') == 'imageinfo':                                      # titles=A|B|C, answered in another order
+        return json.dumps({'query': {'pages': {str(i): LIB[t] for i, t in enumerate(reversed(p['titles'].split('|'))) if t in LIB}}}).encode()
+    key = p.get('prop') or p.get('list') or p.get('action')
+    return json.dumps(WIKI[(u.netloc, key, p.get('titles') or p.get('cmtitle', '') + p.get('cmtype', '') or p.get('ids') or p.get('search'))]).encode()
+# 1) plain strings, ranking off: what the search always returned — the first 8 of 12 in the search's order, without
+#    files under 400 px (250 px for incategory:), without second scans; a failed search keeps an "error"
+LIB['Bundestag'] = [_pg(f'File:B{i:02d}.jpg', 3000, 2000, i=i) for i in range(1, 13)]
+LIB['Bundestag'][1] = _pg('File:Winzig.jpg', 390, 2000, i=2)                                    # too small
+LIB['Bundestag'][3] = _pg('File:B01.jpg', 1300, 867, i=4); LIB['Bundestag'][3]['title'] = 'File:B01 (Zweitscan).jpg'   # the same picture again, smaller
+LIB['Bundestag'].reverse()                                                                     # the API's order is not the search's
+LIB['incategory:"Friedrich Merz"'] = [_pg('File:Merz Flugblatt.jpg', 300, 260, i=1), _pg('File:Merz Marke.jpg', 240, 200, i=2), _pg('File:Merz kaputt.jpg', 2000, 3000, i=3)]
+real_find = (F.get, F.picture, F.Clip.ready, F.Clip.scores, sys.argv, os.environ.get('FIND_RANK'), os.environ.get('FIND_SEEN'))
+tmp = tempfile.mkdtemp(prefix='news-units-'); o1, o2 = os.path.join(tmp, '1'), os.path.join(tmp, '2')
+said = io.StringIO(); quiet = contextlib.redirect_stdout(said); quiet.__enter__()
+try:
+    F.get = fake_get; os.environ['FIND_RANK'] = '0'; os.environ.pop('FIND_SEEN', None)
+    sys.argv = ['find_images.py', o1, 'Bundestag', 'incategory:"Friedrich Merz"', 'Netz weg']
+    F.main()
+    idx = json.load(open(os.path.join(o1, 'index.json'), encoding='utf-8'))
+    assert [(e['k'], e['query'], len(e['results'])) for e in idx] == [(1, 'Bundestag', 8), (2, 'incategory:"Friedrich Merz"', 1), (3, 'Netz weg', 0)], idx
+    assert [r['title'] for r in idx[0]['results']] == [f'File:B{i:02d}.jpg' for i in (1, 3, 5, 6, 7, 8, 9, 10)], [r['title'] for r in idx[0]['results']]
+    assert [r['file'] for r in idx[0]['results']] == [f'1-{n}.jpg' for n in range(1, 9)] and idx[0]['candidates'] == 11 and 'error' not in idx[0]
+    assert all(r['thumb'].endswith('/1920px-' + r['title'][5:]) and r['page'].endswith(r['title'][5:]) and r['source'] == 'commons' for r in idx[0]['results'])
+    assert not any(k in r for r in idx[0]['results'] for k in ('preview', 'rank', 'match', 'error')) and 'want' not in idx[0]
+    assert idx[1]['results'][0]['title'] == 'File:Merz Flugblatt.jpg' and idx[1]['results'][0]['thumb'].endswith('/ab/Merz_Flugblatt.jpg')   # 260 px: kept for incategory:
+    assert 'URLError' in idx[2]['error'] and sorted(os.listdir(o1)) == sorted([f'1-{n}.jpg' for n in range(1, 9)] + ['2-1.jpg', 'index.json', 'sheet_1.jpg', 'sheet_2.jpg'])
+    assert Image.open(os.path.join(o1, '1-1.jpg')).size == (1920, 1280) and Image.open(os.path.join(o1, 'sheet_1.jpg')).size == (4 * 380, 2 * 410)
+    asked = [dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(u).query)) for u in urls if 'generator=search' in u]
+    assert [(a['gsrsearch'], a['gsrlimit'], a['gsrnamespace'], a['iiurlwidth']) for a in asked] == [(q, '12', '6', '330') for q in sys.argv[2:]], asked
+    assert not any('/330px-' in u for u in urls)                         # no ranking: no small versions are fetched
+    # every search failing is an error of the run
+    sys.argv = ['find_images.py', os.path.join(tmp, 'x'), 'Netz weg', 'Netz ganz weg']
+    try: F.main(); raise AssertionError('a run with every search failed must fail')
+    except SystemExit as e: assert 'every search failed' in str(e.code)
+
+    # 2) --spec: a query with a wish is ranked (CLIP made up here: a score for every file), wiki: reads one Wikidata
+    #    item, a later round does not show pictures of an earlier one again (FIND_SEEN), a broken entry costs only itself
+    LIB['Gerichtssaal'] = [_pg(f'File:G{c}.jpg', 2400, 1600, i=i) for i, c in enumerate('ABCDEF', 1)] + [_pg('File:B05.jpg', 3000, 2000, i=7)]
+    fit = {'GA': 0.285, 'GB': 0.33, 'GC': 0.10, 'GD': 0.30, 'GE': 0.31, 'GF': 0.29, 'B05': 0.32}; unfit = {'GE': 0.25}
+    texts = []
+    def scores(cls, images, text):
+        texts.append(text); names = [im.url.rsplit('px-', 1)[-1][:-4] for im in images]
+        return [fit[n] for n in names], [unfit.get(n, 0.1) for n in names]
+    def picture(url, **k):
+        im = real_find[1](url, **k); im.url = url; return im
+    F.picture = picture; F.Clip.ready = classmethod(lambda cls: True); F.Clip.scores = classmethod(scores)
+    for t, (w, h) in {'File:Reichstag.jpg': (4000, 3000), 'File:Plenarsaal.jpg': (3000, 2000), 'File:Kuppel.jpg': (2000, 3000), 'File:Sitzung.jpg': (1000, 700),
+                      'File:Stuhl.jpg': (800, 800), 'File:Briefmarke.jpg': (300, 380)}.items(): LIB[t] = _pg(t, w, h)
+    LIB['geo 52.5186|13.3762'] = [_pg('File:Wiese 001.jpg', 3000, 2000, i=1), _pg('File:Wiese 002.jpg', 3000, 2000, i=2), _pg('File:Reichstag.jpg', 4000, 3000, i=3)]
+    snak = lambda v: [{'mainsnak': {'datavalue': {'value': v}}}]
+    WIKI.update({
+        ('de.wikipedia.org', 'pageprops', 'Bundestag'): {'query': {'pages': {'9': {'title': 'Deutscher Bundestag', 'pageprops': {'wikibase_item': 'Q154797'}}}}},
+        ('de.wikipedia.org', 'pageprops', 'Merz'): {'query': {'pages': {'8': {'title': 'Merz', 'pageprops': {'wikibase_item': 'Q1', 'disambiguation': ''}}}}},
+        ('en.wikipedia.org', 'pageprops', 'Merz'): {'query': {'pages': {'-1': {'title': 'Merz', 'missing': ''}}}},
+        ('www.wikidata.org', 'wbsearchentities', 'Merz'): {'search': []},
+        ('www.wikidata.org', 'wbgetentities', 'Q154797'): {'entities': {'Q154797': {'id': 'Q154797',
+            'labels': {'en': {'value': 'Bundestag'}, 'de': {'value': 'Deutscher Bundestag'}}, 'descriptions': {'de': {'value': 'Parlament der Bundesrepublik Deutschland'}},
+            'claims': {'P18': snak('Reichstag.jpg'), 'P373': snak('Deutscher Bundestag'), 'P625': snak({'latitude': 52.5186, 'longitude': 13.3762})},
+            'sitelinks': {'dewiki': {'title': 'Deutscher Bundestag'}, 'enwiki': {'title': 'Bundestag'}}}}},
+        ('de.wikipedia.org', 'images', 'Deutscher Bundestag'): {'query': {'pages': {'9': {'images': [{'title': 'Datei:Plenarsaal.jpg'}, {'title': 'Datei:Commons-logo.svg'}, {'title': 'Datei:Reichstag.jpg'}, {'title': 'Datei:Nur in dewiki.jpg'}]}}}},
+        ('en.wikipedia.org', 'images', 'Bundestag'): {'query': {'pages': {'7': {'images': [{'title': 'File:Kuppel.jpg'}, {'title': 'File:Plenarsaal.jpg'}, {'title': 'File:Flag of Germany.svg'}]}}}},
+        ('commons.wikimedia.org', 'categorymembers', 'Category:Deutscher Bundestagfile'): {'query': {'categorymembers': [{'title': 'File:Sitzung.jpg'}, {'title': 'File:Kuppel.jpg'}, {'title': 'File:Briefmarke.jpg'}]}},
+        ('commons.wikimedia.org', 'categorymembers', 'Category:Deutscher Bundestagsubcat'): {'query': {'categorymembers': [{'title': 'Category:Plenarsaal'}]}},
+        ('commons.wikimedia.org', 'categorymembers', 'Category:Plenarsaalfile'): {'query': {'categorymembers': [{'title': 'File:Stuhl.jpg'}]}}})
+    spec = os.path.join(tmp, 'spec.json'); urls.clear()
+    json.dump([{'q': 'Gerichtssaal', 'want': "inside a courtroom with a judge's bench", 'keep': 3}, 'wiki: Bundestag', {'q': 7}, 'wiki: Merz'], open(spec, 'w'))
+    sys.argv = ['find_images.py', o2, '--spec', spec]; os.environ['FIND_SEEN'] = o1
+    F.main()
+    idx = json.load(open(os.path.join(o2, 'index.json'), encoding='utf-8'))
+    # ranked by the score, the search's order counting a little (A, first of the search, before F); C does not show
+    # it, E is unsuitable, B05 fits but was shown in round 1; "keep" pictures are kept
+    assert [(r['title'], r['match']) for r in idx[0]['results']] == [('File:GB.jpg', 0.33), ('File:GD.jpg', 0.30), ('File:GA.jpg', 0.285)], idx[0]
+    assert idx[0]['want'] == "inside a courtroom with a judge's bench" and idx[0]['candidates'] == 7 and texts == [idx[0]['want']]
+    assert '1 not showing what was asked, 1 unsuitable' in said.getvalue(), said.getvalue()[-300:]
+    assert [a for a in urls if 'generator=search' in a and 'gsrlimit=30' in a] and sum('/330px-G' in a for a in urls) == 6
+    # wiki: the item's own picture, then the articles' (German first), the category's and its sub-category's, then
+    # the photos taken there (one of a series); page furniture and files that are not on Commons are left out
+    assert [(r['title'], r['source']) for r in idx[1]['results']] == [('File:Reichstag.jpg', 'commons/wiki'), ('File:Plenarsaal.jpg', 'commons/wiki'),
+        ('File:Kuppel.jpg', 'commons/wiki'), ('File:Sitzung.jpg', 'commons/category'), ('File:Stuhl.jpg', 'commons/category'), ('File:Wiese 001.jpg', 'commons/geo')], idx[1]
+    assert idx[1]['wikidata'] == {'id': 'Q154797', 'label': 'Deutscher Bundestag', 'description': 'Parlament der Bundesrepublik Deutschland', 'coord': [52.5186, 13.3762]}
+    assert 'match' not in idx[1]['results'][0] and idx[1]['query'] == 'wiki: Bundestag' and not any('svg' in a or 'logo' in a.lower() for a in urls)
+    assert 'ValueError' in idx[2]['error'] and idx[2]['results'] == [] and 'no Wikidata item named "Merz"' in idx[3]['error'], idx[2:]
+    assert sorted(f for f in os.listdir(o2) if f.startswith('sheet')) == ['sheet_1.jpg', 'sheet_2.jpg']
+    # the pictures were found but none could be downloaded: an error (to search again), not "nothing found"
+    LIB['kaputt'] = [_pg('File:Merz kaputt.jpg', 2000, 3000, i=1)]
+    sys.argv = ['find_images.py', os.path.join(tmp, '3'), 'incategory:"Friedrich Merz"', 'kaputt']; os.environ['FIND_RANK'] = '0'; os.environ.pop('FIND_SEEN')
+    F.Clip.ready = real_find[2]
+    F.main()
+    idx = json.load(open(os.path.join(tmp, '3', 'index.json'), encoding='utf-8'))
+    assert len(idx[0]['results']) == 1 and 'error' not in idx[0] and 'none could be downloaded' in idx[1]['error'] and idx[1]['candidates'] == 1, idx
+finally:
+    F.get, F.picture, F.Clip.ready, F.Clip.scores, sys.argv = real_find[:5]
+    for name, v in (('FIND_RANK', real_find[5]), ('FIND_SEEN', real_find[6])):
+        os.environ.pop(name, None) if v is None else os.environ.__setitem__(name, v)
+    F.FOUND.clear(); quiet.__exit__(None, None, None); shutil.rmtree(tmp, ignore_errors=True)
+# run.py hands the queries over: plain strings on the command line as always, a list with a wish as a file
+tmp = tempfile.mkdtemp(prefix='news-units-'); spec = os.path.join(tmp, 'out', 'find.json')
+assert run.find_args(['incategory:"Friedrich Merz"', 'wiki: Bundestag'], spec) == ['incategory:"Friedrich Merz"', 'wiki: Bundestag'] and not os.path.exists(spec)
+mixed = ['wiki: Bundestag', {'q': 'Gerichtssaal', 'want': 'inside a courtroom'}]
+assert run.find_args(mixed, spec) == ['--spec', spec] and json.load(open(spec, encoding='utf-8')) == mixed
+shutil.rmtree(tmp, ignore_errors=True)
+# the runbook tells Claude every kind of query the search knows
+runbook = open(os.path.join(ROOT, 'AGENT_NEWS.md'), encoding='utf-8').read()
+assert all(w in runbook for w in ('wiki: Friedrich Merz', 'wiki: Bundestag', 'geo: ', '"want"', 'incategory:', '"wikidata"')), 'AGENT_NEWS.md: a query kind is not explained'
 print('news unit checks OK')

@@ -132,9 +132,23 @@ jobs:
           [ -s /tmp/todo.txt ] && echo "TODO=1" >> "$GITHUB_ENV" || echo "Không có việc."
           # only captions to publish: no voice, search or render, so no tools to install
           grep -qvE '^[0-9]+ caption$' /tmp/todo.txt && echo "TOOLS=1" >> "$GITHUB_ENV" || true
+          # a step that searches pictures: the picture ranking is installed too (see "Cài công cụ")
+          grep -qE ' (prepare|search)( |$)' /tmp/todo.txt && echo "FIND=1" >> "$GITHUB_ENV" || true
+      # the picture search ranks its results with CLIP (scripts/find_images.py): the model file (600 MB) is kept between runs
+      - name: Mô hình chấm điểm ảnh
+        if: env.TODO == '1' && env.FIND == '1'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/find-images
+          key: clip-vit-b-32-quickgelu-laion400m-e32
       - name: Cài công cụ
         if: env.TODO == '1' && env.TOOLS == '1'
         run: |
+          # picture ranking, only for the steps that search; optional: without it the search keeps the first pictures it finds
+          if [ "$FIND" = 1 ]; then
+            { pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu && pip install -q open_clip_torch; } \
+              || echo "::warning::không cài được bộ chấm điểm ảnh: tìm ảnh chạy không xếp hạng"
+          fi
           # pinned to the versions tested together (PyAV 19 breaks faster-whisper 1.2: "metadata_errors")
           pip install -q numpy scipy pillow num2words==0.5.14 faster-whisper==1.1.1 av==13.1.0 imageio-ffmpeg==0.8.1
           npm ci --no-audit --no-fund

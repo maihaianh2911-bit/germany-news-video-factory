@@ -6,6 +6,7 @@
            The voice is published before it is checked, and when a line fails the finished lines are published
            as voice-partial/ and reused by the next run: audio that was paid for is never read twice.
   search   every news/<N>/search-<r>.json whose round is not on renders yet → renders/news/<N>/img/<r>/
+           (queries: strings, or {"q", "want", "keep"} for a picture described in words, see scripts/find_images.py)
   render   pictures from picks.json, plan, fonts, Remotion render, loudness, shot sheet
            → renders/news/<N>/video.mp4, subtitles.srt, credits.txt, sheet.jpg, edits.md (the edit of each shot),
            caption.txt (the posting caption, when news/<N>/caption.txt passes caption.py's check)
@@ -124,6 +125,22 @@ def link(p):
     return f'https://github.com/{REPO}/blob/renders/news/{N}/{p}'
 
 
+def find_args(q, spec):
+    """The queries of one search round as arguments of find_images.py: plain strings go on the command line as they
+    always did; when a query carries its own wish ({"q", "want", "keep"}) the whole list is handed over as a file."""
+    if all(isinstance(x, str) for x in q):
+        return list(q)
+    os.makedirs(os.path.dirname(spec), exist_ok=True)
+    json.dump(q, open(spec, 'w', encoding='utf-8'), ensure_ascii=False)
+    return ['--spec', spec]
+
+
+def find(d, q, **k):
+    """Picture search of one round (queries q) → folder d."""
+    spec = os.path.join(ROOT, 'out', f'find-{N}-{os.path.basename(d)}.json')
+    sh(sys.executable, os.path.join(ROOT, 'scripts', 'find_images.py'), d, *find_args(q, spec), **k)
+
+
 def prepare():
     """Voice, then picture search round 1. Returns (lines.json rows, True when round 1 was searched in this run,
     True when round 1 was on renders before)."""
@@ -159,7 +176,7 @@ def prepare():
     if q and (not had or json.load(open(old, encoding='utf-8')) != q):
         searched = True
         d = os.path.join(WORK, 'img', '1'); shutil.rmtree(d, ignore_errors=True)
-        sh(sys.executable, os.path.join(ROOT, 'scripts', 'find_images.py'), d, *q)
+        find(d, q)
         json.dump(q, open(os.path.join(d, 'queries.json'), 'w', encoding='utf-8'), ensure_ascii=False)
         publish(['img/1'], 'ảnh')
     rows = json.load(open(os.path.join(prev, 'lines.json'), encoding='utf-8'))
@@ -191,7 +208,7 @@ def search():
             shutil.rmtree(d, ignore_errors=True)
             earlier = [os.path.join(WORK, 'img', x) for x in sorted(os.listdir(os.path.join(WORK, 'img'))) if x != r] \
                 if os.path.isdir(os.path.join(WORK, 'img')) else []
-            sh(sys.executable, os.path.join(ROOT, 'scripts', 'find_images.py'), d, *q, env={**os.environ, 'FIND_SEEN': ':'.join(earlier)})
+            find(d, q, env={**os.environ, 'FIND_SEEN': ':'.join(earlier)})
             json.dump(q, open(os.path.join(d, 'queries.json'), 'w', encoding='utf-8'), ensure_ascii=False)
             did.append(f'img/{r}')
     if did: publish(did, 'tìm thêm ảnh')

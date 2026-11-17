@@ -48,7 +48,8 @@ Read the issue form (Chủ đề, Kịch bản, Giọng đọc, Ghi chú) and th
  "hl": {"1": ["Gesetz"], "2": ["14 Euro"]},
  "ambience": [""],
  "music": {"key": "D", "mode": "minor", "bpm": 84, "energy": 0.35},
- "queries": ["incategory:\"Reichstag building\"", "Bundestag plenary hall", "Olaf Scholz 2024"]}
+ "queries": ["wiki: Bundestag", "wiki: Friedrich Merz", "Olaf Scholz 2024",
+             {"q": "Geldscheine", "want": "euro banknotes and coins lying on a table"}]}
 ```
 - `lines`: one spoken line each (a sentence, or a clause of a long sentence; ≤ ~90 characters, cut at a comma).
   German script → the owner's words exactly, only split. Vietnamese script → a faithful translation into natural
@@ -67,16 +68,44 @@ Read the issue form (Chủ đề, Kịch bản, Giọng đọc, Ghi chú) and th
   line anyway. Subtitles always show `lines`.
 - `ambience` per chapter: `""` (normal for news), `water`, `wind`, `rain`, `sea`.
 - `music`: a quiet bed; `key`, `mode` (`minor`/`major`), `bpm` 70–100, `energy` 0.2–0.5 by the tone of the news.
-- `queries`: 12–18 Wikimedia Commons searches, at least one for every person, institution, place, company,
-  object and event the script names. What works:
-  - `incategory:"<Commons category>"` lists the files of a person, building or place
-    (`incategory:"Friedrich Merz"`, `incategory:"Reichstag building"`); add a year or a word to narrow it
-    (`incategory:"Friedrich Merz" 2025`). Category names are usually the English Wikipedia title.
-  - name + year or occasion (`Olaf Scholz 2024`, `Bundestag plenary hall`, `Deutsche Bahn ICE 4`), place +
-    subject (`Frankfurt skyline`, `Berlin Kanzleramt`), an object (`euro banknotes`, `wind turbines Germany`).
-    English or German words both work; phrases of 4+ words often return nothing.
-  Only 8 files come back per query: split a rich subject into several queries. Commons rarely has pictures of
-  an event of the last days: search the people, places and things the news is about.
+- `queries`: 12–18 picture searches on Wikimedia Commons (`scripts/find_images.py`, rewritten 17/11/2026 because
+  the videos were short of pictures), at least one for every person, institution, place, company, object and
+  event the script names. Three kinds, in this order:
+  1. **`wiki: <name>`: everything about one thing** — every person, institution, company, building and town the
+     script names: `"wiki: Friedrich Merz"`, `"wiki: Bundestag"`, `"wiki: Landgericht Rostock"`, `"wiki: Güstrow"`.
+     The machine finds its Wikidata item and brings the item's main picture, the pictures of its German and
+     English Wikipedia articles, the files of its Commons category (and sub-categories) and the photos taken at
+     its coordinates: up to 24, the most to the point first. **This is where the real pictures of a subject
+     are: ask it first**, for every name of the script. A name that fits several people or things (`Michael
+     Müller`, `Merz`, `Frankfurt`) takes the title of its Wikipedia article (`"wiki: Frankfurt (Oder)"`) or the
+     item itself (`"wiki: Q567"`); `index.json` says which item was read (`"wikidata"`), and you check it (§2.2).
+  2. **A Commons search in words**, as before, for what a `wiki:` group does not give — a recent year, an
+     occasion, one side of a subject:
+     - `incategory:"<Commons category>"` lists the files filed directly in one category (`incategory:"Güstrow"`);
+       add a word or a year to narrow it. The name must be the category's exact name on Commons, and the files
+       of a well-known person lie in sub-categories by year: on 17/11/2026 `incategory:"Friedrich Merz"` found 3
+       files, with `2025` none, `incategory:"Reichstag building"` none (no such category), while `wiki:
+       Friedrich Merz` found 30. So `wiki:` first; `incategory:` when you know the exact sub-category.
+     - name + year or occasion (`Olaf Scholz 2024`, `Bundestag plenary hall`, `Deutsche Bahn ICE 4`), place +
+       subject (`Frankfurt skyline`, `Berlin Kanzleramt`). English or German words both work; phrases of 4+
+       words often return nothing.
+     - `geo: <lat>,<lon> <metres>`: Commons photos taken around a point, whatever they are called (the street
+       of an accident, the square of a demonstration): `"geo: 52.5186,13.3762 300"`. The coordinates of a
+       `wiki:` item are in `index.json` (`wikidata.coord`).
+  3. **A picture described, for things and Symbolbilder** (bank notes, a petrol pump, wind turbines, a
+     courtroom): `{"q": "Gerichtssaal", "want": "inside an empty courtroom with the judges' bench"}`. `q`: one or
+     two words as an archive files it (`Zapfsäule`, `wind turbine`), German or English — every extra word loses
+     pictures. `"want"`: what the picture must show, **in English**; the search does not know the country
+     (`Gerichtssaal` brought American courtrooms on 17/11/2026), so look whether a Symbolbild fits Germany and
+     say what makes it German where it matters. The machine asks for 30 files, scores every
+     one against `want` (CLIP) and keeps the 8 that show it best; pictures that do not show it (score under
+     0.18) are dropped, so a group can come back small or empty: then ask another word in the next round.
+     `"keep": 12` (1–40) keeps more or fewer pictures of one query, of any kind.
+  A search in plain words (`Frankfurt skyline`) is ranked against its own words in the same way and keeps the best
+  8 of 30; `wiki:`, `geo:` and `incategory:` groups keep their own order unless you give them a `want`
+  (`{"q": "wiki: Friedrich Merz", "want": "a man speaking at a lectern"}`). When the ranking cannot run on the
+  machine, every search returns its first 8 pictures as before and the tiles show no score. Commons rarely has
+  pictures of an event of the last days: search the people, places and things the news is about.
   Once round 1 exists (`img/1/` on renders), never change `queries` again: a new search renumbers round 1 and the
   picks would point at other pictures (the machine then stops at `news-pick`). Add searches with `search-<r>.json`.
 Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice and pictures ~10–25 min: ~12 min for 22 lines,
@@ -92,13 +121,21 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    and the word in `prompts/news_readings.json` for later videos. When `check.md` says `CHƯA KIỂM TRA ĐƯỢC` (the
    Whisper step failed; the voice is kept), run the `prepare` step once more (§4; finished lines are reused, no
    characters are spent) or, when it fails again, say in your closing comment that the reading was not checked.
-2. Open every `img/<r>/sheet_<k>.jpg` (tiles: `#n 1280x1897 CC BY-SA 4.0` = number, size, licence;
-   `img/<r>/index.json` has titles, authors, dates, descriptions). Files under 400 px (250 px for `incategory:`
+2. Open every `img/<r>/sheet_<k>.jpg`. A tile says `#n 1920x1280 CC BY-SA 4.0` = number, size of the file kept
+   (Commons pictures come up to 1920 px wide), licence; under it where the picture comes from (`commons` = a
+   search, `commons/wiki` = the item's or its articles' own picture, `commons/category`, `commons/geo`), its date,
+   and for a ranked query its score (`~0.31`: it shows what was asked; under `~0.22`: doubtful, open it).
+   `img/<r>/index.json` has titles, authors, dates, descriptions, and for a `wiki:` query `"wikidata"`: the item
+   the name was read as (id, label, description). **Check that item before you use any picture of the group**: a
+   namesake or another town of that name → ask again in the next round with the Wikipedia title or the Q-number.
+   A `wiki:` group also holds the other pictures of the article (a predecessor, a party colleague, the birth
+   town): title and description say who or what each one shows. Files under 400 px (250 px for `incategory:`
    searches) and duplicates are already removed. A query whose search failed has an `"error"` in `index.json` and
    no sheet: repeat it in the next round. A line without a fitting picture → write
-   `news/<N>/search-<r>.json` `{"queries": […]}` (r = 2, 3…), push, poll the renders branch for
-   `news/<N>/img/<r>/index.json` (every 30 s, ≤ 10 min; a round takes ~2 min), view it. If it is not there after
-   10 min, remove `news-busy` and stop: the machine calls Claude again when the round is published.
+   `news/<N>/search-<r>.json` `{"queries": […]}` (r = 2, 3…; the same three kinds of query as in §1), push, poll
+   the renders branch for `news/<N>/img/<r>/index.json` (every 30 s, ≤ 10 min; a round took ~2 min with the
+   search before 17/11/2026, the new one has not been timed on this channel yet), view it. If it is not there
+   after 10 min, remove `news-busy` and stop: the machine calls Claude again when the round is published.
 3. Open the full picture (`img/<r>/<k>-<n>.jpg`) before cropping it or zooming into a detail.
 4. **What each line needs.** News must not mislead: a picture shows what the line is about, and the credit says
    what the picture is.
@@ -120,6 +157,16 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    no burnt-in captions, no gore, nothing that ridicules a person (mid-blink, grimace). A new picture every 1–2
    lines (3–6 s), never longer than ~10 s; a strong picture may return once with another crop. The first 2 s must
    be the strongest picture of the story.
+   **Enough pictures, and the real ones first** (17/11/2026, after the owner found the videos short of pictures):
+   - a picture of the very person, building or place (its `wiki:` or `incategory:` group) comes before a
+     Symbolbild of the same thing: the real Landgericht Rostock, not "a courtroom"; a Symbolbild never stands for
+     a thing of which a real picture was found;
+   - count before you write the shots: one picture for every 1–2 lines, each picture twice at most (the second
+     time another crop and another move). Fewer → a second round (`search-2.json`: `wiki:` for the people and
+     places not asked yet, a year, `geo:`, `q` + `want` for the things) before a picture is held longer than
+     ~10 s or shown a third time;
+   - the score helps to find pictures, it does not choose them: open the picture, and for a person check name
+     and date in `index.json` as always.
 5. Format:
 ```json
 {"images": {"merz": {"src": "1/2-1.jpg", "crop": [0.1, 0.0, 0.9, 0.8], "mode": "keep"},

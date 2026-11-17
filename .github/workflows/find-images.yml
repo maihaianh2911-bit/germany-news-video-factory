@@ -1,8 +1,10 @@
 name: Tìm ảnh (Wikimedia Commons)
 
 # Free-to-use pictures for a video, licence checked (public domain, CC0, CC BY, CC BY-SA).
-# Queries are separated by " || ". Results (pictures, index.json with licences, contact sheets) go to the
-# renders branch, folder image-search/<name>/.
+# Queries are separated by " || " (words, incategory:"…", wiki: <name>, geo: <lat>,<lon> <metres>), or given as one
+# JSON list that may hold queries with a wish: [{"q": "Gerichtssaal", "want": "inside a courtroom"}, "wiki: Bundestag"]
+# (scripts/find_images.py). Results (pictures, index.json with licences, contact sheets) go to the renders branch,
+# folder image-search/<name>/.
 on:
   workflow_dispatch:
     inputs:
@@ -10,7 +12,7 @@ on:
         description: Tên thư mục kết quả (vd bundestag)
         required: true
       queries:
-        description: Các từ khóa tìm ảnh, ngăn cách bằng " || "
+        description: 'Các từ khóa tìm ảnh, ngăn cách bằng " || " (vd: wiki: Bundestag || incategory:"Friedrich Merz" 2025), hoặc một danh sách JSON'
         required: true
 
 permissions:
@@ -26,13 +28,28 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
+      # the picture search ranks its results with CLIP (scripts/find_images.py): the model file (600 MB) is kept between runs
+      - name: Mô hình chấm điểm ảnh
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/find-images
+          key: clip-vit-b-32-quickgelu-laion400m-e32
       - name: Tìm và tải ảnh
         run: |
           case "$NAME" in *[!A-Za-z0-9_-]*|'') echo "::error::tên thư mục không hợp lệ"; exit 1;; esac
           pip install -q pillow
+          # picture ranking: optional, without it the search keeps the first pictures it finds
+          { pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu && pip install -q open_clip_torch; } \
+            || echo "::warning::không cài được bộ chấm điểm ảnh: tìm ảnh chạy không xếp hạng"
           python3 - <<'PY'
-          import os, subprocess
-          qs = [q.strip() for q in os.environ['QUERIES'].split('||') if q.strip()]
+          import json, os, subprocess
+          raw = os.environ['QUERIES'].strip()
+          if raw.startswith('['):   # a JSON list: strings and {"q": …, "want": …, "keep": …}
+            json.loads(raw)
+            os.makedirs('out', exist_ok=True); open('out/spec.json', 'w', encoding='utf-8').write(raw)
+            qs = ['--spec', 'out/spec.json']
+          else:
+            qs = [q.strip() for q in raw.split('||') if q.strip()]
           subprocess.run(['python3', 'scripts/find_images.py', f"out/{os.environ['NAME']}", *qs], check=True)
           PY
       - name: Đưa lên nhánh renders
