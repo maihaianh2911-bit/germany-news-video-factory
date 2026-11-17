@@ -1,0 +1,127 @@
+{
+ "title": "Der Struwwelpeter",
+ "voice": "",
+ "pace": 1.2,
+ "lines": [
+  "Ein Mädchen spielt mit Streichhölzern und verbrennt.",
+  "Ein Junge will keine Suppe essen – nach fünf Tagen ist er tot.",
+  "Einem anderen schneidet der Schneider die Daumen ab.",
+  "Das klingt nicht nach einem Kinderbuch.",
+  "Und doch ist es eines der bekanntesten der Welt:",
+  "der Struwwelpeter.",
+  "Geschrieben hat ihn ein Frankfurter Arzt –",
+  "als Weihnachtsgeschenk für seinen dreijährigen Sohn.",
+  "Heinrich Hoffmann wurde 1809 in Frankfurt am Main geboren.",
+  "Er wurde Arzt und behandelte vor allem arme Leute.",
+  "Kleinen Patienten zeichnete er oft etwas,",
+  "damit sie keine Angst vor dem Doktor hatten.",
+  "Kurz vor Weihnachten 1844 suchte er ein Bilderbuch für seinen Sohn Carl.",
+  "Er fand nur langweilige, belehrende Bücher.",
+  "Also kaufte er ein leeres Heft",
+  "und zeichnete und dichtete die Geschichten selbst.",
+  "Freunde sahen das Heft und überredeten ihn, es drucken zu lassen.",
+  "1845 erschien es – unter dem Namen „Reimerich Kinderlieb“.",
+  "Da ist der Struwwelpeter,",
+  "der sich nie die Haare und die Nägel schneiden lässt.",
+  "Der Suppen-Kaspar, der immer dünner wird.",
+  "Paulinchen, die allein zu Hause mit dem Feuerzeug spielt –",
+  "obwohl ihre Katzen Minz und Maunz sie noch warnen.",
+  "Der Zappel-Philipp, der bei Tisch nicht still sitzen kann.",
+  "Und Hans Guck-in-die-Luft, der in den Fluss fällt.",
+  "Eine Geschichte ist sogar gegen Spott:",
+  "Drei Jungen lachen über einen schwarzen Jungen –",
+  "zur Strafe taucht der große Nikolas sie ins Tintenfass.",
+  "Das Buch wurde ein riesiger Erfolg.",
+  "Es wurde in viele Sprachen übersetzt –",
+  "sogar Mark Twain übertrug es ins Englische.",
+  "Und manches sagen wir bis heute:",
+  "Ein unruhiges Kind nennen wir einen Zappelphilipp,",
+  "wer nicht essen will, ist ein Suppenkasper.",
+  "Hoffmann selbst blieb Arzt.",
+  "1851 übernahm er die Frankfurter Anstalt für Irre und Epileptische.",
+  "Er wollte die Kranken nicht wegsperren, sondern heilen.",
+  "Er ließ ihnen ein neues, helles Haus bauen –",
+  "die Frankfurter nannten es das Irrenschloss.",
+  "Heinrich Hoffmann starb 1894 in Frankfurt, mit 85 Jahren.",
+  "Heute erinnert dort ein Museum an ihn.",
+  "Und sein Buch beginnt noch immer mit denselben Zeilen:",
+  "„Sieh einmal, hier steht er, pfui! der Struwwelpeter!“"
+ ],
+ "tts": {
+  "9": "Heinrich Hoffmann wurde achtzehnhundertneun in Frankfurt am Main geboren.",
+  "13": "Kurz vor Weihnachten achtzehnhundertvierundvierzig suchte er ein Bilderbuch für seinen Sohn Carl.",
+  "18": "Achtzehnhundertfünfundvierzig erschien es – unter dem Namen „Reimerich Kinderlieb“.",
+  "31": "sogar Mark Twäin übertrug es ins Englische.",
+  "36": "Achtzehnhunderteinundfünfzig übernahm er die Frankfurter Anstalt für Irre und Epileptische.",
+  "40": "Heinrich Hoffmann starb achtzehnhundertvierundneunzig in Frankfurt, mit fünfundachtzig Jahren."
+ },
+ "chapters": [
+  {
+   "lines": [
+    1,
+    8
+   ]
+  },
+  {
+   "lines": [
+    9,
+    12
+   ]
+  },
+  {
+   "lines": [
+    13,
+    18
+   ]
+  },
+  {
+   "lines": [
+    19,
+    28
+   ]
+  },
+  {
+   "lines": [
+    29,
+    34
+   ]
+  },
+  {
+   "lines": [
+    35,
+    43
+   ]
+  }
+ ],
+ "ambience": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "music": {
+  "key": "G",
+  "mode": "major",
+  "bpm": 82,
+  "energy": 0.32
+ },
+ "queries": [
+  "incategory:\"Der Struwwelpeter\"",
+  "Struwwelpeter Titelbild",
+  "Struwwelpeter Paulinchen",
+  "Struwwelpeter Suppen-Kaspar",
+  "Struwwelpeter Zappel-Philipp",
+  "Hans Guck-in-die-Luft",
+  "Struwwelpeter Daumenlutscher",
+  "Struwwelpeter schwarze Buben",
+  "Heinrich Hoffmann Struwwelpeter Portrait",
+  "Struwwelpeter Museum Frankfurt",
+  "Irrenschloss Frankfurt Hoffmann",
+  "Struwwelpeter 1845",
+  "Struwwelpeter Manuskript",
+  "Struwwelpeter Denkmal",
+  "Frankfurt am Main 1845 Ansicht"
+ ]
+}

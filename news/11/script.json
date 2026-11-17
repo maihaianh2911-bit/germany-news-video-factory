@@ -1,0 +1,130 @@
+{
+ "title": "Theodor Fontane",
+ "voice": "",
+ "pace": 1.2,
+ "lines": [
+  "„Herr von Ribbeck auf Ribbeck im Havelland,",
+  "ein Birnbaum in seinem Garten stand.“",
+  "Diese Zeilen kennen wir aus der Schule.",
+  "Geschrieben hat sie Theodor Fontane.",
+  "Bevor er Dichter wurde, war er Apotheker.",
+  "Seinen ersten Roman veröffentlichte er erst mit 58.",
+  "Und sein berühmtestes Buch schrieb er mit über 70.",
+  "Fontane wurde 1819 in Neuruppin geboren.",
+  "Seine Vorfahren waren Hugenotten aus Frankreich.",
+  "Der Vater führte eine Apotheke –",
+  "und verspielte viel Geld beim Kartenspiel.",
+  "Er musste die Apotheke verkaufen.",
+  "Auch Theodor lernte Apotheker.",
+  "Doch lieber schrieb er Gedichte, Balladen und Zeitungsartikel.",
+  "1849 gab er den Beruf auf und wurde Journalist.",
+  "Jahrelang lebte er als Korrespondent in London.",
+  "Zurück in Preußen wanderte er durch die Mark Brandenburg",
+  "und schrieb seine „Wanderungen durch die Mark Brandenburg“.",
+  "1870 reiste er als Reporter in den Krieg nach Frankreich.",
+  "Dort hielt man ihn für einen Spion und nahm ihn gefangen.",
+  "Erst Bismarck setzte sich für ihn ein.",
+  "1878, mit 58 Jahren, erschien endlich sein erster Roman.",
+  "Dann folgte einer nach dem anderen.",
+  "Mit über 70 schrieb er „Effi Briest“.",
+  "Ein Mädchen wird mit 17 an einen viel älteren Baron verheiratet.",
+  "Sie langweilt sich, hat eine Affäre –",
+  "und Jahre später findet ihr Mann die Briefe.",
+  "Er tötet den Liebhaber im Duell und verstößt Effi.",
+  "Die Geschichte hatte ein wahres Vorbild:",
+  "Elisabeth von Ardenne. Sie wurde 98 Jahre alt.",
+  "Effis Vater sagt im Buch einen Satz, den wir bis heute benutzen:",
+  "„Das ist ein weites Feld.“",
+  "Theodor Fontane starb 1898 in Berlin.",
+  "Und Herr von Ribbeck?",
+  "Den gab es wirklich.",
+  "Und auch den Birnbaum auf seinem Grab.",
+  "1911 warf ihn ein Sturm um.",
+  "Heute steht in Ribbeck wieder ein junger Birnbaum.",
+  "„So spendet Segen noch immer die Hand",
+  "des von Ribbeck auf Ribbeck im Havelland.“"
+ ],
+ "tts": {
+  "6": "Seinen ersten Roman veröffentlichte er erst mit achtundfünfzig.",
+  "7": "Und sein berühmtestes Buch schrieb er mit über siebzig.",
+  "8": "Fontane wurde achtzehnhundertneunzehn in Neuruppin geboren.",
+  "15": "Achtzehnhundertneunundvierzig gab er den Beruf auf und wurde Journalist.",
+  "19": "Achtzehnhundertsiebzig reiste er als Reporter in den Krieg nach Frankreich.",
+  "22": "Achtzehnhundertachtundsiebzig, mit achtundfünfzig Jahren, erschien endlich sein erster Roman.",
+  "24": "Mit über siebzig schrieb er „Effi Briest“.",
+  "25": "Ein Mädchen wird mit siebzehn an einen viel älteren Baron verheiratet.",
+  "30": "Elisabeth von Ardenn. Sie wurde achtundneunzig Jahre alt.",
+  "33": "Theodor Fontane starb achtzehnhundertachtundneunzig in Berlin.",
+  "37": "Neunzehnhundertelf warf ihn ein Sturm um."
+ },
+ "chapters": [
+  {
+   "lines": [
+    1,
+    7
+   ]
+  },
+  {
+   "lines": [
+    8,
+    13
+   ]
+  },
+  {
+   "lines": [
+    14,
+    18
+   ]
+  },
+  {
+   "lines": [
+    19,
+    23
+   ]
+  },
+  {
+   "lines": [
+    24,
+    32
+   ]
+  },
+  {
+   "lines": [
+    33,
+    40
+   ]
+  }
+ ],
+ "ambience": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "music": {
+  "key": "F",
+  "mode": "major",
+  "bpm": 72,
+  "energy": 0.3
+ },
+ "queries": [
+  "incategory:\"Portraits of Theodor Fontane\"",
+  "Theodor Fontane Liebermann",
+  "Theodor Fontane photograph",
+  "Fontane Neuruppin Denkmal",
+  "Löwen-Apotheke Neuruppin",
+  "Effi Briest 1895",
+  "Elisabeth von Ardenne",
+  "Ribbeck Birnbaum",
+  "Ribbeck Kirche",
+  "Herr von Ribbeck Illustration",
+  "Wanderungen durch die Mark Brandenburg",
+  "Fontane London 1857",
+  "Effi Briest Illustration",
+  "Fontane Grab Berlin",
+  "Havelland Landschaft",
+  "Hans Georg von Ribbeck"
+ ]
+}

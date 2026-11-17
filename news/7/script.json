@@ -1,0 +1,148 @@
+{
+ "title": "Heinrich Heine",
+ "voice": "",
+ "pace": 1.2,
+ "lines": [
+  "„Dort, wo man Bücher verbrennt, verbrennt man auch am Ende Menschen.“",
+  "Diesen Satz schrieb Heinrich Heine 1821.",
+  "Über hundert Jahre später, 1933, brannten auch seine Bücher.",
+  "Und doch singen wir bis heute sein Lied von der Loreley.",
+  "Ein Dichter, der Deutschland liebte –",
+  "und die letzten 25 Jahre seines Lebens in Paris verbrachte.",
+  "Geboren wurde er 1797 in Düsseldorf, als Harry Heine.",
+  "Die Familie war jüdisch.",
+  "Sein reicher Onkel Salomon, Bankier in Hamburg,",
+  "wollte einen Kaufmann aus ihm machen.",
+  "Harry gründete ein Tuchgeschäft –",
+  "nach einem Jahr war es pleite.",
+  "Der Onkel bezahlte ihm stattdessen ein Jurastudium.",
+  "1825 ließ er sich taufen und hieß nun Heinrich.",
+  "Den Taufzettel nannte er „das Entréebillett zur europäischen Kultur“.",
+  "Eine Stelle als Jurist bekam er trotzdem nie.",
+  "1827 erschien sein „Buch der Lieder“.",
+  "Darin stand ein Gedicht über eine Frau auf einem Felsen am Rhein:",
+  "„Ich weiß nicht, was soll es bedeuten,",
+  "dass ich so traurig bin.“",
+  "Friedrich Silcher machte daraus ein Lied, das bald jeder sang.",
+  "Heine spottete über Fürsten, Zensur und Spießer.",
+  "1831 zog er nach Paris.",
+  "Vier Jahre später wurden seine Schriften in Deutschland verboten.",
+  "In Paris heiratete er Mathilde, eine junge Verkäuferin.",
+  "Seine Gedichte las sie nie – sie konnte kein Deutsch.",
+  "1843 fuhr er noch einmal nach Hamburg, zu seiner Mutter.",
+  "Daraus wurde „Deutschland. Ein Wintermärchen“.",
+  "Und aus der Sehnsucht nach ihr ein Gedicht, das wir alle kennen:",
+  "„Denk ich an Deutschland in der Nacht,",
+  "dann bin ich um den Schlaf gebracht.“",
+  "Im Mai 1848 schleppte er sich ein letztes Mal in den Louvre,",
+  "zur Venus von Milo.",
+  "Danach verließ er sein Bett kaum noch.",
+  "Acht Jahre lag er gelähmt in seiner „Matratzengruft“",
+  "und schrieb weiter: Gedichte, Spott, Erinnerungen.",
+  "Heinrich Heine starb 1856 in Paris.",
+  "Er liegt auf dem Friedhof Montmartre.",
+  "1933 warfen Studenten auch seine Bücher ins Feuer.",
+  "Heute steht sein Satz in Berlin auf dem Bebelplatz –",
+  "genau dort, wo die Bücher brannten.",
+  "Und am Rhein fahren die Schiffe noch immer am Loreley-Felsen vorbei."
+ ],
+ "tts": {
+  "2": "Diesen Satz schrieb Heinrich Heine achtzehnhunderteinundzwanzig.",
+  "3": "Über hundert Jahre später, neunzehnhundertdreiunddreißig, brannten auch seine Bücher.",
+  "6": "und die letzten fünfundzwanzig Jahre seines Lebens in Paris verbrachte.",
+  "7": "Geboren wurde er siebzehnhundertsiebenundneunzig in Düsseldorf, als Harry Heine.",
+  "14": "Achtzehnhundertfünfundzwanzig ließ er sich taufen und hieß nun Heinrich.",
+  "15": "Den Taufzettel nannte er „das Antree-Billett zur europäischen Kultur“.",
+  "17": "Achtzehnhundertsiebenundzwanzig erschien sein „Buch der Lieder“.",
+  "23": "Achtzehnhunderteinunddreißig zog er nach Paris.",
+  "27": "Achtzehnhundertdreiundvierzig fuhr er noch einmal nach Hamburg, zu seiner Mutter.",
+  "32": "Im Mai achtzehnhundertachtundvierzig schleppte er sich ein letztes Mal in den Luhwr,",
+  "37": "Heinrich Heine starb achtzehnhundertsechsundfünfzig in Paris.",
+  "38": "Er liegt auf dem Friedhof Mongmartr.",
+  "39": "Neunzehnhundertdreiunddreißig warfen Studenten auch seine Bücher ins Feuer."
+ },
+ "chapters": [
+  {
+   "lines": [
+    1,
+    6
+   ]
+  },
+  {
+   "lines": [
+    7,
+    13
+   ]
+  },
+  {
+   "lines": [
+    14,
+    16
+   ]
+  },
+  {
+   "lines": [
+    17,
+    21
+   ]
+  },
+  {
+   "lines": [
+    22,
+    26
+   ]
+  },
+  {
+   "lines": [
+    27,
+    31
+   ]
+  },
+  {
+   "lines": [
+    32,
+    38
+   ]
+  },
+  {
+   "lines": [
+    39,
+    42
+   ]
+  }
+ ],
+ "ambience": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "music": {
+  "key": "D",
+  "mode": "minor",
+  "bpm": 70,
+  "energy": 0.3
+ },
+ "queries": [
+  "incategory:\"Portraits of Heinrich Heine\"",
+  "Heinrich Heine Oppenheim 1831",
+  "Heinrich Heine Geburtshaus Düsseldorf",
+  "Salomon Heine",
+  "Buch der Lieder 1827",
+  "Loreley Felsen Rhein",
+  "Lorelei painting",
+  "Friedrich Silcher",
+  "Mathilde Heine",
+  "Heinrich Heine Matratzengruft",
+  "Venus von Milo Louvre",
+  "Heinrich Heine Grab Montmartre",
+  "Bücherverbrennung 1933 Berlin",
+  "Bebelplatz Bücherverbrennung Denkmal",
+  "Deutschland ein Wintermärchen 1844",
+  "Heinrich Heine Kietz"
+ ]
+}

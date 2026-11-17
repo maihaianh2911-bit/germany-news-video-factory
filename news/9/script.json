@@ -1,0 +1,128 @@
+{
+ "title": "Karl May",
+ "voice": "",
+ "pace": 1.2,
+ "lines": [
+  "Er schrieb über den Wilden Westen, als wäre er dabei gewesen.",
+  "Er ließ sich als Old Shatterhand fotografieren –",
+  "mit Fransenjacke und Gewehr.",
+  "Millionen glaubten ihm.",
+  "Doch als Karl May Winnetou erfand, war er nie in Amerika gewesen.",
+  "Seine Prärie kannte er aus Büchern.",
+  "Und viele Jahre seines Lebens hatte er hinter Gittern verbracht.",
+  "Karl May wurde 1842 in Ernstthal in Sachsen geboren.",
+  "Die Eltern waren arme Weber.",
+  "Von vierzehn Kindern überlebten nur fünf.",
+  "Karl wurde Lehrer –",
+  "doch man warf ihm vor, die Uhr eines Kollegen gestohlen zu haben.",
+  "Er kam ins Gefängnis und durfte nie wieder unterrichten.",
+  "Danach wurde er zum Hochstapler.",
+  "Er gab sich als Arzt aus, als Polizist, als Beamter.",
+  "Insgesamt saß er rund sieben Jahre im Arbeitshaus und im Zuchthaus.",
+  "Im Gefängnis verwaltete er die Bibliothek",
+  "und las alles über ferne Länder.",
+  "In Freiheit begann er zu schreiben:",
+  "erst Fortsetzungsromane, dann Abenteuer im Orient und im Wilden Westen.",
+  "Sein Held hieß Old Shatterhand: stark, klug und edel.",
+  "Sein Freund war der Apachenhäuptling Winnetou.",
+  "1893 erschien „Winnetou“.",
+  "Viele Leser hielten Old Shatterhand für Karl May selbst –",
+  "und May ließ sie in dem Glauben.",
+  "Er nannte sich „Doktor“, mit einem Titel, den er gekauft hatte.",
+  "Sein Haus in Radebeul taufte er „Villa Shatterhand“.",
+  "Erst 1908 reiste er nach Amerika.",
+  "Bis in den Wilden Westen kam er nie.",
+  "Inzwischen hatten Journalisten seine Vergangenheit aufgedeckt.",
+  "Es folgten Prozesse, Spott und Feindschaft.",
+  "Im März 1912 hielt er in Wien einen Vortrag vor großem Publikum.",
+  "Man feierte ihn.",
+  "Eine gute Woche später war Karl May tot.",
+  "Heute ist die Villa Shatterhand ein Museum.",
+  "Seine Bücher wurden weltweit rund 200 Millionen Mal gedruckt.",
+  "Und in Bad Segeberg reitet Winnetou jeden Sommer über die Bühne.",
+  "Karl May war nie dort, wo seine Helden lebten.",
+  "Aber Millionen Kinder sind mit ihnen dorthin geritten."
+ ],
+ "tts": {
+  "2": "Er ließ sich als Old Schätterhänd fotografieren –",
+  "8": "Karl May wurde achtzehnhundertzweiundvierzig in Ernstthal in Sachsen geboren.",
+  "21": "Sein Held hieß Old Schätterhänd: stark, klug und edel.",
+  "23": "Achtzehnhundertdreiundneunzig erschien „Winnetou“.",
+  "24": "Viele Leser hielten Old Schätterhänd für Karl May selbst –",
+  "27": "Sein Haus in Radebeul taufte er „Villa Schätterhänd“.",
+  "28": "Erst neunzehnhundertacht reiste er nach Amerika.",
+  "32": "Im März neunzehnhundertzwölf hielt er in Wien einen Vortrag vor großem Publikum.",
+  "35": "Heute ist die Villa Schätterhänd ein Museum.",
+  "36": "Seine Bücher wurden weltweit rund zweihundert Millionen Mal gedruckt."
+ },
+ "chapters": [
+  {
+   "lines": [
+    1,
+    7
+   ]
+  },
+  {
+   "lines": [
+    8,
+    13
+   ]
+  },
+  {
+   "lines": [
+    14,
+    18
+   ]
+  },
+  {
+   "lines": [
+    19,
+    27
+   ]
+  },
+  {
+   "lines": [
+    28,
+    34
+   ]
+  },
+  {
+   "lines": [
+    35,
+    39
+   ]
+  }
+ ],
+ "ambience": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "music": {
+  "key": "D",
+  "mode": "minor",
+  "bpm": 76,
+  "energy": 0.33
+ },
+ "queries": [
+  "incategory:\"Karl May\"",
+  "Karl May Old Shatterhand 1896",
+  "Karl May Kara Ben Nemsi",
+  "Villa Shatterhand Radebeul",
+  "Karl-May-Museum Radebeul",
+  "Winnetou 1893",
+  "Karl May Geburtshaus Hohenstein-Ernstthal",
+  "Schloss Osterstein Zwickau",
+  "Zuchthaus Waldheim",
+  "Karl May Amerika 1908",
+  "Karl May 1912",
+  "Karl-May-Spiele Bad Segeberg",
+  "Winnetou Illustration",
+  "Karl May Grab Radebeul",
+  "Henrystutzen Silberbüchse",
+  "Karl May Portrait"
+ ]
+}

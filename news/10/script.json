@@ -1,0 +1,127 @@
+{
+ "title": "Franz Kafka",
+ "voice": "",
+ "pace": 1.2,
+ "lines": [
+  "Er bat seinen besten Freund, nach seinem Tod alles zu verbrennen:",
+  "Tagebücher, Briefe, Manuskripte – ungelesen.",
+  "Der Freund tat es nicht.",
+  "Deshalb kennen wir heute Franz Kafka.",
+  "Zu Lebzeiten war er fast unbekannt.",
+  "Heute steht sein Name sogar im Duden: kafkaesk.",
+  "Kafka wurde 1883 in Prag geboren.",
+  "Die Familie war jüdisch und sprach Deutsch.",
+  "Der Vater, Hermann Kafka, war als armer Junge aufgewachsen",
+  "und hatte sich zum Geschäftsmann hochgearbeitet.",
+  "Er war laut, kräftig und streng.",
+  "Neben ihm fühlte sich der Sohn ein Leben lang klein.",
+  "Mit 36 schrieb Kafka ihm einen Brief von über hundert Seiten.",
+  "Abgeschickt hat er ihn nie.",
+  "Kafka studierte Jura und wurde Beamter einer Versicherung.",
+  "Tagsüber prüfte er Unfälle in Fabriken.",
+  "Nachts schrieb er.",
+  "In einer einzigen Nacht im September 1912 entstand „Das Urteil“.",
+  "Wenige Wochen später schrieb er „Die Verwandlung“.",
+  "Gregor Samsa wacht eines Morgens auf –",
+  "und ist ein ungeheures Ungeziefer.",
+  "Bevor das Buch erschien, bat Kafka den Verlag:",
+  "Das Insekt dürfe auf keinen Fall gezeichnet werden.",
+  "Zweimal verlobte er sich mit Felice Bauer aus Berlin.",
+  "Zweimal löste er die Verlobung.",
+  "Er fürchtete, eine Ehe würde ihm das Schreiben nehmen.",
+  "1917 erkrankte er an Tuberkulose.",
+  "Am Ende konnte er kaum noch sprechen und essen.",
+  "Auf dem Sterbebett las er noch die Druckfahnen von „Ein Hungerkünstler“.",
+  "Franz Kafka starb im Juni 1924, mit 40 Jahren.",
+  "Sein Freund Max Brod fand zwei Zettel.",
+  "Darauf stand: alles verbrennen.",
+  "Brod hatte ihm schon früher gesagt, dass er das nie tun würde.",
+  "Er veröffentlichte „Der Process“, „Das Schloss“ und „Amerika“.",
+  "Als 1939 deutsche Truppen Prag besetzten,",
+  "floh Brod mit einem Koffer voller Manuskripte.",
+  "Kafkas drei Schwestern wurden im Holocaust ermordet.",
+  "Heute lesen wir Kafka in der Schule.",
+  "Und wenn uns ein Amt von Schalter zu Schalter schickt,",
+  "sagen wir: Das ist kafkaesk.",
+  "Ein Wort, das es ohne einen ungehorsamen Freund nicht gäbe."
+ ],
+ "tts": {
+  "7": "Kafka wurde achtzehnhundertdreiundachtzig in Prag geboren.",
+  "13": "Mit sechsunddreißig schrieb Kafka ihm einen Brief von über hundert Seiten.",
+  "18": "In einer einzigen Nacht im September neunzehnhundertzwölf entstand „Das Urteil“.",
+  "24": "Zweimal verlobte er sich mit Felitze Bauer aus Berlin.",
+  "27": "Neunzehnhundertsiebzehn erkrankte er an Tuberkulose.",
+  "30": "Franz Kafka starb im Juni neunzehnhundertvierundzwanzig, mit vierzig Jahren.",
+  "35": "Als neunzehnhundertneununddreißig deutsche Truppen Prag besetzten,"
+ },
+ "chapters": [
+  {
+   "lines": [
+    1,
+    6
+   ]
+  },
+  {
+   "lines": [
+    7,
+    14
+   ]
+  },
+  {
+   "lines": [
+    15,
+    23
+   ]
+  },
+  {
+   "lines": [
+    24,
+    30
+   ]
+  },
+  {
+   "lines": [
+    31,
+    37
+   ]
+  },
+  {
+   "lines": [
+    38,
+    41
+   ]
+  }
+ ],
+ "ambience": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "music": {
+  "key": "C",
+  "mode": "minor",
+  "bpm": 66,
+  "energy": 0.26
+ },
+ "queries": [
+  "incategory:\"Franz Kafka\"",
+  "Franz Kafka 1923",
+  "Franz Kafka 1906",
+  "Hermann Kafka",
+  "Kafka Geburtshaus Prag",
+  "Brief an den Vater Kafka",
+  "Die Verwandlung 1915",
+  "Kafka Felice Bauer",
+  "Max Brod",
+  "Kafka Manuskript",
+  "Prag Altstädter Ring 1900",
+  "Kafka Grab Prag",
+  "Kafka Denkmal Prag",
+  "Sanatorium Kierling",
+  "Der Process 1925 Erstausgabe",
+  "Ottla Kafka"
+ ]
+}
