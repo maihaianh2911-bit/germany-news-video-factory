@@ -5,7 +5,10 @@
   "tts": "„Dort, wo man Bücher verbrennt, verbrennt man auch am Ende Menschen.“",
   "voice": "clone_611",
   "file": "line_01.mp3",
-  "duration": 4.053
+  "duration": 4.053,
+  "heard": "Dort, wo man Bücher verbrennt, verbrennt man auch am Ende Menschen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 2,
@@ -13,7 +16,10 @@
   "tts": "Diesen Satz schrieb Heinrich Heine achtzehnhunderteinundzwanzig.",
   "voice": "clone_611",
   "file": "line_02.mp3",
-  "duration": 3.958
+  "duration": 3.958,
+  "heard": "Diesen Satz schrieb Heinrich Heine 1821.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 3,
@@ -21,7 +27,10 @@
   "tts": "Über hundert Jahre später, neunzehnhundertdreiunddreißig, brannten auch seine Bücher.",
   "voice": "clone_611",
   "file": "line_03.mp3",
-  "duration": 5.206
+  "duration": 5.206,
+  "heard": "Über 100 Jahre später, 1933, brannten auch seine Bücher.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 4,
@@ -29,7 +38,12 @@
   "tts": "Und doch singen wir bis heute sein Lied von der Loreley.",
   "voice": "clone_611",
   "file": "line_04.mp3",
-  "duration": 3.049
+  "duration": 3.049,
+  "heard": "Und doch singen wir bis heute sein Lied von der Lorelei.",
+  "score": 0.91,
+  "diff": [
+   "loreley→lorelei"
+  ]
  },
  {
   "i": 5,
@@ -37,7 +51,10 @@
   "tts": "Ein Dichter, der Deutschland liebte –",
   "voice": "clone_611",
   "file": "line_05.mp3",
-  "duration": 2.115
+  "duration": 2.115,
+  "heard": "Ein Dichter, der Deutschland liebte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 6,
@@ -45,7 +62,10 @@
   "tts": "und die letzten fünfundzwanzig Jahre seines Lebens in Paris verbrachte.",
   "voice": "clone_611",
   "file": "line_06.mp3",
-  "duration": 4.285
+  "duration": 4.285,
+  "heard": "und die letzten 25 Jahre seines Lebens in Paris verbrachte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 7,
@@ -53,7 +73,10 @@
   "tts": "Geboren wurde er siebzehnhundertsiebenundneunzig in Düsseldorf, als Harry Heine.",
   "voice": "clone_611",
   "file": "line_07.mp3",
-  "duration": 4.976
+  "duration": 4.976,
+  "heard": "Geboren wurde er 1797 in Düsseldorf als Harry-Heine.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 8,
@@ -61,7 +84,10 @@
   "tts": "Die Familie war jüdisch.",
   "voice": "clone_611",
   "file": "line_08.mp3",
-  "duration": 1.543
+  "duration": 1.543,
+  "heard": "Die Familie war jüdisch.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 9,
@@ -69,7 +95,10 @@
   "tts": "Sein reicher Onkel Salomon, Bankier in Hamburg,",
   "voice": "clone_611",
   "file": "line_09.mp3",
-  "duration": 3.047
+  "duration": 3.047,
+  "heard": "Sein reicher Onkel Salomon, Bankier in Hamburg.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 10,
@@ -77,7 +106,10 @@
   "tts": "wollte einen Kaufmann aus ihm machen.",
   "voice": "clone_611",
   "file": "line_10.mp3",
-  "duration": 2.056
+  "duration": 2.056,
+  "heard": "wollte einen Kaufmann aus ihm machen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 11,
@@ -85,7 +117,10 @@
   "tts": "Harry gründete ein Tuchgeschäft –",
   "voice": "clone_611",
   "file": "line_11.mp3",
-  "duration": 2.014
+  "duration": 2.014,
+  "heard": "Harry gründete ein Tuchgeschäft.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 12,
@@ -93,7 +128,10 @@
   "tts": "nach einem Jahr war es pleite.",
   "voice": "clone_611",
   "file": "line_12.mp3",
-  "duration": 1.606
+  "duration": 1.606,
+  "heard": "Nach einem Jahr war es pleite.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 13,
@@ -101,7 +139,10 @@
   "tts": "Der Onkel bezahlte ihm stattdessen ein Jurastudium.",
   "voice": "clone_611",
   "file": "line_13.mp3",
-  "duration": 3.186
+  "duration": 3.186,
+  "heard": "Der Onkel bezahlte ihm stattdessen ein Jurastudium.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 14,
@@ -109,7 +150,10 @@
   "tts": "Achtzehnhundertfünfundzwanzig ließ er sich taufen und hieß nun Heinrich.",
   "voice": "clone_611",
   "file": "line_14.mp3",
-  "duration": 4.427
+  "duration": 4.427,
+  "heard": "1825 ließ er sich taufen und hieß nun Heinrich.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 15,
@@ -117,7 +161,12 @@
   "tts": "Den Taufzettel nannte er „das Antree-Billett zur europäischen Kultur“.",
   "voice": "clone_611",
   "file": "line_15.mp3",
-  "duration": 4.242
+  "duration": 4.242,
+  "heard": "Den Taufzettel nannte er das Antriebelett zur europäischen Kultur.",
+  "score": 0.84,
+  "diff": [
+   "antreebillett→antriebelett"
+  ]
  },
  {
   "i": 16,
@@ -125,7 +174,12 @@
   "tts": "Eine Stelle als Jurist bekam er trotzdem nie.",
   "voice": "clone_611",
   "file": "line_16.mp3",
-  "duration": 2.619
+  "duration": 2.619,
+  "heard": "Eine Stelle als Jurist bekam man trotzdem nie.",
+  "score": 0.88,
+  "diff": [
+   "er→man"
+  ]
  },
  {
   "i": 17,
@@ -133,7 +187,10 @@
   "tts": "Achtzehnhundertsiebenundzwanzig erschien sein „Buch der Lieder“.",
   "voice": "clone_611",
   "file": "line_17.mp3",
-  "duration": 3.987
+  "duration": 3.987,
+  "heard": "1827 erschien sein Buch der Lieder.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 18,
@@ -141,7 +198,12 @@
   "tts": "Darin stand ein Gedicht über eine Frau auf einem Felsen am Rhein:",
   "voice": "clone_611",
   "file": "line_18.mp3",
-  "duration": 3.922
+  "duration": 3.922,
+  "heard": "Darin stand ein Gedicht über eine Frau auf einem Felsen anrhein.",
+  "score": 0.87,
+  "diff": [
+   "amrhein→anrhein"
+  ]
  },
  {
   "i": 19,
@@ -149,7 +211,10 @@
   "tts": "„Ich weiß nicht, was soll es bedeuten,",
   "voice": "clone_611",
   "file": "line_19.mp3",
-  "duration": 2.222
+  "duration": 2.222,
+  "heard": "Ich weiß nicht, was soll es bedeuten?",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 20,
@@ -157,7 +222,10 @@
   "tts": "dass ich so traurig bin.“",
   "voice": "clone_611",
   "file": "line_20.mp3",
-  "duration": 1.441
+  "duration": 1.441,
+  "heard": "dass ich so traurig bin.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 21,
@@ -165,7 +233,10 @@
   "tts": "Friedrich Silcher machte daraus ein Lied, das bald jeder sang.",
   "voice": "clone_611",
   "file": "line_21.mp3",
-  "duration": 3.487
+  "duration": 3.487,
+  "heard": "Friedrich Silcher machte daraus ein Lied, das bald jeder sang.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 22,
@@ -173,7 +244,13 @@
   "tts": "Heine spottete über Fürsten, Zensur und Spießer.",
   "voice": "clone_611",
   "file": "line_22.mp3",
-  "duration": 2.977
+  "duration": 2.977,
+  "heard": "eine Spottete über Fürsten, Sensor und Spießer.",
+  "score": 0.71,
+  "diff": [
+   "heine→eine",
+   "zensur→sensor"
+  ]
  },
  {
   "i": 23,
@@ -181,7 +258,10 @@
   "tts": "Achtzehnhunderteinunddreißig zog er nach Paris.",
   "voice": "clone_611",
   "file": "line_23.mp3",
-  "duration": 2.853
+  "duration": 2.853,
+  "heard": "1831, zog er nach Paris.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 24,
@@ -189,7 +269,10 @@
   "tts": "Vier Jahre später wurden seine Schriften in Deutschland verboten.",
   "voice": "clone_611",
   "file": "line_24.mp3",
-  "duration": 3.946
+  "duration": 3.946,
+  "heard": "Vier Jahre später wurden seine Schriften in Deutschland verboten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 25,
@@ -197,7 +280,12 @@
   "tts": "In Paris heiratete er Mathilde, eine junge Verkäuferin.",
   "voice": "clone_611",
   "file": "line_25.mp3",
-  "duration": 3.421
+  "duration": 3.421,
+  "heard": "Im Paris heiratete er Mathilde, eine junge Verkäuferin.",
+  "score": 0.88,
+  "diff": [
+   "in→im"
+  ]
  },
  {
   "i": 26,
@@ -205,7 +293,12 @@
   "tts": "Seine Gedichte las sie nie – sie konnte kein Deutsch.",
   "voice": "clone_611",
   "file": "line_26.mp3",
-  "duration": 3.05
+  "duration": 3.05,
+  "heard": "Seine Gedichte laß sie nie, sie konnte kein Deutsch.",
+  "score": 0.89,
+  "diff": [
+   "las→lass"
+  ]
  },
  {
   "i": 27,
@@ -213,7 +306,10 @@
   "tts": "Achtzehnhundertdreiundvierzig fuhr er noch einmal nach Hamburg, zu seiner Mutter.",
   "voice": "clone_611",
   "file": "line_27.mp3",
-  "duration": 4.269
+  "duration": 4.269,
+  "heard": "1843 fuhr er noch einmal nach Hamburg zu seiner Mutter.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 28,
@@ -221,7 +317,10 @@
   "tts": "Daraus wurde „Deutschland. Ein Wintermärchen“.",
   "voice": "clone_611",
   "file": "line_28.mp3",
-  "duration": 2.869
+  "duration": 2.869,
+  "heard": "Daraus wurde Deutschland ein Wintermärchen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 29,
@@ -229,7 +328,10 @@
   "tts": "Und aus der Sehnsucht nach ihr ein Gedicht, das wir alle kennen:",
   "voice": "clone_611",
   "file": "line_29.mp3",
-  "duration": 3.327
+  "duration": 3.327,
+  "heard": "und aus der Sehnsucht nach ihr ein Gedicht, das wir alle kennen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 30,
@@ -237,7 +339,12 @@
   "tts": "„Denk ich an Deutschland in der Nacht,",
   "voice": "clone_611",
   "file": "line_30.mp3",
-  "duration": 1.733
+  "duration": 1.733,
+  "heard": "Denke ich an Deutschland in der Nacht.",
+  "score": 0.86,
+  "diff": [
+   "denk→denke"
+  ]
  },
  {
   "i": 31,
@@ -245,7 +352,10 @@
   "tts": "dann bin ich um den Schlaf gebracht.“",
   "voice": "clone_611",
   "file": "line_31.mp3",
-  "duration": 2.108
+  "duration": 2.108,
+  "heard": "dann bin ich um den Schlaf gebracht.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 32,
@@ -253,7 +363,12 @@
   "tts": "Im Mai achtzehnhundertachtundvierzig schleppte er sich ein letztes Mal in den Luhwr,",
   "voice": "clone_611",
   "file": "line_32.mp3",
-  "duration": 5.029
+  "duration": 5.029,
+  "heard": "Im Mai 1848 schleppte er sich ein letztes Mal in den Louvre.",
+  "score": 0.92,
+  "diff": [
+   "luhwr→louvre"
+  ]
  },
  {
   "i": 33,
@@ -261,7 +376,12 @@
   "tts": "zur Venus von Milo.",
   "voice": "clone_611",
   "file": "line_33.mp3",
-  "duration": 1.438
+  "duration": 1.438,
+  "heard": "Zervenus von Milo.",
+  "score": 0.57,
+  "diff": [
+   "zurvenus→zervenus"
+  ]
  },
  {
   "i": 34,
@@ -269,7 +389,12 @@
   "tts": "Danach verließ er sein Bett kaum noch.",
   "voice": "clone_611",
   "file": "line_34.mp3",
-  "duration": 2.221
+  "duration": 2.221,
+  "heard": "Danach verliess er sein Bettkamm noch.",
+  "score": 0.77,
+  "diff": [
+   "bettkaum→bettkamm"
+  ]
  },
  {
   "i": 35,
@@ -277,7 +402,10 @@
   "tts": "Acht Jahre lag er gelähmt in seiner „Matratzengruft“",
   "voice": "clone_611",
   "file": "line_35.mp3",
-  "duration": 3.319
+  "duration": 3.319,
+  "heard": "Acht Jahre lag er gelehmt in seiner Matratzengeruft.",
+  "score": 0.75,
+  "diff": []
  },
  {
   "i": 36,
@@ -285,7 +413,10 @@
   "tts": "und schrieb weiter: Gedichte, Spott, Erinnerungen.",
   "voice": "clone_611",
   "file": "line_36.mp3",
-  "duration": 3.085
+  "duration": 3.085,
+  "heard": "und schrieb weiter Gedichtespot-Erinnerungen.",
+  "score": 0.73,
+  "diff": []
  },
  {
   "i": 37,
@@ -293,7 +424,10 @@
   "tts": "Heinrich Heine starb achtzehnhundertsechsundfünfzig in Paris.",
   "voice": "clone_611",
   "file": "line_37.mp3",
-  "duration": 3.938
+  "duration": 3.938,
+  "heard": "Heinrich Heine starb 1856 in Paris.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 38,
@@ -301,7 +435,12 @@
   "tts": "Er liegt auf dem Friedhof Mongmartr.",
   "voice": "clone_611",
   "file": "line_38.mp3",
-  "duration": 2.134
+  "duration": 2.134,
+  "heard": "Er liegt auf dem Friedhof Montmartre.",
+  "score": 0.83,
+  "diff": [
+   "mongmartr→montmartre"
+  ]
  },
  {
   "i": 39,
@@ -309,7 +448,10 @@
   "tts": "Neunzehnhundertdreiunddreißig warfen Studenten auch seine Bücher ins Feuer.",
   "voice": "clone_611",
   "file": "line_39.mp3",
-  "duration": 4.492
+  "duration": 4.492,
+  "heard": "1933 warfen Studenten auch seine Bücher ins Feuer.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 40,
@@ -317,7 +459,10 @@
   "tts": "Heute steht sein Satz in Berlin auf dem Bebelplatz –",
   "voice": "clone_611",
   "file": "line_40.mp3",
-  "duration": 2.909
+  "duration": 2.909,
+  "heard": "Heute steht sein Satz in Berlin auf dem Bebelplatz.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 41,
@@ -325,7 +470,12 @@
   "tts": "genau dort, wo die Bücher brannten.",
   "voice": "clone_611",
   "file": "line_41.mp3",
-  "duration": 2.042
+  "duration": 2.042,
+  "heard": "Genau dort, wo die Bücher branden.",
+  "score": 0.83,
+  "diff": [
+   "brannten→branden"
+  ]
  },
  {
   "i": 42,
@@ -333,6 +483,11 @@
   "tts": "Und am Rhein fahren die Schiffe noch immer am Loreley-Felsen vorbei.",
   "voice": "clone_611",
   "file": "line_42.mp3",
-  "duration": 4.09
+  "duration": 4.09,
+  "heard": "Und dann rein fahren die Schiffe noch immer am Loreley-Felsen vorbei.",
+  "score": 0.83,
+  "diff": [
+   "amrhein→dannrein"
+  ]
  }
 ]
