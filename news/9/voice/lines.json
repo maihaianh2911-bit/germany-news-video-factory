@@ -5,7 +5,10 @@
   "tts": "Er schrieb über den Wilden Westen, als wäre er dabei gewesen.",
   "voice": "clone_611",
   "file": "line_01.mp3",
-  "duration": 3.412
+  "duration": 3.412,
+  "heard": "Er schrieb über den wilden Westen, als wäre er dabei gewesen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 2,
@@ -13,7 +16,12 @@
   "tts": "Er ließ sich als Old Schätterhänd fotografieren –",
   "voice": "clone_611",
   "file": "line_02.mp3",
-  "duration": 2.788
+  "duration": 2.788,
+  "heard": "Er ließ sich als Old Shatterhand fotografieren.",
+  "score": 0.86,
+  "diff": [
+   "schaetterhaend→shatterhand"
+  ]
  },
  {
   "i": 3,
@@ -21,7 +29,10 @@
   "tts": "mit Fransenjacke und Gewehr.",
   "voice": "clone_611",
   "file": "line_03.mp3",
-  "duration": 1.725
+  "duration": 1.725,
+  "heard": "mit Franzen, Jacke und Gewehr.",
+  "score": 0.67,
+  "diff": []
  },
  {
   "i": 4,
@@ -29,7 +40,10 @@
   "tts": "Millionen glaubten ihm.",
   "voice": "clone_611",
   "file": "line_04.mp3",
-  "duration": 1.506
+  "duration": 1.506,
+  "heard": "Millionen glaubten ihm.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 5,
@@ -37,7 +51,12 @@
   "tts": "Doch als Karl May Winnetou erfand, war er nie in Amerika gewesen.",
   "voice": "clone_611",
   "file": "line_05.mp3",
-  "duration": 3.998
+  "duration": 3.998,
+  "heard": "Doch als Carl MyVinitu erfand, war er nie in Amerika gewesen.",
+  "score": 0.78,
+  "diff": [
+   "karlmaywinnetou→carlmyvinitu"
+  ]
  },
  {
   "i": 6,
@@ -45,7 +64,12 @@
   "tts": "Seine Prärie kannte er aus Büchern.",
   "voice": "clone_611",
   "file": "line_06.mp3",
-  "duration": 2.058
+  "duration": 2.058,
+  "heard": "Seine Priere kannte er aus Büchern.",
+  "score": 0.83,
+  "diff": [
+   "praerie→priere"
+  ]
  },
  {
   "i": 7,
@@ -53,7 +77,10 @@
   "tts": "Und viele Jahre seines Lebens hatte er hinter Gittern verbracht.",
   "voice": "clone_611",
   "file": "line_07.mp3",
-  "duration": 3.702
+  "duration": 3.702,
+  "heard": "und viele Jahre seines Lebens hatte er hinter Gittern verbracht.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 8,
@@ -61,7 +88,12 @@
   "tts": "Karl May wurde achtzehnhundertzweiundvierzig in Ernstthal in Sachsen geboren.",
   "voice": "clone_611",
   "file": "line_08.mp3",
-  "duration": 4.827
+  "duration": 4.827,
+  "heard": "Karl May wurde 1842 in Ernstal in Sachsen geboren.",
+  "score": 0.89,
+  "diff": [
+   "ernstthal→ernstal"
+  ]
  },
  {
   "i": 9,
@@ -69,7 +101,10 @@
   "tts": "Die Eltern waren arme Weber.",
   "voice": "clone_611",
   "file": "line_09.mp3",
-  "duration": 1.771
+  "duration": 1.771,
+  "heard": "Die Eltern waren arme Weber.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 10,
@@ -77,7 +112,10 @@
   "tts": "Von vierzehn Kindern überlebten nur fünf.",
   "voice": "clone_611",
   "file": "line_10.mp3",
-  "duration": 2.576
+  "duration": 2.576,
+  "heard": "Von 14 Kindern überlebten nur fünf.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 11,
@@ -85,7 +123,10 @@
   "tts": "Karl wurde Lehrer –",
   "voice": "clone_611",
   "file": "line_11.mp3",
-  "duration": 1.318
+  "duration": 1.318,
+  "heard": "Karl Wurdelierer",
+  "score": 0.4,
+  "diff": []
  },
  {
   "i": 12,
@@ -93,7 +134,12 @@
   "tts": "doch man warf ihm vor, die Uhr eines Kollegen gestohlen zu haben.",
   "voice": "clone_611",
   "file": "line_12.mp3",
-  "duration": 3.837
+  "duration": 3.837,
+  "heard": "doch man war ihm vor, die Uhr eines Kollegen gestohlen zu haben.",
+  "score": 0.92,
+  "diff": [
+   "warf→war"
+  ]
  },
  {
   "i": 13,
@@ -101,7 +147,10 @@
   "tts": "Er kam ins Gefängnis und durfte nie wieder unterrichten.",
   "voice": "clone_611",
   "file": "line_13.mp3",
-  "duration": 3.333
+  "duration": 3.333,
+  "heard": "Er kam ins Gefängnis und durfte nie wieder unterrichten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 14,
@@ -109,7 +158,10 @@
   "tts": "Danach wurde er zum Hochstapler.",
   "voice": "clone_611",
   "file": "line_14.mp3",
-  "duration": 1.889
+  "duration": 1.889,
+  "heard": "Danach wurde er zum Hochstabler.",
+  "score": 0.8,
+  "diff": []
  },
  {
   "i": 15,
@@ -117,7 +169,10 @@
   "tts": "Er gab sich als Arzt aus, als Polizist, als Beamter.",
   "voice": "clone_611",
   "file": "line_15.mp3",
-  "duration": 3.036
+  "duration": 3.036,
+  "heard": "Er gab sich als Arzt aus, als Polizist, als Beamter.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 16,
@@ -125,7 +180,10 @@
   "tts": "Insgesamt saß er rund sieben Jahre im Arbeitshaus und im Zuchthaus.",
   "voice": "clone_611",
   "file": "line_16.mp3",
-  "duration": 3.819
+  "duration": 3.819,
+  "heard": "Insgesamt saß er rund sieben Jahre im Arbeitshaus und im Zuchthaus.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 17,
@@ -133,7 +191,10 @@
   "tts": "Im Gefängnis verwaltete er die Bibliothek",
   "voice": "clone_611",
   "file": "line_17.mp3",
-  "duration": 2.57
+  "duration": 2.57,
+  "heard": "Im Gefängnis verwaltete er die Bibliothek.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 18,
@@ -141,7 +202,12 @@
   "tts": "und las alles über ferne Länder.",
   "voice": "clone_611",
   "file": "line_18.mp3",
-  "duration": 1.928
+  "duration": 1.928,
+  "heard": "und lass alles über ferne Länder.",
+  "score": 0.83,
+  "diff": [
+   "las→lass"
+  ]
  },
  {
   "i": 19,
@@ -149,7 +215,10 @@
   "tts": "In Freiheit begann er zu schreiben:",
   "voice": "clone_611",
   "file": "line_19.mp3",
-  "duration": 1.914
+  "duration": 1.914,
+  "heard": "in Freiheit begann zu schreiben.",
+  "score": 0.91,
+  "diff": []
  },
  {
   "i": 20,
@@ -157,7 +226,10 @@
   "tts": "erst Fortsetzungsromane, dann Abenteuer im Orient und im Wilden Westen.",
   "voice": "clone_611",
   "file": "line_20.mp3",
-  "duration": 4.504
+  "duration": 4.504,
+  "heard": "Erst Fortsetzungsromane, dann Abenteuer im Orient und im Wilden Westen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 21,
@@ -165,7 +237,12 @@
   "tts": "Sein Held hieß Old Schätterhänd: stark, klug und edel.",
   "voice": "clone_611",
   "file": "line_21.mp3",
-  "duration": 3.348
+  "duration": 3.348,
+  "heard": "Sein Held hieß Old Shatterhand, stark, klug und edel.",
+  "score": 0.89,
+  "diff": [
+   "schaetterhaend→shatterhand"
+  ]
  },
  {
   "i": 22,
@@ -173,7 +250,10 @@
   "tts": "Sein Freund war der Apachenhäuptling Winnetou.",
   "voice": "clone_611",
   "file": "line_22.mp3",
-  "duration": 2.502
+  "duration": 2.502,
+  "heard": "Sein Freund war der Abachenhäuptling Winnetou.",
+  "score": 0.83,
+  "diff": []
  },
  {
   "i": 23,
@@ -181,7 +261,12 @@
   "tts": "Achtzehnhundertdreiundneunzig erschien „Winnetou“.",
   "voice": "clone_611",
   "file": "line_23.mp3",
-  "duration": 3.116
+  "duration": 3.116,
+  "heard": "1893 erschien Vinetù.",
+  "score": 0.67,
+  "diff": [
+   "winnetou→vinet"
+  ]
  },
  {
   "i": 24,
@@ -189,7 +274,13 @@
   "tts": "Viele Leser hielten Old Schätterhänd für Karl May selbst –",
   "voice": "clone_611",
   "file": "line_24.mp3",
-  "duration": 3.433
+  "duration": 3.433,
+  "heard": "Viele Leser hielten Old Shatterhand für Karl Mai selbst.",
+  "score": 0.78,
+  "diff": [
+   "schaetterhaend→shatterhand",
+   "may→mai"
+  ]
  },
  {
   "i": 25,
@@ -197,7 +288,12 @@
   "tts": "und May ließ sie in dem Glauben.",
   "voice": "clone_611",
   "file": "line_25.mp3",
-  "duration": 1.491
+  "duration": 1.491,
+  "heard": "und man ließ sie in dem Glauben.",
+  "score": 0.86,
+  "diff": [
+   "may→man"
+  ]
  },
  {
   "i": 26,
@@ -205,7 +301,10 @@
   "tts": "Er nannte sich „Doktor“, mit einem Titel, den er gekauft hatte.",
   "voice": "clone_611",
   "file": "line_26.mp3",
-  "duration": 3.559
+  "duration": 3.559,
+  "heard": "er nannte sich Doktor mit einem Titel, den er gekauft hatte.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 27,
@@ -213,7 +312,12 @@
   "tts": "Sein Haus in Radebeul taufte er „Villa Schätterhänd“.",
   "voice": "clone_611",
   "file": "line_27.mp3",
-  "duration": 3.329
+  "duration": 3.329,
+  "heard": "Sein Haus in Radebeuil taufte er Villa-Shatterhand.",
+  "score": 0.75,
+  "diff": [
+   "schaetterhaend→shatterhand"
+  ]
  },
  {
   "i": 28,
@@ -221,7 +325,10 @@
   "tts": "Erst neunzehnhundertacht reiste er nach Amerika.",
   "voice": "clone_611",
   "file": "line_28.mp3",
-  "duration": 2.842
+  "duration": 2.842,
+  "heard": "Erst 1908 reiste er nach Amerika.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 29,
@@ -229,7 +336,10 @@
   "tts": "Bis in den Wilden Westen kam er nie.",
   "voice": "clone_611",
   "file": "line_29.mp3",
-  "duration": 2.0
+  "duration": 2.0,
+  "heard": "Bis in den wilden Westen kam er nie.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 30,
@@ -237,7 +347,10 @@
   "tts": "Inzwischen hatten Journalisten seine Vergangenheit aufgedeckt.",
   "voice": "clone_611",
   "file": "line_30.mp3",
-  "duration": 3.667
+  "duration": 3.667,
+  "heard": "Inzwischen hatten Journalisten seine Vergangenheit aufgedeckt.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 31,
@@ -245,7 +358,12 @@
   "tts": "Es folgten Prozesse, Spott und Feindschaft.",
   "voice": "clone_611",
   "file": "line_31.mp3",
-  "duration": 2.716
+  "duration": 2.716,
+  "heard": "Es folgten Prozesse, Sport und Feindschaft.",
+  "score": 0.83,
+  "diff": [
+   "spott→sport"
+  ]
  },
  {
   "i": 32,
@@ -253,7 +371,10 @@
   "tts": "Im März neunzehnhundertzwölf hielt er in Wien einen Vortrag vor großem Publikum.",
   "voice": "clone_611",
   "file": "line_32.mp3",
-  "duration": 4.659
+  "duration": 4.659,
+  "heard": "Im März 1912 hielt er in Wien einen Vortrag vor großem Publikum.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 33,
@@ -261,7 +382,10 @@
   "tts": "Man feierte ihn.",
   "voice": "clone_611",
   "file": "line_33.mp3",
-  "duration": 1.111
+  "duration": 1.111,
+  "heard": "Man feierte ihn.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 34,
@@ -269,7 +393,12 @@
   "tts": "Eine gute Woche später war Karl May tot.",
   "voice": "clone_611",
   "file": "line_34.mp3",
-  "duration": 2.43
+  "duration": 2.43,
+  "heard": "Eine gute Woche später war Karl mei Tod.",
+  "score": 0.75,
+  "diff": [
+   "maytot→meitod"
+  ]
  },
  {
   "i": 35,
@@ -277,7 +406,12 @@
   "tts": "Heute ist die Villa Schätterhänd ein Museum.",
   "voice": "clone_611",
   "file": "line_35.mp3",
-  "duration": 2.558
+  "duration": 2.558,
+  "heard": "Heute ist die Villa Shatterhand ein Museum.",
+  "score": 0.86,
+  "diff": [
+   "schaetterhaend→shatterhand"
+  ]
  },
  {
   "i": 36,
@@ -285,7 +419,10 @@
   "tts": "Seine Bücher wurden weltweit rund zweihundert Millionen Mal gedruckt.",
   "voice": "clone_611",
   "file": "line_36.mp3",
-  "duration": 4.376
+  "duration": 4.376,
+  "heard": "Seine Bücher wurden weltweit rund 200 Millionen mal gedruckt.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 37,
@@ -293,7 +430,10 @@
   "tts": "Und in Bad Segeberg reitet Winnetou jeden Sommer über die Bühne.",
   "voice": "clone_611",
   "file": "line_37.mp3",
-  "duration": 3.72
+  "duration": 3.72,
+  "heard": "und in Bad Segeberg reitet Winnetou jeden Sommer über die Bühne.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 38,
@@ -301,7 +441,10 @@
   "tts": "Karl May war nie dort, wo seine Helden lebten.",
   "voice": "clone_611",
   "file": "line_38.mp3",
-  "duration": 2.595
+  "duration": 2.595,
+  "heard": "Karl May war nie dort, wo seine Helden lebten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 39,
@@ -309,6 +452,9 @@
   "tts": "Aber Millionen Kinder sind mit ihnen dorthin geritten.",
   "voice": "clone_611",
   "file": "line_39.mp3",
-  "duration": 3.121
+  "duration": 3.121,
+  "heard": "Aber Millionen Kinder sind mit ihnen dorthin geritten.",
+  "score": 1.0,
+  "diff": []
  }
 ]
