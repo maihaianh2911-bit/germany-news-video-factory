@@ -1,0 +1,734 @@
+{
+ "duration": 120.084,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 15.809,
+   "pics": [
+    {
+     "src": "news/10/img/kafka_hund.jpg",
+     "move": "tien-gan",
+     "w": 1729,
+     "h": 2036,
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.55,
+      "y": 0.4167
+     },
+     "s": 0.0,
+     "e": 7.988
+    },
+    {
+     "src": "news/10/img/denkmal_rona.jpg",
+     "move": "nang-len",
+     "w": 1894,
+     "h": 2600,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "s": 7.988,
+     "e": 15.809
+    }
+   ]
+  },
+  {
+   "s": 15.809,
+   "e": 38.951,
+   "pics": [
+    {
+     "src": "news/10/img/geburtshaus_tafel.jpg",
+     "move": "lui-ra",
+     "w": 2600,
+     "h": 2155,
+     "from": {
+      "z": 1.308,
+      "x": 0.48,
+      "y": 0.3822
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.49,
+      "y": 0.5
+     },
+     "s": 15.809,
+     "e": 21.973
+    },
+    {
+     "src": "news/10/img/hermann.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1921,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 21.973,
+     "e": 32.568
+    },
+    {
+     "src": "news/10/img/brief_vater.jpg",
+     "move": "dung-yen",
+     "w": 1654,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 32.568,
+     "e": 38.951
+    }
+   ]
+  },
+  {
+   "s": 38.951,
+   "e": 63.705,
+   "pics": [
+    {
+     "src": "news/10/img/kafka_student.jpg",
+     "move": "tien-gan",
+     "w": 1286,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.4397
+     },
+     "to": {
+      "z": 1.17,
+      "x": 0.5,
+      "y": 0.3758
+     },
+     "s": 38.951,
+     "e": 45.016
+    },
+    {
+     "src": "news/10/img/manuskript.jpg",
+     "move": "chi-tiet",
+     "w": 1386,
+     "h": 1746,
+     "from": {
+      "z": 1.0,
+      "x": 0.475,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.4,
+      "x": 0.45,
+      "y": 0.3572
+     },
+     "s": 45.016,
+     "e": 50.726
+    },
+    {
+     "src": "news/10/img/verwandlung_s1.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1869,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.196,
+      "x": 0.5,
+      "y": 0.4181
+     },
+     "s": 50.726,
+     "e": 57.719
+    },
+    {
+     "src": "news/10/img/verwandlung_cover.jpg",
+     "move": "dung-yen",
+     "w": 1300,
+     "h": 2091,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 57.719,
+     "e": 63.705
+    }
+   ]
+  },
+  {
+   "s": 63.705,
+   "e": 86.675,
+   "pics": [
+    {
+     "src": "news/10/img/kafka_felice.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 2115,
+     "from": {
+      "z": 1.0,
+      "x": 0.5424,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.6187,
+      "y": 0.4167
+     },
+     "s": 63.705,
+     "e": 72.195
+    },
+    {
+     "src": "news/10/img/kafka_1906.jpg",
+     "move": "troi-nhe",
+     "w": 1621,
+     "h": 2600,
+     "from": {
+      "z": 1.08,
+      "x": 0.5823,
+      "y": 0.463
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.45,
+      "y": 0.4464
+     },
+     "s": 72.195,
+     "e": 81.913
+    },
+    {
+     "src": "news/10/img/grab.jpg",
+     "move": "dung-yen",
+     "w": 1536,
+     "h": 2048,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 81.913,
+     "e": 86.675
+    }
+   ]
+  },
+  {
+   "s": 86.675,
+   "e": 108.167,
+   "pics": [
+    {
+     "src": "news/10/img/brod.jpg",
+     "move": "tien-gan",
+     "w": 1671,
+     "h": 2228,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 86.675,
+     "e": 98.242
+    },
+    {
+     "src": "news/10/img/brief_seite.jpg",
+     "move": "chi-tiet",
+     "w": 1654,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.441,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "s": 98.242,
+     "e": 104.539
+    },
+    {
+     "src": "news/10/img/schwestern.jpg",
+     "move": "dung-yen",
+     "w": 1300,
+     "h": 1302,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 104.539,
+     "e": 108.167
+    }
+   ]
+  },
+  {
+   "s": 108.167,
+   "e": 120.084,
+   "pics": [
+    {
+     "src": "news/10/img/verwandlung_s1.jpg",
+     "move": "dung-yen",
+     "w": 1300,
+     "h": 1869,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 108.167,
+     "e": 115.06
+    },
+    {
+     "src": "news/10/img/kafka_hund.jpg",
+     "move": "lui-ra",
+     "w": 1729,
+     "h": 2036,
+     "from": {
+      "z": 1.251,
+      "x": 0.55,
+      "y": 0.3996
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.525,
+      "y": 0.5
+     },
+     "s": 115.06,
+     "e": 120.084
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 0.3,
+   "e": 3.697,
+   "text": "Er bat seinen besten Freund,\nnach seinem Tod alles zu verbrennen:"
+  },
+  {
+   "s": 3.697,
+   "e": 6.409,
+   "text": "Tagebücher, Briefe,\nManuskripte – ungelesen."
+  },
+  {
+   "s": 6.409,
+   "e": 8.138,
+   "text": "Der Freund tat es nicht."
+  },
+  {
+   "s": 8.138,
+   "e": 10.407,
+   "text": "Deshalb kennen wir\nheute Franz Kafka."
+  },
+  {
+   "s": 10.407,
+   "e": 12.618,
+   "text": "Zu Lebzeiten war\ner fast unbekannt."
+  },
+  {
+   "s": 12.618,
+   "e": 16.309,
+   "text": "Heute steht sein Name\nsogar im Duden: kafkaesk."
+  },
+  {
+   "s": 16.309,
+   "e": 19.701,
+   "text": "Kafka wurde 1883\nin Prag geboren."
+  },
+  {
+   "s": 19.701,
+   "e": 22.123,
+   "text": "Die Familie war jüdisch\nund sprach Deutsch."
+  },
+  {
+   "s": 22.123,
+   "e": 25.375,
+   "text": "Der Vater, Hermann Kafka,\nwar als armer Junge aufgewachsen"
+  },
+  {
+   "s": 25.375,
+   "e": 27.865,
+   "text": "und hatte sich zum\nGeschäftsmann hochgearbeitet."
+  },
+  {
+   "s": 27.865,
+   "e": 29.748,
+   "text": "Er war laut, kräftig und streng."
+  },
+  {
+   "s": 29.748,
+   "e": 32.718,
+   "text": "Neben ihm fühlte sich der\nSohn ein Leben lang klein."
+  },
+  {
+   "s": 32.718,
+   "e": 36.845,
+   "text": "Mit 36 schrieb Kafka ihm einen\nBrief von über hundert Seiten."
+  },
+  {
+   "s": 36.845,
+   "e": 39.451,
+   "text": "Abgeschickt hat er ihn nie."
+  },
+  {
+   "s": 39.451,
+   "e": 42.755,
+   "text": "Kafka studierte Jura und wurde\nBeamter einer Versicherung."
+  },
+  {
+   "s": 42.755,
+   "e": 45.166,
+   "text": "Tagsüber prüfte er\nUnfälle in Fabriken."
+  },
+  {
+   "s": 45.166,
+   "e": 46.565,
+   "text": "Nachts schrieb er."
+  },
+  {
+   "s": 46.565,
+   "e": 50.876,
+   "text": "In einer einzigen Nacht im September\n1912 entstand „Das Urteil“."
+  },
+  {
+   "s": 50.876,
+   "e": 53.642,
+   "text": "Wenige Wochen später schrieb\ner „Die Verwandlung“."
+  },
+  {
+   "s": 53.642,
+   "e": 55.771,
+   "text": "Gregor Samsa wacht\neines Morgens auf –"
+  },
+  {
+   "s": 55.771,
+   "e": 57.869,
+   "text": "und ist ein\nungeheures Ungeziefer."
+  },
+  {
+   "s": 57.869,
+   "e": 60.407,
+   "text": "Bevor das Buch erschien,\nbat Kafka den Verlag:"
+  },
+  {
+   "s": 60.407,
+   "e": 64.205,
+   "text": "Das Insekt dürfe auf keinen\nFall gezeichnet werden."
+  },
+  {
+   "s": 64.205,
+   "e": 67.444,
+   "text": "Zweimal verlobte er sich\nmit Felice Bauer aus Berlin."
+  },
+  {
+   "s": 67.444,
+   "e": 69.344,
+   "text": "Zweimal löste er die Verlobung."
+  },
+  {
+   "s": 69.344,
+   "e": 72.345,
+   "text": "Er fürchtete, eine Ehe würde\nihm das Schreiben nehmen."
+  },
+  {
+   "s": 72.345,
+   "e": 75.562,
+   "text": "1917 erkrankte er\nan Tuberkulose."
+  },
+  {
+   "s": 75.562,
+   "e": 78.046,
+   "text": "Am Ende konnte er kaum\nnoch sprechen und essen."
+  },
+  {
+   "s": 78.046,
+   "e": 79.792,
+   "text": "Auf dem Sterbebett\nlas er noch die"
+  },
+  {
+   "s": 79.792,
+   "e": 82.063,
+   "text": "Druckfahnen von „Ein\nHungerkünstler“."
+  },
+  {
+   "s": 82.063,
+   "e": 87.175,
+   "text": "Franz Kafka starb im\nJuni 1924, mit 40 Jahren."
+  },
+  {
+   "s": 87.175,
+   "e": 89.466,
+   "text": "Sein Freund Max Brod\nfand zwei Zettel."
+  },
+  {
+   "s": 89.466,
+   "e": 91.437,
+   "text": "Darauf stand: alles verbrennen."
+  },
+  {
+   "s": 91.437,
+   "e": 94.866,
+   "text": "Brod hatte ihm schon früher gesagt,\ndass er das nie tun würde."
+  },
+  {
+   "s": 94.866,
+   "e": 98.392,
+   "text": "Er veröffentlichte „Der Process“,\n„Das Schloss“ und „Amerika“."
+  },
+  {
+   "s": 98.392,
+   "e": 102.058,
+   "text": "Als 1939 deutsche\nTruppen Prag besetzten,"
+  },
+  {
+   "s": 102.058,
+   "e": 104.689,
+   "text": "floh Brod mit einem\nKoffer voller Manuskripte."
+  },
+  {
+   "s": 104.689,
+   "e": 108.667,
+   "text": "Kafkas drei Schwestern\nwurden im Holocaust ermordet."
+  },
+  {
+   "s": 108.667,
+   "e": 110.674,
+   "text": "Heute lesen wir\nKafka in der Schule."
+  },
+  {
+   "s": 110.674,
+   "e": 113.349,
+   "text": "Und wenn uns ein Amt von\nSchalter zu Schalter schickt,"
+  },
+  {
+   "s": 113.349,
+   "e": 115.21,
+   "text": "sagen wir: Das ist kafkaesk."
+  },
+  {
+   "s": 115.21,
+   "e": 118.509,
+   "text": "Ein Wort, das es ohne einen\nungehorsamen Freund nicht gäbe."
+  }
+ ],
+ "voice": [
+  {
+   "s": 0.3,
+   "src": "news/10/voice_pace/line_01.wav"
+  },
+  {
+   "s": 3.697,
+   "src": "news/10/voice_pace/line_02.wav"
+  },
+  {
+   "s": 6.409,
+   "src": "news/10/voice_pace/line_03.wav"
+  },
+  {
+   "s": 8.138,
+   "src": "news/10/voice_pace/line_04.wav"
+  },
+  {
+   "s": 10.407,
+   "src": "news/10/voice_pace/line_05.wav"
+  },
+  {
+   "s": 12.618,
+   "src": "news/10/voice_pace/line_06.wav"
+  },
+  {
+   "s": 16.309,
+   "src": "news/10/voice_pace/line_07.wav"
+  },
+  {
+   "s": 19.701,
+   "src": "news/10/voice_pace/line_08.wav"
+  },
+  {
+   "s": 22.123,
+   "src": "news/10/voice_pace/line_09.wav"
+  },
+  {
+   "s": 25.375,
+   "src": "news/10/voice_pace/line_10.wav"
+  },
+  {
+   "s": 27.865,
+   "src": "news/10/voice_pace/line_11.wav"
+  },
+  {
+   "s": 29.748,
+   "src": "news/10/voice_pace/line_12.wav"
+  },
+  {
+   "s": 32.718,
+   "src": "news/10/voice_pace/line_13.wav"
+  },
+  {
+   "s": 36.845,
+   "src": "news/10/voice_pace/line_14.wav"
+  },
+  {
+   "s": 39.451,
+   "src": "news/10/voice_pace/line_15.wav"
+  },
+  {
+   "s": 42.755,
+   "src": "news/10/voice_pace/line_16.wav"
+  },
+  {
+   "s": 45.166,
+   "src": "news/10/voice_pace/line_17.wav"
+  },
+  {
+   "s": 46.565,
+   "src": "news/10/voice_pace/line_18.wav"
+  },
+  {
+   "s": 50.876,
+   "src": "news/10/voice_pace/line_19.wav"
+  },
+  {
+   "s": 53.642,
+   "src": "news/10/voice_pace/line_20.wav"
+  },
+  {
+   "s": 55.771,
+   "src": "news/10/voice_pace/line_21.wav"
+  },
+  {
+   "s": 57.869,
+   "src": "news/10/voice_pace/line_22.wav"
+  },
+  {
+   "s": 60.407,
+   "src": "news/10/voice_pace/line_23.wav"
+  },
+  {
+   "s": 64.205,
+   "src": "news/10/voice_pace/line_24.wav"
+  },
+  {
+   "s": 67.444,
+   "src": "news/10/voice_pace/line_25.wav"
+  },
+  {
+   "s": 69.344,
+   "src": "news/10/voice_pace/line_26.wav"
+  },
+  {
+   "s": 72.345,
+   "src": "news/10/voice_pace/line_27.wav"
+  },
+  {
+   "s": 75.562,
+   "src": "news/10/voice_pace/line_28.wav"
+  },
+  {
+   "s": 78.046,
+   "src": "news/10/voice_pace/line_29.wav"
+  },
+  {
+   "s": 82.063,
+   "src": "news/10/voice_pace/line_30.wav"
+  },
+  {
+   "s": 87.175,
+   "src": "news/10/voice_pace/line_31.wav"
+  },
+  {
+   "s": 89.466,
+   "src": "news/10/voice_pace/line_32.wav"
+  },
+  {
+   "s": 91.437,
+   "src": "news/10/voice_pace/line_33.wav"
+  },
+  {
+   "s": 94.866,
+   "src": "news/10/voice_pace/line_34.wav"
+  },
+  {
+   "s": 98.392,
+   "src": "news/10/voice_pace/line_35.wav"
+  },
+  {
+   "s": 102.058,
+   "src": "news/10/voice_pace/line_36.wav"
+  },
+  {
+   "s": 104.689,
+   "src": "news/10/voice_pace/line_37.wav"
+  },
+  {
+   "s": 108.667,
+   "src": "news/10/voice_pace/line_38.wav"
+  },
+  {
+   "s": 110.674,
+   "src": "news/10/voice_pace/line_39.wav"
+  },
+  {
+   "s": 113.349,
+   "src": "news/10/voice_pace/line_40.wav"
+  },
+  {
+   "s": 115.21,
+   "src": "news/10/voice_pace/line_41.wav"
+  }
+ ],
+ "music": "news/10/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Philosopher",
+   "file": "news/fonts/philosopher-latin-400-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ]
+}
