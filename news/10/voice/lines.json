@@ -5,7 +5,12 @@
   "tts": "Er bat seinen besten Freund, nach seinem Tod alles zu verbrennen:",
   "voice": "clone_611",
   "file": "line_01.mp3",
-  "duration": 3.826
+  "duration": 3.826,
+  "heard": "Er baht seinen besten Freund nach seinem Tod alles zu verbrennen.",
+  "score": 0.91,
+  "diff": [
+   "bat→baht"
+  ]
  },
  {
   "i": 2,
@@ -13,7 +18,12 @@
   "tts": "Tagebücher, Briefe, Manuskripte – ungelesen.",
   "voice": "clone_611",
   "file": "line_02.mp3",
-  "duration": 2.801
+  "duration": 2.801,
+  "heard": "Tagebücher, Briefe, Manuskripte umgelesen.",
+  "score": 0.75,
+  "diff": [
+   "ungelesen→umgelesen"
+  ]
  },
  {
   "i": 3,
@@ -21,7 +31,10 @@
   "tts": "Der Freund tat es nicht.",
   "voice": "clone_611",
   "file": "line_03.mp3",
-  "duration": 1.633
+  "duration": 1.633,
+  "heard": "Der Freund tat es nicht.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 4,
@@ -29,7 +42,10 @@
   "tts": "Deshalb kennen wir heute Franz Kafka.",
   "voice": "clone_611",
   "file": "line_04.mp3",
-  "duration": 2.284
+  "duration": 2.284,
+  "heard": "Deshalb kennen wir heute Franz Kafka.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 5,
@@ -37,7 +53,10 @@
   "tts": "Zu Lebzeiten war er fast unbekannt.",
   "voice": "clone_611",
   "file": "line_05.mp3",
-  "duration": 2.194
+  "duration": 2.194,
+  "heard": "Zu Lebzeiten war er fast unbekannt.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 6,
@@ -45,7 +64,10 @@
   "tts": "Heute steht sein Name sogar im Duden: kafkaesk.",
   "voice": "clone_611",
   "file": "line_06.mp3",
-  "duration": 2.883
+  "duration": 2.883,
+  "heard": "Heute steht sein Name sogar im Duden, Kafkaesk.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 7,
@@ -53,7 +75,10 @@
   "tts": "Kafka wurde achtzehnhundertdreiundachtzig in Prag geboren.",
   "voice": "clone_611",
   "file": "line_07.mp3",
-  "duration": 3.611
+  "duration": 3.611,
+  "heard": "Kafka wurde 1883 in Prag geboren.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 8,
@@ -61,7 +86,10 @@
   "tts": "Die Familie war jüdisch und sprach Deutsch.",
   "voice": "clone_611",
   "file": "line_08.mp3",
-  "duration": 2.467
+  "duration": 2.467,
+  "heard": "Die Familie war jüdisch und sprach deutsch.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 9,
@@ -69,7 +97,10 @@
   "tts": "Der Vater, Hermann Kafka, war als armer Junge aufgewachsen",
   "voice": "clone_611",
   "file": "line_09.mp3",
-  "duration": 3.644
+  "duration": 3.644,
+  "heard": "Der Vater Hermann Kafka war als armer Junge aufgewachsen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 10,
@@ -77,7 +108,10 @@
   "tts": "und hatte sich zum Geschäftsmann hochgearbeitet.",
   "voice": "clone_611",
   "file": "line_10.mp3",
-  "duration": 2.545
+  "duration": 2.545,
+  "heard": "und hatte sich zum Geschäftsmann hochgearbeitet.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 11,
@@ -85,7 +119,10 @@
   "tts": "Er war laut, kräftig und streng.",
   "voice": "clone_611",
   "file": "line_11.mp3",
-  "duration": 1.833
+  "duration": 1.833,
+  "heard": "Er war laut, kräftig und streng.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 12,
@@ -93,7 +130,10 @@
   "tts": "Neben ihm fühlte sich der Sohn ein Leben lang klein.",
   "voice": "clone_611",
   "file": "line_12.mp3",
-  "duration": 3.129
+  "duration": 3.129,
+  "heard": "Neben ihm fühlte sich der Sohn ein Leben lang klein.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 13,
@@ -101,7 +141,10 @@
   "tts": "Mit sechsunddreißig schrieb Kafka ihm einen Brief von über hundert Seiten.",
   "voice": "clone_611",
   "file": "line_13.mp3",
-  "duration": 4.491
+  "duration": 4.491,
+  "heard": "Mit 36 schrieb Kafka ihm einen Brief von über 100 Seiten.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 14,
@@ -109,7 +152,10 @@
   "tts": "Abgeschickt hat er ihn nie.",
   "voice": "clone_611",
   "file": "line_14.mp3",
-  "duration": 1.585
+  "duration": 1.585,
+  "heard": "Abgeschickt hat er ihn nie.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 15,
@@ -117,7 +163,10 @@
   "tts": "Kafka studierte Jura und wurde Beamter einer Versicherung.",
   "voice": "clone_611",
   "file": "line_15.mp3",
-  "duration": 3.526
+  "duration": 3.526,
+  "heard": "Kafka studierte Jura und wurde Beamter einer Versicherung.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 16,
@@ -125,7 +174,10 @@
   "tts": "Tagsüber prüfte er Unfälle in Fabriken.",
   "voice": "clone_611",
   "file": "line_16.mp3",
-  "duration": 2.467
+  "duration": 2.467,
+  "heard": "tagsüber prüfte er Unfälle in Fabriken.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 17,
@@ -133,7 +185,10 @@
   "tts": "Nachts schrieb er.",
   "voice": "clone_611",
   "file": "line_17.mp3",
-  "duration": 1.22
+  "duration": 1.22,
+  "heard": "Nachts, schrieb er.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 18,
@@ -141,7 +196,10 @@
   "tts": "In einer einzigen Nacht im September neunzehnhundertzwölf entstand „Das Urteil“.",
   "voice": "clone_611",
   "file": "line_18.mp3",
-  "duration": 4.712
+  "duration": 4.712,
+  "heard": "In einer einzigen Nacht im September 1912 entstand das Urteil.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 19,
@@ -149,7 +207,10 @@
   "tts": "Wenige Wochen später schrieb er „Die Verwandlung“.",
   "voice": "clone_611",
   "file": "line_19.mp3",
-  "duration": 2.861
+  "duration": 2.861,
+  "heard": "Wenige Wochen später schrieb er die Verwandlung.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 20,
@@ -157,7 +218,12 @@
   "tts": "Gregor Samsa wacht eines Morgens auf –",
   "voice": "clone_611",
   "file": "line_20.mp3",
-  "duration": 2.292
+  "duration": 2.292,
+  "heard": "Gregor Samser wacht eines Morgens auf.",
+  "score": 0.83,
+  "diff": [
+   "samsa→samser"
+  ]
  },
  {
   "i": 21,
@@ -165,7 +231,10 @@
   "tts": "und ist ein ungeheures Ungeziefer.",
   "voice": "clone_611",
   "file": "line_21.mp3",
-  "duration": 2.07
+  "duration": 2.07,
+  "heard": "und ist ein ungeheures Ungeziefer.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 22,
@@ -173,7 +242,10 @@
   "tts": "Bevor das Buch erschien, bat Kafka den Verlag:",
   "voice": "clone_611",
   "file": "line_22.mp3",
-  "duration": 2.81
+  "duration": 2.81,
+  "heard": "Bevor das Buch erschien, bat Kafka den Verlag.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 23,
@@ -181,7 +253,10 @@
   "tts": "Das Insekt dürfe auf keinen Fall gezeichnet werden.",
   "voice": "clone_611",
   "file": "line_23.mp3",
-  "duration": 3.012
+  "duration": 3.012,
+  "heard": "Das Insekt dürfe auf keinen Fall gezeichnet werden.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 24,
@@ -189,7 +264,12 @@
   "tts": "Zweimal verlobte er sich mit Felitze Bauer aus Berlin.",
   "voice": "clone_611",
   "file": "line_24.mp3",
-  "duration": 3.445
+  "duration": 3.445,
+  "heard": "Zweimal verlobte er sich mit Felice Bauer aus Berlin.",
+  "score": 0.89,
+  "diff": [
+   "felitze→felice"
+  ]
  },
  {
   "i": 25,
@@ -197,7 +277,10 @@
   "tts": "Zweimal löste er die Verlobung.",
   "voice": "clone_611",
   "file": "line_25.mp3",
-  "duration": 1.823
+  "duration": 1.823,
+  "heard": "Zweimal löste er die Verlobung.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 26,
@@ -205,7 +288,10 @@
   "tts": "Er fürchtete, eine Ehe würde ihm das Schreiben nehmen.",
   "voice": "clone_611",
   "file": "line_26.mp3",
-  "duration": 3.152
+  "duration": 3.152,
+  "heard": "Er fürchtete, eine Ehe würde ihm das schreiben nehmen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 27,
@@ -213,7 +299,10 @@
   "tts": "Neunzehnhundertsiebzehn erkrankte er an Tuberkulose.",
   "voice": "clone_611",
   "file": "line_27.mp3",
-  "duration": 3.409
+  "duration": 3.409,
+  "heard": "1917 erkrankte er an Tuberklose.",
+  "score": 0.8,
+  "diff": []
  },
  {
   "i": 28,
@@ -221,7 +310,12 @@
   "tts": "Am Ende konnte er kaum noch sprechen und essen.",
   "voice": "clone_611",
   "file": "line_28.mp3",
-  "duration": 2.561
+  "duration": 2.561,
+  "heard": "Am Ende kommt er kaum noch sprechen und essen.",
+  "score": 0.89,
+  "diff": [
+   "konnte→kommt"
+  ]
  },
  {
   "i": 29,
@@ -229,7 +323,10 @@
   "tts": "Auf dem Sterbebett las er noch die Druckfahnen von „Ein Hungerkünstler“.",
   "voice": "clone_611",
   "file": "line_29.mp3",
-  "duration": 4.369
+  "duration": 4.369,
+  "heard": "Auf dem Sterbebett las er noch die Druck fahnen von ein Hungerkünstler.",
+  "score": 0.87,
+  "diff": []
  },
  {
   "i": 30,
@@ -237,7 +334,10 @@
   "tts": "Franz Kafka starb im Juni neunzehnhundertvierundzwanzig, mit vierzig Jahren.",
   "voice": "clone_611",
   "file": "line_30.mp3",
-  "duration": 4.584
+  "duration": 4.584,
+  "heard": "Franz Kafka starb im Juni 1924 mit 40 Jahren.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 31,
@@ -245,7 +345,12 @@
   "tts": "Sein Freund Max Brod fand zwei Zettel.",
   "voice": "clone_611",
   "file": "line_31.mp3",
-  "duration": 2.307
+  "duration": 2.307,
+  "heard": "Sein Freund Max Brod von zwei Zettel.",
+  "score": 0.86,
+  "diff": [
+   "fand→von"
+  ]
  },
  {
   "i": 32,
@@ -253,7 +358,10 @@
   "tts": "Darauf stand: alles verbrennen.",
   "voice": "clone_611",
   "file": "line_32.mp3",
-  "duration": 1.913
+  "duration": 1.913,
+  "heard": "Darauf Stand alles verbrennen.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 33,
@@ -261,7 +369,12 @@
   "tts": "Brod hatte ihm schon früher gesagt, dass er das nie tun würde.",
   "voice": "clone_611",
   "file": "line_33.mp3",
-  "duration": 3.668
+  "duration": 3.668,
+  "heard": "Brot hatte ihm schon früher gesagt, dass er das nie tun würde.",
+  "score": 0.92,
+  "diff": [
+   "brod→brot"
+  ]
  },
  {
   "i": 34,
@@ -269,7 +382,12 @@
   "tts": "Er veröffentlichte „Der Process“, „Das Schloss“ und „Amerika“.",
   "voice": "clone_611",
   "file": "line_34.mp3",
-  "duration": 3.767
+  "duration": 3.767,
+  "heard": "Er veröffentlichte der Prozess, das Schloss und Amerika.",
+  "score": 0.88,
+  "diff": [
+   "process→prozess"
+  ]
  },
  {
   "i": 35,
@@ -277,7 +395,10 @@
   "tts": "Als neunzehnhundertneununddreißig deutsche Truppen Prag besetzten,",
   "voice": "clone_611",
   "file": "line_35.mp3",
-  "duration": 4.138
+  "duration": 4.138,
+  "heard": "als 1939 deutsche Truppen Pragbesetzten.",
+  "score": 0.73,
+  "diff": []
  },
  {
   "i": 36,
@@ -285,7 +406,12 @@
   "tts": "floh Brod mit einem Koffer voller Manuskripte.",
   "voice": "clone_611",
   "file": "line_36.mp3",
-  "duration": 2.693
+  "duration": 2.693,
+  "heard": "Flo Brot mit einem Koffer voller Manuskripte.",
+  "score": 0.71,
+  "diff": [
+   "flohbrod→flobrot"
+  ]
  },
  {
   "i": 37,
@@ -293,7 +419,10 @@
   "tts": "Kafkas drei Schwestern wurden im Holocaust ermordet.",
   "voice": "clone_611",
   "file": "line_37.mp3",
-  "duration": 3.204
+  "duration": 3.204,
+  "heard": "Kafka's drei Schwestern wurden im Holocaust ermordet.",
+  "score": 0.8,
+  "diff": []
  },
  {
   "i": 38,
@@ -301,7 +430,10 @@
   "tts": "Heute lesen wir Kafka in der Schule.",
   "voice": "clone_611",
   "file": "line_38.mp3",
-  "duration": 1.953
+  "duration": 1.953,
+  "heard": "Heute lesen wir Kafka in der Schule.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 39,
@@ -309,7 +441,10 @@
   "tts": "Und wenn uns ein Amt von Schalter zu Schalter schickt,",
   "voice": "clone_611",
   "file": "line_39.mp3",
-  "duration": 2.972
+  "duration": 2.972,
+  "heard": "und wenn uns ein Amt von Schalter zu Schalter schickt.",
+  "score": 1.0,
+  "diff": []
  },
  {
   "i": 40,
@@ -317,7 +452,10 @@
   "tts": "sagen wir: Das ist kafkaesk.",
   "voice": "clone_611",
   "file": "line_40.mp3",
-  "duration": 1.808
+  "duration": 1.808,
+  "heard": "Sagen wir, das ist Kafkaes.",
+  "score": 0.8,
+  "diff": []
  },
  {
   "i": 41,
@@ -325,6 +463,9 @@
   "tts": "Ein Wort, das es ohne einen ungehorsamen Freund nicht gäbe.",
   "voice": "clone_611",
   "file": "line_41.mp3",
-  "duration": 3.481
+  "duration": 3.481,
+  "heard": "Ein Wort, das es ohne einen ungehorsamen Freund nicht gäbe.",
+  "score": 1.0,
+  "diff": []
  }
 ]
