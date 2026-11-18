@@ -108,6 +108,29 @@ for i, t in enumerate(tiles): sheet.paste(t, ((i % cols) * (tw + 10), (i // cols
 sheet.save(out, quality=82)
 md = os.path.splitext(out)[0] + '.md'
 open(md, 'w', encoding='utf-8').write(moves.edits_md(script['chapters'], picks, times, text))
+# the picture review (owner, 18/11/2026, from the Japanese channel: "đọc lại hình ảnh đã chọn xem đã phù hợp với nội
+# dung cần thể hiện chưa, chưa thì chọn lại, duyệt lại, khi nào ổn mới lấy"): every shot beside all the words spoken
+# while it is on screen and the title of the picture where it was found
+titles = {}
+for rnd in sorted(os.listdir(root)) if os.path.isdir(root) else []:
+    ip = os.path.join(root, rnd, 'index.json')
+    if os.path.exists(ip):
+        for q in json.load(open(ip, encoding='utf-8')):
+            for r in q.get('results', []):
+                if r.get('file'): titles[f"{rnd}/{r['file']}"] = r.get('title', '').replace('File:', '')
+rows, n = [], 0
+for ci, (c, pc) in enumerate(zip(script['chapters'], picks['chapters'])):
+    a, b = c['lines']
+    for j, p in enumerate(pc['pics']):
+        n += 1; s, e, li = times[ci][j]
+        nxt = pc['pics'][j + 1].get('at') if j + 1 < len(pc['pics']) else None
+        last = b if j + 1 == len(pc['pics']) else times[ci][j + 1][2] - (0 if nxt and nxt != int(nxt) else 1)   # a cut inside a line shares it
+        words = ' '.join(' '.join(text.get(i, '').split()) for i in range(li, last + 1))
+        src = picks['images'][p['img']]['src']
+        rows.append(f"{n}. {int(s // 60)}:{int(s % 60):02d}–{int(e // 60)}:{int(e % 60):02d} {p['img']} ({titles.get(src, src)})\n   {words}")
+open(os.path.splitext(out)[0] + '_review.md', 'w', encoding='utf-8').write(
+    'Duyệt ảnh: mỗi ảnh cạnh lời đọc lúc nó trên hình. Đúng người, nơi, sự việc, thời kỳ; mặt không bị cắt; '
+    'ảnh sạch, đủ nét; không trùng ảnh khác.\n\n' + '\n'.join(rows) + '\n')
 print(open(md, encoding='utf-8').read())
 for wmsg in warn: print('WARNING:', wmsg)
 print(out, len(tiles), 'shots', sheet.size, '| edits:', md, f'| {len(warn)} warning(s): fix them, their tiles are marked "!"' if warn else '')

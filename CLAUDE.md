@@ -14,7 +14,11 @@
    or the issue title or notes say `thử`, `mẫu`, `test` or `demo`.
 
 Read `docs/HANDOVER.md` first (the owner, their standing decisions, the current state), then `AGENT_NEWS.md` (how a
-video is made). The owner is Vietnamese and not technical: answer in short, simple Vietnamese, no jargon.
+video is made). The owner is Vietnamese and not technical: answer in short, simple Vietnamese, no jargon. They write
+"tao" (I) and "mày" (you); answer the same way, "tao" for yourself and "mày" for them (as recorded in their Japanese
+repo `maihaianh2911-bit/japan-news-video-factory`, whose way of working the owner asked to learn on 18/11/2026).
+Show a script as one continuous text (the German in one piece, then its Vietnamese meaning in one piece), never in
+numbered lines or bullet points (owner, 18/11: "Kịch bản phải liền mạch … đừng bao giờ chia đoạn ra như thế").
 
 This repo makes one thing: vertical **German literature** shorts in German (the life of a writer, a work) from
 real pictures, a German voice and yellow subtitles timed to it, written and edited like the owner's sample
@@ -47,7 +51,9 @@ adds a line such as "Phiếu văn học Đức số 3: giọng và ảnh đã s�
    Remove `news-busy` whenever you stop: while it is fresh (< 2 hours) the machine does not call the task for that
    issue. A machine comment ending with `⚠️ Chưa gọi được Claude …` means nobody was called: go on in the chat, or
    the owner presses "Gọi Claude ngay".
-3. Give the owner the links to the video, the subtitles, the posting caption (`caption.txt`, written at the picks step, `AGENT_NEWS.md` §2.7) and the picture credits.
+3. Give the owner the links to the video, the subtitles, the posting caption (`caption.txt`, written at the picks step, `AGENT_NEWS.md` §2.7) and the picture credits,
+   and send the finished video file and its caption file in the chat. Send only finished videos: no previews,
+   stills or progress pictures (owner, 18/11/2026, Japanese channel: "gửi video cuối cùng đã xong thôi, không cần gửi nhiều").
 
 A script the owner sends is theirs: translate and split it, never edit its content (only exception: iron rule 2, a
 script too short for 60 seconds). A script you write follows the sample (`AGENT_NEWS.md` §1.1), speaks as a German to

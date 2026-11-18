@@ -116,6 +116,23 @@ Commit `[news #<N>] kịch bản`, push. Remove `news-busy`. (Voice and pictures
    Ansichten über Glauben und Gesellschaft änderten, / geriet auch sie in schwere Stürme.").
 Write it in German directly (not translated from Vietnamese), in this order and this voice.
 
+**What the owner asked on the Japanese channel (17–18/11/2026), applied here too** (`maihaianh2911-bit/japan-news-
+video-factory`, `CLAUDE.md`, "How to write it"; the owner asked on 18/11 to learn that repo's way of working):
+- **Line 3 tells the whole story plainly, after the series hook (lines 1–2).** It says what the life was and what
+  it means, so the viewer remembers it and stays. Example: „Mit vierzehn floh er aus der Klosterschule, weil er nur
+  eines werden wollte: Dichter – und genau dafür bekam er später den Nobelpreis.“
+- **One flowing narration.** Link the sentences with connectives („doch“, „und genau da“, „so wurde …“). No chopped
+  fragments such as „1904. Peter Camenzind.“ The short hinge sentences of point 4 stay rare.
+- **The end comes back to the opening.** Never a question about feelings. A series video may end with one line
+  that announces the next rank as a statement: „Auf Platz vier: ein Dichter, dessen Bücher erst verboten und dann
+  verbrannt wurden – im nächsten Video.“
+- **Lead with the human side** when the life has one: a love, a marriage, a mother and child. On the Japanese
+  channel the love story was the one video with views.
+- **A story the sources do not confirm is framed once** („soll gesagt haben“), not on every line.
+- **Show the owner a script as one continuous text:** the German in one piece, then its Vietnamese meaning in one
+  piece. Never numbered lines, scenes or bullet points. Owner, 18/11: *"Kịch bản phải liền mạch, nói bao nhiêu
+  lần rồi, đừng bao giờ chia đoạn ra như thế"*. The lines of `script.json` exist only for the voice and the pictures.
+
 ## 2. `news-pick` → `news/<N>/picks.json`
 Read the owner's comments written after your last `🤖` comment first: an extra search pushed during a fix also ends
 here (the machine then leaves `news-pick` as the only step label), and the request still applies.
@@ -211,6 +228,17 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    shows, or start and end look the same although the move should travel, and run it again. Clear every
    `WARNING:` line. The preview also writes `/tmp/preview.md` (and prints it): the list of edits — shot, line,
    picture, move, why. Read it once as a viewer: does every move follow from its line?
+   **Picture review** (owner, 18/11/2026, from the Japanese channel: *"đọc lại hình ảnh đã chọn xem đã phù hợp với
+   nội dung cần thể hiện chưa, chưa thì chọn lại, duyệt lại, khi nào ổn mới lấy"*): the preview also writes
+   `/tmp/preview_review.md`. It lists every shot with all the words spoken while it is on screen and the title of
+   the picture where it was found. A shot passes only when all of these hold:
+   - It shows what those words say at that moment: the person named (read the title: a picture found under one
+     name can show someone else), the place, the work, the era. No old-age portrait on a childhood line.
+   - The face is whole and seen.
+   - The picture is clean and sharp: no moiré, no small picture blown up, no watermark or credit line.
+   - It is not a near-duplicate of another shot.
+   Re-pick and preview again until every shot passes. The closing comment then says
+   "Đã duyệt ảnh: N/N ảnh khớp lời đọc".
 7. **The posting caption** (owner, 16/11/2026: every video comes with it, so it lies next to the video when the
    owner downloads it): write `news/<N>/caption.txt`, UTF-8, **in German** (iron rule 1: the channel's language,
    also when the script came in Vietnamese), at most 2000 characters, blocks separated by one blank line:

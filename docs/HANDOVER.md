@@ -16,6 +16,16 @@ Repo này làm **video văn học Đức bằng tiếng Đức từ ảnh thật
   - **Cách viết** (`AGENT_NEWS.md` §1.1): mở bằng mâu thuẫn của cả cuộc đời + câu hỏi ám ảnh + cái kết kể trước; rồi kể theo thời gian từ lúc sinh (năm, nơi, cha mẹ); mỗi chặng 2–4 câu: năm + sự việc + chi tiết cụ thể + tác phẩm ra đời; câu ngắn làm bản lề ("Tính ông nóng nảy."); giọng bình thản, đúng sự thật, không kêu gọi người xem.
   - **Ai viết kịch bản**: phiếu mới (`[Văn học] …`) chỉ cần tên nhà văn hoặc tác phẩm, Claude viết kịch bản tiếng Đức theo mẫu; nếu chủ kênh dán kịch bản riêng thì giữ nguyên ý như quyết định 12/11. (Hiểu từ câu "học cả cách viết kịch bản"; nếu chủ kênh nói khác thì theo chủ kênh.)
 
+- 18/11: **học cách làm của repo Nhật** (`maihaianh2911-bit/japan-news-video-factory`). Chủ kênh thêm repo đó vào phiên và nói *"học tập quy trình làm việc của repo mới thêm vào đi"*. Đã áp dụng những gì chủ kênh dặn bên đó mà hợp với kênh này:
+  - **Cách xưng hô:** chủ kênh xưng "tao", gọi Claude là "mày"; Claude xưng "tao", gọi chủ kênh là "mày" (`CLAUDE.md`).
+  - **Cách đưa kịch bản:** đưa liền một mạch, tiếng Đức một khối rồi nghĩa tiếng Việt một khối, không đánh số, không gạch đầu dòng (*"Kịch bản phải liền mạch, nói bao nhiêu lần rồi, đừng bao giờ chia đoạn ra như thế"*).
+  - **Cách viết:** câu đầu (sau phần mở đầu chung) nói gọn cả câu chuyện và ý nghĩa của nó; lời kể liền mạch, câu nối bằng từ nối, không cắt vụn; kết quay lại câu mở đầu, không hỏi người xem cảm thấy thế nào; có chuyện tình, vợ chồng, mẹ con thì đưa lên trước (`AGENT_NEWS.md` §1.1).
+  - **Duyệt ảnh trước khi dựng:** `preview.py` ghi `*_review.md`, mỗi ảnh kèm lời đọc lúc ảnh đó trên hình và tên ảnh gốc; ảnh nào không khớp lời, mặt bị cắt, mờ hay trùng thì chọn lại. Bình luận giao video ghi "Đã duyệt ảnh: N/N ảnh khớp lời đọc" (`AGENT_NEWS.md` §2 bước 6).
+  - **Giao video:** gửi file video và file caption vào chat; chỉ gửi video đã xong, không gửi bản xem trước.
+  - **Chưa làm, chờ chủ kênh quyết:**
+    - Tìm ảnh kiểu mới của repo Nhật: `wiki:` (mọi ảnh về một người hay một nơi qua Wikidata), `geo:`, `web:` (ảnh trên mạng, có rủi ro bản quyền mà chủ kênh đã chấp nhận cho kênh Nhật, chưa cho kênh này), và chấm điểm ảnh theo câu tả.
+    - Bốn hiệu ứng hình `fx`: nhịp máy quay, ảnh có chiều sâu, chữ hiện dần, phông chữ riêng.
+    - Làm thẳng trên `main` như repo Nhật.
 - 18/11: **đổi sang chuỗi "Top X"**. Chủ kênh gửi một video mẫu Top X (danh sách sát nhân, `00-video-mau/top-x.md`) kèm lời *"khả năng phải đổi cách làm video, nên làm kiểu: top x nhà văn lớn nhất của Đức"*. Claude đề xuất một video gồm Top 5, chủ kênh sửa lại: *"mỗi người 1 video đc ko? 5 người thì 5 video sẽ chung cái hook (đổi ng), còn mỗi video sẽ nói về 1 người thôi, nói về cuộc đời và phong cách văn chương"*.
   - **Một chuỗi, mỗi người một video, chung câu mở đầu:**
     - Câu 1 „Die fünf größten deutschen Schriftsteller.“: trên hình là tựa đề chữ to và chân dung tròn của cả 5 người, kèm tên.
