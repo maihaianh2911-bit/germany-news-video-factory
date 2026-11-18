@@ -8,9 +8,11 @@ Each tile is labelled with the shot's move (moves.py; "-" = hand-written numbers
 <out>.md, the list of edits for the owner (shot, line, picture, move, why), and prints it. Shot lengths come from
 the measured voice (<img_root>/../voice/lines.json) when it is there, else from an estimate of the reading speed.
 An unknown move or a shot without a move stops here with the list of valid names. A shot too short for its move
-or a "wide" point that would lose the subject is printed as WARNING and its tile is marked "!"."""
+or a "wide" point that would lose the subject is printed as WARNING and its tile is marked "!".
+A "Top X" video (picks.json "top") also gets <out>_top.jpg: the hook of line 1 (title and round portraits) next to
+line 2's "PLATZ <rank>" over its picture, half size, to check that every face sits well in its circle."""
 import json, os, sys
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from prep import prepare
 import moves
@@ -60,6 +62,46 @@ for ci, (c, pc) in enumerate(zip(script['chapters'], picks['chapters'])):
         mark = ' !' if warn and warn[-1].startswith(f'shot {ci + 1}-{j + 1} ') else ''
         ImageDraw.Draw(tile).text((4, 5), f'{ci + 1}-{j + 1} l.{line} {name} [{moves.label(p)}]{mark}'[:52], fill=(255, 210, 90))
         tiles.append(tile)
+def font(size):
+    """A font with German letters for the sheet (NewsV draws with Philosopher)."""
+    for p in ('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', '/usr/share/fonts/dejavu/DejaVuSans.ttf'):
+        if os.path.exists(p): return ImageFont.truetype(p, size)
+    return ImageFont.load_default(size=size)
+
+def boxes(dr, rows, size, y):
+    """Yellow boxes with dark text centred at y, as NewsV's Boxes (approximate font)."""
+    f = font(size); hh = size * 1.18 + 16; yy = y - hh * len(rows) / 2
+    for r in rows:
+        w = dr.textlength(r, font=f)
+        dr.rounded_rectangle((540 - w / 2 - 22, yy, 540 + w / 2 + 22, yy + hh), 14, fill=(238, 197, 20))
+        dr.text((540 - w / 2, yy + 6), r, font=f, fill=(30, 16, 6)); yy += hh - 8
+
+top = picks.get('top')
+if top:   # the shared hook, laid out as NewsV's TopGrid (the numbers are kept equal by hand)
+    first = picks['chapters'][0]['pics'][0]
+    g = window(img(first['img']), moves.camera(first, *img(first['img']).size, 3)[0]).resize((W, PH)).point(lambda v: v * 0.2)
+    dr = ImageDraw.Draw(g); ppl = top['people']; n = len(ppl); per = 2 if n == 4 else 3
+    rws = [ppl[k:k + per] for k in range(0, n, per)]; gap = 70; m = min(per, n); d = min(340, (1000 - (m - 1) * gap) // m)
+    rowH = d + 120; y0 = 1020 - (len(rws) - 1) * rowH / 2
+    boxes(dr, moves.title_rows(top['title']), 64 if max(map(len, moves.title_rows(top['title']))) > 22 else 76, 330)
+    k = 0
+    for ri, row in enumerate(rws):
+        for j, pp in enumerate(row):
+            cx, cy = 540 + (j - (len(row) - 1) / 2) * (d + gap), y0 + ri * rowH
+            im = img(pp['img']); left, tp, c = moves.circle_window(*im.size, d, pp.get('focus'), max(1, pp.get('zoom', 1.0)))
+            crop = im.crop((round(-left / c), round(-tp / c), round((-left + d) / c), round((-tp + d) / c))).resize((d, d))
+            mask = Image.new('L', (d, d), 0); ImageDraw.Draw(mask).ellipse((0, 0, d - 1, d - 1), fill=255)
+            g.paste(crop, (round(cx - d / 2), round(cy - d / 2)), mask)
+            me = k == top['me']; k += 1
+            dr.ellipse((cx - d / 2 - 5, cy - d / 2 - 5, cx + d / 2 + 5, cy + d / 2 + 5), outline=(238, 197, 20) if me else (244, 236, 216), width=10 if me else 5)
+            f = font(40); w = dr.textlength(pp['name'], font=f)
+            dr.text((cx - w / 2, cy + d / 2 + 22), pp['name'], font=f, fill=(255, 255, 255))
+    second = next((p for c in picks['chapters'] for p in c['pics'] if p.get('at') == 2), None)
+    b = window(img(second['img']), moves.camera(second, *img(second['img']).size, 3)[0]).resize((W, PH)) if second else Image.new('RGB', (W, PH))
+    boxes(ImageDraw.Draw(b), [f"PLATZ {top['rank']}"], 130, 300)
+    ts = Image.new('RGB', (W + 20, PH // 2), (0, 0, 0)); ts.paste(g.resize((W // 2, PH // 2)), (0, 0)); ts.paste(b.resize((W // 2, PH // 2)), (W // 2 + 20, 0))
+    top_out = os.path.splitext(out)[0] + '_top.jpg'; ts.save(top_out, quality=85); print('top hook:', top_out)
+    if not second: warn.append('top: no shot starts at line 2 ("at": 2), so "PLATZ …" is not over this writer')
 cols = 4; rows = (len(tiles) + cols - 1) // cols; tw, th = tiles[0].size
 sheet = Image.new('RGB', (cols * (tw + 10), rows * (th + 8)), (0, 0, 0))
 for i, t in enumerate(tiles): sheet.paste(t, ((i % cols) * (tw + 10), (i // cols) * (th + 8)))

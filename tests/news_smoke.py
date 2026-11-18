@@ -102,6 +102,21 @@ fd = {i + 1: ff.duration(os.path.join(pub, v['src'])) for i, v in enumerate(fast
 assert all(abs(fd[r['i']] - r['duration'] / 1.2) < 0.15 for r in rows), (fd, rows)
 ft = moves.shot_times(sp['chapters'], pk['chapters'], fd, {r['i']: r['text'] for r in rows}, 1.2)
 assert [[(round(s, 1), round(e, 1)) for s, e, _ in c] for c in ft] == [[(round(p['s'], 1), round(p['e'], 1)) for p in c['pics']] for c in fast['chapters']], ft
+# Top X (owner, 18/11): line 1 shows the title and the round portraits, line 2 "PLATZ 5"; the shots are unchanged
+pk3 = dict(pk, top={'title': 'Die 5 größten deutschen Schriftsteller', 'rank': 5, 'me': 1,
+                    'people': [{'img': 'wide', 'name': 'Goethe'}, {'img': 'tall', 'name': 'Hesse', 'focus': [0.5, 0.3], 'zoom': 1.5},
+                               {'img': 'small', 'name': 'Thomas Mann'}]})
+job3, out3 = os.path.join(tmp, 'job3'), os.path.join(tmp, 'out3'); os.makedirs(job3)
+json.dump(spec, open(os.path.join(job3, 'script.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+json.dump(pk3, open(os.path.join(job3, 'picks.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+run(sys.executable, os.path.join(S, 'build.py'), job3, pub, N, imgsrc, out3)
+tplan = json.load(open(os.path.join(out3, 'plan.json'), encoding='utf-8')); top = tplan['top']
+assert top['label'] == 'PLATZ 5' and len(top['title']) == 2 and [p['me'] for p in top['people']] == [False, True, False], top
+assert abs(top['gridEnd'] - (tplan['voice'][1]['s'] - 0.15)) < 1e-3 and abs(top['badgeEnd'] - (tplan['voice'][2]['s'] - 0.15)) < 1e-3, top
+assert top['people'][1]['zoom'] == 1.5 and top['people'][0]['fx'] == moves.FOCUS[0] and all(os.path.exists(os.path.join(pub, p['src'])) for p in top['people'])
+assert tplan['chapters'] == plan['chapters'] and 'PLATZ 5' in open(os.path.join(out3, 'edits.md'), encoding='utf-8').read()
+run(sys.executable, os.path.join(S, 'preview.py'), os.path.join(job3, 'picks.json'), os.path.join(job3, 'script.json'), imgsrc, os.path.join(out3, 'preview.jpg'))
+assert Image.open(os.path.join(out3, 'preview_top.jpg')).size == (1100, 960)
 cred = open(os.path.join(out, 'credits.txt'), encoding='utf-8').read()
 assert 'Wide.jpg' in cred and 'CC BY 4.0' in cred and 'commons.wikimedia.org' in cred
 assert os.path.getsize(os.path.join(pub, 'news', N, 'bed.wav')) > 100000
@@ -117,4 +132,15 @@ if '--still' in sys.argv:
     band = a[700:800]                                                            # the subtitle: dark text on yellow boxes
     yellow = (band[..., 0] > 200) & (band[..., 1] > 160) & (band[..., 2] < 80)
     assert yellow.mean() > 0.05 and (band.sum(2) < 150).mean() > 0.005, 'no yellow subtitle'
+    # the Top X hook: title boxes at the top and portraits on a dark ground during line 1, "PLATZ 5" during line 2
+    if os.environ.get('FONTSOURCE'): run(sys.executable, os.path.join(S, 'fonts.py'), os.path.join(out3, 'plan.json'), os.environ['FONTSOURCE'], pub)
+    tb = round((top['gridEnd'] + top['badgeEnd']) / 2, 2)
+    run('node', os.path.join(S, 'stills.mjs'), os.path.join(out3, 'plan.json'), pub, os.path.join(out3, 'still'), '2.5', str(tb))
+    g = np.asarray(Image.open(os.path.join(out3, 'still_2.5.png')).convert('RGB')).astype(int)
+    yl = lambda a: (a[..., 0] > 200) & (a[..., 1] > 160) & (a[..., 2] < 80)
+    assert yl(g[120:220]).mean() > 0.05, 'no title boxes'                       # title centred at y = 330 (165 at half size)
+    assert not yl(g[700:800]).any(), 'subtitle shown under the grid'           # line 1's words are the title: no subtitle
+    assert g[300:600].std() > 20 and g[:100].mean() < 90, 'no portraits on a dark ground'
+    bd = np.asarray(Image.open(os.path.join(out3, f'still_{tb}.png')).convert('RGB')).astype(int)
+    assert yl(bd[110:190]).mean() > 0.05 and yl(bd[700:800]).mean() > 0.02, 'no PLATZ badge or no subtitle during line 2'
 print('news smoke test OK:', round(plan['duration'], 1), 's,', len(plan['subs']), 'cues,', tmp)

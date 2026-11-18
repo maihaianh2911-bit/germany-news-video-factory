@@ -172,8 +172,56 @@ def check(shot, where):
     return bad
 
 
+def check_top(picks):
+    """Problems of the optional "top" block of picks.json (the shared hook of a "Top X" series, owner 18/11/2026):
+    {"title": "Die 5 größten deutschen Schriftsteller", "rank": 5, "me": 0,
+     "people": [{"img": "<images key>", "name": "Hesse", "focus": [x, y], "zoom": 1.6}, …]}.
+    Line 1 shows the title and the people as round portraits, line 2 the big "PLATZ <rank>" (build.py, NewsV)."""
+    top = picks.get('top')
+    if top is None: return []
+    bad, imgs = [], picks.get('images', {})
+    if not isinstance(top.get('title'), str) or not top['title'].strip():
+        bad.append('top: cần "title" (tựa đề chữ to, tiếng Đức)')
+    r = top.get('rank')
+    if not (isinstance(r, int) and not isinstance(r, bool) and 1 <= r <= 20):
+        bad.append('top: "rank" phải là số hạng 1–20')
+    ppl = top.get('people')
+    if not (isinstance(ppl, list) and 2 <= len(ppl) <= 9):
+        bad.append('top: "people" phải là danh sách 2–9 người'); ppl = []
+    for k, p in enumerate(ppl):
+        if p.get('img') not in imgs: bad.append(f'top: người {k + 1}: "img" phải là một ảnh trong "images"')
+        if not isinstance(p.get('name'), str) or not p['name'].strip(): bad.append(f'top: người {k + 1}: cần "name"')
+        f = p.get('focus')
+        if f is not None and not (isinstance(f, (list, tuple)) and len(f) == 2 and all(isinstance(v, (int, float)) and 0 <= v <= 1 for v in f)):
+            bad.append(f'top: người {k + 1}: "focus" phải là [x, y] trong khoảng 0–1')
+        z = p.get('zoom', 1.0)
+        if not (isinstance(z, (int, float)) and 1 <= z <= 4): bad.append(f'top: người {k + 1}: "zoom" phải từ 1 đến 4')
+    me = top.get('me')
+    if not (isinstance(me, int) and not isinstance(me, bool) and 0 <= me < max(1, len(ppl))):
+        bad.append('top: "me" phải là số thứ tự (từ 0) của người video này nói tới trong "people"')
+    return bad
+
+
+def title_rows(t):
+    """The title of a Top X hook in one row, or two rows of about equal length (broken between words)."""
+    t = ' '.join(t.split())
+    if len(t) <= 20 or ' ' not in t: return [t]
+    ks = [k for k, ch in enumerate(t) if ch == ' ']
+    k = min(ks, key=lambda k: max(k, len(t) - k - 1))
+    return [t[:k], t[k + 1:]]
+
+
+def circle_window(w, h, d, focus=None, zoom=1.0):
+    """The part of a w×h picture a round portrait of diameter d shows (NewsV's TopGrid, preview.py): the picture
+    covers the circle × zoom with the focus point at the centre, never past an edge. → (left, top, scale) in px."""
+    fx, fy = focus or FOCUS
+    c = d / min(w, h) * zoom; dw, dh = w * c, h * c
+    return min(0, max(d - dw, d / 2 - fx * dw)), min(0, max(d - dh, d / 2 - fy * dh)), c
+
+
 def check_all(picks):
-    return [b for ci, c in enumerate(picks.get('chapters', [])) for j, p in enumerate(c.get('pics', [])) for b in check(p, f'cảnh {ci + 1}-{j + 1}')]
+    return [b for ci, c in enumerate(picks.get('chapters', [])) for j, p in enumerate(c.get('pics', [])) for b in check(p, f'cảnh {ci + 1}-{j + 1}')] \
+        + check_top(picks)
 
 
 def camera(shot, w, h, dur):
@@ -240,6 +288,12 @@ def edits_md(chapters, picks, times, text):
             rows.append(f"| {n}{f' ({ci + 1}-{j + 1})' if many else ''} | {int(s // 60)}:{int(s % 60):02d} | {e - s:.0f} giây | "
                         f"{li}. {words.replace('|', '/')} | {pic} | {kind} | {why} |")
     legend = '; '.join(f'**{vi}** (`{k}`)' for k, (vi, _) in MOVES.items())
-    return ('### Cách edit từng cảnh\n\n'
+    top = picks.get('top')
+    head = ''
+    if top:   # the shared hook of a "Top X" series: drawn over the first shots, not a shot of its own
+        who = ', '.join(p['name'] for p in top['people'])
+        head = (f'Mở đầu chung của chuỗi: câu 1 hiện tựa đề „{top["title"]}“ với {len(top["people"])} chân dung tròn ({who}); '
+                f'câu 2 hiện chữ to „PLATZ {top["rank"]}“.\n\n')
+    return ('### Cách edit từng cảnh\n\n' + head +
             '| Cảnh | Lúc | Dài | Câu đọc | Ảnh | Kiểu edit | Vì sao |\n|---|---|---|---|---|---|---|\n' + '\n'.join(rows) + '\n\n'
             f'Các kiểu edit có thể chọn: {legend}. Muốn đổi, bình luận ví dụ: "cảnh 5 đổi sang kiểu lùi ra".\n')

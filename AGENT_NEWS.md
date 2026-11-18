@@ -229,6 +229,45 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    (a push of `script.json` alone runs the voice step again), remove `news-busy`. (The render takes ~5–20 min:
    ~6.5 min for a 1.5-minute video, ~19 min for 3 minutes; you are woken at `news-check`.)
 
+### 2.8 A "Top X" series (owner, 18/11/2026)
+The owner's sample `00-video-mau/top-x.md`, and their words: *"mỗi người 1 video … 5 video sẽ chung cái hook (đổi
+ng), còn mỗi video sẽ nói về 1 người thôi, nói về cuộc đời và phong cách văn chương"*.
+
+**What each video of the series has**
+- **One writer per video**, with the hook shared by the whole series. Only the name and the rank change.
+- **The script (§1):**
+  - Line 1 is the series title, e.g. „Die fünf größten deutschen Schriftsteller.“
+  - Line 2 is „Platz fünf: Hermann Hesse.“
+  - Then 2–3 teaser lines and the life.
+  - Then „Und wie schrieb …?“ and the literary style: themes, how the sentences sound, two or three famous lines that
+    Germans know.
+  - The last line points to the next video („Wer ist auf Platz vier? Das erfährst du im nächsten Video.“). Rank 1
+    asks the viewers instead.
+- **The pictures:** the queries of every video of the series also ask for the portraits of *all* people in the list,
+  because the hook shows them all.
+
+**What `picks.json` adds**
+```json
+"top": {"title": "Die 5 größten deutschen Schriftsteller", "rank": 5, "me": 0,
+        "people": [{"img": "hesse_rund", "name": "Hesse", "focus": [0.5, 0.3], "zoom": 1.6}, …]}
+```
+- `people` lists everyone of the series, in the same order in every video. `me` is this video's writer (0-based).
+- `name` is short (surname; "Thomas Mann"), shown under the circle.
+- `focus` and `zoom` frame the face inside the circle (`moves.circle_window`).
+
+**What the video shows**
+- **While line 1 is spoken:** the title in yellow boxes and the round portraits on the first shot darkened. There is
+  no subtitle then, because the title says the same words. In the last moment this video's writer lights up in yellow.
+- **While line 2 is spoken:** a big "PLATZ 5" over that shot. Give that shot `"at": 2`, with this writer's best
+  portrait.
+- **The shots:** unchanged. The grid is drawn over the first shot, so pick for it a calm picture that looks good
+  darkened.
+
+**Before rendering**
+- `preview.py` also writes `<out>_top.jpg`: the grid and the badge, half size.
+- Check every face is centred and big enough in its circle.
+- Check the title fits.
+
 ## 3. `news-check` → done
 Open `sheet.jpg` (one tile per shot with its subtitle: chapter-shot, picture name, time). Push a corrected
 `picks.json` only for a real fault (a face under the subtitles or cut off, the wrong person, a blurred picture,

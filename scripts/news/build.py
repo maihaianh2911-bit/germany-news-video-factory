@@ -15,6 +15,8 @@ so subtitles and picture cuts follow; the paid voice files themselves are never 
 Timing: the voice starts at once; every line follows the previous one after a pause (0.45 s after a sentence end,
 0.25 s otherwise), a new chapter after a short breath; a picture that starts on a line ("at") cuts in just before
 it is spoken; a subtitle stays up until the next one (short pauses never leave the frame without one).
+Top X (picks.json "top", owner 18/11/2026: a series, one writer per video, all with the same hook): line 1 shows the
+title and every person of the list as a round portrait, line 2 the big "PLATZ <rank>"; moves.check_top has the format.
 Credits: a search result is listed from its round's index.json (title, author, date, licence, File: page); any other
 picture (own/…) by its picks.json credit, plus the optional picks.json image key "page" (source URL) on the next line.
 """
@@ -70,7 +72,7 @@ def cues(t):
     return cues(t[:k]) + cues(t[k + 1:])
 
 # ---- timeline
-t = 0.0; chapters = []; subs = []; voice = []
+t = 0.0; chapters = []; subs = []; voice = []; line_at = {}
 img = lambda name: f'{base}/img/{name}.jpg'
 for ci, c in enumerate(spec['chapters']):
     a, b = c['lines']; s = t; x = s + (0.3 if ci == 0 else 0.6 / pace); starts = []
@@ -82,7 +84,7 @@ for ci, c in enumerate(spec['chapters']):
         for cu in parts:   # cues share the line's time in proportion to their length
             cs = x + dur[i] * done / n_all; done += len(' '.join(cu)) + 1; ce = x + dur[i] * done / n_all
             subs.append({'s': round(cs, 3), 'e': round(ce, 3), 'text': '\n'.join(cu)})
-        starts.append(x)
+        starts.append(x); line_at[i] = x
         x += dur[i] + (0.45 if text[i].rstrip().endswith(END) else 0.25) / pace
     e = x + (1.6 if ci == len(spec['chapters']) - 1 else 0.5 / pace)
     ch = {'s': round(s, 3), 'e': round(e, 3), 'pics': []}
@@ -127,6 +129,20 @@ mg.write_wav(f'{pub}/{base}/bed.wav', bed)
 
 plan = {'duration': total, 'chapters': chapters, 'subs': subs, 'voice': voice, 'music': f'{base}/bed.wav', 'musicVolume': 0.3,
         'fonts': []}
+
+# ---- the shared hook of a "Top X" series (picks.json "top", owner 18/11/2026): while line 1 is spoken the title and
+# the round portraits of everyone in the list, while line 2 is spoken the big "PLATZ <rank>" (NewsV TopGrid/TopBadge)
+top = picks.get('top')
+if top:
+    if 2 not in line_at: sys.exit('picks.json "top": the script needs a second line ("Platz …: <Name>.")')
+    people = []
+    for k, p in enumerate(top['people']):
+        src = img(p['img']); w, h = Image.open(f'{pub}/{src}').size; fx, fy = p.get('focus') or moves.FOCUS
+        people.append({'src': src, 'w': w, 'h': h, 'name': p['name'], 'fx': fx, 'fy': fy, 'zoom': p.get('zoom', 1.0), 'me': k == top['me']})
+    title = top['title'].strip()
+    plan['top'] = {'title': moves.title_rows(title), 'label': f"PLATZ {top['rank']}", 'people': people,
+                   'gridEnd': round(line_at[2] - 0.15, 3),
+                   'badgeEnd': round(line_at[3] - 0.15, 3) if 3 in line_at else chapters[0]['e']}
 json.dump(plan, open(f'{out}/plan.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 def ts(v):

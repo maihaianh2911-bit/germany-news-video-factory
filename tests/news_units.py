@@ -197,6 +197,17 @@ assert len(bad) == 3 and 'tien-gan, chi-tiet' in bad[0] and bad[0].startswith('c
 assert 'cần "move"' in moves.check({'img': 'a', 'from': {}}, 'c')[0]
 assert moves.camera({'move': 'tien-gan', 'to': {'z': 1.5, 'x': .5, 'y': .5}}, 1600, 1100, 5)[1]['z'] == 1.5       # explicit numbers win
 assert moves.camera({'from': 1, 'to': 2}, 1600, 1100, 5) == (1, 2) and moves.label({'from': 1, 'to': 2}) == '-' and moves.label(ok_shot) == 'lui-ra'
+# the shared hook of a Top X series (picks.json "top", owner 18/11/2026)
+tp = {'images': {'a': {}, 'b': {}}, 'chapters': [], 'top': {'title': 'Die 5 größten deutschen Schriftsteller', 'rank': 5, 'me': 1,
+      'people': [{'img': 'a', 'name': 'Goethe'}, {'img': 'b', 'name': 'Hesse', 'focus': [0.5, 0.3], 'zoom': 1.6}]}}
+assert moves.check_top(tp) == [] and moves.check_all(tp) == [] and moves.check_top({'chapters': []}) == []
+bt = moves.check_top({'images': {'a': {}}, 'top': {'title': '', 'rank': 0, 'me': 3, 'people': [{'img': 'x', 'name': '', 'zoom': 9}, {'img': 'a', 'name': 'B'}]}})
+assert len(bt) == 6 and any('"me"' in b for b in bt) and any('"img"' in b for b in bt), bt
+assert moves.title_rows('Die 5 größten deutschen Schriftsteller') in (['Die 5 größten deutschen', 'Schriftsteller'], ['Die 5 größten', 'deutschen Schriftsteller'])
+assert moves.title_rows('Top 5 Dichter') == ['Top 5 Dichter']
+l, t, c = moves.circle_window(800, 1200, 300, (0.5, 0.2), 1.5)                   # the circle never shows past the picture
+assert -l + 300 <= 800 * c + 1e-6 and -t + 300 <= 1200 * c + 1e-6 and l <= 0 and t <= 0 and abs(c - 300 / 800 * 1.5) < 1e-9
+assert 'PLATZ 5' in moves.edits_md([{'lines': [1, 1]}], {**tp, 'chapters': [{'pics': [{'img': 'a', 'move': 'tien-gan'}]}]}, [[(0, 3, 1)]], {1: 'x'})
 # --- the posting caption (scripts/news/caption.py) ---
 import caption
 good = ("Fall Fabian: 44 Indizien – wird das Urteil gekippt?\n"
