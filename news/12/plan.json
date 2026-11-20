@@ -33,21 +33,36 @@
      "e": 3.784
     },
     {
-     "move": "tien-gan",
-     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
+     "pair": {
+      "left": {
+       "caption": [
+        "David Berkowitz",
+        "Police photo, 1977"
+       ],
+       "src": "news/12/img/bmug.jpg",
+       "w": 1150,
+       "h": 1542
+      },
+      "right": {
+       "src": "news/12/img/barrest.jpg",
+       "w": 1150,
+       "h": 1213
+      }
+     },
      "tag": "No. 3",
-     "src": "news/12/img/sketch.jpg",
-     "w": 1920,
-     "h": 1650,
+     "credit": "Left: New York City Police photo, 1977 · Right: arrest, Aug. 10, 1977, Mount Vernon Argus",
+     "src": "",
+     "w": 1,
+     "h": 1,
      "from": {
-      "z": 1.0,
-      "x": 0.4641,
+      "z": 1,
+      "x": 0.5,
       "y": 0.5
      },
      "to": {
-      "z": 1.117,
-      "x": 0.45,
-      "y": 0.4475
+      "z": 1,
+      "x": 0.5,
+      "y": 0.5
      },
      "s": 3.784,
      "e": 7.972
@@ -321,22 +336,56 @@
     },
     {
      "move": "tien-gan",
-     "credit": "Grave of Anneliese Michel, Klingenberg · Photo: Offenbacherjung / Wikimedia Commons, CC BY-SA 3.0",
      "tag": "No. 1",
-     "src": "news/12/img/grave.jpg",
-     "w": 1338,
-     "h": 1150,
+     "credit": "Klingenberg am Main, Germany · Photo: chrisaliv / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/12/img/klingen.jpg",
+     "w": 1920,
+     "h": 1440,
      "from": {
       "z": 1.0,
       "x": 0.5,
       "y": 0.5
      },
      "to": {
-      "z": 1.139,
+      "z": 1.1,
       "x": 0.5,
-      "y": 0.4391
+      "y": 0.5
      },
      "s": 57.733,
+     "e": 60.475
+    },
+    {
+     "pair": {
+      "left": {
+       "caption": [
+        "Anneliese Michel",
+        "1952–1976"
+       ],
+       "src": "news/12/img/anneliese.jpg",
+       "w": 1150,
+       "h": 1651
+      },
+      "right": {
+       "src": "news/12/img/grave.jpg",
+       "w": 1338,
+       "h": 1150
+      }
+     },
+     "credit": "Left: Anneliese Michel, photographer unknown · Right: her grave, Photo: Offenbacherjung, CC BY-SA 3.0",
+     "src": "",
+     "w": 1,
+     "h": 1,
+     "from": {
+      "z": 1,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 60.475,
      "e": 62.683
     },
     {
