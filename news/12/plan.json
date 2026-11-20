@@ -14,55 +14,40 @@
    ],
    "pics": [
     {
-     "move": "tien-gan",
-     "credit": "Crucifix, Kefermarkt church (illustration) · Photo: Uoaei1 / Wikimedia Commons, CC BY-SA 4.0",
-     "src": "news/12/img/crucifix.jpg",
-     "w": 1733,
-     "h": 2600,
+     "move": "dung-yen",
+     "credit": "David Berkowitz (1977) · Ronald DeFeo Jr. (1974) · Anneliese Michel — police and archive photos",
+     "src": "news/12/img/trio.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
       "z": 1.0,
       "x": 0.5,
-      "y": 0.35
+      "y": 0.5
      },
      "to": {
-      "z": 1.106,
+      "z": 1.03,
       "x": 0.5,
-      "y": 0.35
+      "y": 0.5
      },
      "s": 0.0,
      "e": 3.784
     },
     {
-     "pair": {
-      "left": {
-       "caption": [
-        "David Berkowitz",
-        "Police photo, 1977"
-       ],
-       "src": "news/12/img/bmug.jpg",
-       "w": 1150,
-       "h": 1542
-      },
-      "right": {
-       "src": "news/12/img/barrest.jpg",
-       "w": 1150,
-       "h": 1213
-      }
-     },
+     "move": "tien-gan",
+     "credit": "David Berkowitz · New York City Police photo, August 11, 1977",
      "tag": "No. 3",
-     "credit": "Left: New York City Police photo, 1977 · Right: arrest, Aug. 10, 1977, Mount Vernon Argus",
-     "src": "",
-     "w": 1,
-     "h": 1,
+     "src": "news/12/img/pbmug.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
-      "z": 1,
+      "z": 1.0,
       "x": 0.5,
       "y": 0.5
      },
      "to": {
-      "z": 1,
+      "z": 1.117,
       "x": 0.5,
-      "y": 0.5
+      "y": 0.4475
      },
      "s": 3.784,
      "e": 7.972
@@ -106,58 +91,58 @@
      "e": 14.726
     },
     {
-     "move": "troi-nhe",
-     "credit": "Manhattan, New York City, 1977 · Photo: Derzsi Elekes Andor / Wikimedia Commons, CC BY-SA 4.0",
-     "src": "news/12/img/nyc.jpg",
-     "w": 1920,
-     "h": 1264,
+     "move": "tien-gan",
+     "credit": "David Berkowitz after his arrest, August 10, 1977 · Mount Vernon Argus, public domain",
+     "src": "news/12/img/pbarrest.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
-      "z": 1.08,
-      "x": 0.421,
+      "z": 1.0,
+      "x": 0.5,
       "y": 0.5
      },
      "to": {
-      "z": 1.12,
+      "z": 1.1,
       "x": 0.5,
-      "y": 0.5
+      "y": 0.4545
      },
      "s": 14.726,
      "e": 16.971
     },
     {
      "move": "dung-yen",
-     "credit": "Attica Correctional Facility, New York · Photo: Bronayur / Wikimedia Commons, CC BY-SA 3.0",
-     "src": "news/12/img/attica1.jpg",
+     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
+     "src": "news/12/img/sketch.jpg",
      "w": 1920,
-     "h": 1440,
+     "h": 1650,
      "from": {
       "z": 1.0,
-      "x": 0.405,
+      "x": 0.4641,
       "y": 0.5
      },
      "to": {
       "z": 1.03,
-      "x": 0.4,
+      "x": 0.4505,
       "y": 0.4854
      },
      "s": 16.971,
      "e": 18.847
     },
     {
-     "move": "nang-len",
-     "credit": "Attica Correctional Facility, entrance · Photo: Jayu / Wikimedia Commons, CC BY-SA 2.0",
-     "src": "news/12/img/attica2.jpg",
-     "w": 1920,
-     "h": 2560,
+     "move": "chi-tiet",
+     "credit": "David Berkowitz · New York City Police photo, August 11, 1977",
+     "src": "news/12/img/pbmug.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
-      "z": 1.06,
+      "z": 1.0,
       "x": 0.5,
-      "y": 0.5139
+      "y": 0.5
      },
      "to": {
-      "z": 1.06,
+      "z": 1.25,
       "x": 0.5,
-      "y": 0.3276
+      "y": 0.4
      },
      "s": 18.847,
      "e": 22.193
@@ -202,20 +187,35 @@
      "e": 30.529
     },
     {
-     "move": "tien-gan",
-     "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
-     "src": "news/12/img/mug.jpg",
-     "w": 1150,
-     "h": 1812,
+     "pair": {
+      "left": {
+       "caption": [
+        "Ronald DeFeo Jr.",
+        "Police photo, 1974"
+       ],
+       "src": "news/12/img/mug.jpg",
+       "w": 1150,
+       "h": 1812
+      },
+      "right": {
+       "src": "news/12/img/house1.jpg",
+       "w": 1630,
+       "h": 1150
+      }
+     },
+     "credit": "Left: Suffolk County Police photo, 1974 · Right: 112 Ocean Avenue, Photo: Seulatr",
+     "src": "",
+     "w": 1,
+     "h": 1,
      "from": {
-      "z": 1.0,
+      "z": 1,
       "x": 0.5,
-      "y": 0.3
+      "y": 0.5
      },
      "to": {
-      "z": 1.104,
+      "z": 1,
       "x": 0.5,
-      "y": 0.3
+      "y": 0.5
      },
      "s": 30.529,
      "e": 34.252
@@ -240,6 +240,25 @@
      "e": 40.447
     },
     {
+     "move": "tien-gan",
+     "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
+     "src": "news/12/img/mug.jpg",
+     "w": 1150,
+     "h": 1812,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.3
+     },
+     "to": {
+      "z": 1.106,
+      "x": 0.5,
+      "y": 0.3
+     },
+     "s": 40.447,
+     "e": 44.234
+    },
+    {
      "move": "chi-tiet",
      "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
      "src": "news/12/img/mug.jpg",
@@ -251,28 +270,9 @@
       "y": 0.39
      },
      "to": {
-      "z": 1.265,
+      "z": 1.25,
       "x": 0.5,
       "y": 0.28
-     },
-     "s": 40.447,
-     "e": 44.234
-    },
-    {
-     "move": "tien-gan",
-     "credit": "Courtroom (illustration) · Photo: Brandonrush / Wikimedia Commons, CC0",
-     "src": "news/12/img/court.jpg",
-     "w": 1920,
-     "h": 1280,
-     "from": {
-      "z": 1.0,
-      "x": 0.5,
-      "y": 0.5
-     },
-     "to": {
-      "z": 1.1,
-      "x": 0.5,
-      "y": 0.4545
      },
      "s": 44.234,
      "e": 47.466
@@ -336,11 +336,11 @@
     },
     {
      "move": "tien-gan",
+     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
      "tag": "No. 1",
-     "credit": "Klingenberg am Main, Germany · Photo: chrisaliv / Wikimedia Commons, CC BY-SA 4.0",
-     "src": "news/12/img/klingen.jpg",
-     "w": 1920,
-     "h": 1440,
+     "src": "news/12/img/panne.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
       "z": 1.0,
       "x": 0.5,
@@ -349,7 +349,7 @@
      "to": {
       "z": 1.1,
       "x": 0.5,
-      "y": 0.5
+      "y": 0.4545
      },
      "s": 57.733,
      "e": 60.475
@@ -371,7 +371,7 @@
        "h": 1150
       }
      },
-     "credit": "Left: Anneliese Michel, photographer unknown · Right: her grave, Photo: Offenbacherjung, CC BY-SA 3.0",
+     "credit": "Left: Anneliese Michel, archive photo · Right: her grave, Photo: Offenbacherjung, CC BY-SA 3.0",
      "src": "",
      "w": 1,
      "h": 1,
@@ -446,20 +446,20 @@
      "e": 70.933
     },
     {
-     "move": "troi-nhe",
-     "credit": "Michel family sawmill, Klingenberg · Photo: D. Pfister-Senz / Wikimedia Commons, CC BY-SA 4.0",
-     "src": "news/12/img/villa.jpg",
-     "w": 2044,
-     "h": 1150,
+     "move": "chi-tiet",
+     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
+     "src": "news/12/img/panne.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
-      "z": 1.08,
-      "x": 0.4125,
+      "z": 1.0,
+      "x": 0.5,
       "y": 0.5
      },
      "to": {
-      "z": 1.12,
+      "z": 1.272,
       "x": 0.5,
-      "y": 0.5
+      "y": 0.42
      },
      "s": 70.933,
      "e": 74.822
@@ -504,10 +504,10 @@
     },
     {
      "move": "tien-gan",
-     "credit": "Old town of Klingenberg am Main · Photo: K1008 / Wikimedia Commons, CC0",
-     "src": "news/12/img/alley.jpg",
+     "credit": "Klingenberg am Main, Germany · Photo: chrisaliv / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/12/img/klingen.jpg",
      "w": 1920,
-     "h": 2560,
+     "h": 1440,
      "from": {
       "z": 1.0,
       "x": 0.5,
@@ -542,10 +542,10 @@
     },
     {
      "move": "dung-yen",
-     "credit": "Klingenberg am Main in the evening · Photo: Tilman AB / Wikimedia Commons, public domain",
-     "src": "news/12/img/town.jpg",
-     "w": 1920,
-     "h": 1437,
+     "credit": "David Berkowitz (1977) · Ronald DeFeo Jr. (1974) · Anneliese Michel — police and archive photos",
+     "src": "news/12/img/trio.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
       "z": 1.0,
       "x": 0.5,
