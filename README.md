@@ -37,7 +37,7 @@ Nhánh **`renders`**, thư mục `news/<số phiếu>/`: `video.mp4`, `subtitles
   - Hoặc một tác vụ riêng cho repo này (lời nhắn "Làm theo AGENT_NIGHTLY.md của repo maihaianh2911-bit/germany-news-video-factory."): chép URL và token của tác vụ riêng đó.
   Sau khi thêm, bấm **Gọi Claude ngay** một lần: nhật ký cho biết hai secret có chạy không.
   Khi máy không gọi được Claude (thiếu secret, Claude hết hạn mức), bình luận trên phiếu ghi **⚠️ Chưa gọi được Claude** kèm link nút này: bấm **Run workflow** là Claude làm tiếp.
-- **Giọng đọc tiếng Anh:** ghi mã giọng vào `prompts/news_voice.json` (**đang để trống: phải chọn một giọng tiếng Anh trước khi làm video đầu tiên**). Xem danh sách và nghe thử bằng workflow **Thử voice 11labs**.
+- **Giọng đọc tiếng Anh:** ghi mã giọng vào `prompts/news_voice.json` (hiện là giọng Roger). Xem danh sách và nghe thử bằng workflow **Thử voice 11labs**.
 - Mỗi video tốn khoảng 20–45 phút máy GitHub (video 1,5 phút ~20 phút, video 3 phút ~40 phút).
 
 ## Chạy tay (tab **Actions**)
