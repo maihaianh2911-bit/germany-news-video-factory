@@ -4,10 +4,6 @@
    "src": "1/17-1.jpg",
    "mode": "keep"
   },
-  "sketch": {
-   "src": "1/1-1.jpg",
-   "mode": "keep"
-  },
   "dog1": {
    "src": "1/12-6.jpg",
    "mode": "keep"
@@ -76,6 +72,18 @@
    "src": "own/print-anneliese.jpg",
    "mode": "keep",
    "page": "https://en.wikipedia.org/wiki/File:Anneliese_Michel_2.jpg"
+  },
+  "bnight": {
+   "src": "own/berkowitz-arrest-night.jpg",
+   "mode": "keep"
+  },
+  "bday": {
+   "src": "own/berkowitz-arrest-day.jpg",
+   "mode": "keep"
+  },
+  "bold": {
+   "src": "own/berkowitz-interview.jpg",
+   "mode": "keep"
   }
  },
  "chapters": [
@@ -93,7 +101,7 @@
     },
     {
      "img": "pbmug",
-     "move": "tien-gan",
+     "move": "dung-yen",
      "focus": [
       0.5,
       0.4
@@ -102,6 +110,17 @@
      "credit": "David Berkowitz · New York City Police photo, August 11, 1977",
      "at": 2,
      "tag": "No. 3"
+    },
+    {
+     "img": "bnight",
+     "move": "tien-gan",
+     "focus": [
+      0.42,
+      0.4
+     ],
+     "why": "sau khi bắn chết sáu người: Berkowitz lúc bị bắt trong đêm",
+     "credit": "David Berkowitz under arrest, New York, August 10, 1977 · press photo",
+     "at": 3
     },
     {
      "img": "dog1",
@@ -126,47 +145,47 @@
      "at": 5
     },
     {
+     "img": "bday",
+     "move": "tien-gan",
+     "focus": [
+      0.45,
+      0.33
+     ],
+     "why": "ra lệnh giết người: Berkowitz cười khi bị giải đi",
+     "credit": "David Berkowitz in police custody, August 1977 · press photo",
+     "at": 6
+    },
+    {
+     "img": "bold",
+     "move": "dung-yen",
+     "focus": [
+      0.55,
+      0.45
+     ],
+     "why": "phỏng vấn trong tù: Berkowitz khi đã già",
+     "credit": "David Berkowitz in a later prison interview · video still",
+     "at": 7
+    },
+    {
      "img": "pbarrest",
      "move": "tien-gan",
      "focus": [
       0.5,
       0.45
      ],
-     "why": "ra lệnh giết người: gương mặt Berkowitz lúc bị bắt",
+     "why": "câu nhắc tên Berkowitz: gương mặt hắn năm 1977",
      "credit": "David Berkowitz after his arrest, August 10, 1977 · Mount Vernon Argus, public domain",
-     "at": 6
-    },
-    {
-     "img": "sketch",
-     "move": "dung-yen",
-     "focus": [
-      0.45,
-      0.3
-     ],
-     "why": "hai năm sau: Berkowitz ở tòa (tranh vẽ 1978)",
-     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
-     "at": 7
-    },
-    {
-     "img": "pbmug",
-     "move": "chi-tiet",
-     "focus": [
-      0.5,
-      0.35
-     ],
-     "why": "câu nhắc tên Berkowitz: soi gương mặt hắn",
-     "credit": "David Berkowitz · New York City Police photo, August 11, 1977",
      "at": 8
     },
     {
-     "img": "sketch",
+     "img": "bold",
      "move": "chi-tiet",
      "focus": [
-      0.5,
-      0.25
+      0.58,
+      0.42
      ],
-     "why": "tìm đến Chúa: soi gương mặt Berkowitz đang gào",
-     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
+     "why": "tìm đến Chúa: soi gương mặt Berkowitz trong tù",
+     "credit": "David Berkowitz in a later prison interview · video still",
      "at": 9
     },
     {
