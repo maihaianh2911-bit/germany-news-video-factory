@@ -1,0 +1,934 @@
+{
+ "duration": 94.359,
+ "showChapters": false,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 94.359,
+   "num": "01",
+   "label": "Top 3",
+   "title": "Stories of demons",
+   "desc": [
+    "Son of Sam, Amityville",
+    "The real Emily Rose"
+   ],
+   "pics": [
+    {
+     "move": "tien-gan",
+     "credit": "Crucifix, Kefermarkt church (illustration) · Photo: Uoaei1 / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/12/img/crucifix.jpg",
+     "w": 1733,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.35
+     },
+     "to": {
+      "z": 1.106,
+      "x": 0.5,
+      "y": 0.35
+     },
+     "s": 0.0,
+     "e": 3.784
+    },
+    {
+     "move": "tien-gan",
+     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
+     "tag": "No. 3",
+     "src": "news/12/img/sketch.jpg",
+     "w": 1920,
+     "h": 1650,
+     "from": {
+      "z": 1.0,
+      "x": 0.4641,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.117,
+      "x": 0.45,
+      "y": 0.4475
+     },
+     "s": 3.784,
+     "e": 7.972
+    },
+    {
+     "move": "dung-yen",
+     "credit": "Black Labrador (illustration) · Photo: M-riedel / Wikimedia Commons, public domain",
+     "src": "news/12/img/dog1.jpg",
+     "w": 1920,
+     "h": 1280,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.45,
+      "y": 0.5146
+     },
+     "s": 7.972,
+     "e": 11.926
+    },
+    {
+     "move": "tien-gan",
+     "credit": "Black Labrador (illustration) · Photo: Kemph003 / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/12/img/dog2.jpg",
+     "w": 1920,
+     "h": 2561,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.3471
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.3155
+     },
+     "s": 11.926,
+     "e": 14.726
+    },
+    {
+     "move": "troi-nhe",
+     "credit": "Manhattan, New York City, 1977 · Photo: Derzsi Elekes Andor / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/12/img/nyc.jpg",
+     "w": 1920,
+     "h": 1264,
+     "from": {
+      "z": 1.08,
+      "x": 0.421,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 14.726,
+     "e": 16.971
+    },
+    {
+     "move": "dung-yen",
+     "credit": "Attica Correctional Facility, New York · Photo: Bronayur / Wikimedia Commons, CC BY-SA 3.0",
+     "src": "news/12/img/attica1.jpg",
+     "w": 1920,
+     "h": 1440,
+     "from": {
+      "z": 1.0,
+      "x": 0.405,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.4,
+      "y": 0.4854
+     },
+     "s": 16.971,
+     "e": 18.847
+    },
+    {
+     "move": "nang-len",
+     "credit": "Attica Correctional Facility, entrance · Photo: Jayu / Wikimedia Commons, CC BY-SA 2.0",
+     "src": "news/12/img/attica2.jpg",
+     "w": 1920,
+     "h": 2560,
+     "from": {
+      "z": 1.06,
+      "x": 0.5,
+      "y": 0.5139
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5,
+      "y": 0.3276
+     },
+     "s": 18.847,
+     "e": 22.193
+    },
+    {
+     "move": "chi-tiet",
+     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
+     "src": "news/12/img/sketch.jpg",
+     "w": 1920,
+     "h": 1650,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.281,
+      "x": 0.5,
+      "y": 0.3902
+     },
+     "s": 22.193,
+     "e": 26.213
+    },
+    {
+     "move": "tien-gan",
+     "credit": "112 Ocean Avenue, Amityville, New York · Photo: Seulatr / Wikimedia Commons, public domain",
+     "tag": "No. 2",
+     "src": "news/12/img/house1.jpg",
+     "w": 1630,
+     "h": 1150,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.121,
+      "x": 0.5,
+      "y": 0.4461
+     },
+     "s": 26.213,
+     "e": 30.529
+    },
+    {
+     "move": "tien-gan",
+     "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
+     "src": "news/12/img/mug.jpg",
+     "w": 1150,
+     "h": 1812,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.3
+     },
+     "to": {
+      "z": 1.104,
+      "x": 0.5,
+      "y": 0.3
+     },
+     "s": 30.529,
+     "e": 34.252
+    },
+    {
+     "move": "luot-trai",
+     "credit": "112 Ocean Avenue, Amityville, 2010 · Photo: Doug Kerr / Wikimedia Commons, CC BY-SA 2.0",
+     "src": "news/12/img/house2.jpg",
+     "w": 1533,
+     "h": 1150,
+     "from": {
+      "z": 1.237,
+      "x": 0.6725,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.237,
+      "x": 0.3275,
+      "y": 0.5
+     },
+     "s": 34.252,
+     "e": 40.447
+    },
+    {
+     "move": "chi-tiet",
+     "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
+     "src": "news/12/img/mug.jpg",
+     "w": 1150,
+     "h": 1812,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.39
+     },
+     "to": {
+      "z": 1.265,
+      "x": 0.5,
+      "y": 0.28
+     },
+     "s": 40.447,
+     "e": 44.234
+    },
+    {
+     "move": "tien-gan",
+     "credit": "Courtroom (illustration) · Photo: Brandonrush / Wikimedia Commons, CC0",
+     "src": "news/12/img/court.jpg",
+     "w": 1920,
+     "h": 1280,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.4545
+     },
+     "s": 44.234,
+     "e": 47.466
+    },
+    {
+     "move": "ha-xuong",
+     "credit": "112 Ocean Avenue from the air · Edith Evans Real Estate / Wikimedia Commons, public domain",
+     "src": "news/12/img/air.jpg",
+     "w": 1838,
+     "h": 2600,
+     "from": {
+      "z": 1.06,
+      "x": 0.5,
+      "y": 0.4228
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5,
+      "y": 0.5772
+     },
+     "s": 47.466,
+     "e": 50.328
+    },
+    {
+     "move": "chi-tiet",
+     "credit": "112 Ocean Avenue, Amityville, New York · Photo: Seulatr / Wikimedia Commons, public domain",
+     "src": "news/12/img/house1.jpg",
+     "w": 1630,
+     "h": 1150,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.334,
+      "x": 0.5,
+      "y": 0.3748
+     },
+     "s": 50.328,
+     "e": 55.101
+    },
+    {
+     "move": "lui-ra",
+     "credit": "112 Ocean Avenue, Amityville, 2010 · Photo: Doug Kerr / Wikimedia Commons, CC BY-SA 2.0",
+     "src": "news/12/img/house2.jpg",
+     "w": 1533,
+     "h": 1150,
+     "from": {
+      "z": 1.18,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.525,
+      "y": 0.5
+     },
+     "s": 55.101,
+     "e": 57.733
+    },
+    {
+     "move": "tien-gan",
+     "credit": "Grave of Anneliese Michel, Klingenberg · Photo: Offenbacherjung / Wikimedia Commons, CC BY-SA 3.0",
+     "tag": "No. 1",
+     "src": "news/12/img/grave.jpg",
+     "w": 1338,
+     "h": 1150,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.139,
+      "x": 0.5,
+      "y": 0.4391
+     },
+     "s": 57.733,
+     "e": 62.683
+    },
+    {
+     "move": "luot-phai",
+     "credit": "Court building, Aschaffenburg · Photo: Lutz Hartmann / Wikimedia Commons, CC BY-SA 3.0",
+     "src": "news/12/img/justiz.jpg",
+     "w": 1920,
+     "h": 1440,
+     "from": {
+      "z": 1.06,
+      "x": 0.4028,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5972,
+      "y": 0.5
+     },
+     "s": 62.683,
+     "e": 65.676
+    },
+    {
+     "move": "tien-gan",
+     "credit": "Tape recorder, 1960s (illustration) · Photo: R. Henrik Nilsson / Wikimedia Commons, CC BY 4.0",
+     "src": "news/12/img/tape.jpg",
+     "w": 1920,
+     "h": 1421,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.4545
+     },
+     "s": 65.676,
+     "e": 68.805
+    },
+    {
+     "move": "chi-tiet",
+     "credit": "Painting by Francisco Goya, 1788 (illustration) · Wikimedia Commons, public domain",
+     "src": "news/12/img/goya.jpg",
+     "w": 1150,
+     "h": 1621,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.25,
+      "x": 0.6,
+      "y": 0.4
+     },
+     "s": 68.805,
+     "e": 70.933
+    },
+    {
+     "move": "troi-nhe",
+     "credit": "Michel family sawmill, Klingenberg · Photo: D. Pfister-Senz / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/12/img/villa.jpg",
+     "w": 2044,
+     "h": 1150,
+     "from": {
+      "z": 1.08,
+      "x": 0.4125,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 70.933,
+     "e": 74.822
+    },
+    {
+     "move": "ha-xuong",
+     "credit": "Crucifix, Kefermarkt church (illustration) · Photo: Uoaei1 / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/12/img/crucifix.jpg",
+     "w": 1733,
+     "h": 2600,
+     "from": {
+      "z": 1.06,
+      "x": 0.5,
+      "y": 0.2953
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5,
+      "y": 0.5047
+     },
+     "s": 74.822,
+     "e": 79.053
+    },
+    {
+     "move": "chi-tiet",
+     "credit": "Grave of Anneliese Michel, Klingenberg · Photo: Offenbacherjung / Wikimedia Commons, CC BY-SA 3.0",
+     "src": "news/12/img/grave.jpg",
+     "w": 1338,
+     "h": 1150,
+     "from": {
+      "z": 1.0,
+      "x": 0.5359,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.276,
+      "x": 0.6361,
+      "y": 0.608
+     },
+     "s": 79.053,
+     "e": 82.989
+    },
+    {
+     "move": "tien-gan",
+     "credit": "Old town of Klingenberg am Main · Photo: K1008 / Wikimedia Commons, CC0",
+     "src": "news/12/img/alley.jpg",
+     "w": 1920,
+     "h": 2560,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 82.989,
+     "e": 85.652
+    },
+    {
+     "move": "lui-ra",
+     "credit": "Court building, Aschaffenburg · Photo: Lutz Hartmann / Wikimedia Commons, CC BY-SA 3.0",
+     "src": "news/12/img/justiz.jpg",
+     "w": 1920,
+     "h": 1440,
+     "from": {
+      "z": 1.18,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 85.652,
+     "e": 88.677
+    },
+    {
+     "move": "dung-yen",
+     "credit": "Klingenberg am Main in the evening · Photo: Tilman AB / Wikimedia Commons, public domain",
+     "src": "news/12/img/town.jpg",
+     "w": 1920,
+     "h": 1437,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 88.677,
+     "e": 94.359
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 1.0,
+   "e": 3.484,
+   "text": "Top three true crime cases\ntied to stories of demons.",
+   "hl": []
+  },
+  {
+   "s": 3.934,
+   "e": 5.429,
+   "text": "Number three: Son of Sam.",
+   "hl": [
+    "Son of Sam"
+   ]
+  },
+  {
+   "s": 5.879,
+   "e": 7.872,
+   "text": "After shooting six people\nto death in New York,",
+   "hl": []
+  },
+  {
+   "s": 8.122,
+   "e": 9.71,
+   "text": "David Berkowitz\nclaimed the one giving",
+   "hl": []
+  },
+  {
+   "s": 9.83,
+   "e": 11.626,
+   "text": "him orders was his\nneighbor's black dog.",
+   "hl": []
+  },
+  {
+   "s": 12.076,
+   "e": 14.626,
+   "text": "He said a 6,000-year-old\ndemon had possessed the dog",
+   "hl": [
+    "6,000-year-old"
+   ]
+  },
+  {
+   "s": 14.876,
+   "e": 16.671,
+   "text": "and used its voice\nto order him to kill.",
+   "hl": []
+  },
+  {
+   "s": 17.121,
+   "e": 18.747,
+   "text": "Two years later,\nin a prison interview,",
+   "hl": []
+  },
+  {
+   "s": 18.997,
+   "e": 20.369,
+   "text": "Berkowitz admitted\nhe had made up",
+   "hl": []
+  },
+  {
+   "s": 20.489,
+   "e": 21.893,
+   "text": "the demon to\nexcuse his crimes.",
+   "hl": []
+  },
+  {
+   "s": 22.343,
+   "e": 24.166,
+   "text": "It was not until\n1987 that he turned",
+   "hl": []
+  },
+  {
+   "s": 24.286,
+   "e": 25.913,
+   "text": "to God to beg\nfor forgiveness.",
+   "hl": []
+  },
+  {
+   "s": 26.363,
+   "e": 28.056,
+   "text": "Number two: the\nAmityville house.",
+   "hl": [
+    "Amityville"
+   ]
+  },
+  {
+   "s": 28.506,
+   "e": 30.429,
+   "text": "One evening in\nNovember 1974,",
+   "hl": []
+  },
+  {
+   "s": 30.679,
+   "e": 32.171,
+   "text": "Ronald DeFeo Jr.\nran into a bar,",
+   "hl": []
+  },
+  {
+   "s": 32.291,
+   "e": 33.952,
+   "text": "saying his parents\nhad been shot.",
+   "hl": []
+  },
+  {
+   "s": 34.402,
+   "e": 36.76,
+   "text": "Only when friends followed\nhim home did they discover",
+   "hl": []
+  },
+  {
+   "s": 37.01,
+   "e": 38.546,
+   "text": "that all four of\nhis younger siblings",
+   "hl": []
+  },
+  {
+   "s": 38.666,
+   "e": 40.147,
+   "text": "were also dead in\ntheir bedrooms.",
+   "hl": []
+  },
+  {
+   "s": 40.597,
+   "e": 41.108,
+   "text": "The next day,",
+   "hl": []
+  },
+  {
+   "s": 41.228,
+   "e": 43.934,
+   "text": "Ronald confessed that he was\nthe one who had fired the gun.",
+   "hl": []
+  },
+  {
+   "s": 44.384,
+   "e": 45.762,
+   "text": "In court, he said\nvoices had urged",
+   "hl": []
+  },
+  {
+   "s": 45.882,
+   "e": 47.166,
+   "text": "him to kill his\nwhole family.",
+   "hl": []
+  },
+  {
+   "s": 47.616,
+   "e": 50.028,
+   "text": "A year later, the Lutz\nfamily moved into that house.",
+   "hl": []
+  },
+  {
+   "s": 50.478,
+   "e": 52.721,
+   "text": "Mr. Lutz said that when a\npriest came to bless it,",
+   "hl": []
+  },
+  {
+   "s": 52.971,
+   "e": 54.801,
+   "text": "the priest heard a\nvoice shout: \"Get out!\"",
+   "hl": []
+  },
+  {
+   "s": 55.251,
+   "e": 57.433,
+   "text": "The Lutz family lasted\nonly 28 days there.",
+   "hl": [
+    "28 days"
+   ]
+  },
+  {
+   "s": 57.883,
+   "e": 60.175,
+   "text": "Number one: the case behind\nthe movie Emily Rose.",
+   "hl": [
+    "Emily Rose"
+   ]
+  },
+  {
+   "s": 60.625,
+   "e": 62.583,
+   "text": "Two years after\nAnneliese Michel died,",
+   "hl": []
+  },
+  {
+   "s": 62.833,
+   "e": 64.064,
+   "text": "her sister heard\nher voice again,",
+   "hl": []
+  },
+  {
+   "s": 64.184,
+   "e": 65.376,
+   "text": "in the middle\nof a courtroom.",
+   "hl": []
+  },
+  {
+   "s": 65.826,
+   "e": 68.505,
+   "text": "The court was playing a tape\nrecorded during an exorcism.",
+   "hl": []
+  },
+  {
+   "s": 68.955,
+   "e": 70.833,
+   "text": "On the tape, two\npriests recite prayers,",
+   "hl": []
+  },
+  {
+   "s": 71.083,
+   "e": 72.587,
+   "text": "while Anneliese\nscreams back in a",
+   "hl": []
+  },
+  {
+   "s": 72.707,
+   "e": 74.522,
+   "text": "voice almost impossible\nto recognize.",
+   "hl": []
+  },
+  {
+   "s": 74.972,
+   "e": 75.879,
+   "text": "During those rituals,",
+   "hl": [
+    "Lucifer",
+    "Judas"
+   ]
+  },
+  {
+   "s": 75.999,
+   "e": 78.753,
+   "text": "she sometimes called herself\nLucifer, and sometimes Judas.",
+   "hl": [
+    "Lucifer",
+    "Judas"
+   ]
+  },
+  {
+   "s": 79.203,
+   "e": 80.748,
+   "text": "Anneliese died\nat the age of 23",
+   "hl": []
+  },
+  {
+   "s": 80.868,
+   "e": 82.689,
+   "text": "from malnutrition\nand dehydration.",
+   "hl": []
+  },
+  {
+   "s": 83.139,
+   "e": 85.352,
+   "text": "By then, she weighed\nonly about 68 pounds.",
+   "hl": [
+    "68 pounds"
+   ]
+  },
+  {
+   "s": 85.802,
+   "e": 88.377,
+   "text": "Her parents and the two priests\nsat at the defendants' table.",
+   "hl": []
+  },
+  {
+   "s": 88.827,
+   "e": 91.309,
+   "text": "All four were later convicted\nof negligent homicide.",
+   "hl": []
+  }
+ ],
+ "voice": [
+  {
+   "s": 1.0,
+   "src": "news/12/voice/line_01.mp3"
+  },
+  {
+   "s": 3.934,
+   "src": "news/12/voice/line_02.mp3"
+  },
+  {
+   "s": 5.879,
+   "src": "news/12/voice/line_03.mp3"
+  },
+  {
+   "s": 8.122,
+   "src": "news/12/voice/line_04.mp3"
+  },
+  {
+   "s": 12.076,
+   "src": "news/12/voice/line_05.mp3"
+  },
+  {
+   "s": 14.876,
+   "src": "news/12/voice/line_06.mp3"
+  },
+  {
+   "s": 17.121,
+   "src": "news/12/voice/line_07.mp3"
+  },
+  {
+   "s": 18.997,
+   "src": "news/12/voice/line_08.mp3"
+  },
+  {
+   "s": 22.343,
+   "src": "news/12/voice/line_09.mp3"
+  },
+  {
+   "s": 26.363,
+   "src": "news/12/voice/line_10.mp3"
+  },
+  {
+   "s": 28.506,
+   "src": "news/12/voice/line_11.mp3"
+  },
+  {
+   "s": 30.679,
+   "src": "news/12/voice/line_12.mp3"
+  },
+  {
+   "s": 34.402,
+   "src": "news/12/voice/line_13.mp3"
+  },
+  {
+   "s": 37.01,
+   "src": "news/12/voice/line_14.mp3"
+  },
+  {
+   "s": 40.597,
+   "src": "news/12/voice/line_15.mp3"
+  },
+  {
+   "s": 44.384,
+   "src": "news/12/voice/line_16.mp3"
+  },
+  {
+   "s": 47.616,
+   "src": "news/12/voice/line_17.mp3"
+  },
+  {
+   "s": 50.478,
+   "src": "news/12/voice/line_18.mp3"
+  },
+  {
+   "s": 52.971,
+   "src": "news/12/voice/line_19.mp3"
+  },
+  {
+   "s": 55.251,
+   "src": "news/12/voice/line_20.mp3"
+  },
+  {
+   "s": 57.883,
+   "src": "news/12/voice/line_21.mp3"
+  },
+  {
+   "s": 60.625,
+   "src": "news/12/voice/line_22.mp3"
+  },
+  {
+   "s": 62.833,
+   "src": "news/12/voice/line_23.mp3"
+  },
+  {
+   "s": 65.826,
+   "src": "news/12/voice/line_24.mp3"
+  },
+  {
+   "s": 68.955,
+   "src": "news/12/voice/line_25.mp3"
+  },
+  {
+   "s": 71.083,
+   "src": "news/12/voice/line_26.mp3"
+  },
+  {
+   "s": 74.972,
+   "src": "news/12/voice/line_27.mp3"
+  },
+  {
+   "s": 79.203,
+   "src": "news/12/voice/line_28.mp3"
+  },
+  {
+   "s": 83.139,
+   "src": "news/12/voice/line_29.mp3"
+  },
+  {
+   "s": 85.802,
+   "src": "news/12/voice/line_30.mp3"
+  },
+  {
+   "s": 88.827,
+   "src": "news/12/voice/line_31.mp3"
+  }
+ ],
+ "music": "news/12/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Source Serif 4",
+   "file": "news/fonts/source-serif-4-latin-wght-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  },
+  {
+   "family": "Source Sans 3",
+   "file": "news/fonts/source-sans-3-latin-wght-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ],
+ "grain": [
+  "news/grain_0.jpg",
+  "news/grain_1.jpg",
+  "news/grain_2.jpg",
+  "news/grain_3.jpg"
+ ]
+}
