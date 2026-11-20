@@ -33,7 +33,7 @@
      "e": 3.784
     },
     {
-     "move": "tien-gan",
+     "move": "dung-yen",
      "credit": "David Berkowitz · New York City Police photo, August 11, 1977",
      "tag": "No. 3",
      "src": "news/12/img/pbmug.jpg",
@@ -45,11 +45,30 @@
       "y": 0.5
      },
      "to": {
-      "z": 1.117,
+      "z": 1.03,
       "x": 0.5,
-      "y": 0.4475
+      "y": 0.4854
      },
      "s": 3.784,
+     "e": 5.729
+    },
+    {
+     "move": "tien-gan",
+     "credit": "David Berkowitz under arrest, New York, August 10, 1977 · press photo",
+     "src": "news/12/img/bnight.jpg",
+     "w": 2000,
+     "h": 1333,
+     "from": {
+      "z": 1.0,
+      "x": 0.42,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.42,
+      "y": 0.4545
+     },
+     "s": 5.729,
      "e": 7.972
     },
     {
@@ -92,6 +111,44 @@
     },
     {
      "move": "tien-gan",
+     "credit": "David Berkowitz in police custody, August 1977 · press photo",
+     "src": "news/12/img/bday.jpg",
+     "w": 1721,
+     "h": 1150,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.45,
+      "y": 0.4545
+     },
+     "s": 14.726,
+     "e": 16.971
+    },
+    {
+     "move": "dung-yen",
+     "credit": "David Berkowitz in a later prison interview · video still",
+     "src": "news/12/img/bold.jpg",
+     "w": 1791,
+     "h": 1150,
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.55,
+      "y": 0.4854
+     },
+     "s": 16.971,
+     "e": 18.847
+    },
+    {
+     "move": "tien-gan",
      "credit": "David Berkowitz after his arrest, August 10, 1977 · Mount Vernon Argus, public domain",
      "src": "news/12/img/pbarrest.jpg",
      "w": 1620,
@@ -106,62 +163,24 @@
       "x": 0.5,
       "y": 0.4545
      },
-     "s": 14.726,
-     "e": 16.971
-    },
-    {
-     "move": "dung-yen",
-     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
-     "src": "news/12/img/sketch.jpg",
-     "w": 1920,
-     "h": 1650,
-     "from": {
-      "z": 1.0,
-      "x": 0.4641,
-      "y": 0.5
-     },
-     "to": {
-      "z": 1.03,
-      "x": 0.4505,
-      "y": 0.4854
-     },
-     "s": 16.971,
-     "e": 18.847
-    },
-    {
-     "move": "chi-tiet",
-     "credit": "David Berkowitz · New York City Police photo, August 11, 1977",
-     "src": "news/12/img/pbmug.jpg",
-     "w": 1620,
-     "h": 1500,
-     "from": {
-      "z": 1.0,
-      "x": 0.5,
-      "y": 0.5
-     },
-     "to": {
-      "z": 1.25,
-      "x": 0.5,
-      "y": 0.4
-     },
      "s": 18.847,
      "e": 22.193
     },
     {
      "move": "chi-tiet",
-     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
-     "src": "news/12/img/sketch.jpg",
-     "w": 1920,
-     "h": 1650,
+     "credit": "David Berkowitz in a later prison interview · video still",
+     "src": "news/12/img/bold.jpg",
+     "w": 1791,
+     "h": 1150,
      "from": {
       "z": 1.0,
-      "x": 0.5,
+      "x": 0.54,
       "y": 0.5
      },
      "to": {
       "z": 1.281,
-      "x": 0.5,
-      "y": 0.3902
+      "x": 0.58,
+      "y": 0.42
      },
      "s": 22.193,
      "e": 26.213
@@ -259,20 +278,20 @@
      "e": 44.234
     },
     {
-     "move": "chi-tiet",
-     "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
-     "src": "news/12/img/mug.jpg",
-     "w": 1150,
-     "h": 1812,
+     "move": "tien-gan",
+     "credit": "Film poster: Amityville II: The Possession (1982), based on the DeFeo murders · Orion Pictures",
+     "src": "news/12/img/pamity2.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
       "z": 1.0,
       "x": 0.5,
-      "y": 0.39
+      "y": 0.5
      },
      "to": {
-      "z": 1.25,
+      "z": 1.1,
       "x": 0.5,
-      "y": 0.28
+      "y": 0.4545
      },
      "s": 44.234,
      "e": 47.466
@@ -308,11 +327,30 @@
       "y": 0.5
      },
      "to": {
-      "z": 1.334,
+      "z": 1.25,
       "x": 0.5,
-      "y": 0.3748
+      "y": 0.4
      },
      "s": 50.328,
+     "e": 52.821
+    },
+    {
+     "move": "tien-gan",
+     "credit": "Film poster: The Amityville Horror (1979) · American International Pictures",
+     "src": "news/12/img/pamity.jpg",
+     "w": 1620,
+     "h": 1500,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.4545
+     },
+     "s": 52.821,
      "e": 55.101
     },
     {
@@ -336,9 +374,9 @@
     },
     {
      "move": "tien-gan",
-     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
+     "credit": "Film poster: The Exorcism of Emily Rose (2005) · Sony Pictures / Screen Gems",
      "tag": "No. 1",
-     "src": "news/12/img/panne.jpg",
+     "src": "news/12/img/pemily.jpg",
      "w": 1620,
      "h": 1500,
      "from": {
@@ -427,20 +465,20 @@
      "e": 68.805
     },
     {
-     "move": "chi-tiet",
-     "credit": "Painting by Francisco Goya, 1788 (illustration) · Wikimedia Commons, public domain",
-     "src": "news/12/img/goya.jpg",
-     "w": 1150,
-     "h": 1621,
+     "move": "tien-gan",
+     "credit": "Film poster: Requiem (2006), based on the case of Anneliese Michel",
+     "src": "news/12/img/prequiem.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
       "z": 1.0,
       "x": 0.5,
-      "y": 0.45
+      "y": 0.5
      },
      "to": {
-      "z": 1.25,
-      "x": 0.6,
-      "y": 0.4
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.4545
      },
      "s": 68.805,
      "e": 70.933
@@ -503,20 +541,20 @@
      "e": 82.989
     },
     {
-     "move": "tien-gan",
-     "credit": "Klingenberg am Main, Germany · Photo: chrisaliv / Wikimedia Commons, CC BY-SA 4.0",
-     "src": "news/12/img/klingen.jpg",
-     "w": 1920,
-     "h": 1440,
+     "move": "dung-yen",
+     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
+     "src": "news/12/img/panne.jpg",
+     "w": 1620,
+     "h": 1500,
      "from": {
       "z": 1.0,
       "x": 0.5,
       "y": 0.5
      },
      "to": {
-      "z": 1.1,
+      "z": 1.03,
       "x": 0.5,
-      "y": 0.5
+      "y": 0.4854
      },
      "s": 82.989,
      "e": 85.652
