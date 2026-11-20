@@ -40,18 +40,10 @@
    "src": "1/14-6.jpg",
    "mode": "keep"
   },
-  "goya": {
-   "src": "1/10-3.jpg",
-   "mode": "keep"
-  },
   "anneliese": {
    "src": "own/anneliese-michel.jpg",
    "mode": "keep",
    "page": "https://en.wikipedia.org/wiki/File:Anneliese_Michel_2.jpg"
-  },
-  "klingen": {
-   "src": "1/8-1.jpg",
-   "mode": "keep"
   },
   "trio": {
    "src": "own/trio.jpg",
@@ -84,6 +76,26 @@
   "bold": {
    "src": "own/berkowitz-interview.jpg",
    "mode": "keep"
+  },
+  "pemily": {
+   "src": "own/poster-emily-rose.jpg",
+   "mode": "keep",
+   "page": "https://en.wikipedia.org/wiki/File:The_Exorcism_Of_Emily_Rose.jpg"
+  },
+  "pamity": {
+   "src": "own/poster-amityville-1979.jpg",
+   "mode": "keep",
+   "page": "https://en.wikipedia.org/wiki/File:Amityville_poster.jpg"
+  },
+  "pamity2": {
+   "src": "own/poster-amityville-2.jpg",
+   "mode": "keep",
+   "page": "https://en.wikipedia.org/wiki/File:Amityville_ii_the_possession.jpg"
+  },
+  "prequiem": {
+   "src": "own/poster-requiem.jpg",
+   "mode": "keep",
+   "page": "https://en.wikipedia.org/wiki/File:Requiemposter.jpg"
   }
  },
  "chapters": [
@@ -240,14 +252,14 @@
      "at": 15
     },
     {
-     "img": "mug",
-     "move": "chi-tiet",
+     "img": "pamity2",
+     "move": "tien-gan",
      "focus": [
       0.5,
-      0.28
+      0.45
      ],
-     "why": "lời khai ở tòa: soi gương mặt DeFeo",
-     "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
+     "why": "giọng nói xui giết cả nhà: áp phích phim dựng lại vụ DeFeo",
+     "credit": "Film poster: Amityville II: The Possession (1982), based on the DeFeo murders · Orion Pictures",
      "at": 16
     },
     {
@@ -273,6 +285,17 @@
      "at": 18
     },
     {
+     "img": "pamity",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.45
+     ],
+     "why": "giọng nói quát \"Ra ngoài\": áp phích phim Amityville 1979 (\"Get out!\")",
+     "credit": "Film poster: The Amityville Horror (1979) · American International Pictures",
+     "at": 19
+    },
+    {
      "img": "house2",
      "move": "lui-ra",
      "focus": [
@@ -284,14 +307,14 @@
      "at": 20
     },
     {
-     "img": "panne",
+     "img": "pemily",
      "move": "tien-gan",
      "focus": [
       0.5,
       0.45
      ],
-     "why": "giới thiệu vụ Emily Rose: ảnh thật của Anneliese Michel",
-     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
+     "why": "giới thiệu vụ Emily Rose: áp phích phim",
+     "credit": "Film poster: The Exorcism of Emily Rose (2005) · Sony Pictures / Screen Gems",
      "at": 21,
      "tag": "No. 1"
     },
@@ -335,14 +358,14 @@
      "at": 24
     },
     {
-     "img": "goya",
-     "move": "chi-tiet",
+     "img": "prequiem",
+     "move": "tien-gan",
      "focus": [
-      0.65,
+      0.5,
       0.4
      ],
-     "why": "hai linh mục đọc kinh: tranh linh mục bên giường",
-     "credit": "Painting by Francisco Goya, 1788 (illustration) · Wikimedia Commons, public domain",
+     "why": "buổi trừ quỷ: áp phích phim Requiem dựng lại vụ Anneliese",
+     "credit": "Film poster: Requiem (2006), based on the case of Anneliese Michel",
      "at": 25
     },
     {
@@ -379,14 +402,14 @@
      "at": 28
     },
     {
-     "img": "klingen",
-     "move": "tien-gan",
+     "img": "panne",
+     "move": "dung-yen",
      "focus": [
       0.5,
-      0.5
+      0.45
      ],
-     "why": "chỉ còn 31 ký: thị trấn quê cô",
-     "credit": "Klingenberg am Main, Germany · Photo: chrisaliv / Wikimedia Commons, CC BY-SA 4.0",
+     "why": "chỉ còn 31 ký: ảnh Anneliese",
+     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
      "at": 29
     },
     {
