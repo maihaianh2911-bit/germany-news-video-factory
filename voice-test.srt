@@ -1,3 +1,7 @@
 1
-00:00:00,000 --> 00:00:06,126
-Guten Abend. Der Bundestag hat heute ein neues Gesetz beschlossen. Was ändert sich jetzt für Sie?
+00:00:00,000 --> 00:00:04,507
+On a cold night in 1996, a 911 call came in from a quiet street in Boulder, Colorado.
+
+2
+00:00:04,507 --> 00:00:08,227
+What police found inside the house would haunt the country for decades.
