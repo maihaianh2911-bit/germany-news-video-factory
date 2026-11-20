@@ -1,0 +1,136 @@
+{
+ "title": "Top 3 true crime cases tied to stories of demons",
+ "voice": "",
+ "show_chapters": false,
+ "lines": [
+  "Top three true crime cases tied to stories of demons.",
+  "Number three: Son of Sam.",
+  "After shooting six people to death in New York,",
+  "David Berkowitz claimed the one giving him orders was his neighbor's black dog.",
+  "He said a 6,000-year-old demon had possessed the dog",
+  "and used its voice to order him to kill.",
+  "Two years later, in a prison interview,",
+  "Berkowitz admitted he had made up the demon to excuse his crimes.",
+  "It was not until 1987 that he turned to God to beg for forgiveness.",
+  "Number two: the Amityville house.",
+  "One evening in November 1974,",
+  "Ronald DeFeo Jr. ran into a bar, saying his parents had been shot.",
+  "Only when friends followed him home did they discover",
+  "that all four of his younger siblings were also dead in their bedrooms.",
+  "The next day, Ronald confessed that he was the one who had fired the gun.",
+  "In court, he said voices had urged him to kill his whole family.",
+  "A year later, the Lutz family moved into that house.",
+  "Mr. Lutz said that when a priest came to bless it,",
+  "the priest heard a voice shout: \"Get out!\"",
+  "The Lutz family lasted only 28 days there.",
+  "Number one: the case behind the movie Emily Rose.",
+  "Two years after Anneliese Michel died,",
+  "her sister heard her voice again, in the middle of a courtroom.",
+  "The court was playing a tape recorded during an exorcism.",
+  "On the tape, two priests recite prayers,",
+  "while Anneliese screams back in a voice almost impossible to recognize.",
+  "During those rituals, she sometimes called herself Lucifer, and sometimes Judas.",
+  "Anneliese died at the age of 23 from malnutrition and dehydration.",
+  "By then, she weighed only about 68 pounds.",
+  "Her parents and the two priests sat at the defendants' table.",
+  "All four were later convicted of negligent homicide."
+ ],
+ "tts": {
+  "12": "Ronald DeFeo Junior ran into a bar, saying his parents had been shot.",
+  "22": "Two years after Anna-leeza Michelle died,",
+  "26": "while Anna-leeza screams back in a voice almost impossible to recognize.",
+  "28": "Anna-leeza died at the age of 23 from malnutrition and dehydration."
+ },
+ "chapters": [
+  {
+   "num": "01",
+   "label": "Top 3",
+   "title": "Stories of demons",
+   "desc": [
+    "Son of Sam, Amityville",
+    "The real Emily Rose"
+   ],
+   "lines": [
+    1,
+    31
+   ]
+  }
+ ],
+ "hl": {
+  "2": [
+   "Son of Sam"
+  ],
+  "5": [
+   "6,000-year-old"
+  ],
+  "10": [
+   "Amityville"
+  ],
+  "20": [
+   "28 days"
+  ],
+  "21": [
+   "Emily Rose"
+  ],
+  "27": [
+   "Lucifer",
+   "Judas"
+  ],
+  "29": [
+   "68 pounds"
+  ]
+ },
+ "ambience": [
+  ""
+ ],
+ "music": {
+  "key": "D",
+  "mode": "minor",
+  "bpm": 72,
+  "energy": 0.25
+ },
+ "queries": [
+  "wiki: David Berkowitz",
+  "wiki: Attica Correctional Facility",
+  "wiki: Charter Arms Bulldog",
+  "wiki: Ronald DeFeo Jr.",
+  "wiki: The Amityville Horror",
+  "wiki: Amityville, New York",
+  "wiki: Anneliese Michel",
+  "wiki: Klingenberg am Main",
+  "wiki: The Exorcism of Emily Rose",
+  "wiki: Exorcism in the Catholic Church",
+  {
+   "q": "New York City 1977",
+   "want": "a street in New York City in the 1970s"
+  },
+  {
+   "q": "black Labrador",
+   "want": "a black Labrador dog looking at the camera"
+  },
+  {
+   "q": "New York police car 1970s",
+   "want": "an old New York City police car from the 1970s"
+  },
+  {
+   "q": "reel-to-reel tape recorder",
+   "want": "an old reel-to-reel tape recorder from the 1970s"
+  },
+  {
+   "q": "courtroom",
+   "want": "inside an empty old courtroom with wooden benches"
+  },
+  {
+   "q": "prison cell",
+   "want": "inside an old prison cell with iron bars"
+  },
+  {
+   "q": "crucifix",
+   "want": "a wooden crucifix hanging on a wall"
+  },
+  {
+   "q": "Catholic priest cassock",
+   "want": "a Catholic priest in a black cassock praying"
+  }
+ ]
+}
