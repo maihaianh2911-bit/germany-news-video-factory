@@ -278,20 +278,20 @@
      "e": 44.234
     },
     {
-     "move": "tien-gan",
-     "credit": "Film poster: Amityville II: The Possession (1982), based on the DeFeo murders · Orion Pictures",
-     "src": "news/12/img/pamity2.jpg",
-     "w": 1620,
-     "h": 1500,
+     "move": "chi-tiet",
+     "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
+     "src": "news/12/img/mug.jpg",
+     "w": 1150,
+     "h": 1812,
      "from": {
       "z": 1.0,
       "x": 0.5,
-      "y": 0.5
+      "y": 0.39
      },
      "to": {
-      "z": 1.1,
+      "z": 1.25,
       "x": 0.5,
-      "y": 0.4545
+      "y": 0.28
      },
      "s": 44.234,
      "e": 47.466
@@ -327,30 +327,11 @@
       "y": 0.5
      },
      "to": {
-      "z": 1.25,
+      "z": 1.334,
       "x": 0.5,
-      "y": 0.4
+      "y": 0.3748
      },
      "s": 50.328,
-     "e": 52.821
-    },
-    {
-     "move": "tien-gan",
-     "credit": "Film poster: The Amityville Horror (1979) · American International Pictures",
-     "src": "news/12/img/pamity.jpg",
-     "w": 1620,
-     "h": 1500,
-     "from": {
-      "z": 1.0,
-      "x": 0.5,
-      "y": 0.5
-     },
-     "to": {
-      "z": 1.1,
-      "x": 0.5,
-      "y": 0.4545
-     },
-     "s": 52.821,
      "e": 55.101
     },
     {
@@ -374,9 +355,9 @@
     },
     {
      "move": "tien-gan",
-     "credit": "Film poster: The Exorcism of Emily Rose (2005) · Sony Pictures / Screen Gems",
+     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
      "tag": "No. 1",
-     "src": "news/12/img/pemily.jpg",
+     "src": "news/12/img/panne.jpg",
      "w": 1620,
      "h": 1500,
      "from": {
@@ -465,20 +446,20 @@
      "e": 68.805
     },
     {
-     "move": "tien-gan",
-     "credit": "Film poster: Requiem (2006), based on the case of Anneliese Michel",
-     "src": "news/12/img/prequiem.jpg",
-     "w": 1620,
-     "h": 1500,
+     "move": "chi-tiet",
+     "credit": "Painting by Francisco Goya, 1788 (illustration) · Wikimedia Commons, public domain",
+     "src": "news/12/img/goya.jpg",
+     "w": 1150,
+     "h": 1621,
      "from": {
       "z": 1.0,
       "x": 0.5,
-      "y": 0.5
+      "y": 0.45
      },
      "to": {
-      "z": 1.1,
-      "x": 0.5,
-      "y": 0.4545
+      "z": 1.25,
+      "x": 0.6,
+      "y": 0.4
      },
      "s": 68.805,
      "e": 70.933
@@ -541,20 +522,20 @@
      "e": 82.989
     },
     {
-     "move": "dung-yen",
-     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
-     "src": "news/12/img/panne.jpg",
-     "w": 1620,
-     "h": 1500,
+     "move": "tien-gan",
+     "credit": "Klingenberg am Main, Germany · Photo: chrisaliv / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/12/img/klingen.jpg",
+     "w": 1920,
+     "h": 1440,
      "from": {
       "z": 1.0,
       "x": 0.5,
       "y": 0.5
      },
      "to": {
-      "z": 1.03,
+      "z": 1.1,
       "x": 0.5,
-      "y": 0.4854
+      "y": 0.5
      },
      "s": 82.989,
      "e": 85.652
