@@ -16,18 +16,6 @@
    "src": "1/12-2.jpg",
    "mode": "keep"
   },
-  "nyc": {
-   "src": "1/11-8.jpg",
-   "mode": "keep"
-  },
-  "attica1": {
-   "src": "1/2-1.jpg",
-   "mode": "keep"
-  },
-  "attica2": {
-   "src": "1/2-5.jpg",
-   "mode": "keep"
-  },
   "house1": {
    "src": "1/4-2.jpg",
    "mode": "keep"
@@ -38,10 +26,6 @@
   },
   "mug": {
    "src": "1/4-1.jpg",
-   "mode": "keep"
-  },
-  "court": {
-   "src": "1/15-7.jpg",
    "mode": "keep"
   },
   "air": {
@@ -64,28 +48,6 @@
    "src": "1/10-3.jpg",
    "mode": "keep"
   },
-  "villa": {
-   "src": "1/7-5.jpg",
-   "mode": "keep"
-  },
-  "alley": {
-   "src": "1/8-16.jpg",
-   "mode": "keep"
-  },
-  "town": {
-   "src": "1/8-9.jpg",
-   "mode": "keep"
-  },
-  "bmug": {
-   "src": "own/berkowitz-mugshot.jpg",
-   "mode": "keep",
-   "page": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:David_Berkowitz.jpg"
-  },
-  "barrest": {
-   "src": "own/berkowitz-arrest.jpg",
-   "mode": "keep",
-   "page": "https://commons.wikimedia.org/wiki/File:David_Berkowitz_Arrested_August_10_1977_Mount_Vernon_Argus.jpg"
-  },
   "anneliese": {
    "src": "own/anneliese-michel.jpg",
    "mode": "keep",
@@ -94,38 +56,52 @@
   "klingen": {
    "src": "1/8-1.jpg",
    "mode": "keep"
+  },
+  "trio": {
+   "src": "own/trio.jpg",
+   "mode": "keep",
+   "page": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:David_Berkowitz.jpg"
+  },
+  "pbmug": {
+   "src": "own/print-bmug.jpg",
+   "mode": "keep",
+   "page": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:David_Berkowitz.jpg"
+  },
+  "pbarrest": {
+   "src": "own/print-barrest.jpg",
+   "mode": "keep",
+   "page": "https://commons.wikimedia.org/wiki/File:David_Berkowitz_Arrested_August_10_1977_Mount_Vernon_Argus.jpg"
+  },
+  "panne": {
+   "src": "own/print-anneliese.jpg",
+   "mode": "keep",
+   "page": "https://en.wikipedia.org/wiki/File:Anneliese_Michel_2.jpg"
   }
  },
  "chapters": [
   {
    "pics": [
     {
-     "img": "crucifix",
+     "img": "trio",
+     "move": "dung-yen",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "why": "mở đầu: ảnh cả ba nhân vật của ba vụ án",
+     "credit": "David Berkowitz (1977) · Ronald DeFeo Jr. (1974) · Anneliese Michel — police and archive photos"
+    },
+    {
+     "img": "pbmug",
      "move": "tien-gan",
      "focus": [
       0.5,
-      0.35
+      0.4
      ],
-     "why": "câu mở đầu về ma quỷ: tiến gần cây thánh giá",
-     "credit": "Crucifix, Kefermarkt church (illustration) · Photo: Uoaei1 / Wikimedia Commons, CC BY-SA 4.0"
-    },
-    {
+     "why": "giới thiệu Son of Sam: ảnh cảnh sát chụp Berkowitz",
+     "credit": "David Berkowitz · New York City Police photo, August 11, 1977",
      "at": 2,
-     "pair": {
-      "left": {
-       "img": "bmug",
-       "caption": [
-        "David Berkowitz",
-        "Police photo, 1977"
-       ]
-      },
-      "right": {
-       "img": "barrest"
-      }
-     },
-     "why": "giới thiệu Son of Sam: ảnh thật của Berkowitz (ảnh cảnh sát và ảnh lúc bị bắt)",
-     "tag": "No. 3",
-     "credit": "Left: New York City Police photo, 1977 · Right: arrest, Aug. 10, 1977, Mount Vernon Argus"
+     "tag": "No. 3"
     },
     {
      "img": "dog1",
@@ -150,36 +126,36 @@
      "at": 5
     },
     {
-     "img": "nyc",
-     "move": "troi-nhe",
+     "img": "pbarrest",
+     "move": "tien-gan",
      "focus": [
       0.5,
-      0.5
+      0.45
      ],
-     "why": "ra lệnh giết người: đường phố New York 1977",
-     "credit": "Manhattan, New York City, 1977 · Photo: Derzsi Elekes Andor / Wikimedia Commons, CC BY-SA 4.0",
+     "why": "ra lệnh giết người: gương mặt Berkowitz lúc bị bắt",
+     "credit": "David Berkowitz after his arrest, August 10, 1977 · Mount Vernon Argus, public domain",
      "at": 6
     },
     {
-     "img": "attica1",
+     "img": "sketch",
      "move": "dung-yen",
      "focus": [
-      0.4,
-      0.45
+      0.45,
+      0.3
      ],
-     "why": "phỏng vấn trong tù: nhà tù Attica",
-     "credit": "Attica Correctional Facility, New York · Photo: Bronayur / Wikimedia Commons, CC BY-SA 3.0",
+     "why": "hai năm sau: Berkowitz ở tòa (tranh vẽ 1978)",
+     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
      "at": 7
     },
     {
-     "img": "attica2",
-     "move": "nang-len",
+     "img": "pbmug",
+     "move": "chi-tiet",
      "focus": [
       0.5,
-      0.4
+      0.35
      ],
-     "why": "thừa nhận bịa chuyện: cổng nhà tù",
-     "credit": "Attica Correctional Facility, entrance · Photo: Jayu / Wikimedia Commons, CC BY-SA 2.0",
+     "why": "câu nhắc tên Berkowitz: soi gương mặt hắn",
+     "credit": "David Berkowitz · New York City Police photo, August 11, 1977",
      "at": 8
     },
     {
@@ -189,7 +165,7 @@
       0.5,
       0.25
      ],
-     "why": "tìm đến Chúa: soi gương mặt Berkowitz",
+     "why": "tìm đến Chúa: soi gương mặt Berkowitz đang gào",
      "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
      "at": 9
     },
@@ -206,15 +182,21 @@
      "tag": "No. 2"
     },
     {
-     "img": "mug",
-     "move": "tien-gan",
-     "focus": [
-      0.5,
-      0.3
-     ],
-     "why": "câu nhắc tên Ronald DeFeo: ảnh cảnh sát chụp",
-     "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
-     "at": 12
+     "at": 12,
+     "pair": {
+      "left": {
+       "img": "mug",
+       "caption": [
+        "Ronald DeFeo Jr.",
+        "Police photo, 1974"
+       ]
+      },
+      "right": {
+       "img": "house1"
+      }
+     },
+     "why": "câu nhắc tên Ronald DeFeo: ảnh hắn bên căn nhà",
+     "credit": "Left: Suffolk County Police photo, 1974 · Right: 112 Ocean Avenue, Photo: Seulatr"
     },
     {
      "img": "house2",
@@ -229,24 +211,24 @@
     },
     {
      "img": "mug",
+     "move": "tien-gan",
+     "focus": [
+      0.5,
+      0.3
+     ],
+     "why": "Ronald thú nhận: ảnh cảnh sát chụp hắn",
+     "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
+     "at": 15
+    },
+    {
+     "img": "mug",
      "move": "chi-tiet",
      "focus": [
       0.5,
       0.28
      ],
-     "why": "thú nhận nổ súng: soi gương mặt",
+     "why": "lời khai ở tòa: soi gương mặt DeFeo",
      "credit": "Ronald DeFeo Jr., police photo, 1974 · Suffolk County Police Department, public domain",
-     "at": 15
-    },
-    {
-     "img": "court",
-     "move": "tien-gan",
-     "focus": [
-      0.5,
-      0.45
-     ],
-     "why": "ra tòa: phòng xử án",
-     "credit": "Courtroom (illustration) · Photo: Brandonrush / Wikimedia Commons, CC0",
      "at": 16
     },
     {
@@ -283,16 +265,16 @@
      "at": 20
     },
     {
-     "at": 21,
-     "img": "klingen",
+     "img": "panne",
      "move": "tien-gan",
      "focus": [
       0.5,
-      0.5
+      0.45
      ],
-     "why": "giới thiệu vụ Emily Rose: thị trấn Klingenberg quê Anneliese",
-     "tag": "No. 1",
-     "credit": "Klingenberg am Main, Germany · Photo: chrisaliv / Wikimedia Commons, CC BY-SA 4.0"
+     "why": "giới thiệu vụ Emily Rose: ảnh thật của Anneliese Michel",
+     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
+     "at": 21,
+     "tag": "No. 1"
     },
     {
      "at": 22,
@@ -308,8 +290,8 @@
        "img": "grave"
       }
      },
-     "why": "câu nhắc tên Anneliese Michel: ảnh thật của cô và bia mộ",
-     "credit": "Left: Anneliese Michel, photographer unknown · Right: her grave, Photo: Offenbacherjung, CC BY-SA 3.0"
+     "why": "câu nhắc tên Anneliese Michel: ảnh cô và bia mộ",
+     "credit": "Left: Anneliese Michel, archive photo · Right: her grave, Photo: Offenbacherjung, CC BY-SA 3.0"
     },
     {
      "img": "justiz",
@@ -318,7 +300,7 @@
       0.5,
       0.5
      ],
-     "why": "giữa phòng xử án: tòa nhà tòa án Aschaffenburg",
+     "why": "giữa phòng xử án: tòa án Aschaffenburg",
      "credit": "Court building, Aschaffenburg · Photo: Lutz Hartmann / Wikimedia Commons, CC BY-SA 3.0",
      "at": 23
     },
@@ -345,14 +327,14 @@
      "at": 25
     },
     {
-     "img": "villa",
-     "move": "troi-nhe",
+     "img": "panne",
+     "move": "chi-tiet",
      "focus": [
       0.5,
-      0.5
+      0.42
      ],
-     "why": "tiếng gào của Anneliese: ngôi nhà ở Klingenberg",
-     "credit": "Michel family sawmill, Klingenberg · Photo: D. Pfister-Senz / Wikimedia Commons, CC BY-SA 4.0",
+     "why": "câu nhắc tên Anneliese: soi gương mặt cô",
+     "credit": "Anneliese Michel (1952–1976) · archive photo, photographer unknown",
      "at": 26
     },
     {
@@ -378,14 +360,14 @@
      "at": 28
     },
     {
-     "img": "alley",
+     "img": "klingen",
      "move": "tien-gan",
      "focus": [
       0.5,
       0.5
      ],
-     "why": "chỉ còn 31 ký: con phố vắng ban đêm ở quê cô",
-     "credit": "Old town of Klingenberg am Main · Photo: K1008 / Wikimedia Commons, CC0",
+     "why": "chỉ còn 31 ký: thị trấn quê cô",
+     "credit": "Klingenberg am Main, Germany · Photo: chrisaliv / Wikimedia Commons, CC BY-SA 4.0",
      "at": 29
     },
     {
@@ -400,14 +382,14 @@
      "at": 30
     },
     {
-     "img": "town",
+     "img": "trio",
      "move": "dung-yen",
      "focus": [
       0.5,
       0.5
      ],
-     "why": "câu kết: thị trấn Klingenberg lúc chiều tối",
-     "credit": "Klingenberg am Main in the evening · Photo: Tilman AB / Wikimedia Commons, public domain",
+     "why": "câu kết: lại ảnh ba nhân vật",
+     "credit": "David Berkowitz (1977) · Ronald DeFeo Jr. (1974) · Anneliese Michel — police and archive photos",
      "at": 31
     }
    ]
