@@ -75,6 +75,25 @@
   "town": {
    "src": "1/8-9.jpg",
    "mode": "keep"
+  },
+  "bmug": {
+   "src": "own/berkowitz-mugshot.jpg",
+   "mode": "keep",
+   "page": "https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:David_Berkowitz.jpg"
+  },
+  "barrest": {
+   "src": "own/berkowitz-arrest.jpg",
+   "mode": "keep",
+   "page": "https://commons.wikimedia.org/wiki/File:David_Berkowitz_Arrested_August_10_1977_Mount_Vernon_Argus.jpg"
+  },
+  "anneliese": {
+   "src": "own/anneliese-michel.jpg",
+   "mode": "keep",
+   "page": "https://en.wikipedia.org/wiki/File:Anneliese_Michel_2.jpg"
+  },
+  "klingen": {
+   "src": "1/8-1.jpg",
+   "mode": "keep"
   }
  },
  "chapters": [
@@ -91,16 +110,22 @@
      "credit": "Crucifix, Kefermarkt church (illustration) · Photo: Uoaei1 / Wikimedia Commons, CC BY-SA 4.0"
     },
     {
-     "img": "sketch",
-     "move": "tien-gan",
-     "focus": [
-      0.45,
-      0.3
-     ],
-     "why": "giới thiệu Son of Sam: tranh vẽ Berkowitz ở tòa",
-     "credit": "David Berkowitz in court, 1978 · Sketch: Joseph W. Papin / Wikimedia Commons, public domain",
      "at": 2,
-     "tag": "No. 3"
+     "pair": {
+      "left": {
+       "img": "bmug",
+       "caption": [
+        "David Berkowitz",
+        "Police photo, 1977"
+       ]
+      },
+      "right": {
+       "img": "barrest"
+      }
+     },
+     "why": "giới thiệu Son of Sam: ảnh thật của Berkowitz (ảnh cảnh sát và ảnh lúc bị bắt)",
+     "tag": "No. 3",
+     "credit": "Left: New York City Police photo, 1977 · Right: arrest, Aug. 10, 1977, Mount Vernon Argus"
     },
     {
      "img": "dog1",
@@ -258,16 +283,33 @@
      "at": 20
     },
     {
-     "img": "grave",
+     "at": 21,
+     "img": "klingen",
      "move": "tien-gan",
      "focus": [
       0.5,
-      0.4
+      0.5
      ],
-     "why": "giới thiệu vụ Emily Rose: mộ Anneliese Michel",
-     "credit": "Grave of Anneliese Michel, Klingenberg · Photo: Offenbacherjung / Wikimedia Commons, CC BY-SA 3.0",
-     "at": 21,
-     "tag": "No. 1"
+     "why": "giới thiệu vụ Emily Rose: thị trấn Klingenberg quê Anneliese",
+     "tag": "No. 1",
+     "credit": "Klingenberg am Main, Germany · Photo: chrisaliv / Wikimedia Commons, CC BY-SA 4.0"
+    },
+    {
+     "at": 22,
+     "pair": {
+      "left": {
+       "img": "anneliese",
+       "caption": [
+        "Anneliese Michel",
+        "1952–1976"
+       ]
+      },
+      "right": {
+       "img": "grave"
+      }
+     },
+     "why": "câu nhắc tên Anneliese Michel: ảnh thật của cô và bia mộ",
+     "credit": "Left: Anneliese Michel, photographer unknown · Right: her grave, Photo: Offenbacherjung, CC BY-SA 3.0"
     },
     {
      "img": "justiz",
