@@ -1,15 +1,19 @@
-# News videos (real pictures) — runbook for Claude
+# True-crime videos, US cases (real pictures) — runbook for Claude
 
-> **Iron rules (owner, 16/11/2026; full text at the top of `CLAUDE.md`).** (1) Voice, script lines, subtitles and
-> on-screen text are in **German**, never another language; check before the voice step and on the finished video.
+> **20/11/2026: this repo was the German news channel and is now the owner's American true-crime channel, in
+> English.** Folder, label and file names keep the old word `news`; the layout of the video is unchanged (the owner
+> re-edits the pictures themselves). Videos #1–#6 in `news/` are the old German ones.
+
+> **Iron rules (owner, 16/11/2026, language changed 20/11/2026; full text at the top of `CLAUDE.md`).** (1) Voice, script lines, subtitles and
+> on-screen text are in **English**, never another language; check before the voice step and on the finished video.
 > (2) **No video under 60 seconds**: estimate before the voice step and read the real speech length after it; if it
 > would be under 60 seconds, write the script longer (true facts on the same subject, nothing invented), say on the
 > issue what was added, then go on. Never render or deliver under 60 seconds, except a trial or sample video (the
 > owner says so, or the title or notes say `thử`, `mẫu`, `test`, `demo`).
 
-The owner (Vietnamese, not technical) writes the script and sends it in a chat (or opens an issue `[Tin tức] …`).
-The result is a vertical short (1080×1920) in German: real, free-to-use pictures with slow camera moves on top,
-subtitles timed to a German voice below (`src/news/NewsV.tsx`). **You** choose and check every picture by looking
+The owner (Vietnamese, not technical) writes the script and sends it in a chat (or opens an issue `[Vụ án] …`; the old prefix `[Tin tức]` still works).
+The result is a vertical short (1080×1920) in English about a real American criminal case: real, free-to-use pictures with slow camera moves on top,
+subtitles timed to an English voice below (`src/news/NewsV.tsx`). **You** choose and check every picture by looking
 at it. Machine steps run in `.github/workflows/news.yml` → `scripts/news/run.py`; files land on the `renders`
 branch in `news/<N>/` (`voice/`, `img/<round>/`, `video.mp4`, `caption.txt`, `sheet.jpg`, `subtitles.srt`, `credits.txt`, `edits.md`;
 `voice-partial/` = the finished lines of a voice step that failed halfway, reused by the next run).
@@ -52,9 +56,12 @@ Read the issue form (Chủ đề, Kịch bản, Giọng đọc, Ghi chú) and th
              {"q": "Geldscheine", "want": "euro banknotes and coins lying on a table"}]}
 ```
 - `lines`: one spoken line each (a sentence, or a clause of a long sentence; ≤ ~90 characters, cut at a comma).
-  German script → the owner's words exactly, only split. Vietnamese script → a faithful translation into natural
-  spoken news German, nothing added, nothing left out; proper names in their German spelling.
-- Length: the German voice reads roughly 14–15 characters/s; the video ≈ characters/14.5 + 0.35 s per line.
+  English script → the owner's words exactly, only split. Vietnamese (or other) script → a faithful translation into
+  natural spoken American English in the tone of a true-crime narrator, nothing added, nothing left out; proper
+  names in their American spelling. Dates and numbers the American way (`December 26, 1996`, `1,000`, `3.5`,
+  `$5,000`): the voice check reads them so.
+- Length: no English video has been measured yet; until then count as on the old German voice, roughly 14–15
+  characters/s (correct `moves.estimate` after the first videos); the video ≈ characters/14.5 + 0.35 s per line.
   Shorts allow 3 min ≈ 2400 characters. A longer script is still made as sent; say the length in your comment.
 - `voice`: leave `""` (or leave it out) to use the channel voice of `prompts/news_voice.json`; set it only when
   the issue names another voice.
@@ -73,8 +80,8 @@ Read the issue form (Chủ đề, Kịch bản, Giọng đọc, Ghi chú) and th
   event the script names. Three kinds, in this order:
   1. **`wiki: <name>`: everything about one thing** — every person, institution, company, building and town the
      script names: `"wiki: Friedrich Merz"`, `"wiki: Bundestag"`, `"wiki: Landgericht Rostock"`, `"wiki: Güstrow"`.
-     The machine finds its Wikidata item and brings the item's main picture, the pictures of its German and
-     English Wikipedia articles, the files of its Commons category (and sub-categories) and the photos taken at
+     The machine finds its Wikidata item and brings the item's main picture, the pictures of its English
+     Wikipedia article, the files of its Commons category (and sub-categories) and the photos taken at
      its coordinates: up to 24, the most to the point first. **This is where the real pictures of a subject
      are: ask it first**, for every name of the script. A name that fits several people or things (`Michael
      Müller`, `Merz`, `Frankfurt`) takes the title of its Wikipedia article (`"wiki: Frankfurt (Oder)"`) or the
@@ -87,17 +94,17 @@ Read the issue form (Chủ đề, Kịch bản, Giọng đọc, Ghi chú) and th
        files, with `2025` none, `incategory:"Reichstag building"` none (no such category), while `wiki:
        Friedrich Merz` found 30. So `wiki:` first; `incategory:` when you know the exact sub-category.
      - name + year or occasion (`Olaf Scholz 2024`, `Bundestag plenary hall`, `Deutsche Bahn ICE 4`), place +
-       subject (`Frankfurt skyline`, `Berlin Kanzleramt`). English or German words both work; phrases of 4+
+       subject (`Frankfurt skyline`, `Berlin Kanzleramt`). Use English words; phrases of 4+
        words often return nothing.
      - `geo: <lat>,<lon> <metres>`: Commons photos taken around a point, whatever they are called (the street
        of an accident, the square of a demonstration): `"geo: 52.5186,13.3762 300"`. The coordinates of a
        `wiki:` item are in `index.json` (`wikidata.coord`).
-  3. **A picture described, for things and Symbolbilder** (bank notes, a petrol pump, wind turbines, a
-     courtroom): `{"q": "Gerichtssaal", "want": "inside an empty courtroom with the judges' bench"}`. `q`: one or
-     two words as an archive files it (`Zapfsäule`, `wind turbine`), German or English — every extra word loses
+  3. **A picture described, for things and illustrations** (bank notes, a petrol pump, wind turbines, a
+     courtroom): `{"q": "courtroom", "want": "inside an empty American courtroom with the judge's bench"}`. `q`: one or
+     two words as an archive files it (`gas pump`, `police car`), in English — every extra word loses
      pictures. `"want"`: what the picture must show, **in English**; the search does not know the country
-     (`Gerichtssaal` brought American courtrooms on 17/11/2026), so look whether a Symbolbild fits Germany and
-     say what makes it German where it matters. The machine asks for 30 files, scores every
+     so look whether an illustration fits the United States (police cars, courtrooms, road signs, houses) and
+     the decade of the case, and say in `want` what makes it American where it matters. The machine asks for 30 files, scores every
      one against `want` (CLIP) and keeps the 8 that show it best; pictures that do not show it (score under
      0.18) are dropped, so a group can come back small or empty: then ask another word in the next round.
      `"keep": 12` (1–40) keeps more or fewer pictures of one query, of any kind.
@@ -144,12 +151,12 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    - **An institution, company, building, place** → a good photograph of it (the building, the plenary hall, the
      headquarters, the skyline). No logos alone.
    - **The event itself** → a picture of that event when Commons has one; otherwise an earlier picture of the
-     same people or place, credited `Archivbild`.
+     same people or place, credited `Archive photo`.
    - **Things, figures, abstract topics** (prices, energy, health, law) → a clear picture of the matter (bank
-     notes, a pump, wind turbines, a courtroom), credited `Symbolbild`.
+     notes, a pump, wind turbines, a courtroom), credited `Illustration`.
    - **Press photos of the event itself** (owner, 13/11): allowed next to Commons pictures. Find them in news
      articles (web search; the article's main photo and its gallery), save them in `news/<N>/own/`, credit the
-     photographer and agency (`Foto: Bernd Wüstneck/dpa`) and set `page` to the article's URL (§2.5). Blur the
+     photographer and agency (`Photo: <photographer>/AP`) and set `page` to the article's URL (§2.5). Blur the
      face of an accused person and of every child (soft blur, also what shows around a folder held in front of
      the face); never use a picture of a child victim.
    Real pictures only (photographs, also maps and charts from Commons; never AI images). Licence PD/CC0, CC BY or
@@ -159,7 +166,7 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    be the strongest picture of the story.
    **Enough pictures, and the real ones first** (17/11/2026, after the owner found the videos short of pictures):
    - a picture of the very person, building or place (its `wiki:` or `incategory:` group) comes before a
-     Symbolbild of the same thing: the real Landgericht Rostock, not "a courtroom"; a Symbolbild never stands for
+     illustration of the same thing: the real county courthouse of the case, not "a courtroom"; an illustration never stands for
      a thing of which a real picture was found;
    - count before you write the shots: one picture for every 1–2 lines, each picture twice at most (the second
      time another crop and another move). Fewer → a second round (`search-2.json`: `wiki:` for the people and
@@ -173,9 +180,9 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
             "reichstag": {"src": "1/1-3.jpg", "mode": "keep"}},
  "chapters": [{"pics": [
    {"img": "reichstag", "move": "nang-len", "focus": [0.5, 0.4], "why": "câu nhắc Quốc hội: nâng lên dọc tòa nhà",
-    "tag": "Berlin", "credit": "Reichstagsgebäude · Foto: Jürgen Matern / Wikimedia Commons, CC BY-SA 3.0"},
+    "tag": "Berlin", "credit": "Reichstag building · Photo: Jürgen Matern / Wikimedia Commons, CC BY-SA 3.0"},
    {"at": 3, "img": "merz", "move": "tien-gan", "focus": [0.5, 0.32], "why": "câu nhắc tên Merz: tiến gần gương mặt",
-    "credit": "Friedrich Merz (Archivbild, 2025) · Foto: Sandro Halank / Wikimedia Commons, CC BY-SA 4.0"}]}]}
+    "credit": "Friedrich Merz (archive photo, 2025) · Photo: Sandro Halank / Wikimedia Commons, CC BY-SA 4.0"}]}]}
 ```
    - `images`: `src` = `<round>/<file>` from the search, or `own/<file>` for any picture that is not a search
      result: a press photo you found (§2.4), a Commons/CC file you downloaded yourself, or a picture the owner
@@ -203,8 +210,9 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
      `y` = point of the picture held at the panel centre): only for a framing no move gives, with a `why`.
      The panel is 1080×1000 (almost square), so a landscape picture shows a square window: `focus` decides which.
 
-   **Bảng cách edit** (`scripts/news/moves.py`). The channel has no sample video yet (`00-video-mau/` is empty):
-   the table follows the two finished videos (#1, #2) and sober German TV news — calm, factual, no effects. The
+   **Bảng cách edit** (`scripts/news/moves.py`). The owner's sample video of 20/11/2026 (`docs/HANDOVER.md`) is a
+   model for the content only: the owner re-edits the pictures themselves, so the table still follows the finished
+   videos of the old channel — calm, factual, no effects. The
    owner's remarks refine it: when the owner corrects a shot ("cảnh 5 đổi sang kiểu lùi ra"), change that shot,
    and when the remark is a general taste, change this table too.
 
@@ -217,7 +225,7 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    | `nang-len` | nâng lên | tilt up from the foot to the top | names an **institution by its building** (court, ministry, tower, statue); something rising (prices, a decision of a higher court) |
    | `ha-xuong` | hạ xuống | tilt down from the top to the foot | goes from a place to what happened on its ground (the site of a find, a crowd in front of a building); a fall, a defeat |
    | `dung-yen` | đứng yên | held almost still, everything readable | carries a **number, statistic, document, verdict text, map or chart**; a grave moment (memorial, victim) where movement would be loud |
-   | `troi-nhe` | trôi nhẹ | a little closer, a small slow sideways drift with a light push | is abstract or general and the picture is a **Symbolbild** (law, money, energy); a bridge line between two facts |
+   | `troi-nhe` | trôi nhẹ | a little closer, a small slow sideways drift with a light push | is abstract or general and the picture is an **illustration** (law, money, energy); a bridge line between two facts |
 
    How to choose:
    1. **Read the line first**, then ask what the viewer should look at while hearing it; that is the `focus`, and
@@ -237,11 +245,11 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
       vor Gericht …"), for the verdict; `"fade": 1.0` for a **jump in time** or place ("Im Oktober 2025 …",
       "Drei Jahre später"). At most a few of each per video.
    7. The first shot is the strongest picture with a clear move (`tien-gan` or a pan); the last shot `lui-ra` or
-      `dung-yen`. `Archivbild`/`Symbolbild` in the credit as before (§2.4): the move never replaces that label.
+      `dung-yen`. `Archive photo`/`Illustration` in the credit as before (§2.4): the move never replaces that label.
    8. Two people or a person and a document side by side → `pair` (no `move`).
-   - `credit` (always, German, one line ≤ ~90 characters): what it is, then `Foto: <author> / Wikimedia Commons,
-     <licence>` (press photo: `Foto: <photographer>/<agency>`); for a picture in `own/`, `credits.txt` repeats
-     this credit; add `Archivbild` or `Symbolbild` when it is not a picture of the event itself. `tag` (optional,
+   - `credit` (always, English, one line ≤ ~90 characters): what it is, then `Photo: <author> / Wikimedia Commons,
+     <licence>` (press photo: `Photo: <photographer>/<agency>`); for a picture in `own/`, `credits.txt` repeats
+     this credit; add `Archive photo` or `Illustration` when it is not a picture of the event itself. `tag` (optional,
      ≤ 20 characters): place, date or name, top right.
    - `pair` (optional, instead of `img`): two framed prints side by side, `{"left": {"img": "…", "caption":
      ["Name", "Funktion"]}, "right": {"img": "…"}}` — a person next to a document or building.
@@ -259,18 +267,18 @@ here (the machine then leaves `news-pick` as the only step label), and the reque
    preview also writes `/tmp/preview.md` (and prints it): the list of edits — shot, line, picture, move, why. Read
    it top to bottom once as a viewer: does every move follow from its line, do neighbours differ?
 7. **The posting caption** (owner, 16/11/2026: every video comes with it, so it lies next to the video when the
-   owner downloads it): write `news/<N>/caption.txt`, UTF-8, **in German** (iron rule 1: the channel's language,
+   owner downloads it): write `news/<N>/caption.txt`, UTF-8, **in English** (iron rule 1: the channel's language,
    also when the script came in Vietnamese), at most 2000 characters, blocks separated by one blank line:
    ```
    <hook title, ≤ 80 characters: factual, no promise the video does not keep>
    <2–4 short sentences on what the video tells, true to the script; nothing that is not in it.
-    News: sober. When pictures are Symbolbilder, say so ("Einige Bilder sind Symbolbilder.")>
+    Sober, respectful of the victims. When pictures are illustrations, say so ("Some images are illustrations.")>
 
-   <5–8 German hashtags on one line, e.g. #Nachrichten #TrueCrime #Rostock #Bundesgerichtshof #shorts>
+   <5–8 English hashtags on one line, e.g. #TrueCrime #ColdCase #Colorado #CrimeStory #shorts>
 
-   Bildquellen: <photographers/agencies and "Wikimedia Commons", or "Bildquellen: siehe credits" when too long>
+   Image credits: <photographers/agencies and "Wikimedia Commons", or "Image credits: see credits" when too long>
    ```
-   Check it: `python3 scripts/news/caption.py news/<N>/caption.txt` (length, title, hashtags, `Bildquellen:`, no
+   Check it: `python3 scripts/news/caption.py news/<N>/caption.txt` (length, title, hashtags, `Image credits:`, no
    Vietnamese or Japanese letters) and read it once more against the script: every fact must be in the script.
 8. Commit `picks.json` and `caption.txt` together with any `script.json`/readings fixes in **one** push as `[news #<N>] chọn ảnh`
    (a push of `script.json` alone runs the voice step again), remove `news-busy`. (The render takes ~5–20 min:
@@ -310,7 +318,7 @@ count) — and "bình luận nếu muốn sửa".
   `gh api -X POST repos/maihaianh2911-bit/germany-news-video-factory/actions/workflows/news.yml/dispatches -f ref=main -f 'inputs[issue]=<N>' -f 'inputs[steps]=render'`
   (`steps`: `prepare`, `search` or `render`, several separated by spaces), remove `news-failed`. When the fix is a
   push under `news/<N>/` (script.json, picks.json, search-<r>.json, own/), that push already starts the run: do not
-  dispatch it by hand as well. A missing German voice (`prompts/news_voice.json` empty) or a missing secret is the
+  dispatch it by hand as well. A missing English voice (`prompts/news_voice.json` empty) or a missing secret is the
   owner's to fix: say so in one plain 🤖 comment and leave the label. When the machine stopped on purpose, the
   issue comment gives the reason (`Lý do: …`). A voice step that failed on one line keeps the finished lines
   (`voice-partial/`): running `prepare` again reads only the missing ones. The comment after the voice step shows

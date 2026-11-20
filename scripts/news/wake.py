@@ -46,7 +46,7 @@ def note(reason, issue, repo=None):
     """The plain sentence for the owner when Claude could not be called."""
     return (f'⚠️ Chưa gọi được Claude ({reason}), nên phiếu này đang chờ. Mở trang **Gọi Claude ngay** '
             f'(https://github.com/{repo or REPO}/actions/workflows/wake.yml) rồi bấm **Run workflow**, '
-            f'hoặc nhắn Claude trong chat: "làm tiếp phiếu tin tức số {issue}".')
+            f'hoặc nhắn Claude trong chat: "làm tiếp phiếu vụ án số {issue}".')
 
 
 def body(say, then, tail, called, reason, issue, repo=None):

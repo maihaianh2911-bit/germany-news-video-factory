@@ -2,7 +2,7 @@
   "name": "germany-news-video-factory",
   "version": "0.1.0",
   "private": true,
-  "description": "German news shorts from real pictures: Remotion renderer + GitHub Actions pipeline",
+  "description": "English true-crime shorts (US cases) from real pictures: Remotion renderer + GitHub Actions pipeline",
   "scripts": {
     "studio": "remotion studio src/news/index.ts",
     "check": "tsc --noEmit"

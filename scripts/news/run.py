@@ -342,7 +342,7 @@ def main():
             if 'render' in steps: steps.remove('render')
             labels(add=['news-pick'], remove=['news-voice'])
             why = ('Từ khóa tìm ảnh đã đổi' if had else 'Ảnh tìm trước đây không còn (video cũ đã được dọn) nên máy đã tìm lại')
-            wake(f'Phiếu tin tức (Đức) số {N}: ' + ('ảnh đợt 1 đã được tìm lại, phải chọn lại ảnh.' if requeried
+            wake(f'Phiếu vụ án Mỹ số {N}: ' + ('ảnh đợt 1 đã được tìm lại, phải chọn lại ảnh.' if requeried
                                                      else 'giọng và ảnh đã sẵn sàng, chờ chọn ảnh.'),
                  say=f'🤖 Giọng đọc xong: {len(rows)} câu, {speech:.0f} giây lời đọc'
                      f'{f" ({flagged} câu cần nghe lại cách đọc)" if flagged else ""}'
@@ -364,7 +364,7 @@ def main():
             labels(add=['news-pick'], remove=['news-voice', 'news-check', 'news-done', 'news-fix', 'news-failed'])
             if not woke:
                 # Claude may have stopped polling for the new round: call it so the issue does not wait at news-pick
-                wake(f'Phiếu tin tức (Đức) số {N}: đã tìm thêm ảnh (đợt {", ".join(rounds)}), chờ chọn ảnh.',
+                wake(f'Phiếu vụ án Mỹ số {N}: đã tìm thêm ảnh (đợt {", ".join(rounds)}), chờ chọn ảnh.',
                      say=f'🤖 Đã tìm thêm ảnh (đợt {", ".join(rounds)}).'
                          + (f' Ảnh đã chọn trước đây lấy từ đợt {", ".join(stale)} vừa được tìm lại, nên phải chọn lại ảnh trước khi dựng video.' if stale else ''),
                      then='Claude sẽ chọn lại ảnh.' if stale else 'Claude sẽ chọn ảnh cho từng ý.')
@@ -374,7 +374,7 @@ def main():
         length = render()
         labels(add=['news-check'], remove=['news-render', 'news-voice'])
         m, s = divmod(round(length), 60)
-        wake(f'Phiếu tin tức (Đức) số {N}: video đã dựng, chờ kiểm tra.',
+        wake(f'Phiếu vụ án Mỹ số {N}: video đã dựng, chờ kiểm tra.',
              say=f'🤖 Đã dựng xong bản video ({m} phút {s:02d} giây).',
              then='Claude sẽ kiểm tra lại từng cảnh trước khi giao.',
              tail=f'- Video: {link("video.mp4")}\n- Ảnh các cảnh: {link("sheet.jpg")}'

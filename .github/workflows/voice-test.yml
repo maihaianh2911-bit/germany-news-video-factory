@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       text:
-        description: Câu tiếng Đức để đọc thử
-        default: "Guten Abend. Der Bundestag hat heute ein neues Gesetz beschlossen. Was ändert sich jetzt für Sie?"
+        description: Câu tiếng Anh để đọc thử
+        default: "On a cold night in 1996, a 911 call came in from a quiet street in Boulder, Colorado. What police found inside the house would haunt the country for decades."
         required: true
       voice:
         description: voice_id (để trống = giọng mặc định của kênh, ghi trong prompts/news_voice.json)
@@ -26,9 +26,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Số dư
         run: python3 scripts/vn11.py balance
-      - name: Danh sách giọng (Đức + clone)
+      - name: Danh sách giọng (Anh + clone)
         run: |
-          python3 scripts/vn11.py voices --language German --out voices.md
+          python3 scripts/vn11.py voices --language English --out voices.md
           cat voices.md | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Tạo giọng thử
         env:   # through the environment, never pasted into the script: quotes, $ or ` in the text stay text

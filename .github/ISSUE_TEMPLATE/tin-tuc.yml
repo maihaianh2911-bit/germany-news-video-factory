@@ -1,12 +1,12 @@
-name: 📰 Video tin tức (ảnh thật)
-description: Dán kịch bản → máy làm video dọc có giọng Đức, ảnh thật (không AI) và phụ đề chạy theo giọng
-title: "[Tin tức] "
+name: 🔎 Video vụ án Mỹ (ảnh thật)
+description: Dán kịch bản → máy làm video dọc có giọng tiếng Anh, ảnh thật (không AI) và phụ đề chạy theo giọng
+title: "[Vụ án] "
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        **Cách dùng:** dán kịch bản rồi bấm **Create**. Không cần làm gì thêm: Claude chia câu và tìm ảnh, máy tạo giọng đọc tiếng Đức, Claude chọn ảnh hợp từng câu, máy dựng video, Claude kiểm tra lại từng cảnh. Link video sẽ hiện ở bình luận cuối.
+        **Cách dùng:** dán kịch bản rồi bấm **Create**. Không cần làm gì thêm: Claude chia câu và tìm ảnh, máy tạo giọng đọc tiếng Anh, Claude chọn ảnh hợp từng câu, máy dựng video, Claude kiểm tra lại từng cảnh. Link video sẽ hiện ở bình luận cuối.
         Muốn sửa gì thì viết bình luận (ví dụ "cảnh 3 đổi ảnh khác").
   - type: input
     id: topic
@@ -18,7 +18,7 @@ body:
     id: script
     attributes:
       label: Kịch bản (bắt buộc)
-      description: Tiếng Việt hoặc tiếng Đức. Kịch bản được giữ nguyên ý; nếu là tiếng Việt, Claude dịch sát sang tiếng Đức để đọc.
+      description: Tiếng Việt hoặc tiếng Anh. Kịch bản được giữ nguyên ý; nếu là tiếng Việt, Claude dịch sát sang tiếng Anh để đọc.
     validations:
       required: true
   - type: input

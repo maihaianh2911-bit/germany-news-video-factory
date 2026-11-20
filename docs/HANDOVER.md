@@ -1,5 +1,14 @@
 # Bàn giao dự án (đọc trước khi làm việc với chủ kênh)
 
+## 20/11/2026: kho này đổi thành KÊNH VỤ ÁN MỸ (tiếng Anh)
+
+- Chủ kênh gửi video mẫu "The real story behind Emily Rose's case" (1 phút 31 giây, dọc, giọng tiếng Anh kể vụ Anneliese Michel, chữ vàng in hoa 2–3 từ một lần đè lên ảnh kiểu cũ) và nói: *"đổi nội dung này sang kênh vụ án mỹ, đây là video mẫu (phần dựng ảnh mình sẽ làm khác đi, cải thiện, đẹp hơn)"*. Hỏi lại, chủ kênh chọn: **đổi cả kênh này** (không mở kho mới), **giọng và chữ tiếng Anh**.
+- Giữa chừng chủ kênh nhắn: *"ko cần, phần dựng hình mình sẽ tự làm"* rồi chọn **"vẫn ra video như cũ"** → **không đổi bố cục video** (`src/news/NewsV.tsx`, bảng cách edit giữ nguyên); máy vẫn dựng video hoàn chỉnh theo bố cục cũ, chủ kênh tự dựng lại phần hình. Đừng tự làm lại bố cục theo video mẫu nếu chủ kênh không bảo. Video mẫu không được đưa vào kho (video của người khác); nó là mẫu về **nội dung**: kể một vụ án có thật, giọng trầm, câu ngắn, khoảng 1,5 phút.
+- Đã đổi sang tiếng Anh: quy tắc sắt 1 (`CLAUDE.md`), dịch kịch bản sang tiếng Anh, máy nghe lại giọng bằng tiếng Anh và đọc số kiểu Mỹ (`voice_check.py`), giọng đọc gửi 11labs với `language: English`, lời đăng tiếng Anh kết thúc bằng `Image credits: …` (`caption.py`), ghi nguồn ảnh `Photo: …` / `Archive photo` / `Illustration`, tìm ảnh chỉ đọc Wikipedia tiếng Anh, phiếu mới có tên `[Vụ án] …` (tên cũ `[Tin tức] …` vẫn chạy). Tên kho, thư mục `news/`, nhãn `news-*` **giữ nguyên** để không gãy dây chuyền.
+- **Còn thiếu trước video đầu tiên: giọng đọc tiếng Anh.** `prompts/news_voice.json` đang để trống (giọng cũ `clone_611` là giọng Đức, không dùng cho tiếng Anh), nên bước giọng sẽ dừng và báo "Chưa chọn giọng đọc tiếng Anh". Chủ kênh chạy **Actions → Thử voice 11labs** (điền mã một giọng tiếng Anh để nghe thử; danh sách giọng nằm ở `voices.md` trên nhánh `renders`), chọn xong thì ghi mã vào file đó.
+- Chưa đo: tốc độ đọc của giọng tiếng Anh (đang tạm dùng số của giọng Đức, 14,5 ký tự/giây) — đo ở video đầu rồi sửa `moves.estimate` và `AGENT_NEWS.md`. Chưa có video tiếng Anh nào chạy thật trên GitHub.
+- Các video #1–#6 (tiếng Đức) là của kênh cũ. Mọi thứ viết bên dưới về "tin tức Đức", "giọng Đức" là lịch sử của kênh cũ; phần quy trình, nhãn, cách tìm ảnh, bảng cách edit vẫn đúng.
+
 Repo này làm **video tin tức tiếng Đức từ ảnh thật** (Shorts dọc 1080×1920). Dây chuyền được chép từ repo `maihaianh2911-bit/japan-video-factory` (video văn học tiếng Nhật) ngày 12/11/2026 và sửa cho tiếng Đức: thư mục và nhãn đổi `lit` → `news`, phụ đề ngắt theo từ, chữ Source Sans 3 / Source Serif 4, kiểm tra giọng bằng Whisper tiếng Đức so từng từ.
 
 ## Chủ kênh

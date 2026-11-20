@@ -2,21 +2,21 @@
 """The posting caption of a video (owner, 16/11/2026): news/<N>/caption.txt, written by Claude at the picks step and
 published beside video.mp4 on renders, so the owner finds it next to the video when downloading it.
 
-Format (UTF-8, German — the channel's language, at most 2000 characters), blocks separated by one blank line:
+Format (UTF-8, English — the channel's language, at most 2000 characters), blocks separated by one blank line:
 
     <hook title, at most 80 characters>
     <2–4 short sentences describing the video, true to the script>
 
-    #Nachrichten #TrueCrime #Deutschland #shorts #…        (5–8 hashtags)
+    #TrueCrime #CrimeStory #ColdCase #shorts #…         (5–8 hashtags)
 
-    Bildquellen: …                                       (or "Bildquellen: siehe credits")
+    Image credits: …                                     (or "Image credits: see credits")
 
 Usage: caption.py <caption.txt>  → prints the problems (exit 1) or "caption OK".
 """
 import re, sys
 
 MAX_ALL, MAX_TITLE, TAGS = 2000, 80, (5, 8)
-# letters that only Vietnamese uses (ă â đ ê ô ơ ư with tones) and Japanese/Chinese script: iron rule 1, German only
+# letters that only Vietnamese uses (ă â đ ê ô ơ ư with tones) and Japanese/Chinese script: iron rule 1, English only
 FOREIGN = re.compile('[ăắằẳẵặấầẩẫậđẹẻẽếềểễệỉịọỏốồổỗộơớờởỡợụủưứừửữựỳỵỷỹĂĐƠƯ぀-ヿ一-鿿]')
 
 
@@ -29,10 +29,10 @@ def check(text):
     if len(t) > MAX_ALL:
         bad.append(f'dài {len(t)} ký tự, tối đa {MAX_ALL}')
     if FOREIGN.search(t):
-        bad.append(f'có chữ không phải tiếng Đức ("{FOREIGN.search(t).group(0)}"): lời đăng phải bằng tiếng Đức')
+        bad.append(f'có chữ không phải tiếng Anh ("{FOREIGN.search(t).group(0)}"): lời đăng phải bằng tiếng Anh')
     blocks = [b.strip() for b in re.split(r'\n\s*\n', t) if b.strip()]
     if len(blocks) < 3:
-        return bad + ['cần 3 phần cách nhau một dòng trống: tiêu đề + mô tả, hashtag, "Bildquellen: …"']
+        return bad + ['cần 3 phần cách nhau một dòng trống: tiêu đề + mô tả, hashtag, "Image credits: …"']
     head, tags, credit = '\n'.join(blocks[:-2]).split('\n'), blocks[-2].split(), blocks[-1]
     title = head[0].strip()
     if len(title) > MAX_TITLE:
@@ -40,11 +40,11 @@ def check(text):
     if not any(l.strip() for l in head[1:]):
         bad.append('thiếu 2–4 câu mô tả video dưới tiêu đề')
     if not all(re.fullmatch(r'#\w+', w) for w in tags):
-        bad.append('phần thứ hai chỉ chứa hashtag (#Wort, không dấu cách bên trong)')
+        bad.append('phần thứ hai chỉ chứa hashtag (#Word, không dấu cách bên trong)')
     elif not TAGS[0] <= len(tags) <= TAGS[1]:
         bad.append(f'có {len(tags)} hashtag, cần {TAGS[0]}–{TAGS[1]}')
-    if not credit.startswith('Bildquellen:'):
-        bad.append('phần cuối phải bắt đầu bằng "Bildquellen:"')
+    if not credit.startswith('Image credits:'):
+        bad.append('phần cuối phải bắt đầu bằng "Image credits:"')
     return bad
 
 

@@ -44,7 +44,7 @@ from PIL import Image, ImageDraw
 API = 'https://commons.wikimedia.org/w/api.php'
 WIKIDATA = 'https://www.wikidata.org/w/api.php'
 UA = 'NewsVideoFactory/0.1 (https://github.com/maihaianh2911-bit/germany-news-video-factory; licence-checked picture search)'
-LANGS = ('de', 'en')   # the Wikipedias wiki: reads, the channel's language first
+LANGS = ('en',)   # the Wikipedias wiki: reads (the channel's language; US cases are best covered there)
 OK = re.compile(r'^(public domain|pd|cc0|cc[- ]by(-sa)?[- ]?\d|cc[- ]by(-sa)?$)', re.I)
 
 

@@ -1,9 +1,10 @@
 # germany-news-video-factory — notes for Claude
 
-## Iron rules (owner, 16/11/2026) — they come before everything else in this file
-1. **The video is in the channel's language: German (tiếng Đức).** The voice is the channel's German voice, and the script lines, subtitles and
-   on-screen text are in German (tiếng Đức). A script that arrives in another language is translated faithfully into German (tiếng Đức)
-   first. Never a voice or text of another language: check the language of `lines` and the voice before the voice
+## Iron rules (owner, 16/11/2026; language changed by the owner on 20/11/2026) — they come before everything else in this file
+1. **The video is in the channel's language: English (tiếng Anh).** Since 20/11/2026 this repo is the owner's
+   American true-crime channel ("kênh vụ án Mỹ"), no longer the German news channel. The voice is the channel's
+   English voice, and the script lines, subtitles and on-screen text are in English (tiếng Anh). A script that
+   arrives in another language is translated faithfully into English (tiếng Anh) first. Never a voice or text of another language: check the language of `lines` and the voice before the voice
    step, and again on the finished video. A video in the wrong language is not delivered: fix it and render again.
 2. **No video under 60 seconds.** Before the voice step, estimate the length from the script (use the seconds per
    line of this channel's earlier videos); after the voice step, read the real length of the speech (the machine
@@ -16,18 +17,20 @@
 Read `docs/HANDOVER.md` first (the owner, their standing decisions, the current state), then `AGENT_NEWS.md` (how a
 video is made). The owner is Vietnamese and not technical: answer in short, simple Vietnamese, no jargon.
 
-This repo makes one thing: vertical German news shorts from real pictures, a German voice and subtitles timed to
-it. The owner writes the scripts and sends them in a chat; everything after that is Claude's and the machine's.
-One issue `[Tin tức] …` = one video; the machine steps run on GitHub Actions (`news.yml`), Claude's steps are in
+This repo makes one thing: vertical English shorts about real American criminal cases, from real pictures, an
+English voice and subtitles timed to it (the names `news`, `[Tin tức]`, `germany-news-video-factory` are left
+from the German news channel it was until 20/11/2026; the video layout is unchanged — the owner re-edits the
+pictures themselves). The owner writes the scripts and sends them in a chat; everything after that is Claude's and the machine's.
+One issue `[Vụ án] …` (the old `[Tin tức] …` still works) = one video; the machine steps run on GitHub Actions (`news.yml`), Claude's steps are in
 `AGENT_NEWS.md`.
 
 ## When you were started by GitHub (a Claude task, nobody in the chat)
 The prompt may be as short as "Làm việc đang chờ trong repo này" ("do the work waiting in this repo"), and GitHub
-adds a line such as "Phiếu tin tức (Đức) số 3: giọng và ảnh đã sẵn sàng". Then: follow `AGENT_NIGHTLY.md` of this repo (its first check lists the `news-*` issues waiting for you), then `AGENT_NEWS.md`. Nobody answers questions, so do not ask; comments go on the issues
+adds a line such as "Phiếu vụ án Mỹ số 3: giọng và ảnh đã sẵn sàng". Then: follow `AGENT_NIGHTLY.md` of this repo (its first check lists the `news-*` issues waiting for you), then `AGENT_NEWS.md`. Nobody answers questions, so do not ask; comments go on the issues
 (🤖, Vietnamese).
 
 ## When the owner pastes a script in a chat
-1. Create one issue in `maihaianh2911-bit/germany-news-video-factory`: title `[Tin tức] <German headline> —
+1. Create one issue in `maihaianh2911-bit/germany-news-video-factory`: title `[Vụ án] <English headline> —
    <main idea in Vietnamese>`, body with these sections (same names as the issue form):
    `### Chủ đề (không bắt buộc)` / `### Kịch bản (bắt buộc)` = the script exactly as pasted /
    `### Giọng đọc (không bắt buộc)` = `_No response_` unless the owner names a voice /

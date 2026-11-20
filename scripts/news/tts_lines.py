@@ -3,7 +3,7 @@
 spoken. Usage: tts_lines.py <news/N/script.json> <out_dir> [--prev <dir of an earlier run>]...
 
 The text sent to 11labs is script.json "tts"[line] when given, else the line with prompts/news_readings.json applied
-(respellings for words the German voice misreads, e.g. names and abbreviations; whole words only). Lines whose spoken text did not change are copied
+(respellings for words the English voice misreads, e.g. names and abbreviations; whole words only). Lines whose spoken text did not change are copied
 from a --prev folder instead of being read again (saves credits when only a few lines are fixed; several --prev
 are allowed, the first that has the line wins).
 Writes <out_dir>/line_XX.mp3 (silence trimmed at both ends) and lines.json [{i, text, tts, file, duration}].
@@ -50,7 +50,7 @@ def main(argv=None):
     script = json.load(open(a.script, encoding='utf-8'))
     voice = script.get('voice') or DEFAULT_VOICE
     if not voice:
-        vn11.die('Chưa chọn giọng đọc tiếng Đức: ghi voice_id vào prompts/news_voice.json ("default") hoặc vào script.json ("voice").')
+        vn11.die('Chưa chọn giọng đọc tiếng Anh: ghi voice_id vào prompts/news_voice.json ("default") hoặc vào script.json ("voice").')
     prev = {}   # spoken text → finished mp3 of an earlier run (same voice)
     for d in a.prev:
         if d and os.path.exists(os.path.join(d, 'lines.json')):

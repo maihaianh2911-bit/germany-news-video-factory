@@ -1,6 +1,6 @@
-name: Video tin tức (ảnh thật)
+name: Video vụ án Mỹ (ảnh thật)
 
-# One issue "[Tin tức] …" = one vertical news short made from real free-to-use pictures, a German
+# One issue "[Vụ án] …" (or the old "[Tin tức] …") = one vertical true-crime short made from real free-to-use pictures, an English
 # voice and subtitles timed to it. Owner opens the issue → Claude writes news/<N>/script.json → this workflow
 # reads the voice (11labs, one job per line), checks it with Whisper and searches pictures → Claude chooses the
 # pictures (news/<N>/picks.json) → this workflow renders → Claude checks every shot → done. An owner comment
@@ -29,10 +29,10 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  # 1) The owner (or a collaborator) opens a [Tin tức] issue → wait for Claude's plan, wake Claude now
+  # 1) The owner (or a collaborator) opens a [Vụ án] issue → wait for Claude's plan, wake Claude now
   start:
     if: >-
-      github.event_name == 'issues' && startsWith(github.event.issue.title, '[Tin tức]')
+      github.event_name == 'issues' && (startsWith(github.event.issue.title, '[Vụ án]') || startsWith(github.event.issue.title, '[Tin tức]'))
       && contains(fromJson('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -52,9 +52,9 @@ jobs:
           CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
           CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
         run: |
-          bash scripts/wake_claude.sh "Phiếu tin tức (Đức) mới số $N." --issue "$N" \
+          bash scripts/wake_claude.sh "Phiếu vụ án Mỹ mới số $N." --issue "$N" \
             --say "🤖 Đã nhận kịch bản." \
-            --then "Claude sẽ chia câu và chọn từ khóa tìm ảnh (dịch sang tiếng Đức nếu cần), máy tạo giọng đọc và tìm ảnh, Claude chọn ảnh, máy dựng video, Claude kiểm tra lại từng cảnh. Mỗi bước xong sẽ báo ở đây."
+            --then "Claude sẽ chia câu và chọn từ khóa tìm ảnh (dịch sang tiếng Anh nếu cần), máy tạo giọng đọc và tìm ảnh, Claude chọn ảnh, máy dựng video, Claude kiểm tra lại từng cảnh. Mỗi bước xong sẽ báo ở đây."
 
   # 2) The owner comments on a news issue → Claude reads it and fixes
   fix:
@@ -81,7 +81,7 @@ jobs:
           CLAUDE_TASK_URL: ${{ secrets.CLAUDE_TASK_URL }}
           CLAUDE_TASK_TOKEN: ${{ secrets.CLAUDE_TASK_TOKEN }}
         run: |
-          bash scripts/wake_claude.sh "Chủ kênh yêu cầu sửa phiếu tin tức (Đức) số $N." --issue "$N" \
+          bash scripts/wake_claude.sh "Chủ kênh yêu cầu sửa phiếu vụ án Mỹ số $N." --issue "$N" \
             --say "🤖 Đã nhận yêu cầu." --then "Claude sẽ sửa và máy dựng lại."
 
   # 3) Claude pushed news/<N>/… (or a manual run) → voice + pictures, or the video
@@ -172,7 +172,7 @@ jobs:
               gh issue edit "$N" --add-label news-failed --remove-label news-voice --remove-label news-render < /dev/null || true
               # run.py leaves the reason here when it stopped on purpose (pictures or voice gone, renders unreachable)
               WHY=$(cat "/tmp/news-fail-$N.txt" 2>/dev/null || true)
-              bash scripts/wake_claude.sh "Phiếu tin tức (Đức) số $N bị lỗi ở bước $STEPS." --issue "$N" \
+              bash scripts/wake_claude.sh "Phiếu vụ án Mỹ số $N bị lỗi ở bước $STEPS." --issue "$N" \
                 --say "🤖 Máy gặp lỗi ở bước \`$STEPS\`.${WHY:+ Lý do: $WHY} Nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID ." \
                 --then "Claude sẽ xem và sửa." < /dev/null || true
             fi
@@ -194,7 +194,7 @@ jobs:
             grep -qx "$N" /tmp/handled.txt && continue
             gh issue edit "$N" --add-label news-failed < /dev/null || true
             gh issue edit "$N" --remove-label news-voice --remove-label news-render < /dev/null || true
-            bash scripts/wake_claude.sh "Phiếu tin tức (Đức) số $N: máy dừng giữa chừng ở bước $STEPS." --issue "$N" \
+            bash scripts/wake_claude.sh "Phiếu vụ án Mỹ số $N: máy dừng giữa chừng ở bước $STEPS." --issue "$N" \
               --say "🤖 Máy dừng giữa chừng trước khi làm xong bước \`$STEPS\` (lỗi cài đặt, quá giờ hoặc bị hủy) — xem nhật ký: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID ." \
               --then "Claude sẽ xem và chạy lại." < /dev/null || true
           done < /tmp/todo.txt

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AbsoluteFill, Audio, Img, Sequence, cancelRender, continueRender, delayRender, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 
-// Vertical (1080×1920) German news short: real, free-to-use pictures in a panel on top (slow camera moves,
+// Vertical (1080×1920) English true-crime short (US cases; the layout is still the one of the German news channel this repo was): real, free-to-use pictures in a panel on top (slow camera moves,
 // cross-fades), with optional chapter cards and timed subtitles below on a dark ink background.
 // The plan (props) is written by scripts/news/build.py; see AGENT_NEWS.md.
 type Cam = { z: number; x: number; y: number };

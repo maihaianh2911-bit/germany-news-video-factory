@@ -13,18 +13,21 @@ from tts_lines import spoken
 flagged = lambda sent, heard: compare(sent, heard)[1]
 
 # a wrong number is a misreading; the same number written in digits or in words is not
-assert flagged('Die Inflation liegt bei 3,5 Prozent.', 'Die Inflation liegt bei drei fünf Prozent.'), 'wrong decimal not flagged'
-assert not flagged('Die Inflation liegt bei 3,5 Prozent.', 'Die Inflation liegt bei drei Komma fünf Prozent.')
-assert not flagged('Die Inflation liegt bei 3,5 %.', 'Die Inflation liegt bei 3,5 Prozent.')
-assert flagged('Der Mindestlohn steigt auf 14 Euro.', 'Der Mindestlohn steigt auf vier Euro.')
-assert not flagged('Am 12. November kamen 1.000 Menschen.', 'Am zwölften November kamen tausend Menschen.')
-assert not flagged('Am 1. Januar stieg er um 1 Prozent.', 'Am ersten Januar stieg er um ein Prozent.')
-assert not flagged('Seit 1990 gilt § 5.', 'Seit neunzehnhundertneunzig gilt Paragraf fünf.')
-assert not flagged('Er kam 2019. Dann ging er.', 'Er kam zweitausendneunzehn. Dann ging er.')
+assert flagged('Inflation stands at 3.5 percent.', 'Inflation stands at three five percent.'), 'wrong decimal not flagged'
+assert not flagged('Inflation stands at 3.5 percent.', 'Inflation stands at three point five percent.')
+assert not flagged('Inflation stands at 3.5%.', 'Inflation stands at 3.5 percent.')
+assert flagged('The reward rose to $14,000.', 'The reward rose to four thousand dollars.')
+assert not flagged('The reward rose to $14,000.', 'The reward rose to fourteen thousand dollars.')
+assert not flagged('He stole $5 million.', 'He stole five million dollars.')
+assert not flagged('On November 12th, 1,000 people came.', 'On November twelfth, one thousand people came.')
+assert not flagged('She was 23 years old in 1976.', 'She was twenty-three years old in nineteen seventy-six.')
+assert not flagged('He came back in 2019. Then he left.', 'He came back in twenty nineteen. Then he left.')
+assert not flagged('It cost 105 dollars.', 'It cost one hundred five dollars.')
+assert not flagged("Emily's mother didn't know.", 'Emilys mother didnt know.')
 # short words must match exactly, long ones may differ only by spelling
-assert flagged('Das ist ein Problem.', 'Das ist kein Problem.')
-assert flagged('Das Bundesverfassungsgericht urteilt.', 'Das Bundesverwaltungsgericht urteilt.')
-assert not flagged('Der Fluss ist breit.', 'Der Fluß ist breit.')
+assert flagged('He was found guilty.', 'She was found guilty.')
+assert flagged('The prosecution rested.', 'The persecution rested.')
+assert not flagged('The neighbor called the police.', 'The neighbour called the police.')
 
 # readings replace whole words only, longest first, each once
 rd = {'US': 'U S', 'EZB': 'E Z B', 'E': 'Eh'}
@@ -200,19 +203,19 @@ assert moves.camera({'move': 'tien-gan', 'to': {'z': 1.5, 'x': .5, 'y': .5}}, 16
 assert moves.camera({'from': 1, 'to': 2}, 1600, 1100, 5) == (1, 2) and moves.label({'from': 1, 'to': 2}) == '-' and moves.label(ok_shot) == 'lui-ra'
 # --- the posting caption (scripts/news/caption.py) ---
 import caption
-good = ("Fall Fabian: 44 Indizien – wird das Urteil gekippt?\n"
-        "Das Landgericht Rostock verurteilte Gina H. zu lebenslanger Haft. Sie beteuert ihre Unschuld.\n"
-        "Jetzt prüft der Bundesgerichtshof die Revision.\n\n"
-        "#Nachrichten #FallFabian #TrueCrime #Rostock #Bundesgerichtshof #shorts\n\n"
-        "Bildquellen: Bernd Wüstneck/dpa; Wikimedia Commons (siehe credits)\n")
+good = ("JonBenét Ramsey: the ransom note nobody can explain\n"
+        "On December 26, 1996, a six-year-old girl was found dead in her family's home in Boulder, Colorado.\n"
+        "Nearly thirty years later, the case is still open.\n\n"
+        "#TrueCrime #JonBenetRamsey #ColdCase #Colorado #CrimeStory #shorts\n\n"
+        "Image credits: Wikimedia Commons (see credits)\n")
 assert caption.check(good) == [], caption.check(good)
-assert caption.check(good.replace('Fall Fabian: 44', 'Fall Fabian: ' + 'x' * 80))[0].startswith('tiêu đề dài')
-assert any('hashtag' in b for b in caption.check(good.replace(' #Rostock #Bundesgerichtshof #shorts', '')))   # 3 tags
-assert any('Bildquellen' in b for b in caption.check(good.replace('Bildquellen:', 'Fotos:')))
-assert any('tiếng Đức' in b for b in caption.check(good.replace('Jetzt prüft', 'Tòa án Tối cao sẽ xét lại')))      # Vietnamese
-assert any('tiếng Đức' in b for b in caption.check(good.replace('Jetzt prüft', '連邦裁判所が')))                # Japanese
+assert caption.check(good.replace('JonBenét Ramsey: the', 'JonBenét Ramsey: ' + 'x' * 80))[0].startswith('tiêu đề dài')
+assert any('hashtag' in b for b in caption.check(good.replace(' #Colorado #CrimeStory #shorts', '')))   # 3 tags
+assert any('Image credits' in b for b in caption.check(good.replace('Image credits:', 'Photos:')))
+assert any('tiếng Anh' in b for b in caption.check(good.replace('Nearly thirty', 'Gần ba mươi năm sau, vụ án')))      # Vietnamese
+assert any('tiếng Anh' in b for b in caption.check(good.replace('Nearly thirty', '三十年近く')))                # Japanese
 assert any('mô tả' in b for b in caption.check(good.split('\n')[0] + '\n\n#a #b #c #d #e\n\nBildquellen: x'))
-assert any('2000' in b for b in caption.check(good.replace('Jetzt prüft', 'Satz. ' * 400 + 'Jetzt prüft')))
+assert any('2000' in b for b in caption.check(good.replace('Nearly thirty', 'Word. ' * 400 + 'Nearly thirty')))
 assert caption.check('') == ['caption.txt trống'] and len(caption.check('Nur ein Titel')) == 1
 # a caption-only run installs no tools: run.py must load without numpy and Pillow
 import subprocess
@@ -227,6 +230,7 @@ import random, re, urllib.parse
 from PIL import Image
 sys.path.insert(0, os.path.join(ROOT, 'scripts'))
 import find_images as F
+F.LANGS = ('de', 'en')   # the mocked Wikipedias below are a two-language case (the channel itself reads only en)
 # a query kind: wiki: and geo: are their own; everything else is a Commons search and stays whole
 assert F.source_of('wiki: Friedrich Merz') == ('wiki', 'Friedrich Merz') and F.source_of(' Wiki:Bundestag ') == ('wiki', 'Bundestag')
 assert F.source_of('geo: 52.5186,13.3762 300') == ('geo', '52.5186,13.3762 300')

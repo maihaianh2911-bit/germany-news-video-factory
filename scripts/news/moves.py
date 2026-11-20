@@ -214,7 +214,8 @@ def shot_times(chapters, picks_chapters, dur, text):
 
 
 def estimate(lines):
-    """Line lengths before the voice exists: the German voice reads about 14.5 characters per second."""
+    """Line lengths before the voice exists: about 14.5 characters per second (measured on the German voice of the
+    old channel; measure again on the first videos of the English voice and correct this number)."""
     return {i: len(l) / 14.5 + 0.35 for i, l in enumerate(lines, 1)}
 
 

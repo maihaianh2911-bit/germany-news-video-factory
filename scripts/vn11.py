@@ -3,7 +3,7 @@
 
 Commands:
   balance                         -> print quota info
-  voices [--language German]    -> write voices markdown list
+  voices [--language English]    -> write voices markdown list
   tts --text-file F --out DIR [--voice ID] [--speed 1.0]
        voice ids starting with "clone_" are sent to /clone.php, others to /tts.php
 
@@ -144,7 +144,7 @@ def cmd_tts(a):
             body, h = multipart({'text': text, 'clone_voice_id': voice})
             code, j = req('POST', 'clone.php', data=body, headers=h, timeout=120)
         else:
-            payload = {'text': text, 'voice_settings': {'language': 'German', 'speed': a.speed, 'normalization': False, 'expressive_optimize': False}}
+            payload = {'text': text, 'voice_settings': {'language': 'English', 'speed': a.speed, 'normalization': False, 'expressive_optimize': False}}
             if voice: payload['voice_id'] = voice
             code, j = req('POST', 'tts.php', data=json.dumps(payload).encode(), headers={'Content-Type': 'application/json'}, timeout=120)
         if code != 429 or i == CREATE_TRIES - 1: break
@@ -187,7 +187,7 @@ if __name__ == '__main__':
     if not KEY: die('Thiếu secret VN11_API_KEY')
     p = argparse.ArgumentParser(); sp = p.add_subparsers(dest='cmd', required=True)
     sp.add_parser('balance')
-    v = sp.add_parser('voices'); v.add_argument('--language', default='German'); v.add_argument('--out', default='voices.md')
+    v = sp.add_parser('voices'); v.add_argument('--language', default='English'); v.add_argument('--out', default='voices.md')
     t = sp.add_parser('tts'); t.add_argument('--text-file', required=True); t.add_argument('--out', required=True)
     t.add_argument('--voice', default=''); t.add_argument('--speed', type=float, default=1.0); t.add_argument('--timeout', type=int, default=900)
     a = p.parse_args()

@@ -1,7 +1,7 @@
 # Claude task (started by GitHub) — entry point
 
-You run unattended for `maihaianh2911-bit/germany-news-video-factory`: vertical German news shorts made from
-real pictures, a German voice and subtitles timed to it. Nobody will answer questions. You are started only when GitHub calls the
+You run unattended for `maihaianh2911-bit/germany-news-video-factory`: vertical English true-crime shorts about American cases (the German news channel until 20/11/2026) made from
+real pictures, an English voice and subtitles timed to it. Nobody will answer questions. You are started only when GitHub calls the
 task's API trigger (after each machine step, an owner comment, a failure, or the button "Gọi Claude ngay"); there
 is no hourly run (owner, 13/11/2026). The machine does not call you for an issue whose `news-busy` label is less
 than 2 hours old, so remove that label whenever you stop (`AGENT_NEWS.md` §0). You are either this repo's own task (one Claude seat per repo:

@@ -29,8 +29,8 @@ json.dump([{'k': 1, 'query': 'test', 'results': [
     open(os.path.join(imgsrc, '1', 'index.json'), 'w'))
 
 # voice: silent lines of known length
-lines = ['Der Bundestag hat heute ein neues Gesetz beschlossen.', 'Was ändert sich jetzt für Sie?',
-         'Ab Januar steigt der Mindestlohn auf vierzehn Euro, und rund sechs Millionen Beschäftigte bekommen dadurch mehr Geld.', 'Die Opposition übt Kritik.']
+lines = ['Police found the car on a quiet road outside Austin.', 'Who was the last person to see her?',
+         'In January the reward rose to fourteen thousand dollars, and around six hundred volunteers searched the woods for days.', 'The jury did not believe him.']
 durs = [3.4, 1.8, 7.6, 1.5]; rows = []
 for i, (t, d) in enumerate(zip(lines, durs), 1):
     f = f'line_{i:02d}.mp3'
@@ -40,15 +40,15 @@ json.dump(rows, open(os.path.join(voice, 'lines.json'), 'w', encoding='utf-8'), 
 
 cam = lambda z0, z1: {'from': {'z': z0, 'x': .5, 'y': .5}, 'to': {'z': z1, 'x': .45, 'y': .4}}
 json.dump({'title': 'Test', 'voice': 'test', 'lines': lines, 'show_chapters': '--chapters' in sys.argv,
-           'chapters': [{'num': '01', 'label': 'Berlin', 'title': 'Neues Gesetz', 'desc': ['Erste Zeile', 'Zweite Zeile'], 'lines': [1, 2]},
-                        {'num': '02', 'label': 'Folgen', 'title': 'Mehr Geld', 'desc': ['Erste Zeile', 'Zweite Zeile'], 'lines': [3, 4]}],
-           'hl': {'1': ['Gesetz'], '3': ['Mindestlohn']}, 'ambience': ['', 'wind'], 'queries': ['test']},
+           'chapters': [{'num': '01', 'label': 'Texas', 'title': 'The car', 'desc': ['First row', 'Second row'], 'lines': [1, 2]},
+                        {'num': '02', 'label': 'Trial', 'title': 'The reward', 'desc': ['First row', 'Second row'], 'lines': [3, 4]}],
+           'hl': {'1': ['car'], '3': ['reward']}, 'ambience': ['', 'wind'], 'queries': ['test']},
           open(os.path.join(job, 'script.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 json.dump({'images': {'wide': {'src': '1/1-1.jpg', 'mode': 'color'}, 'tall': {'src': '1/1-2.jpg', 'mode': 'sepia'},
                       'small': {'src': '1/1-3.jpg', 'crop': [0.1, 0.1, 0.9, 0.9], 'mode': 'keep'}},
-           'chapters': [{'pics': [{'img': 'wide', 'move': 'luot-phai', 'focus': [0.6, 0.5], 'why': 'toàn cảnh nơi xảy ra', 'credit': 'Foto: A / Wikimedia Commons, CC BY-SA 4.0', 'tag': 'Berlin'},
-                                  {'at': 2, 'pair': {'left': {'img': 'tall', 'caption': ['Vorname Name', 'Bundeskanzler']}, 'right': {'img': 'small'}}, 'credit': 'Links: Porträt · Rechts: Dokument'}]},
-                        {'pics': [{'img': 'small', **cam(1.1, 1.0), 'credit': 'Archivbild'}, {'at': 3.5, 'img': 'tall', 'move': 'nang-len', 'fade': 0, 'to': {'z': 1.2, 'x': .5, 'y': .3}, 'credit': 'Symbolbild'}]}]},
+           'chapters': [{'pics': [{'img': 'wide', 'move': 'luot-phai', 'focus': [0.6, 0.5], 'why': 'toàn cảnh nơi xảy ra', 'credit': 'Photo: A / Wikimedia Commons, CC BY-SA 4.0', 'tag': 'Austin'},
+                                  {'at': 2, 'pair': {'left': {'img': 'tall', 'caption': ['First Last', 'Detective']}, 'right': {'img': 'small'}}, 'credit': 'Left: portrait · Right: document'}]},
+                        {'pics': [{'img': 'small', **cam(1.1, 1.0), 'credit': 'Archive photo'}, {'at': 3.5, 'img': 'tall', 'move': 'nang-len', 'fade': 0, 'to': {'z': 1.2, 'x': .5, 'y': .3}, 'credit': 'Illustration'}]}]},
           open(os.path.join(job, 'picks.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 
 S = os.path.join(ROOT, 'scripts', 'news')
