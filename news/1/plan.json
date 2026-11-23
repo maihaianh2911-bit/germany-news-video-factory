@@ -1,0 +1,1246 @@
+{
+ "duration": 177.038,
+ "showChapters": false,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 177.038,
+   "num": "01",
+   "label": "Rostock",
+   "title": "Mordfall Fabian",
+   "desc": [
+    "Landgericht Rostock",
+    "Urteil und Revision"
+   ],
+   "pics": [
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.42,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.4,
+      "y": 0.4
+     },
+     "credit": "Die Angeklagte im Landgericht Rostock · Foto: Bernd Wüstneck/dpa",
+     "tag": "Rostock",
+     "src": "news/1/img/akte.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 0.0,
+     "e": 2.731
+    },
+    {
+     "from": {
+      "z": 1.05,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.25,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "credit": "Die Angeklagte mit Fußfessel im Gerichtssaal · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/fessel.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 2.731,
+     "e": 5.353
+    },
+    {
+     "from": {
+      "z": 1.05,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.3,
+      "y": 0.35
+     },
+     "credit": "Verteidiger Andreas Ohm und die Angeklagte · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/ohm.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 5.353,
+     "e": 11.14
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.18,
+      "x": 0.45,
+      "y": 0.4
+     },
+     "credit": "Landgericht Rostock · Foto: MyRobotron / Wikimedia Commons, CC BY-SA 4.0",
+     "tag": "Rostock",
+     "src": "news/1/img/lg1.jpg",
+     "w": 2600,
+     "h": 1950,
+     "s": 11.14,
+     "e": 15.875
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.68,
+      "y": 0.45
+     },
+     "credit": "Güstrow (Archivbild) · Foto: Bullix / Wikimedia Commons, CC BY-SA 4.0",
+     "tag": "Güstrow",
+     "src": "news/1/img/guestrow.jpg",
+     "w": 2600,
+     "h": 1733,
+     "s": 15.875,
+     "e": 24.706
+    },
+    {
+     "from": {
+      "z": 1.05,
+      "x": 0.6,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.68,
+      "y": 0.38
+     },
+     "credit": "Fabians Mutter (r.) mit Anwältin Christine Habetha · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/mutter.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 24.706,
+     "e": 27.458
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.5,
+      "y": 0.55
+     },
+     "credit": "Fundort bei Klein Upahl, Oktober 2025 · Foto: Bernd Wüstneck/dpa",
+     "tag": "Klein Upahl",
+     "src": "news/1/img/teich.jpg",
+     "w": 2048,
+     "h": 1175,
+     "s": 27.458,
+     "e": 36.594
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.36,
+      "y": 0.45
+     },
+     "credit": "Die Angeklagte vor Gericht · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/justiz.jpg",
+     "w": 2190,
+     "h": 1150,
+     "s": 36.594,
+     "e": 41.444
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.18,
+      "x": 0.32,
+      "y": 0.4
+     },
+     "credit": "Polizei am Fundort, Dezember 2025 · Foto: Bernd Wüstneck/dpa",
+     "tag": "Klein Upahl",
+     "src": "news/1/img/pteich.jpg",
+     "w": 1920,
+     "h": 1168,
+     "s": 41.444,
+     "e": 45.483
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.6
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.62,
+      "y": 0.62
+     },
+     "credit": "Prozesstag in Rostock · Foto: Bernd Wüstneck/dpa",
+     "tag": "Rostock",
+     "src": "news/1/img/gericht.jpg",
+     "w": 1725,
+     "h": 1150,
+     "s": 45.483,
+     "e": 49.395
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.55
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.48,
+      "y": 0.45
+     },
+     "credit": "Suche nach Fabian bei Güstrow, Oktober 2025 · Foto: Stefan Tretropp",
+     "src": "news/1/img/wald.jpg",
+     "w": 2048,
+     "h": 1152,
+     "s": 49.395,
+     "e": 53.49
+    },
+    {
+     "from": {
+      "z": 1.05,
+      "x": 0.35,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.6,
+      "y": 0.38
+     },
+     "credit": "Die Schwurgerichtskammer verkündet das Urteil · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/kammer.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 53.49,
+     "e": 55.63
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.32
+     },
+     "credit": "Justitia (Symbolbild) · Foto: Dirrival / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/1/img/justitia.jpg",
+     "w": 1150,
+     "h": 1535,
+     "s": 55.63,
+     "e": 62.871
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "credit": "Landgericht Rostock · Foto: M.Meißer / Wikimedia Commons, CC BY-SA 3.0",
+     "tag": "Rostock",
+     "src": "news/1/img/lg2.jpg",
+     "w": 2600,
+     "h": 1950,
+     "s": 62.871,
+     "e": 69.853
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "credit": "Schuhspuren-Vergleich (Symbolbild) · Foto: Zalman992 / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/1/img/schuh.jpg",
+     "w": 2600,
+     "h": 1746,
+     "s": 69.853,
+     "e": 74.221
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.52
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.48,
+      "y": 0.55
+     },
+     "credit": "Ausgeschaltetes Handy (Symbolbild) · Foto: Sertion / Wikimedia Commons, CC BY-SA 3.0",
+     "src": "news/1/img/handy.jpg",
+     "w": 2378,
+     "h": 2600,
+     "s": 74.221,
+     "e": 82.242
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.35,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.6,
+      "y": 0.45
+     },
+     "credit": "Mecklenburg (Symbolbild) · Foto: Marlis Börger / Wikimedia Commons, CC BY 2.0",
+     "src": "news/1/img/wolken.jpg",
+     "w": 2600,
+     "h": 1733,
+     "s": 82.242,
+     "e": 85.663
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.3
+     },
+     "credit": "Justitia (Symbolbild) · Foto: Rigorius / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/1/img/justitia2.jpg",
+     "w": 1945,
+     "h": 2600,
+     "s": 85.663,
+     "e": 93.66
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.35,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.32,
+      "y": 0.38
+     },
+     "credit": "Die Angeklagte im Gerichtssaal · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/akte2.jpg",
+     "w": 2046,
+     "h": 1150,
+     "s": 93.66,
+     "e": 96.738
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.6,
+      "y": 0.4
+     },
+     "credit": "Die Angeklagte mit ihrer Verteidigung · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/vert.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 96.738,
+     "e": 99.765
+    },
+    {
+     "from": {
+      "z": 1.1,
+      "x": 0.7,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.86,
+      "y": 0.33
+     },
+     "credit": "Die Schwurgerichtskammer verkündet das Urteil · Foto: Bernd Wüstneck/dpa",
+     "tag": "Rostock",
+     "src": "news/1/img/kammer.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 99.765,
+     "e": 109.688
+    },
+    {
+     "from": {
+      "z": 1.1,
+      "x": 0.3,
+      "y": 0.35
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.22,
+      "y": 0.25
+     },
+     "credit": "Verteidiger Andreas Ohm (l.) und die Angeklagte · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/ohm.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 109.688,
+     "e": 119.427
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "credit": "Staatsanwälte Oliver Schley und Harald Nowack · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/staatsanw.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 119.427,
+     "e": 122.404
+    },
+    {
+     "from": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.42,
+      "y": 0.4
+     },
+     "credit": "Landgericht Rostock · Foto: MyRobotron / Wikimedia Commons, CC BY-SA 4.0",
+     "tag": "Rostock",
+     "src": "news/1/img/lg1.jpg",
+     "w": 2600,
+     "h": 1950,
+     "s": 122.404,
+     "e": 127.259
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.18,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "credit": "Gerichtssaal (Symbolbild) · Foto: Olaf Malzahn / Wikimedia Commons, CC BY 4.0",
+     "src": "news/1/img/saal.jpg",
+     "w": 2600,
+     "h": 1731,
+     "s": 127.259,
+     "e": 132.688
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.43,
+      "y": 0.47
+     },
+     "credit": "Bundesgerichtshof, Karlsruhe · Foto: Gerd Eichmann / Wikimedia Commons, CC BY-SA 4.0",
+     "tag": "Karlsruhe",
+     "src": "news/1/img/bghsign.jpg",
+     "w": 2600,
+     "h": 1733,
+     "s": 132.688,
+     "e": 135.921
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "credit": "Bundesgerichtshof, Karlsruhe · Foto: Sitacuisses / Wikimedia Commons, CC BY-SA 3.0 de",
+     "tag": "Karlsruhe",
+     "src": "news/1/img/bgh.jpg",
+     "w": 2600,
+     "h": 1384,
+     "s": 135.921,
+     "e": 143.237
+    },
+    {
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "credit": "Bundesgerichtshof, Karlsruhe · Foto: Kucharek / Wikimedia Commons, CC BY-SA 3.0",
+     "tag": "Karlsruhe",
+     "src": "news/1/img/bgh2.jpg",
+     "w": 2600,
+     "h": 1442,
+     "s": 143.237,
+     "e": 147.07
+    },
+    {
+     "from": {
+      "z": 1.25,
+      "x": 0.5,
+      "y": 0.32
+     },
+     "to": {
+      "z": 1.05,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "credit": "Justitia (Symbolbild) · Foto: Rigorius / Wikimedia Commons, CC BY-SA 4.0",
+     "src": "news/1/img/justitia2.jpg",
+     "w": 1945,
+     "h": 2600,
+     "s": 147.07,
+     "e": 154.866
+    },
+    {
+     "from": {
+      "z": 1.2,
+      "x": 0.55,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.4,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "credit": "Die Angeklagte mit Fußfessel im Gerichtssaal · Foto: Bernd Wüstneck/dpa",
+     "src": "news/1/img/fessel.jpg",
+     "w": 2044,
+     "h": 1150,
+     "s": 154.866,
+     "e": 157.666
+    },
+    {
+     "from": {
+      "z": 1.1,
+      "x": 0.62,
+      "y": 0.62
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.7,
+      "y": 0.6
+     },
+     "credit": "Prozesstag in Rostock · Foto: Bernd Wüstneck/dpa",
+     "tag": "Rostock",
+     "src": "news/1/img/gericht.jpg",
+     "w": 1725,
+     "h": 1150,
+     "s": 157.666,
+     "e": 164.072
+    },
+    {
+     "from": {
+      "z": 1.15,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.3,
+      "x": 0.55,
+      "y": 0.38
+     },
+     "credit": "Bundesgerichtshof, Karlsruhe · Foto: Sitacuisses / Wikimedia Commons, CC BY-SA 3.0 de",
+     "tag": "Karlsruhe",
+     "src": "news/1/img/bgh.jpg",
+     "w": 2600,
+     "h": 1384,
+     "s": 164.072,
+     "e": 169.542
+    },
+    {
+     "from": {
+      "z": 1.25,
+      "x": 0.68,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "credit": "Güstrow (Archivbild) · Foto: Bullix / Wikimedia Commons, CC BY-SA 4.0",
+     "tag": "Güstrow",
+     "src": "news/1/img/guestrow.jpg",
+     "w": 2600,
+     "h": 1733,
+     "s": 169.542,
+     "e": 177.038
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 1.0,
+   "e": 2.431,
+   "text": "44 Indizien.",
+   "hl": [
+    "44 Indizien"
+   ]
+  },
+  {
+   "s": 2.881,
+   "e": 5.053,
+   "text": "Eine lebenslange\nFreiheitsstrafe.",
+   "hl": [
+    "lebenslange"
+   ]
+  },
+  {
+   "s": 5.503,
+   "e": 8.696,
+   "text": "Und nur einen Tag später\nbeantragte die Verteidigung,",
+   "hl": [
+    "einen Tag"
+   ]
+  },
+  {
+   "s": 8.816,
+   "e": 10.84,
+   "text": "das Urteil\nüberprüfen zu lassen.",
+   "hl": [
+    "einen Tag"
+   ]
+  },
+  {
+   "s": 11.29,
+   "e": 13.281,
+   "text": "Warum hat das\nLandgericht Rostock",
+   "hl": [
+    "Landgericht Rostock"
+   ]
+  },
+  {
+   "s": 13.401,
+   "e": 15.575,
+   "text": "Gina H. im Fall\nFabian verurteilt?",
+   "hl": [
+    "Landgericht Rostock"
+   ]
+  },
+  {
+   "s": 16.025,
+   "e": 18.928,
+   "text": "Am 10. Oktober\n2025 verschwand der",
+   "hl": [
+    "Güstrow"
+   ]
+  },
+  {
+   "s": 19.048,
+   "e": 21.726,
+   "text": "achtjährige\nFabian in Güstrow,",
+   "hl": [
+    "Güstrow"
+   ]
+  },
+  {
+   "s": 21.976,
+   "e": 24.406,
+   "text": "einer Kleinstadt im\nNorden Deutschlands.",
+   "hl": []
+  },
+  {
+   "s": 24.856,
+   "e": 27.158,
+   "text": "Seine Mutter\nverständigte die Polizei.",
+   "hl": []
+  },
+  {
+   "s": 27.608,
+   "e": 30.02,
+   "text": "Vier Tage später wurde\nFabians Leiche an",
+   "hl": [
+    "Klein Upahl"
+   ]
+  },
+  {
+   "s": 30.14,
+   "e": 32.98,
+   "text": "einem kleinen Teich bei\nKlein Upahl gefunden,",
+   "hl": [
+    "Klein Upahl"
+   ]
+  },
+  {
+   "s": 33.23,
+   "e": 36.294,
+   "text": "etwa 15 Kilometer von\nseinem Zuhause entfernt.",
+   "hl": []
+  },
+  {
+   "s": 36.744,
+   "e": 38.824,
+   "text": "Gemeldet hatte den\nFundort Gina H.,",
+   "hl": []
+  },
+  {
+   "s": 38.944,
+   "e": 41.144,
+   "text": "die frühere Freundin\nseines Vaters.",
+   "hl": []
+  },
+  {
+   "s": 41.594,
+   "e": 45.183,
+   "text": "Sie sagte der Polizei, sie habe\ndie Leiche zufällig entdeckt.",
+   "hl": []
+  },
+  {
+   "s": 45.633,
+   "e": 49.095,
+   "text": "Doch vor Gericht schilderte\nein Zeuge ein anderes Detail.",
+   "hl": []
+  },
+  {
+   "s": 49.545,
+   "e": 53.19,
+   "text": "Er sagte, Gina H. selbst habe\nihn direkt zu dem Teich geführt.",
+   "hl": [
+    "direkt"
+   ]
+  },
+  {
+   "s": 53.64,
+   "e": 55.33,
+   "text": "Die Kammer glaubte\ndem Zeugen.",
+   "hl": []
+  },
+  {
+   "s": 55.78,
+   "e": 59.099,
+   "text": "Für das Gericht war die Art,\nwie Gina H. direkt dorthin ging,",
+   "hl": []
+  },
+  {
+   "s": 59.349,
+   "e": 62.571,
+   "text": "ein Hinweis darauf, dass sie\nden Ort schon vorher kannte.",
+   "hl": []
+  },
+  {
+   "s": 63.021,
+   "e": 65.809,
+   "text": "Diese Aussage war nur ein\nTeil der Indizienkette,",
+   "hl": []
+  },
+  {
+   "s": 66.059,
+   "e": 69.553,
+   "text": "die der Vorsitz der Kammer bei\nder Urteilsverkündung nannte.",
+   "hl": []
+  },
+  {
+   "s": 70.003,
+   "e": 74.121,
+   "text": "Das Gericht berücksichtigte\naußerdem Schuhabdrücke, Faserspuren",
+   "hl": [
+    "Schuhabdrücke"
+   ]
+  },
+  {
+   "s": 74.371,
+   "e": 77.047,
+   "text": "und dass das Handy von\nGina H. ausgeschaltet war,",
+   "hl": [
+    "Handy"
+   ]
+  },
+  {
+   "s": 77.297,
+   "e": 78.249,
+   "text": "etwa zu der Zeit,",
+   "hl": []
+  },
+  {
+   "s": 78.369,
+   "e": 81.942,
+   "text": "in der Fabian nach Feststellung\ndes Gerichts getötet wurde.",
+   "hl": []
+  },
+  {
+   "s": 82.392,
+   "e": 85.363,
+   "text": "Einen direkten Augenzeugen\nder Tat gibt es nicht.",
+   "hl": [
+    "Augenzeugen"
+   ]
+  },
+  {
+   "s": 85.813,
+   "e": 89.234,
+   "text": "Die Kammer kam zu ihrem Urteil,\nnachdem sie die Spuren",
+   "hl": []
+  },
+  {
+   "s": 89.484,
+   "e": 91.243,
+   "text": "mit den Aussagen\nund dem Ablauf",
+   "hl": []
+  },
+  {
+   "s": 91.363,
+   "e": 93.36,
+   "text": "der Ereignisse\nabgeglichen hatte.",
+   "hl": []
+  },
+  {
+   "s": 93.81,
+   "e": 96.438,
+   "text": "Gina H. hat mehrfach\nihre Unschuld beteuert.",
+   "hl": []
+  },
+  {
+   "s": 96.888,
+   "e": 99.465,
+   "text": "Ihre Verteidigung\nplädierte auf Freispruch.",
+   "hl": [
+    "Freispruch"
+   ]
+  },
+  {
+   "s": 99.915,
+   "e": 103.063,
+   "text": "Am 10. November\n2026 verurteilte das",
+   "hl": [
+    "Mordes"
+   ]
+  },
+  {
+   "s": 103.183,
+   "e": 106.451,
+   "text": "Landgericht Rostock\nsie wegen Mordes",
+   "hl": [
+    "Mordes"
+   ]
+  },
+  {
+   "s": 106.701,
+   "e": 109.388,
+   "text": "und stellte die besondere\nSchwere der Schuld fest.",
+   "hl": [
+    "besondere Schwere"
+   ]
+  },
+  {
+   "s": 109.838,
+   "e": 113.249,
+   "text": "Nach der Urteilsverkündung\nsagte Verteidiger Andreas Ohm,",
+   "hl": [
+    "Andreas Ohm"
+   ]
+  },
+  {
+   "s": 113.369,
+   "e": 114.526,
+   "text": "er sei überrascht,",
+   "hl": [
+    "Andreas Ohm"
+   ]
+  },
+  {
+   "s": 114.776,
+   "e": 117.171,
+   "text": "weil das Gericht den\nTatablauf in einigen",
+   "hl": []
+  },
+  {
+   "s": 117.291,
+   "e": 119.327,
+   "text": "Punkten anders\nrekonstruiert habe",
+   "hl": []
+  },
+  {
+   "s": 119.577,
+   "e": 122.104,
+   "text": "als die Staatsanwaltschaft\nin ihrer Anklage.",
+   "hl": []
+  },
+  {
+   "s": 122.554,
+   "e": 126.959,
+   "text": "Am 13. November bestätigte das\nGericht den Eingang des Antrags.",
+   "hl": []
+  },
+  {
+   "s": 127.409,
+   "e": 130.242,
+   "text": "Auf welche Rechtsfehler sich\ndie Verteidigung stützen will,",
+   "hl": []
+  },
+  {
+   "s": 130.492,
+   "e": 132.388,
+   "text": "hat sie noch nicht\nbekannt gegeben.",
+   "hl": []
+  },
+  {
+   "s": 132.838,
+   "e": 135.621,
+   "text": "In Deutschland heißt\ndieses Verfahren Revision.",
+   "hl": [
+    "Revision"
+   ]
+  },
+  {
+   "s": 136.071,
+   "e": 137.817,
+   "text": "Der Bundesgerichtshof prüft,",
+   "hl": [
+    "Bundesgerichtshof"
+   ]
+  },
+  {
+   "s": 137.937,
+   "e": 141.026,
+   "text": "wie das Landgericht\nRostock den Prozess geführt",
+   "hl": [
+    "Bundesgerichtshof"
+   ]
+  },
+  {
+   "s": 141.276,
+   "e": 142.937,
+   "text": "und das Recht\nangewendet hat.",
+   "hl": []
+  },
+  {
+   "s": 143.387,
+   "e": 146.77,
+   "text": "Weist er den Antrag zurück,\nbleibt das Urteil bestehen.",
+   "hl": []
+  },
+  {
+   "s": 147.22,
+   "e": 149.555,
+   "text": "Findet er Rechtsfehler,\ndie ausreichen,",
+   "hl": []
+  },
+  {
+   "s": 149.675,
+   "e": 152.498,
+   "text": "um das Urteil ganz oder\nteilweise aufzuheben,",
+   "hl": []
+  },
+  {
+   "s": 152.748,
+   "e": 154.566,
+   "text": "kann der Fall neu\nverhandelt werden.",
+   "hl": []
+  },
+  {
+   "s": 155.016,
+   "e": 157.366,
+   "text": "Noch ist das Urteil\nnicht rechtskräftig.",
+   "hl": [
+    "nicht rechtskräftig"
+   ]
+  },
+  {
+   "s": 157.816,
+   "e": 160.122,
+   "text": "Nach Zustellung des\nschriftlichen Urteils",
+   "hl": []
+  },
+  {
+   "s": 160.372,
+   "e": 163.772,
+   "text": "hat die Verteidigung einen\nMonat Zeit für ihre Begründung.",
+   "hl": [
+    "einen Monat"
+   ]
+  },
+  {
+   "s": 164.222,
+   "e": 165.399,
+   "text": "Dann wird sich zeigen,",
+   "hl": []
+  },
+  {
+   "s": 165.519,
+   "e": 166.979,
+   "text": "welche Punkte genau sie vom",
+   "hl": []
+  },
+  {
+   "s": 167.099,
+   "e": 169.242,
+   "text": "Bundesgerichtshof\nprüfen lassen will.",
+   "hl": []
+  },
+  {
+   "s": 169.692,
+   "e": 171.112,
+   "text": "Danke fürs Zuschauen.",
+   "hl": []
+  },
+  {
+   "s": 171.562,
+   "e": 173.988,
+   "text": "Bis zum nächsten\nUpdate im Fall Fabian.",
+   "hl": []
+  }
+ ],
+ "voice": [
+  {
+   "s": 1.0,
+   "src": "news/1/voice/line_01.mp3"
+  },
+  {
+   "s": 2.881,
+   "src": "news/1/voice/line_02.mp3"
+  },
+  {
+   "s": 5.503,
+   "src": "news/1/voice/line_03.mp3"
+  },
+  {
+   "s": 11.29,
+   "src": "news/1/voice/line_04.mp3"
+  },
+  {
+   "s": 16.025,
+   "src": "news/1/voice/line_05.mp3"
+  },
+  {
+   "s": 21.976,
+   "src": "news/1/voice/line_06.mp3"
+  },
+  {
+   "s": 24.856,
+   "src": "news/1/voice/line_07.mp3"
+  },
+  {
+   "s": 27.608,
+   "src": "news/1/voice/line_08.mp3"
+  },
+  {
+   "s": 33.23,
+   "src": "news/1/voice/line_09.mp3"
+  },
+  {
+   "s": 36.744,
+   "src": "news/1/voice/line_10.mp3"
+  },
+  {
+   "s": 41.594,
+   "src": "news/1/voice/line_11.mp3"
+  },
+  {
+   "s": 45.633,
+   "src": "news/1/voice/line_12.mp3"
+  },
+  {
+   "s": 49.545,
+   "src": "news/1/voice/line_13.mp3"
+  },
+  {
+   "s": 53.64,
+   "src": "news/1/voice/line_14.mp3"
+  },
+  {
+   "s": 55.78,
+   "src": "news/1/voice/line_15.mp3"
+  },
+  {
+   "s": 59.349,
+   "src": "news/1/voice/line_16.mp3"
+  },
+  {
+   "s": 63.021,
+   "src": "news/1/voice/line_17.mp3"
+  },
+  {
+   "s": 66.059,
+   "src": "news/1/voice/line_18.mp3"
+  },
+  {
+   "s": 70.003,
+   "src": "news/1/voice/line_19.mp3"
+  },
+  {
+   "s": 74.371,
+   "src": "news/1/voice/line_20.mp3"
+  },
+  {
+   "s": 77.297,
+   "src": "news/1/voice/line_21.mp3"
+  },
+  {
+   "s": 82.392,
+   "src": "news/1/voice/line_22.mp3"
+  },
+  {
+   "s": 85.813,
+   "src": "news/1/voice/line_23.mp3"
+  },
+  {
+   "s": 89.484,
+   "src": "news/1/voice/line_24.mp3"
+  },
+  {
+   "s": 93.81,
+   "src": "news/1/voice/line_25.mp3"
+  },
+  {
+   "s": 96.888,
+   "src": "news/1/voice/line_26.mp3"
+  },
+  {
+   "s": 99.915,
+   "src": "news/1/voice/line_27.mp3"
+  },
+  {
+   "s": 106.701,
+   "src": "news/1/voice/line_28.mp3"
+  },
+  {
+   "s": 109.838,
+   "src": "news/1/voice/line_29.mp3"
+  },
+  {
+   "s": 114.776,
+   "src": "news/1/voice/line_30.mp3"
+  },
+  {
+   "s": 119.577,
+   "src": "news/1/voice/line_31.mp3"
+  },
+  {
+   "s": 122.554,
+   "src": "news/1/voice/line_32.mp3"
+  },
+  {
+   "s": 127.409,
+   "src": "news/1/voice/line_33.mp3"
+  },
+  {
+   "s": 130.492,
+   "src": "news/1/voice/line_34.mp3"
+  },
+  {
+   "s": 132.838,
+   "src": "news/1/voice/line_35.mp3"
+  },
+  {
+   "s": 136.071,
+   "src": "news/1/voice/line_36.mp3"
+  },
+  {
+   "s": 141.276,
+   "src": "news/1/voice/line_37.mp3"
+  },
+  {
+   "s": 143.387,
+   "src": "news/1/voice/line_38.mp3"
+  },
+  {
+   "s": 147.22,
+   "src": "news/1/voice/line_39.mp3"
+  },
+  {
+   "s": 152.748,
+   "src": "news/1/voice/line_40.mp3"
+  },
+  {
+   "s": 155.016,
+   "src": "news/1/voice/line_41.mp3"
+  },
+  {
+   "s": 157.816,
+   "src": "news/1/voice/line_42.mp3"
+  },
+  {
+   "s": 160.372,
+   "src": "news/1/voice/line_43.mp3"
+  },
+  {
+   "s": 164.222,
+   "src": "news/1/voice/line_44.mp3"
+  },
+  {
+   "s": 169.692,
+   "src": "news/1/voice/line_45.mp3"
+  },
+  {
+   "s": 171.562,
+   "src": "news/1/voice/line_46.mp3"
+  }
+ ],
+ "music": "news/1/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Source Serif 4",
+   "file": "news/fonts/source-serif-4-latin-wght-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  },
+  {
+   "family": "Source Sans 3",
+   "file": "news/fonts/source-sans-3-latin-wght-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ],
+ "grain": [
+  "news/grain_0.jpg",
+  "news/grain_1.jpg",
+  "news/grain_2.jpg",
+  "news/grain_3.jpg"
+ ]
+}

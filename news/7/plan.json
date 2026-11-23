@@ -1,0 +1,868 @@
+{
+ "duration": 133.15,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 21.706,
+   "pics": [
+    {
+     "src": "news/7/img/heine_oppenheim.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1549,
+     "from": {
+      "z": 1.0,
+      "x": 0.42,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.42,
+      "y": 0.4167
+     },
+     "s": 0.0,
+     "e": 7.574
+    },
+    {
+     "src": "news/7/img/verbrennung_feuer.jpg",
+     "move": "tien-gan",
+     "w": 2600,
+     "h": 1976,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.132,
+      "x": 0.5,
+      "y": 0.5584
+     },
+     "s": 7.574,
+     "e": 12.294
+    },
+    {
+     "src": "news/7/img/lorelei_bild.jpg",
+     "move": "nang-len",
+     "w": 1300,
+     "h": 1669,
+     "from": {
+      "z": 1.25,
+      "x": 0.45,
+      "y": 0.6
+     },
+     "to": {
+      "z": 1.25,
+      "x": 0.45,
+      "y": 0.4
+     },
+     "s": 12.294,
+     "e": 15.218
+    },
+    {
+     "src": "news/7/img/heine_traeumend.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1397,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.182,
+      "x": 0.45,
+      "y": 0.4231
+     },
+     "s": 15.218,
+     "e": 21.706
+    }
+   ]
+  },
+  {
+   "s": 21.706,
+   "e": 40.284,
+   "pics": [
+    {
+     "src": "news/7/img/geburtshaus.jpg",
+     "move": "nang-len",
+     "w": 2165,
+     "h": 2600,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "s": 21.706,
+     "e": 28.243
+    },
+    {
+     "src": "news/7/img/salomon.jpg",
+     "move": "tien-gan",
+     "w": 1788,
+     "h": 1949,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.135,
+      "x": 0.5,
+      "y": 0.4406
+     },
+     "s": 28.243,
+     "e": 33.055
+    },
+    {
+     "src": "news/7/img/heine_jung.jpg",
+     "move": "tien-gan",
+     "w": 1308,
+     "h": 1597,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.45,
+      "y": 0.4167
+     },
+     "s": 33.055,
+     "e": 40.284
+    }
+   ]
+  },
+  {
+   "s": 40.284,
+   "e": 51.735,
+   "pics": [
+    {
+     "src": "news/7/img/heine_gartenlaube.jpg",
+     "move": "troi-nhe",
+     "w": 1676,
+     "h": 2114,
+     "from": {
+      "z": 1.08,
+      "x": 0.6715,
+      "y": 0.463
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.5,
+      "y": 0.4464
+     },
+     "s": 40.284,
+     "e": 51.735
+    }
+   ]
+  },
+  {
+   "s": 51.735,
+   "e": 66.729,
+   "pics": [
+    {
+     "src": "news/7/img/buch_der_lieder.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 2221,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.113,
+      "x": 0.5,
+      "y": 0.4493
+     },
+     "s": 51.735,
+     "e": 55.767
+    },
+    {
+     "src": "news/7/img/loreley_alt.jpg",
+     "move": "luot-phai",
+     "w": 1613,
+     "h": 1470,
+     "from": {
+      "z": 1.06,
+      "x": 0.3537,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.6463,
+      "y": 0.5
+     },
+     "s": 55.767,
+     "e": 62.887
+    },
+    {
+     "src": "news/7/img/silcher.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1593,
+     "from": {
+      "z": 1.0,
+      "x": 0.3446,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.108,
+      "x": 0.33,
+      "y": 0.4514
+     },
+     "s": 62.887,
+     "e": 66.729
+    }
+   ]
+  },
+  {
+   "s": 66.729,
+   "e": 83.066,
+   "pics": [
+    {
+     "src": "news/7/img/heine_profil.jpg",
+     "move": "tien-gan",
+     "w": 2332,
+     "h": 2192,
+     "from": {
+      "z": 1.0,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.3,
+      "y": 0.4545
+     },
+     "s": 66.729,
+     "e": 69.923
+    },
+    {
+     "src": "news/7/img/heine_1838.jpg",
+     "move": "tien-gan",
+     "w": 1665,
+     "h": 2050,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.18,
+      "x": 0.5,
+      "y": 0.4236
+     },
+     "s": 69.923,
+     "e": 76.36
+    },
+    {
+     "src": "news/7/img/heine_paris.jpg",
+     "move": "tien-gan",
+     "w": 1694,
+     "h": 2155,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.188,
+      "x": 0.5,
+      "y": 0.421
+     },
+     "s": 76.36,
+     "e": 83.066
+    }
+   ]
+  },
+  {
+   "s": 83.066,
+   "e": 97.433,
+   "pics": [
+    {
+     "src": "news/7/img/wintermaerchen.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 2176,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.197,
+      "x": 0.5,
+      "y": 0.4175
+     },
+     "s": 83.066,
+     "e": 90.119
+    },
+    {
+     "src": "news/7/img/heine_schlaflos.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1332,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.45,
+      "y": 0.4167
+     },
+     "s": 90.119,
+     "e": 97.433
+    }
+   ]
+  },
+  {
+   "s": 97.433,
+   "e": 118.426,
+   "pics": [
+    {
+     "src": "news/7/img/venus.jpg",
+     "move": "nang-len",
+     "w": 1970,
+     "h": 2600,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "s": 97.433,
+     "e": 103.746
+    },
+    {
+     "src": "news/7/img/matratzengruft.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1580,
+     "from": {
+      "z": 1.0,
+      "x": 0.35,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.15,
+      "x": 0.35,
+      "y": 0.4348
+     },
+     "s": 103.746,
+     "e": 109.103
+    },
+    {
+     "src": "news/7/img/heine_1851.jpg",
+     "move": "tien-gan",
+     "w": 1380,
+     "h": 1496,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.185,
+      "x": 0.5,
+      "y": 0.4219
+     },
+     "s": 109.103,
+     "e": 115.712
+    },
+    {
+     "src": "news/7/img/grab.jpg",
+     "move": "nang-len",
+     "w": 1711,
+     "h": 2600,
+     "from": {
+      "z": 1.25,
+      "x": 0.5,
+      "y": 0.6
+     },
+     "to": {
+      "z": 1.25,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "s": 115.712,
+     "e": 118.426
+    }
+   ]
+  },
+  {
+   "s": 118.426,
+   "e": 133.15,
+   "pics": [
+    {
+     "src": "news/7/img/studenten.jpg",
+     "move": "dung-yen",
+     "w": 1943,
+     "h": 1300,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 118.426,
+     "e": 122.901
+    },
+    {
+     "src": "news/7/img/bebelplatz.jpg",
+     "move": "ha-xuong",
+     "w": 1734,
+     "h": 2600,
+     "from": {
+      "z": 1.4,
+      "x": 0.5,
+      "y": 0.357
+     },
+     "to": {
+      "z": 1.4,
+      "x": 0.5,
+      "y": 0.643
+     },
+     "s": 122.901,
+     "e": 127.613
+    },
+    {
+     "src": "news/7/img/loreley_schiff.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1729,
+     "from": {
+      "z": 1.06,
+      "x": 0.417,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.583,
+      "y": 0.5
+     },
+     "s": 127.613,
+     "e": 133.15
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 0.3,
+   "e": 1.839,
+   "text": "„Dort, wo man Bücher verbrennt,"
+  },
+  {
+   "s": 1.839,
+   "e": 4.042,
+   "text": "verbrennt man auch\nam Ende Menschen.“"
+  },
+  {
+   "s": 4.042,
+   "e": 7.724,
+   "text": "Diesen Satz schrieb\nHeinrich Heine 1821."
+  },
+  {
+   "s": 7.724,
+   "e": 12.444,
+   "text": "Über hundert Jahre später, 1933,\nbrannten auch seine Bücher."
+  },
+  {
+   "s": 12.444,
+   "e": 15.368,
+   "text": "Und doch singen wir bis heute\nsein Lied von der Loreley."
+  },
+  {
+   "s": 15.368,
+   "e": 17.343,
+   "text": "Ein Dichter, der\nDeutschland liebte –"
+  },
+  {
+   "s": 17.343,
+   "e": 22.206,
+   "text": "und die letzten 25 Jahre seines\nLebens in Paris verbrachte."
+  },
+  {
+   "s": 22.206,
+   "e": 26.727,
+   "text": "Geboren wurde er 1797 in\nDüsseldorf, als Harry Heine."
+  },
+  {
+   "s": 26.727,
+   "e": 28.393,
+   "text": "Die Familie war jüdisch."
+  },
+  {
+   "s": 28.393,
+   "e": 31.127,
+   "text": "Sein reicher Onkel Salomon,\nBankier in Hamburg,"
+  },
+  {
+   "s": 31.127,
+   "e": 33.205,
+   "text": "wollte einen Kaufmann\naus ihm machen."
+  },
+  {
+   "s": 33.205,
+   "e": 35.108,
+   "text": "Harry gründete\nein Tuchgeschäft –"
+  },
+  {
+   "s": 35.108,
+   "e": 36.832,
+   "text": "nach einem Jahr war es pleite."
+  },
+  {
+   "s": 36.832,
+   "e": 40.784,
+   "text": "Der Onkel bezahlte ihm\nstattdessen ein Jurastudium."
+  },
+  {
+   "s": 40.784,
+   "e": 44.837,
+   "text": "1825 ließ er sich taufen\nund hieß nun Heinrich."
+  },
+  {
+   "s": 44.837,
+   "e": 46.353,
+   "text": "Den Taufzettel nannte er „das"
+  },
+  {
+   "s": 46.353,
+   "e": 48.75,
+   "text": "Entréebillett zur\neuropäischen Kultur“."
+  },
+  {
+   "s": 48.75,
+   "e": 52.235,
+   "text": "Eine Stelle als Jurist\nbekam er trotzdem nie."
+  },
+  {
+   "s": 52.235,
+   "e": 55.917,
+   "text": "1827 erschien sein\n„Buch der Lieder“."
+  },
+  {
+   "s": 55.917,
+   "e": 59.387,
+   "text": "Darin stand ein Gedicht über eine\nFrau auf einem Felsen am Rhein:"
+  },
+  {
+   "s": 59.387,
+   "e": 61.455,
+   "text": "„Ich weiß nicht,\nwas soll es bedeuten,"
+  },
+  {
+   "s": 61.455,
+   "e": 63.037,
+   "text": "dass ich so traurig bin.“"
+  },
+  {
+   "s": 63.037,
+   "e": 67.229,
+   "text": "Friedrich Silcher machte daraus\nein Lied, das bald jeder sang."
+  },
+  {
+   "s": 67.229,
+   "e": 70.073,
+   "text": "Heine spottete über Fürsten,\nZensur und Spießer."
+  },
+  {
+   "s": 70.073,
+   "e": 72.84,
+   "text": "1831 zog er nach Paris."
+  },
+  {
+   "s": 72.84,
+   "e": 76.51,
+   "text": "Vier Jahre später wurden seine\nSchriften in Deutschland verboten."
+  },
+  {
+   "s": 76.51,
+   "e": 79.731,
+   "text": "In Paris heiratete er Mathilde,\neine junge Verkäuferin."
+  },
+  {
+   "s": 79.731,
+   "e": 83.566,
+   "text": "Seine Gedichte las sie nie –\nsie konnte kein Deutsch."
+  },
+  {
+   "s": 83.566,
+   "e": 87.504,
+   "text": "1843 fuhr er noch einmal nach\nHamburg, zu seiner Mutter."
+  },
+  {
+   "s": 87.504,
+   "e": 90.269,
+   "text": "Daraus wurde „Deutschland.\nEin Wintermärchen“."
+  },
+  {
+   "s": 90.269,
+   "e": 93.233,
+   "text": "Und aus der Sehnsucht nach ihr\nein Gedicht, das wir alle kennen:"
+  },
+  {
+   "s": 93.233,
+   "e": 94.886,
+   "text": "„Denk ich an Deutschland\nin der Nacht,"
+  },
+  {
+   "s": 94.886,
+   "e": 97.933,
+   "text": "dann bin ich um den\nSchlaf gebracht.“"
+  },
+  {
+   "s": 97.933,
+   "e": 102.325,
+   "text": "Im Mai 1848 schleppte er sich\nein letztes Mal in den Louvre,"
+  },
+  {
+   "s": 102.325,
+   "e": 103.896,
+   "text": "zur Venus von Milo."
+  },
+  {
+   "s": 103.896,
+   "e": 106.118,
+   "text": "Danach verließ er\nsein Bett kaum noch."
+  },
+  {
+   "s": 106.118,
+   "e": 109.253,
+   "text": "Acht Jahre lag er gelähmt\nin seiner „Matratzengruft“"
+  },
+  {
+   "s": 109.253,
+   "e": 112.201,
+   "text": "und schrieb weiter: Gedichte,\nSpott, Erinnerungen."
+  },
+  {
+   "s": 112.201,
+   "e": 115.862,
+   "text": "Heinrich Heine\nstarb 1856 in Paris."
+  },
+  {
+   "s": 115.862,
+   "e": 118.926,
+   "text": "Er liegt auf dem\nFriedhof Montmartre."
+  },
+  {
+   "s": 118.926,
+   "e": 123.051,
+   "text": "1933 warfen Studenten auch\nseine Bücher ins Feuer."
+  },
+  {
+   "s": 123.051,
+   "e": 125.688,
+   "text": "Heute steht sein Satz in\nBerlin auf dem Bebelplatz –"
+  },
+  {
+   "s": 125.688,
+   "e": 127.763,
+   "text": "genau dort, wo die\nBücher brannten."
+  },
+  {
+   "s": 127.763,
+   "e": 131.575,
+   "text": "Und am Rhein fahren die Schiffe\nnoch immer am Loreley-Felsen vorbei."
+  }
+ ],
+ "voice": [
+  {
+   "s": 0.3,
+   "src": "news/7/voice_pace/line_01.wav"
+  },
+  {
+   "s": 4.042,
+   "src": "news/7/voice_pace/line_02.wav"
+  },
+  {
+   "s": 7.724,
+   "src": "news/7/voice_pace/line_03.wav"
+  },
+  {
+   "s": 12.444,
+   "src": "news/7/voice_pace/line_04.wav"
+  },
+  {
+   "s": 15.368,
+   "src": "news/7/voice_pace/line_05.wav"
+  },
+  {
+   "s": 17.343,
+   "src": "news/7/voice_pace/line_06.wav"
+  },
+  {
+   "s": 22.206,
+   "src": "news/7/voice_pace/line_07.wav"
+  },
+  {
+   "s": 26.727,
+   "src": "news/7/voice_pace/line_08.wav"
+  },
+  {
+   "s": 28.393,
+   "src": "news/7/voice_pace/line_09.wav"
+  },
+  {
+   "s": 31.127,
+   "src": "news/7/voice_pace/line_10.wav"
+  },
+  {
+   "s": 33.205,
+   "src": "news/7/voice_pace/line_11.wav"
+  },
+  {
+   "s": 35.108,
+   "src": "news/7/voice_pace/line_12.wav"
+  },
+  {
+   "s": 36.832,
+   "src": "news/7/voice_pace/line_13.wav"
+  },
+  {
+   "s": 40.784,
+   "src": "news/7/voice_pace/line_14.wav"
+  },
+  {
+   "s": 44.837,
+   "src": "news/7/voice_pace/line_15.wav"
+  },
+  {
+   "s": 48.75,
+   "src": "news/7/voice_pace/line_16.wav"
+  },
+  {
+   "s": 52.235,
+   "src": "news/7/voice_pace/line_17.wav"
+  },
+  {
+   "s": 55.917,
+   "src": "news/7/voice_pace/line_18.wav"
+  },
+  {
+   "s": 59.387,
+   "src": "news/7/voice_pace/line_19.wav"
+  },
+  {
+   "s": 61.455,
+   "src": "news/7/voice_pace/line_20.wav"
+  },
+  {
+   "s": 63.037,
+   "src": "news/7/voice_pace/line_21.wav"
+  },
+  {
+   "s": 67.229,
+   "src": "news/7/voice_pace/line_22.wav"
+  },
+  {
+   "s": 70.073,
+   "src": "news/7/voice_pace/line_23.wav"
+  },
+  {
+   "s": 72.84,
+   "src": "news/7/voice_pace/line_24.wav"
+  },
+  {
+   "s": 76.51,
+   "src": "news/7/voice_pace/line_25.wav"
+  },
+  {
+   "s": 79.731,
+   "src": "news/7/voice_pace/line_26.wav"
+  },
+  {
+   "s": 83.566,
+   "src": "news/7/voice_pace/line_27.wav"
+  },
+  {
+   "s": 87.504,
+   "src": "news/7/voice_pace/line_28.wav"
+  },
+  {
+   "s": 90.269,
+   "src": "news/7/voice_pace/line_29.wav"
+  },
+  {
+   "s": 93.233,
+   "src": "news/7/voice_pace/line_30.wav"
+  },
+  {
+   "s": 94.886,
+   "src": "news/7/voice_pace/line_31.wav"
+  },
+  {
+   "s": 97.933,
+   "src": "news/7/voice_pace/line_32.wav"
+  },
+  {
+   "s": 102.325,
+   "src": "news/7/voice_pace/line_33.wav"
+  },
+  {
+   "s": 103.896,
+   "src": "news/7/voice_pace/line_34.wav"
+  },
+  {
+   "s": 106.118,
+   "src": "news/7/voice_pace/line_35.wav"
+  },
+  {
+   "s": 109.253,
+   "src": "news/7/voice_pace/line_36.wav"
+  },
+  {
+   "s": 112.201,
+   "src": "news/7/voice_pace/line_37.wav"
+  },
+  {
+   "s": 115.862,
+   "src": "news/7/voice_pace/line_38.wav"
+  },
+  {
+   "s": 118.926,
+   "src": "news/7/voice_pace/line_39.wav"
+  },
+  {
+   "s": 123.051,
+   "src": "news/7/voice_pace/line_40.wav"
+  },
+  {
+   "s": 125.688,
+   "src": "news/7/voice_pace/line_41.wav"
+  },
+  {
+   "s": 127.763,
+   "src": "news/7/voice_pace/line_42.wav"
+  }
+ ],
+ "music": "news/7/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Philosopher",
+   "file": "news/fonts/philosopher-latin-400-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ]
+}

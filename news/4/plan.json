@@ -1,0 +1,887 @@
+{
+ "duration": 168.161,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 26.565,
+   "pics": [
+    {
+     "src": "news/4/img/rotkaeppchen_bett.jpg",
+     "move": "tien-gan",
+     "w": 1859,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.3934,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.156,
+      "x": 0.35,
+      "y": 0.4324
+     },
+     "s": 0.0,
+     "e": 5.585
+    },
+    {
+     "src": "news/4/img/brueder_1855.jpg",
+     "move": "tien-gan",
+     "w": 2381,
+     "h": 2208,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 5.585,
+     "e": 15.268
+    },
+    {
+     "src": "news/4/img/woerterbuch_baende.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 2276,
+     "from": {
+      "z": 1.06,
+      "x": 0.277,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.723,
+      "y": 0.5
+     },
+     "s": 15.268,
+     "e": 26.565
+    }
+   ]
+  },
+  {
+   "s": 26.565,
+   "e": 49.662,
+   "pics": [
+    {
+     "src": "news/4/img/denkmal_hanau.jpg",
+     "move": "nang-len",
+     "w": 1463,
+     "h": 2600,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "s": 26.565,
+     "e": 33.269
+    },
+    {
+     "src": "news/4/img/steinau.jpg",
+     "move": "tien-gan",
+     "w": 2600,
+     "h": 1994,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "s": 33.269,
+     "e": 40.404
+    },
+    {
+     "src": "news/4/img/brueder_1847.jpg",
+     "move": "tien-gan",
+     "w": 1576,
+     "h": 2003,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.45,
+      "y": 0.4167
+     },
+     "s": 40.404,
+     "e": 49.662
+    }
+   ]
+  },
+  {
+   "s": 49.662,
+   "e": 75.139,
+   "pics": [
+    {
+     "src": "news/4/img/savigny.jpg",
+     "move": "tien-gan",
+     "w": 1667,
+     "h": 1355,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.45,
+      "y": 0.4167
+     },
+     "s": 49.662,
+     "e": 57.63
+    },
+    {
+     "src": "news/4/img/kassel_1842.jpg",
+     "move": "ha-xuong",
+     "w": 1300,
+     "h": 1883,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "s": 57.63,
+     "e": 65.862
+    },
+    {
+     "src": "news/4/img/dortchen_tafel.jpg",
+     "move": "dung-yen",
+     "w": 1513,
+     "h": 2270,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 65.862,
+     "e": 70.365
+    },
+    {
+     "src": "news/4/img/viehmann.jpg",
+     "move": "tien-gan",
+     "w": 1433,
+     "h": 1410,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.134,
+      "x": 0.45,
+      "y": 0.441
+     },
+     "s": 70.365,
+     "e": 75.139
+    }
+   ]
+  },
+  {
+   "s": 75.139,
+   "e": 107.151,
+   "pics": [
+    {
+     "src": "news/4/img/khm_1812.jpg",
+     "move": "dung-yen",
+     "w": 1300,
+     "h": 1950,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 75.139,
+     "e": 87.048
+    },
+    {
+     "src": "news/4/img/schneewittchen.jpg",
+     "move": "chi-tiet",
+     "w": 1856,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.345,
+      "x": 0.3,
+      "y": 0.45
+     },
+     "s": 87.048,
+     "e": 91.981
+    },
+    {
+     "src": "news/4/img/wilhelm.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1860,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 91.981,
+     "e": 101.02
+    },
+    {
+     "src": "news/4/img/haensel.jpg",
+     "move": "tien-gan",
+     "w": 1886,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.172,
+      "x": 0.45,
+      "y": 0.4267
+     },
+     "s": 101.02,
+     "e": 107.151
+    }
+   ]
+  },
+  {
+   "s": 107.151,
+   "e": 128.889,
+   "pics": [
+    {
+     "src": "news/4/img/goettingen_1837.jpg",
+     "move": "luot-phai",
+     "w": 2583,
+     "h": 2116,
+     "from": {
+      "z": 1.06,
+      "x": 0.3733,
+      "y": 0.5283
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.6267,
+      "y": 0.5283
+     },
+     "s": 107.151,
+     "e": 114.009
+    },
+    {
+     "src": "news/4/img/goettinger_sieben.jpg",
+     "move": "lui-ra",
+     "w": 1300,
+     "h": 1534,
+     "from": {
+      "z": 1.32,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 114.009,
+     "e": 121.809
+    },
+    {
+     "src": "news/4/img/jacob.jpg",
+     "move": "tien-gan",
+     "w": 1309,
+     "h": 1881,
+     "from": {
+      "z": 1.0,
+      "x": 0.53,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.198,
+      "x": 0.53,
+      "y": 0.4173
+     },
+     "s": 121.809,
+     "e": 128.889
+    }
+   ]
+  },
+  {
+   "s": 128.889,
+   "e": 168.161,
+   "pics": [
+    {
+     "src": "news/4/img/dwb_titel.jpg",
+     "move": "dung-yen",
+     "w": 1751,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 128.889,
+     "e": 141.218
+    },
+    {
+     "src": "news/4/img/brueder_profil.jpg",
+     "move": "tien-gan",
+     "w": 1308,
+     "h": 1300,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.14,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "s": 141.218,
+     "e": 146.231
+    },
+    {
+     "src": "news/4/img/dwb_zettel.jpg",
+     "move": "chi-tiet",
+     "w": 1300,
+     "h": 1419,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 146.231,
+     "e": 154.45
+    },
+    {
+     "src": "news/4/img/denkmal_alt.jpg",
+     "move": "lui-ra",
+     "w": 1300,
+     "h": 1774,
+     "from": {
+      "z": 1.32,
+      "x": 0.5,
+      "y": 0.3788
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 154.45,
+     "e": 161.909
+    },
+    {
+     "src": "news/4/img/rotkaeppchen_wald.jpg",
+     "move": "tien-gan",
+     "w": 1557,
+     "h": 1802,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.175,
+      "x": 0.45,
+      "y": 0.5745
+     },
+     "s": 161.909,
+     "e": 168.161
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 0.3,
+   "e": 2.245,
+   "text": "Wir alle kennen\nihre Geschichten:"
+  },
+  {
+   "s": 2.245,
+   "e": 5.735,
+   "text": "Hänsel und Gretel,\nRotkäppchen, Schneewittchen."
+  },
+  {
+   "s": 5.735,
+   "e": 10.435,
+   "text": "Doch Jacob und Wilhelm Grimm wollten\ngar keine Kinderbücher schreiben."
+  },
+  {
+   "s": 10.435,
+   "e": 13.582,
+   "text": "Sie wollten retten, was\ndie Leute sich erzählten,"
+  },
+  {
+   "s": 13.582,
+   "e": 15.418,
+   "text": "bevor es verloren ging."
+  },
+  {
+   "s": 15.418,
+   "e": 18.412,
+   "text": "Und ihr größtes Werk war\ngar nicht das Märchenbuch,"
+  },
+  {
+   "s": 18.412,
+   "e": 20.412,
+   "text": "sondern ein Wörterbuch."
+  },
+  {
+   "s": 20.412,
+   "e": 27.165,
+   "text": "Fertig wurde es erst 1961 –\nfast 100 Jahre nach ihrem Tod."
+  },
+  {
+   "s": 27.165,
+   "e": 33.419,
+   "text": "Jacob wurde 1785 geboren, Wilhelm\nein Jahr später, beide in Hanau."
+  },
+  {
+   "s": 33.419,
+   "e": 36.404,
+   "text": "Der Vater war Amtmann\nim hessischen Steinau."
+  },
+  {
+   "s": 36.404,
+   "e": 38.561,
+   "text": "Als er starb, war Jacob elf."
+  },
+  {
+   "s": 38.561,
+   "e": 40.554,
+   "text": "Die Familie geriet in Not."
+  },
+  {
+   "s": 40.554,
+   "e": 43.891,
+   "text": "Die Brüder hielten zusammen –\nein ganzes Leben lang."
+  },
+  {
+   "s": 43.891,
+   "e": 46.619,
+   "text": "Sie lernten zusammen,\narbeiteten zusammen"
+  },
+  {
+   "s": 46.619,
+   "e": 50.262,
+   "text": "und lebten fast immer\nunter einem Dach."
+  },
+  {
+   "s": 50.262,
+   "e": 52.677,
+   "text": "In Marburg studierten\nbeide Jura."
+  },
+  {
+   "s": 52.677,
+   "e": 55.255,
+   "text": "Ihr Professor Friedrich\nCarl von Savigny"
+  },
+  {
+   "s": 55.255,
+   "e": 57.78,
+   "text": "zeigte ihnen alte Handschriften."
+  },
+  {
+   "s": 57.78,
+   "e": 62.679,
+   "text": "Ab 1806 schrieben sie auf,\nwas man sich in Hessen erzählte."
+  },
+  {
+   "s": 62.679,
+   "e": 66.012,
+   "text": "Viele Märchen kamen von\njungen Frauen aus Kassel."
+  },
+  {
+   "s": 66.012,
+   "e": 70.515,
+   "text": "Einige erzählte ihnen Dortchen Wild,\ndie Wilhelm später heiratete."
+  },
+  {
+   "s": 70.515,
+   "e": 75.739,
+   "text": "Und rund 40 die Frau eines\nSchneiders: Dorothea Viehmann."
+  },
+  {
+   "s": 75.739,
+   "e": 81.324,
+   "text": "Zu Weihnachten 1812 erschien\nder erste Band: 86 Märchen."
+  },
+  {
+   "s": 81.324,
+   "e": 83.369,
+   "text": "Ein Kinderbuch war das nicht."
+  },
+  {
+   "s": 83.369,
+   "e": 87.198,
+   "text": "Es hatte Anmerkungen für\nGelehrte – und viel Grausamkeit."
+  },
+  {
+   "s": 87.198,
+   "e": 90.127,
+   "text": "Bei Schneewittchen war es\nnoch die eigene Mutter,"
+  },
+  {
+   "s": 90.127,
+   "e": 92.131,
+   "text": "die das Kind töten wollte."
+  },
+  {
+   "s": 92.131,
+   "e": 95.132,
+   "text": "Wilhelm überarbeitete\ndie Märchen immer wieder,"
+  },
+  {
+   "s": 95.132,
+   "e": 98.3,
+   "text": "machte sie sanfter,\nfrommer, kindgerechter."
+  },
+  {
+   "s": 98.3,
+   "e": 101.17,
+   "text": "Aus der Mutter wurde\ndie böse Stiefmutter."
+  },
+  {
+   "s": 101.17,
+   "e": 107.751,
+   "text": "Die letzte Ausgabe,\n1857, hatte 200 Märchen."
+  },
+  {
+   "s": 107.751,
+   "e": 110.841,
+   "text": "1837 kam der Bruch."
+  },
+  {
+   "s": 110.841,
+   "e": 114.159,
+   "text": "Der König von Hannover\nhob die Verfassung auf."
+  },
+  {
+   "s": 114.159,
+   "e": 117.287,
+   "text": "Sieben Professoren in\nGöttingen protestierten,"
+  },
+  {
+   "s": 117.287,
+   "e": 119.729,
+   "text": "darunter Jacob\nund Wilhelm Grimm."
+  },
+  {
+   "s": 119.729,
+   "e": 121.959,
+   "text": "Alle sieben wurden entlassen."
+  },
+  {
+   "s": 121.959,
+   "e": 125.179,
+   "text": "Jacob musste das Land\nbinnen drei Tagen verlassen."
+  },
+  {
+   "s": 125.179,
+   "e": 129.489,
+   "text": "Ganz Deutschland feierte\ndie „Göttinger Sieben“."
+  },
+  {
+   "s": 129.489,
+   "e": 134.354,
+   "text": "1838 begannen sie das Werk,\ndas sie überleben sollte:"
+  },
+  {
+   "s": 134.354,
+   "e": 136.438,
+   "text": "das Deutsche Wörterbuch."
+  },
+  {
+   "s": 136.438,
+   "e": 139.525,
+   "text": "Es sollte die Geschichte der\ndeutschen Wörter erzählen,"
+  },
+  {
+   "s": 139.525,
+   "e": 141.368,
+   "text": "von Luther bis Goethe."
+  },
+  {
+   "s": 141.368,
+   "e": 146.381,
+   "text": "Wilhelm starb 1859 –\ner war beim Buchstaben D."
+  },
+  {
+   "s": 146.381,
+   "e": 151.346,
+   "text": "Jacob arbeitete weiter,\nbis zu seinem Tod 1863."
+  },
+  {
+   "s": 151.346,
+   "e": 154.6,
+   "text": "Sein letztes Wort im\nWörterbuch war „Frucht“."
+  },
+  {
+   "s": 154.6,
+   "e": 157.875,
+   "text": "Andere führten es fort,\nüber ein Jahrhundert lang."
+  },
+  {
+   "s": 157.875,
+   "e": 162.059,
+   "text": "Ihre Märchen gehören heute zum\nWeltdokumentenerbe der UNESCO."
+  },
+  {
+   "s": 162.059,
+   "e": 165.006,
+   "text": "Und fast jedes beginnt\nmit denselben Worten:"
+  },
+  {
+   "s": 165.006,
+   "e": 166.511,
+   "text": "„Es war einmal …“"
+  }
+ ],
+ "voice": [
+  {
+   "s": 0.3,
+   "src": "news/4/voice/line_01.mp3"
+  },
+  {
+   "s": 2.245,
+   "src": "news/4/voice/line_02.mp3"
+  },
+  {
+   "s": 5.735,
+   "src": "news/4/voice/line_03.mp3"
+  },
+  {
+   "s": 10.435,
+   "src": "news/4/voice/line_04.mp3"
+  },
+  {
+   "s": 13.582,
+   "src": "news/4/voice/line_05.mp3"
+  },
+  {
+   "s": 15.418,
+   "src": "news/4/voice/line_06.mp3"
+  },
+  {
+   "s": 18.412,
+   "src": "news/4/voice/line_07.mp3"
+  },
+  {
+   "s": 20.412,
+   "src": "news/4/voice/line_08.mp3"
+  },
+  {
+   "s": 27.165,
+   "src": "news/4/voice/line_09.mp3"
+  },
+  {
+   "s": 33.419,
+   "src": "news/4/voice/line_10.mp3"
+  },
+  {
+   "s": 36.404,
+   "src": "news/4/voice/line_11.mp3"
+  },
+  {
+   "s": 38.561,
+   "src": "news/4/voice/line_12.mp3"
+  },
+  {
+   "s": 40.554,
+   "src": "news/4/voice/line_13.mp3"
+  },
+  {
+   "s": 43.891,
+   "src": "news/4/voice/line_14.mp3"
+  },
+  {
+   "s": 46.619,
+   "src": "news/4/voice/line_15.mp3"
+  },
+  {
+   "s": 50.262,
+   "src": "news/4/voice/line_16.mp3"
+  },
+  {
+   "s": 52.677,
+   "src": "news/4/voice/line_17.mp3"
+  },
+  {
+   "s": 57.78,
+   "src": "news/4/voice/line_18.mp3"
+  },
+  {
+   "s": 62.679,
+   "src": "news/4/voice/line_19.mp3"
+  },
+  {
+   "s": 66.012,
+   "src": "news/4/voice/line_20.mp3"
+  },
+  {
+   "s": 70.515,
+   "src": "news/4/voice/line_21.mp3"
+  },
+  {
+   "s": 75.739,
+   "src": "news/4/voice/line_22.mp3"
+  },
+  {
+   "s": 81.324,
+   "src": "news/4/voice/line_23.mp3"
+  },
+  {
+   "s": 83.369,
+   "src": "news/4/voice/line_24.mp3"
+  },
+  {
+   "s": 87.198,
+   "src": "news/4/voice/line_25.mp3"
+  },
+  {
+   "s": 90.127,
+   "src": "news/4/voice/line_26.mp3"
+  },
+  {
+   "s": 92.131,
+   "src": "news/4/voice/line_27.mp3"
+  },
+  {
+   "s": 95.132,
+   "src": "news/4/voice/line_28.mp3"
+  },
+  {
+   "s": 98.3,
+   "src": "news/4/voice/line_29.mp3"
+  },
+  {
+   "s": 101.17,
+   "src": "news/4/voice/line_30.mp3"
+  },
+  {
+   "s": 107.751,
+   "src": "news/4/voice/line_31.mp3"
+  },
+  {
+   "s": 110.841,
+   "src": "news/4/voice/line_32.mp3"
+  },
+  {
+   "s": 114.159,
+   "src": "news/4/voice/line_33.mp3"
+  },
+  {
+   "s": 117.287,
+   "src": "news/4/voice/line_34.mp3"
+  },
+  {
+   "s": 119.729,
+   "src": "news/4/voice/line_35.mp3"
+  },
+  {
+   "s": 121.959,
+   "src": "news/4/voice/line_36.mp3"
+  },
+  {
+   "s": 125.179,
+   "src": "news/4/voice/line_37.mp3"
+  },
+  {
+   "s": 129.489,
+   "src": "news/4/voice/line_38.mp3"
+  },
+  {
+   "s": 134.354,
+   "src": "news/4/voice/line_39.mp3"
+  },
+  {
+   "s": 136.438,
+   "src": "news/4/voice/line_40.mp3"
+  },
+  {
+   "s": 139.525,
+   "src": "news/4/voice/line_41.mp3"
+  },
+  {
+   "s": 141.368,
+   "src": "news/4/voice/line_42.mp3"
+  },
+  {
+   "s": 146.381,
+   "src": "news/4/voice/line_43.mp3"
+  },
+  {
+   "s": 151.346,
+   "src": "news/4/voice/line_44.mp3"
+  },
+  {
+   "s": 154.6,
+   "src": "news/4/voice/line_45.mp3"
+  },
+  {
+   "s": 157.875,
+   "src": "news/4/voice/line_46.mp3"
+  },
+  {
+   "s": 162.059,
+   "src": "news/4/voice/line_47.mp3"
+  },
+  {
+   "s": 165.006,
+   "src": "news/4/voice/line_48.mp3"
+  }
+ ],
+ "music": "news/4/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Philosopher",
+   "file": "news/fonts/philosopher-latin-400-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ]
+}

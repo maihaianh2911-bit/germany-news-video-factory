@@ -1,0 +1,770 @@
+{
+ "duration": 114.445,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 19.149,
+   "pics": [
+    {
+     "src": "news/9/img/shatterhand_nah.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1782,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.4545
+     },
+     "s": 0.0,
+     "e": 3.374
+    },
+    {
+     "src": "news/9/img/shatterhand_gewehr.jpg",
+     "move": "ha-xuong",
+     "w": 1312,
+     "h": 2600,
+     "from": {
+      "z": 1.352,
+      "x": 0.5,
+      "y": 0.3317
+     },
+     "to": {
+      "z": 1.352,
+      "x": 0.5,
+      "y": 0.6683
+     },
+     "s": 3.374,
+     "e": 9.342
+    },
+    {
+     "src": "news/9/img/may_1907.jpg",
+     "move": "tien-gan",
+     "w": 1363,
+     "h": 1782,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 9.342,
+     "e": 19.149
+    }
+   ]
+  },
+  {
+   "s": 19.149,
+   "e": 36.858,
+   "pics": [
+    {
+     "src": "news/9/img/geburtshaus.jpg",
+     "move": "nang-len",
+     "w": 1734,
+     "h": 2600,
+     "from": {
+      "z": 1.404,
+      "x": 0.5,
+      "y": 0.6438
+     },
+     "to": {
+      "z": 1.404,
+      "x": 0.5,
+      "y": 0.3562
+     },
+     "s": 19.149,
+     "e": 23.898
+    },
+    {
+     "src": "news/9/img/webstube.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1733,
+     "from": {
+      "z": 1.06,
+      "x": 0.4342,
+      "y": 0.4717
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5658,
+      "y": 0.4717
+     },
+     "s": 23.898,
+     "e": 28.273
+    },
+    {
+     "src": "news/9/img/may_jung.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1689,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 28.273,
+     "e": 36.858
+    }
+   ]
+  },
+  {
+   "s": 36.858,
+   "e": 50.513,
+   "pics": [
+    {
+     "src": "news/9/img/osterstein.jpg",
+     "move": "nang-len",
+     "w": 1950,
+     "h": 2600,
+     "from": {
+      "z": 1.443,
+      "x": 0.5,
+      "y": 0.6535
+     },
+     "to": {
+      "z": 1.443,
+      "x": 0.5,
+      "y": 0.3465
+     },
+     "s": 36.858,
+     "e": 42.071
+    },
+    {
+     "src": "news/9/img/waldheim.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1395,
+     "from": {
+      "z": 1.06,
+      "x": 0.3979,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.6021,
+      "y": 0.5
+     },
+     "s": 42.071,
+     "e": 50.513
+    }
+   ]
+  },
+  {
+   "s": 50.513,
+   "e": 77.142,
+   "pics": [
+    {
+     "src": "news/9/img/kara_ben_nemsi.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1767,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.176,
+      "x": 0.5,
+      "y": 0.4252
+     },
+     "s": 50.513,
+     "e": 56.794
+    },
+    {
+     "src": "news/9/img/shatterhand_baer.jpg",
+     "move": "tien-gan",
+     "w": 1558,
+     "h": 2126,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.45,
+      "y": 0.4545
+     },
+     "s": 56.794,
+     "e": 59.963
+    },
+    {
+     "src": "news/9/img/winnetou_band.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 2143,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.151,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 59.963,
+     "e": 65.369
+    },
+    {
+     "src": "news/9/img/doktor_karte.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1955,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 65.369,
+     "e": 73.427
+    },
+    {
+     "src": "news/9/img/villa.jpg",
+     "move": "nang-len",
+     "w": 1628,
+     "h": 1619,
+     "from": {
+      "z": 1.316,
+      "x": 0.5,
+      "y": 0.62
+     },
+     "to": {
+      "z": 1.316,
+      "x": 0.5,
+      "y": 0.38
+     },
+     "s": 73.427,
+     "e": 77.142
+    }
+   ]
+  },
+  {
+   "s": 77.142,
+   "e": 96.837,
+   "pics": [
+    {
+     "src": "news/9/img/karte_westen.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 2177,
+     "from": {
+      "z": 1.06,
+      "x": 0.4029,
+      "y": 0.4717
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5971,
+      "y": 0.4717
+     },
+     "s": 77.142,
+     "e": 82.286
+    },
+    {
+     "src": "news/9/img/may_alt.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1952,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 82.286,
+     "e": 93.891
+    },
+    {
+     "src": "news/9/img/grab.jpg",
+     "move": "dung-yen",
+     "w": 1950,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 93.891,
+     "e": 96.837
+    }
+   ]
+  },
+  {
+   "s": 96.837,
+   "e": 114.445,
+   "pics": [
+    {
+     "src": "news/9/img/gewehre.jpg",
+     "move": "tien-gan",
+     "w": 1920,
+     "h": 2560,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.4545
+     },
+     "s": 96.837,
+     "e": 99.686
+    },
+    {
+     "src": "news/9/img/buecher.jpg",
+     "move": "dung-yen",
+     "w": 1300,
+     "h": 1318,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 99.686,
+     "e": 103.717
+    },
+    {
+     "src": "news/9/img/segeberg.jpg",
+     "move": "tien-gan",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.0,
+      "x": 0.56,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.56,
+      "y": 0.5
+     },
+     "s": 103.717,
+     "e": 107.179
+    },
+    {
+     "src": "news/9/img/shatterhand_fels.jpg",
+     "move": "lui-ra",
+     "w": 1380,
+     "h": 2027,
+     "from": {
+      "z": 1.32,
+      "x": 0.5,
+      "y": 0.3788
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 107.179,
+     "e": 114.445
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 0.3,
+   "e": 3.524,
+   "text": "Er schrieb über den Wilden Westen,\nals wäre er dabei gewesen."
+  },
+  {
+   "s": 3.524,
+   "e": 6.058,
+   "text": "Er ließ sich als Old\nShatterhand fotografieren –"
+  },
+  {
+   "s": 6.058,
+   "e": 7.885,
+   "text": "mit Fransenjacke und Gewehr."
+  },
+  {
+   "s": 7.885,
+   "e": 9.492,
+   "text": "Millionen glaubten ihm."
+  },
+  {
+   "s": 9.492,
+   "e": 13.188,
+   "text": "Doch als Karl May Winnetou erfand,\nwar er nie in Amerika gewesen."
+  },
+  {
+   "s": 13.188,
+   "e": 15.261,
+   "text": "Seine Prärie kannte\ner aus Büchern."
+  },
+  {
+   "s": 15.261,
+   "e": 19.649,
+   "text": "Und viele Jahre seines Lebens\nhatte er hinter Gittern verbracht."
+  },
+  {
+   "s": 19.649,
+   "e": 24.048,
+   "text": "Karl May wurde 1842 in\nErnstthal in Sachsen geboren."
+  },
+  {
+   "s": 24.048,
+   "e": 25.902,
+   "text": "Die Eltern waren arme Weber."
+  },
+  {
+   "s": 25.902,
+   "e": 28.423,
+   "text": "Von vierzehn Kindern\nüberlebten nur fünf."
+  },
+  {
+   "s": 28.423,
+   "e": 29.717,
+   "text": "Karl wurde Lehrer –"
+  },
+  {
+   "s": 29.717,
+   "e": 33.286,
+   "text": "doch man warf ihm vor, die Uhr\neines Kollegen gestohlen zu haben."
+  },
+  {
+   "s": 33.286,
+   "e": 37.358,
+   "text": "Er kam ins Gefängnis und\ndurfte nie wieder unterrichten."
+  },
+  {
+   "s": 37.358,
+   "e": 39.31,
+   "text": "Danach wurde er zum Hochstapler."
+  },
+  {
+   "s": 39.31,
+   "e": 42.221,
+   "text": "Er gab sich als Arzt aus,\nals Polizist, als Beamter."
+  },
+  {
+   "s": 42.221,
+   "e": 45.778,
+   "text": "Insgesamt saß er rund sieben Jahre\nim Arbeitshaus und im Zuchthaus."
+  },
+  {
+   "s": 45.778,
+   "e": 48.122,
+   "text": "Im Gefängnis verwaltete\ner die Bibliothek"
+  },
+  {
+   "s": 48.122,
+   "e": 51.013,
+   "text": "und las alles über ferne Länder."
+  },
+  {
+   "s": 51.013,
+   "e": 52.819,
+   "text": "In Freiheit begann\ner zu schreiben:"
+  },
+  {
+   "s": 52.819,
+   "e": 54.121,
+   "text": "erst Fortsetzungsromane,"
+  },
+  {
+   "s": 54.121,
+   "e": 56.944,
+   "text": "dann Abenteuer im Orient\nund im Wilden Westen."
+  },
+  {
+   "s": 56.944,
+   "e": 60.113,
+   "text": "Sein Held hieß Old Shatterhand:\nstark, klug und edel."
+  },
+  {
+   "s": 60.113,
+   "e": 62.553,
+   "text": "Sein Freund war der\nApachenhäuptling Winnetou."
+  },
+  {
+   "s": 62.553,
+   "e": 65.519,
+   "text": "1893 erschien „Winnetou“."
+  },
+  {
+   "s": 65.519,
+   "e": 68.599,
+   "text": "Viele Leser hielten Old\nShatterhand für Karl May selbst –"
+  },
+  {
+   "s": 68.599,
+   "e": 70.228,
+   "text": "und May ließ sie in dem Glauben."
+  },
+  {
+   "s": 70.228,
+   "e": 73.577,
+   "text": "Er nannte sich „Doktor“, mit\neinem Titel, den er gekauft hatte."
+  },
+  {
+   "s": 73.577,
+   "e": 77.642,
+   "text": "Sein Haus in Radebeul taufte\ner „Villa Shatterhand“."
+  },
+  {
+   "s": 77.642,
+   "e": 80.392,
+   "text": "Erst 1908 reiste\ner nach Amerika."
+  },
+  {
+   "s": 80.392,
+   "e": 82.436,
+   "text": "Bis in den Wilden\nWesten kam er nie."
+  },
+  {
+   "s": 82.436,
+   "e": 85.864,
+   "text": "Inzwischen hatten Journalisten\nseine Vergangenheit aufgedeckt."
+  },
+  {
+   "s": 85.864,
+   "e": 88.494,
+   "text": "Es folgten Prozesse,\nSpott und Feindschaft."
+  },
+  {
+   "s": 88.494,
+   "e": 92.756,
+   "text": "Im März 1912 hielt er in Wien\neinen Vortrag vor großem Publikum."
+  },
+  {
+   "s": 92.756,
+   "e": 94.041,
+   "text": "Man feierte ihn."
+  },
+  {
+   "s": 94.041,
+   "e": 97.337,
+   "text": "Eine gute Woche später\nwar Karl May tot."
+  },
+  {
+   "s": 97.337,
+   "e": 99.836,
+   "text": "Heute ist die Villa\nShatterhand ein Museum."
+  },
+  {
+   "s": 99.836,
+   "e": 103.867,
+   "text": "Seine Bücher wurden weltweit\nrund 200 Millionen Mal gedruckt."
+  },
+  {
+   "s": 103.867,
+   "e": 107.329,
+   "text": "Und in Bad Segeberg reitet Winnetou\njeden Sommer über die Bühne."
+  },
+  {
+   "s": 107.329,
+   "e": 109.867,
+   "text": "Karl May war nie dort,\nwo seine Helden lebten."
+  },
+  {
+   "s": 109.867,
+   "e": 112.87,
+   "text": "Aber Millionen Kinder sind\nmit ihnen dorthin geritten."
+  }
+ ],
+ "voice": [
+  {
+   "s": 0.3,
+   "src": "news/9/voice_pace/line_01.wav"
+  },
+  {
+   "s": 3.524,
+   "src": "news/9/voice_pace/line_02.wav"
+  },
+  {
+   "s": 6.058,
+   "src": "news/9/voice_pace/line_03.wav"
+  },
+  {
+   "s": 7.885,
+   "src": "news/9/voice_pace/line_04.wav"
+  },
+  {
+   "s": 9.492,
+   "src": "news/9/voice_pace/line_05.wav"
+  },
+  {
+   "s": 13.188,
+   "src": "news/9/voice_pace/line_06.wav"
+  },
+  {
+   "s": 15.261,
+   "src": "news/9/voice_pace/line_07.wav"
+  },
+  {
+   "s": 19.649,
+   "src": "news/9/voice_pace/line_08.wav"
+  },
+  {
+   "s": 24.048,
+   "src": "news/9/voice_pace/line_09.wav"
+  },
+  {
+   "s": 25.902,
+   "src": "news/9/voice_pace/line_10.wav"
+  },
+  {
+   "s": 28.423,
+   "src": "news/9/voice_pace/line_11.wav"
+  },
+  {
+   "s": 29.717,
+   "src": "news/9/voice_pace/line_12.wav"
+  },
+  {
+   "s": 33.286,
+   "src": "news/9/voice_pace/line_13.wav"
+  },
+  {
+   "s": 37.358,
+   "src": "news/9/voice_pace/line_14.wav"
+  },
+  {
+   "s": 39.31,
+   "src": "news/9/voice_pace/line_15.wav"
+  },
+  {
+   "s": 42.221,
+   "src": "news/9/voice_pace/line_16.wav"
+  },
+  {
+   "s": 45.778,
+   "src": "news/9/voice_pace/line_17.wav"
+  },
+  {
+   "s": 48.122,
+   "src": "news/9/voice_pace/line_18.wav"
+  },
+  {
+   "s": 51.013,
+   "src": "news/9/voice_pace/line_19.wav"
+  },
+  {
+   "s": 52.819,
+   "src": "news/9/voice_pace/line_20.wav"
+  },
+  {
+   "s": 56.944,
+   "src": "news/9/voice_pace/line_21.wav"
+  },
+  {
+   "s": 60.113,
+   "src": "news/9/voice_pace/line_22.wav"
+  },
+  {
+   "s": 62.553,
+   "src": "news/9/voice_pace/line_23.wav"
+  },
+  {
+   "s": 65.519,
+   "src": "news/9/voice_pace/line_24.wav"
+  },
+  {
+   "s": 68.599,
+   "src": "news/9/voice_pace/line_25.wav"
+  },
+  {
+   "s": 70.228,
+   "src": "news/9/voice_pace/line_26.wav"
+  },
+  {
+   "s": 73.577,
+   "src": "news/9/voice_pace/line_27.wav"
+  },
+  {
+   "s": 77.642,
+   "src": "news/9/voice_pace/line_28.wav"
+  },
+  {
+   "s": 80.392,
+   "src": "news/9/voice_pace/line_29.wav"
+  },
+  {
+   "s": 82.436,
+   "src": "news/9/voice_pace/line_30.wav"
+  },
+  {
+   "s": 85.864,
+   "src": "news/9/voice_pace/line_31.wav"
+  },
+  {
+   "s": 88.494,
+   "src": "news/9/voice_pace/line_32.wav"
+  },
+  {
+   "s": 92.756,
+   "src": "news/9/voice_pace/line_33.wav"
+  },
+  {
+   "s": 94.041,
+   "src": "news/9/voice_pace/line_34.wav"
+  },
+  {
+   "s": 97.337,
+   "src": "news/9/voice_pace/line_35.wav"
+  },
+  {
+   "s": 99.836,
+   "src": "news/9/voice_pace/line_36.wav"
+  },
+  {
+   "s": 103.867,
+   "src": "news/9/voice_pace/line_37.wav"
+  },
+  {
+   "s": 107.329,
+   "src": "news/9/voice_pace/line_38.wav"
+  },
+  {
+   "s": 109.867,
+   "src": "news/9/voice_pace/line_39.wav"
+  }
+ ],
+ "music": "news/9/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Philosopher",
+   "file": "news/fonts/philosopher-latin-400-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ]
+}

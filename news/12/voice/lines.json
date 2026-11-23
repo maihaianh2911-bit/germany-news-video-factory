@@ -1,0 +1,351 @@
+[
+ {
+  "i": 1,
+  "text": "Top three true crime cases tied to stories of demons.",
+  "tts": "Top three true crime cases tied to stories of demons.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_01.mp3",
+  "duration": 2.484,
+  "heard": "Top 3 True Crime Cases Tied to Stories of Demons",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 2,
+  "text": "Number three: Son of Sam.",
+  "tts": "Number three: Son of Sam.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_02.mp3",
+  "duration": 1.495,
+  "heard": "Number 3, Son of Sam",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 3,
+  "text": "After shooting six people to death in New York,",
+  "tts": "After shooting six people to death in New York,",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_03.mp3",
+  "duration": 1.993,
+  "heard": "After shooting six people to death in New York",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 4,
+  "text": "David Berkowitz claimed the one giving him orders was his neighbor's black dog.",
+  "tts": "David Berkowitz claimed the one giving him orders was his neighbor's black dog.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_04.mp3",
+  "duration": 3.504,
+  "heard": "David Berkowitz claimed the one giving him orders was his neighbor's black dog.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 5,
+  "text": "He said a 6,000-year-old demon had possessed the dog",
+  "tts": "He said a 6,000-year-old demon had possessed the dog",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_05.mp3",
+  "duration": 2.55,
+  "heard": "He said a 6,000-year-old demon had possessed the dog.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 6,
+  "text": "and used its voice to order him to kill.",
+  "tts": "and used its voice to order him to kill.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_06.mp3",
+  "duration": 1.795,
+  "heard": "and used its voice to order him to kill.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 7,
+  "text": "Two years later, in a prison interview,",
+  "tts": "Two years later, in a prison interview,",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_07.mp3",
+  "duration": 1.626,
+  "heard": "Two years later in a prison's interview.",
+  "score": 0.86,
+  "diff": []
+ },
+ {
+  "i": 8,
+  "text": "Berkowitz admitted he had made up the demon to excuse his crimes.",
+  "tts": "Berkowitz admitted he had made up the demon to excuse his crimes.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_08.mp3",
+  "duration": 2.896,
+  "heard": "Berkowitz admitted he had made up the demon to excuse his crimes.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 9,
+  "text": "It was not until 1987 that he turned to God to beg for forgiveness.",
+  "tts": "It was not until 1987 that he turned to God to beg for forgiveness.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_09.mp3",
+  "duration": 3.57,
+  "heard": "It was not until 1987 that he turned to God to beg for forgiveness.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 10,
+  "text": "Number two: the Amityville house.",
+  "tts": "Number two: the Amityville house.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_10.mp3",
+  "duration": 1.693,
+  "heard": "Number 2. The Amityville House",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 11,
+  "text": "One evening in November 1974,",
+  "tts": "One evening in November 1974,",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_11.mp3",
+  "duration": 1.923,
+  "heard": "one evening in November 1974.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 12,
+  "text": "Ronald DeFeo Jr. ran into a bar, saying his parents had been shot.",
+  "tts": "Ronald DeFeo Junior ran into a bar, saying his parents had been shot.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_12.mp3",
+  "duration": 3.273,
+  "heard": "Ronald DeFio Jr. ran into a bar saying his parents had been shot.",
+  "score": 0.85,
+  "diff": [
+   "defeojunior→defiojr"
+  ]
+ },
+ {
+  "i": 13,
+  "text": "Only when friends followed him home did they discover",
+  "tts": "Only when friends followed him home did they discover",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_13.mp3",
+  "duration": 2.358,
+  "heard": "Only when friends followed him home did they discover.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 14,
+  "text": "that all four of his younger siblings were also dead in their bedrooms.",
+  "tts": "that all four of his younger siblings were also dead in their bedrooms.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_14.mp3",
+  "duration": 3.137,
+  "heard": "that all four of his younger siblings were also dead in their bedrooms.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 15,
+  "text": "The next day, Ronald confessed that he was the one who had fired the gun.",
+  "tts": "The next day, Ronald confessed that he was the one who had fired the gun.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_15.mp3",
+  "duration": 3.337,
+  "heard": "The next day Ronald confessed that he was the one who had fired the gun.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 16,
+  "text": "In court, he said voices had urged him to kill his whole family.",
+  "tts": "In court, he said voices had urged him to kill his whole family.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_16.mp3",
+  "duration": 2.782,
+  "heard": "In court he said voices had urged him to kill his whole family.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 17,
+  "text": "A year later, the Lutz family moved into that house.",
+  "tts": "A year later, the Lutz family moved into that house.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_17.mp3",
+  "duration": 2.412,
+  "heard": "A year later, the Lutz family moved into that house.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 18,
+  "text": "Mr. Lutz said that when a priest came to bless it,",
+  "tts": "Mr. Lutz said that when a priest came to bless it,",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_18.mp3",
+  "duration": 2.243,
+  "heard": "Mr. Lutz said that when a priest came to bless it,",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 19,
+  "text": "the priest heard a voice shout: \"Get out!\"",
+  "tts": "the priest heard a voice shout: \"Get out!\"",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_19.mp3",
+  "duration": 1.83,
+  "heard": "The priest heard a voice shout get out.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 20,
+  "text": "The Lutz family lasted only 28 days there.",
+  "tts": "The Lutz family lasted only 28 days there.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_20.mp3",
+  "duration": 2.182,
+  "heard": "The Lutz family lasted only 28 days there.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 21,
+  "text": "Number one: the case behind the movie Emily Rose.",
+  "tts": "Number one: the case behind the movie Emily Rose.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_21.mp3",
+  "duration": 2.292,
+  "heard": "Number 1. The case behind the movie Emily Rose.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 22,
+  "text": "Two years after Anneliese Michel died,",
+  "tts": "Two years after Anna-leeza Michelle died,",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_22.mp3",
+  "duration": 1.958,
+  "heard": "two years after Annalisa Michelle died.",
+  "score": 0.77,
+  "diff": [
+   "annaleeza→annalisa"
+  ]
+ },
+ {
+  "i": 23,
+  "text": "her sister heard her voice again, in the middle of a courtroom.",
+  "tts": "her sister heard her voice again, in the middle of a courtroom.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_23.mp3",
+  "duration": 2.543,
+  "heard": "Her sister heard her voice again in the middle of a courtroom.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 24,
+  "text": "The court was playing a tape recorded during an exorcism.",
+  "tts": "The court was playing a tape recorded during an exorcism.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_24.mp3",
+  "duration": 2.679,
+  "heard": "The court was playing a tape recorded during an exorcism.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 25,
+  "text": "On the tape, two priests recite prayers,",
+  "tts": "On the tape, two priests recite prayers,",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_25.mp3",
+  "duration": 1.878,
+  "heard": "On the tape, two priests recite prayers.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 26,
+  "text": "while Anneliese screams back in a voice almost impossible to recognize.",
+  "tts": "while Anna-leeza screams back in a voice almost impossible to recognize.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_26.mp3",
+  "duration": 3.439,
+  "heard": "while Annalisa screams back in a voice almost impossible to recognize.",
+  "score": 0.87,
+  "diff": [
+   "annaleeza→annalisa"
+  ]
+ },
+ {
+  "i": 27,
+  "text": "During those rituals, she sometimes called herself Lucifer, and sometimes Judas.",
+  "tts": "During those rituals, she sometimes called herself Lucifer, and sometimes Judas.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_27.mp3",
+  "duration": 3.781,
+  "heard": "During those rituals, she sometimes called herself Lucifer and sometimes Judas.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 28,
+  "text": "Anneliese died at the age of 23 from malnutrition and dehydration.",
+  "tts": "Anna-leeza died at the age of 23 from malnutrition and dehydration.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_28.mp3",
+  "duration": 3.486,
+  "heard": "Annalisa died at the age of 23 from malnutrition and dehydration.",
+  "score": 0.87,
+  "diff": [
+   "annaleeza→annalisa"
+  ]
+ },
+ {
+  "i": 29,
+  "text": "By then, she weighed only about 68 pounds.",
+  "tts": "By then, she weighed only about 68 pounds.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_29.mp3",
+  "duration": 2.213,
+  "heard": "By then she weighed only about 68 pounds.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 30,
+  "text": "Her parents and the two priests sat at the defendants' table.",
+  "tts": "Her parents and the two priests sat at the defendants' table.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_30.mp3",
+  "duration": 2.575,
+  "heard": "Her parents and the two priests sat at the defendant's table.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 31,
+  "text": "All four were later convicted of negligent homicide.",
+  "tts": "All four were later convicted of negligent homicide.",
+  "voice": "CwhRBWXzGAHq8TQ4Fs17",
+  "file": "line_31.mp3",
+  "duration": 2.482,
+  "heard": "All four were later convicted of negligent homicide.",
+  "score": 1.0,
+  "diff": []
+ }
+]

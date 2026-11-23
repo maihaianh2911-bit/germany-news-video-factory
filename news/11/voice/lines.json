@@ -1,0 +1,457 @@
+[
+ {
+  "i": 1,
+  "text": "„Herr von Ribbeck auf Ribbeck im Havelland,",
+  "tts": "„Herr von Ribbeck auf Ribbeck im Havelland,",
+  "voice": "clone_611",
+  "file": "line_01.mp3",
+  "duration": 2.592,
+  "heard": "Herr von Riebeck auf Riebeck im Haveland",
+  "score": 0.57,
+  "diff": [
+   "ribbeck→riebeck",
+   "ribbeck→riebeck"
+  ]
+ },
+ {
+  "i": 2,
+  "text": "ein Birnbaum in seinem Garten stand.“",
+  "tts": "ein Birnbaum in seinem Garten stand.“",
+  "voice": "clone_611",
+  "file": "line_02.mp3",
+  "duration": 2.118,
+  "heard": "ein Birnbaum in seinem Garten stand.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 3,
+  "text": "Diese Zeilen kennen wir aus der Schule.",
+  "tts": "Diese Zeilen kennen wir aus der Schule.",
+  "voice": "clone_611",
+  "file": "line_03.mp3",
+  "duration": 2.134,
+  "heard": "Diese Zeilen kennen wir aus der Schule.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 4,
+  "text": "Geschrieben hat sie Theodor Fontane.",
+  "tts": "Geschrieben hat sie Theodor Fontane.",
+  "voice": "clone_611",
+  "file": "line_04.mp3",
+  "duration": 2.082,
+  "heard": "Geschrieben hat sie Theodor Fontane.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 5,
+  "text": "Bevor er Dichter wurde, war er Apotheker.",
+  "tts": "Bevor er Dichter wurde, war er Apotheker.",
+  "voice": "clone_611",
+  "file": "line_05.mp3",
+  "duration": 2.387,
+  "heard": "Bevor er dichter wurde, war er Apotheker.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 6,
+  "text": "Seinen ersten Roman veröffentlichte er erst mit 58.",
+  "tts": "Seinen ersten Roman veröffentlichte er erst mit achtundfünfzig.",
+  "voice": "clone_611",
+  "file": "line_06.mp3",
+  "duration": 3.877,
+  "heard": "Seinen ersten Roman veröffentlichte er erst mit 58.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 7,
+  "text": "Und sein berühmtestes Buch schrieb er mit über 70.",
+  "tts": "Und sein berühmtestes Buch schrieb er mit über siebzig.",
+  "voice": "clone_611",
+  "file": "line_07.mp3",
+  "duration": 3.123,
+  "heard": "und sein berühmtestes Buch schrieb er mit über 70.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 8,
+  "text": "Fontane wurde 1819 in Neuruppin geboren.",
+  "tts": "Fontane wurde achtzehnhundertneunzehn in Neuruppin geboren.",
+  "voice": "clone_611",
+  "file": "line_08.mp3",
+  "duration": 3.874,
+  "heard": "Fontane wurde 1819 in Neuro-Pin geboren.",
+  "score": 0.77,
+  "diff": [
+   "neuruppin→neuropin"
+  ]
+ },
+ {
+  "i": 9,
+  "text": "Seine Vorfahren waren Hugenotten aus Frankreich.",
+  "tts": "Seine Vorfahren waren Hugenotten aus Frankreich.",
+  "voice": "clone_611",
+  "file": "line_09.mp3",
+  "duration": 2.923,
+  "heard": "Seine Vorfahren waren Huguenotten aus Frankreich.",
+  "score": 0.83,
+  "diff": []
+ },
+ {
+  "i": 10,
+  "text": "Der Vater führte eine Apotheke –",
+  "tts": "Der Vater führte eine Apotheke –",
+  "voice": "clone_611",
+  "file": "line_10.mp3",
+  "duration": 1.872,
+  "heard": "Der Vater führte eine Apotheke.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 11,
+  "text": "und verspielte viel Geld beim Kartenspiel.",
+  "tts": "und verspielte viel Geld beim Kartenspiel.",
+  "voice": "clone_611",
+  "file": "line_11.mp3",
+  "duration": 2.34,
+  "heard": "und verspielte viel Geld beim Kartenspiel.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 12,
+  "text": "Er musste die Apotheke verkaufen.",
+  "tts": "Er musste die Apotheke verkaufen.",
+  "voice": "clone_611",
+  "file": "line_12.mp3",
+  "duration": 1.976,
+  "heard": "Er musste die Apotheke verkaufen.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 13,
+  "text": "Auch Theodor lernte Apotheker.",
+  "tts": "Auch Theodor lernte Apotheker.",
+  "voice": "clone_611",
+  "file": "line_13.mp3",
+  "duration": 1.827,
+  "heard": "Auch Theodor Lernte Apotheker.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 14,
+  "text": "Doch lieber schrieb er Gedichte, Balladen und Zeitungsartikel.",
+  "tts": "Doch lieber schrieb er Gedichte, Balladen und Zeitungsartikel.",
+  "voice": "clone_611",
+  "file": "line_14.mp3",
+  "duration": 3.912,
+  "heard": "doch lieber schreibe Gedichte, Balladen und Zeitungsartikeln.",
+  "score": 0.67,
+  "diff": [
+   "schrieber→schreibe"
+  ]
+ },
+ {
+  "i": 15,
+  "text": "1849 gab er den Beruf auf und wurde Journalist.",
+  "tts": "Achtzehnhundertneunundvierzig gab er den Beruf auf und wurde Journalist.",
+  "voice": "clone_611",
+  "file": "line_15.mp3",
+  "duration": 4.366,
+  "heard": "1849 gab er den Beruf auf und wurde Journalist.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 16,
+  "text": "Jahrelang lebte er als Korrespondent in London.",
+  "tts": "Jahrelang lebte er als Korrespondent in London.",
+  "voice": "clone_611",
+  "file": "line_16.mp3",
+  "duration": 2.773,
+  "heard": "Jahre lang lebte er als Korrespondent in London.",
+  "score": 0.8,
+  "diff": []
+ },
+ {
+  "i": 17,
+  "text": "Zurück in Preußen wanderte er durch die Mark Brandenburg",
+  "tts": "Zurück in Preußen wanderte er durch die Mark Brandenburg",
+  "voice": "clone_611",
+  "file": "line_17.mp3",
+  "duration": 3.334,
+  "heard": "Zurück in Preußen wanderte er durch die Markbrandenburg.",
+  "score": 0.82,
+  "diff": []
+ },
+ {
+  "i": 18,
+  "text": "und schrieb seine „Wanderungen durch die Mark Brandenburg“.",
+  "tts": "und schrieb seine „Wanderungen durch die Mark Brandenburg“.",
+  "voice": "clone_611",
+  "file": "line_18.mp3",
+  "duration": 3.699,
+  "heard": "und schrieb seine Wanderungen durch die Mark-Brandenburg.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 19,
+  "text": "1870 reiste er als Reporter in den Krieg nach Frankreich.",
+  "tts": "Achtzehnhundertsiebzig reiste er als Reporter in den Krieg nach Frankreich.",
+  "voice": "clone_611",
+  "file": "line_19.mp3",
+  "duration": 4.448,
+  "heard": "1870 reiste er als Reporter in den Krieg nach Frankreich.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 20,
+  "text": "Dort hielt man ihn für einen Spion und nahm ihn gefangen.",
+  "tts": "Dort hielt man ihn für einen Spion und nahm ihn gefangen.",
+  "voice": "clone_611",
+  "file": "line_20.mp3",
+  "duration": 3.381,
+  "heard": "Dort hielt man ihn für einen Spion und nahm ihn gefangen.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 21,
+  "text": "Erst Bismarck setzte sich für ihn ein.",
+  "tts": "Erst Bismarck setzte sich für ihn ein.",
+  "voice": "clone_611",
+  "file": "line_21.mp3",
+  "duration": 2.192,
+  "heard": "Erst Bismarck setzte sich für ihn ein.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 22,
+  "text": "1878, mit 58 Jahren, erschien endlich sein erster Roman.",
+  "tts": "Achtzehnhundertachtundsiebzig, mit achtundfünfzig Jahren, erschien endlich sein erster Roman.",
+  "voice": "clone_611",
+  "file": "line_22.mp3",
+  "duration": 5.938,
+  "heard": "1878 mit 58 Jahren erschien endlich sein erster Roman.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 23,
+  "text": "Dann folgte einer nach dem anderen.",
+  "tts": "Dann folgte einer nach dem anderen.",
+  "voice": "clone_611",
+  "file": "line_23.mp3",
+  "duration": 1.913,
+  "heard": "dann folgte einer nach dem anderen.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 24,
+  "text": "Mit über 70 schrieb er „Effi Briest“.",
+  "tts": "Mit über siebzig schrieb er „Effi Briest“.",
+  "voice": "clone_611",
+  "file": "line_24.mp3",
+  "duration": 2.421,
+  "heard": "mit über 70 Schriebereffi-Priest.",
+  "score": 0.5,
+  "diff": []
+ },
+ {
+  "i": 25,
+  "text": "Ein Mädchen wird mit 17 an einen viel älteren Baron verheiratet.",
+  "tts": "Ein Mädchen wird mit siebzehn an einen viel älteren Baron verheiratet.",
+  "voice": "clone_611",
+  "file": "line_25.mp3",
+  "duration": 4.371,
+  "heard": "Ein Mädchen wird mit 17 an einen viel älteren Baron verheiratet.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 26,
+  "text": "Sie langweilt sich, hat eine Affäre –",
+  "tts": "Sie langweilt sich, hat eine Affäre –",
+  "voice": "clone_611",
+  "file": "line_26.mp3",
+  "duration": 2.276,
+  "heard": "Sie langweilt sich, hat eine Affäre.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 27,
+  "text": "und Jahre später findet ihr Mann die Briefe.",
+  "tts": "und Jahre später findet ihr Mann die Briefe.",
+  "voice": "clone_611",
+  "file": "line_27.mp3",
+  "duration": 2.402,
+  "heard": "Und Jahre später findet ihr Mann die Briefe.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 28,
+  "text": "Er tötet den Liebhaber im Duell und verstößt Effi.",
+  "tts": "Er tötet den Liebhaber im Duell und verstößt Effi.",
+  "voice": "clone_611",
+  "file": "line_28.mp3",
+  "duration": 2.937,
+  "heard": "Er tötet den Liebhaber im Duell und verstößt Effi.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 29,
+  "text": "Die Geschichte hatte ein wahres Vorbild:",
+  "tts": "Die Geschichte hatte ein wahres Vorbild:",
+  "voice": "clone_611",
+  "file": "line_29.mp3",
+  "duration": 2.251,
+  "heard": "Die Geschichte hatte ein wahres Vorbild.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 30,
+  "text": "Elisabeth von Ardenne. Sie wurde 98 Jahre alt.",
+  "tts": "Elisabeth von Ardenn. Sie wurde achtundneunzig Jahre alt.",
+  "voice": "clone_611",
+  "file": "line_30.mp3",
+  "duration": 3.551,
+  "heard": "Elisabeth von Aden. Sie wurde 98 Jahre alt.",
+  "score": 0.88,
+  "diff": [
+   "ardenn→aden"
+  ]
+ },
+ {
+  "i": 31,
+  "text": "Effis Vater sagt im Buch einen Satz, den wir bis heute benutzen:",
+  "tts": "Effis Vater sagt im Buch einen Satz, den wir bis heute benutzen:",
+  "voice": "clone_611",
+  "file": "line_31.mp3",
+  "duration": 3.868,
+  "heard": "Effis Vater sagt im Buch einen Satz, den wir bis heute benutzen.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 32,
+  "text": "„Das ist ein weites Feld.“",
+  "tts": "„Das ist ein weites Feld.“",
+  "voice": "clone_611",
+  "file": "line_32.mp3",
+  "duration": 1.392,
+  "heard": "Das ist ein weites Feld.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 33,
+  "text": "Theodor Fontane starb 1898 in Berlin.",
+  "tts": "Theodor Fontane starb achtzehnhundertachtundneunzig in Berlin.",
+  "voice": "clone_611",
+  "file": "line_33.mp3",
+  "duration": 4.046,
+  "heard": "Theodor Fontanestab 1898 in Berlin.",
+  "score": 0.73,
+  "diff": []
+ },
+ {
+  "i": 34,
+  "text": "Und Herr von Ribbeck?",
+  "tts": "Und Herr von Ribbeck?",
+  "voice": "clone_611",
+  "file": "line_34.mp3",
+  "duration": 1.286,
+  "heard": "und Herr von Ribeck.",
+  "score": 0.75,
+  "diff": []
+ },
+ {
+  "i": 35,
+  "text": "Den gab es wirklich.",
+  "tts": "Den gab es wirklich.",
+  "voice": "clone_611",
+  "file": "line_35.mp3",
+  "duration": 1.49,
+  "heard": "Den gab es wirklich.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 36,
+  "text": "Und auch den Birnbaum auf seinem Grab.",
+  "tts": "Und auch den Birnbaum auf seinem Grab.",
+  "voice": "clone_611",
+  "file": "line_36.mp3",
+  "duration": 2.204,
+  "heard": "und auch den Bienenbaum auf seinem Grab.",
+  "score": 0.86,
+  "diff": [
+   "birnbaum→bienenbaum"
+  ]
+ },
+ {
+  "i": 37,
+  "text": "1911 warf ihn ein Sturm um.",
+  "tts": "Neunzehnhundertelf warf ihn ein Sturm um.",
+  "voice": "clone_611",
+  "file": "line_37.mp3",
+  "duration": 2.502,
+  "heard": "1911 warf in ein Sturm um.",
+  "score": 0.83,
+  "diff": [
+   "ihn→in"
+  ]
+ },
+ {
+  "i": 38,
+  "text": "Heute steht in Ribbeck wieder ein junger Birnbaum.",
+  "tts": "Heute steht in Ribbeck wieder ein junger Birnbaum.",
+  "voice": "clone_611",
+  "file": "line_38.mp3",
+  "duration": 2.941,
+  "heard": "Heute steht in Ribeck wieder ein junger Birnbaum.",
+  "score": 0.88,
+  "diff": []
+ },
+ {
+  "i": 39,
+  "text": "„So spendet Segen noch immer die Hand",
+  "tts": "„So spendet Segen noch immer die Hand",
+  "voice": "clone_611",
+  "file": "line_39.mp3",
+  "duration": 2.165,
+  "heard": "So spendet Segen noch immer die Hand.",
+  "score": 1.0,
+  "diff": []
+ },
+ {
+  "i": 40,
+  "text": "des von Ribbeck auf Ribbeck im Havelland.“",
+  "tts": "des von Ribbeck auf Ribbeck im Havelland.“",
+  "voice": "clone_611",
+  "file": "line_40.mp3",
+  "duration": 2.52,
+  "heard": "Das von Ribeck auf Ribeck im Haveland.",
+  "score": 0.43,
+  "diff": [
+   "des→das"
+  ]
+ }
+]

@@ -1,0 +1,911 @@
+{
+ "duration": 174.959,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 28.481,
+   "pics": [
+    {
+     "src": "news/6/img/schiller_kuegelgen.jpg",
+     "move": "tien-gan",
+     "w": 2024,
+     "h": 2368,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.101,
+      "x": 0.5,
+      "y": 0.454
+     },
+     "s": 0.0,
+     "e": 3.616
+    },
+    {
+     "src": "news/6/img/beethoven.jpg",
+     "move": "tien-gan",
+     "w": 2089,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.42,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.137,
+      "x": 0.42,
+      "y": 0.4396
+     },
+     "s": 3.616,
+     "e": 8.526
+    },
+    {
+     "src": "news/6/img/schiller_stich.jpg",
+     "move": "tien-gan",
+     "w": 2012,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 8.526,
+     "e": 19.154
+    },
+    {
+     "src": "news/6/img/fuerstengruft_saerge.jpg",
+     "move": "lui-ra",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.32,
+      "x": 0.4,
+      "y": 0.6
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "s": 19.154,
+     "e": 28.481
+    }
+   ]
+  },
+  {
+   "s": 28.481,
+   "e": 50.185,
+   "pics": [
+    {
+     "src": "news/6/img/geburtshaus.jpg",
+     "move": "nang-len",
+     "w": 2015,
+     "h": 2276,
+     "from": {
+      "z": 1.45,
+      "x": 0.45,
+      "y": 0.6552
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.45,
+      "y": 0.3448
+     },
+     "s": 28.481,
+     "e": 36.728
+    },
+    {
+     "src": "news/6/img/carl_eugen.jpg",
+     "move": "tien-gan",
+     "w": 1961,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.42,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.16,
+      "x": 0.42,
+      "y": 0.431
+     },
+     "s": 36.728,
+     "e": 42.448
+    },
+    {
+     "src": "news/6/img/karlsschule_koch.jpg",
+     "move": "luot-phai",
+     "w": 1878,
+     "h": 1350,
+     "from": {
+      "z": 1.06,
+      "x": 0.4402,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5598,
+      "y": 0.5
+     },
+     "s": 42.448,
+     "e": 46.138
+    },
+    {
+     "src": "news/6/img/raeuber_1781.jpg",
+     "move": "dung-yen",
+     "w": 1656,
+     "h": 1300,
+     "from": {
+      "z": 1.0,
+      "x": 0.76,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.76,
+      "y": 0.4854
+     },
+     "s": 46.138,
+     "e": 50.185
+    }
+   ]
+  },
+  {
+   "s": 50.185,
+   "e": 78.316,
+   "pics": [
+    {
+     "src": "news/6/img/nationaltheater.jpg",
+     "move": "luot-phai",
+     "w": 2078,
+     "h": 1621,
+     "from": {
+      "z": 1.06,
+      "x": 0.343,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.657,
+      "y": 0.5
+     },
+     "s": 50.185,
+     "e": 59.108
+    },
+    {
+     "src": "news/6/img/carl_eugen_batoni.jpg",
+     "move": "tien-gan",
+     "w": 1679,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 59.108,
+     "e": 69.638
+    },
+    {
+     "src": "news/6/img/schiller_buste.jpg",
+     "move": "troi-nhe",
+     "w": 1873,
+     "h": 2314,
+     "from": {
+      "z": 1.08,
+      "x": 0.643,
+      "y": 0.463
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.45,
+      "y": 0.4464
+     },
+     "s": 69.638,
+     "e": 78.316
+    }
+   ]
+  },
+  {
+   "s": 78.316,
+   "e": 95.723,
+   "pics": [
+    {
+     "src": "news/6/img/koerner.jpg",
+     "move": "tien-gan",
+     "w": 1891,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.126,
+      "x": 0.5,
+      "y": 0.4442
+     },
+     "s": 78.316,
+     "e": 82.803
+    },
+    {
+     "src": "news/6/img/gohlis.jpg",
+     "move": "nang-len",
+     "w": 1300,
+     "h": 1732,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "s": 82.803,
+     "e": 91.553
+    },
+    {
+     "src": "news/6/img/beethoven.jpg",
+     "move": "lui-ra",
+     "w": 2089,
+     "h": 2600,
+     "from": {
+      "z": 1.209,
+      "x": 0.42,
+      "y": 0.4137
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.46,
+      "y": 0.5
+     },
+     "s": 91.553,
+     "e": 95.723
+    }
+   ]
+  },
+  {
+   "s": 95.723,
+   "e": 117.726,
+   "pics": [
+    {
+     "src": "news/6/img/jena_denkmal.jpg",
+     "move": "nang-len",
+     "w": 1909,
+     "h": 2600,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "s": 95.723,
+     "e": 108.361
+    },
+    {
+     "src": "news/6/img/charlotte.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1663,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.4545
+     },
+     "s": 108.361,
+     "e": 110.987
+    },
+    {
+     "src": "news/6/img/schiller_1808.jpg",
+     "move": "troi-nhe",
+     "w": 1733,
+     "h": 1945,
+     "from": {
+      "z": 1.08,
+      "x": 0.2924,
+      "y": 0.463
+     },
+     "to": {
+      "z": 1.12,
+      "x": 0.45,
+      "y": 0.4464
+     },
+     "s": 110.987,
+     "e": 117.726
+    }
+   ]
+  },
+  {
+   "s": 117.726,
+   "e": 140.164,
+   "pics": [
+    {
+     "src": "news/6/img/weimar_kaulbach.jpg",
+     "move": "lui-ra",
+     "w": 1564,
+     "h": 2077,
+     "from": {
+      "z": 1.32,
+      "x": 0.6,
+      "y": 0.6
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "s": 117.726,
+     "e": 125.677
+    },
+    {
+     "src": "news/6/img/schillerhaus_weimar.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1899,
+     "from": {
+      "z": 1.06,
+      "x": 0.3618,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.6382,
+      "y": 0.5
+     },
+     "s": 125.677,
+     "e": 134.065
+    },
+    {
+     "src": "news/6/img/glocke.jpg",
+     "move": "dung-yen",
+     "w": 1300,
+     "h": 1899,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 134.065,
+     "e": 140.164
+    }
+   ]
+  },
+  {
+   "s": 140.164,
+   "e": 174.959,
+   "pics": [
+    {
+     "src": "news/6/img/totenmaske.jpg",
+     "move": "dung-yen",
+     "w": 2299,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.4854
+     },
+     "s": 140.164,
+     "e": 150.456
+    },
+    {
+     "src": "news/6/img/fuerstengruft.jpg",
+     "move": "tien-gan",
+     "w": 2131,
+     "h": 1352,
+     "from": {
+      "z": 1.0,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.3,
+      "y": 0.5
+     },
+     "s": 150.456,
+     "e": 159.53
+    },
+    {
+     "src": "news/6/img/fuerstengruft_saerge.jpg",
+     "move": "chi-tiet",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.0,
+      "x": 0.425,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.35,
+      "y": 0.6
+     },
+     "s": 159.53,
+     "e": 167.751
+    },
+    {
+     "src": "news/6/img/schiller_kuegelgen.jpg",
+     "move": "lui-ra",
+     "w": 2024,
+     "h": 2368,
+     "from": {
+      "z": 1.32,
+      "x": 0.5,
+      "y": 0.3788
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 167.751,
+     "e": 174.959
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 0.3,
+   "e": 3.766,
+   "text": "Friedrich Schiller schrieb\ndie „Ode an die Freude“."
+  },
+  {
+   "s": 3.766,
+   "e": 8.676,
+   "text": "Beethoven machte sie unsterblich,\nEuropa ihre Melodie zu seiner Hymne."
+  },
+  {
+   "s": 8.676,
+   "e": 12.311,
+   "text": "Doch Schillers eigenes Leben\nwar selten voller Freude."
+  },
+  {
+   "s": 12.311,
+   "e": 16.58,
+   "text": "Er floh vor einem Herzog, lebte\nin Armut, war fast immer krank."
+  },
+  {
+   "s": 16.58,
+   "e": 19.304,
+   "text": "Mit 45 Jahren war er tot."
+  },
+  {
+   "s": 19.304,
+   "e": 20.822,
+   "text": "Und sein Schädel?"
+  },
+  {
+   "s": 20.822,
+   "e": 24.324,
+   "text": "Lag über 180 Jahre in\neiner Fürstengruft –"
+  },
+  {
+   "s": 24.324,
+   "e": 29.081,
+   "text": "bis ein Gentest zeigte:\nEr war gar nicht von Schiller."
+  },
+  {
+   "s": 29.081,
+   "e": 34.989,
+   "text": "Geboren wurde er am 10. November\n1759 in Marbach am Neckar."
+  },
+  {
+   "s": 34.989,
+   "e": 36.878,
+   "text": "Er wollte Pfarrer werden."
+  },
+  {
+   "s": 36.878,
+   "e": 39.117,
+   "text": "Doch der Herzog von Württemberg"
+  },
+  {
+   "s": 39.117,
+   "e": 42.598,
+   "text": "holte den 13-Jährigen\nin seine Militärschule."
+  },
+  {
+   "s": 42.598,
+   "e": 46.288,
+   "text": "Uniform, Drill und strenge\nRegeln – sieben Jahre lang."
+  },
+  {
+   "s": 46.288,
+   "e": 50.785,
+   "text": "Heimlich schrieb er ein\nTheaterstück: Die Räuber."
+  },
+  {
+   "s": 50.785,
+   "e": 55.177,
+   "text": "1782 wurde es in\nMannheim uraufgeführt."
+  },
+  {
+   "s": 55.177,
+   "e": 59.258,
+   "text": "Ein Zuschauer schrieb: „Das\nTheater glich einem Irrenhause.“"
+  },
+  {
+   "s": 59.258,
+   "e": 62.361,
+   "text": "Schiller war ohne\nErlaubnis hingefahren."
+  },
+  {
+   "s": 62.361,
+   "e": 65.231,
+   "text": "Der Herzog ließ ihn\n14 Tage einsperren"
+  },
+  {
+   "s": 65.231,
+   "e": 69.788,
+   "text": "und verbot ihm, etwas anderes als\nmedizinische Schriften zu verfassen."
+  },
+  {
+   "s": 69.788,
+   "e": 74.895,
+   "text": "Im September 1782 floh\nSchiller nachts aus Stuttgart,"
+  },
+  {
+   "s": 74.895,
+   "e": 78.916,
+   "text": "während der Hof ein\ngroßes Fest feierte."
+  },
+  {
+   "s": 78.916,
+   "e": 82.953,
+   "text": "Verschuldet und arm, fand er\nin Leipzig und Dresden Freunde."
+  },
+  {
+   "s": 82.953,
+   "e": 86.272,
+   "text": "Dort schrieb er 1785\nein Gedicht über"
+  },
+  {
+   "s": 86.272,
+   "e": 89.404,
+   "text": "die Freude und die Freundschaft:"
+  },
+  {
+   "s": 89.404,
+   "e": 91.703,
+   "text": "„Freude, schöner Götterfunken“."
+  },
+  {
+   "s": 91.703,
+   "e": 96.323,
+   "text": "Fast 40 Jahre später\nvertonte es Beethoven."
+  },
+  {
+   "s": 96.323,
+   "e": 101.106,
+   "text": "1789 wurde Schiller Professor\nfür Geschichte in Jena."
+  },
+  {
+   "s": 101.106,
+   "e": 104.466,
+   "text": "Zu seiner ersten Vorlesung\nkamen so viele Studenten,"
+  },
+  {
+   "s": 104.466,
+   "e": 108.511,
+   "text": "dass alle in den größten Hörsaal\nder Stadt umziehen mussten."
+  },
+  {
+   "s": 108.511,
+   "e": 111.137,
+   "text": "Er heiratete Charlotte\nvon Lengefeld."
+  },
+  {
+   "s": 111.137,
+   "e": 115.202,
+   "text": "Doch 1791 erkrankte er\nschwer an der Lunge."
+  },
+  {
+   "s": 115.202,
+   "e": 118.326,
+   "text": "Gesund wurde er nie wieder."
+  },
+  {
+   "s": 118.326,
+   "e": 122.317,
+   "text": "1794 begann die\nFreundschaft mit Goethe,"
+  },
+  {
+   "s": 122.317,
+   "e": 125.827,
+   "text": "eine Freundschaft, die die\ndeutsche Literatur prägte."
+  },
+  {
+   "s": 125.827,
+   "e": 129.588,
+   "text": "In seinen letzten Jahren\nschrieb Schiller Stück um Stück:"
+  },
+  {
+   "s": 129.588,
+   "e": 134.215,
+   "text": "Wallenstein, Maria Stuart, Die\nJungfrau von Orleans, Wilhelm Tell."
+  },
+  {
+   "s": 134.215,
+   "e": 136.133,
+   "text": "Und „Das Lied von der Glocke“,"
+  },
+  {
+   "s": 136.133,
+   "e": 140.764,
+   "text": "das viele von uns in der Schule\nauswendig lernen mussten."
+  },
+  {
+   "s": 140.764,
+   "e": 146.992,
+   "text": "Am 9. Mai 1805 starb Friedrich\nSchiller in Weimar, mit 45 Jahren."
+  },
+  {
+   "s": 146.992,
+   "e": 150.606,
+   "text": "Er wurde nachts in einer\nGemeinschaftsgruft beigesetzt."
+  },
+  {
+   "s": 150.606,
+   "e": 154.699,
+   "text": "21 Jahre später suchte man\ndort nach seinem Schädel"
+  },
+  {
+   "s": 154.699,
+   "e": 156.929,
+   "text": "und brachte ihn in\ndie Fürstengruft,"
+  },
+  {
+   "s": 156.929,
+   "e": 159.68,
+   "text": "wo später auch Goethe\nbeigesetzt wurde."
+  },
+  {
+   "s": 159.68,
+   "e": 164.835,
+   "text": "2008 zeigte ein Gentest: Der\nSchädel stammte nicht von Schiller."
+  },
+  {
+   "s": 164.835,
+   "e": 167.901,
+   "text": "Sein Sarg in der Fürstengruft\nist seitdem leer."
+  },
+  {
+   "s": 167.901,
+   "e": 171.234,
+   "text": "Doch seine Ode erklingt\nbis heute in ganz Europa:"
+  },
+  {
+   "s": 171.234,
+   "e": 173.309,
+   "text": "„Alle Menschen werden Brüder.“"
+  }
+ ],
+ "voice": [
+  {
+   "s": 0.3,
+   "src": "news/6/voice/line_01.mp3"
+  },
+  {
+   "s": 3.766,
+   "src": "news/6/voice/line_02.mp3"
+  },
+  {
+   "s": 8.676,
+   "src": "news/6/voice/line_03.mp3"
+  },
+  {
+   "s": 12.311,
+   "src": "news/6/voice/line_04.mp3"
+  },
+  {
+   "s": 16.58,
+   "src": "news/6/voice/line_05.mp3"
+  },
+  {
+   "s": 19.304,
+   "src": "news/6/voice/line_06.mp3"
+  },
+  {
+   "s": 20.822,
+   "src": "news/6/voice/line_07.mp3"
+  },
+  {
+   "s": 24.324,
+   "src": "news/6/voice/line_08.mp3"
+  },
+  {
+   "s": 29.081,
+   "src": "news/6/voice/line_09.mp3"
+  },
+  {
+   "s": 34.989,
+   "src": "news/6/voice/line_10.mp3"
+  },
+  {
+   "s": 36.878,
+   "src": "news/6/voice/line_11.mp3"
+  },
+  {
+   "s": 39.117,
+   "src": "news/6/voice/line_12.mp3"
+  },
+  {
+   "s": 42.598,
+   "src": "news/6/voice/line_13.mp3"
+  },
+  {
+   "s": 46.288,
+   "src": "news/6/voice/line_14.mp3"
+  },
+  {
+   "s": 50.785,
+   "src": "news/6/voice/line_15.mp3"
+  },
+  {
+   "s": 55.177,
+   "src": "news/6/voice/line_16.mp3"
+  },
+  {
+   "s": 59.258,
+   "src": "news/6/voice/line_17.mp3"
+  },
+  {
+   "s": 62.361,
+   "src": "news/6/voice/line_18.mp3"
+  },
+  {
+   "s": 65.231,
+   "src": "news/6/voice/line_19.mp3"
+  },
+  {
+   "s": 69.788,
+   "src": "news/6/voice/line_20.mp3"
+  },
+  {
+   "s": 74.895,
+   "src": "news/6/voice/line_21.mp3"
+  },
+  {
+   "s": 78.916,
+   "src": "news/6/voice/line_22.mp3"
+  },
+  {
+   "s": 82.953,
+   "src": "news/6/voice/line_23.mp3"
+  },
+  {
+   "s": 89.404,
+   "src": "news/6/voice/line_24.mp3"
+  },
+  {
+   "s": 91.703,
+   "src": "news/6/voice/line_25.mp3"
+  },
+  {
+   "s": 96.323,
+   "src": "news/6/voice/line_26.mp3"
+  },
+  {
+   "s": 101.106,
+   "src": "news/6/voice/line_27.mp3"
+  },
+  {
+   "s": 104.466,
+   "src": "news/6/voice/line_28.mp3"
+  },
+  {
+   "s": 108.511,
+   "src": "news/6/voice/line_29.mp3"
+  },
+  {
+   "s": 111.137,
+   "src": "news/6/voice/line_30.mp3"
+  },
+  {
+   "s": 115.202,
+   "src": "news/6/voice/line_31.mp3"
+  },
+  {
+   "s": 118.326,
+   "src": "news/6/voice/line_32.mp3"
+  },
+  {
+   "s": 122.317,
+   "src": "news/6/voice/line_33.mp3"
+  },
+  {
+   "s": 125.827,
+   "src": "news/6/voice/line_34.mp3"
+  },
+  {
+   "s": 129.588,
+   "src": "news/6/voice/line_35.mp3"
+  },
+  {
+   "s": 134.215,
+   "src": "news/6/voice/line_36.mp3"
+  },
+  {
+   "s": 136.133,
+   "src": "news/6/voice/line_37.mp3"
+  },
+  {
+   "s": 140.764,
+   "src": "news/6/voice/line_38.mp3"
+  },
+  {
+   "s": 146.992,
+   "src": "news/6/voice/line_39.mp3"
+  },
+  {
+   "s": 150.606,
+   "src": "news/6/voice/line_40.mp3"
+  },
+  {
+   "s": 154.699,
+   "src": "news/6/voice/line_41.mp3"
+  },
+  {
+   "s": 156.929,
+   "src": "news/6/voice/line_42.mp3"
+  },
+  {
+   "s": 159.68,
+   "src": "news/6/voice/line_43.mp3"
+  },
+  {
+   "s": 164.835,
+   "src": "news/6/voice/line_44.mp3"
+  },
+  {
+   "s": 167.901,
+   "src": "news/6/voice/line_45.mp3"
+  },
+  {
+   "s": 171.234,
+   "src": "news/6/voice/line_46.mp3"
+  }
+ ],
+ "music": "news/6/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Philosopher",
+   "file": "news/fonts/philosopher-latin-400-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ]
+}

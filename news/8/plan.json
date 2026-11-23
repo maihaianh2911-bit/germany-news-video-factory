@@ -1,0 +1,842 @@
+{
+ "duration": 127.264,
+ "chapters": [
+  {
+   "s": 0.0,
+   "e": 21.26,
+   "pics": [
+    {
+     "src": "news/8/img/peter_gesicht.jpg",
+     "move": "tien-gan",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.181,
+      "x": 0.5,
+      "y": 0.4234
+     },
+     "s": 0.0,
+     "e": 6.461
+    },
+    {
+     "src": "news/8/img/schneider.jpg",
+     "move": "luot-trai",
+     "w": 2576,
+     "h": 1300,
+     "from": {
+      "z": 1.06,
+      "x": 0.5335,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.4665,
+      "y": 0.5
+     },
+     "s": 6.461,
+     "e": 9.351
+    },
+    {
+     "src": "news/8/img/peter_druck.jpg",
+     "move": "nang-len",
+     "w": 1950,
+     "h": 2600,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "s": 9.351,
+     "e": 15.697
+    },
+    {
+     "src": "news/8/img/hoffmann_jung.jpg",
+     "move": "tien-gan",
+     "w": 2122,
+     "h": 2545,
+     "from": {
+      "z": 1.0,
+      "x": 0.55,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.156,
+      "x": 0.55,
+      "y": 0.4326
+     },
+     "s": 15.697,
+     "e": 21.26
+    }
+   ]
+  },
+  {
+   "s": 21.26,
+   "e": 33.864,
+   "pics": [
+    {
+     "src": "news/8/img/roemerberg.jpg",
+     "move": "ha-xuong",
+     "w": 1300,
+     "h": 1688,
+     "from": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.3448
+     },
+     "to": {
+      "z": 1.45,
+      "x": 0.5,
+      "y": 0.6552
+     },
+     "s": 21.26,
+     "e": 28.605
+    },
+    {
+     "src": "news/8/img/peter_1844.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1437,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.147,
+      "x": 0.5,
+      "y": 0.4358
+     },
+     "s": 28.605,
+     "e": 33.864
+    }
+   ]
+  },
+  {
+   "s": 33.864,
+   "e": 55.191,
+   "pics": [
+    {
+     "src": "news/8/img/zeil.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1634,
+     "from": {
+      "z": 1.06,
+      "x": 0.3856,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.6144,
+      "y": 0.5
+     },
+     "s": 33.864,
+     "e": 41.937
+    },
+    {
+     "src": "news/8/img/peter_skizze.jpg",
+     "move": "chi-tiet",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.315,
+      "x": 0.5,
+      "y": 0.45
+     },
+     "s": 41.937,
+     "e": 46.437
+    },
+    {
+     "src": "news/8/img/christkind.jpg",
+     "move": "tien-gan",
+     "w": 1300,
+     "h": 1419,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 46.437,
+     "e": 55.191
+    }
+   ]
+  },
+  {
+   "s": 55.191,
+   "e": 82.268,
+   "pics": [
+    {
+     "src": "news/8/img/peter_sockel.jpg",
+     "move": "ha-xuong",
+     "w": 1950,
+     "h": 2600,
+     "from": {
+      "z": 1.397,
+      "x": 0.5,
+      "y": 0.3578
+     },
+     "to": {
+      "z": 1.397,
+      "x": 0.5,
+      "y": 0.6422
+     },
+     "s": 55.191,
+     "e": 59.867
+    },
+    {
+     "src": "news/8/img/suppenkaspar.jpg",
+     "move": "ha-xuong",
+     "w": 1300,
+     "h": 2332,
+     "from": {
+      "z": 1.239,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.239,
+      "x": 0.5,
+      "y": 0.6
+     },
+     "s": 59.867,
+     "e": 62.318
+    },
+    {
+     "src": "news/8/img/paulinchen.jpg",
+     "move": "luot-phai",
+     "w": 2560,
+     "h": 1920,
+     "from": {
+      "z": 1.06,
+      "x": 0.4005,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5995,
+      "y": 0.5
+     },
+     "s": 62.318,
+     "e": 68.203
+    },
+    {
+     "src": "news/8/img/zappelphilipp.jpg",
+     "move": "ha-xuong",
+     "w": 1344,
+     "h": 2304,
+     "from": {
+      "z": 1.25,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.25,
+      "x": 0.5,
+      "y": 0.6
+     },
+     "s": 68.203,
+     "e": 71.113
+    },
+    {
+     "src": "news/8/img/hans_guck.jpg",
+     "move": "tien-gan",
+     "w": 1424,
+     "h": 2144,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.1,
+      "x": 0.5,
+      "y": 0.4545
+     },
+     "s": 71.113,
+     "e": 73.924
+    },
+    {
+     "src": "news/8/img/nikolas.jpg",
+     "move": "tien-gan",
+     "w": 1739,
+     "h": 1650,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 73.924,
+     "e": 82.268
+    }
+   ]
+  },
+  {
+   "s": 82.268,
+   "e": 96.586,
+   "pics": [
+    {
+     "src": "news/8/img/museum_regal.jpg",
+     "move": "luot-phai",
+     "w": 2600,
+     "h": 1462,
+     "from": {
+      "z": 1.06,
+      "x": 0.4134,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.06,
+      "x": 0.5866,
+      "y": 0.5
+     },
+     "s": 82.268,
+     "e": 89.095
+    },
+    {
+     "src": "news/8/img/museum_figur.jpg",
+     "move": "tien-gan",
+     "w": 2600,
+     "h": 1733,
+     "from": {
+      "z": 1.0,
+      "x": 0.4,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.4,
+      "y": 0.45
+     },
+     "s": 89.095,
+     "e": 96.586
+    }
+   ]
+  },
+  {
+   "s": 96.586,
+   "e": 127.264,
+   "pics": [
+    {
+     "src": "news/8/img/hoffmann_alt.jpg",
+     "move": "tien-gan",
+     "w": 2044,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.2,
+      "x": 0.5,
+      "y": 0.4167
+     },
+     "s": 96.586,
+     "e": 106.807
+    },
+    {
+     "src": "news/8/img/irrenanstalt_karte.jpg",
+     "move": "chi-tiet",
+     "w": 1314,
+     "h": 1300,
+     "from": {
+      "z": 1.0,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.343,
+      "x": 0.4,
+      "y": 0.42
+     },
+     "s": 106.807,
+     "e": 111.705
+    },
+    {
+     "src": "news/8/img/grab.jpg",
+     "move": "dung-yen",
+     "w": 1950,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 111.705,
+     "e": 117.216
+    },
+    {
+     "src": "news/8/img/museum_haus.jpg",
+     "move": "dung-yen",
+     "w": 2295,
+     "h": 2600,
+     "from": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "z": 1.03,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 117.216,
+     "e": 119.524
+    },
+    {
+     "src": "news/8/img/peter_gesicht.jpg",
+     "move": "lui-ra",
+     "w": 2600,
+     "h": 1950,
+     "from": {
+      "z": 1.32,
+      "x": 0.5,
+      "y": 0.4
+     },
+     "to": {
+      "z": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "s": 119.524,
+     "e": 127.264
+    }
+   ]
+  }
+ ],
+ "subs": [
+  {
+   "s": 0.3,
+   "e": 3.251,
+   "text": "Ein Mädchen spielt mit\nStreichhölzern und verbrennt."
+  },
+  {
+   "s": 3.251,
+   "e": 6.611,
+   "text": "Ein Junge will keine Suppe essen –\nnach fünf Tagen ist er tot."
+  },
+  {
+   "s": 6.611,
+   "e": 9.501,
+   "text": "Einem anderen schneidet der\nSchneider die Daumen ab."
+  },
+  {
+   "s": 9.501,
+   "e": 11.728,
+   "text": "Das klingt nicht nach\neinem Kinderbuch."
+  },
+  {
+   "s": 11.728,
+   "e": 14.338,
+   "text": "Und doch ist es eines der\nbekanntesten der Welt:"
+  },
+  {
+   "s": 14.338,
+   "e": 15.847,
+   "text": "der Struwwelpeter."
+  },
+  {
+   "s": 15.847,
+   "e": 18.181,
+   "text": "Geschrieben hat ihn\nein Frankfurter Arzt –"
+  },
+  {
+   "s": 18.181,
+   "e": 21.76,
+   "text": "als Weihnachtsgeschenk für\nseinen dreijährigen Sohn."
+  },
+  {
+   "s": 21.76,
+   "e": 26.027,
+   "text": "Heinrich Hoffmann wurde 1809\nin Frankfurt am Main geboren."
+  },
+  {
+   "s": 26.027,
+   "e": 28.755,
+   "text": "Er wurde Arzt und behandelte\nvor allem arme Leute."
+  },
+  {
+   "s": 28.755,
+   "e": 31.174,
+   "text": "Kleinen Patienten\nzeichnete er oft etwas,"
+  },
+  {
+   "s": 31.174,
+   "e": 34.364,
+   "text": "damit sie keine Angst\nvor dem Doktor hatten."
+  },
+  {
+   "s": 34.364,
+   "e": 39.475,
+   "text": "Kurz vor Weihnachten 1844 suchte er\nein Bilderbuch für seinen Sohn Carl."
+  },
+  {
+   "s": 39.475,
+   "e": 42.087,
+   "text": "Er fand nur langweilige,\nbelehrende Bücher."
+  },
+  {
+   "s": 42.087,
+   "e": 43.765,
+   "text": "Also kaufte er ein leeres Heft"
+  },
+  {
+   "s": 43.765,
+   "e": 46.587,
+   "text": "und zeichnete und dichtete\ndie Geschichten selbst."
+  },
+  {
+   "s": 46.587,
+   "e": 48.783,
+   "text": "Freunde sahen das Heft\nund überredeten ihn,"
+  },
+  {
+   "s": 48.783,
+   "e": 50.256,
+   "text": "es drucken zu lassen."
+  },
+  {
+   "s": 50.256,
+   "e": 55.691,
+   "text": "1845 erschien es – unter dem\nNamen „Reimerich Kinderlieb“."
+  },
+  {
+   "s": 55.691,
+   "e": 57.131,
+   "text": "Da ist der Struwwelpeter,"
+  },
+  {
+   "s": 57.131,
+   "e": 60.017,
+   "text": "der sich nie die Haare und\ndie Nägel schneiden lässt."
+  },
+  {
+   "s": 60.017,
+   "e": 62.468,
+   "text": "Der Suppen-Kaspar,\nder immer dünner wird."
+  },
+  {
+   "s": 62.468,
+   "e": 65.579,
+   "text": "Paulinchen, die allein zu Hause\nmit dem Feuerzeug spielt –"
+  },
+  {
+   "s": 65.579,
+   "e": 68.353,
+   "text": "obwohl ihre Katzen Minz\nund Maunz sie noch warnen."
+  },
+  {
+   "s": 68.353,
+   "e": 71.263,
+   "text": "Der Zappel-Philipp, der bei\nTisch nicht still sitzen kann."
+  },
+  {
+   "s": 71.263,
+   "e": 74.074,
+   "text": "Und Hans Guck-in-die-Luft,\nder in den Fluss fällt."
+  },
+  {
+   "s": 74.074,
+   "e": 76.204,
+   "text": "Eine Geschichte ist\nsogar gegen Spott:"
+  },
+  {
+   "s": 76.204,
+   "e": 78.622,
+   "text": "Drei Jungen lachen über\neinen schwarzen Jungen –"
+  },
+  {
+   "s": 78.622,
+   "e": 82.768,
+   "text": "zur Strafe taucht der große\nNikolas sie ins Tintenfass."
+  },
+  {
+   "s": 82.768,
+   "e": 84.904,
+   "text": "Das Buch wurde ein\nriesiger Erfolg."
+  },
+  {
+   "s": 84.904,
+   "e": 86.821,
+   "text": "Es wurde in viele\nSprachen übersetzt –"
+  },
+  {
+   "s": 86.821,
+   "e": 89.245,
+   "text": "sogar Mark Twain übertrug\nes ins Englische."
+  },
+  {
+   "s": 89.245,
+   "e": 90.91,
+   "text": "Und manches sagen wir bis heute:"
+  },
+  {
+   "s": 90.91,
+   "e": 93.575,
+   "text": "Ein unruhiges Kind nennen\nwir einen Zappelphilipp,"
+  },
+  {
+   "s": 93.575,
+   "e": 97.086,
+   "text": "wer nicht essen will,\nist ein Suppenkasper."
+  },
+  {
+   "s": 97.086,
+   "e": 98.831,
+   "text": "Hoffmann selbst blieb Arzt."
+  },
+  {
+   "s": 98.831,
+   "e": 103.825,
+   "text": "1851 übernahm er die Frankfurter\nAnstalt für Irre und Epileptische."
+  },
+  {
+   "s": 103.825,
+   "e": 106.957,
+   "text": "Er wollte die Kranken nicht\nwegsperren, sondern heilen."
+  },
+  {
+   "s": 106.957,
+   "e": 109.355,
+   "text": "Er ließ ihnen ein neues,\nhelles Haus bauen –"
+  },
+  {
+   "s": 109.355,
+   "e": 111.855,
+   "text": "die Frankfurter nannten\nes das Irrenschloss."
+  },
+  {
+   "s": 111.855,
+   "e": 117.366,
+   "text": "Heinrich Hoffmann starb 1894\nin Frankfurt, mit 85 Jahren."
+  },
+  {
+   "s": 117.366,
+   "e": 119.674,
+   "text": "Heute erinnert dort\nein Museum an ihn."
+  },
+  {
+   "s": 119.674,
+   "e": 122.586,
+   "text": "Und sein Buch beginnt noch\nimmer mit denselben Zeilen:"
+  },
+  {
+   "s": 122.586,
+   "e": 125.689,
+   "text": "„Sieh einmal, hier steht er,\npfui! der Struwwelpeter!“"
+  }
+ ],
+ "voice": [
+  {
+   "s": 0.3,
+   "src": "news/8/voice_pace/line_01.wav"
+  },
+  {
+   "s": 3.251,
+   "src": "news/8/voice_pace/line_02.wav"
+  },
+  {
+   "s": 6.611,
+   "src": "news/8/voice_pace/line_03.wav"
+  },
+  {
+   "s": 9.501,
+   "src": "news/8/voice_pace/line_04.wav"
+  },
+  {
+   "s": 11.728,
+   "src": "news/8/voice_pace/line_05.wav"
+  },
+  {
+   "s": 14.338,
+   "src": "news/8/voice_pace/line_06.wav"
+  },
+  {
+   "s": 15.847,
+   "src": "news/8/voice_pace/line_07.wav"
+  },
+  {
+   "s": 18.181,
+   "src": "news/8/voice_pace/line_08.wav"
+  },
+  {
+   "s": 21.76,
+   "src": "news/8/voice_pace/line_09.wav"
+  },
+  {
+   "s": 26.027,
+   "src": "news/8/voice_pace/line_10.wav"
+  },
+  {
+   "s": 28.755,
+   "src": "news/8/voice_pace/line_11.wav"
+  },
+  {
+   "s": 31.174,
+   "src": "news/8/voice_pace/line_12.wav"
+  },
+  {
+   "s": 34.364,
+   "src": "news/8/voice_pace/line_13.wav"
+  },
+  {
+   "s": 39.475,
+   "src": "news/8/voice_pace/line_14.wav"
+  },
+  {
+   "s": 42.087,
+   "src": "news/8/voice_pace/line_15.wav"
+  },
+  {
+   "s": 43.765,
+   "src": "news/8/voice_pace/line_16.wav"
+  },
+  {
+   "s": 46.587,
+   "src": "news/8/voice_pace/line_17.wav"
+  },
+  {
+   "s": 50.256,
+   "src": "news/8/voice_pace/line_18.wav"
+  },
+  {
+   "s": 55.691,
+   "src": "news/8/voice_pace/line_19.wav"
+  },
+  {
+   "s": 57.131,
+   "src": "news/8/voice_pace/line_20.wav"
+  },
+  {
+   "s": 60.017,
+   "src": "news/8/voice_pace/line_21.wav"
+  },
+  {
+   "s": 62.468,
+   "src": "news/8/voice_pace/line_22.wav"
+  },
+  {
+   "s": 65.579,
+   "src": "news/8/voice_pace/line_23.wav"
+  },
+  {
+   "s": 68.353,
+   "src": "news/8/voice_pace/line_24.wav"
+  },
+  {
+   "s": 71.263,
+   "src": "news/8/voice_pace/line_25.wav"
+  },
+  {
+   "s": 74.074,
+   "src": "news/8/voice_pace/line_26.wav"
+  },
+  {
+   "s": 76.204,
+   "src": "news/8/voice_pace/line_27.wav"
+  },
+  {
+   "s": 78.622,
+   "src": "news/8/voice_pace/line_28.wav"
+  },
+  {
+   "s": 82.768,
+   "src": "news/8/voice_pace/line_29.wav"
+  },
+  {
+   "s": 84.904,
+   "src": "news/8/voice_pace/line_30.wav"
+  },
+  {
+   "s": 86.821,
+   "src": "news/8/voice_pace/line_31.wav"
+  },
+  {
+   "s": 89.245,
+   "src": "news/8/voice_pace/line_32.wav"
+  },
+  {
+   "s": 90.91,
+   "src": "news/8/voice_pace/line_33.wav"
+  },
+  {
+   "s": 93.575,
+   "src": "news/8/voice_pace/line_34.wav"
+  },
+  {
+   "s": 97.086,
+   "src": "news/8/voice_pace/line_35.wav"
+  },
+  {
+   "s": 98.831,
+   "src": "news/8/voice_pace/line_36.wav"
+  },
+  {
+   "s": 103.825,
+   "src": "news/8/voice_pace/line_37.wav"
+  },
+  {
+   "s": 106.957,
+   "src": "news/8/voice_pace/line_38.wav"
+  },
+  {
+   "s": 109.355,
+   "src": "news/8/voice_pace/line_39.wav"
+  },
+  {
+   "s": 111.855,
+   "src": "news/8/voice_pace/line_40.wav"
+  },
+  {
+   "s": 117.366,
+   "src": "news/8/voice_pace/line_41.wav"
+  },
+  {
+   "s": 119.674,
+   "src": "news/8/voice_pace/line_42.wav"
+  },
+  {
+   "s": 122.586,
+   "src": "news/8/voice_pace/line_43.wav"
+  }
+ ],
+ "music": "news/8/bed.wav",
+ "musicVolume": 0.3,
+ "fonts": [
+  {
+   "family": "Philosopher",
+   "file": "news/fonts/philosopher-latin-400-normal.woff2",
+   "range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+  }
+ ]
+}
